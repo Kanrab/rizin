@@ -1,4 +1,4 @@
-executable('rz-asm', 'rz-asm.c',
+executable('rz-asm', 'rz-asm.cpp',
   include_directories: [platform_inc],
   dependencies: [
     rz_main_dep,

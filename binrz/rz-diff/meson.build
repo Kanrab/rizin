@@ -1,4 +1,4 @@
-executable('rz-diff', 'rz-diff.c',
+executable('rz-diff', 'rz-diff.cpp',
   include_directories: [platform_inc],
   dependencies: [
     rz_util_dep,

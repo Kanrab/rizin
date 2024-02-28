@@ -1,4 +1,4 @@
-executable('rz-run', 'rz-run.c',
+executable('rz-run', 'rz-run.cpp',
   include_directories: [platform_inc],
   dependencies: [
     rz_main_dep,

@@ -1,9 +1,9 @@
 rz_sign_sources = [
-   'create.c',
-   'flirt.c',
-   'pat.c',
-   'sigdb.c',
-   'sign.c',
+   'create.cpp',
+   'flirt.cpp',
+   'pat.cpp',
+   'sigdb.cpp',
+   'sign.cpp',
 ]
 
 rz_sign_inc = [

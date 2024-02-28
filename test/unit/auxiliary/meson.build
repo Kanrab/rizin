@@ -8,7 +8,7 @@ files = [
 warn_unused_flag = '-Wno-unused-result'
 auxiliaries = []
 foreach file : files
-  auxiliaries += [executable(file, '@0@.c'.format(file),
+  auxiliaries += [executable(file, '@0@.cpp'.format(file),
     c_args: meson.get_compiler('c').has_argument(warn_unused_flag) ? [warn_unused_flag] : [],
     install: false,
   )]

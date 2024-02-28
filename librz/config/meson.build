@@ -1,7 +1,7 @@
 rz_config_sources = [
-  'config.c',
-  'hold.c',
-  'serialize_config.c'
+  'config.cpp',
+  'hold.cpp',
+  'serialize_config.cpp'
 ]
 
 rz_config = library('rz_config', rz_config_sources,

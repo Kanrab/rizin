@@ -1,13 +1,13 @@
 rz_socket_sources = [
-  'socket.c',
-  'socket_http.c',
-  'socket_http_server.c',
-  'socket_serial.c',
-  'socket_proc.c',
-  'rzpipe.c',
-  'socket_rap_client.c',
-  'socket_rap_server.c',
-  'run.c',
+  'socket.cpp',
+  'socket_http.cpp',
+  'socket_http_server.cpp',
+  'socket_serial.cpp',
+  'socket_proc.cpp',
+  'rzpipe.cpp',
+  'socket_rap_client.cpp',
+  'socket_rap_server.cpp',
+  'run.cpp',
 ]
 
 dependencies = [utl, rz_util_dep, platform_deps]

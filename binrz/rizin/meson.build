@@ -1,4 +1,4 @@
-rizin_exe = executable('rizin', 'rizin.c',
+rizin_exe = executable('rizin', 'rizin.cpp',
   include_directories: [platform_inc],
   dependencies: [
     rz_util_dep,

@@ -12,18 +12,18 @@ bp_plugins = {
 }
 
 rz_bp_sources = [
-  'bp.c',
-  'bp_io.c',
-  'bp_plugin.c',
-  'bp_traptrace.c',
-  'bp_watch.c',
-  'serialize_bp.c',
-  'p/bp_arm.c',
-  'p/bp_bf.c',
-  'p/bp_mips.c',
-  'p/bp_ppc.c',
-  'p/bp_sh.c',
-  'p/bp_x86.c'
+  'bp.cpp',
+  'bp_io.cpp',
+  'bp_plugin.cpp',
+  'bp_traptrace.cpp',
+  'bp_watch.cpp',
+  'serialize_bp.cpp',
+  'p/bp_arm.cpp',
+  'p/bp_bf.cpp',
+  'p/bp_mips.cpp',
+  'p/bp_ppc.cpp',
+  'p/bp_sh.cpp',
+  'p/bp_x86.cpp'
 ]
 
 rz_bp = library('rz_bp', rz_bp_sources,

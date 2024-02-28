@@ -1,4 +1,4 @@
-executable('rz-ax', 'rz-ax.c',
+executable('rz-ax', 'rz-ax.cpp',
   include_directories: [platform_inc],
   dependencies: [rz_util_dep, rz_main_dep],
   install: true,

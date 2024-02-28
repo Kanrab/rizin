@@ -1,10 +1,10 @@
 rz_search_sources = [
-  'aes-find.c',
-  'bytepat.c',
-  'keyword.c',
-  'regexp.c',
-  'privkey-find.c',
-  'search.c',
+  'aes-find.cpp',
+  'bytepat.cpp',
+  'keyword.cpp',
+  'regexp.cpp',
+  'privkey-find.cpp',
+  'search.cpp',
 ]
 
 rz_search = library('rz_search', rz_search_sources,

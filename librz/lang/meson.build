@@ -16,16 +16,16 @@ lang_plugins = {
 }
 
 rz_lang_sources = [
-  'lang.c',
-  'p/lib.c',
-  'p/pipe.c',
-  'p/pipe_helper.c',
+  'lang.cpp',
+  'p/lib.cpp',
+  'p/pipe.cpp',
+  'p/pipe_helper.cpp',
 ]
 
 if host_machine.system() != 'windows'
   rz_lang_sources += [
-    'p/c.c',
-    'p/cpipe.c',
+    'p/c.cpp',
+    'p/cpipe.cpp',
   ]
 endif
 

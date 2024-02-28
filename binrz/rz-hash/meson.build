@@ -1,4 +1,4 @@
-executable('rz-hash', 'rz-hash.c',
+executable('rz-hash', 'rz-hash.cpp',
   include_directories: [platform_inc],
   dependencies: [
     rz_main_dep,

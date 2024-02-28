@@ -9,19 +9,19 @@ egg_plugins = {
 }
 
 rz_egg_sources = [
-  'egg.c',
-  'egg_Cfile.c',
-  'egg_lang.c',
-  'emit_arm.c',
-  'emit_trace.c',
-  'emit_x64.c',
-  'emit_x86.c',
-  #'p/egg_bind.c',
-  #'p/egg_cb.c',
-  'p/egg_exec.c',
-  #'p/egg_reverse.c',
-  #'p/egg_shya.c',
-  'p/egg_xor.c'
+  'egg.cpp',
+  'egg_Cfile.cpp',
+  'egg_lang.cpp',
+  'emit_arm.cpp',
+  'emit_trace.cpp',
+  'emit_x64.cpp',
+  'emit_x86.cpp',
+  #'p/egg_bind.cpp',
+  #'p/egg_cb.cpp',
+  'p/egg_exec.cpp',
+  #'p/egg_reverse.cpp',
+  #'p/egg_shya.cpp',
+  'p/egg_xor.cpp'
 ]
 
 rz_egg = library('rz_egg', rz_egg_sources,

@@ -1,6 +1,6 @@
 
 if get_option('enable_rz_test')
-  executable('rz-test', ['rz-test.c', 'load.c', 'run.c'],
+  executable('rz-test', ['rz-test.cpp', 'load.cpp', 'run.cpp'],
     include_directories: [platform_inc],
     dependencies: [
       rz_util_dep,

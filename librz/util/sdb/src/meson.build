@@ -1,33 +1,33 @@
 libsdb_sources = files(
-  'array.c',
-  'base64.c',
-  'buffer.c',
-  'cdb.c',
-  'cdb_make.c',
-  'diff.c',
-  'disk.c',
-  'fmt.c',
-  'lock.c',
-  'ls.c',
-  'match.c',
-  'ns.c',
-  'num.c',
-  'query.c',
-  'sdb.c',
-  'sdbht.c',
-  'util.c',
-  'text.c'
+  'array.cpp',
+  'base64.cpp',
+  'buffer.cpp',
+  'cdb.cpp',
+  'cdb_make.cpp',
+  'diff.cpp',
+  'disk.cpp',
+  'fmt.cpp',
+  'lock.cpp',
+  'ls.cpp',
+  'match.cpp',
+  'ns.cpp',
+  'num.cpp',
+  'query.cpp',
+  'sdb.cpp',
+  'sdbht.cpp',
+  'util.cpp',
+  'text.cpp'
 )
 
 libsdb_inc = [platform_inc, include_directories(['..', '.'])]
 
 include_files = files(
-  'buffer.h',
-  'cdb.h',
-  'cdb_make.h',
-  'ls.h',
-  'sdb.h',
-  'sdbht.h',
+  'buffer.hpp',
+  'cdb.hpp',
+  'cdb_make.hpp',
+  'ls.hpp',
+  'sdb.hpp',
+  'sdbht.hpp',
 )
 
 install_headers(include_files, install_dir: join_paths(rizin_incdir, 'sdb'))

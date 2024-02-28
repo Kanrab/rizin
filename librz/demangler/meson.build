@@ -20,7 +20,7 @@ demangler_plugins = {
 }
 
 rz_demangler_sources = [
-  'demangler.c'
+  'demangler.cpp'
 ]
 
 dependencies = [rz_util_dep, libdemangle_dep]

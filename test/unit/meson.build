@@ -120,7 +120,7 @@ if get_option('enable_tests')
   endif
 
   foreach test : tests
-    exe = executable('test_@0@'.format(test), 'test_@0@.c'.format(test),
+    exe = executable('test_@0@'.format(test), 'test_@0@.cpp'.format(test),
       include_directories: [platform_inc, '.'],
       dependencies: [
         rz_util_dep,

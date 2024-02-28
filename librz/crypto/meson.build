@@ -23,26 +23,26 @@ crypto_plugins = {
 }
 
 rz_crypto_sources = [
-  'des.c',
-  'crypto.c',
-  'p/crypto_aes.c',
-  'p/crypto_aes_cbc.c',
-  'p/crypto_base64.c',
-  'p/crypto_base91.c',
-  'p/crypto_blowfish.c',
-  'p/crypto_cps2.c',
-  'p/crypto_des.c',
-  'p/crypto_punycode.c',
-  'p/crypto_rc2.c',
-  'p/crypto_rc4.c',
-  'p/crypto_rc6.c',
-  'p/crypto_rol.c',
-  'p/crypto_ror.c',
-  'p/crypto_rot.c',
-  'p/crypto_serpent.c',
-  'p/crypto_serpent_algo.c',
-  'p/crypto_xor.c',
-  'p/crypto_sm4_ecb.c'
+  'des.cpp',
+  'crypto.cpp',
+  'p/crypto_aes.cpp',
+  'p/crypto_aes_cbc.cpp',
+  'p/crypto_base64.cpp',
+  'p/crypto_base91.cpp',
+  'p/crypto_blowfish.cpp',
+  'p/crypto_cps2.cpp',
+  'p/crypto_des.cpp',
+  'p/crypto_punycode.cpp',
+  'p/crypto_rc2.cpp',
+  'p/crypto_rc4.cpp',
+  'p/crypto_rc6.cpp',
+  'p/crypto_rol.cpp',
+  'p/crypto_ror.cpp',
+  'p/crypto_rot.cpp',
+  'p/crypto_serpent.cpp',
+  'p/crypto_serpent_algo.cpp',
+  'p/crypto_xor.cpp',
+  'p/crypto_sm4_ecb.cpp'
 ]
 
 nettle_proj = subproject('nettle')

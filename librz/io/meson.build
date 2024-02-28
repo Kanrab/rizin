@@ -47,50 +47,50 @@ io_plugins = {
 }
 
 rz_io_sources = [
-  'io.c',
-  'io_fd.c',
-  'io_map.c',
-  'io_memory.c',
-  'io_cache.c',
-  'io_desc.c',
-  'io_plugin.c',
-  'ioutils.c',
-  'p_cache.c',
-  'serialize_io.c',
-  'p/io_ar.c',
-  'p/io_fd.c',
-  'p/io_bfdbg.c',
-  'p/io_bochs.c',
-  'p/io_debug.c',
-  'p/io_dmp.c',
-  'p/io_default.c',
-  'p/io_gdb.c',
-  'p/io_gzip.c',
-  'p/io_http.c',
-  'p/io_ihex.c',
-  'p/io_mach.c',
-  'p/io_malloc.c',
-  'p/io_null.c',
-  'p/io_procpid.c',
-  'p/io_ptrace.c',
-  'p/io_rzpipe.c',
-  'p/io_rzweb.c',
-  'p/io_rap.c',
-  'p/io_self.c',
-  'p/io_shm.c',
-  'p/io_sparse.c',
-  'p/io_srec.c',
-  'p/io_tcp.c',
-  'p/io_winkd.c',
-  'p/io_winedbg.c',
-  'p/io_zip.c',
+  'io.cpp',
+  'io_fd.cpp',
+  'io_map.cpp',
+  'io_memory.cpp',
+  'io_cache.cpp',
+  'io_desc.cpp',
+  'io_plugin.cpp',
+  'ioutils.cpp',
+  'p_cache.cpp',
+  'serialize_io.cpp',
+  'p/io_ar.cpp',
+  'p/io_fd.cpp',
+  'p/io_bfdbg.cpp',
+  'p/io_bochs.cpp',
+  'p/io_debug.cpp',
+  'p/io_dmp.cpp',
+  'p/io_default.cpp',
+  'p/io_gdb.cpp',
+  'p/io_gzip.cpp',
+  'p/io_http.cpp',
+  'p/io_ihex.cpp',
+  'p/io_mach.cpp',
+  'p/io_malloc.cpp',
+  'p/io_null.cpp',
+  'p/io_procpid.cpp',
+  'p/io_ptrace.cpp',
+  'p/io_rzpipe.cpp',
+  'p/io_rzweb.cpp',
+  'p/io_rap.cpp',
+  'p/io_self.cpp',
+  'p/io_shm.cpp',
+  'p/io_sparse.cpp',
+  'p/io_srec.cpp',
+  'p/io_tcp.cpp',
+  'p/io_winkd.cpp',
+  'p/io_winedbg.cpp',
+  'p/io_zip.cpp',
 ]
 
 if host_machine.system() == 'windows'
   rz_io_sources += [
-    'p/io_windbg.c',
-    'p/io_w32.c',
-    'p/io_w32dbg.c',
+    'p/io_windbg.cpp',
+    'p/io_w32.cpp',
+    'p/io_w32dbg.cpp',
   ]
 endif
 
@@ -111,7 +111,7 @@ rz_io_deps = [
 
 if get_option('use_gpl')
   rz_io_deps += dependency('rzqnx')
-  rz_io_sources += 'p/io_qnx.c'
+  rz_io_sources += 'p/io_qnx.cpp'
 endif
 
 if host_machine.system() == 'windows'

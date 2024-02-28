@@ -1,9 +1,9 @@
 rz_reg_sources = [
-  'arena.c',
-  'rcond.c',
-  'profile.c',
-  'reg.c',
-  'rvalue.c',
+  'arena.cpp',
+  'rcond.cpp',
+  'profile.cpp',
+  'reg.cpp',
+  'rvalue.cpp',
 ]
 
 rz_reg = library('rz_reg', rz_reg_sources,

@@ -1,4 +1,4 @@
-executable('rz-sign', 'rz-sign.c',
+executable('rz-sign', 'rz-sign.cpp',
   include_directories: [platform_inc],
   dependencies: [
     rz_util_dep,

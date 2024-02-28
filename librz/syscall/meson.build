@@ -1,5 +1,5 @@
 rz_syscall_sources = [
-  'syscall.c',
+  'syscall.cpp',
 ]
 
 rz_syscall = library('rz_syscall', rz_syscall_sources,

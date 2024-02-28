@@ -28,24 +28,24 @@ parse_plugins = {
 }
 
 rz_parse_sources = [
-  'filter.c',
-  'parse.c',
-  'p/parse_6502_pseudo.c',
-  'p/parse_arm_pseudo.c',
-  'p/parse_att2intel.c',
-  'p/parse_avr_pseudo.c',
-  'p/parse_chip8_pseudo.c',
-  'p/parse_dalvik_pseudo.c',
-  'p/parse_m68k_pseudo.c',
-  'p/parse_mips_pseudo.c',
-  'p/parse_ppc_pseudo.c',
-  'p/parse_sh_pseudo.c',
-  'p/parse_tms320_pseudo.c',
-  'p/parse_v850_pseudo.c',
-  'p/parse_wasm_pseudo.c',
-  'p/parse_x86_pseudo.c',
-  'p/parse_riscv_pseudo.c',
-  'p/parse_z80_pseudo.c'
+  'filter.cpp',
+  'parse.cpp',
+  'p/parse_6502_pseudo.cpp',
+  'p/parse_arm_pseudo.cpp',
+  'p/parse_att2intel.cpp',
+  'p/parse_avr_pseudo.cpp',
+  'p/parse_chip8_pseudo.cpp',
+  'p/parse_dalvik_pseudo.cpp',
+  'p/parse_m68k_pseudo.cpp',
+  'p/parse_mips_pseudo.cpp',
+  'p/parse_ppc_pseudo.cpp',
+  'p/parse_sh_pseudo.cpp',
+  'p/parse_tms320_pseudo.cpp',
+  'p/parse_v850_pseudo.cpp',
+  'p/parse_wasm_pseudo.cpp',
+  'p/parse_x86_pseudo.cpp',
+  'p/parse_riscv_pseudo.cpp',
+  'p/parse_z80_pseudo.cpp'
 ]
 
 rz_parse = library('rz_parse', rz_parse_sources,

@@ -1,4 +1,4 @@
-project('rzheap', 'c')
+project('rzheap', 'cpp')
 
 rzheap_dep = declare_dependency(
   include_directories: include_directories('.', 'rz_jemalloc', 'rz_windows'),

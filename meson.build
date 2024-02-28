@@ -1,4 +1,4 @@
-project('rizin', 'c',
+project('rizin', 'cpp',
   version: 'v0.8.0',
   license: 'LGPL3',
   meson_version: '>=0.55.0',
@@ -40,13 +40,13 @@ rizin_libversion = '@0@.@1@'.format(rizin_version_major, rizin_version_minor)
 message('rizin lib version: ' + rizin_libversion)
 
 # system dependencies
-cc = meson.get_compiler('c')
-cc_native = meson.get_compiler('c', native: true)
+cc = meson.get_compiler('cpp')
+cc_native = meson.get_compiler('cpp', native: true)
 
 platform_deps = []
 platform_inc = ['.', 'librz', 'librz/include']
 if host_machine.system() == 'windows'
-  add_project_arguments('-DPSAPI_VERSION=1', language: 'c')
+  add_project_arguments('-DPSAPI_VERSION=1', language: 'cpp')
   platform_deps = [
     cc.find_library('ws2_32'),
     cc.find_library('wininet'),
@@ -70,53 +70,53 @@ if is_static_build
     # Use -Db_vscrt=static_from_buildtype to avoid warnings due to multiple /M options
     if get_option('b_vscrt') == 'from_buildtype'
       warning('To avoid warnings due to multiple /M options, please also set -Db_vscrt=mt or -Db_vscrt=mtd.')
-      add_project_arguments('/MT', language: 'c')
+      add_project_arguments('/MT', language: 'cpp')
     endif
   else
     if cc.has_link_argument('-static')
-      add_project_link_arguments('-static', language: 'c')
+      add_project_link_arguments('-static', language: 'cpp')
     endif
   endif
 endif
 
 if cc.has_argument('--std=gnu99')
-  add_global_arguments('--std=gnu99', language: ['c', 'cpp'])
+  add_global_arguments('--std=gnu99', language: 'cpp')
 elif cc.has_argument('--std=c99')
-  add_global_arguments('--std=c99', language: ['c', 'cpp'])
+  add_global_arguments('--std=c99', language: 'cpp')
 endif
 
 # Sanitize correct usage of rz_strf()
 if cc.has_argument('-Werror=sizeof-pointer-memaccess')
-  add_global_arguments('-Werror=sizeof-pointer-memaccess', language: ['c', 'cpp'])
+  add_global_arguments('-Werror=sizeof-pointer-memaccess', language: 'cpp')
 endif
 
 if cc.has_argument('-Wimplicit-fallthrough=3')
-  add_project_arguments('-Wimplicit-fallthrough=3', language: ['c', 'cpp'])
+  add_project_arguments('-Wimplicit-fallthrough=3', language: 'cpp')
 endif
 
 if cc.get_id() == 'clang-cl'
   if cc.has_argument('-fcommon')
-    add_project_arguments('-fcommon', language: 'c')
+    add_project_arguments('-fcommon', language: 'cpp')
   endif
-  add_project_arguments('-D__STDC__=1', language: 'c')
-  add_project_arguments('-D_CRT_DECLARE_NONSTDC_NAMES ', language: 'c')
-  add_project_arguments('-D_CRT_SECURE_NO_WARNINGS', language: 'c')
-  add_project_arguments('-D_CRT_NONSTDC_NO_DEPRECATE', language: 'c')
+  add_project_arguments('-D__STDC__=1', language: 'cpp')
+  add_project_arguments('-D_CRT_DECLARE_NONSTDC_NAMES ', language: 'cpp')
+  add_project_arguments('-D_CRT_SECURE_NO_WARNINGS', language: 'cpp')
+  add_project_arguments('-D_CRT_NONSTDC_NO_DEPRECATE', language: 'cpp')
 endif
 
 if get_option('default_library') == 'shared'
   if cc.has_argument('-fvisibility=hidden')
-    add_global_arguments('-fvisibility=hidden', language: 'c')
+    add_global_arguments('-fvisibility=hidden', language: 'cpp')
   endif
 endif
 
-add_project_arguments(['-DRZ_PLUGIN_INCORE=1'], language: 'c')
+add_project_arguments(['-DRZ_PLUGIN_INCORE=1'], language: 'cpp')
 b_sanitize_opt = get_option('b_sanitize')
-if (b_sanitize_opt.contains('address') or b_sanitize_opt.contains('undefined')) and cc.get_id() == 'clang'
-  add_global_arguments('-shared-libasan', language: 'c')
-  add_global_link_arguments('-shared-libasan', language: 'c')
-  add_global_arguments('-shared-libasan', language: 'c', native: true)
-  add_global_link_arguments('-shared-libasan', language: 'c', native: true)
+if (b_sanitize_opt.contains('address') or b_sanitize_opt.contains('undefined')) and cc.get_id() == 'clang++'
+  add_global_arguments('-shared-libasan', language: 'cpp')
+  add_global_link_arguments('-shared-libasan', language: 'cpp')
+  add_global_arguments('-shared-libasan', language: 'cpp', native: true)
+  add_global_link_arguments('-shared-libasan', language: 'cpp', native: true)
 endif
 
 fs = import('fs')
@@ -192,14 +192,14 @@ else
   # Package managers CS version has no meta programming macros for AArch64 -> ARM64 renaming
   # (because it is outdated).
   # With this define we includeour copy of those macros.
-  add_project_arguments(['-DUSE_SYS_CAPSTONE'], language: 'c')
+  add_project_arguments(['-DUSE_SYS_CAPSTONE'], language: 'cpp')
 endif
 
 # Handle PCRE2
 cpu_jit_supported = [ 'aarch64', 'arm', 'mips', 'mips64', 'ppc', 'ppc64', 'riscv32', 'riscv64', 's390x', 'x86', 'x86_64' ]
 pcre2_jit_supported = target_machine.cpu_family() in cpu_jit_supported and cc.get_id() != 'tcc'
 if pcre2_jit_supported
-  add_project_arguments(['-DSUPPORTS_PCRE2_JIT'], language: 'c')
+  add_project_arguments(['-DSUPPORTS_PCRE2_JIT'], language: 'cpp')
 endif
 
 pcre2_dep_opt = get_option('use_sys_pcre2')
@@ -407,8 +407,8 @@ foreach it : ccs
   it_userconf.set10('SUPPORTS_PCRE2_JIT', pcre2_jit_supported)
 
   if it_machine.system() == 'freebsd' or it_machine.system() == 'dragonfly'
-    add_project_link_arguments('-Wl,--unresolved-symbols,ignore-in-object-files', language: 'c', native: it_native)
-    add_project_link_arguments('-Wl,--allow-shlib-undefined', language: 'c', native: it_native)
+    add_project_link_arguments('-Wl,--unresolved-symbols,ignore-in-object-files', language: 'cpp', native: it_native)
+    add_project_link_arguments('-Wl,--allow-shlib-undefined', language: 'cpp', native: it_native)
   endif
 
   if it_machine.system() == 'darwin'
@@ -486,7 +486,7 @@ foreach it : ccs
   endforeach
 
   if it_userconf.get('HAVE_PIPE2') == 1
-    add_project_arguments('-D_GNU_SOURCE', language: ['c', 'cpp'], native: it_native)
+    add_project_arguments('-D_GNU_SOURCE', language: 'cpp', native: it_native)
   endif
   userconfs += [[it_userconf, it_lrt, it_utl, it_ldl, it_mth, it_th]]
 endforeach

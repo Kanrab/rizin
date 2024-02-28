@@ -1,16 +1,16 @@
 rz_type_sources = [
-  'base.c',
-  'format.c',
-  'function.c',
-  'helpers.c',
-  'path.c',
-  'serialize_functions.c',
-  'serialize_types.c',
-  'type.c',
-  'typeclass.c',
-  'parser/c_cpp_parser.c',
-  'parser/types_parser.c',
-  'parser/types_storage.c',
+  'base.cpp',
+  'format.cpp',
+  'function.cpp',
+  'helpers.cpp',
+  'path.cpp',
+  'serialize_functions.cpp',
+  'serialize_types.cpp',
+  'type.cpp',
+  'typeclass.cpp',
+  'parser/c_cpp_parser.cpp',
+  'parser/types_parser.cpp',
+  'parser/types_storage.cpp',
 ]
 
 r = run_command(py3_exe, check_meson_subproject_py, 'tree-sitter-c', check: false)

@@ -1,4 +1,4 @@
-executable('rz-find', 'rz-find.c',
+executable('rz-find', 'rz-find.cpp',
   include_directories: [platform_inc],
   dependencies: [
     rz_main_dep,
