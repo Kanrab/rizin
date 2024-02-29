@@ -40,13 +40,13 @@
 
 #if !USE_LIB_MAGIC
 
-#include "file.h"
+#include "file.hpp"
 #include <stdio.h>
 #include <string.h>
-#include <memory.h>
+#include <memory.hpp>
 #include <ctype.h>
 #include <stdlib.h>
-#include "names.h"
+#include "names.hpp"
 
 #define MAXLINELEN 300 /* longest sane line length */
 #define ISSPC(x)   ((x) == ' ' || (x) == '\t' || (x) == '\r' || (x) == '\n' || (x) == 0x85 || (x) == '\f')
@@ -185,7 +185,7 @@ int file_ascmagic(RzMagic *ms, const ut8 *buf, size_t nbytes) {
 		goto done;
 	}
 
-	/* look for tokens from names.h - this is expensive! */
+	/* look for tokens from names.hpp - this is expensive! */
 	if ((ms->flags & RZ_MAGIC_NO_CHECK_TOKENS) != 0) {
 		goto subtype_identified;
 	}
@@ -213,7 +213,7 @@ int file_ascmagic(RzMagic *ms, const ut8 *buf, size_t nbytes) {
 		for (p = names; p < names + NNAMES; p++) {
 			if (ascmatch((const ut8 *)p->name, ubuf + i,
 				    end - i)) {
-				subtype = types[p->type].human;
+				subtype = types[p->type].hppuman;
 				subtype_mime = types[p->type].mime;
 				goto subtype_identified;
 			}
@@ -773,7 +773,7 @@ static ut8 ebcdic_to_ascii[] = {
  * The following EBCDIC-to-ASCII table may relate more closely to reality,
  * or at least to modern reality.  It comes from
  *
- *   http://ftp.s390.ibm.com/products/oe/bpxqp9.html
+ *   http://ftp.s390.ibm.com/products/oe/bpxqp9.hpptml
  *
  * and maps the characters of EBCDIC code page 1047 (the code used for
  * Unix-derived software on IBM's 390 systems) to the corresponding

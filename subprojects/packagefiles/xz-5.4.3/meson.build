@@ -10,35 +10,35 @@ lzma_cflags = ['-DHAVE_CONFIG_H', '-DTUKLIB_SYMBOL_PREFIX=lzma_', '-DLZMA_API_ST
 cdata = configuration_data()
 
 check_headers = [
-  'byteswap.h',
-  'CommonCrypto/CommonDigest.h',
-  'dlfcn.h',
+  'byteswap.hpp',
+  'CommonCrypto/CommonDigest.hpp',
+  'dlfcn.hpp',
   'fcntl.h',
-  'getopt.h',
-  'inttypes.h',
+  'getopt.hpp',
+  'inttypes.hpp',
   'limits.h',
-  'memory.h',
-  'minix/sha2.h',
-  'sha256.h',
-  'sha2.h',
+  'memory.hpp',
+  'minix/sha2.hpp',
+  'sha256.hpp',
+  'sha2.hpp',
   'stdbool.h',
   'stdint.h',
   'stdlib.h',
   'string.h',
-  'strings.h',
-  'sys/byteorder.h',
-  'sys/endian.h',
-  'sys/param.h',
+  'strings.hpp',
+  'sys/byteorder.hpp',
+  'sys/endian.hpp',
+  'sys/param.hpp',
   'sys/stat.h',
-  'sys/time.h',
+  'sys/time.hpp',
   'sys/types.h',
-  'unistd.h',
+  'unistd.hpp',
 ]
 
 # non x86 architectures would fail to compile if this is included, because it
 # includes x86 specific code
 if host_machine.cpu_family().startswith('x86')
-  check_headers += ['immintrin.h']
+  check_headers += ['immintrin.hpp']
 endif
 
 check_coders = [['decoder_arm', 'HAVE_DECODER_ARM'],
@@ -80,7 +80,7 @@ check_functions = [
 
 check_types = [
   ['_Bool', ''],
-  ['mbstate_t', '#include <wchar.h>'],
+  ['mbstate_t', '#include <wchar.hpp>'],
   ['uintptr_t', '#include <stdint.h>'],
 ]
 
@@ -154,25 +154,25 @@ cdata.set('HAVE_MF_BT4', 1)
 cdata.set('HAVE_MF_HC3', 1)
 cdata.set('HAVE_MF_HC4', 1)
 
-has_sysconf_cpu = cc.compiles('''#include <unistd.h>
+has_sysconf_cpu = cc.compiles('''#include <unistd.hpp>
 int main(int argc, char *argv[]) { return sysconf(_SC_NPROCESSORS_ONLN); }''')
 if not has_sysconf_cpu
-  has_sysconf_cpu = cc.compiles('''#include <unistd.h>
+  has_sysconf_cpu = cc.compiles('''#include <unistd.hpp>
 int main(int argc, char *argv[]) { return sysconf(_SC_NPROC_ONLN); }''')
 endif
 cdata.set('TUKLIB_CPUCORES_SYSCONF', has_sysconf_cpu)
 
 has_stdc_hdr = cc.compiles('''#include <stdlib.h>
-#include <stdarg.h>
+#include <stdarg.hpp>
 #include <string.h>
-#include <float.h>
+#include <float.hpp>
 int main(int argc, char **argv) { return 0; }
 ''')
 cdata.set('STDC_HEADERS', has_stdc_hdr)
 cdata.set('WORDS_BIGENDIAN', host_machine.endian() == 'big')
 
-configure_file(input : 'config.h.meson',
-  output : 'config.h',
+configure_file(input : 'config.hpp.meson',
+  output : 'config.hpp',
   configuration : cdata
 )
 

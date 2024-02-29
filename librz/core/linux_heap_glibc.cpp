@@ -3,17 +3,17 @@
 // SPDX-FileCopyrightText: 2016-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
-#include <rz_config.h>
-#include <rz_types.h>
+#include <rz_core.hpp>
+#include <rz_config.hpp>
+#include <rz_types.hpp>
 #include <math.h>
 
-#include "core_private.h"
+#include "core_private.hpp"
 
 #ifdef HEAP64
-#include "linux_heap_glibc64.h"
+#include "linux_heap_glibc64.hpp"
 #else
-#include "linux_heap_glibc.h"
+#include "linux_heap_glibc.hpp"
 #endif
 
 /**
@@ -1052,10 +1052,10 @@ static GH(RTcache) * GH(tcache_new)(RzCore *core) {
 	}
 	if (core->dbg->glibc_version >= TCACHE_NEW_VERSION) {
 		tcache->type = NEW;
-		tcache->RzHeapTcache.heap_tcache = RZ_NEW0(GH(RzHeapTcache));
+		tcache->RzHeapTcache.hppeap_tcache = RZ_NEW0(GH(RzHeapTcache));
 	} else {
 		tcache->type = OLD;
-		tcache->RzHeapTcache.heap_tcache_pre_230 = RZ_NEW0(GH(RzHeapTcachePre230));
+		tcache->RzHeapTcache.hppeap_tcache_pre_230 = RZ_NEW0(GH(RzHeapTcachePre230));
 	}
 	return tcache;
 }
@@ -1063,30 +1063,30 @@ static GH(RTcache) * GH(tcache_new)(RzCore *core) {
 RZ_API void GH(tcache_free)(GH(RTcache) * tcache) {
 	rz_return_if_fail(tcache);
 	tcache->type == NEW
-		? free(tcache->RzHeapTcache.heap_tcache)
-		: free(tcache->RzHeapTcache.heap_tcache_pre_230);
+		? free(tcache->RzHeapTcache.hppeap_tcache)
+		: free(tcache->RzHeapTcache.hppeap_tcache_pre_230);
 	free(tcache);
 }
 
 static bool GH(tcache_read)(RzCore *core, GHT tcache_start, GH(RTcache) * tcache) {
 	rz_return_val_if_fail(core && tcache, false);
 	return tcache->type == NEW
-		? rz_io_read_at(core->io, tcache_start, (ut8 *)tcache->RzHeapTcache.heap_tcache, sizeof(GH(RzHeapTcache)))
-		: rz_io_read_at(core->io, tcache_start, (ut8 *)tcache->RzHeapTcache.heap_tcache_pre_230, sizeof(GH(RzHeapTcachePre230)));
+		? rz_io_read_at(core->io, tcache_start, (ut8 *)tcache->RzHeapTcache.hppeap_tcache, sizeof(GH(RzHeapTcache)))
+		: rz_io_read_at(core->io, tcache_start, (ut8 *)tcache->RzHeapTcache.hppeap_tcache_pre_230, sizeof(GH(RzHeapTcachePre230)));
 }
 
 static int GH(tcache_get_count)(GH(RTcache) * tcache, int index) {
 	rz_return_val_if_fail(tcache, 0);
 	return tcache->type == NEW
-		? tcache->RzHeapTcache.heap_tcache->counts[index]
-		: tcache->RzHeapTcache.heap_tcache_pre_230->counts[index];
+		? tcache->RzHeapTcache.hppeap_tcache->counts[index]
+		: tcache->RzHeapTcache.hppeap_tcache_pre_230->counts[index];
 }
 
 static GHT GH(tcache_get_entry)(GH(RTcache) * tcache, int index) {
 	rz_return_val_if_fail(tcache, 0);
 	return tcache->type == NEW
-		? tcache->RzHeapTcache.heap_tcache->entries[index]
-		: tcache->RzHeapTcache.heap_tcache_pre_230->entries[index];
+		? tcache->RzHeapTcache.hppeap_tcache->entries[index]
+		: tcache->RzHeapTcache.hppeap_tcache_pre_230->entries[index];
 }
 
 /**

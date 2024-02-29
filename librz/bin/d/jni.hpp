@@ -19,7 +19,7 @@
 
 /*
  * JNI specification, as defined by Sun:
- * http://java.sun.com/javase/6/docs/technotes/guides/jni/spec/jniTOC.html
+ * http://java.sun.com/javase/6/docs/technotes/guides/jni/spec/jniTOC.hpptml
  *
  * Everything here is expected to be VM-neutral.
  */
@@ -30,14 +30,14 @@
 #if __RZTINYC__
 typedef char *va_list;
 #else
-#include <stdarg.h>
+#include <stdarg.hpp>
 #endif
 
 /*
  * Primitive types that match up with Java equivalents.
  */
 #ifdef HAVE_INTTYPES_H
-#include <inttypes.h> /* C99 */
+#include <inttypes.hpp> /* C99 */
 typedef uint8_t jboolean; /* unsigned 8 bits */
 typedef int8_t jbyte; /* signed 8 bits */
 typedef uint16_t jchar; /* unsigned 16 bits */
@@ -454,7 +454,7 @@ struct JNINativeInterface {
 	void (*GetDoubleArrayRegion)(JNIEnv *, jdoubleArray,
 		jsize, jsize, jdouble *);
 
-	/* spec shows these without const; some jni.h do, some don't */
+	/* spec shows these without const; some jni.hpp do, some don't */
 	void (*SetBooleanArrayRegion)(JNIEnv *, jbooleanArray,
 		jsize, jsize, const jboolean *);
 	void (*SetByteArrayRegion)(JNIEnv *, jbyteArray,

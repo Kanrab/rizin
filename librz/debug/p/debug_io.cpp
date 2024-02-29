@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2016-2018 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_io.h>
-#include <rz_debug.h>
+#include <rz_io.hpp>
+#include <rz_debug.hpp>
 
 #define IO_MAPS_PERM_SZ 32
 #define IO_MAPS_NAME_SZ 512

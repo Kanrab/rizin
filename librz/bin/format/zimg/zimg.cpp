@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2009-2015 ninjahacker <wardjm@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include "zimg.h"
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include "zimg.hpp"
 
 struct rz_bin_zimg_obj_t *rz_bin_zimg_new_buf(RzBuffer *buf) {
 	struct rz_bin_zimg_obj_t *bin = RZ_NEW0(struct rz_bin_zimg_obj_t);

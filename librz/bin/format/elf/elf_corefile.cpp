@@ -4,7 +4,7 @@
 // SPDX-FileCopyrightText: 2008-2020 alvaro_fe <alvaro.felipe91@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "elf.h"
+#include "elf.hpp"
 
 /**
  * \brief Get the stack pointer value

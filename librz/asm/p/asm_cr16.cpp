@@ -3,10 +3,10 @@
 
 #include <stdio.h>
 #include <string.h>
-#include <rz_types.h>
-#include <rz_lib.h>
-#include <rz_asm.h>
-#include <cr16_disas.h>
+#include <rz_types.hpp>
+#include <rz_lib.hpp>
+#include <rz_asm.hpp>
+#include <cr16_disas.hpp>
 
 static int cr16_disassemble(RzAsm *a, RzAsmOp *op, const ut8 *buf, int len) {
 	struct cr16_cmd cmd = { 0 };

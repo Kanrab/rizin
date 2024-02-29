@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2015-2018 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_asm.h>
-#include <rz_lib.h>
-#include <capstone/capstone.h>
+#include <rz_asm.hpp>
+#include <rz_lib.hpp>
+#include <capstone/capstone.hpp>
 
 #ifdef CAPSTONE_M68K_H
 #define CAPSTONE_HAS_M68K 1
@@ -17,8 +17,8 @@
 #endif
 
 #if CAPSTONE_HAS_M68K
-#include <capstone/m68k.h>
-// http://www.mrc.uidaho.edu/mrc/people/jff/digital/M68Kir.html
+#include <capstone/m68k.hpp>
+// http://www.mrc.uidaho.edu/mrc/people/jff/digital/M68Kir.hpptml
 
 #define OPERAND(x)  insn->detail->m68k.operands[x]
 #define REG(x)      cs_reg_name(*handle, insn->detail->m68k.operands[x].reg)

@@ -5,10 +5,10 @@
  * A plugin allowing to run rz-pipe "scripts" written in C language
  */
 
-#include <rz_lib.h>
-#include <rz_core.h>
-#include <rz_lang.h>
-#include "pipe_helper.h"
+#include <rz_lib.hpp>
+#include <rz_core.hpp>
+#include <rz_lang.hpp>
+#include "pipe_helper.hpp"
 
 #if __UNIX__
 static int lang_cpipe_file(RzLang *lang, const char *file) {
@@ -85,7 +85,7 @@ static int lang_cpipe_run(RzLang *lang, const char *code, int len) {
 		eprintf("Cannot open .tmp.c\n");
 		return false;
 	}
-	fputs("#include <rz_socket.h>\n\n"
+	fputs("#include <rz_socket.hpp>\n\n"
 	      "#define RZP(x,y...) rzpipe_cmdf(rzp,x,##y)\n"
 	      "int main() {\n"
 	      "  RzPipe *rzp = rzpipe_open(NULL);",

@@ -1,25 +1,25 @@
 // SPDX-FileCopyrightText: 2007-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util/rz_regex.h>
-#include "rz_list.h"
-#include "rz_types.h"
-#include "rz_util.h"
-#include "rz_cons.h"
-#include "rz_bin.h"
-#include "rz_util/rz_assert.h"
-#include <rz_vector.h>
+#include <rz_util/rz_regex.hpp>
+#include "rz_list.hpp"
+#include "rz_types.hpp"
+#include "rz_util.hpp"
+#include "rz_cons.hpp"
+#include "rz_bin.hpp"
+#include "rz_util/rz_assert.hpp"
+#include <rz_vector.hpp>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include <wchar.h>
-#include <stdarg.h>
-#include <rz_util/rz_base64.h>
-#include <rz_util/rz_utf8.h>
-#include <rz_util/rz_utf16.h>
-#include <rz_util/rz_utf32.h>
-#include <rz_util/rz_ebcdic.h>
+#include <wchar.hpp>
+#include <stdarg.hpp>
+#include <rz_util/rz_base64.hpp>
+#include <rz_util/rz_utf8.hpp>
+#include <rz_util/rz_utf16.hpp>
+#include <rz_util/rz_utf32.hpp>
+#include <rz_util/rz_ebcdic.hpp>
 
 /* stable code */
 static const char *rwxstr[] = {
@@ -648,7 +648,7 @@ RZ_API RZ_OWN char *rz_str_skip_separator_chars(RZ_NONNULL const char *text) {
 }
 
 // Counts the number of words (separated by separator characters: newlines, tabs,
-// return, space). See rz_util.h for more details of the IS_SEPARATOR macro.
+// return, space). See rz_util.hpp for more details of the IS_SEPARATOR macro.
 RZ_API int rz_str_word_count(const char *string) {
 	int word;
 	const char *text = skip_separator_chars(string);
@@ -1919,7 +1919,7 @@ RZ_API char *rz_str_escape_mutf8_for_json(const char *buf, int buf_size) {
 	return escape_utf8_for_json(buf, buf_size, true);
 }
 
-// http://daviddeley.com/autohotkey/parameters/parameters.htm#WINCRULES
+// http://daviddeley.com/autohotkey/parameters/parameters.hpptm#WINCRULES
 // https://docs.microsoft.com/en-us/cpp/cpp/main-function-command-line-args?redirectedfrom=MSDN&view=vs-2019#parsing-c-command-line-arguments
 RZ_API char *rz_str_format_msvc_argv(size_t argc, const char **argv) {
 	RzStrBuf sb;

@@ -27,8 +27,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <rz_types_base.h>
-#include <rz_util.h>
+#include <rz_types_base.hpp>
+#include <rz_util.hpp>
 
 /** \internal
  * \brief Table for mapping 6-bit index to symbol.

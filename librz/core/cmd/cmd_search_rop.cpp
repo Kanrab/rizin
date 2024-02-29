@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: 2009-2016 Alexandru Caciulescu <alex.darredevil@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <stddef.h>
+#include <stddef.hpp>
 
-#include "rz_core.h"
-#include "rz_io.h"
-#include "rz_list.h"
-#include "rz_types_base.h"
+#include "rz_core.hpp"
+#include "rz_io.hpp"
+#include "rz_list.hpp"
+#include "rz_types_base.hpp"
 
 static RzList /*<char *>*/ *parse_list(const char *str) {
 	char *line, *data, *str_n;

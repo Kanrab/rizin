@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2017 pancake <pancake@nopcode.org>
 // SPDX-FileCopyrightText: 2021 Heersin <teablearcher@gmail.com>
 
-#include "arch_53.h"
+#include "arch_53.hpp"
 
 int lua53_anal_op(RzAnalysis *anal, RzAnalysisOp *op, ut64 addr, const ut8 *data, int len) {
 	if (!op) {

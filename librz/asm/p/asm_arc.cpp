@@ -2,14 +2,14 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <stdio.h>
-#include <stdarg.h>
+#include <stdarg.hpp>
 #include <string.h>
-#include <rz_types.h>
-#include <rz_lib.h>
-#include <rz_util.h>
-#include <rz_asm.h>
-#include "disas-asm.h"
-#include <mybfd.h>
+#include <rz_types.hpp>
+#include <rz_lib.hpp>
+#include <rz_util.hpp>
+#include <rz_asm.hpp>
+#include "disas-asm.hpp"
+#include <mybfd.hpp>
 
 /* extern */
 int decodeInstr(bfd_vma address, disassemble_info *info);

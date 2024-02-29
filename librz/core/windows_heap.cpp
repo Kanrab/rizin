@@ -1,13 +1,13 @@
 // SPDX-FileCopyrightText: 2019 GustavoLCR <gugulcr@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_windows.h>
-#include <rz_core.h>
-#include <TlHelp32.h>
-#include <windows_heap.h>
-#include "..\..\debug\p\native\maps\windows_maps.h"
-#include "..\..\bin\pdb\pdb_downloader.h"
-#include "..\..\bin\pdb\pdb.h"
+#include <rz_windows.hpp>
+#include <rz_core.hpp>
+#include <TlHelp32.hpp>
+#include <windows_heap.hpp>
+#include "..\..\debug\p\native\maps\windows_maps.hpp"
+#include "..\..\bin\pdb\pdb_downloader.hpp"
+#include "..\..\bin\pdb\pdb.hpp"
 
 /*
  *	Viewer discretion advised: Spaghetti code ahead
@@ -754,7 +754,7 @@ static bool GetSegmentHeapBlocks(RzDebug *dbg, HANDLE h_proc, PVOID heapBase, PH
 					while (from < (WPARAM)start + vsSubsegment.Size * sizeof(HEAP_VS_CHUNK_HEADER)) {
 						HEAP_VS_CHUNK_HEADER vsChunk;
 						ReadProcessMemory(h_proc, (PVOID)from, &vsChunk, sizeof(HEAP_VS_CHUNK_HEADER), &bytesRead);
-						vsChunk.Sizes.HeaderBits ^= from ^ RtlpHpHeapGlobal;
+						vsChunk.Sizes.hppeaderBits ^= from ^ RtlpHpHeapGlobal;
 						WPARAM sz = vsChunk.Sizes.UnsafeSize * sizeof(HEAP_VS_CHUNK_HEADER);
 						if (vsChunk.Sizes.Allocated) {
 							GROW_PBLOCKS();
@@ -1053,7 +1053,7 @@ static PHeapBlock GetSingleSegmentBlock(RzDebug *dbg, HANDLE h_proc, PSEGMENT_HE
 			if ((subsegment.Size ^ 0x2BED) == subsegment.Signature) {
 				HEAP_VS_CHUNK_HEADER header;
 				ReadProcessMemory(h_proc, (PVOID)(headerOff - sizeof(HEAP_VS_CHUNK_HEADER)), &header, sizeof(HEAP_VS_CHUNK_HEADER), NULL);
-				header.Sizes.HeaderBits ^= RtlpHpHeapGlobal ^ headerOff;
+				header.Sizes.hppeaderBits ^= RtlpHpHeapGlobal ^ headerOff;
 				hb->dwAddress = offset;
 				hb->dwSize = header.Sizes.UnsafeSize * sizeof(HEAP_VS_CHUNK_HEADER);
 				hb->dwFlags = 1 | SEGMENT_HEAP_BLOCK | VS_BLOCK;

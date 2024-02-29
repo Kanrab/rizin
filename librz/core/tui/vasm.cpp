@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2009-2018 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
+#include <rz_core.hpp>
 
 #define RZ_VISUAL_ASM_BUFSIZE 1024
 
@@ -28,7 +28,7 @@ static int readline_callback(void *_a, const char *str) {
 			       "Visual assembler help:\n\n"
 			       "  assemble input while typing using asm.arch, asm.bits and cfg.bigendian\n"
 			       "  press enter to quit (prompt if there are bytes to be written)\n"
-			       "  this assembler supports various directives like .hex ...\n");
+			       "  this assembler supports various directives like .hppex ...\n");
 	} else {
 		rz_asm_code_free(a->acode);
 		rz_asm_set_pc(a->core->rasm, a->off);

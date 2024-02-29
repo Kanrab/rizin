@@ -5,14 +5,14 @@
 #ifndef MDMP_PE_H
 #define MDMP_PE_H
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_bin.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_bin.hpp>
 
-#include "pe/pe.h"
+#include "pe/pe.hpp"
 
-#include "mdmp_specs.h"
+#include "mdmp_specs.hpp"
 
 struct PE_(rz_bin_mdmp_pe_bin) {
 	ut64 vaddr;

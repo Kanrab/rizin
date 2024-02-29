@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2011-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: MIT
 
-#include "sdbht.h"
+#include "sdbht.hpp"
 
 void sdbkv_fini(SdbKv *kv) {
 	free(kv->base.key);

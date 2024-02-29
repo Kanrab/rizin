@@ -1,4 +1,4 @@
-### synchapi.h ###
+### synchapi.hpp ###
 
 AcquireSRWLockExclusive=func
 func.AcquireSRWLockExclusive.args=1

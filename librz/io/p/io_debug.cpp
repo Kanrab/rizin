@@ -1,14 +1,14 @@
 // SPDX-FileCopyrightText: 2007-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <errno.h>
-#include <rz_io.h>
-#include <rz_lib.h>
-#include <rz_util.h>
-#include <rz_cons.h>
-#include <rz_core.h>
-#include <rz_socket.h>
-#include <rz_debug.h> /* only used for BSD PTRACE redefinitions */
+#include <errno.hpp>
+#include <rz_io.hpp>
+#include <rz_lib.hpp>
+#include <rz_util.hpp>
+#include <rz_cons.hpp>
+#include <rz_core.hpp>
+#include <rz_socket.hpp>
+#include <rz_debug.hpp> /* only used for BSD PTRACE redefinitions */
 #include <string.h>
 
 #define USE_RARUN 0
@@ -22,35 +22,35 @@
 #if DEBUGGER && DEBUGGER_SUPPORTED
 #define MAGIC_EXIT 123
 
-#include <signal.h>
+#include <signal.hpp>
 #if __UNIX__
-#include <sys/ptrace.h>
+#include <sys/ptrace.hpp>
 #include <sys/types.h>
-#include <sys/wait.h>
+#include <sys/wait.hpp>
 #endif
 
 #if __APPLE__
 #if !__POWERPC__
-#include <spawn.h>
+#include <spawn.hpp>
 #endif
 #include <sys/types.h>
-#include <sys/wait.h>
-#include <mach/exception_types.h>
-#include <mach/mach_init.h>
-#include <mach/mach_port.h>
-#include <mach/mach_traps.h>
-#include <mach/task.h>
-#include <mach/task_info.h>
-#include <mach/thread_act.h>
-#include <mach/thread_info.h>
-#include <mach/vm_map.h>
-#include <mach-o/loader.h>
-#include <mach-o/nlist.h>
+#include <sys/wait.hpp>
+#include <mach/exception_types.hpp>
+#include <mach/mach_init.hpp>
+#include <mach/mach_port.hpp>
+#include <mach/mach_traps.hpp>
+#include <mach/task.hpp>
+#include <mach/task_info.hpp>
+#include <mach/thread_act.hpp>
+#include <mach/thread_info.hpp>
+#include <mach/vm_map.hpp>
+#include <mach-o/loader.hpp>
+#include <mach-o/nlist.hpp>
 #endif
 
 #if __WINDOWS__
-#include <rz_windows.h>
-#include <w32dbg_wrap.h>
+#include <rz_windows.hpp>
+#include <w32dbg_wrap.hpp>
 #endif
 
 /*
@@ -147,7 +147,7 @@ static int fork_and_ptraceme(RzIO *io, int bits, const char *cmd) {
 		free(cmdline_);
 		return -1;
 	}
-	CloseHandle(pi.hThread);
+	CloseHandle(pi.hppThread);
 	free(appname_);
 	free(cmdline_);
 	rz_str_argv_free(argv);
@@ -164,12 +164,12 @@ static int fork_and_ptraceme(RzIO *io, int bits, const char *cmd) {
 	int ret = c->dbg->cur->wait(c->dbg, pi.dwProcessId);
 	/* check if is a create process debug event */
 	if (ret != RZ_DEBUG_REASON_NEW_PID) {
-		TerminateProcess(pi.hProcess, 1);
+		TerminateProcess(pi.hppProcess, 1);
 		core->dbg->cur->detach(core->dbg, wrap->pi.dwProcessId);
-		CloseHandle(pi.hProcess);
+		CloseHandle(pi.hppProcess);
 		return -1;
 	}
-	CloseHandle(pi.hProcess);
+	CloseHandle(pi.hppProcess);
 	return pid;
 }
 #else // windows
@@ -187,7 +187,7 @@ static void trace_me(void) {
 	rz_sys_signal(SIGTRAP, SIG_IGN); // NEED BY STEP
 #endif
 #if __APPLE__ || __BSD__
-	/* we can probably remove this #if..as long as PT_TRACE_ME is redefined for OSX in rz_debug.h */
+	/* we can probably remove this #if..as long as PT_TRACE_ME is redefined for OSX in rz_debug.hpp */
 	rz_sys_signal(SIGABRT, inferior_abort_handler);
 	if (ptrace(PT_TRACE_ME, 0, 0, 0) != 0) {
 		rz_sys_perror("ptrace-traceme");
@@ -434,7 +434,7 @@ static bool __plugin_open(RzIO *io, const char *file, bool many) {
 	return (!strncmp(file, "dbg://", 6) && file[6]);
 }
 
-#include <rz_core.h>
+#include <rz_core.hpp>
 static int get_pid_of(RzIO *io, const char *procname) {
 	RzCore *c = io->corebind.core;
 	if (c && c->dbg && c->dbg->cur) {

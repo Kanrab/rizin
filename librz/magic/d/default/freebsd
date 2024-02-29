@@ -125,7 +125,7 @@
 7	string	\357\020\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0	FreeBSD/i386 a.out core file
 >1039	string	>\0	from '%s'
 
-# /var/run/ld.so.hints
+# /var/run/ld.so.hppints
 # What are you laughing about?
 0	lelong			011421044151	ld.so hints file (Little Endian
 >4	lelong			>0		\b, version %d)

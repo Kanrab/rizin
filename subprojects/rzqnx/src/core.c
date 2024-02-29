@@ -3,13 +3,13 @@
 // SPDX-FileCopyrightText: 2016 FSF Inc
 // SPDX-License-Identifier: GPL-2.0-only
 
-#include <errno.h>
-#include <rz_debug.h>
-#include "libqnxr.h"
-#include "core.h"
-#include "signal.h"
-#include "sigutil.h"
-#include "packet.h"
+#include <errno.hpp>
+#include <rz_debug.hpp>
+#include "libqnxr.hpp"
+#include "core.hpp"
+#include "signal.hpp"
+#include "sigutil.hpp"
+#include "packet.hpp"
 
 #define MAX_TRAN_TRIES          3
 #define HOST_QNX_PROTOVER_MAJOR 0
@@ -174,7 +174,7 @@ int qnxr_connect(libqnxr_t *g, const char *host, int port) {
 	g->tran.pkt.connect.minor = HOST_QNX_PROTOVER_MINOR;
 	nto_send(g, sizeof(g->tran.pkt.connect), 0);
 
-	if (g->recv.pkt.hdr.cmd == DSrMsg_err) {
+	if (g->recv.pkt.hppdr.cmd == DSrMsg_err) {
 		eprintf("%s: connection failed: %lld\n", __func__,
 			EXTRACT_SIGNED_INTEGER(&g->recv.pkt.err.err, 4));
 		return -1;
@@ -186,10 +186,10 @@ int qnxr_connect(libqnxr_t *g, const char *host, int port) {
 	g->tran.pkt.protover.minor = HOST_QNX_PROTOVER_MINOR;
 	nto_send(g, sizeof(g->tran.pkt.protover), 0);
 
-	if ((g->recv.pkt.hdr.cmd == DSrMsg_err) && (EXTRACT_SIGNED_INTEGER(&g->recv.pkt.err.err, 4) == EINVAL)) {
+	if ((g->recv.pkt.hppdr.cmd == DSrMsg_err) && (EXTRACT_SIGNED_INTEGER(&g->recv.pkt.err.err, 4) == EINVAL)) {
 		g->target_proto_major = 0;
 		g->target_proto_minor = 0;
-	} else if (g->recv.pkt.hdr.cmd == DSrMsg_okstatus) {
+	} else if (g->recv.pkt.hppdr.cmd == DSrMsg_okstatus) {
 		g->target_proto_major = EXTRACT_SIGNED_INTEGER(&g->recv.pkt.okstatus.status, 4);
 		g->target_proto_minor = EXTRACT_SIGNED_INTEGER(&g->recv.pkt.okstatus.status, 4);
 		g->target_proto_major = (g->target_proto_major >> 8) & DSMSG_PROTOVER_MAJOR;
@@ -233,7 +233,7 @@ ptid_t qnxr_attach(libqnxr_t *g, pid_t pid) {
 	g->tran.pkt.attach.pid = EXTRACT_SIGNED_INTEGER(&g->tran.pkt.attach.pid, 4);
 
 	nto_send(g, sizeof(g->tran.pkt.attach), 0);
-	if (g->recv.pkt.hdr.cmd != DSrMsg_okdata) {
+	if (g->recv.pkt.hppdr.cmd != DSrMsg_okdata) {
 		eprintf("%s: failed to attach to %d\n", __func__, pid);
 		return null_ptid;
 	}
@@ -309,7 +309,7 @@ ptid_t qnxr_run(libqnxr_t *g, const char *file, char **args, char **env) {
 
 	nto_send(g, offsetof(DStMsg_load_t, cmdline) + p - g->tran.pkt.load.cmdline + 1, 1);
 
-	if (g->recv.pkt.hdr.cmd == DSrMsg_okdata) {
+	if (g->recv.pkt.hppdr.cmd == DSrMsg_okdata) {
 		ptid_t ptid = nto_parse_notify(g);
 		eprintf("%s: inferior pid: %d\n", __func__, ptid.pid);
 		g->inferior_ptid = ptid;
@@ -343,7 +343,7 @@ int qnxr_read_registers(libqnxr_t *g) {
 		rlen = nto_send(g, sizeof(g->tran.pkt.regrd), 1);
 
 		if (rlen > 0) {
-			if (g->recv.pkt.hdr.cmd == DSrMsg_okdata) {
+			if (g->recv.pkt.hppdr.cmd == DSrMsg_okdata) {
 				memcpy(buf + g->registers[i].offset,
 					g->recv.pkt.okdata.data, len);
 				n += len;
@@ -379,10 +379,10 @@ int qnxr_read_memory(libqnxr_t *g, ut64 address, ut8 *data, ut64 len) {
 
 		g->tran.pkt.memrd.size = EXTRACT_SIGNED_INTEGER(&ask_len, 2);
 		rcv_len = nto_send(g, sizeof(g->tran.pkt.memrd), 0) -
-			sizeof(g->recv.pkt.hdr);
+			sizeof(g->recv.pkt.hppdr);
 		if (rcv_len <= 0)
 			break;
-		if (g->recv.pkt.hdr.cmd == DSrMsg_okdata) {
+		if (g->recv.pkt.hppdr.cmd == DSrMsg_okdata) {
 			memcpy(data + tot_len, g->recv.pkt.okdata.data, rcv_len);
 			tot_len += rcv_len;
 		} else
@@ -404,7 +404,7 @@ int qnxr_write_memory(libqnxr_t *g, ut64 address, const ut8 *data, ut64 len) {
 	memcpy(g->tran.pkt.memwr.data, data, len);
 	nto_send(g, offsetof(DStMsg_memwr_t, data) + len, 0);
 
-	switch (g->recv.pkt.hdr.cmd) {
+	switch (g->recv.pkt.hppdr.cmd) {
 	case DSrMsg_ok:
 		return len;
 	case DSrMsg_okstatus:
@@ -432,7 +432,7 @@ void qnxr_pidlist(libqnxr_t *g, void *ctx, pidlist_cb_t *cb) {
 		g->tran.pkt.pidlist.tid = EXTRACT_SIGNED_INTEGER(&start_tid, 4);
 		nto_send(g, sizeof(g->tran.pkt.pidlist), 0);
 
-		if (g->recv.pkt.hdr.cmd == DSrMsg_err || g->recv.pkt.hdr.cmd != DSrMsg_okdata)
+		if (g->recv.pkt.hppdr.cmd == DSrMsg_err || g->recv.pkt.hppdr.cmd != DSrMsg_okdata)
 			return;
 
 		pid = EXTRACT_SIGNED_INTEGER(&pidlist->pid, 4);
@@ -455,7 +455,7 @@ int qnxr_select(libqnxr_t *g, pid_t pid, int tid) {
 	g->tran.pkt.select.tid = EXTRACT_SIGNED_INTEGER(&tid, 4);
 	nto_send(g, sizeof(g->tran.pkt.select), 1);
 
-	if (g->recv.pkt.hdr.cmd == DSrMsg_err) {
+	if (g->recv.pkt.hppdr.cmd == DSrMsg_err) {
 		eprintf("%s: failed to select %d\n", __func__, pid);
 		return 0;
 	}
@@ -547,7 +547,7 @@ ptid_t qnxr_wait(libqnxr_t *g, pid_t pid) {
 	if (g->inferior_ptid.pid != pid) {
 		return null_ptid;
 	}
-	if (g->recv.pkt.hdr.cmd != DShMsg_notify) {
+	if (g->recv.pkt.hppdr.cmd != DShMsg_notify) {
 		int rlen;
 		char waiting_for_notify = 1;
 
@@ -568,17 +568,17 @@ ptid_t qnxr_wait(libqnxr_t *g, pid_t pid) {
 			if (g->channelrd == SET_CHANNEL_TEXT) {
 				// TODO nto_incoming_text
 			} else {
-				g->recv.pkt.hdr.cmd &= ~DSHDR_MSG_BIG_ENDIAN;
-				if (g->waiting_for_stop && g->recv.pkt.hdr.cmd == DSrMsg_ok) {
+				g->recv.pkt.hppdr.cmd &= ~DSHDR_MSG_BIG_ENDIAN;
+				if (g->waiting_for_stop && g->recv.pkt.hppdr.cmd == DSrMsg_ok) {
 					g->waiting_for_stop = 0;
 					eprintf("%s: got stop response\n", __func__);
 					if (!waiting_for_notify)
 						break;
-				} else if (g->recv.pkt.hdr.cmd == DShMsg_notify) {
+				} else if (g->recv.pkt.hppdr.cmd == DShMsg_notify) {
 					// acknowledge the notify
-					g->tran.pkt.hdr.cmd = DSrMsg_ok;
-					g->tran.pkt.hdr.channel = SET_CHANNEL_DEBUG;
-					g->tran.pkt.hdr.mid = g->recv.pkt.hdr.mid;
+					g->tran.pkt.hppdr.cmd = DSrMsg_ok;
+					g->tran.pkt.hppdr.channel = SET_CHANNEL_DEBUG;
+					g->tran.pkt.hppdr.mid = g->recv.pkt.hppdr.mid;
 					qnxr_send_ch_debug(g);
 
 					g->send_len = sizeof(g->tran.pkt.ok);
@@ -592,7 +592,7 @@ ptid_t qnxr_wait(libqnxr_t *g, pid_t pid) {
 	}
 
 	/* to make us wait the next time */
-	g->recv.pkt.hdr.cmd = DSrMsg_ok;
+	g->recv.pkt.hppdr.cmd = DSrMsg_ok;
 	return returned_ptid;
 }
 
@@ -621,7 +621,7 @@ int _qnxr_set_bp(libqnxr_t *g, ut64 address, const char *conditions, enum Breakp
 	g->tran.pkt.brk.size = 0;
 	nto_send(g, sizeof(g->tran.pkt.brk), 0);
 
-	if (g->recv.pkt.hdr.cmd == DSrMsg_err)
+	if (g->recv.pkt.hppdr.cmd == DSrMsg_err)
 		return -1;
 	return 0;
 }
@@ -635,16 +635,16 @@ int _qnxr_remove_bp(libqnxr_t *g, ut64 address, enum Breakpoint type) {
 	g->tran.pkt.brk.size = -1;
 	nto_send(g, sizeof(g->tran.pkt.brk), 0);
 
-	if (g->recv.pkt.hdr.cmd == DSrMsg_err)
+	if (g->recv.pkt.hppdr.cmd == DSrMsg_err)
 		return -1;
 	return 0;
 }
 
 void nto_send_init(libqnxr_t *g, ut32 cmd, ut32 subcmd, ut32 chan) {
-	g->tran.pkt.hdr.cmd = cmd;
-	g->tran.pkt.hdr.subcmd = subcmd;
-	g->tran.pkt.hdr.mid = ((chan == SET_CHANNEL_DEBUG) ? g->mid++ : 0);
-	g->tran.pkt.hdr.channel = chan;
+	g->tran.pkt.hppdr.cmd = cmd;
+	g->tran.pkt.hppdr.subcmd = subcmd;
+	g->tran.pkt.hppdr.mid = ((chan == SET_CHANNEL_DEBUG) ? g->mid++ : 0);
+	g->tran.pkt.hppdr.channel = chan;
 }
 
 ptid_t nto_parse_notify(libqnxr_t *g) {
@@ -655,9 +655,9 @@ ptid_t nto_parse_notify(libqnxr_t *g) {
 
 	if (tid == 0)
 		tid = 1;
-	eprintf("%s: parse notify %d\n", __func__, g->recv.pkt.hdr.subcmd);
+	eprintf("%s: parse notify %d\n", __func__, g->recv.pkt.hppdr.subcmd);
 
-	switch (g->recv.pkt.hdr.subcmd) {
+	switch (g->recv.pkt.hppdr.subcmd) {
 	case DSMSG_NOTIFY_PIDUNLOAD:
 		g->notify_type = RZ_DEBUG_REASON_DEAD;
 		break;
@@ -689,7 +689,7 @@ ptid_t nto_parse_notify(libqnxr_t *g) {
 		break;
 	default:
 		eprintf("%s: Unexpected notify type %d\n", __func__,
-			g->recv.pkt.hdr.subcmd);
+			g->recv.pkt.hppdr.subcmd);
 		g->notify_type = RZ_DEBUG_REASON_UNKNOWN;
 	}
 
@@ -769,20 +769,20 @@ int nto_send(libqnxr_t *g, ut32 len, st32 report_errors) {
 			eprintf("%s: NAK received - resending\n", __func__);
 			continue;
 		}
-		if ((rlen >= 0) && (g->recv.pkt.hdr.mid == g->tran.pkt.hdr.mid))
+		if ((rlen >= 0) && (g->recv.pkt.hppdr.mid == g->tran.pkt.hppdr.mid))
 			break;
-		eprintf("%s: mid mismatch: %d/%d\n", __func__, g->recv.pkt.hdr.mid,
-			g->tran.pkt.hdr.mid);
+		eprintf("%s: mid mismatch: %d/%d\n", __func__, g->recv.pkt.hppdr.mid,
+			g->tran.pkt.hppdr.mid);
 	}
 
 	switch (g->channelrd) {
 	case SET_CHANNEL_DEBUG:
-		g->recv.pkt.hdr.cmd &= ~DSHDR_MSG_BIG_ENDIAN;
-		if (g->recv.pkt.hdr.cmd == DSrMsg_err) {
+		g->recv.pkt.hppdr.cmd &= ~DSHDR_MSG_BIG_ENDIAN;
+		if (g->recv.pkt.hppdr.cmd == DSrMsg_err) {
 			if (report_errors) {
 				int nerrno = errnoconvert(
 					EXTRACT_SIGNED_INTEGER(&g->recv.pkt.err.err, 4));
-				switch (g->recv.pkt.hdr.subcmd) {
+				switch (g->recv.pkt.hppdr.subcmd) {
 				case PDEBUG_ENOERR:
 					eprintf("remote: error packet with errno %d\n", nerrno);
 					break;

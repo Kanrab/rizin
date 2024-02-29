@@ -1,12 +1,12 @@
 #ifndef RZ_PRINT_H
 #define RZ_PRINT_H
 
-#include "rz_types.h"
-#include "rz_cons.h"
-#include "rz_bind.h"
-#include "rz_io.h"
-#include "rz_reg.h"
-#include <rz_util/rz_strbuf.h>
+#include "rz_types.hpp"
+#include "rz_cons.hpp"
+#include "rz_bind.hpp"
+#include "rz_io.hpp"
+#include "rz_reg.hpp"
+#include <rz_util/rz_strbuf.hpp>
 
 #ifdef __cplusplus
 extern "C" {

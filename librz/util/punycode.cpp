@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2017 Rakholiya Jenish
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
 
 #define BASE         36
 #define TMIN         1

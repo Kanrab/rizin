@@ -5,16 +5,16 @@
 #ifndef GDB_CLIENT_CORE_H
 #define GDB_CLIENT_CORE_H
 
-#include "rz_types.h"
+#include "rz_types.hpp"
 
 #include <stdint.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
 
-#include "../libgdbr.h"
-#include "../utils.h"
-#include "../arch.h"
+#include "../libgdbr.hpp"
+#include "../utils.hpp"
+#include "../arch.hpp"
 
 #define CMD_ATTACH    "vAttach;"
 #define CMD_DETACH_MP "D;"

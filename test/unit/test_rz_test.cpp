@@ -7,7 +7,7 @@
 #include "../../binrz/rz-test/run.c"
 #undef main
 
-#include "minunit.h"
+#include "minunit.hpp"
 
 #define FILENAME "unit/rz_test_cmd_test"
 

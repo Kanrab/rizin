@@ -4,8 +4,8 @@
 #ifndef RZ_SERIALIZE_H
 #define RZ_SERIALIZE_H
 
-#include <rz_util/rz_json.h>
-#include <rz_list.h>
+#include <rz_util/rz_json.hpp>
+#include <rz_list.hpp>
 
 /**
  * \brief Detailed info about a (de)serialization result

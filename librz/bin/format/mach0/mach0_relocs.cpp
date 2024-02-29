@@ -4,9 +4,9 @@
 // SPDX-FileCopyrightText: 2010-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include "mach0.h"
-#include <rz_util/ht_uu.h>
+#include <rz_util.hpp>
+#include "mach0.hpp"
+#include <rz_util/ht_uu.hpp>
 
 #include "mach0_utils.inc"
 
@@ -89,7 +89,7 @@ static void parse_relocation_info(struct MACH0_(obj_t) * bin, RzSkipList *relocs
 		reloc->external = a_info.r_extern;
 		reloc->pc_relative = a_info.r_pcrel;
 		reloc->chained = false;
-		reloc->size = 1 << a_info.r_length; // macho/reloc.h says: 0=byte, 1=word, 2=long, 3=quad
+		reloc->size = 1 << a_info.r_length; // macho/reloc.hpp says: 0=byte, 1=word, 2=long, 3=quad
 		rz_str_ncpy(reloc->name, sym_name, sizeof(reloc->name) - 1);
 		rz_skiplist_insert(relocs, reloc);
 		free(sym_name);

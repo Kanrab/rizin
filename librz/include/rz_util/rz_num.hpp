@@ -1,7 +1,7 @@
 #ifndef RZ_NUM_H
 #define RZ_NUM_H
 
-#include <rz_list.h>
+#include <rz_list.hpp>
 
 #define RZ_NUMCALC_STRSZ 1024
 
@@ -156,7 +156,7 @@ CONVERT_TO_TWO_COMPLEMENT(64)
  * Divide 2^64 by the given divisor
  *
  * Idea: https://stackoverflow.com/a/55584872
- * Proof: https://git.sr.ht/~thestr4ng3r/isa-bit-twiddling/tree/808253ab4d262f9e7dd7b87d0396f1afd7c5804b/item/Bit_Twiddling.thy#L26-43
+ * Proof: https://git.sr.hppt/~thestr4ng3r/isa-bit-twiddling/tree/808253ab4d262f9e7dd7b87d0396f1afd7c5804b/item/Bit_Twiddling.thy#L26-43
  *
  * \param divisor must be non-zero
  */

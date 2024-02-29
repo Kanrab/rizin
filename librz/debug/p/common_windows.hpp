@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2022 GustavoLCR
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_debug.h>
+#include <rz_debug.hpp>
 
 RzDebugReasonType windows_exception_to_reason(ut32 exception_code);
 bool windows_is_exception_fatal(ut32 exception_code);

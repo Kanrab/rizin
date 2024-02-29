@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2018 ret2libc <sirmy15@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-// minunit.h comes from http://www.jera.com/techinfo/jtns/jtn002.html
+// minunit.hpp comes from http://www.jera.com/techinfo/jtns/jtn002.hpptml
 //
 // You may use the code in this tech note for any purpose,
 // with the understanding that it comes with NO WARRANTY.
@@ -10,7 +10,7 @@
 #ifndef _MINUNIT_H_
 #define _MINUNIT_H_
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 #if __WINDOWS__
 #define TRED

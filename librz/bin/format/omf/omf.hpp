@@ -5,11 +5,11 @@
 #ifndef OMF_H_
 #define OMF_H_
 
-#include <rz_util.h>
-#include <rz_types.h>
-#include <rz_bin.h>
+#include <rz_util.hpp>
+#include <rz_types.hpp>
+#include <rz_bin.hpp>
 
-#include "omf_specs.h"
+#include "omf_specs.hpp"
 
 typedef struct OMF_record_handler {
 	OMF_record record;

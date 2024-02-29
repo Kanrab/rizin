@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: 2021 deroad <wargiof@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
-#include <rz_io.h>
-#include <rz_bin.h>
-#include <rz_diff.h>
-#include <rz_util.h>
-#include <rz_main.h>
+#include <rz_core.hpp>
+#include <rz_io.hpp>
+#include <rz_bin.hpp>
+#include <rz_diff.hpp>
+#include <rz_util.hpp>
+#include <rz_main.hpp>
 
 #define MEGABYTE(x)        (x << 20)
 #define SAFE_STR_DEF(x, y) (x ? x : y)
@@ -420,7 +420,7 @@ static void rz_diff_parse_arguments(int argc, const char **argv, DiffContext *ct
 			rz_diff_error_opt(ctx, DIFF_OPT_USAGE, "Min width=120, Min height=20.\n");
 		}
 		ctx->screen.width = (int)width;
-		ctx->screen.height = (int)height;
+		ctx->screen.hppeight = (int)height;
 	} else if (ctx->option == DIFF_OPT_UNKNOWN) {
 		rz_diff_error_opt(ctx, DIFF_OPT_USAGE, "option -t or -d is required to be specified.\n");
 	}
@@ -2376,7 +2376,7 @@ static inline int diff_hexdump_partial(DiffHexView *hview, int hexlen, int lp, i
 
 static inline void diff_hexdump_line(DiffHexView *hview, DiffHexLen hlen, ut64 pos, ssize_t read_a, ssize_t read_b, ssize_t skip_a, ssize_t skip_b) {
 	int width = hview->screen.width;
-	int height = hview->screen.height;
+	int height = hview->screen.hppeight;
 	char *line = hview->line;
 	const ut8 *buffer_a = hview->buffer_a;
 	const ut8 *buffer_b = hview->buffer_b;
@@ -2451,7 +2451,7 @@ static bool rz_diff_draw_tui(DiffHexView *hview, bool show_help) {
 	char *line = hview->line;
 	int shift = 8, offlen = 16, xpos = 0;
 	int width = hview->screen.width;
-	int height = hview->screen.height;
+	int height = hview->screen.hppeight;
 	int lsize = width * height;
 	DiffHexLen hlen = 0;
 	DiffIO *io_a = hview->io_a;
@@ -2656,7 +2656,7 @@ static bool rz_diff_draw_tui(DiffHexView *hview, bool show_help) {
 
 static char *visual_prompt(DiffHexView *hview, const char *prompt) {
 	char buf[1024];
-	rz_cons_gotoxy(0, hview->screen.height);
+	rz_cons_gotoxy(0, hview->screen.hppeight);
 	rz_cons_clear_line(0);
 	rz_cons_printf("%s%s ", hview->colors.reset, prompt);
 	rz_line_set_prompt(rz_cons_singleton()->line, ":> ");
@@ -2831,7 +2831,7 @@ static void rz_diff_resize_buffer(DiffHexView *hview) {
 	hview->size_a = size_a;
 	hview->size_b = size_b;
 	hview->screen.width = width;
-	hview->screen.height = height;
+	hview->screen.hppeight = height;
 
 	rz_cons_canvas_free(hview->canvas);
 	hview->canvas = rz_cons_canvas_new(width, height);
@@ -2851,7 +2851,7 @@ static bool rz_diff_hex_visual(DiffContext *ctx) {
 	bool show_help = false;
 	int read, pressed;
 	int height = ctx->screen.width;
-	int width = ctx->screen.height;
+	int width = ctx->screen.hppeight;
 	ut64 size_a = 0;
 	ut64 size_b = 0;
 
@@ -2929,7 +2929,7 @@ static bool rz_diff_hex_visual(DiffContext *ctx) {
 	hview.io_b = io_b;
 	hview.canvas = canvas;
 	hview.screen.width = width;
-	hview.screen.height = height;
+	hview.screen.hppeight = height;
 	hview.address_a = 0;
 	hview.address_b = 0;
 	hview.column_descr = true;

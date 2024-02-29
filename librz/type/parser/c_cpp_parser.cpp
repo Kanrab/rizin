@@ -2,13 +2,13 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <stdio.h>
-#include <rz_types.h>
-#include <rz_list.h>
-#include <rz_util/rz_file.h>
-#include <rz_type.h>
-#include <tree_sitter/api.h>
+#include <rz_types.hpp>
+#include <rz_list.hpp>
+#include <rz_util/rz_file.hpp>
+#include <rz_type.hpp>
+#include <tree_sitter/api.hpp>
 
-#include <types_parser.h>
+#include <types_parser.hpp>
 
 #define TS_START_END(node, start, end) \
 	do { \

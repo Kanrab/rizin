@@ -4,7 +4,7 @@
 #ifndef RZ_ENTROPY_H
 #define RZ_ENTROPY_H
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 #define RZ_HASH_ENTROPY_DIGEST_SIZE  sizeof(double)
 #define RZ_HASH_ENTROPY_BLOCK_LENGTH 0

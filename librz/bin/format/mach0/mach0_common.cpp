@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2023 Florian Märkl <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include "mach0_defines.h"
+#include <rz_types.hpp>
+#include "mach0_defines.hpp"
 
 /**
  * String representation of MACH0_PLATFORM_* values, e.g. from LC_BUILD_VERSION load command

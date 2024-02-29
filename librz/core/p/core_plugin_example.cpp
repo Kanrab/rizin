@@ -27,10 +27,10 @@
  *   This fini was called!
  */
 
-#include <rz_types.h>
-#include <rz_lib.h>
-#include <rz_cmd.h>
-#include <rz_core.h>
+#include <rz_types.hpp>
+#include <rz_lib.hpp>
+#include <rz_cmd.hpp>
+#include <rz_core.hpp>
 
 #undef RZ_API
 #define RZ_API static

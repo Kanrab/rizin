@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: 2019 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util/rz_regex.h>
-#include <rz_util.h>
-#include <rz_cons.h>
-#include "pager_private.h"
-#include "rz_vector.h"
+#include <rz_util/rz_regex.hpp>
+#include <rz_util.hpp>
+#include <rz_cons.hpp>
+#include "pager_private.hpp"
+#include "rz_vector.hpp"
 
 RZ_IPI void pager_color_line(const char *line, RzStrpool *p, RzPVector /*<RzRegexMatch *>*/ *ml) {
 	int m_len, offset = 0;

@@ -44,7 +44,7 @@ def main():
 
     while True:
         for output in execute(
-            ["gdbserver", "{}:{}".format(args.host, args.port), args.binary]
+            ["gdbserver", "{}:{}".format(args.hppost, args.port), args.binary]
         ):
             if args.output:
                 print(output)

@@ -2,8 +2,8 @@
 // SPDX-FileCopyrightText: 2017-2018 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include "asn1_oids.h"
+#include <rz_util.hpp>
+#include "asn1_oids.hpp"
 
 static const char *_hex = "0123456789abcdef";
 

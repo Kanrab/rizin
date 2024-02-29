@@ -2,9 +2,9 @@
 // SPDX-FileCopyrightText: 2017-2018 rkx1209 <rkx1209dev@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bin.h>
-#include "nxo/nxo.h"
-#include <lz4.h>
+#include <rz_bin.hpp>
+#include "nxo/nxo.hpp"
+#include <lz4.hpp>
 
 #define NSO_OFF(x)           rz_offsetof(NSOHeader, x)
 #define NSO_OFFSET_MODMEMOFF rz_offsetof(NXOStart, mod_memoffset)

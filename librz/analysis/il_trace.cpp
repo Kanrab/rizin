@@ -9,12 +9,12 @@
  * the memory changes and register changes.
  * TODO : Should be moved to librz/il after integrations with new IL
  *      : should move the prototypes and trace structure to new header, too
- * prototypes in <rz_analysis.h>
+ * prototypes in <rz_analysis.hpp>
  * Used by : analysis_tp.c, debug/trace.c
  **/
 
-#include <rz_util.h>
-#include <rz_analysis.h>
+#include <rz_util.hpp>
+#include <rz_analysis.hpp>
 
 /**
  * create and init a trace structure for an instruction at address

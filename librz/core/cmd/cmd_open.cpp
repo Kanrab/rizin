@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: 2009-2021 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bin.h>
-#include <rz_debug.h>
-#include <rz_core.h>
-#include <rz_io.h>
-#include "../core_private.h"
+#include <rz_bin.hpp>
+#include <rz_debug.hpp>
+#include <rz_core.hpp>
+#include <rz_io.hpp>
+#include "../core_private.hpp"
 
 struct open_list_ascii_data_t {
 	RzCore *core;
@@ -49,7 +49,7 @@ static bool desc_list_visual_cb(void *user, void *data, ut32 id) {
 		(desc->io && (desc->io->desc == desc)) ? '*' : '-', rz_str_rwx_i(desc->perm), sz);
 	RzBarOptions opts = {
 		.unicode = rz_config_get_b(core->config, "scr.utf8"),
-		.thinline = !rz_config_get_b(core->config, "scr.hist.block"),
+		.thinline = !rz_config_get_b(core->config, "scr.hppist.block"),
 		.legend = false,
 		.offset = rz_config_get_b(core->config, "hex.offset"),
 		.offpos = 0,

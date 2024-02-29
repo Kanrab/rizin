@@ -4,7 +4,7 @@
 #ifndef RX_OPCODE_DETAIL_H
 #define RX_OPCODE_DETAIL_H
 
-#include <rz_util.h>
+#include <rz_util.hpp>
 
 typedef enum {
 	RX_OP_INVALID,

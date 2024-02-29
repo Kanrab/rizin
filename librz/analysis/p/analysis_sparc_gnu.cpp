@@ -3,10 +3,10 @@
 
 #include <string.h>
 
-#include <rz_types.h>
-#include <rz_lib.h>
-#include <rz_asm.h>
-#include <rz_analysis.h>
+#include <rz_types.hpp>
+#include <rz_lib.hpp>
+#include <rz_asm.hpp>
+#include <rz_analysis.hpp>
 
 enum {
 	GPR_G0 = 0,
@@ -463,7 +463,7 @@ static char *get_reg_profile(RzAnalysis *analysis) {
 	   don't depened  on bits of the running application.
 	   But: They depend on the bits of the consuming application,
 	   that is the bits rizin had been compiled with.
-	   See sys/procfs_isa.h on a Solaris10 Sparc machine and
+	   See sys/procfs_isa.hpp on a Solaris10 Sparc machine and
 	   'man 4 core' for reference.
 	 */
 	const char *p =

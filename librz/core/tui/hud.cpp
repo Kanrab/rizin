@@ -3,13 +3,13 @@
 
 #include <string.h>
 
-#include <rz_core.h>
-#include <rz_util.h>
+#include <rz_core.hpp>
+#include <rz_util.hpp>
 
-#include "../core_private.h"
-#include <rz_asm.h>
-#include <rz_util/rz_print.h>
-#include <rz_util/rz_strbuf.h>
+#include "../core_private.hpp"
+#include <rz_asm.hpp>
+#include <rz_util/rz_print.hpp>
+#include <rz_util/rz_strbuf.hpp>
 
 RZ_IPI bool rz_core_visual_hud(RzCore *core) {
 	const char *c = rz_config_get(core->config, "hud.path");

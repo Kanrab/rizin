@@ -2,8 +2,8 @@
 // SPDX-FileCopyrightText: 2009-2020 pancake <pancake@nopcode.org>
 // SPDX-FileCopyrightText: 2009-2020 nibble <nibble.ds@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
-#include <stddef.h>
-#include <rz_core.h>
+#include <stddef.hpp>
+#include <rz_core.hpp>
 
 typedef void (*DigestHandler)(const char *name, const ut8 *block, int len);
 

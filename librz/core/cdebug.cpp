@@ -3,10 +3,10 @@
 // SPDX-FileCopyrightText: 2021 ret2libc <sirmy15@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
-#include <rz_debug.h>
-#include "core_private.h"
-#include "rz_bin.h"
+#include <rz_core.hpp>
+#include <rz_debug.hpp>
+#include "core_private.hpp"
+#include "rz_bin.hpp"
 
 /**
  * \brief Check whether the core is in debug mode (equivalent to cfg.debug)
@@ -230,7 +230,7 @@ RZ_API void rz_core_debug_breakpoint_toggle(RZ_NONNULL RzCore *core, ut64 addr) 
 	if (bpi) {
 		rz_bp_del(core->dbg->bp, addr);
 	} else {
-		bool hwbp = (int)rz_config_get_b(core->config, "dbg.hwbp");
+		bool hwbp = (int)rz_config_get_b(core->config, "dbg.hppwbp");
 		bpi = rz_debug_bp_add(core->dbg, addr, 0, hwbp, false, 0, NULL, 0);
 		if (!bpi) {
 			RZ_LOG_ERROR("core: cannot set breakpoint at 0x%" PFMT64x "\n", addr);
@@ -255,7 +255,7 @@ RZ_API void rz_core_debug_bp_add_noreturn_func(RzCore *core) {
 	RzBinSymbol *symbol;
 	void **iter;
 	RzBreakpointItem *bp;
-	bool hwbp = rz_config_get_b(core->config, "dbg.hwbp");
+	bool hwbp = rz_config_get_b(core->config, "dbg.hppwbp");
 	rz_pvector_foreach (symbols, iter) {
 		symbol = *iter;
 		if (symbol->type && !strcmp(symbol->type, RZ_BIN_TYPE_FUNC_STR)) {
@@ -815,7 +815,7 @@ RZ_API bool rz_core_debug_step_over(RzCore *core, int steps) {
 		}
 		return true;
 	}
-	bool hwbp = rz_config_get_b(core->config, "dbg.hwbp");
+	bool hwbp = rz_config_get_b(core->config, "dbg.hppwbp");
 	ut64 addr = rz_debug_reg_get(core->dbg, "PC");
 	RzBreakpointItem *bpi = rz_bp_get_at(core->dbg->bp, addr);
 	rz_bp_del(core->dbg->bp, addr);
@@ -834,7 +834,7 @@ RZ_API bool rz_core_debug_step_over(RzCore *core, int steps) {
  * \param times Skip op times
  */
 RZ_API bool rz_core_debug_step_skip(RzCore *core, int times) {
-	bool hwbp = rz_config_get_b(core->config, "dbg.hwbp");
+	bool hwbp = rz_config_get_b(core->config, "dbg.hppwbp");
 	ut64 addr = rz_debug_reg_get(core->dbg, "PC");
 	ut8 buf[64];
 	RzAnalysisOp aop;

@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005 Free Software Foundation, Inc.
 // SPDX-License-Identifier: GPL-2.0-or-later
 
-/* bfdlink.h -- header file for BFD link routines
+/* bfdlink.hpp -- header file for BFD link routines
    Copyright 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002,
    2003, 2004, 2005 Free Software Foundation, Inc.
    Written by Steve Chamberlain and Ian Lance Taylor, Cygnus Support.
@@ -25,7 +25,7 @@
 #ifndef BFDLINK_H
 #define BFDLINK_H
 
-#include "mybfd.h"
+#include "mybfd.hpp"
 
 /* Which symbols to strip during a link.  */
 enum bfd_link_strip {

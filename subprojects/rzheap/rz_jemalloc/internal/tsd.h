@@ -30,7 +30,7 @@ typedef enum {
  * library-private, and library-private inlined.  Following is an example
  * library-private tsd variable:
  *
- * In example.h:
+ * In example.hpp:
  *   typedef struct {
  *           int x;
  *           int y;

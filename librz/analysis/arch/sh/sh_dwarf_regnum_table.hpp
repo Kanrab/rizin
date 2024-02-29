@@ -4,7 +4,7 @@
 
 /**
  * Found in the linux kernel perf tools.
- * latest/source/tools/perf/arch/sh/include/dwarf-regs-table.h
+ * latest/source/tools/perf/arch/sh/include/dwarf-regs-table.hpp
  */
 static const char *map_dwarf_reg_to_sh_reg(ut32 reg_num) {
 	switch (reg_num) {

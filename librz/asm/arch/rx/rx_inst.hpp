@@ -4,7 +4,7 @@
 #ifndef RX_ARCH_INST_H
 #define RX_ARCH_INST_H
 
-#include "rx_opcode_detail.h"
+#include "rx_opcode_detail.hpp"
 
 typedef enum rx_operand_kind_enum {
 	RX_OPERAND_NULL,

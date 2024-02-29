@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2003-2010 University of Illinois at Urbana-Champaign.
 // SPDX-License-Identifier: NCSA
 
-//===-- llvm/Support/MachO.h - The MachO file format ------------*- C -*-===//
+//===-- llvm/Support/MachO.hpp - The MachO file format ------------*- C -*-===//
 //
 //                     The LLVM Compiler Infrastructure
 //
@@ -54,7 +54,7 @@
 
 #include <stdint.h>
 
-// Enums from <mach-o/loader.h>
+// Enums from <mach-o/loader.hpp>
 enum {
 	// Constants for the "magic" field in llvm::MachO::mach_header and
 	// llvm::MachO::mach_header_64
@@ -579,14 +579,14 @@ enum RelocationInfoType {
 };
 
 // Values for segment_command.initprot.
-// From <mach/vm_prot.h>
+// From <mach/vm_prot.hpp>
 enum {
 	VM_PROT_READ = 0x1,
 	VM_PROT_WRITE = 0x2,
 	VM_PROT_EXECUTE = 0x4
 };
 
-// Structs from <mach-o/loader.h>
+// Structs from <mach-o/loader.hpp>
 
 struct mach_header {
 	uint32_t magic;
@@ -978,7 +978,7 @@ struct entry_point_command {
 	uint64_t stacksize;
 };
 
-// Structs from <mach-o/fat.h>
+// Structs from <mach-o/fat.hpp>
 struct fat_header {
 	uint32_t magic;
 	uint32_t nfat_arch;
@@ -992,7 +992,7 @@ struct fat_arch {
 	uint32_t align;
 };
 
-// Structs from <mach-o/reloc.h>
+// Structs from <mach-o/reloc.hpp>
 struct relocation_info {
 	int32_t r_address;
 	uint32_t r_symbolnum : 24,
@@ -1019,12 +1019,12 @@ struct scattered_relocation_info {
 	int32_t r_value;
 };
 
-// Structs NOT from <mach-o/reloc.h>, but that make LLVM's life easier
+// Structs NOT from <mach-o/reloc.hpp>, but that make LLVM's life easier
 struct any_relocation_info {
 	uint32_t r_word0, r_word1;
 };
 
-// Structs from <mach-o/nlist.h>
+// Structs from <mach-o/nlist.hpp>
 struct nlist_base {
 	uint32_t n_strx;
 	uint8_t n_type;
@@ -1048,7 +1048,7 @@ struct nlist_64 {
 	uint64_t n_value;
 };
 
-// Get/Set functions from <mach-o/nlist.h>
+// Get/Set functions from <mach-o/nlist.hpp>
 
 static inline uint16_t GET_LIBRARY_ORDINAL(uint16_t n_desc) {
 	return (((n_desc) >> 8u) & 0xffu);
@@ -1066,7 +1066,7 @@ static inline void SET_COMM_ALIGN(uint16_t *n_desc, uint8_t align) {
 	*n_desc = ((*n_desc & 0xf0ffu) | ((align & 0x0fu) << 8u));
 }
 
-// Enums from <mach/machine.h>
+// Enums from <mach/machine.hpp>
 enum {
 	// Capability bits used in the definition of cpu_type.
 	CPU_ARCH_MASK = 0xff000000, // Mask for architecture bits
@@ -1474,7 +1474,7 @@ enum {
 	DYLD_CHAINED_PTR_ARM64E_USERLAND24 = 12,
 };
 
-#include <rz_util/rz_num.h>
+#include <rz_util/rz_num.hpp>
 
 #define READ_BITS(dst, count) \
 	do { \

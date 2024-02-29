@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2009-2017 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_debug.h>
+#include <rz_debug.hpp>
 
 RZ_API RzDebugPid *rz_debug_pid_new(const char *path, int pid, int uid, char status, ut64 pc) {
 	RzDebugPid *p = RZ_NEW0(RzDebugPid);

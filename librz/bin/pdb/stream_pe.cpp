@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2021 Basstorm <basstorm@nyist.edu.cn>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "pdb.h"
+#include "pdb.hpp"
 
 static bool parse_image_header(PeImageSectionHeader *hdr, RzBuffer *buf) {
 	rz_buf_read(buf, (ut8 *)hdr->name, PDB_SIZEOF_SECTION_NAME);

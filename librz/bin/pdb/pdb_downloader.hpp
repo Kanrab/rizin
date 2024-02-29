@@ -4,8 +4,8 @@
 #ifndef PDB_DOWNLOADER_H
 #define PDB_DOWNLOADER_H
 
-#include <rz_types.h>
-#include <rz_bin.h>
+#include <rz_types.hpp>
+#include <rz_bin.hpp>
 
 #ifdef __cplusplus
 extern "C" {

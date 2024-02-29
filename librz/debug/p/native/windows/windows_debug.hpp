@@ -10,14 +10,14 @@
  |___|___|
 */
 
-#include <rz_types.h>
-#include <rz_debug.h>
-#include <rz_windows.h>
-#include <tlhelp32.h> // CreateToolhelp32Snapshot
-#include <psapi.h> // GetModuleFileNameEx, GetProcessImageFileName
-#include <winternl.h>
-#include <tchar.h>
-#include <w32dbg_wrap.h>
+#include <rz_types.hpp>
+#include <rz_debug.hpp>
+#include <rz_windows.hpp>
+#include <tlhelp32.hpp> // CreateToolhelp32Snapshot
+#include <psapi.hpp> // GetModuleFileNameEx, GetProcessImageFileName
+#include <winternl.hpp>
+#include <tchar.hpp>
+#include <w32dbg_wrap.hpp>
 
 #ifndef XSTATE_GSSE
 #define XSTATE_GSSE 2
@@ -119,7 +119,7 @@ BOOL(WINAPI *w32_ProcessIdToSessionId)
 (DWORD, DWORD *);
 BOOL(WINAPI *w32_QueryFullProcessImageNameW)
 (HANDLE, DWORD, LPWSTR, PDWORD);
-// Internal NT functions (winternl.h)
+// Internal NT functions (winternl.hpp)
 NTSTATUS(WINAPI *w32_NtQuerySystemInformation)
 (ULONG, PVOID, ULONG, PULONG);
 NTSTATUS(WINAPI *w32_NtQueryInformationThread)

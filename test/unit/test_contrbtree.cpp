@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2019 condret
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include "minunit.h"
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include "minunit.hpp"
 
 static int simple_cmp(void *incoming, void *in, void *user) {
 	ut32 v[2] = { (ut32)(size_t)incoming, (ut32)(size_t)in };

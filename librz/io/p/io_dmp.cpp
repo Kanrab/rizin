@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2022 GustavoLCR <gugulcr@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_io.h>
-#include <winkd.h>
-#include "librz/bin/format/dmp/dmp_specs.h"
+#include <rz_io.hpp>
+#include <winkd.hpp>
+#include "librz/bin/format/dmp/dmp_specs.hpp"
 
 static bool dmp_plugin_open(RzIO *io, const char *file, bool many) {
 	return (!strncmp(file, "dmp://", 6));

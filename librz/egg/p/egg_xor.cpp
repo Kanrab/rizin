@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 /* based on @santitox patch */
-#include <rz_egg.h>
+#include <rz_egg.hpp>
 
 #define DEFAULT_XOR_KEY "0xFF"
 

@@ -1,14 +1,14 @@
 // SPDX-FileCopyrightText: 2022 Florian Märkl <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
-#include <rz_util/rz_assert.h>
-#include <capstone/capstone.h>
+#include <rz_analysis.hpp>
+#include <rz_util/rz_assert.hpp>
+#include <capstone/capstone.hpp>
 
-#include "arm_cs.h"
-#include "arm_accessors32.h"
+#include "arm_cs.hpp"
+#include "arm_accessors32.hpp"
 
-#include <rz_il/rz_il_opbuilder_begin.h>
+#include <rz_il/rz_il_opbuilder_begin.hpp>
 
 #include "arm_il_common.inc"
 
@@ -4505,7 +4505,7 @@ RZ_IPI RzILOpEffect *rz_arm_cs_32_il(csh *handle, cs_insn *insn, bool thumb) {
 	return eff;
 }
 
-#include <rz_il/rz_il_opbuilder_end.h>
+#include <rz_il/rz_il_opbuilder_end.hpp>
 
 RZ_IPI RzAnalysisILConfig *rz_arm_cs_32_il_config(bool big_endian) {
 	RzAnalysisILConfig *r = rz_analysis_il_config_new(32, big_endian, 32);

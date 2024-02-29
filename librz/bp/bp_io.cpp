@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2009-2018 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bp.h>
-#include <config.h>
+#include <rz_bp.hpp>
+#include <config.hpp>
 
 RZ_API void rz_bp_restore_one(RzBreakpoint *bp, RzBreakpointItem *b, bool set) {
 	if (set) {

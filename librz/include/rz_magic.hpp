@@ -4,7 +4,7 @@
 #ifndef RZ_MAGIC_H
 #define RZ_MAGIC_H
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 #ifdef __cplusplus
 extern "C" {

@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2017-2019 condret <condr3t@protonmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_io.h>
-#include <rz_util.h>
-#include <rz_types.h>
-#include "io_private.h"
+#include <rz_io.hpp>
+#include <rz_util.hpp>
+#include <rz_types.hpp>
+#include "io_private.hpp"
 
 // This helper function only check if the given vaddr is mapped, it does not account
 // for map perms

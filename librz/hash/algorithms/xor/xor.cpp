@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2021 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "xor.h"
-#include <rz_util.h>
+#include "xor.hpp"
+#include <rz_util.hpp>
 
 bool rz_xor8_init(RzXor8 *ctx) {
 	rz_return_val_if_fail(ctx, false);

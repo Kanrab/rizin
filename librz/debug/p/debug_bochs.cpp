@@ -92,8 +92,8 @@
  *   0x00000000ffffe000-0x00000000ffffefff -> 0x0000fee00000-0x0000fee00fff
  */
 
-#include <rz_debug.h>
-#include <rz_util.h>
+#include <rz_debug.hpp>
+#include <rz_util.hpp>
 
 #define BOCHS_STDIN_SIZE 256
 

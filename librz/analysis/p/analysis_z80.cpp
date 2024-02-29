@@ -3,11 +3,11 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <string.h>
-#include <rz_types.h>
-#include <rz_lib.h>
-#include <rz_asm.h>
-#include <rz_analysis.h>
-#include "../../asm/arch/z80/z80_tab.h"
+#include <rz_types.hpp>
+#include <rz_lib.hpp>
+#include <rz_asm.hpp>
+#include <rz_analysis.hpp>
+#include "../../asm/arch/z80/z80_tab.hpp"
 
 static void z80_op_size(const ut8 *data, int len, int *size, int *size_prefix) {
 	int type = 0;

@@ -20,9 +20,9 @@
    Free Software Foundation, 51 Franklin Street - Fifth Floor, Boston,
    MA 02110-1301, USA.  */
 
-#include "sysdep.h"
+#include "sysdep.hpp"
 #include <stdio.h>
-#include "opcode/nios2.h"
+#include "opcode/nios2.hpp"
 
 /* Register string table */
 

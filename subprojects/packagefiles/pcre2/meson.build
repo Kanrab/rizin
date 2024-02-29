@@ -8,16 +8,16 @@ pcre2_chartables = configure_file(input : 'src/pcre2_chartables.c.dist',
   output : 'pcre2_chartables.c',
   configuration : conf_data)
 
-pcre2_h = configure_file(input : 'src/pcre2.h.generic',
-  output : 'pcre2.h',
+pcre2_h = configure_file(input : 'src/pcre2.hpp.generic',
+  output : 'pcre2.hpp',
   configuration : conf_data)
 
-config_h = configure_file(input : 'src/config.h.generic',
-  output : 'config.h',
+config_h = configure_file(input : 'src/config.hpp.generic',
+  output : 'config.hpp',
   configuration : conf_data)
 
 libpcre2_c_args = [
-  '-DHAVE_CONFIG_H', # Default values from config.h
+  '-DHAVE_CONFIG_H', # Default values from config.hpp
   '-DPCRE2_CODE_UNIT_WIDTH=8',
   '-DHAVE_MEMMOVE',
   '-DSUPPORT_PCRE2_8',

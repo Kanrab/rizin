@@ -7,8 +7,8 @@
  * all the elements of a list/pvector/etc..
  */
 
-#include <rz_th.h>
-#include <rz_util.h>
+#include <rz_th.hpp>
+#include <rz_util.hpp>
 
 static bool th_run_iterator(RzThreadFunction th_cb, void *context, size_t max_threads) {
 	RzThreadPool *pool = rz_th_pool_new(max_threads);
@@ -79,7 +79,7 @@ RZ_API bool rz_th_iterate_list(RZ_NONNULL const RzList /*<void *>*/ *list, RZ_NO
 
 	th_list_ctx_t context = {
 		.lock = rz_th_lock_new(true),
-		.head = list->head,
+		.hppead = list->head,
 		.iterator = iterator,
 		.user = user,
 	};

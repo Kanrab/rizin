@@ -8,8 +8,8 @@
 extern "C" {
 #endif
 
-#include <rz_util/ht_up.h>
-#include <rz_vector.h>
+#include <rz_util/ht_up.hpp>
+#include <rz_vector.hpp>
 
 typedef struct rz_event_t {
 	void *user;

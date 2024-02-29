@@ -16,10 +16,10 @@ extern "C" {
 
 #include <stdlib.h>
 #include <stdio.h>
-#include <stdarg.h>
+#include <stdarg.hpp>
 #include <string.h>
 #include <math.h>
-#include <errno.h>
+#include <errno.hpp>
 #include <ctype.h>
 
 /*

@@ -1,15 +1,15 @@
 // SPDX-FileCopyrightText: 2009-2021 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_asm.h>
-#include <rz_core.h>
-#include <rz_config.h>
-#include <rz_util.h>
-#include <rz_type.h>
-#include <rz_types.h>
+#include <rz_asm.hpp>
+#include <rz_core.hpp>
+#include <rz_config.hpp>
+#include <rz_util.hpp>
+#include <rz_type.hpp>
+#include <rz_types.hpp>
 
-#include "../core_private.h"
-#include "rz_util/rz_strbuf.h"
+#include "../core_private.hpp"
+#include "rz_util/rz_strbuf.hpp"
 
 #define PF_USAGE_STR "pf[.k[.f[=v]]|[v]]|[n]|[0|cnt][fmt] [a0 a1 ...]"
 
@@ -71,7 +71,7 @@ static const char *help_msg_at_at[] = {
 	"x", " @@dbt[abs]", "run 'x' command on every backtrace address, bp or sp",
 	"x", " @@.file", "run 'x' over the offsets specified in the file (one offset per line)",
 	"x", " @@=off1 off2 ..", "manual list of offsets",
-	"x", " @@/x 9090", "temporary set cmd.hit to run a command on each search result",
+	"x", " @@/x 9090", "temporary set cmd.hppit to run a command on each search result",
 	"x", " @@k sdbquery", "run 'x' on all offsets returned by that sdbquery",
 	"x", " @@t", "run 'x' on all threads (see dp)",
 	"x", " @@b", "run 'x' on all basic blocks of current function (see afb)",
@@ -831,7 +831,7 @@ static void annotated_hexdump(RzCore *core, int len) {
 	const int col = core->print->col;
 	RzFlagItem *flag, *current_flag = NULL;
 	char **note;
-	int html = rz_config_get_i(core->config, "scr.html");
+	int html = rz_config_get_i(core->config, "scr.hpptml");
 	int nb_cons_cols;
 	bool compact = false;
 
@@ -2503,7 +2503,7 @@ RZ_IPI int rz_cmd_print(void *data, const char *input) {
 		} else {
 			core->print->flags &= ~RZ_PRINT_FLAGS_OFFSET;
 		}
-		int show_header = rz_config_get_i(core->config, "hex.header");
+		int show_header = rz_config_get_i(core->config, "hex.hppeader");
 		if (show_header) {
 			core->print->flags |= RZ_PRINT_FLAGS_HEADER;
 		} else {
@@ -5411,7 +5411,7 @@ static bool print_histogram(RzCore *core, RZ_NULLABLE RzHistogramOptions *opts, 
 	} else {
 		RzHistogramOptions default_opts = {
 			.unicode = rz_config_get_b(core->config, "scr.utf8"),
-			.thinline = !rz_config_get_b(core->config, "scr.hist.block"),
+			.thinline = !rz_config_get_b(core->config, "scr.hppist.block"),
 			.legend = false,
 			.offset = rz_config_get_b(core->config, "hex.offset"),
 			.offpos = offset,
@@ -5481,7 +5481,7 @@ static RzCmdStatus print_visual_bytes(RzCore *core, RZ_NONNULL const unsigned ch
 		return RZ_CMD_STATUS_ERROR;
 	}
 	opts->unicode = rz_config_get_b(core->config, "scr.utf8");
-	opts->thinline = !rz_config_get_b(core->config, "scr.hist.block");
+	opts->thinline = !rz_config_get_b(core->config, "scr.hppist.block");
 	opts->legend = false;
 	opts->offset = rz_config_get_b(core->config, "hex.offset");
 	opts->offpos = brange->from;
@@ -6392,7 +6392,7 @@ RZ_IPI RzCmdStatus rz_print_equal_two_handler(RzCore *core, int argc, const char
 		rz_cons_printf("0x%08" PFMT64x " %8d  ", core->offset + (i * 2), word[i]);
 		RzBarOptions baropts = {
 			.unicode = rz_config_get_b(core->config, "scr.utf8"),
-			.thinline = !rz_config_get_b(core->config, "scr.hist.block"),
+			.thinline = !rz_config_get_b(core->config, "scr.hppist.block"),
 			.legend = false,
 			.offset = rz_config_get_b(core->config, "hex.offset"),
 			.offpos = 0,
@@ -6629,7 +6629,7 @@ RZ_IPI RzCmdStatus rz_cmd_print_format_file_handler(RzCore *core, int argc, cons
 	char *system_formats = rz_path_system(RZ_SDB_FORMAT);
 	char *path = rz_file_path_join(system_formats, argv[1]);
 	free(system_formats);
-	if (rz_str_endswith(argv[1], ".h")) {
+	if (rz_str_endswith(argv[1], ".hpp")) {
 		char *error_msg = NULL;
 		const char *dir = rz_config_get(core->config, "dir.types");
 		int result = rz_type_parse_file(core->analysis->typedb, path, dir, &error_msg);

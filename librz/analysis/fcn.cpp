@@ -3,11 +3,11 @@
 // SPDX-FileCopyrightText: 2010-2021 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util/rz_regex.h>
-#include <rz_analysis.h>
-#include <rz_parse.h>
-#include <rz_util.h>
-#include <rz_list.h>
+#include <rz_util/rz_regex.hpp>
+#include <rz_analysis.hpp>
+#include <rz_parse.hpp>
+#include <rz_util.hpp>
+#include <rz_list.hpp>
 
 #define SDB_KEY_BB "bb.0x%" PFMT64x ".0x%" PFMT64x
 // XXX must be configurable by the user
@@ -745,8 +745,8 @@ static RzAnalysisBBEndCause run_basic_block_analysis(RzAnalysisTaskItem *item, R
 			}
 		}
 
-		if (op.hint.new_bits) {
-			rz_analysis_hint_set_bits(analysis, op.jump, op.hint.new_bits);
+		if (op.hppint.new_bits) {
+			rz_analysis_hint_set_bits(analysis, op.jump, op.hppint.new_bits);
 		}
 		if (idx > 0 && !overlapped) {
 			bbg = bbget(analysis, at, can_jmpmid);
@@ -913,7 +913,7 @@ static RzAnalysisBBEndCause run_basic_block_analysis(RzAnalysisTaskItem *item, R
 					RZ_FREE(movbasereg);
 				}
 			}
-			if (analysis->opt.hpskip && regs_exist(op.src[0], op.dst) && !strcmp(op.src[0]->reg->name, op.dst->reg->name)) {
+			if (analysis->opt.hpppskip && regs_exist(op.src[0], op.dst) && !strcmp(op.src[0]->reg->name, op.dst->reg->name)) {
 				skip_ret = skip_hp(analysis, fcn, &op, bb, addr, tmp_buf, oplen, delay.un_idx, &idx);
 				if (skip_ret == 1) {
 					goto repeat;
@@ -952,7 +952,7 @@ static RzAnalysisBBEndCause run_basic_block_analysis(RzAnalysisTaskItem *item, R
 				}
 			}
 			// skip lea reg,[reg]
-			if (analysis->opt.hpskip && regs_exist(op.src[0], op.dst) && !strcmp(op.src[0]->reg->name, op.dst->reg->name)) {
+			if (analysis->opt.hpppskip && regs_exist(op.src[0], op.dst) && !strcmp(op.src[0]->reg->name, op.dst->reg->name)) {
 				skip_ret = skip_hp(analysis, fcn, &op, bb, at, tmp_buf, oplen, delay.un_idx, &idx);
 				if (skip_ret == 1) {
 					goto repeat;

@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: 2023 Bastian Engel <bastian.engel00@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "rl78_operand.h"
+#include "rl78_operand.hpp"
 
-#include <rz_types.h>
-#include <rz_core.h>
-#include <rz_util.h>
+#include <rz_types.hpp>
+#include <rz_core.hpp>
+#include <rz_util.hpp>
 
 static const char *RL78_STRINGS_SYMBOLS[] = {
 	[RL78_GPR_X] = "x",

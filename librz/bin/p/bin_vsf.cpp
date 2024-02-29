@@ -3,8 +3,8 @@
 
 /* VICE Snapshot File loader: http://vice-emu.sourceforge.net/ */
 
-#include <rz_bin.h>
-#include "vsf/vsf_specs.h"
+#include <rz_bin.hpp>
+#include "vsf/vsf_specs.hpp"
 
 static const char VICE_MAGIC[] = "VICE Snapshot File\032";
 #define VICE_MAGIC_LEN sizeof(VICE_MAGIC) - 1

@@ -3,8 +3,8 @@
 
 #ifndef RZ_ASM_AVR_ASSEMBLER_H
 #define RZ_ASM_AVR_ASSEMBLER_H
-#include <rz_types.h>
-#include <rz_util.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
 
 ut32 avr_assembler(const char *input, st32 input_size, ut8 *output, st32 output_size, ut64 pc, bool be);
 

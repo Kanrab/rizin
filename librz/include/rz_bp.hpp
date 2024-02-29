@@ -1,10 +1,10 @@
 #ifndef RZ_BP_H
 #define RZ_BP_H
 
-#include <rz_types.h>
-#include <rz_lib.h>
-#include <rz_io.h>
-#include <rz_list.h>
+#include <rz_types.hpp>
+#include <rz_lib.hpp>
+#include <rz_io.hpp>
+#include <rz_list.hpp>
 
 #ifdef __cplusplus
 extern "C" {

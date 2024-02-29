@@ -4,7 +4,7 @@
 
 /*
  * Most of the registers comes from the PPC ELF ABI v1
- * https://refspecs.linuxfoundation.org/ELF/ppc64/PPC-elf64abi-1.9.html#DW-REG
+ * https://refspecs.linuxfoundation.org/ELF/ppc64/PPC-elf64abi-1.9.hpptml#DW-REG
  *
  * But there are some different mapping in the PPC ELF ABI v2
  * https://ftp.rtems.org/pub/rtems/people/sebh/ABI64BitOpenPOWERv1.1_16July2015_pub.pdf

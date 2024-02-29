@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2011-2018 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: MIT
 
-#include "sdb.h"
+#include "sdb.hpp"
 #include <limits.h>
 
 // TODO: missing num_{inc/dec} functions

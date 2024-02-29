@@ -1,7 +1,7 @@
 #ifndef RZ_STRPOOL_H
 #define RZ_STRPOOL_H
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 #define RZ_STRPOOL_INC 1024
 

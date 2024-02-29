@@ -6,7 +6,7 @@
  * To avoid conflict during developing, I put some float operation here at first
  * Some of them should be moved to rz_util/float in the future and resolve conflict to merge
  */
-#include <rz_il/definitions/float.h>
+#include <rz_il/definitions/float.hpp>
 
 /**
  * create a float by specifying `format` and `bitv`

@@ -40,8 +40,8 @@
  *   `----- The line can end with another pattern mask
  */
 
-#include <rz_flirt.h>
-#include <rz_util.h>
+#include <rz_flirt.hpp>
+#include <rz_util.hpp>
 
 #if 0
 #define pat_dbg(...) eprintf(__VA_ARGS__)

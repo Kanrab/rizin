@@ -2,17 +2,17 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <rz_userconf.h>
-#include <rz_debug.h>
-#include <rz_drx.h>
-#include <rz_core.h>
-#include <rz_reg.h>
-#include <rz_lib.h>
-#include <rz_analysis.h>
-#include <signal.h>
+#include <rz_debug.hpp>
+#include <rz_drx.hpp>
+#include <rz_core.hpp>
+#include <rz_reg.hpp>
+#include <rz_lib.hpp>
+#include <rz_analysis.hpp>
+#include <signal.hpp>
 #include <sys/types.h>
 
 #include "native/drx.c" // x86 specific
-#include "rz_cons.h"
+#include "rz_cons.hpp"
 
 static int rz_debug_native_continue(RzDebug *dbg, int pid, int tid, int sig);
 static int rz_debug_native_reg_read(RzDebug *dbg, int type, ut8 *buf, int size);
@@ -21,17 +21,17 @@ static int rz_debug_native_reg_write(RzDebug *dbg, int type, const ut8 *buf, int
 #include "native/bt.c"
 
 #if __UNIX__
-#include <errno.h>
+#include <errno.hpp>
 #if !defined(__HAIKU__) && !defined(__sun)
-#include <sys/ptrace.h>
+#include <sys/ptrace.hpp>
 #endif
-#include <sys/wait.h>
-#include <signal.h>
+#include <sys/wait.hpp>
+#include <signal.hpp>
 #endif
 
 #if __WINDOWS__
-#include "native/windows/windows_debug.h"
-// TODO: Move these onto windows.h?
+#include "native/windows/windows_debug.hpp"
+// TODO: Move these onto windows.hpp?
 RZ_API RzList *rz_w32_dbg_modules(RzDebug *); // ugly!
 RZ_API RzList *rz_w32_dbg_maps(RzDebug *);
 #define RZ_DEBUG_REG_T CONTEXT
@@ -43,12 +43,12 @@ RZ_API RzList *rz_w32_dbg_maps(RzDebug *);
 #endif
 
 #elif __BSD__
-#include "native/bsd/bsd_debug.h"
-#include "native/procfs.h"
+#include "native/bsd/bsd_debug.hpp"
+#include "native/procfs.hpp"
 
 #elif __APPLE__
-#include <sys/resource.h>
-#include "native/xnu/xnu_debug.h"
+#include <sys/resource.hpp>
+#include "native/xnu/xnu_debug.hpp"
 
 #elif __sun
 
@@ -58,9 +58,9 @@ RZ_API RzList *rz_w32_dbg_maps(RzDebug *);
 #warning No debugger support for SunOS yet
 
 #elif __linux__
-#include <sys/mman.h>
-#include "native/linux/linux_debug.h"
-#include "native/procfs.h"
+#include <sys/mman.hpp>
+#include "native/linux/linux_debug.hpp"
+#include "native/procfs.hpp"
 #ifdef __ANDROID__
 #define WAIT_ANY -1
 #ifndef WIFCONTINUED
@@ -68,7 +68,7 @@ RZ_API RzList *rz_w32_dbg_maps(RzDebug *);
 #endif
 #endif
 #if (__x86_64__ || __i386__ || __arm__ || __arm64__) && !defined(__ANDROID__)
-#include "native/linux/linux_coredump.h"
+#include "native/linux/linux_coredump.hpp"
 #endif
 #else // OS
 
@@ -1327,8 +1327,8 @@ static int rz_debug_native_drx(RzDebug *dbg, int n, ut64 addr, int sz, int rwx, 
 #if __linux__
 
 #if __arm__ || __arm64__ || __aarch64__
-#include <sys/prctl.h>
-#include <sys/uio.h>
+#include <sys/prctl.hpp>
+#include <sys/uio.hpp>
 
 #define NT_ARM_VFP         0x400 /* ARM VFP/NEON registers */
 #define NT_ARM_TLS         0x401 /* ARM TLS register */

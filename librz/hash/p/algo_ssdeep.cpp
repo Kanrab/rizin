@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2022 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_hash.h>
-#include <rz_util/rz_assert.h>
+#include <rz_hash.hpp>
+#include <rz_util/rz_assert.hpp>
 
-#include "../algorithms/ssdeep/ssdeep.h"
+#include "../algorithms/ssdeep/ssdeep.hpp"
 
 static void *plugin_ssdeep_context_new() {
 	return rz_ssdeep_new();

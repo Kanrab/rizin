@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2022 GustavoLCR <gugulcr@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_debug.h>
+#include <rz_debug.hpp>
 
 static ut64 read_ptr(RzDebug *dbg, ut64 at) {
 	ut8 buf[8];

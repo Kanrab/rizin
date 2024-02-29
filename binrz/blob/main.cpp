@@ -2,8 +2,8 @@
 // SPDX-FileCopyrightText: 2012-2021 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_main.h>
-#include <rz_util.h>
+#include <rz_main.hpp>
+#include <rz_util.hpp>
 
 int MAIN_NAME(int argc, const ARGV_TYPE **argv) {
 	char **utf8_argv = ARGV_TYPE_TO_UTF8(argc, argv);

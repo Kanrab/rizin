@@ -1,4 +1,4 @@
-### cfgmgr32.h ###
+### cfgmgr32.hpp ###
 
 CM_Add_Empty_Log_Conf=func
 func.CM_Add_Empty_Log_Conf.args=4

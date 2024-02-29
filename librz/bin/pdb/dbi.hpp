@@ -4,7 +4,7 @@
 #ifndef PDB_DBI_H
 #define PDB_DBI_H
 
-#include <rz_pdb.h>
+#include <rz_pdb.hpp>
 
 RZ_IPI bool dbi_stream_parse(RzPdb *pdb, RzPdbMsfStream *stream);
 RZ_IPI void dbi_stream_free(RzPdbDbiStream *stream);

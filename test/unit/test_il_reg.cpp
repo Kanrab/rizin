@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2021 Florian Märkl <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_il.h>
-#include <rz_util.h>
-#include "minunit.h"
+#include <rz_il.hpp>
+#include <rz_util.hpp>
+#include "minunit.hpp"
 
 static bool test_il_reg_binding_derive() {
 	// very simple case, just pairwise disjoint regs

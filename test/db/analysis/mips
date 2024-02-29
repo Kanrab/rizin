@@ -86,10 +86,10 @@ NAME=gp-based ref
 FILE=bins/elf/analysis/mips-hello
 CMDS=<<EOF
 aae @ entry0
-axt @ str.Hello_World
+axt @ str.hppello_World
 EOF
 EXPECT=<<EOF
-(nofunc); str.Hello_World 0x805c4 [DATA] addiu a0, v0, str.Hello_World
+(nofunc); str.hppello_World 0x805c4 [DATA] addiu a0, v0, str.hppello_World
 EOF
 RUN
 

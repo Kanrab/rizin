@@ -2,7 +2,7 @@
 #define RZ_UTF8_H
 
 /* For RzStrEnc definition */
-#include "rz_str.h"
+#include "rz_str.hpp"
 
 typedef struct {
 	ut32 from, to;

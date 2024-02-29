@@ -1,18 +1,18 @@
 // SPDX-FileCopyrightText: 2013-2018 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: MIT
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 #include <stdio.h>
 #include <fcntl.h>
-#include <errno.h>
+#include <errno.hpp>
 #include <string.h>
 #include <stdlib.h>
 #include <sys/stat.h>
-#include <rz_util/rz_file.h>
-#include <rz_util/rz_sys.h>
-#include <rz_util/rz_utf8.h>
-#include <rz_windows.h>
-#include "sdb.h"
+#include <rz_util/rz_file.hpp>
+#include <rz_util/rz_sys.hpp>
+#include <rz_util/rz_utf8.hpp>
+#include <rz_windows.hpp>
+#include "sdb.hpp"
 
 RZ_API bool sdb_disk_create(Sdb *s) {
 	int nlen;

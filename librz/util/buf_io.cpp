@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2021 Florian Märkl <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include <rz_io.h>
+#include <rz_util.hpp>
+#include <rz_io.hpp>
 
 typedef RzIOBind *BufIOUser;
 

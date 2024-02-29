@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2019 thestr4ng3r <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bin.h>
-#include <rz_lib.h>
+#include <rz_bin.hpp>
+#include <rz_lib.hpp>
 
 static bool check_buffer(RzBuffer *b) {
 	// no magic

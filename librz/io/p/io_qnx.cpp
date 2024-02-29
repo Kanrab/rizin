@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: 2010-2016 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_io.h>
-#include <rz_lib.h>
-#include <rz_socket.h>
-#include <rz_util.h>
+#include <rz_io.hpp>
+#include <rz_lib.hpp>
+#include <rz_socket.hpp>
+#include <rz_util.hpp>
 #define IRAPI static inline
-#include <libqnxr.h>
+#include <libqnxr.hpp>
 
 typedef struct {
 	libqnxr_t desc;

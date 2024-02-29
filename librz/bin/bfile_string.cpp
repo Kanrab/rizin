@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2022 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bin.h>
-#include <rz_util/rz_log.h>
-#include <rz_util/rz_str_search.h>
+#include <rz_bin.hpp>
+#include <rz_util/rz_log.hpp>
+#include <rz_util/rz_str_search.hpp>
 
 typedef struct search_interval_t {
 	ut64 paddr;

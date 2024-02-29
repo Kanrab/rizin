@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: 2021 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "config.h"
-#include <rz_hash.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <xxhash.h>
-#include "algorithms/ssdeep/ssdeep.h"
+#include "config.hpp"
+#include <rz_hash.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <xxhash.hpp>
+#include "algorithms/ssdeep/ssdeep.hpp"
 
 RZ_LIB_VERSION(rz_hash);
 
@@ -25,7 +25,7 @@ typedef struct hash_cfg_config_t {
 } HashCfgConfig;
 
 #if HAVE_LIB_SSL
-#include <openssl/opensslv.h>
+#include <openssl/opensslv.hpp>
 #if OPENSSL_VERSION_NUMBER >= 0x30000000L
 /**
  * From openssl 3.0 some algos got moved to the legacy provider.
@@ -34,7 +34,7 @@ typedef struct hash_cfg_config_t {
  */
 
 #define REQUIRE_OPENSSL_PROVIDER 1
-#include <openssl/provider.h>
+#include <openssl/provider.hpp>
 
 typedef struct {
 	OSSL_PROVIDER *provider;

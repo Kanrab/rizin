@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2017 kazarmy <kazarmy@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
 
 /* Convert an UTF-32 buf into a unicode RzRune */
 RZ_API int rz_utf32_decode(const ut8 *ptr, int ptrlen, RzRune *ch, bool bigendian) {

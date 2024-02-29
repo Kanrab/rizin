@@ -1,4 +1,4 @@
-### oleauto.h ###
+### oleauto.hpp ###
 
 BstrFromVector=func
 func.BstrFromVector.args=2

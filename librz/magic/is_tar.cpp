@@ -41,11 +41,11 @@
 
 #if !USE_LIB_MAGIC
 
-#include "file.h"
+#include "file.hpp"
 #include <string.h>
 #include <ctype.h>
 #include <sys/types.h>
-#include "tar.h"
+#include "tar.hpp"
 
 static const char tartype[][32] = {
 	"tar archive",

@@ -1,20 +1,20 @@
 #ifndef RZ_DEBUG_H
 #define RZ_DEBUG_H
 
-#include <rz_types.h>
-#include <rz_analysis.h>
-#include <rz_cons.h>
-#include <rz_util.h>
-#include <rz_reg.h>
-#include <rz_egg.h>
-#include <rz_bp.h>
-#include <rz_io.h>
-#include <rz_hash.h>
-#include <rz_syscall.h>
-#include <rz_cmd.h>
+#include <rz_types.hpp>
+#include <rz_analysis.hpp>
+#include <rz_cons.hpp>
+#include <rz_util.hpp>
+#include <rz_reg.hpp>
+#include <rz_egg.hpp>
+#include <rz_bp.hpp>
+#include <rz_io.hpp>
+#include <rz_hash.hpp>
+#include <rz_syscall.hpp>
+#include <rz_cmd.hpp>
 
-#include <rz_config.h>
-#include "rz_bind.h"
+#include <rz_config.hpp>
+#include "rz_bind.hpp"
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -24,7 +24,7 @@ RZ_LIB_VERSION_HEADER(rz_debug);
 /* hack to fix compilation of debugger on BSD systems */
 /* This needs some testing (netbsd, freebsd, openbsd, kfreebsd) */
 #if __BSD__
-#include <machine/reg.h>
+#include <machine/reg.hpp>
 
 /* hakish hack to hack the openbsd/sparc64 hack */
 #undef reg

@@ -36,7 +36,7 @@ extern "C" {
 
 #include <stdio.h>
 #include <string.h>
-#include "mybfd.h"
+#include "mybfd.hpp"
 
 #define bfd_zalloc calloc
 #define bfd_malloc malloc

@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2020 GustavoLCR <gugulcr@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include <rz_skyline.h>
-#include "minunit.h"
+#include <rz_util.hpp>
+#include <rz_skyline.hpp>
+#include "minunit.hpp"
 
 bool test_rz_skyline(void) {
 	RzSkyline sky;

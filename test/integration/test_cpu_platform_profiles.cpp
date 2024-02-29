@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: 2020 Aswin C (officialcjunior) <realc@protonmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
-#include <rz_platform.h>
-#include <rz_project.h>
+#include <rz_core.hpp>
+#include <rz_platform.hpp>
+#include <rz_project.hpp>
 
-#include "../unit/minunit.h"
-#include "../unit/rz_arch_buffer.h"
+#include "../unit/minunit.hpp"
+#include "../unit/rz_arch_buffer.hpp"
 
 bool test_cpu_profiles() {
 	// 1. Open the file

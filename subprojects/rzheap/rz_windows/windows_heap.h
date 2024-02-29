@@ -4,8 +4,8 @@
 #ifndef WINDOWS_HEAP_H
 #define WINDOWS_HEAP_H
 
-#include <windows.h>
-#include <winternl.h>
+#include <windows.hpp>
+#include <winternl.hpp>
 
 /*
 	Defines most of heap related structures on Windows (some still missing)

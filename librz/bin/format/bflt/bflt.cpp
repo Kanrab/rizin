@@ -6,15 +6,15 @@
  * \file
  * uClinux bFLT file format
  * For reference, see
- *   linux/include/uapi/linux/flat.h
+ *   linux/include/uapi/linux/flat.hpp
  *   linux/fs/binfmt_flat.c
  * in the uClinux kernel, e.g. from uClinux-dist-20160919
  */
 
-#include <rz_util.h>
-#include <rz_types.h>
+#include <rz_util.hpp>
+#include <rz_types.hpp>
 
-#include "bflt.h"
+#include "bflt.hpp"
 
 #define MAX_SHARED_LIBS 1 // this may be 4 depending on kernel config
 #define FLAT_DATA_ALIGN 0x20

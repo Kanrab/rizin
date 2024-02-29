@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2024 billow <billow.fun@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util/rz_iterator.h>
-#include <rz_util/rz_assert.h>
+#include <rz_util/rz_iterator.hpp>
+#include <rz_util/rz_assert.hpp>
 
 /**
  * \brief Initialize a new RzIterator

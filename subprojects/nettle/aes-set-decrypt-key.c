@@ -37,7 +37,7 @@
 */
 
 #if HAVE_CONFIG_H
-# include "config.h"
+# include "config.hpp"
 #endif
 
 #include <stdlib.h>
@@ -45,7 +45,7 @@
 /* This file implements and uses deprecated functions */
 #define _NETTLE_ATTRIBUTE_DEPRECATED
 
-#include "aes.h"
+#include "aes.hpp"
 
 void
 aes_invert_key(struct aes_ctx *dst,

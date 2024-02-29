@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: MIT
 
-#include <sdb.h>
-#include "minunit.h"
+#include <sdb.hpp>
+#include "minunit.hpp"
 #define BUF_LENGTH 100
 
 #define R_ARRAY_SIZE(x) (sizeof(x) / sizeof(x[0]))

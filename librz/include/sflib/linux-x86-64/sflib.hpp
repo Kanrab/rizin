@@ -1,6 +1,6 @@
 /*
- * sflib.h --- SFLib syscall library for Linux/amd64 
- * see http://www.secdev.org/projects/shellforge.html for more informations
+ * sflib.hpp --- SFLib syscall library for Linux/amd64 
+ * see http://www.secdev.org/projects/shellforge.hpptml for more informations
  *
  * Copyright (C) 2004  Philippe Biondi <phil@secdev.org>
  *
@@ -24,9 +24,9 @@
 #define SFLIB_H
 
 
-#include "sfsysnr.h"
-#include "sfsyscall.h"
-#include "../common/sftypes.h"
+#include "sfsysnr.hpp"
+#include "sfsyscall.hpp"
+#include "../common/sftypes.hpp"
         
 
 static inline _sfsyscall3( ssize_t, read, int, fd, void *, buf, size_t, count )
@@ -328,7 +328,7 @@ static inline _sfsyscall1( time_t, time, time_t *, t )
 // pwritev
 	
 	
-//#include "../common/sfsocketcall.h"
+//#include "../common/sfsocketcall.hpp"
 
 
 #endif /* SFLIB_H */

@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2021 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_hash.h>
-#include <rz_util/rz_assert.h>
-#include <xxhash.h>
+#include <rz_hash.hpp>
+#include <rz_util/rz_assert.hpp>
+#include <xxhash.hpp>
 
 #define RZ_HASH_XXHASH32_DIGEST_SIZE  4
 #define RZ_HASH_XXHASH32_BLOCK_LENGTH 0

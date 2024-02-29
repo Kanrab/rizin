@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2017-2019 usrshare
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bin.h>
-#include <rz_lib.h>
-#include "sfc/sfc_specs.h"
-#include <rz_endian.h>
+#include <rz_bin.hpp>
+#include <rz_lib.hpp>
+#include "sfc/sfc_specs.hpp"
+#include <rz_endian.hpp>
 
 static bool check_buffer(RzBuffer *b) {
 	ut64 length = rz_buf_size(b);

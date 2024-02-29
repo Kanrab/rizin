@@ -3,11 +3,11 @@
 // SPDX-FileCopyrightText: 2015-2018 courk <courk@courk.cc>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_analysis.h>
-#include <rz_lib.h>
+#include <rz_types.hpp>
+#include <rz_analysis.hpp>
+#include <rz_lib.hpp>
 
-#include "../../asm/arch/pic/pic_midrange.h"
+#include "../../asm/arch/pic/pic_midrange.hpp"
 
 typedef struct _pic_midrange_op_args_val {
 	ut16 f;
@@ -725,7 +725,7 @@ static int analysis_pic_midrange_op(RzAnalysis *analysis, RzAnalysisOp *op, ut64
 			analysis_pic_midrange_extract_args(
 				instr, pic_midrange_op_analysis_info[i].args,
 				&args_val);
-			pic_midrange_op_analysis_info[i].handler(analysis, op, addr,
+			pic_midrange_op_analysis_info[i].hppandler(analysis, op, addr,
 				&args_val);
 			break;
 		}

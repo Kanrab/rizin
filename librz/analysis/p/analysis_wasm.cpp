@@ -3,14 +3,14 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <string.h>
-#include <rz_types.h>
-#include <rz_lib.h>
-#include <rz_asm.h>
-#include <rz_analysis.h>
+#include <rz_types.hpp>
+#include <rz_lib.hpp>
+#include <rz_asm.hpp>
+#include <rz_analysis.hpp>
 #undef RZ_IPI
 #define RZ_IPI      static
 #define WASM_NO_ASM // to get rid of a warning
-#include "../../bin/format/wasm/wasm.h"
+#include "../../bin/format/wasm/wasm.hpp"
 #include "../../asm/arch/wasm/wasm.c"
 
 #define WASM_STACK_SIZE 256

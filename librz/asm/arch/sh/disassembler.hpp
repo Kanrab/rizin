@@ -3,8 +3,8 @@
 
 #ifndef RZ_SH_DISASSEMBLER_H
 #define RZ_SH_DISASSEMBLER_H
-#include <rz_types.h>
-#include <rz_util.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
 
 #define BITS_PER_BYTE       8
 #define SH_REG_SIZE         4 * BITS_PER_BYTE

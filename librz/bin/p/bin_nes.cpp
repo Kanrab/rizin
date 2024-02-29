@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2015-2019 maijin <maijin21@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bin.h>
-#include <rz_lib.h>
-#include "nes/nes_specs.h"
+#include <rz_bin.hpp>
+#include <rz_lib.hpp>
+#include "nes/nes_specs.hpp"
 
 static bool check_buffer(RzBuffer *b) {
 	if (rz_buf_size(b) > 4) {

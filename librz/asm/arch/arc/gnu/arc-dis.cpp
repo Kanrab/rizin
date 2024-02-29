@@ -22,19 +22,19 @@
    Foundation, Inc., 51 Franklin Street - Fifth Floor, Boston,
    MA 02110-1301, USA.  */
 
-#include "ansidecl.h"
-#include "libiberty.h"
-#include "disas-asm.h"
-//#include "opcode/arc.h"
-#include "elf-bfd.h"
-#include "arc.h"
+#include "ansidecl.hpp"
+#include "libiberty.hpp"
+#include "disas-asm.hpp"
+//#include "opcode/arc.hpp"
+#include "elf-bfd.hpp"
+#include "arc.hpp"
 #include <string.h>
-#include "opintl.h"
+#include "opintl.hpp"
 
-#include <stdarg.h>
-#include "arc-dis.h"
-#include "arc-ext.h"
-#include "arcompact-dis.h"
+#include <stdarg.hpp>
+#include "arc-dis.hpp"
+#include "arc-ext.hpp"
+#include "arcompact-dis.hpp"
 
 #include <stdlib.h>
 

@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2021 GustavoLCR <gugulcr@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
-#include <rz_core.h>
-#include "minunit.h"
+#include <rz_analysis.hpp>
+#include <rz_core.hpp>
+#include "minunit.hpp"
 
 #define SWITCH_TO_ARCH_BITS(arch, bits) \
 	rz_analysis_use(analysis, arch); \

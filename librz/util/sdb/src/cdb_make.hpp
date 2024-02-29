@@ -4,8 +4,8 @@
 #ifndef CDB_MAKE_H
 #define CDB_MAKE_H
 
-#include "buffer.h"
-#include <rz_types.h>
+#include "buffer.hpp"
+#include <rz_types.hpp>
 
 #ifdef __cplusplus
 extern "C" {

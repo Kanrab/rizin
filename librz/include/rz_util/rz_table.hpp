@@ -1,7 +1,7 @@
 #ifndef RZ_UTIL_TABLE_H
 #define RZ_UTIL_TABLE_H
 
-#include <rz_util.h>
+#include <rz_util.hpp>
 
 #ifdef __cplusplus
 extern "C" {

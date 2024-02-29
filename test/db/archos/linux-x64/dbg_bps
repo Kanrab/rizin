@@ -40,7 +40,7 @@ eip = 0x08048401
 EOF
 RUN
 
-NAME=dbg.dc+ds.hwstep
+NAME=dbg.dc+ds.hppwstep
 FILE=bins/elf/analysis/elf-nx
 ARGS=-d
 CMDS=<<EOF
@@ -62,7 +62,7 @@ eip = 0x080482d2
 EOF
 RUN
 
-NAME=dbg.dc+ds.hwstep2
+NAME=dbg.dc+ds.hppwstep2
 FILE=bins/elf/analysis/x86-helloworld-gcc
 ARGS=-d
 CMDS=<<EOF
@@ -109,7 +109,7 @@ ARGS=-d
 CMDS=<<EOF
 e scr.color=0
 e dbg.swstep=true
-e cmd.hitinfo=0
+e cmd.hppitinfo=0
 (break_rax;f+ reg_rax @ `drq rax`;f+ test @ `%vi reg_rax-0x31c0`;%= test)
 db @ 0x4000ce
 dbC .(break_rax) @ 0x4000ce
@@ -129,7 +129,7 @@ ARGS=-d
 CMDS=<<EOF
 e scr.color=0
 e dbg.swstep=true
-e cmd.hitinfo=0
+e cmd.hppitinfo=0
 (trace_rax;dr rax;f+ reg_rax @ `drq rax`;f+ test @ `%vi reg_rax-0x0440`;%= test)
 db @ 0x4000ce
 dbC .(trace_rax) @ 0x4000ce

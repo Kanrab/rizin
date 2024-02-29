@@ -1,6 +1,6 @@
 
 #ifndef RZ_IL_OPBUILDER_BEGIN_H
-#error rz_il_opbuilder_end.h included without rz_il_opbuilder_begin.h before
+#error rz_il_opbuilder_end.hpp included without rz_il_opbuilder_begin.hpp before
 #endif
 
 #undef DUP

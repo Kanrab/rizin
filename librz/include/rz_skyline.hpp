@@ -1,8 +1,8 @@
 #ifndef RZ_SKYLINE_H
 #define RZ_SKYLINE_H
 
-#include "rz_vector.h"
-#include "rz_util/rz_itv.h"
+#include "rz_vector.hpp"
+#include "rz_util/rz_itv.hpp"
 
 typedef struct rz_skyline_item_t {
 	RzInterval itv;

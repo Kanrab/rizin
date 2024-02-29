@@ -2,12 +2,12 @@
 // SPDX-FileCopyrightText: 2024 Billow <billow.fun@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include <rz_type.h>
-#include <rz_analysis.h>
-#include <rz_bin_dwarf.h>
+#include <rz_util.hpp>
+#include <rz_type.hpp>
+#include <rz_analysis.hpp>
+#include <rz_bin_dwarf.hpp>
 #include <string.h>
-#include "analysis_private.h"
+#include "analysis_private.hpp"
 
 typedef struct dwarf_parse_context_t {
 	RzAnalysis *analysis;
@@ -132,9 +132,9 @@ static const char *map_dwarf_register_dummy(ut32 reg_num) {
 
 /**
  * Found in GDB and in the linux kernel perf tools.
- * linux/latest/source/tools/perf/arch/mips/include/dwarf-regs-table.h
+ * linux/latest/source/tools/perf/arch/mips/include/dwarf-regs-table.hpp
  *
- * https://opensource.apple.com/source/gdb/gdb-2831/src/gdb/mips-tdep.c.auto.html
+ * https://opensource.apple.com/source/gdb/gdb-2831/src/gdb/mips-tdep.c.auto.hpptml
  * check the mips_dwarf_dwarf2_ecoff_reg_to_regnum function.
  */
 static const char *map_dwarf_reg_to_mips_reg(ut32 reg_num) {
@@ -216,7 +216,7 @@ static const char *map_dwarf_reg_to_mips_reg(ut32 reg_num) {
 
 /**
  * Found in the linux kernel perf tools.
- * latest/source/tools/perf/arch/sparc/include/dwarf-regs-table.h
+ * latest/source/tools/perf/arch/sparc/include/dwarf-regs-table.hpp
  */
 static const char *sparc_dwarf_table[] = {
 	"g0", "g1", "g2", "g3", "g4", "g5", "g6", "g7",
@@ -243,7 +243,7 @@ static const char *map_dwarf_reg_to_sparc_reg(ut32 reg_num) {
 
 /**
  * Found in the linux kernel perf tools.
- * latest/source/tools/perf/arch/loongarch/include/dwarf-regs-table.h
+ * latest/source/tools/perf/arch/loongarch/include/dwarf-regs-table.hpp
  */
 static const char *loongarch_dwarf_table[] = {
 	"r0", "r1", "r2", "r3", "r4", "r5", "r6", "r7",
@@ -262,7 +262,7 @@ static const char *map_dwarf_reg_to_loongarch_reg(ut32 reg_num) {
 
 /**
  * Found in the linux kernel perf tools.
- * latest/source/tools/perf/arch/s390/include/dwarf-regs-table.h
+ * latest/source/tools/perf/arch/s390/include/dwarf-regs-table.hpp
  */
 static const char *map_dwarf_reg_to_s390_reg(ut32 reg_num) {
 	switch (reg_num) {
@@ -457,15 +457,15 @@ static const char *map_dwarf_reg_to_riscv_reg(ut32 reg_num) {
 #define KASE(_num, _reg) \
 	case _num: return #_reg;
 
-#include "librz/analysis/arch/arm/arm_dwarf_regnum_table.h"
+#include "librz/analysis/arch/arm/arm_dwarf_regnum_table.hpp"
 #include "hexagon_dwarf_reg_num_table.inc"
-#include "librz/analysis/arch/ppc/ppc_dwarf_regnum_table.h"
-#include "librz/analysis/arch/v850/v850_dwarf_reg_num_table.h"
-#include "librz/analysis/arch/rl78/rl78_dwarf_reg.h"
-#include "librz/analysis/arch/rx/rx_dwarf_regnum_table.h"
-#include "librz/analysis/arch/sh/sh_dwarf_regnum_table.h"
-#include "librz/analysis/arch/tricore/tricore_dwarf_regnum_table.h"
-#include "librz/analysis/arch/x86/x86_dwarf_regnum_table.h"
+#include "librz/analysis/arch/ppc/ppc_dwarf_regnum_table.hpp"
+#include "librz/analysis/arch/v850/v850_dwarf_reg_num_table.hpp"
+#include "librz/analysis/arch/rl78/rl78_dwarf_reg.hpp"
+#include "librz/analysis/arch/rx/rx_dwarf_regnum_table.hpp"
+#include "librz/analysis/arch/sh/sh_dwarf_regnum_table.hpp"
+#include "librz/analysis/arch/tricore/tricore_dwarf_regnum_table.hpp"
+#include "librz/analysis/arch/x86/x86_dwarf_regnum_table.hpp"
 
 /**
  * \brief Returns a function that maps a DWARF register number to a register name

@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: 2013-2019 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_bin.h>
-#include "../i/private.h"
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_bin.hpp>
+#include "../i/private.hpp"
 
 static bool check_buffer(RzBuffer *buf) {
 	rz_return_val_if_fail(buf, false);

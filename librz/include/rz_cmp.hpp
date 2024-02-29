@@ -4,8 +4,8 @@
 #ifndef RZ_CMP_H
 #define RZ_CMP_H
 
-#include <rz_core.h>
-#include <rz_util.h>
+#include <rz_core.hpp>
+#include <rz_util.hpp>
 
 #ifdef __cplusplus
 extern "C" {

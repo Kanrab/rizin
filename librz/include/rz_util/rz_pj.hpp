@@ -3,7 +3,7 @@
 
 #define RZ_PRINT_JSON_DEPTH_LIMIT 128
 
-#include <rz_util/rz_strbuf.h>
+#include <rz_util/rz_strbuf.hpp>
 
 #ifdef __cplusplus
 extern "C" {

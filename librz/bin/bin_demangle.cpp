@@ -2,8 +2,8 @@
 // SPDX-FileCopyrightText: 2023 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bin.h>
-#include <rz_util.h>
+#include <rz_bin.hpp>
+#include <rz_util.hpp>
 
 #define skip_prefix_s(s, p) \
 	do { \

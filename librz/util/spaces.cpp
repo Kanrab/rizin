@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2019 ret2libc <sirmy15@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "rz_util/rz_spaces.h"
+#include "rz_util/rz_spaces.hpp"
 
 RZ_API RzSpaces *rz_spaces_new(const char *name) {
 	RzSpaces *sp = RZ_NEW0(RzSpaces);

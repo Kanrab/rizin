@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2021 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_lib.h>
-#include <rz_flag.h>
-#include <rz_analysis.h>
-#include <rz_parse.h>
+#include <rz_lib.hpp>
+#include <rz_flag.hpp>
+#include <rz_analysis.hpp>
+#include <rz_parse.hpp>
 
 // https://www.renesas.com/us/en/doc/products/mpumcu/doc/v850/r01us0037ej0100_v850e2.pdf
 
@@ -29,8 +29,8 @@ static const RzPseudoGrammar v850_lexicon[] = {
 	RZ_PSEUDO_DEFINE_GRAMMAR("jr", "goto 1"),
 	RZ_PSEUDO_DEFINE_GRAMMAR("ld.b", "3 = (byte) *(2 + 1)"),
 	RZ_PSEUDO_DEFINE_GRAMMAR("ld.bu", "3 = (unsigned byte) *(2 + 1)"),
-	RZ_PSEUDO_DEFINE_GRAMMAR("ld.h", "3 = (Zhalf) *(2 + 1)"),
-	RZ_PSEUDO_DEFINE_GRAMMAR("ld.hu", "3 = (unsigned half) *(2 + 1)"),
+	RZ_PSEUDO_DEFINE_GRAMMAR("ld.hpp", "3 = (Zhalf) *(2 + 1)"),
+	RZ_PSEUDO_DEFINE_GRAMMAR("ld.hppu", "3 = (unsigned half) *(2 + 1)"),
 	RZ_PSEUDO_DEFINE_GRAMMAR("ld.w", "3 = (word) *(2 + 1)"),
 	RZ_PSEUDO_DEFINE_GRAMMAR("ldsr", "2 = 1"),
 	RZ_PSEUDO_DEFINE_GRAMMAR("mov", "2 = 1"),
@@ -47,13 +47,13 @@ static const RzPseudoGrammar v850_lexicon[] = {
 	RZ_PSEUDO_DEFINE_GRAMMAR("shl", "2 <<= 1"),
 	RZ_PSEUDO_DEFINE_GRAMMAR("shr", "2 >>= 1"),
 	RZ_PSEUDO_DEFINE_GRAMMAR("sld.b", "2 = (byte) 1"),
-	RZ_PSEUDO_DEFINE_GRAMMAR("sld.h", "2 = (half) 1"),
+	RZ_PSEUDO_DEFINE_GRAMMAR("sld.hpp", "2 = (half) 1"),
 	RZ_PSEUDO_DEFINE_GRAMMAR("sld.w", "2 = (word) 1"),
 	RZ_PSEUDO_DEFINE_GRAMMAR("sst.b", "2 = (byte) 1"),
-	RZ_PSEUDO_DEFINE_GRAMMAR("sst.h", "2 = (half) 1"),
+	RZ_PSEUDO_DEFINE_GRAMMAR("sst.hpp", "2 = (half) 1"),
 	RZ_PSEUDO_DEFINE_GRAMMAR("sst.w", "2 = (word) 1"),
 	RZ_PSEUDO_DEFINE_GRAMMAR("st.b", "*(3 + 2) = (byte) 1"),
-	RZ_PSEUDO_DEFINE_GRAMMAR("st.h", "*(3 + 2) = (half) 1"),
+	RZ_PSEUDO_DEFINE_GRAMMAR("st.hpp", "*(3 + 2) = (half) 1"),
 	RZ_PSEUDO_DEFINE_GRAMMAR("st.w", "*(3 + 2) = (word) 1"),
 	RZ_PSEUDO_DEFINE_GRAMMAR("stsr", "2 = 1"),
 	RZ_PSEUDO_DEFINE_GRAMMAR("sub", "2 -= 1"),

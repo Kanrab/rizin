@@ -3,9 +3,9 @@
 
 #ifndef RZ_BIN_JAVA_CLASS_INTERFACE_H
 #define RZ_BIN_JAVA_CLASS_INTERFACE_H
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_bin.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_bin.hpp>
 
 typedef struct java_interface_t {
 	ut64 offset;

@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2008-2011 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "bfvm.h"
+#include "bfvm.hpp"
 
 static ut8 bfvm_op(BfvmCPU *c) {
 	// XXX: this is slow :(

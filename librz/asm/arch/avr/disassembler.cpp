@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2021 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "disassembler.h"
-#include "common.h"
+#include "disassembler.hpp"
+#include "common.hpp"
 
 /** \file disassembler.c
  * Disassembles AVR instructions

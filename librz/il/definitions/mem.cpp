@@ -3,7 +3,7 @@
 // SPDX-FileCopyrightText: 2021 heersin <teablearcher@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_il/definitions/mem.h>
+#include <rz_il/definitions/mem.hpp>
 
 #define KEY_LEN_MAX 64 // because RzBuffer uses ut64 addresses
 

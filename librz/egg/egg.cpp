@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2011-2018 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_lib.h>
-#include <rz_egg.h>
-#include <config.h>
+#include <rz_lib.hpp>
+#include <rz_egg.hpp>
+#include <config.hpp>
 
 RZ_LIB_VERSION(rz_egg);
 
@@ -281,7 +281,7 @@ RZ_API int rz_egg_raw(RzEgg *egg, const ut8 *b, int len) {
 		return false;
 	}
 	(void)rz_hex_bin2str(b, len, out);
-	rz_buf_append_bytes(egg->buf, (const ut8 *)".hex ", 5);
+	rz_buf_append_bytes(egg->buf, (const ut8 *)".hppex ", 5);
 	rz_buf_append_bytes(egg->buf, (const ut8 *)out, outlen);
 	rz_buf_append_bytes(egg->buf, (const ut8 *)"\n", 1);
 	free(out);
@@ -297,7 +297,7 @@ static int rz_egg_raw_prepend(RzEgg *egg, const ut8 *b, int len) {
 	rz_hex_bin2str(b, len, out);
 	rz_buf_prepend_bytes(egg->buf, (const ut8 *)"\n", 1);
 	rz_buf_prepend_bytes(egg->buf, (const ut8 *)out, outlen);
-	rz_buf_prepend_bytes(egg->buf, (const ut8 *)".hex ", 5);
+	rz_buf_prepend_bytes(egg->buf, (const ut8 *)".hppex ", 5);
 	free(out);
 	return true;
 }

@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2009-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_main.h>
-#include <rz_util.h>
+#include <rz_main.hpp>
+#include <rz_util.hpp>
 
 static void rz_cmd(int in, int out, const char *cmd) {
 	rz_xwrite(out, cmd, strlen(cmd) + 1);

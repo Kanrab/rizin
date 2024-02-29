@@ -4,9 +4,9 @@
 // SPDX-FileCopyrightText: 2009-2019 alvarofe <alvaro.felipe91@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bin.h>
-#include "../i/private.h"
-#include "../format/ne/ne.h"
+#include <rz_bin.hpp>
+#include "../i/private.hpp"
+#include "../format/ne/ne.hpp"
 
 static bool check_buffer(RzBuffer *b) {
 	ut64 length = rz_buf_size(b);
@@ -123,7 +123,7 @@ RzBinPlugin rz_bin_plugin_ne = {
 	.check_buffer = &check_buffer,
 	.load_buffer = &load_buffer,
 	.destroy = &destroy,
-	.header = &header,
+	.hppeader = &header,
 	.info = &info,
 	.entries = &entries,
 	.sections = &sections,

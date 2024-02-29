@@ -4,7 +4,7 @@
 // SPDX-FileCopyrightText: 2008-2019 inisider <inisider@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "pe.h"
+#include "pe.hpp"
 
 #define SGUID_SIZE                (16)
 #define SCV_NB10_HEADER_MIN_SIZE  (16) // does not include the size of file_name because is dynamic

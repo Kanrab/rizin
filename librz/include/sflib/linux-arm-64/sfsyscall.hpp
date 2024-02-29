@@ -1,4 +1,4 @@
-/* sfsyscall.h --- SFLib syscall macros for Linux/arm64 - pancake */
+/* sfsyscall.hpp --- SFLib syscall macros for Linux/arm64 - pancake */
 
 #ifndef SFSYSCALL_H
 #define SFSYSCALL_H

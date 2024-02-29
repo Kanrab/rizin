@@ -2,8 +2,8 @@
 // SPDX-FileCopyrightText: 2015-2018 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "mz.h"
-#include <rz_list.h>
+#include "mz.hpp"
+#include <rz_list.hpp>
 
 static ut64 rz_bin_mz_va_to_la(const ut16 segment, const ut16 offset) {
 	return (segment << 4) + offset;

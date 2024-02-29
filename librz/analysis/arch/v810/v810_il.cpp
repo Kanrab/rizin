@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2024 billow <billow.fun@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "v810.h"
-#include <rz_il/rz_il_opbuilder_begin.h>
+#include "v810.hpp"
+#include <rz_il/rz_il_opbuilder_begin.hpp>
 
 static const char *registers[] = {
 	"r0",
@@ -681,4 +681,4 @@ RzAnalysisLiftedILOp v810_il_op(const V810AnalysisContext *ctx) {
 	return NULL;
 }
 
-#include <rz_il/rz_il_opbuilder_end.h>
+#include <rz_il/rz_il_opbuilder_end.hpp>

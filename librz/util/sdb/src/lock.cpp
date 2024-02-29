@@ -5,10 +5,10 @@
 #include <stdio.h>
 #include <string.h>
 #include <fcntl.h>
-#include <rz_util/rz_sys.h>
-#include "sdb.h"
+#include <rz_util/rz_sys.hpp>
+#include "sdb.hpp"
 #if __WINDOWS__
-#include <windows.h>
+#include <windows.hpp>
 #endif
 
 RZ_API const char *sdb_lock_file(const char *f) {

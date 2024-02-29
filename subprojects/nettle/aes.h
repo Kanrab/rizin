@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2001, 2013 Niels Möller
 // SPDX-License-Identifier: LGPL-3.0-only
 
-/* aes.h
+/* aes.hpp
 
    The aes/rijndael block cipher.
 
@@ -37,7 +37,7 @@
 #ifndef NETTLE_AES_H_INCLUDED
 #define NETTLE_AES_H_INCLUDED
 
-#include "nettle-types.h"
+#include "nettle-types.hpp"
 
 #ifdef __cplusplus
 extern "C" {

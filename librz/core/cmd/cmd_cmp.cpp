@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2009-2019 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_cmp.h>
-#include "../core_private.h"
+#include <rz_cmp.hpp>
+#include "../core_private.hpp"
 
 static void rizin_compare_words(RzCore *core, ut64 of, ut64 od, int len, int ws) {
 	rz_return_if_fail(core && (ws == 1 || ws == 2 || ws == 4 || ws == 8));
@@ -77,7 +77,7 @@ static bool core_cmp_bits(RzCore *core, RzCompareData *cmp) {
 	RzConsPrintablePalette *pal = &rz_cons_singleton()->context->pal;
 	const char *color = scr_color ? pal->offset : "";
 	const char *color_end = scr_color ? Color_RESET : "";
-	if (rz_config_get_i(core->config, "hex.header")) {
+	if (rz_config_get_i(core->config, "hex.hppeader")) {
 		char *n = rz_str_newf("0x%08" PFMT64x, cmp->addr1);
 		char *extra = rz_str_pad(' ', strlen(n) - 10);
 		free(n);

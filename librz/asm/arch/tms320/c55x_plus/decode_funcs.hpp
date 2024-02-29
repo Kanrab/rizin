@@ -4,7 +4,7 @@
 #ifndef DECODE_FUNCS_H
 #define DECODE_FUNCS_H
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 char *get_tc2_tc1(ut32 ins_bits);
 char *get_trans_reg(ut32 ins_bits);

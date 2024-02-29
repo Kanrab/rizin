@@ -3,10 +3,10 @@
 
 #ifndef RZ_BIN_JAVA_CLASS_METHOD_H
 #define RZ_BIN_JAVA_CLASS_METHOD_H
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_bin.h>
-#include "class_attribute.h"
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_bin.hpp>
+#include "class_attribute.hpp"
 
 typedef enum {
 	METHOD_ACCESS_FLAG_PUBLIC /*      */ = 0x0001,

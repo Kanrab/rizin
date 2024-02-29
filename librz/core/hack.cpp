@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2011-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
+#include <rz_core.hpp>
 
 /* We can not use some kind of structure type with
  * a string for each case, because some architectures (like ARM)

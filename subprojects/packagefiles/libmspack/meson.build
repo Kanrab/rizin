@@ -40,16 +40,16 @@ endif
 
 # check on headers
 foreach item : [
-    ['dlfcn.h', '', [], 'HAVE_DLFCN_H'],
-    ['inttypes.h', '', [], 'HAVE_INTTYPES_H'],
+    ['dlfcn.hpp', '', [], 'HAVE_DLFCN_H'],
+    ['inttypes.hpp', '', [], 'HAVE_INTTYPES_H'],
     ['stdint.h', '', [], 'HAVE_STDINT_H'],
     ['stdio.h', '', [], 'HAVE_STDIO_H'],
     ['stdlib.h', '', [], 'HAVE_STDLIB_H'],
-    ['strings.h', '', [], 'HAVE_STRINGS_H'],
+    ['strings.hpp', '', [], 'HAVE_STRINGS_H'],
     ['string.h', '', [], 'HAVE_STRING_H'],
     ['sys/stat.h', '', [], 'HAVE_SYS_STAT_H'],
     ['sys/types.h', '', [], 'HAVE_SYS_TYPES_H'],
-    ['unistd.h', '', [], 'HAVE_UNISTD_H'],
+    ['unistd.hpp', '', [], 'HAVE_UNISTD_H'],
   ]
   ok = cc.has_header(item[0], prefix: item[1], dependencies: item[2])
   config_data.set10(item[3], ok)
@@ -64,14 +64,14 @@ config_data.set10('STDC_HEADERS', have_stdlib_h == 1 and have_string_h == 1)
 foreach item : [
     ['fseeko', '#include <stdio.h>', [], 'HAVE_FSEEKO'],
     ['mkdir', '#include <sys/stat.h>', [], 'HAVE_MKDIR'],
-    ['_mkdir', '#include <direct.h>', [], 'HAVE__MKDIR'],
+    ['_mkdir', '#include <direct.hpp>', [], 'HAVE__MKDIR'],
     ['towlower', '#include <wctype.h>', [], 'HAVE_TOWLOWER'],
   ]
   ok = cc.has_function(item[0], prefix: item[1], dependencies: item[2])
   config_data.set10(item[3], ok)
 endforeach
 
-code = '#include <sys/stat.h>\n#if @0@\n#include <unistd.h>\n#endif\nint main(void) { mkdir ("."); return 0; }'.format(have_unistd_h)
+code = '#include <sys/stat.h>\n#if @0@\n#include <unistd.hpp>\n#endif\nint main(void) { mkdir ("."); return 0; }'.format(have_unistd_h)
 mkdir_takes_one_arg = cc.links(code, name: 'mkdir has one argument')
 config_data.set10('MKDIR_TAKES_ONE_ARG', mkdir_takes_one_arg)
 
@@ -107,7 +107,7 @@ endif
 
 config_h = configure_file(
   input: 'config.h.inc',
-  output: 'config.h',
+  output: 'config.hpp',
   configuration: config_data,
 )
 

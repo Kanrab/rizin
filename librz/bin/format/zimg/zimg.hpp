@@ -4,10 +4,10 @@
 #ifndef ZIMG_H
 #define ZIMG_H
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_bin.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_bin.hpp>
 
 #define RZ_BIN_ZIMG_MAXSTR 256
 

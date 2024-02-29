@@ -27,8 +27,8 @@
 #ifndef RZ_API_I
 #define RZ_API_I
 #endif
-#include "z80asm.h"
-#include <rz_util.h>
+#include "z80asm.hpp"
+#include <rz_util.hpp>
 
 /* hack */
 // must remove: equ, include, incbin, macro

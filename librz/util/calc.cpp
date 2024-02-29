@@ -11,8 +11,8 @@
     ISBN: 0201700735
  */
 
-#include <rz_types.h>
-#include <rz_util.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
 #include <ctype.h>
 #include <stdio.h>
 

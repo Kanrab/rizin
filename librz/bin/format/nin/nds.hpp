@@ -3,13 +3,13 @@
 
 /*
 http://dsibrew.org/wiki/NDS_Format
-http://sourceforge.net/p/devkitpro/ndstool/ci/master/tree/source/header.h
+http://sourceforge.net/p/devkitpro/ndstool/ci/master/tree/source/header.hpp
 */
 
 #ifndef NIN_NDS_H
 #define NIN_NDS_H
 
-#include <rz_types_base.h>
+#include <rz_types_base.hpp>
 
 typedef struct nds_header_t {
 	st8 title[0xC];

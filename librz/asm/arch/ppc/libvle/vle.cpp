@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2017-2021 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
-#include "vle.h"
-#include "vle_internal.h"
-#include <rz_analysis.h>
+#include "vle.hpp"
+#include "vle_internal.hpp"
+#include <rz_analysis.hpp>
 
 #define USE_INTERNAL_PPC(x) ((x)->options & VLE_INTERNAL_PPC)
 

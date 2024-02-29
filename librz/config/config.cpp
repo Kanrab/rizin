@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2006-2021 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "rz_config.h"
+#include "rz_config.hpp"
 
 RZ_API RZ_OWN RzConfigNode *rz_config_node_new(RZ_NONNULL const char *name, RZ_NONNULL const char *value) {
 	rz_return_val_if_fail(RZ_STR_ISNOTEMPTY(name) && value, NULL);

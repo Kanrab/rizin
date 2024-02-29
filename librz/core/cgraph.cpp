@@ -4,17 +4,17 @@
 // SPDX-FileCopyrightText: 2023 Rot127 <unisono@quyllur.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
-#include <rz_list.h>
-#include <rz_core.h>
-#include <rz_util/rz_graph_drawable.h>
-#include "core_private.h"
-#include <rz_util/rz_assert.h>
-#include <rz_util/rz_str.h>
-#include <rz_util/ht_uu.h>
-#include <rz_util/ht_up.h>
-#include <rz_util/rz_graph.h>
-#include <rz_util/rz_th_ht.h>
+#include <rz_analysis.hpp>
+#include <rz_list.hpp>
+#include <rz_core.hpp>
+#include <rz_util/rz_graph_drawable.hpp>
+#include "core_private.hpp"
+#include <rz_util/rz_assert.hpp>
+#include <rz_util/rz_str.hpp>
+#include <rz_util/ht_uu.hpp>
+#include <rz_util/ht_up.hpp>
+#include <rz_util/rz_graph.hpp>
+#include <rz_util/rz_th_ht.hpp>
 
 static inline bool is_between(ut64 a, ut64 x, ut64 b) {
 	return (a == UT64_MAX && b == UT64_MAX) || RZ_BETWEEN(a, x, b);

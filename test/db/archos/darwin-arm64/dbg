@@ -100,13 +100,13 @@ EXPECT=<<EOF
 16384 hello_macos_arm64.r
 --
 
-f+ map.hello_macos_arm64.r_x 0x00004000
+f+ map.hppello_macos_arm64.r_x 0x00004000
 
-f+ map.hello_macos_arm64.rw 0x00004000
+f+ map.hppello_macos_arm64.rw 0x00004000
 
-f+ map.hello_macos_arm64.rw 0x00004000
+f+ map.hppello_macos_arm64.rw 0x00004000
 
-f+ map.hello_macos_arm64.r 0x00004000
+f+ map.hppello_macos_arm64.r 0x00004000
 EOF
 RUN
 

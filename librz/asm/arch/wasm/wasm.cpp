@@ -4,12 +4,12 @@
 
 // http://webassembly.org/docs/binary-encoding/#module-structure
 
-#include <rz_asm.h>
-#include <rz_lib.h>
+#include <rz_asm.hpp>
+#include <rz_lib.hpp>
 #include <string.h>
 
-#include "wasm.h"
-#include "../../../bin/format/wasm/wasm.h"
+#include "wasm.hpp"
+#include "../../../bin/format/wasm/wasm.hpp"
 
 static WasmOpDef opcodes[256] = {
 	[WASM_OP_TRAP] = { "trap", 1, 1 },

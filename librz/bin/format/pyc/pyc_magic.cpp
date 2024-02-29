@@ -2,8 +2,8 @@
 // SPDX-FileCopyrightText: 2016-2020 x0urc3
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "pyc_magic.h"
-#include <rz_util.h>
+#include "pyc_magic.hpp"
+#include <rz_util.hpp>
 #include <stdlib.h>
 
 /* In the latest 3.x versions the magic number is stored

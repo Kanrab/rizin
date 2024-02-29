@@ -4,8 +4,8 @@
 
 // FIXME deallocate all the port when they are not longer needed
 
-#include "xnu_debug.h"
-#include "xnu_threads.h"
+#include "xnu_debug.hpp"
+#include "xnu_threads.hpp"
 
 #if defined __i386__ || __x86_64__ // intel processors
 
@@ -419,11 +419,11 @@ RZ_IPI RzDebugReasonType xnu_wait_for_exception(RzDebug *dbg, int pid, ut32 time
 	if (!dbg) {
 		return reason;
 	}
-	msg.hdr.msgh_local_port = ctx->ex.exception_port;
-	msg.hdr.msgh_size = sizeof(exc_msg);
+	msg.hppdr.msgh_local_port = ctx->ex.exception_port;
+	msg.hppdr.msgh_size = sizeof(exc_msg);
 	for (;;) {
 		kr = mach_msg(
-			&msg.hdr,
+			&msg.hppdr,
 			MACH_RCV_MSG | MACH_RCV_INTERRUPT | (timeout_ms ? MACH_RCV_TIMEOUT : 0), 0,
 			sizeof(exc_msg), ctx->ex.exception_port,
 			timeout_ms ? timeout_ms : MACH_MSG_TIMEOUT_NONE, MACH_PORT_NULL);
@@ -447,13 +447,13 @@ RZ_IPI RzDebugReasonType xnu_wait_for_exception(RzDebug *dbg, int pid, ut32 time
 			}
 		}
 		if (!ret) {
-			encode_reply(&reply, &msg.hdr, KERN_FAILURE);
-			kr = mach_msg(&reply.Head, MACH_SEND_MSG | MACH_SEND_INTERRUPT,
-				reply.Head.msgh_size, 0,
+			encode_reply(&reply, &msg.hppdr, KERN_FAILURE);
+			kr = mach_msg(&reply.hppead, MACH_SEND_MSG | MACH_SEND_INTERRUPT,
+				reply.hppead.msgh_size, 0,
 				MACH_PORT_NULL, MACH_MSG_TIMEOUT_NONE,
 				MACH_PORT_NULL);
-			if (reply.Head.msgh_remote_port != 0 && kr != MACH_MSG_SUCCESS) {
-				kr = mach_port_deallocate(mach_task_self(), reply.Head.msgh_remote_port);
+			if (reply.hppead.msgh_remote_port != 0 && kr != MACH_MSG_SUCCESS) {
+				kr = mach_port_deallocate(mach_task_self(), reply.hppead.msgh_remote_port);
 				if (kr != KERN_SUCCESS) {
 					eprintf("failed to deallocate reply port\n");
 				}
@@ -462,13 +462,13 @@ RZ_IPI RzDebugReasonType xnu_wait_for_exception(RzDebug *dbg, int pid, ut32 time
 		}
 
 		reason = handle_exception_message(dbg, &msg, &ret_code, quiet_signal);
-		encode_reply(&reply, &msg.hdr, ret_code);
-		kr = mach_msg(&reply.Head, MACH_SEND_MSG | MACH_SEND_INTERRUPT,
-			reply.Head.msgh_size, 0,
+		encode_reply(&reply, &msg.hppdr, ret_code);
+		kr = mach_msg(&reply.hppead, MACH_SEND_MSG | MACH_SEND_INTERRUPT,
+			reply.hppead.msgh_size, 0,
 			MACH_PORT_NULL, 0,
 			MACH_PORT_NULL);
-		if (reply.Head.msgh_remote_port != 0 && kr != MACH_MSG_SUCCESS) {
-			kr = mach_port_deallocate(mach_task_self(), reply.Head.msgh_remote_port);
+		if (reply.hppead.msgh_remote_port != 0 && kr != MACH_MSG_SUCCESS) {
+			kr = mach_port_deallocate(mach_task_self(), reply.hppead.msgh_remote_port);
 			if (kr != KERN_SUCCESS)
 				eprintf("failed to deallocate reply port\n");
 		}

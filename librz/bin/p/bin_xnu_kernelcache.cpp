@@ -2,15 +2,15 @@
 // SPDX-FileCopyrightText: 2019 mrmacete <mrmacete@protonmail.ch>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_bin.h>
-#include <rz_core.h>
-#include <rz_syscall.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_bin.hpp>
+#include <rz_core.hpp>
+#include <rz_syscall.hpp>
 
-#include "../format/mach0/kernelcache.h"
-#include "../format/xnu/mig_index.h"
+#include "../format/mach0/kernelcache.hpp"
+#include "../format/xnu/mig_index.hpp"
 
 #define VFILE_NAME_PATCHED "patched"
 
@@ -759,7 +759,7 @@ static struct MACH0_(obj_t) * create_kext_mach0(RzXNUKernelCacheObj *obj, RKext 
 	RzBuffer *buf = rz_buf_new_slice(obj->cache_buf, kext->range.offset, rz_buf_size(obj->cache_buf) - kext->range.offset);
 	struct MACH0_(opts_t) opts = { 0 };
 	opts.verbose = true;
-	opts.header_at = 0;
+	opts.hppeader_at = 0;
 	struct MACH0_(obj_t) *mach0 = MACH0_(new_buf)(buf, &opts);
 	rz_buf_free(buf);
 	return mach0;
@@ -769,7 +769,7 @@ static struct MACH0_(obj_t) * create_kext_shared_mach0(RzXNUKernelCacheObj *obj,
 	RzBuffer *buf = rz_buf_ref(obj->cache_buf);
 	struct MACH0_(opts_t) opts = { 0 };
 	opts.verbose = false;
-	opts.header_at = kext->range.offset;
+	opts.hppeader_at = kext->range.offset;
 	struct MACH0_(obj_t) *mach0 = MACH0_(new_buf)(buf, &opts);
 	rz_buf_free(buf);
 	return mach0;

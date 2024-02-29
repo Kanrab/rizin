@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2018 condret <condr3t@protonmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
-#include <rz_util.h>
-#include <rz_lib.h>
+#include <rz_analysis.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
 
 RZ_API void rz_analysis_esil_sources_init(RzAnalysisEsil *esil) {
 	if (esil && !esil->sources) {

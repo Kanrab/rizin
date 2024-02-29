@@ -1,4 +1,4 @@
-### winhttp.h ###
+### winhttp.hpp ###
 
 WinHttpAddRequestHeaders=func
 func.WinHttpAddRequestHeaders.args=4

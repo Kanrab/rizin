@@ -3,8 +3,8 @@
 // SPDX-FileCopyrightText: 2023 billow <billow.fun@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bin_dwarf.h>
-#include "dwarf_private.h"
+#include <rz_bin_dwarf.hpp>
+#include "dwarf_private.hpp"
 
 typedef struct {
 	RzBinDwarfInfo *info;
@@ -280,21 +280,21 @@ static bool CU_parse_all(DebugInfoContext *ctx) {
 		if (CU_init(&unit) < 0) {
 			goto cleanup;
 		}
-		if (!CU_Hdr_parse(ctx, &unit.hdr)) {
+		if (!CU_Hdr_parse(ctx, &unit.hppdr)) {
 			break;
 		}
-		if (unit.hdr.length > rz_buf_size(buffer)) {
+		if (unit.hppdr.length > rz_buf_size(buffer)) {
 			goto cleanup;
 		}
 
 		RzBinDwarfAbbrevTable *tbl = ht_up_find(
-			ctx->dw->abbrev->tbl_by_offset, unit.hdr.abbrev_offset, NULL);
+			ctx->dw->abbrev->tbl_by_offset, unit.hppdr.abbrev_offset, NULL);
 		if (!tbl) {
 			goto cleanup;
 		}
 
 		RZ_LOG_DEBUG("0x%" PFMT64x ":\tcompile unit length = 0x%" PFMT64x ", abbr_offset: 0x%" PFMT64x "\n",
-			unit.offset, unit.hdr.length, unit.hdr.abbrev_offset);
+			unit.offset, unit.hppdr.length, unit.hppdr.abbrev_offset);
 		CU_dies_parse(ctx, &unit, tbl);
 		ctx->info->die_count += rz_vector_len(&unit.dies);
 		rz_vector_push(&ctx->info->units, &unit);

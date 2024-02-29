@@ -12,12 +12,12 @@
 #ifndef HEXAGON_H
 #define HEXAGON_H
 
-#include <rz_asm.h>
-#include <rz_config.h>
-#include <rz_list.h>
-#include <rz_types.h>
-#include <rz_util/rz_print.h>
-#include "hexagon_insn.h"
+#include <rz_asm.hpp>
+#include <rz_config.hpp>
+#include <rz_list.hpp>
+#include <rz_types.hpp>
+#include <rz_util/rz_print.hpp>
+#include "hexagon_insn.hpp"
 
 #define HEX_MAX_OPERANDS    6
 #define HEX_PARSE_BITS_MASK 0xc000
@@ -42,7 +42,7 @@ typedef enum {
 
 typedef enum {
 	HEX_OP_CONST_EXT = 1 << 0, // Constant extender marker for Immediate
-	HEX_OP_REG_HI = 1 << 1, // Rn.H marker
+	HEX_OP_REG_HI = 1 << 1, // Rn.hpp marker
 	HEX_OP_REG_LO = 1 << 2, // Rn.L marker
 	HEX_OP_REG_PAIR = 1 << 3, // Is this a register pair?
 	HEX_OP_REG_QUADRUPLE = 1 << 4, // Is it a register with 4 sub registers?

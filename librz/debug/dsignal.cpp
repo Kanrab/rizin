@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2014-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_debug.h>
+#include <rz_debug.hpp>
 
 #define DB dbg->sgnls
 

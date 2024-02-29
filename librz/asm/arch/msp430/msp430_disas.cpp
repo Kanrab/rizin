@@ -4,10 +4,10 @@
 // SPDX-FileCopyrightText: 2018 Neven Sajko <nsajko@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
 
-#include "msp430_disas.h"
+#include "msp430_disas.hpp"
 
 static const char *msp430_register_names[] = {
 	"pc",

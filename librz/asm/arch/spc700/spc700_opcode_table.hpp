@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2014 condret <condr3t@protonmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 typedef enum {
 	SPC700_ARG_NONE,

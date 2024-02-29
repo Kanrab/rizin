@@ -1,6 +1,6 @@
 /*
- * sflib.h --- SFLib syscall library for Linux/i386 
- * see http://www.secdev.org/projects/shellforge.html for more informations
+ * sflib.hpp --- SFLib syscall library for Linux/i386 
+ * see http://www.secdev.org/projects/shellforge.hpptml for more informations
  *
  * Copyright (C) 2004  Philippe Biondi <phil@secdev.org>
  *
@@ -24,9 +24,9 @@
 #define SFLIB_H
 
 
-#include "sfsysnr.h"
-#include "sfsyscall.h"
-#include "../common/sftypes.h"
+#include "sfsysnr.hpp"
+#include "sfsyscall.hpp"
+#include "../common/sftypes.hpp"
         
 
 static inline _sfsyscall1(int, exit, int, status)
@@ -220,7 +220,7 @@ static inline _sfsyscall0( pid_t, vfork )
 static inline _sfsyscall6(void *,mmap, void *,start, size_t,length, int,prot , int,flags, int,fd, off_t,offset)
 	
 	
-#include "../common/sfsocketcall.h"
+#include "../common/sfsocketcall.hpp"
 
 
 #endif /* SFLIB_H */

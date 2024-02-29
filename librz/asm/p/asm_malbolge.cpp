@@ -2,9 +2,9 @@
 // SPDX-FileCopyrightText: 2014-2018 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_asm.h>
-#include <rz_types.h>
-#include <rz_lib.h>
+#include <rz_asm.hpp>
+#include <rz_types.hpp>
+#include <rz_lib.hpp>
 #include <string.h>
 
 static const char *mal_dis(ut64 c, const ut8 *buf, ut64 len) {

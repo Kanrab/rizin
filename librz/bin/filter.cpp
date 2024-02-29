@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2015 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bin.h>
-#include "i/private.h"
+#include <rz_bin.hpp>
+#include "i/private.hpp"
 
 static bool false_positive(const char *str) {
 	int up = 0;

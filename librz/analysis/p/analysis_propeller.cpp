@@ -3,13 +3,13 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <string.h>
-#include <rz_types.h>
-#include <rz_lib.h>
-#include <rz_asm.h>
-#include <rz_analysis.h>
-#include <rz_util.h>
+#include <rz_types.hpp>
+#include <rz_lib.hpp>
+#include <rz_asm.hpp>
+#include <rz_analysis.hpp>
+#include <rz_util.hpp>
 
-#include <propeller_disas.h>
+#include <propeller_disas.hpp>
 
 static int propeller_op(RzAnalysis *analysis, RzAnalysisOp *op, ut64 addr, const ut8 *buf, int len, RzAnalysisOpMask mask) {
 	rz_return_val_if_fail(analysis && op && buf, -1);

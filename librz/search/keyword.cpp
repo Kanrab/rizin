@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2010-2015 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_search.h>
+#include <rz_search.hpp>
 
 static int ignoreMask(const ut8 *bm, int len) {
 	int i;

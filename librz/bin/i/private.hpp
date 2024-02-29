@@ -4,9 +4,9 @@
 #ifndef RZ_BIN_PRIVATE_H_
 #define RZ_BIN_PRIVATE_H_
 
-#include <rz_bin.h>
-#include <rz_util.h>
-#include <rz_types.h>
+#include <rz_bin.hpp>
+#include <rz_util.hpp>
+#include <rz_types.hpp>
 
 #define RZ_BIN_FMT_CLASS_HT_GLUE "%s#%s"
 

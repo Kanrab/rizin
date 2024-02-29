@@ -117,7 +117,7 @@ wx 37133713 @ reloc.target.__stack_chk_guard
 
 # TODO: Requires preprocessor that isn't implemented yet
 # This is tracked in https://github.com/rizinorg/rizin/issues/1204
-to bins/headers/jni.h
+to bins/headers/jni.hpp
 avga bla JNINativeInterface @ 0x13371337
 avga foo JNINativeInterface @ 0x464c457f # \x7fELF, the "pointer" when dereferencing addr 0
 aat
@@ -150,7 +150,7 @@ e asm.bytes=true
 e asm.lines.bb=false
 aa
 s sym.Java_com_app_ndh_NDHActivity_print
-to bins/headers/jni_preprocessed.h
+to bins/headers/jni_preprocessed.hpp
 
 # TODO: Tracked in https://github.com/rizinorg/rizin/issues/1132
 # This is actually quite wrong, regarding what this function actually does :-)
@@ -625,18 +625,18 @@ p
 EOF
 RUN
 
-NAME=to error.h
+NAME=to error.hpp
 FILE==
 BROKEN=1
 CMDS=<<EOF
-to bins/other/error.h
+to bins/other/error.hpp
 t~char,double,float,int,long,short,size,uid,void # basic universal types
 t~addr,date,dox,name
 ts~addr,date,dox,name
 t addr
 EOF
 EXPECT_ERR=<<EOF
-bins/other/error.h:2: warning: #error your compiler doesn't have support to my API
+bins/other/error.hpp:2: warning: #error your compiler doesn't have support to my API
 EOF
 EXPECT=<<EOF
 char
@@ -673,10 +673,10 @@ pf "[127]z[40]zd street city zip"
 EOF
 RUN
 
-NAME=to test.h
+NAME=to test.hpp
 FILE==
 CMDS=<<EOF
-to bins/other/test.h
+to bins/other/test.hpp
 ts name
 tsd name
 tsc name
@@ -1481,7 +1481,7 @@ RUN
 NAME=typedef struct
 FILE==
 CMDS=<<EOF
-to bins/headers/12272.h
+to bins/headers/12272.hpp
 ts A
 ts "anonymous struct 0"
 ts "anonymous struct 1"
@@ -1521,8 +1521,8 @@ RUN
 NAME=typedef struct double header
 FILE==
 CMDS=<<EOF
-to bins/headers/hdr1.h
-to bins/headers/hdr2.h
+to bins/headers/hdr1.hpp
+to bins/headers/hdr2.hpp
 ts "anonymous struct 0"
 ts "anonymous struct 1"
 ts A

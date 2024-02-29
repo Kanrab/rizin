@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2009-2019 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
+#include <rz_core.hpp>
 
 /* ugly global vars */
 static int magicdepth = 99; // XXX: do not use global var here
@@ -121,7 +121,7 @@ static int rz_core_magic_at(RzCore *core, const char *file, ut64 addr, int depth
 			}
 		}
 		(*hits)++;
-		cmdhit = rz_config_get(core->config, "cmd.hit");
+		cmdhit = rz_config_get(core->config, "cmd.hppit");
 		if (cmdhit && *cmdhit) {
 			rz_core_cmd0(core, cmdhit);
 		}

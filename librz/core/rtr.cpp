@@ -3,10 +3,10 @@
 // SPDX-FileCopyrightText: 2009-2020 nibble <nibble.ds@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "rz_core.h"
-#include "rz_socket.h"
-#include <libgdbr.h>
-#include <gdbserver/core.h>
+#include "rz_core.hpp"
+#include "rz_socket.hpp"
+#include <libgdbr.hpp>
+#include <gdbserver/core.hpp>
 
 #if 0
 SECURITY IMPLICATIONS
@@ -77,7 +77,7 @@ static void http_logf(RzCore *core, const char *fmt, ...) {
 static char *rtrcmd(TextLog T, const char *str) {
 	char *res, *ptr2;
 	char *ptr = rz_str_uri_encode(str);
-	char *uri = rz_str_newf("http://%s:%s/%s%s", T.host, T.port, T.file, ptr ? ptr : str);
+	char *uri = rz_str_newf("http://%s:%s/%s%s", T.hppost, T.port, T.file, ptr ? ptr : str);
 	int len;
 	free(ptr);
 	ptr2 = rz_socket_http_get(uri, NULL, &len);
@@ -186,34 +186,34 @@ static int swap_big_regs(char *dest, ut64 sz, const char *src, int regsz) {
 	switch (regsz) {
 	case 10:
 		if (len <= 4) {
-			val.v80.High = (ut16)strtoul(sdup, NULL, 16);
+			val.v80.hppigh = (ut16)strtoul(sdup, NULL, 16);
 		} else {
-			val.v80.High = (ut16)strtoul(sdup + (len - 4), NULL, 16);
+			val.v80.hppigh = (ut16)strtoul(sdup + (len - 4), NULL, 16);
 			sdup[len - 4] = '\0';
 			val.v80.Low = (ut64)strtoull(sdup, NULL, 16);
 		}
 		return snprintf(dest, sz, "0x%04x%016" PFMT64x,
-			val.v80.High, val.v80.Low);
+			val.v80.hppigh, val.v80.Low);
 	case 12:
 		if (len <= 8) {
-			val.v96.High = (ut32)strtoul(sdup, NULL, 16);
+			val.v96.hppigh = (ut32)strtoul(sdup, NULL, 16);
 		} else {
-			val.v96.High = (ut32)strtoul(sdup + (len - 8), NULL, 16);
+			val.v96.hppigh = (ut32)strtoul(sdup + (len - 8), NULL, 16);
 			sdup[len - 8] = '\0';
 			val.v96.Low = (ut64)strtoull(sdup, NULL, 16);
 		}
 		return snprintf(dest, sz, "0x%08x%016" PFMT64x,
-			val.v96.High, val.v96.Low);
+			val.v96.hppigh, val.v96.Low);
 	case 16:
 		if (len <= 16) {
-			val.v128.High = (ut64)strtoul(sdup, NULL, 16);
+			val.v128.hppigh = (ut64)strtoul(sdup, NULL, 16);
 		} else {
-			val.v128.High = (ut64)strtoul(sdup + (len - 16), NULL, 16);
+			val.v128.hppigh = (ut64)strtoul(sdup + (len - 16), NULL, 16);
 			sdup[len - 16] = '\0';
 			val.v128.Low = (ut64)strtoull(sdup, NULL, 16);
 		}
 		return snprintf(dest, sz, "0x%016" PFMT64x "%016" PFMT64x,
-			val.v128.High, val.v128.Low);
+			val.v128.hppigh, val.v128.Low);
 	default:
 		eprintf("%s: big registers (%d byte(s)) not yet supported\n",
 			__func__, regsz);
@@ -584,7 +584,7 @@ RZ_API void rz_core_rtr_list(RzCore *core) {
 		case RTR_PROTOCOL_UNIX: proto = "unix"; break;
 		}
 		rz_cons_printf("%d fd:%i %s://%s:%i/%s\n",
-			i, (int)rtr_host[i].fd->fd, proto, rtr_host[i].host,
+			i, (int)rtr_host[i].fd->fd, proto, rtr_host[i].hppost,
 			rtr_host[i].port, rtr_host[i].file);
 	}
 }
@@ -715,7 +715,7 @@ RZ_API void rz_core_rtr_add(RzCore *core, const char *_input) {
 			continue;
 		}
 		rtr_host[i].proto = proto;
-		strncpy(rtr_host[i].host, host, sizeof(rtr_host[i].host) - 1);
+		strncpy(rtr_host[i].hppost, host, sizeof(rtr_host[i].hppost) - 1);
 		rtr_host[i].port = rz_num_get(core->num, port);
 		if (!file) {
 			file = "";

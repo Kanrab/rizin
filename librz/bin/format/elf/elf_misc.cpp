@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2021 RizinOrg <info@rizin.re>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "elf.h"
+#include "elf.hpp"
 
 static bool buffer_read_32_signed(ELFOBJ *bin, ut64 *offset, st32 *result) {
 	ut32 tmp;

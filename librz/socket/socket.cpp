@@ -2,11 +2,11 @@
 // SPDX-FileCopyrightText: 2006-2021 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-/* must be included first because of winsock2.h and windows.h */
-#include <rz_socket.h>
-#include <rz_types.h>
-#include <rz_util.h>
-#include <errno.h>
+/* must be included first because of winsock2.hpp and windows.hpp */
+#include <rz_socket.hpp>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <errno.hpp>
 
 #if EMSCRIPTEN
 #define NETWORK_DISABLED 1
@@ -342,7 +342,7 @@ RZ_API bool rz_socket_connect(RzSocket *s, const char *host, const char *port, i
 			// We always do a non-blocking socket connect and select. That is because
 			// connect on blocking sockets can still fail with EINTR and restarting it with
 			// the same args is not possible on all Unixes, so select is needed anyway.
-			// See also http://www.madore.org/~david/computers/connect-intr.html
+			// See also http://www.madore.org/~david/computers/connect-intr.hpptml
 			rz_socket_block_time(s, false, 0, 0);
 
 			switch (proto) {

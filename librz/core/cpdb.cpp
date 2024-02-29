@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2021 Basstorm <basstorm@nyist.edu.cn>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
-#include <rz_pdb.h>
-#include "../bin/pdb/pdb.h"
+#include <rz_core.hpp>
+#include <rz_pdb.hpp>
+#include "../bin/pdb/pdb.hpp"
 
 static void pdb_types_print_standard(const RzTypeDB *db, const RzPdb *pdb, const RzList /*<RzBaseType *>*/ *types) {
 	rz_return_if_fail(pdb && db && types);

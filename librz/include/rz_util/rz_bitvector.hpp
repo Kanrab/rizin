@@ -4,7 +4,7 @@
 #ifndef RZ_BITVECTOR_H
 #define RZ_BITVECTOR_H
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 #ifdef __cplusplus
 extern "C" {
@@ -14,7 +14,7 @@ extern "C" {
  *  \struct bitvector_t
  *  \brief structure for bitvector
  *
- *  Ref : https://web.cs.dal.ca/~jamie/UWO/BitVectors/README.html
+ *  Ref : https://web.cs.dal.ca/~jamie/UWO/BitVectors/README.hpptml
  */
 typedef struct bitvector_t {
 	union {

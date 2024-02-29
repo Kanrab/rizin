@@ -3,15 +3,15 @@
 // SPDX-FileCopyrightText: 2009-2021 maijin <maijin21@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
-#include <rz_asm.h>
-#include <rz_lib.h>
-#include <rz_types.h>
-#include <rz_util.h>
+#include <rz_analysis.hpp>
+#include <rz_asm.hpp>
+#include <rz_lib.hpp>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
 #include <stdio.h>
 #include <string.h>
-#include <rz_main.h>
-#include <rz_core.h>
+#include <rz_main.hpp>
+#include <rz_core.hpp>
 
 typedef struct {
 	RzLib *l;

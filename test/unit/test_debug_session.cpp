@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2020 Zi Fan <zifan.tan@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_debug.h>
-#include <rz_util.h>
-#include <rz_reg.h>
-#include "minunit.h"
+#include <rz_debug.hpp>
+#include <rz_util.hpp>
+#include <rz_reg.hpp>
+#include "minunit.hpp"
 
 Sdb *ref_db() {
 	Sdb *db = sdb_new0();

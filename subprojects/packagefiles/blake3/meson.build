@@ -15,39 +15,39 @@ blake3_simd = []
 
 simd_avx2 = '''
 #if defined(_MSC_VER)
-#include <intrin.h>
+#include <intrin.hpp>
 #endif
-#include <immintrin.h>
+#include <immintrin.hpp>
 int main (int argc, char *argv[]) { __m256i add0 = _mm256_set_epi32(7, 6, 5, 4, 3, 2, 1, 0); return 0; }
 '''
 
 simd_avx512vl = '''
 #if defined(_MSC_VER)
-#include <intrin.h>
+#include <intrin.hpp>
 #endif
-#include <immintrin.h>
+#include <immintrin.hpp>
 int main (int argc, char *argv[]) { __m128i v = _mm_ror_epi32(_mm_set_epi32(3, 2, 1, 0), 5); return 0; }
 '''
 
 simd_sse2 = '''
 #if defined(_MSC_VER)
-#include <intrin.h>
+#include <intrin.hpp>
 #endif
-#include <immintrin.h>
+#include <immintrin.hpp>
 int main (int argc, char *argv[]) { __m128i add0 = _mm_set_epi32(3, 2, 1, 0); return 0; }
 '''
 
 simd_sse41 = '''
 #if defined(_MSC_VER)
-#include <intrin.h>
+#include <intrin.hpp>
 #endif
-#include <immintrin.h>
+#include <immintrin.hpp>
 int main (int argc, char *argv[]) { __m128i add0 = _mm_set_epi32(3, 2, 1, 0); return 0; }
 '''
 
 simd_neon = '''
-#include <immintrin.h>
-#include <arm_neon.h>
+#include <immintrin.hpp>
+#include <arm_neon.hpp>
 uint32x4_t set1_128(uint32_t x) { return vld1q_dup_u32(&x); }
 int main (int argc, char *argv[]) { uint32x4_t three = set1_128(3); return 0; }
 '''
@@ -77,7 +77,7 @@ unix_asm = [
 
 is_x64 = target_machine.cpu_family() == 'x86_64'
 is_arm = target_machine.cpu_family() == 'aarch64'
-has_intrins = cc.has_header('immintrin.h')
+has_intrins = cc.has_header('immintrin.hpp')
 
 has_simd = false
 if has_intrins and is_arm

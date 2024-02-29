@@ -4,22 +4,22 @@
 
 #define INTERACTIVE_MAX_REP 1024
 
-#include <rz_core.h>
-#include <rz_analysis.h>
-#include <rz_cons.h>
-#include <rz_cmd.h>
-#include <rz_windows.h>
+#include <rz_core.hpp>
+#include <rz_analysis.hpp>
+#include <rz_cons.hpp>
+#include <rz_cmd.hpp>
+#include <rz_windows.hpp>
 #include <stdint.h>
 #include <sys/types.h>
 #include <ctype.h>
-#include <stdarg.h>
+#include <stdarg.hpp>
 #if __UNIX__
-#include <sys/utsname.h>
+#include <sys/utsname.hpp>
 #endif
 
-#include <cmd_descs.h>
+#include <cmd_descs.hpp>
 
-#include <tree_sitter/api.h>
+#include <tree_sitter/api.hpp>
 TSLanguage *tree_sitter_rzcmd();
 
 RZ_IPI void rz_save_panels_layout(RzCore *core, const char *_name);
@@ -143,8 +143,8 @@ static const char *help_msg_k[] = {
 static const char *help_msg_vertical_bar[] = {
 	"Usage:", "[cmd] | [program|H|T|.|]", "",
 	"", "[cmd] |?", "show this help",
-	"", "[cmd] |", "disable scr.html and scr.color",
-	"", "[cmd] |H", "enable scr.html, respect scr.color",
+	"", "[cmd] |", "disable scr.hpptml and scr.color",
+	"", "[cmd] |H", "enable scr.hpptml, respect scr.color",
 	"", "[cmd] | [program]", "pipe output of command to program",
 	"", "[cmd] |.", "alias for .[cmd]",
 	NULL
@@ -474,7 +474,7 @@ RZ_API bool rz_core_run_script(RzCore *core, RZ_NONNULL const char *file) {
 			ret = rz_core_cmd_lines(core, out);
 			free(out);
 		}
-	} else if (rz_str_endswith(file, ".html")) {
+	} else if (rz_str_endswith(file, ".hpptml")) {
 		char *httpIndex = strdup(rz_config_get(core->config, "http.index"));
 		char *absfile = rz_file_abspath(file);
 		rz_config_set(core->config, "http.index", absfile);
@@ -963,7 +963,7 @@ RZ_IPI RzCmdStatus rz_last_output_handler(RzCore *core, int argc, const char **a
 }
 
 #if __WINDOWS__
-#include <tchar.h>
+#include <tchar.hpp>
 #define __CLOSE_DUPPED_PIPES() \
 	close(1); \
 	close(fd_out); \
@@ -992,9 +992,9 @@ static void rz_w32_cmd_pipe(RzCore *core, char *rizin_cmd, char *shell_cmd) {
 		rz_sys_perror("rz_w32_cmd_pipe/SetHandleInformation");
 		goto err_r_w32_cmd_pipe;
 	}
-	si.hStdError = GetStdHandle(STD_ERROR_HANDLE);
-	si.hStdOutput = GetStdHandle(STD_OUTPUT_HANDLE);
-	si.hStdInput = pipe[0];
+	si.hppStdError = GetStdHandle(STD_ERROR_HANDLE);
+	si.hppStdOutput = GetStdHandle(STD_OUTPUT_HANDLE);
+	si.hppStdInput = pipe[0];
 	si.dwFlags |= STARTF_USESTDHANDLES;
 	si.cb = sizeof(si);
 	_shell_cmd = shell_cmd;
@@ -1046,10 +1046,10 @@ static void rz_w32_cmd_pipe(RzCore *core, char *rizin_cmd, char *shell_cmd) {
 		if (!ret) {
 			// Successfully written everything to pipe
 			__CLOSE_DUPPED_PIPES();
-			WaitForSingleObject(pi.hProcess, INFINITE);
+			WaitForSingleObject(pi.hppProcess, INFINITE);
 			break;
 		}
-		ret = WaitForSingleObject(pi.hProcess, 50);
+		ret = WaitForSingleObject(pi.hppProcess, 50);
 		if (!ret) {
 			// Process exited before we finished writing to pipe
 			DWORD exit;
@@ -1063,11 +1063,11 @@ static void rz_w32_cmd_pipe(RzCore *core, char *rizin_cmd, char *shell_cmd) {
 	}
 	CloseHandle(th);
 err_r_w32_cmd_pipe:
-	if (pi.hProcess) {
-		CloseHandle(pi.hProcess);
+	if (pi.hppProcess) {
+		CloseHandle(pi.hppProcess);
 	}
-	if (pi.hThread) {
-		CloseHandle(pi.hThread);
+	if (pi.hppThread) {
+		CloseHandle(pi.hppThread);
 	}
 	if (pipe[0]) {
 		CloseHandle(pipe[0]);
@@ -1657,8 +1657,8 @@ static int rz_core_cmd_subst_i(RzCore *core, char *cmd, char *colon, bool *tmpse
 					rz_list_free(tmpenvs);
 					return ret;
 				} else if (!strncmp(ptr + 1, "H", 1)) { // "|H"
-					scr_html = rz_config_get_i(core->config, "scr.html");
-					rz_config_set_i(core->config, "scr.html", true);
+					scr_html = rz_config_get_i(core->config, "scr.hpptml");
+					rz_config_set_i(core->config, "scr.hpptml", true);
 				} else if (!strcmp(ptr + 1, ".")) { // "|."
 					ret = *cmd ? rz_core_cmdf(core, ".%s", cmd) : 0;
 					rz_list_free(tmpenvs);
@@ -1678,8 +1678,8 @@ static int rz_core_cmd_subst_i(RzCore *core, char *cmd, char *colon, bool *tmpse
 					rz_list_free(tmpenvs);
 					return 0;
 				} else { // "|"
-					scr_html = rz_config_get_i(core->config, "scr.html");
-					rz_config_set_i(core->config, "scr.html", 0);
+					scr_html = rz_config_get_i(core->config, "scr.hpptml");
+					rz_config_set_i(core->config, "scr.hpptml", 0);
 					scr_color = rz_config_get_i(core->config, "scr.color");
 					rz_config_set_i(core->config, "scr.color", COLOR_MODE_DISABLED);
 				}
@@ -1698,7 +1698,7 @@ escape_pipe:
 		if (ret == -1) {
 			RZ_LOG_ERROR("core: command error(%s)\n", cmd);
 			if (scr_html != -1) {
-				rz_config_set_i(core->config, "scr.html", scr_html);
+				rz_config_set_i(core->config, "scr.hpptml", scr_html);
 			}
 			if (scr_color != -1) {
 				rz_config_set_i(core->config, "scr.color", scr_color);
@@ -1728,7 +1728,7 @@ escape_pipe:
 			rz_cons_break_pop();
 			rz_cons_grep_parsecmd(ptr + 2, "`");
 			if (scr_html != -1) {
-				rz_config_set_i(core->config, "scr.html", scr_html);
+				rz_config_set_i(core->config, "scr.hpptml", scr_html);
 			}
 			if (scr_color != -1) {
 				rz_config_set_i(core->config, "scr.color", scr_color);
@@ -1771,8 +1771,8 @@ escape_pipe:
 		if (ptr > (cmd + 1) && IS_WHITECHAR(ptr[-2])) {
 			char *fdnum = ptr - 1;
 			if (*fdnum == 'H') { // "H>"
-				scr_html = rz_config_get_i(core->config, "scr.html");
-				rz_config_set_i(core->config, "scr.html", true);
+				scr_html = rz_config_get_i(core->config, "scr.hpptml");
+				rz_config_set_i(core->config, "scr.hpptml", true);
 				pipecolor = true;
 				*fdnum = 0;
 			} else {
@@ -1841,7 +1841,7 @@ escape_pipe:
 			free(str);
 		}
 		if (scr_html != -1) {
-			rz_config_set_i(core->config, "scr.html", scr_html);
+			rz_config_set_i(core->config, "scr.hpptml", scr_html);
 		}
 		if (scr_color != -1) {
 			rz_config_set_i(core->config, "scr.color", scr_color);
@@ -1911,7 +1911,7 @@ next2:
 			ret = rz_core_cmd_subst(core, cmd);
 			free(cmd);
 			if (scr_html != -1) {
-				rz_config_set_i(core->config, "scr.html", scr_html);
+				rz_config_set_i(core->config, "scr.hpptml", scr_html);
 			}
 			free(str);
 			rz_list_free(tmpenvs);
@@ -2416,7 +2416,7 @@ beach:
 	rz_cons_grep_process(grep);
 	if (scr_html != -1) {
 		rz_cons_flush();
-		rz_config_set_i(core->config, "scr.html", scr_html);
+		rz_config_set_i(core->config, "scr.hpptml", scr_html);
 	}
 	if (scr_color != -1) {
 		rz_config_set_i(core->config, "scr.color", scr_color);
@@ -2857,10 +2857,10 @@ RZ_API int rz_core_cmd_foreach(RzCore *core, const char *cmd, char *each) {
 	switch (each[0]) {
 	case '/': // "@@/"
 	{
-		char *cmdhit = strdup(rz_config_get(core->config, "cmd.hit"));
-		rz_config_set(core->config, "cmd.hit", cmd);
+		char *cmdhit = strdup(rz_config_get(core->config, "cmd.hppit"));
+		rz_config_set(core->config, "cmd.hppit", cmd);
 		rz_core_cmd0(core, each);
-		rz_config_set(core->config, "cmd.hit", cmdhit);
+		rz_config_set(core->config, "cmd.hppit", cmdhit);
 		free(cmdhit);
 	}
 		free(ostr);
@@ -3877,8 +3877,8 @@ DEFINE_HANDLE_TS_FCN_AND_SYMBOL(redirect_stmt) {
 	}
 
 	if (is_html) {
-		scr_html = rz_config_get_i(state->core->config, "scr.html");
-		rz_config_set_i(state->core->config, "scr.html", true);
+		scr_html = rz_config_get_i(state->core->config, "scr.hpptml");
+		rz_config_set_i(state->core->config, "scr.hpptml", true);
 		pipecolor = true;
 	} else {
 		TSNode fd_desc = ts_node_named_child(redirect_op, 0);
@@ -3939,7 +3939,7 @@ DEFINE_HANDLE_TS_FCN_AND_SYMBOL(redirect_stmt) {
 		rz_config_set_i(state->core->config, "scr.color", ocolor);
 	}
 	if (scr_html != -1) {
-		rz_config_set_i(state->core->config, "scr.html", scr_html);
+		rz_config_set_i(state->core->config, "scr.hpptml", scr_html);
 	}
 	return res;
 }
@@ -4701,10 +4701,10 @@ DEFINE_HANDLE_TS_FCN_AND_SYMBOL(iter_hit_stmt) {
 	TSNode command = ts_node_named_child(node, 0);
 	TSNode search_cmd = ts_node_named_child(node, 1);
 	char *command_str = ts_node_sub_string(command, state->input);
-	char *cmdhit = strdup(rz_config_get(core->config, "cmd.hit"));
-	rz_config_set(core->config, "cmd.hit", command_str);
+	char *cmdhit = strdup(rz_config_get(core->config, "cmd.hppit"));
+	rz_config_set(core->config, "cmd.hppit", command_str);
 	RzCmdStatus res = handle_ts_stmt(state, search_cmd);
-	rz_config_set(core->config, "cmd.hit", cmdhit);
+	rz_config_set(core->config, "cmd.hppit", cmdhit);
 	free(command_str);
 	return res;
 }
@@ -5161,14 +5161,14 @@ DEFINE_HANDLE_TS_FCN_AND_SYMBOL(grep_stmt) {
 
 DEFINE_HANDLE_TS_FCN_AND_SYMBOL(html_disable_stmt) {
 	TSNode command = ts_node_child_by_field_name(node, "command", strlen("command"));
-	int scr_html = rz_config_get_i(state->core->config, "scr.html");
-	rz_config_set_i(state->core->config, "scr.html", 0);
+	int scr_html = rz_config_get_i(state->core->config, "scr.hpptml");
+	rz_config_set_i(state->core->config, "scr.hpptml", 0);
 	int scr_color = rz_config_get_i(state->core->config, "scr.color");
 	rz_config_set_i(state->core->config, "scr.color", COLOR_MODE_DISABLED);
 	RzCmdStatus res = handle_ts_stmt(state, command);
 	if (scr_html != -1) {
 		rz_cons_flush();
-		rz_config_set_i(state->core->config, "scr.html", scr_html);
+		rz_config_set_i(state->core->config, "scr.hpptml", scr_html);
 	}
 	if (scr_color != -1) {
 		rz_config_set_i(state->core->config, "scr.color", scr_color);
@@ -5178,12 +5178,12 @@ DEFINE_HANDLE_TS_FCN_AND_SYMBOL(html_disable_stmt) {
 
 DEFINE_HANDLE_TS_FCN_AND_SYMBOL(html_enable_stmt) {
 	TSNode command = ts_node_child_by_field_name(node, "command", strlen("command"));
-	int scr_html = rz_config_get_i(state->core->config, "scr.html");
-	rz_config_set_i(state->core->config, "scr.html", true);
+	int scr_html = rz_config_get_i(state->core->config, "scr.hpptml");
+	rz_config_set_i(state->core->config, "scr.hpptml", true);
 	RzCmdStatus res = handle_ts_stmt(state, command);
 	if (scr_html != -1) {
 		rz_cons_flush();
-		rz_config_set_i(state->core->config, "scr.html", scr_html);
+		rz_config_set_i(state->core->config, "scr.hpptml", scr_html);
 	}
 	return res;
 }
@@ -5727,7 +5727,7 @@ RZ_IPI RzCmdStatus rz_basefind_compute_handler(RzCore *core, int argc, const cha
 }
 
 RZ_IPI RzCmdStatus rz_help_handler(RzCore *core, int argc, const char **argv) {
-	const char *cmd_color = rz_cons_singleton()->context->pal.help;
+	const char *cmd_color = rz_cons_singleton()->context->pal.hppelp;
 	const char *reset = rz_cons_singleton()->context->pal.reset;
 	rz_cons_printf("Welcome to Rizin!\n\n");
 	rz_cons_printf("Type %s?%s for a list of commands available.\n", cmd_color, reset);

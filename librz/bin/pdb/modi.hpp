@@ -4,9 +4,9 @@
 #ifndef MODI_H
 #define MODI_H
 
-#include <rz_util/rz_buf.h>
-#include "dbi.h"
-#include "pdb.h"
+#include <rz_util/rz_buf.hpp>
+#include "dbi.hpp"
+#include "pdb.hpp"
 
 #define CV_SIGNATURE_C6       0L // Actual signature is >64K
 #define CV_SIGNATURE_C7       1L // First explicit signature

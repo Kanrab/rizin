@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2019 v3l0c1r4pt0r <v3l0c1r4pt0r@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_asm.h>
-#include <rz_lib.h>
-#include "../arch/or1k/or1k_disas.h"
+#include <rz_asm.hpp>
+#include <rz_lib.hpp>
+#include "../arch/or1k/or1k_disas.hpp"
 
 struct operands {
 	ut32 rd;

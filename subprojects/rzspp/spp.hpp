@@ -4,9 +4,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <stdarg.h>
+#include <stdarg.hpp>
 #include <stdbool.h>
-#include <errno.h>
+#include <errno.hpp>
 
 #ifndef VERSION
 #define VERSION "1.2.0"
@@ -39,11 +39,11 @@
 #endif
 #if __WIN32__ || __CYGWIN__ || MINGW32
   #define __addr_t_defined
-  #include <windows.h>
+  #include <windows.hpp>
 #endif
 #if __WIN32__ || MINGW32 && !__CYGWIN__ || _MSC_VER
   #ifndef _MSC_VER
-    #include <winsock.h>
+    #include <winsock.hpp>
   #endif
   typedef int socklen_t;
   #undef USE_SOCKETS
@@ -53,7 +53,7 @@
 #endif
 
 #ifdef __WINDOWS__
-#include <io.h>
+#include <io.hpp>
 #define popen    _popen
 #define pclose   _pclose
 #define srandom  srand
@@ -78,7 +78,7 @@ struct Arg *args = (struct Arg *)&x##_args; \
 struct Proc *proc = &x##_proc;
 
 #if USE_R2
-#include <rz_util.h>
+#include <rz_util.hpp>
 #define SStrBuf RzStrBuf
 #else
 typedef struct s_strbuf_t {

@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2023 swedenspy <swedenspy@yahoo.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_hash.h>
-#include <rz_util/rz_assert.h>
+#include <rz_hash.hpp>
+#include <rz_util/rz_assert.hpp>
 
-#include "../algorithms/md2/md2.h"
+#include "../algorithms/md2/md2.hpp"
 
 static void *plugin_md2_context_new() {
 	return RZ_NEW0(RzMD2);

@@ -4,7 +4,7 @@
 #ifndef LOCLISTS_H
 #define LOCLISTS_H
 
-#include "op.h"
+#include "op.hpp"
 
 RZ_IPI void Location_cpy(Location *dst, Location *src);
 

@@ -4,7 +4,7 @@
 #ifndef GDBR_COMMON_H_
 #define GDBR_COMMON_H_
 
-#include "libgdbr.h"
+#include "libgdbr.hpp"
 
 int handle_qSupported(libgdbr_t *g);
 

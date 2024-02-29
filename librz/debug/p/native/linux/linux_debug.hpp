@@ -13,7 +13,7 @@
 #define LINUX_DEBUG_H
 
 #include <limits.h>
-#include <sys/ptrace.h>
+#include <sys/ptrace.hpp>
 
 struct user_regs_struct_x86_64 {
 	ut64 r15;
@@ -80,13 +80,13 @@ struct user_regs_struct_x86_32 {
 
 #else
 
-#include <sys/user.h>
+#include <sys/user.hpp>
 #if __i386__ || __x86_64__
 #define RZ_DEBUG_REG_T struct user_regs_struct
 #elif __s390x__ || __s390__
 #define RZ_DEBUG_REG_T struct _user_regs_struct
 #if 0
-// https://sourceware.org/git/?p=glibc.git;a=blob;f=sysdeps/unix/sysv/linux/s390/sys/user.h;hb=HEAD#l50
+// https://sourceware.org/git/?p=glibc.git;a=blob;f=sysdeps/unix/sysv/linux/s390/sys/user.hpp;hb=HEAD#l50
   50 struct _user_regs_struct
   51 {
   52   struct _user_psw_struct psw;          /* Program status word.  */
@@ -99,7 +99,7 @@ struct user_regs_struct_x86_32 {
   59 };
 #endif
 #elif __arm64__ || __aarch64__
-#include <asm/ptrace.h>
+#include <asm/ptrace.hpp>
 #ifndef NT_PRSTATUS
 #define NT_PRSTATUS 1
 #endif
@@ -132,8 +132,8 @@ struct powerpc_regs_t {
 #define RZ_DEBUG_REG_T struct powerpc_regs_t
 #elif __riscv || __riscv__ || __riscv64__
 
-#include <sys/ucontext.h>
-#include <asm/ptrace.h>
+#include <sys/ucontext.hpp>
+#include <asm/ptrace.hpp>
 
 // typedef ut64 riscv64_regs_t [65];
 // #define RZ_DEBUG_REG_T riscv64_regs_t
@@ -142,13 +142,13 @@ struct powerpc_regs_t {
 
 #elif __mips__
 
-#include <sys/ucontext.h>
+#include <sys/ucontext.hpp>
 typedef ut64 mips64_regs_t[274];
 #define RZ_DEBUG_REG_T mips64_regs_t
 #endif
 #endif
 
-// SIGTRAP si_codes from <asm/siginfo.h>
+// SIGTRAP si_codes from <asm/siginfo.hpp>
 #if !defined(TRAP_BRKPT) && !defined(TRAP_TRACE)
 #define TRAP_BRKPT  1
 #define TRAP_TRACE  2

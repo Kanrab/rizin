@@ -4,7 +4,7 @@
 #ifndef SNES_OP_TABLE_H
 #define SNES_OP_TABLE_H
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 enum {
 	SNES_OP_8BIT = 1,

@@ -3,12 +3,12 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <string.h>
-#include <rz_types.h>
-#include <rz_lib.h>
-#include <rz_asm.h>
-#include <rz_analysis.h>
+#include <rz_types.hpp>
+#include <rz_lib.hpp>
+#include <rz_asm.hpp>
+#include <rz_analysis.hpp>
 
-#include <ebc_disas.h>
+#include <ebc_disas.hpp>
 
 static void ebc_analysis_jmp8(RzAnalysisOp *op, ut64 addr, const ut8 *buf) {
 	int jmpadr = (int8_t)buf[1];

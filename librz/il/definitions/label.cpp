@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2021 heersin <teablearcher@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_il/definitions/label.h>
+#include <rz_il/definitions/label.hpp>
 
 RZ_API RzILEffectLabel *rz_il_effect_label_new(RZ_NONNULL const char *name, RzILEffectLabelType type) {
 	RzILEffectLabel *lbl = RZ_NEW0(RzILEffectLabel);

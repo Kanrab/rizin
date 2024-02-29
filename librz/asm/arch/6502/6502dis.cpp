@@ -4,8 +4,8 @@
 // SPDX-FileCopyrightText: 2015-2016 qnix <qnix@0x80.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_asm.h>
-#include <rz_lib.h>
+#include <rz_asm.hpp>
+#include <rz_lib.hpp>
 #include <string.h>
 #include "../snes/snesdis.c"
 

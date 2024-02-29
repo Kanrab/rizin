@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2021 GustavoLCR <gugulcr@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include "minunit.h"
+#include <rz_util.hpp>
+#include "minunit.hpp"
 
 bool test_rz_itv_overlap(void) {
 	RzInterval a = { 0 }, b = { 0 };

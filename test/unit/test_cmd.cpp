@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: 2021 ret2libc <sirmy15@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_cmd.h>
-#include <rz_cons.h>
-#include <rz_core.h>
+#include <rz_cmd.hpp>
+#include <rz_cons.hpp>
+#include <rz_core.hpp>
 #include <stdlib.h>
-#include "minunit.h"
+#include "minunit.hpp"
 
 static RzCmdDescArg fake_args[] = {
 	{ 0 },

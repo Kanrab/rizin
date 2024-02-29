@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: 2022 Florian Märkl <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
-#include <capstone/capstone.h>
+#include <rz_analysis.hpp>
+#include <capstone/capstone.hpp>
 
-#include "arm_cs.h"
+#include "arm_cs.hpp"
 
-#include "arm_accessors64.h"
+#include "arm_accessors64.hpp"
 // This source file is 64-bit specific, so avoid having to type 64 all the time:
 #define IMM     IMM64
 #define REGID   REGID64
@@ -17,7 +17,7 @@
 #undef MEMDISP64 // the original one casts to ut64 which we don't want here
 #define MEMDISP(x) insn->detail->CS_aarch64_.operands[x].mem.disp
 
-#include <rz_il/rz_il_opbuilder_begin.h>
+#include <rz_il/rz_il_opbuilder_begin.hpp>
 
 #include "arm_il_common.inc"
 
@@ -3123,7 +3123,7 @@ RZ_IPI RzILOpEffect *rz_arm_cs_64_il(csh *handle, cs_insn *insn) {
 	return NULL;
 }
 
-#include <rz_il/rz_il_opbuilder_end.h>
+#include <rz_il/rz_il_opbuilder_end.hpp>
 
 RZ_IPI RzAnalysisILConfig *rz_arm_cs_64_il_config(bool big_endian) {
 	RzAnalysisILConfig *r = rz_analysis_il_config_new(64, big_endian, 64);

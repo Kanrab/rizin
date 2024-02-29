@@ -5,14 +5,14 @@
 #include <string.h>
 
 /* public headers */
-#include <rz_util.h>
-#include <rz_types.h>
-#include <sdb.h>
+#include <rz_util.hpp>
+#include <rz_types.hpp>
+#include <sdb.hpp>
 
 /* private headers */
-#include "tms320_dasm.h"
+#include "tms320_dasm.hpp"
 
-#include "c55x_plus/c55plus.h"
+#include "c55x_plus/c55plus.hpp"
 
 #ifndef get_bits
 #define get_bits(av, af, an) (((av) >> (af)) & ((2 << (an - 1)) - 1))
@@ -1174,7 +1174,7 @@ int tms320_dasm(tms320_dasm_t *dasm, const ut8 *stream, int len) {
 }
 
 // insn_head_t c55x_list[]
-#include "c55x/table.h"
+#include "c55x/table.hpp"
 
 int tms320_dasm_init(tms320_dasm_t *dasm) {
 	int i = 0;

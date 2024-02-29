@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2023 billow <billow.fun@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
+#include <rz_analysis.hpp>
 #include "../../asm/arch/tricore/tricore.inc"
 
-#include "tricore_il.h"
+#include "tricore_il.hpp"
 
 static const char *TriCoreREGs[] = {
 	"a0", "a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8", "a9", "a10", "a11", "a12", "a13", "a14", "a15",
@@ -1430,13 +1430,13 @@ lift_ld_op(RzAsmTriCoreContext *ctx) {
 		case 0x07: return ld_post_increment(ctx, DoubleWord_b, NULL);
 		case 0x17: return ld_pre_increment(ctx, DoubleWord_b, NULL);
 		case 0x22: {
-			// LD.H D[a], A[b], off10 (BO)(Base + Short Offset Addressing Mode)
+			// LD.hpp D[a], A[b], off10 (BO)(Base + Short Offset Addressing Mode)
 			return ld_base_short_offset(ctx, HalfWord_b, SEXT32);
 		}
 		case 0x02: return ld_post_increment(ctx, HalfWord_b, SEXT32);
 		case 0x12: return ld_pre_increment(ctx, HalfWord_b, SEXT32);
 		case 0x23: {
-			// LD.HU D[a], A[b], off10 (BO)(Base + Short Offset Addressing Mode)
+			// LD.hppU D[a], A[b], off10 (BO)(Base + Short Offset Addressing Mode)
 			return ld_base_short_offset(ctx, HalfWord_b, ZEXT32);
 		}
 		case 0x03: return ld_post_increment(ctx, HalfWord_b, ZEXT32);
@@ -1469,12 +1469,12 @@ lift_ld_op(RzAsmTriCoreContext *ctx) {
 	case /*LD.BU SLR*/ 0x04: return ld_slr_post_increment(ctx, Byte_b, ZEXT32);
 	case /*LD.BU SLRO*/ 0x08: return ld_slro(ctx, Byte_b, ZEXT32);
 	case /*LD.BU SRO*/ 0x0c: return ld_sro(ctx, Byte_b, ZEXT32);
-	case /*LD.H BOL*/ 0xc9: return ld_base_long_offset(ctx, HalfWord_b, SEXT32);
-	case /*LD.H SLR*/ 0x94: return ld_slr(ctx, HalfWord_b, SEXT32);
-	case /*LD.H SLR*/ 0x84: return ld_slr_post_increment(ctx, HalfWord_b, SEXT32);
-	case /*LD.H SLRO*/ 0x88: return ld_slro(ctx, HalfWord_b, SEXT32);
-	case /*LD.H SRO*/ 0x8c: return ld_sro(ctx, HalfWord_b, SEXT32);
-	case /*LD.HU BOL*/ 0xb9: return ld_base_long_offset(ctx, HalfWord_b, ZEXT32);
+	case /*LD.hpp BOL*/ 0xc9: return ld_base_long_offset(ctx, HalfWord_b, SEXT32);
+	case /*LD.hpp SLR*/ 0x94: return ld_slr(ctx, HalfWord_b, SEXT32);
+	case /*LD.hpp SLR*/ 0x84: return ld_slr_post_increment(ctx, HalfWord_b, SEXT32);
+	case /*LD.hpp SLRO*/ 0x88: return ld_slro(ctx, HalfWord_b, SEXT32);
+	case /*LD.hpp SRO*/ 0x8c: return ld_sro(ctx, HalfWord_b, SEXT32);
+	case /*LD.hppU BOL*/ 0xb9: return ld_base_long_offset(ctx, HalfWord_b, ZEXT32);
 	case /*LD.W BOL*/ 0x19: return ld_base_long_offset(ctx, Word_b, NULL);
 	case /*LD.W SC*/ 0x58: return ld_sc(ctx, Word_b, NULL, 'd');
 	case /*LD.W SLR*/ 0x54: return ld_slr(ctx, Word_b, NULL);
@@ -1545,7 +1545,7 @@ lift_st_op(RzAsmTriCoreContext *ctx) {
 		case 0x27: return st_base_short_offset(ctx, 0, DoubleWord_b);
 		case 0x07: return st_post_increment(ctx, 0, DoubleWord_b);
 		case 0x17: return st_pre_increment(ctx, 0, DoubleWord_b);
-		/// ST.H
+		/// ST.hpp
 		case 0x22: return st_base_short_offset(ctx, 0, HalfWord_b);
 		case 0x02: return st_post_increment(ctx, 0, HalfWord_b);
 		case 0x12: return st_pre_increment(ctx, 0, HalfWord_b);
@@ -1578,7 +1578,7 @@ lift_st_op(RzAsmTriCoreContext *ctx) {
 		// ST.DA
 		case 0x07: return st_bit_reverse(ctx, 0, DoubleWord_b);
 		case 0x17: return st_circular(ctx, ST_32x2);
-		// ST.H
+		// ST.hpp
 		case 0x02: return st_bit_reverse(ctx, 0, HalfWord_b);
 		case 0x12: return st_circular(ctx, ST_16);
 		// ST.Q
@@ -1604,11 +1604,11 @@ lift_st_op(RzAsmTriCoreContext *ctx) {
 	case /*ST.B SSR(post)*/ 0x24: return st_ssr_post_incr(ctx, Byte_b);
 	case /*ST.B SSRO*/ 0x28: return st_ssro(ctx, Byte_b);
 
-	case /*ST.H BOL*/ 0xf9: return st_base_long_offset(ctx, HalfWord_b);
-	case /*ST.H SRO*/ 0xac: return st_sro(ctx, Word_b);
-	case /*ST.H SSR*/ 0xb4: return st_ssr(ctx, Word_b);
-	case /*ST.H SSR(post)*/ 0xa4: return st_ssr_post_incr(ctx, Word_b);
-	case /*ST.H SSRO*/ 0xa8: return st_ssro(ctx, Word_b);
+	case /*ST.hpp BOL*/ 0xf9: return st_base_long_offset(ctx, HalfWord_b);
+	case /*ST.hpp SRO*/ 0xac: return st_sro(ctx, Word_b);
+	case /*ST.hpp SSR*/ 0xb4: return st_ssr(ctx, Word_b);
+	case /*ST.hpp SSR(post)*/ 0xa4: return st_ssr_post_incr(ctx, Word_b);
+	case /*ST.hpp SSRO*/ 0xa8: return st_ssro(ctx, Word_b);
 
 	case /*ST.W BOL*/ 0x59: return st_base_long_offset(ctx, Word_b);
 	case /*ST.W SC*/ 0x78: return st_sc(ctx, Word_b, 'd');
@@ -2170,8 +2170,8 @@ static RzAnalysisLiftedILOp lift_add(RzAsmTriCoreContext *ctx) {
 			set_PSW_C(carry(VARG(R(1)), VARG(R(2)), PSW_C())));
 		case /*ADDS RR*/ 0x02: return packed_op2_sov(R(0), VARG(R(1)), VARG(R(2)), Word_b, rz_il_op_new_add, ssov);
 		case /*ADDS.U RR*/ 0x03: return packed_op2_sov(R(0), VARG(R(1)), VARG(R(2)), Word_b, rz_il_op_new_add, suov);
-		case /*ADDS.H RR*/ 0x62: return packed_op2_sov(R(0), VARG(R(1)), VARG(R(2)), HalfWord_b, rz_il_op_new_add, suov);
-		case /*ADDS.HU RR*/ 0x63: return packed_op2_ov(R(0), VARG(R(1)), VARG(R(2)), HalfWord_b, f_ADDU, suov);
+		case /*ADDS.hpp RR*/ 0x62: return packed_op2_sov(R(0), VARG(R(1)), VARG(R(2)), HalfWord_b, rz_il_op_new_add, suov);
+		case /*ADDS.hppU RR*/ 0x63: return packed_op2_ov(R(0), VARG(R(1)), VARG(R(2)), HalfWord_b, f_ADDU, suov);
 		case /*ADDX RR*/ 0x04: return SEQ2(
 			packed_op3(R(0), VARG(R(1)), VARG(R(2)), S32(0), Word_b, f_ADDC, NULL),
 			set_PSW_C(carry(VARG(R(1)), VARG(R(2)), S32(0))));
@@ -2488,9 +2488,9 @@ static RzILOpEffect *lift_div_u(RzAsmTriCoreContext *ctx) {
  * if ((D[b] == 0) OR ((D[b] == 32’hFFFFFFFF AND (D[a] == 32’hFFFFFF80)) then overflow = 1 else overflow = 0;
  * DVINIT.BU
  * if (D[b]==0) then overflow = 1 else overflow = 0;
- * DVINIT.H
+ * DVINIT.hpp
  * if ((D[b] == 0) OR ((D[b] == 32’hFFFFFFFF AND (D[a] == 32’hFFFF8000))) then overflow = 1 else overflow=0;
- * DVINIT.HU
+ * DVINIT.hppU
  * if (D[b] == 0) then overflow = 1 else overflow = 0;
  * For all the DVINIT variations:
  * if (overflow) then PSW.V = 1 else PSW.V = 0;
@@ -3704,7 +3704,7 @@ RZ_IPI RzAnalysisLiftedILOp tricore_il_op(RzAsmTriCoreContext *ctx, RzAnalysis *
 			case /*GE(RC)*/ 0x14: return SETG(R(0), BOOL_TO_BV32(SGE(VARG(R(1)), sign_ext32_bv(I(2), 9))));
 			case /*GE.U(RC)*/ 0x15: return SETG(R(0), BOOL_TO_BV32(UGE(VARG(R(1)), sign_ext32_bv(I(2), 9))));
 			case /*EQANY.B(RC)*/ 0x56: return e_eqany(R(0), VARG(R(1)), sign_ext32_bv(I(2), 9), Byte_b);
-			case /*EQANY.H(RC)*/ 0x76: return e_eqany(R(0), VARG(R(1)), sign_ext32_bv(I(2), 9), HalfWord_b);
+			case /*EQANY.hpp(RC)*/ 0x76: return e_eqany(R(0), VARG(R(1)), sign_ext32_bv(I(2), 9), HalfWord_b);
 
 			case /*RSUB(RC)*/ 0x08: return SETG(R(0), SUB(sign_ext32_bv(I(2), 9), VARG(R(1))));
 			case /*RSUBS(RC)*/ 0xa: return SETG(R(0), ssov(SUB(sign_ext32_bv(I(2), 9), VARG(R(1))), U32(32)));
@@ -3755,21 +3755,21 @@ RZ_IPI RzAnalysisLiftedILOp tricore_il_op(RzAsmTriCoreContext *ctx, RzAnalysis *
 			case /*GE(RR)*/ 0x14: return SETG(R(0), BOOL_TO_BV32(SGE(VARG(R(1)), VARG(R(2)))));
 			case /*GE.U(RR)*/ 0x15: return SETG(R(0), BOOL_TO_BV32(UGE(VARG(R(1)), VARG(R(2)))));
 			case /*EQANY.B(RR)*/ 0x56: return e_eqany(R(0), VARG(R(1)), VARG(R(2)), Byte_b);
-			case /*EQANY.H(RR)*/ 0x76: return e_eqany(R(0), VARG(R(1)), VARG(R(2)), HalfWord_b);
+			case /*EQANY.hpp(RR)*/ 0x76: return e_eqany(R(0), VARG(R(1)), VARG(R(2)), HalfWord_b);
 
 			case /*MAX(RR)*/ 0x1a: return SETG(R(0), ITE(SGT(VARG(R(1)), VARG(R(2))), VARG(R(1)), VARG(R(2))));
 			case /*MAX.U(RR)*/ 0x1b: return SETG(R(0), ITE(UGT(VARG(R(1)), VARG(R(2))), VARG(R(1)), VARG(R(2))));
 			case /*MAX.B(RR)*/ 0x5a: return packed_op2_minmax(R(0), VARG(R(1)), VARG(R(2)), Byte_b, rz_il_op_new_sgt);
 			case /*MAX.BU(RR)*/ 0x5b: return packed_op2_minmax(R(0), VARG(R(1)), VARG(R(2)), Byte_b, rz_il_op_new_ugt);
-			case /*MAX.H(RR)*/ 0x7a: return packed_op2_minmax(R(0), VARG(R(1)), VARG(R(2)), HalfWord_b, rz_il_op_new_sgt);
-			case /*MAX.HU(RR)*/ 0x7b: return packed_op2_minmax(R(0), VARG(R(1)), VARG(R(2)), HalfWord_b, rz_il_op_new_ugt);
+			case /*MAX.hpp(RR)*/ 0x7a: return packed_op2_minmax(R(0), VARG(R(1)), VARG(R(2)), HalfWord_b, rz_il_op_new_sgt);
+			case /*MAX.hppU(RR)*/ 0x7b: return packed_op2_minmax(R(0), VARG(R(1)), VARG(R(2)), HalfWord_b, rz_il_op_new_ugt);
 
 			case /*MIN(RR)*/ 0x18: return SETG(R(0), ITE(SLT(VARG(R(1)), VARG(R(2))), VARG(R(1)), VARG(R(2))));
 			case /*MIN.U(RR)*/ 0x19: return SETG(R(0), ITE(ULT(VARG(R(1)), VARG(R(2))), VARG(R(1)), VARG(R(2))));
 			case /*MIN.B(RR)*/ 0x58: return packed_op2_minmax(R(0), VARG(R(1)), VARG(R(2)), Byte_b, rz_il_op_new_slt);
 			case /*MIN.BU(RR)*/ 0x59: return packed_op2_minmax(R(0), VARG(R(1)), VARG(R(2)), Byte_b, rz_il_op_new_ult);
-			case /*MIN.H(RR)*/ 0x78: return packed_op2_minmax(R(0), VARG(R(1)), VARG(R(2)), HalfWord_b, rz_il_op_new_slt);
-			case /*MIN.HU(RR)*/ 0x79: return packed_op2_minmax(R(0), VARG(R(1)), VARG(R(2)), HalfWord_b, rz_il_op_new_ult);
+			case /*MIN.hpp(RR)*/ 0x78: return packed_op2_minmax(R(0), VARG(R(1)), VARG(R(2)), HalfWord_b, rz_il_op_new_slt);
+			case /*MIN.hppU(RR)*/ 0x79: return packed_op2_minmax(R(0), VARG(R(1)), VARG(R(2)), HalfWord_b, rz_il_op_new_ult);
 
 			case /*AND.EQ(RR)*/ 0x20: return e_op_op(R(0), VARG(R(1)), VARG(R(2)), rz_il_op_new_bool_and, rz_il_op_new_eq);
 			case /*AND.NE(RR)*/ 0x21: return e_op_op(R(0), VARG(R(1)), VARG(R(2)), rz_il_op_new_bool_and, rz_il_op_new_ne);
@@ -3956,7 +3956,7 @@ RZ_IPI RzAnalysisLiftedILOp tricore_il_op(RzAsmTriCoreContext *ctx, RzAnalysis *
 		}
 		case 0x83:
 			switch (extract32(ctx->word, 18, 6)) {
-			// MADDM.H MADDMS.H
+			// MADDM.hpp MADDMS.hpp
 			case 0x1e: return e_madd(ctx, 16, 0, 0, 0, HalfWord_b, NULL);
 			case 0x1d: return e_madd(ctx, 16, 0, 0, 16, HalfWord_b, NULL);
 			case 0x1c: return e_madd(ctx, 16, 16, 0, 0, HalfWord_b, NULL);
@@ -3966,7 +3966,7 @@ RZ_IPI RzAnalysisLiftedILOp tricore_il_op(RzAsmTriCoreContext *ctx, RzAnalysis *
 			case 0x3c: return e_madd(ctx, 16, 16, 0, 0, HalfWord_b, ssov);
 			case 0x3f: return e_madd(ctx, 0, 16, 16, 16, HalfWord_b, ssov);
 
-			// MADDR.H MADDRS.H
+			// MADDR.hpp MADDRS.hpp
 			case 0x0e: return e_maddr(ctx, 16, 0, 0, 0, HalfWord_b, append_h16_32);
 			case 0x0d: return e_maddr(ctx, 16, 0, 0, 16, HalfWord_b, append_h16_32);
 			case 0x0c: return e_maddr(ctx, 16, 16, 0, 0, HalfWord_b, append_h16_32);
@@ -3980,7 +3980,7 @@ RZ_IPI RzAnalysisLiftedILOp tricore_il_op(RzAsmTriCoreContext *ctx, RzAnalysis *
 			break;
 		case 0x43:
 			switch (extract32(ctx->word, 18, 6)) {
-			// MADDR.H MADDRS.H
+			// MADDR.hpp MADDRS.hpp
 			case 0x1e: return e_maddr(ctx, 16, 16, 0, 0, HalfWord_b, append_h16_32);
 			case 0x3e: return e_maddr(ctx, 16, 16, 0, 0, HalfWord_b, append_h16_32_ssov);
 
@@ -3994,7 +3994,7 @@ RZ_IPI RzAnalysisLiftedILOp tricore_il_op(RzAsmTriCoreContext *ctx, RzAnalysis *
 			break;
 		case 0xc3:
 			switch (extract32(ctx->word, 18, 6)) {
-			// MADDSU.H MADDSUS.H
+			// MADDSU.hpp MADDSUS.hpp
 			case 0x1a: return e_maddsu(ctx, 16, 0, 0, 0, HalfWord_b, packed_2word);
 			case 0x19: return e_maddsu(ctx, 16, 0, 0, 16, HalfWord_b, packed_2word);
 			case 0x18: return e_maddsu(ctx, 16, 16, 0, 0, HalfWord_b, packed_2word);
@@ -4004,7 +4004,7 @@ RZ_IPI RzAnalysisLiftedILOp tricore_il_op(RzAsmTriCoreContext *ctx, RzAnalysis *
 			case 0x38: return e_maddsu(ctx, 16, 16, 0, 0, HalfWord_b, append_ssov);
 			case 0x3b: return e_maddsu(ctx, 0, 16, 16, 16, HalfWord_b, append_ssov);
 
-			// MADDSUM.H MADDSUMS.H
+			// MADDSUM.hpp MADDSUMS.hpp
 			case 0x1e: return e_maddsum(ctx, 16, 0, 0, 0, HalfWord_b, NULL);
 			case 0x1d: return e_maddsum(ctx, 16, 0, 0, 16, HalfWord_b, NULL);
 			case 0x1c: return e_maddsum(ctx, 16, 16, 0, 0, HalfWord_b, NULL);
@@ -4014,7 +4014,7 @@ RZ_IPI RzAnalysisLiftedILOp tricore_il_op(RzAsmTriCoreContext *ctx, RzAnalysis *
 			case 0x3c: return e_maddsum(ctx, 16, 16, 0, 0, HalfWord_b, ssov);
 			case 0x3f: return e_maddsum(ctx, 0, 16, 16, 16, HalfWord_b, ssov);
 
-			// MADDSUR.H MADDSURS.H
+			// MADDSUR.hpp MADDSURS.hpp
 			case 0x0e: return e_maddsur(ctx, 16, 0, 0, 0, HalfWord_b, append_h16_32);
 			case 0x0d: return e_maddsur(ctx, 16, 0, 0, 16, HalfWord_b, append_h16_32);
 			case 0x0c: return e_maddsur(ctx, 16, 16, 0, 0, HalfWord_b, append_h16_32);
@@ -4130,7 +4130,7 @@ RZ_IPI RzAnalysisLiftedILOp tricore_il_op(RzAsmTriCoreContext *ctx, RzAnalysis *
 			case 0x8a: return f_overflow32(SEQ2(SETL("result", SUB(VARG(R(1)), MUL(VARG(R(2)), VARG(R(3))))), SETG(R(0), ssov(VARL("result"), U32(32)))));
 			case 0xea: return f_overflow64(SEQ2(SETL("result", SUB(VARG(R(1)), MUL(SIGNED(64, VARG(R(2))), SIGNED(64, VARG(R(3)))))), SETG(R(0), ssov(VARL("result"), U64(64)))));
 
-			// MSUB.H, MSUBS.H
+			// MSUB.hpp, MSUBS.hpp
 			case 0x68: return f_overflow64(SEQ2(SETL("result", SUB(VARG(R(1)), MUL(UNSIGNED(64, VARG(R(2))), UNSIGNED(64, VARG(R(3)))))), SETG(R(0), VARL("result"))));
 			case 0x88: return f_overflow32(SEQ2(SETL("result", SUB(VARG(R(1)), MUL(VARG(R(2)), VARG(R(3))))), SETG(R(0), suov_n(VARL("result"), 32))));
 			case 0xe8: return f_overflow64(SEQ2(SETL("result", SUB(VARG(R(1)), MUL(UNSIGNED(64, VARG(R(2))), UNSIGNED(64, VARG(R(3)))))), SETG(R(0), suov_n(VARL("result"), 64))));
@@ -4139,8 +4139,8 @@ RZ_IPI RzAnalysisLiftedILOp tricore_il_op(RzAsmTriCoreContext *ctx, RzAnalysis *
 		case 0xa3:
 		case 0xe3:
 			switch (extract32(ctx->word, 18, 6)) {
-			// MSUB.H, MSUBS.H
-			// MSUBAD.H, MSUBADS.H
+			// MSUB.hpp, MSUBS.hpp
+			// MSUBAD.hpp, MSUBADS.hpp
 			case 0x1a: return e_msubh(ctx, 16, 0, 0, 0, packed_2word);
 			case 0x19: return e_msubh(ctx, 16, 0, 0, 16, packed_2word);
 			case 0x18: return e_msubh(ctx, 16, 16, 0, 0, packed_2word);
@@ -4150,8 +4150,8 @@ RZ_IPI RzAnalysisLiftedILOp tricore_il_op(RzAsmTriCoreContext *ctx, RzAnalysis *
 			case 0x38: return e_msubh(ctx, 16, 16, 0, 0, append_ssov);
 			case 0x3b: return e_msubh(ctx, 0, 16, 16, 16, append_ssov);
 
-			// MSUBADM.H MSUBADMS.H
-			// MSUBM.H MSUBMS.H
+			// MSUBADM.hpp MSUBADMS.hpp
+			// MSUBM.hpp MSUBMS.hpp
 			case 0x1e: return e_msubadmh(ctx, 16, 0, 0, 0, NULL);
 			case 0x1d: return e_msubadmh(ctx, 16, 0, 0, 16, NULL);
 			case 0x1c: return e_msubadmh(ctx, 16, 16, 0, 0, NULL);
@@ -4161,8 +4161,8 @@ RZ_IPI RzAnalysisLiftedILOp tricore_il_op(RzAsmTriCoreContext *ctx, RzAnalysis *
 			case 0x3c: return e_msubadmh(ctx, 16, 16, 0, 0, ssov);
 			case 0x3f: return e_msubadmh(ctx, 0, 16, 16, 16, ssov);
 
-			// MSUBADR.H MSUBADRS.H
-			// MSUBR.H MSUBRS.H
+			// MSUBADR.hpp MSUBADRS.hpp
+			// MSUBR.hpp MSUBRS.hpp
 			case 0x0e: return e_msubadrh(ctx, 16, 0, 0, 0, append_h16_32);
 			case 0x0d: return e_msubadrh(ctx, 16, 0, 0, 16, append_h16_32);
 			case 0x0c: return e_msubadrh(ctx, 16, 16, 0, 0, append_h16_32);
@@ -4279,7 +4279,7 @@ RZ_IPI RzAnalysisLiftedILOp tricore_il_op(RzAsmTriCoreContext *ctx, RzAnalysis *
 				return f_overflow64(e);
 			}
 
-			// MSUBR.H MSUBRS.H
+			// MSUBR.hpp MSUBRS.hpp
 			case 0x1e: return e_msubadrh(ctx, 16, 16, 0, 0, append_h16_32);
 			case 0x3e: return e_msubadrh(ctx, 16, 16, 0, 0, append_h16_32_ssov);
 
@@ -4344,9 +4344,9 @@ RZ_IPI RzAnalysisLiftedILOp tricore_il_op(RzAsmTriCoreContext *ctx, RzAnalysis *
 			// SUBS
 			case 0x0a: return packed_op2_sov(R(0), VARG(R(1)), VARG(R(2)), Word_b, rz_il_op_new_sub, ssov);
 			case 0x0b: return packed_op2_sov(R(0), VARG(R(1)), VARG(R(2)), Word_b, rz_il_op_new_sub, suov);
-			// SUBS.H
+			// SUBS.hpp
 			case 0x6a: return packed_op2_sov(R(0), VARG(R(1)), VARG(R(2)), HalfWord_b, rz_il_op_new_sub, ssov);
-			// SUBS.HU
+			// SUBS.hppU
 			case 0x6b: return packed_op2_sov(R(0), VARG(R(1)), VARG(R(2)), HalfWord_b, rz_il_op_new_sub, suov);
 			default: break;
 			}
@@ -4414,7 +4414,7 @@ RZ_IPI RzAnalysisLiftedILOp tricore_il_op(RzAsmTriCoreContext *ctx, RzAnalysis *
 		switch (OPC1) {
 		case 0xb3:
 			switch (extract32(ctx->word, 18, 9)) {
-			// MUL.H
+			// MUL.hpp
 			case 0x1a: return e_mul(ctx, 16, 0, 0, 0, HalfWord_b, rz_il_op_new_append);
 			case 0x19: return e_mul(ctx, 16, 0, 0, 16, HalfWord_b, rz_il_op_new_append);
 			case 0x18: return e_mul(ctx, 16, 16, 0, 0, HalfWord_b, rz_il_op_new_append);
@@ -4764,7 +4764,7 @@ RZ_IPI RzAnalysisLiftedILOp tricore_il_op(RzAsmTriCoreContext *ctx, RzAnalysis *
 	NOT_IMPLEMENTED;
 }
 
-#include "rz_il/rz_il_opbuilder_end.h"
+#include "rz_il/rz_il_opbuilder_end.hpp"
 
 static void trap_hook(RzILVM *vm, RzILOpEffect *op) {}
 

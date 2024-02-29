@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2023 billow <billow.fun@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "symbol.h"
+#include "symbol.hpp"
 
-#include "pdb.h"
+#include "pdb.hpp"
 
 RZ_IPI bool PDBSectionOffset_parse(RzBuffer *b, PDBSectionOffset *section_offset) {
 	if (!section_offset) {

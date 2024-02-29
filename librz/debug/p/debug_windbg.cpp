@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2020 GustavoLCR <gugulcr@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_debug.h>
-#include <DbgEng.h>
+#include <rz_debug.hpp>
+#include <DbgEng.hpp>
 
 #ifndef CONTEXT_ARM
 #define CONTEXT_ARM 0x00200000L
@@ -268,26 +268,26 @@ static char *windbg_reg_profile(RzDebug *dbg) {
 	ULONG type;
 	if (!idbg || !idbg->initialized || FAILED(ITHISCALL(dbgCtrl, GetActualProcessorType, &type))) {
 		if (dbg->bits & RZ_SYS_BITS_64) {
-#include "native/reg/windows-x64.h"
+#include "native/reg/windows-x64.hpp"
 		} else {
-#include "native/reg/windows-x86.h"
+#include "native/reg/windows-x86.hpp"
 		}
 		return NULL;
 	}
 	if (type == IMAGE_FILE_MACHINE_IA64 || type == IMAGE_FILE_MACHINE_AMD64) {
-#include "native/reg/windows-x64.h"
+#include "native/reg/windows-x64.hpp"
 	} else if (type == IMAGE_FILE_MACHINE_I386) {
-#include "native/reg/windows-x86.h"
+#include "native/reg/windows-x86.hpp"
 	} else if (type == IMAGE_FILE_MACHINE_ARM) {
-#include "native/reg/windows-arm.h"
+#include "native/reg/windows-arm.hpp"
 	} else if (type == IMAGE_FILE_MACHINE_ARM64) {
 		if (dbg->bits == RZ_SYS_BITS_64) {
-#include "native/reg/windows-arm64.h"
+#include "native/reg/windows-arm64.hpp"
 		} else {
 			// TODO: it is questionable whether this branch actually makes sense,
 			// it was adopted 1:1 during refactoring and only less visible before.
 			// (64bit machine in 32bit mode maybe?)
-#include "native/reg/windows-arm64_32.h"
+#include "native/reg/windows-arm64_32.hpp"
 		}
 	}
 	return NULL;

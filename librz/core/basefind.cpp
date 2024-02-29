@@ -8,8 +8,8 @@
  * https://github.com/mncoppola/ws30/blob/master/basefind.py
  */
 
-#include <rz_basefind.h>
-#include <rz_th.h>
+#include <rz_basefind.hpp>
+#include <rz_th.hpp>
 
 typedef struct basefind_addresses_t {
 	ut64 *ptr;

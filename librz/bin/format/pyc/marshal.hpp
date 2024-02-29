@@ -5,9 +5,9 @@
 #ifndef MARSHAL_H
 #define MARSHAL_H
 
-#include <rz_util.h>
-#include <rz_types.h>
-#include "pyc_magic.h"
+#include <rz_util.hpp>
+#include <rz_types.hpp>
+#include "pyc_magic.hpp"
 
 typedef enum {
 	TYPE_ASCII = 'a',

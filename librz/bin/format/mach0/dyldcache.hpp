@@ -5,12 +5,12 @@
 #ifndef RZ_BIN_FORMAT_DYLDCACHE_H
 #define RZ_BIN_FORMAT_DYLDCACHE_H
 
-#include <rz_util.h>
-#include <rz_util/set.h>
+#include <rz_util.hpp>
+#include <rz_util/set.hpp>
 
 #define RZ_BIN_MACH064 1
 
-#include "mach0.h"
+#include "mach0.hpp"
 
 typedef struct rz_dyld_cache_header_t {
 	char magic[16];

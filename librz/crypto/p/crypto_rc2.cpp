@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2016 Aneesh Dogra <lionaneesh@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_lib.h>
-#include <rz_crypto.h>
-#include <rz_util.h>
+#include <rz_lib.hpp>
+#include <rz_crypto.hpp>
+#include <rz_util.hpp>
 
 #define BITS         1024
 #define RC2_KEY_SIZE 64 // bytes

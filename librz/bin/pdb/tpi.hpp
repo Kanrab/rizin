@@ -4,7 +4,7 @@
 #ifndef PDB_TPI_H
 #define PDB_TPI_H
 
-#include <rz_util.h>
+#include <rz_util.hpp>
 
 RZ_IPI bool tpi_stream_parse(RzPdb *pdb, RzPdbMsfStream *stream);
 RZ_IPI RzPdbTpiType *simple_type_parse(RzPdbTpiStream *stream, ut32 idx);

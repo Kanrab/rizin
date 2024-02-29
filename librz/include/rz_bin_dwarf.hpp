@@ -1,8 +1,8 @@
 #ifndef RZ_BIN_DWARF_H
 #define RZ_BIN_DWARF_H
 
-#include <rz_types.h>
-#include <rz_bin.h>
+#include <rz_types.hpp>
+#include <rz_bin.hpp>
 
 #ifdef __cplusplus
 extern "C" {

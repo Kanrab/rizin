@@ -185,7 +185,7 @@ EXPECT=<<EOF
 0x00418090 106 flirt.IO_unsave_markers
 0x004234b0 65 flirt.strdup
 0x0042b6b0 1022 flirt.memcmp_sse2
-0x00447cf0 1568 flirt.handle_amd
+0x00447cf0 1568 flirt.hppandle_amd
 0x00448310 37 flirt.cache_sysconf
 0x00448380 9 flirt.wmemcpy
 0x004491d0 80 flirt.get_child_max
@@ -238,7 +238,7 @@ EXPECT=<<EOF
 0x0045c620 19 flirt.libc_secure_getenv
 0x0045ce30 10704 flirt.group_number
 0x0045f800 13172 flirt.IO_vfprintf_internal
-0x00462b80 976 flirt.hack_digit
+0x00462b80 976 flirt.hppack_digit
 0x00465a50 11033 flirt.printf_fp
 0x00468470 192 flirt.asprintf_1
 0x00468530 11072 flirt.i18n_number_rewrite
@@ -426,7 +426,7 @@ EXPECT=<<EOF
 |           0x004011d6      mov   edx, eax
 |           0x004011d8      lea   rax, [var_68h]
 |           0x004011dc      mov   ecx, edx
-|           0x004011de      lea   rdx, str.Hello__d                    ; segment.LOAD2
+|           0x004011de      lea   rdx, str.hppello__d                    ; segment.LOAD2
 |                                                                      ; 0x404000 ; "Hello %d\n"
 |           0x004011e5      mov   esi, 0x50                            ; 'P' ; 80
 |           0x004011ea      mov   rdi, rax
@@ -479,7 +479,7 @@ EXPECT=<<EOF
 |           0x004011d6      mov   edx, eax
 |           0x004011d8      lea   rax, [var_68h]
 |           0x004011dc      mov   ecx, edx
-|           0x004011de      lea   rdx, str.Hello__d                    ; segment.LOAD2
+|           0x004011de      lea   rdx, str.hppello__d                    ; segment.LOAD2
 |                                                                      ; 0x404000 ; "Hello %d\n"
 |           0x004011e5      mov   esi, 0x50                            ; 'P' ; 80
 |           0x004011ea      mov   rdi, rax

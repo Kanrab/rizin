@@ -1,4 +1,4 @@
-### ncrypt.h ###
+### ncrypt.hpp ###
 
 NCryptCreateClaim=func
 func.NCryptCreateClaim.args=8

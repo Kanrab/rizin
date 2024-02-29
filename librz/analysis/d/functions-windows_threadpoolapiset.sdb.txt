@@ -1,4 +1,4 @@
-### threadpoolapiset.h ###
+### threadpoolapiset.hpp ###
 
 CallbackMayRunLong=func
 func.CallbackMayRunLong.args=1

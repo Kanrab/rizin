@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2012-2018 Alexander <alexander@demin.ws>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_asm.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_asm.hpp>
 #include "../arch/i8080/i8080dis.c"
 
 static int do_disassemble(RzAsm *a, RzAsmOp *op, const ut8 *buf, int len) {

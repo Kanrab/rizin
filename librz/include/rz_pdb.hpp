@@ -4,9 +4,9 @@
 #ifndef RZ_PDB_H
 #define RZ_PDB_H
 
-#include <rz_util.h>
-#include <rz_type.h>
-#include <rz_cmd.h>
+#include <rz_util.hpp>
+#include <rz_type.hpp>
+#include <rz_cmd.hpp>
 
 #ifdef __cplusplus
 extern "C" {
@@ -222,7 +222,7 @@ enum pdb_stream_version {
 };
 
 /**
- * Like GUID in windows.h/guiddef.h
+ * Like GUID in windows.hpp/guiddef.hpp
  */
 typedef struct {
 	ut32 data1;
@@ -244,7 +244,7 @@ typedef struct {
 } RzPdbStream;
 
 /**
- * \brief MSF file format header https://llvm.org/docs/PDB/MsfFile.html#the-superblock
+ * \brief MSF file format header https://llvm.org/docs/PDB/MsfFile.hpptml#the-superblock
  */
 typedef struct {
 	char file_magic[PDB_SIGNATURE_LEN]; ///< Must be equal to "Microsoft C / C++ MSF 7.00\\r\\n" followed by the bytes 1A 44 53 00 00 00.

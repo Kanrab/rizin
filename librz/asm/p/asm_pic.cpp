@@ -2,12 +2,12 @@
 // SPDX-FileCopyrightText: 2018 courk <courk@courk.cc>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_asm.h>
-#include <rz_lib.h>
+#include <rz_asm.hpp>
+#include <rz_lib.hpp>
 
-#include "../arch/pic/pic_baseline.h"
-#include "../arch/pic/pic_pic18.h"
-#include "../arch/pic/pic_midrange.h"
+#include "../arch/pic/pic_baseline.hpp"
+#include "../arch/pic/pic_pic18.hpp"
+#include "../arch/pic/pic_midrange.hpp"
 
 static int asm_pic_disassemble(RzAsm *a, RzAsmOp *op, const ut8 *b, int l) {
 	int res = -1;

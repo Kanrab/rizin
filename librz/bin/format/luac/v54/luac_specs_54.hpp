@@ -4,7 +4,7 @@
 #ifndef BUILD_LUAC_54_H
 #define BUILD_LUAC_54_H
 
-#include "librz/bin/format/luac/luac_common.h"
+#include "librz/bin/format/luac/luac_common.hpp"
 
 /* Macros for bin_luac.c */
 /* Macros/Typedefs used in luac */

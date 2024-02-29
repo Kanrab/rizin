@@ -1,14 +1,14 @@
 // SPDX-FileCopyrightText: 2009-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
-#include <rz_demangler.h>
-#include <rz_types.h>
-#include <rz_util.h>
+#include <rz_core.hpp>
+#include <rz_demangler.hpp>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
 #include <stdio.h>
 #include <stdlib.h>
-#include <rz_main.h>
-#include "../../librz/bin/pdb/pdb_downloader.h"
+#include <rz_main.hpp>
+#include "../../librz/bin/pdb/pdb_downloader.hpp"
 
 static void start_state(RzCmdStateOutput *state) {
 	if (state->mode == RZ_OUTPUT_MODE_JSON) {

@@ -1,8 +1,8 @@
-project('rzspp', 'c')
+project('rzspp', 'cpp')
 spp_version = '1.2.0'
 
-configure_file(input: 'config.def.h',
-  output: 'config.h',
+configure_file(input: 'config.def.hpp',
+  output: 'config.hpp',
   copy: true)
 
 spp_files = [

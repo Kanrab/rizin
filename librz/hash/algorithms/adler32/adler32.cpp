@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2021 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "adler32.h"
-#include <rz_util.h>
+#include "adler32.hpp"
+#include <rz_util.hpp>
 
 bool rz_adler32_init(RzAdler32 *ctx) {
 	rz_return_val_if_fail(ctx, false);

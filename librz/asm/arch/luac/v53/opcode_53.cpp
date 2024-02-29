@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2017 pancake <pancake@nopcode.org>
 // SPDX-FileCopyrightText: 2021 Heersin <teablearcher@gmail.com>
 
-#include "arch_53.h"
+#include "arch_53.hpp"
 #define lua_strcase(case_str) if ( \
 	((limit) <= sizeof(case_str) - 1) && \
 	rz_str_ncasecmp((name), (case_str), sizeof(case_str) - 1) == 0)

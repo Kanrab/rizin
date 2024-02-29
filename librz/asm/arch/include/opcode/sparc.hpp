@@ -23,7 +23,7 @@
    the Free Software Foundation, 51 Franklin Street - Fifth Floor,
    Boston, MA 02110-1301, USA.  */
 
-#include "ansidecl.h"
+#include "ansidecl.hpp"
 
 /* The SPARC opcode table (and other related data) is defined in
    the opcodes library in sparc-opc.c.  If you change anything here, make

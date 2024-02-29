@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2015-2020 rkx1209 <rkx1209dev@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_debug.h>
+#include <rz_debug.hpp>
 
 RZ_API void rz_debug_snap_free(RzDebugSnap *snap) {
 	if (snap) {

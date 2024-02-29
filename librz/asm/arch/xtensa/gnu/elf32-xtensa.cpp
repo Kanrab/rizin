@@ -18,19 +18,19 @@
    Foundation, Inc., 51 Franklin Street - Fifth Floor, Boston, MA
    02110-1301, USA.  */
 
-#include "sysdep.h"
-#include "disas-asm.h"
+#include "sysdep.hpp"
+#include "disas-asm.hpp"
 #include <stdio.h>
-#include <stdarg.h>
+#include <stdarg.hpp>
 #include <string.h>
 
-#include "bfdlink.h"
-//#include "libbfd.h"
-#include "elf-bfd.h"
-#include "elf/xtensa.h"
-//#include "splay-tree.h"
-#include "xtensa-isa.h"
-//#include "xtensa-config.h"
+#include "bfdlink.hpp"
+//#include "libbfd.hpp"
+#include "elf-bfd.hpp"
+#include "elf/xtensa.hpp"
+//#include "splay-tree.hpp"
+#include "xtensa-isa.hpp"
+//#include "xtensa-config.hpp"
 
 #define XTENSA_NO_NOP_REMOVAL 0
 
@@ -6170,7 +6170,7 @@ init_xtensa_relax_info (asection *sec)
   relax_info->src_count = 0;
   relax_info->src_next = 0;
 
-  relax_info->removed_list.head = NULL;
+  relax_info->removed_list.hppead = NULL;
   relax_info->removed_list.tail = NULL;
 
   relax_info->action_list.tree = splay_tree_new (text_action_compare,
@@ -11442,5 +11442,5 @@ static const struct bfd_elf_special_section elf_xtensa_special_sections[] =
 #define elf_backend_action_discarded	     elf_xtensa_action_discarded
 #define elf_backend_copy_indirect_symbol     elf_xtensa_copy_indirect_symbol
 
-#include "elf32-target.h"
+#include "elf32-target.hpp"
 #endif

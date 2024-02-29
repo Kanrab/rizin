@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2021 Dhruv Maroo <dhruvmaru007@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_debug.h>
-#include <rz_bp.h>
-#include <rz_util/rz_serialize.h>
+#include <rz_debug.hpp>
+#include <rz_bp.hpp>
+#include <rz_util/rz_serialize.hpp>
 
 /**
  * \brief Serialize debug state (RzDebug) and save to a sdb

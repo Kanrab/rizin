@@ -3,9 +3,9 @@
 
 #define RZ_SPACES_MAX 512
 
-#include "rz_util.h"
-#include "rz_serialize.h"
-#include <sdb.h>
+#include "rz_util.hpp"
+#include "rz_serialize.hpp"
+#include <sdb.hpp>
 
 #ifdef __cplusplus
 extern "C" {

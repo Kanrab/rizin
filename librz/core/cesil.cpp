@@ -2,9 +2,9 @@
 // SPDX-FileCopyrightText: 2009-2021 maijin <maijin21@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
+#include <rz_core.hpp>
 
-#include "../core_private.h"
+#include "../core_private.hpp"
 
 static ut64 initializeEsil(RzCore *core) {
 	int romem = rz_config_get_i(core->config, "esil.romem");

@@ -2,12 +2,12 @@
 // SPDX-FileCopyrightText: 2021 Basstorm <basstorm@nyist.edu.cn>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bin.h>
-#include <rz_core.h>
-#include <rz_type.h>
-#include <rz_pdb.h>
-#include <rz_analysis.h>
-#include "../bin/pdb/pdb.h"
+#include <rz_bin.hpp>
+#include <rz_core.hpp>
+#include <rz_type.hpp>
+#include <rz_pdb.hpp>
+#include <rz_analysis.hpp>
+#include "../bin/pdb/pdb.hpp"
 
 static RzType *pdb_type_parse(const RzTypeDB *typedb, RzPdbTpiStream *stream, RzPdbTpiType *type, char *name);
 static RzType *modifier_parse(const RzTypeDB *typedb, RzPdbTpiStream *stream, RzPdbTpiType *type);

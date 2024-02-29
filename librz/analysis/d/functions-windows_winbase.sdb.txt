@@ -1,4 +1,4 @@
-### winbase.h ###
+### winbase.hpp ###
 
 AccessCheckAndAuditAlarmA=func
 func.AccessCheckAndAuditAlarmA.args=11

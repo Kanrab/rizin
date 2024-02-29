@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2015 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_debug.h>
+#include <rz_debug.hpp>
 
 /*
 	debugesil performs step into + esil conditionals
@@ -228,10 +228,10 @@ RZ_API int rz_debug_esil_stepi(RzDebug *d) {
 	// dbg->iob.read_at (dbg->iob.io, npc, buf, sizeof (buf));
 
 	// dbg->analysis->reg = dbg->reg; // hack
-	ESIL->cb.hook_mem_read = &esilbreak_mem_read;
-	ESIL->cb.hook_mem_write = &esilbreak_mem_write;
-	ESIL->cb.hook_reg_read = &esilbreak_reg_read;
-	ESIL->cb.hook_reg_write = &esilbreak_reg_write;
+	ESIL->cb.hppook_mem_read = &esilbreak_mem_read;
+	ESIL->cb.hppook_mem_write = &esilbreak_mem_write;
+	ESIL->cb.hppook_reg_read = &esilbreak_reg_read;
+	ESIL->cb.hppook_reg_write = &esilbreak_reg_write;
 
 	if (prestep) {
 		// required when a exxpression is like <= == ..

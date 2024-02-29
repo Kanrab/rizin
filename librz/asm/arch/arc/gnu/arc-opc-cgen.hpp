@@ -27,7 +27,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 #ifndef ARC_OPC_CGEN_H
 #define ARC_OPC_CGEN_H
 
-/* -- opc.h */
+/* -- opc.hpp */
 
 #undef  CGEN_DIS_HASH_SIZE
 #define CGEN_DIS_HASH_SIZE 1024

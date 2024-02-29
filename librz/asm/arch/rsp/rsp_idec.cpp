@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2016 bobby.smiles32 <bobby.smiles32@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "rsp_idec.h"
+#include "rsp_idec.hpp"
 
 const char *rsp_gp_reg_soft_names[] = {
 	"zero", "at", "v0", "v1", "a0", "a1", "a2", "a3",

@@ -3,9 +3,9 @@
 // SPDX-FileCopyrightText: 2010-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bin.h>
-#include <rz_types.h>
-#include "mach0_specs.h"
+#include <rz_bin.hpp>
+#include <rz_types.hpp>
+#include "mach0_specs.hpp"
 
 #ifndef _INCLUDE_RZ_BIN_MACH0_H_
 #define _INCLUDE_RZ_BIN_MACH0_H_

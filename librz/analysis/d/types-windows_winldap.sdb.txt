@@ -1,4 +1,4 @@
-### winldap.h ###
+### winldap.hpp ###
 
 berval=struct
 struct.berval=bv_len,bv_val

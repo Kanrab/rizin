@@ -2,14 +2,14 @@
 // SPDX-FileCopyrightText: 2019-2020 pancake
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
+#include <rz_core.hpp>
 
-#include "core_private.h"
+#include "core_private.hpp"
 
 /* The reference analysis code has been based on Alvaro's
  * rzpipe-python script which was based on FireEye script for IDA Pro.
  *
- * https://www.fireeye.com/blog/threat-research/2017/03/introduction_to_reve.html
+ * https://www.fireeye.com/blog/threat-research/2017/03/introduction_to_reve.hpptml
  */
 
 typedef struct {

@@ -4,7 +4,7 @@
 #ifndef RIZIN_OP_H
 #define RIZIN_OP_H
 
-#include "loclists.h"
+#include "loclists.hpp"
 
 typedef enum {
 	OPERATION_KIND_DEREF,

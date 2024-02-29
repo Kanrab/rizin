@@ -4,13 +4,13 @@
 // SPDX-FileCopyrightText: 2009-2021 dso <dso@rice.edu>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
-#include <rz_socket.h>
-#include <rz_util/rz_assert.h>
-#include <rz_util/rz_print.h>
-#include "core_private.h"
-#include "rz_analysis.h"
-#include <rz_util/rz_strbuf.h>
+#include <rz_core.hpp>
+#include <rz_socket.hpp>
+#include <rz_util/rz_assert.hpp>
+#include <rz_util/rz_print.hpp>
+#include "core_private.hpp"
+#include "rz_analysis.hpp"
+#include <rz_util/rz_strbuf.hpp>
 
 #define HASRETRY      1
 #define HAVE_LOCALS   1
@@ -584,7 +584,7 @@ static RzDisasmState *ds_init(RzCore *core) {
 	ds->show_flgoff = rz_config_get_b(core->config, "asm.flags.offset");
 	ds->show_nodup = rz_config_get_b(core->config, "asm.nodup");
 	{
-		const char *ah = rz_config_get(core->config, "asm.highlight");
+		const char *ah = rz_config_get(core->config, "asm.hppighlight");
 		ds->asm_highlight = (ah && *ah) ? rz_num_math(core->num, ah) : UT64_MAX;
 	}
 	ds->asm_analysis = rz_config_get_b(core->config, "asm.analysis");
@@ -689,14 +689,14 @@ static RzDisasmState *ds_init(RzCore *core) {
 	ds->show_lines_fcn = ds->show_lines ? rz_config_get_b(core->config, "asm.lines.fcn") : false;
 	ds->show_comments = rz_config_get_b(core->config, "asm.comments");
 	ds->show_usercomments = rz_config_get_b(core->config, "asm.usercomments");
-	ds->asm_hint_jmp = rz_config_get_b(core->config, "asm.hint.jmp");
-	ds->asm_hint_call = rz_config_get_b(core->config, "asm.hint.call");
-	ds->asm_hint_call_indirect = rz_config_get_b(core->config, "asm.hint.call.indirect");
-	ds->asm_hint_lea = rz_config_get_b(core->config, "asm.hint.lea");
-	ds->asm_hint_emu = rz_config_get_b(core->config, "asm.hint.emu");
-	ds->asm_hint_cdiv = rz_config_get_b(core->config, "asm.hint.cdiv");
-	ds->asm_hint_pos = rz_config_get_i(core->config, "asm.hint.pos");
-	ds->asm_hints = rz_config_get_b(core->config, "asm.hints");
+	ds->asm_hint_jmp = rz_config_get_b(core->config, "asm.hppint.jmp");
+	ds->asm_hint_call = rz_config_get_b(core->config, "asm.hppint.call");
+	ds->asm_hint_call_indirect = rz_config_get_b(core->config, "asm.hppint.call.indirect");
+	ds->asm_hint_lea = rz_config_get_b(core->config, "asm.hppint.lea");
+	ds->asm_hint_emu = rz_config_get_b(core->config, "asm.hppint.emu");
+	ds->asm_hint_cdiv = rz_config_get_b(core->config, "asm.hppint.cdiv");
+	ds->asm_hint_pos = rz_config_get_i(core->config, "asm.hppint.pos");
+	ds->asm_hints = rz_config_get_b(core->config, "asm.hppints");
 	ds->show_slow = rz_config_get_b(core->config, "asm.slow");
 	ds->show_refptr = rz_config_get_b(core->config, "asm.refptr");
 	ds->show_calls = rz_config_get_b(core->config, "asm.calls");
@@ -1179,7 +1179,7 @@ static void ds_newline(RzDisasmState *ds) {
 	}
 
 	if (ds->pj) {
-		const bool is_html = rz_config_get_b(ds->core->config, "scr.html");
+		const bool is_html = rz_config_get_b(ds->core->config, "scr.hpptml");
 		if (is_html) {
 			char *s = rz_cons_html_filter(rz_cons_get_buffer(), NULL);
 			pj_s(ds->pj, s);
@@ -2498,7 +2498,7 @@ static int ds_disassemble(RzDisasmState *ds, ut8 *buf, int len) {
 				break;
 			default: {
 				char *op_hex = rz_asm_op_get_hex(&ds->asmop);
-				rz_asm_op_setf_asm(&ds->asmop, ".hex %s%s", op_hex, tail);
+				rz_asm_op_setf_asm(&ds->asmop, ".hppex %s%s", op_hex, tail);
 				free(op_hex);
 				break;
 			}
@@ -4402,11 +4402,11 @@ static void ds_pre_emulation(RzDisasmState *ds) {
 	RzAnalysisEsil *esil = ds->core->analysis->esil;
 	int i, end = ds->core->offset - base;
 	int maxemu = 1024 * 1024;
-	RzAnalysisEsilHookRegWriteCB orig_cb = esil->cb.hook_reg_write;
+	RzAnalysisEsilHookRegWriteCB orig_cb = esil->cb.hppook_reg_write;
 	if (end < 0 || end > maxemu) {
 		return;
 	}
-	esil->cb.hook_reg_write = NULL;
+	esil->cb.hppook_reg_write = NULL;
 	for (i = 0; i < end; i++) {
 		ut64 addr = base + i;
 		RzAnalysisOp *op = rz_core_analysis_op(ds->core, addr, RZ_ANALYSIS_OP_MASK_ESIL | RZ_ANALYSIS_OP_MASK_HINT);
@@ -4421,7 +4421,7 @@ static void ds_pre_emulation(RzDisasmState *ds) {
 			rz_analysis_op_free(op);
 		}
 	}
-	esil->cb.hook_reg_write = orig_cb;
+	esil->cb.hppook_reg_write = orig_cb;
 }
 
 static void ds_print_esil_analysis_init(RzDisasmState *ds) {
@@ -4604,17 +4604,17 @@ static void ds_print_esil_analysis(RzDisasmState *ds) {
 	if (pc) {
 		rz_reg_setv(core->analysis->reg, pc, at + ds->analysis_op.size);
 		esil->cb.user = ds;
-		esil->cb.hook_reg_write = myregwrite;
-		esil->cb.hook_reg_read = myregread;
-		hook_mem_write = esil->cb.hook_mem_write;
+		esil->cb.hppook_reg_write = myregwrite;
+		esil->cb.hppook_reg_read = myregread;
+		hook_mem_write = esil->cb.hppook_mem_write;
 	}
 	if (ds->show_emu_stack) {
-		esil->cb.hook_mem_write = mymemwrite2;
+		esil->cb.hppook_mem_write = mymemwrite2;
 	} else {
 		if (ds->show_emu_write) {
-			esil->cb.hook_mem_write = mymemwrite0;
+			esil->cb.hppook_mem_write = mymemwrite0;
 		} else {
-			esil->cb.hook_mem_write = mymemwrite1;
+			esil->cb.hppook_mem_write = mymemwrite1;
 		}
 	}
 	ds->esil_likely = 0;
@@ -4776,7 +4776,7 @@ static void ds_print_esil_analysis(RzDisasmState *ds) {
 	ds_print_color_reset(ds);
 beach:
 	if (esil) {
-		esil->cb.hook_mem_write = hook_mem_write;
+		esil->cb.hppook_mem_write = hook_mem_write;
 	}
 	rz_config_hold_restore(hc);
 	rz_config_hold_free(hc);

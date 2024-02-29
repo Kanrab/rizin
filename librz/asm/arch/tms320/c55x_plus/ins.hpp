@@ -4,8 +4,8 @@
 #ifndef INS_H
 #define INS_H
 
-#include <rz_types.h>
-#include "utils.h"
+#include <rz_types.hpp>
+#include "utils.hpp"
 
 // instruction length
 ut32 get_ins_len(ut8 opcode);

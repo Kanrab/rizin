@@ -249,7 +249,7 @@ esac
 # MAIN #
 take_environ
 split_host BUILD HOST TARGET
-[ -z "$ACRHOOK" ] && ACRHOOK=./configure.hook
+[ -z "$ACRHOOK" ] && ACRHOOK=./configure.hppook
 [ -e "$ACRHOOK" ] && . ${ACRHOOK}
 
 while : ; do

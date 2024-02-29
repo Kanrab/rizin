@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2009-2017 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_debug.h>
-#include <rz_list.h>
+#include <rz_debug.hpp>
+#include <rz_list.hpp>
 
 RZ_API RZ_OWN RzDebugMap *rz_debug_map_new(RZ_NULLABLE char *name, ut64 begin, ut64 end, int perm, int user) {
 	/* range could be 0k on OpenBSD, it's a honeypot */

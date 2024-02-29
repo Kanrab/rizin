@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2022 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
+#include <rz_util.hpp>
 #define RZ_LANG_BYTE_ARRAY_TRUNK_SIZE     16
 #define RZ_LANG_BYTE_ARRAY_TRUNK_SIZE_STR "16"
 

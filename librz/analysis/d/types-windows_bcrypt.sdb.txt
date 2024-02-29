@@ -1,4 +1,4 @@
-### bcrypt.h ###
+### bcrypt.hpp ###
 
 BCRYPT_ALG_HANDLE=type
 type.BCRYPT_ALG_HANDLE=p

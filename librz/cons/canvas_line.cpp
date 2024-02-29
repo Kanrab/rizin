@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2013-2019 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_cons.h>
+#include <rz_cons.hpp>
 
 #define W(y)    rz_cons_canvas_write(c, y)
 #define G(x, y) rz_cons_canvas_gotoxy(c, x, y)

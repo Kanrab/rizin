@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2013 th0rpe <josediazfer@yahoo.es>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "ins.h"
+#include "ins.hpp"
 
 ut8 *ins_buff = (ut8 *)NULL; // = "\x77\x21\x20\x21\x00\x30\x21\x77\x20\x21";
 ut32 ins_buff_len = 0;
@@ -1925,7 +1925,7 @@ char *ins_str[] = {
 	(char *)0x1CE,
 	"OOOOOOqqMMMMxxxxmm$aaaaa",
 	"HI(`aaaaa,ACx`) = `q_SAT,(``$,(``MMMMxxxxmm,r``$,)``q_SAT,)`",
-	"MOV`q_SAT` `$,(``MMMMxxxxmm,r``$,)`, `aaaaa,ACx`.H",
+	"MOV`q_SAT` `$,(``MMMMxxxxmm,r``$,)`, `aaaaa,ACx`.hpp",
 	(char *)0x1CF,
 	"OOOOOOqqMMMMxxxxmm$aaaaa",
 	"LO(`aaaaa,ACx`) = `q_SAT,(``$,(``MMMMxxxxmm,r``$,)``q_SAT,)`",

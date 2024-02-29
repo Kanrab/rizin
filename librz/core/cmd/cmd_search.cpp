@@ -1,14 +1,14 @@
 // SPDX-FileCopyrightText: 2010-2021 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util/ht_uu.h>
-#include <rz_asm.h>
-#include <rz_core.h>
-#include <rz_io.h>
-#include <rz_list.h>
-#include <rz_util/rz_regex.h>
-#include <rz_types_base.h>
-#include "../core_private.h"
+#include <rz_util/ht_uu.hpp>
+#include <rz_asm.hpp>
+#include <rz_core.hpp>
+#include <rz_io.hpp>
+#include <rz_list.hpp>
+#include <rz_util/rz_regex.hpp>
+#include <rz_types_base.hpp>
+#include "../core_private.hpp"
 
 #include "cmd_search_rop.c"
 
@@ -74,7 +74,7 @@ static const char *help_msg_slash[] = {
 	"/*", " [comment string]", "add multiline comment, end it with '*/'",
 #if 0
 	"\nConfiguration:", "", " (type `e??search.` for a complete list)",
-	"e", " cmd.hit = x", "command to execute on every search hit",
+	"e", " cmd.hppit = x", "command to execute on every search hit",
 	"e", " search.in = ?", "specify where to search stuff (depends on .from/.to)",
 	"e", " search.align = 4", "only catch aligned search hits",
 	"e", " search.from = 0", "start address",
@@ -898,7 +898,7 @@ RZ_API RZ_OWN RzList /*<RzIOMap *>*/ *rz_core_get_boundaries_prot(RzCore *core, 
 				} else if (rz_str_startswith(mode, "dbg.maps.")) {
 					mask = rz_str_rwx(mode + 9);
 					only = (bool)(size_t)strstr(mode, ".only");
-				} else if (!strcmp(mode, "dbg.heap")) {
+				} else if (!strcmp(mode, "dbg.hppeap")) {
 					heap = true;
 				} else if (!strcmp(mode, "dbg.stack")) {
 					stack = true;
@@ -2267,7 +2267,7 @@ static void do_asm_search(RzCore *core, struct search_parameters *param, const c
 		hits = rz_core_asm_strsearch(core, end_cmd,
 			from, to, maxhits, regexp, everyByte, mode);
 		if (hits) {
-			const char *cmdhit = rz_config_get(core->config, "cmd.hit");
+			const char *cmdhit = rz_config_get(core->config, "cmd.hppit");
 			rz_list_foreach (hits, iter, hit) {
 				if (rz_cons_is_breaked()) {
 					break;
@@ -2568,7 +2568,7 @@ static void search_similar_pattern_in(RzCore *core, int count, ut64 from, ut64 t
 			};
 			RzHistogramOptions opts = {
 				.unicode = rz_config_get_b(core->config, "scr.utf8"),
-				.thinline = !rz_config_get_b(core->config, "scr.hist.block"),
+				.thinline = !rz_config_get_b(core->config, "scr.hppist.block"),
 				.legend = false,
 				.offset = rz_config_get_b(core->config, "hex.offset"),
 				.offpos = UT64_MAX,
@@ -2633,7 +2633,7 @@ void _CbInRangeSearchV(RzCore *core, ut64 from, ut64 to, int vsize, void *user) 
 	}
 	rz_core_cmdf(core, "f %s.value.0x%08" PFMT64x " %d @ 0x%08" PFMT64x " \n", prefix, to, vsize, to); // flag at value of hit
 	rz_core_cmdf(core, "f %s.offset.0x%08" PFMT64x " %d @ 0x%08" PFMT64x " \n", prefix, from, vsize, from); // flag at offset of hit
-	const char *cmdHit = rz_config_get(core->config, "cmd.hit");
+	const char *cmdHit = rz_config_get(core->config, "cmd.hppit");
 	if (cmdHit && *cmdHit) {
 		ut64 addr = core->offset;
 		rz_core_seek(core, from, true);
@@ -2915,7 +2915,7 @@ RZ_IPI int rz_cmd_search(void *data, const char *input) {
 	RzCore *core = (RzCore *)data;
 	struct search_parameters param = {
 		.core = core,
-		.cmd_hit = rz_config_get(core->config, "cmd.hit"),
+		.cmd_hit = rz_config_get(core->config, "cmd.hppit"),
 		.outmode = 0,
 		.inverse = false,
 		.aes_search = false,

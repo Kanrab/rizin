@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2021 Dhruv Maroo <dhruvmaru007@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include "minunit.h"
+#include <rz_util.hpp>
+#include "minunit.hpp"
 
 struct {
 	char inflated[1285];

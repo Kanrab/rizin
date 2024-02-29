@@ -4,7 +4,7 @@
 #ifndef RZ_IL_VALIDATE_H
 #define RZ_IL_VALIDATE_H
 
-#include <rz_il/rz_il_vm.h>
+#include <rz_il/rz_il_vm.hpp>
 
 /**
  * \file

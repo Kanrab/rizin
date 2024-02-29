@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2018 thestr4ng3r <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "pic_baseline.h"
+#include "pic_baseline.hpp"
 
 static const PicBaselineOpInfo pic_baseline_op_info[PIC_BASELINE_OPCODE_INVALID] = {
 	{ "nop", PIC_BASELINE_OP_ARGS_NONE },

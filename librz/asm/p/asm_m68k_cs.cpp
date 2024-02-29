@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2015-2018 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_asm.h>
-#include <rz_lib.h>
-#include <capstone/capstone.h>
+#include <rz_asm.hpp>
+#include <rz_lib.hpp>
+#include <capstone/capstone.hpp>
 
 #ifdef CAPSTONE_M68K_H
 #define CAPSTONE_HAS_M68K 1
@@ -17,7 +17,7 @@
 #endif
 
 #if CAPSTONE_HAS_M68K
-#include "cs_helper.h"
+#include "cs_helper.hpp"
 
 CAPSTONE_DEFINE_PLUGIN_FUNCTIONS(m68k);
 

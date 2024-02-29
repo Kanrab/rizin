@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: 2013-2021 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
-#include <capstone/capstone.h>
+#include <rz_analysis.hpp>
+#include <capstone/capstone.hpp>
 
-#include "arm_cs.h"
-#include "arm_accessors64.h"
+#include "arm_cs.hpp"
+#include "arm_accessors64.hpp"
 
 #define REG64(x)      rz_str_get_null(cs_reg_name(*handle, insn->detail->CS_aarch64_.operands[x].reg))
 #define MEMBASE64(x)  rz_str_get_null(cs_reg_name(*handle, insn->detail->CS_aarch64_.operands[x].mem.base))

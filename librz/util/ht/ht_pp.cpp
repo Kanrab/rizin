@@ -3,8 +3,8 @@
 // SPDX-FileCopyrightText: 2016-2018 ret2libc <sirmy15@gmail.com>
 // SPDX-License-Identifier: BSD-3-Clause
 
-#include "sdb.h"
-#include <rz_util/ht_pp.h>
+#include "sdb.hpp"
+#include <rz_util/ht_pp.hpp>
 #include "ht_inc.c"
 
 static HtName_(Ht) * internal_ht_default_new(ut32 size, ut32 prime_idx, HT_(DupValue) valdup, HT_(KvFreeFunc) pair_free, HT_(CalcSizeV) calcsizeV) {

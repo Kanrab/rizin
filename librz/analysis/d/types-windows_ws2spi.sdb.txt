@@ -1,4 +1,4 @@
-### ws2spi.h ###
+### ws2spi.hpp ###
 
 LPNSP_ROUTINE=type
 type.LPNSP_ROUTINE=p

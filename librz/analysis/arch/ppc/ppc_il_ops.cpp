@@ -1,13 +1,13 @@
 // SPDX-FileCopyrightText: 2022 Rot127 <unisono@quyllur.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "ppc_il.h"
-#include "ppc_analysis.h"
-#include "rz_types_base.h"
-#include <rz_il/rz_il_opcodes.h>
-#include <rz_util/rz_assert.h>
-#include <capstone/capstone.h>
-#include <rz_il/rz_il_opbuilder_begin.h>
+#include "ppc_il.hpp"
+#include "ppc_analysis.hpp"
+#include "rz_types_base.hpp"
+#include <rz_il/rz_il_opcodes.hpp>
+#include <rz_util/rz_assert.hpp>
+#include <capstone/capstone.hpp>
+#include <rz_il/rz_il_opbuilder_begin.hpp>
 
 static RzILOpEffect *load_op(RZ_BORROW csh handle, RZ_BORROW cs_insn *insn, const cs_mode mode) {
 	rz_return_val_if_fail(handle && insn, EMPTY());
@@ -185,7 +185,7 @@ static RzILOpEffect *load_op(RZ_BORROW csh handle, RZ_BORROW cs_insn *insn, cons
 
 /**
  * \brief Determine log_2( \p v ). \p v must be a multiple of 2.
- * See: https://graphics.stanford.edu/~seander/bithacks.html#IntegerLog
+ * See: https://graphics.stanford.edu/~seander/bithacks.hpptml#IntegerLog
  *
  * \param v Value to determine lg(v) for.
  * \return ut32 lg(v)
@@ -1983,4 +1983,4 @@ RZ_IPI RzILOpEffect *rz_ppc_cs_get_il_op(RZ_BORROW csh handle, RZ_BORROW cs_insn
 	return lop;
 }
 
-#include <rz_il/rz_il_opbuilder_end.h>
+#include <rz_il/rz_il_opbuilder_end.hpp>

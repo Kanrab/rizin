@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2017 pancake <pancake@nopcode.org>
 // SPDX-FileCopyrightText: 2021 Heersin <teablearcher@gmail.com>
 
-#include "arch_53.h"
+#include "arch_53.hpp"
 
 static LuaInstruction encode_instruction(ut8 opcode, const char *arg_start, ut16 flag, ut8 arg_num) {
 	LuaInstruction instruction = 0;

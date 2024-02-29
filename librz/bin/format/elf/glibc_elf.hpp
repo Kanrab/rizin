@@ -1119,7 +1119,7 @@ typedef struct
 
 /* This vector is normally only used by the program interpreter.  The
    usual definition in an ABI supplement uses the name auxv_t.  The
-   vector is not usually defined in a standard <elf.h> file, but it
+   vector is not usually defined in a standard <elf.hpp> file, but it
    can't hurt.  We rename it to avoid conflicts.  The sizes of these
    types are an arrangement between the exec server and the program
    interpreter, so we don't fully specify them here.  */
@@ -4250,4 +4250,4 @@ enum {
 
 __END_DECLS
 
-#endif /* elf.h */
+#endif /* elf.hpp */

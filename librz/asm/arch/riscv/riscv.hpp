@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2011-2017 Free Software Foundation, Inc.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-/* riscv.h.  RISC-V opcode list for GDB, the GNU debugger.
+/* riscv.hpp.  RISC-V opcode list for GDB, the GNU debugger.
    Copyright (C) 2011-2017 Free Software Foundation, Inc.
    Contributed by Andrew Waterman
 
@@ -24,7 +24,7 @@
 #ifndef _RISCV_H_
 #define _RISCV_H_
 
-#include "riscv-opc.h"
+#include "riscv-opc.hpp"
 #include <stdlib.h>
 #include <stdint.h>
 

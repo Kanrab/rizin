@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2021 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_flirt.h>
+#include <rz_flirt.hpp>
 
 /**
  * \brief      Frees a RzSigDBEntry structure

@@ -58,7 +58,7 @@ s. 886c
 pds 10
 EOF
 EXPECT=<<EOF
-0x100008870 str.Hello_World
+0x100008870 str.hppello_World
 EOF
 RUN
 

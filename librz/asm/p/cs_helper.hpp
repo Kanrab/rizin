@@ -2,8 +2,8 @@
 // SPDX-FileCopyrightText: 2016-2018 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include <capstone/capstone.h>
+#include <rz_util.hpp>
+#include <capstone/capstone.hpp>
 
 typedef struct {
 	cs_mode omode;

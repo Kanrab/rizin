@@ -1,16 +1,16 @@
 // SPDX-FileCopyrightText: 2015-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_lib.h>
-#include <rz_core.h>
-#include <rz_lang.h>
+#include <rz_lib.hpp>
+#include <rz_core.hpp>
+#include <rz_lang.hpp>
 #if __WINDOWS__
-#include <windows.h>
+#include <windows.hpp>
 #endif
 #ifdef _MSC_VER
-#include <process.h>
+#include <process.hpp>
 #endif
-#include "pipe_helper.h"
+#include "pipe_helper.hpp"
 
 static int lang_pipe_file(RzLang *lang, const char *file) {
 	return lang_pipe_run(lang, file, -1);

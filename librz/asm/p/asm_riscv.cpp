@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2015-2021 qnix <qnix@0x80.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_asm.h>
-#include <rz_lib.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_asm.hpp>
+#include <rz_lib.hpp>
 #include "../arch/riscv/riscv-opc.c"
 #include "../arch/riscv/riscv.c"
 

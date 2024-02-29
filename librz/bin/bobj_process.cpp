@@ -2,8 +2,8 @@
 // SPDX-FileCopyrightText: 2023 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bin.h>
-#include "i/private.h"
+#include <rz_bin.hpp>
+#include "i/private.hpp"
 
 RZ_IPI const RzDemanglerPlugin *rz_bin_process_get_demangler_plugin_from_lang(RzBin *bin, RzBinLanguage language) {
 	language = RZ_BIN_LANGUAGE_MASK(language);

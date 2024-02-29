@@ -1,14 +1,14 @@
 // SPDX-FileCopyrightText: 2017-2018 srimanta.barua1 <srimanta.barua1@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "gdbclient/xml.h"
-#include "gdbclient/commands.h"
-#include "gdbclient/core.h"
-#include "arch.h"
-#include "gdbr_common.h"
-#include "packet.h"
-#include <rz_util.h>
-#include <rz_debug.h>
+#include "gdbclient/xml.hpp"
+#include "gdbclient/commands.hpp"
+#include "gdbclient/core.hpp"
+#include "arch.hpp"
+#include "gdbr_common.hpp"
+#include "packet.hpp"
+#include <rz_util.hpp>
+#include <rz_debug.hpp>
 
 #define MAX_PID_CHARS (5)
 
@@ -749,7 +749,7 @@ static RzList *_extract_regs(char *regstr, RzList *flags, char *pc_alias) {
 			regstr = feature_start;
 			feature_end = strchr(regstr, '>');
 			// To parse features of other architectures refer to:
-			// https://sourceware.org/gdb/onlinedocs/gdb/Standard-Target-Features.html#Standard-Target-Features
+			// https://sourceware.org/gdb/onlinedocs/gdb/Standard-Target-Features.hpptml#Standard-Target-Features
 			// - x86
 			if ((tmp1 = strstr(regstr, "core")) != NULL && tmp1 < feature_end) {
 				typegroup = "gpr";

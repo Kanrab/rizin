@@ -68,7 +68,7 @@ Foundation, Inc., 51 Franklin Street - Fifth Floor, Boston, MA 02110-1301, USA. 
 
    For writing functions which take variable numbers of arguments, we
    also provide the VA_OPEN, VA_CLOSE, and VA_FIXEDARG macros.  These
-   hide the differences between K+R <varargs.h> and C89 <stdarg.h> more
+   hide the differences between K+R <varargs.hpp> and C89 <stdarg.hpp> more
    thoroughly than the simple VA_START() macro mentioned above.
 
    VA_OPEN and VA_CLOSE are used *instead of* va_start and va_end.
@@ -152,7 +152,7 @@ So instead we use the macro below and test it against specific values.  */
 #define PTRCONST        void *const
 #define LONG_DOUBLE     long double
 
-/* PARAMS is often defined elsewhere (e.g. by libintl.h), so wrap it in
+/* PARAMS is often defined elsewhere (e.g. by libintl.hpp), so wrap it in
    a #ifndef.  */
 #ifndef PARAMS
 #define PARAMS(ARGS) ARGS
@@ -408,4 +408,4 @@ So instead we use the macro below and test it against specific values.  */
 #define __extension__
 #endif
 
-#endif /* ansidecl.h	*/
+#endif /* ansidecl.hpp	*/

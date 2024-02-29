@@ -3,9 +3,9 @@
 
 #ifndef RZ_BIN_JAVA_CLASS_CONSTANT_POOL_H
 #define RZ_BIN_JAVA_CLASS_CONSTANT_POOL_H
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_bin.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_bin.hpp>
 
 typedef enum {
 	CONSTANT_POOL_ZERO /*               */ = 0,

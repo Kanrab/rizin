@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2011-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_socket.h>
-#include <rz_util.h>
+#include <rz_socket.hpp>
+#include <rz_util.hpp>
 
 static ut8 *rz_rap_packet(ut8 type, ut32 len) {
 	ut8 *buf = malloc(len + 5);

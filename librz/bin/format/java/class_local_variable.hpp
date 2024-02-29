@@ -3,7 +3,7 @@
 
 #ifndef RZ_BIN_JAVA_CLASS_LOCAL_VARIABLE_TABLE_H
 #define RZ_BIN_JAVA_CLASS_LOCAL_VARIABLE_TABLE_H
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 typedef struct java_local_variable_table_t {
 	ut16 start_pc;

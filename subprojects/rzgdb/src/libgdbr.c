@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2014 defragger <rlaemmert@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "libgdbr.h"
-#include "arch.h"
+#include "libgdbr.hpp"
+#include "arch.hpp"
 
 #include <stdio.h>
 
@@ -77,9 +77,9 @@ char *gdbr_get_reg_profile(int arch, int bits) {
 	switch (arch) {
 	case RZ_SYS_ARCH_X86:
 		if (bits == 32) {
-#include "reg/x86_32.h"
+#include "reg/x86_32.hpp"
 		} else if (bits == 64) {
-#include "reg/x86_64.h"
+#include "reg/x86_64.hpp"
 		} else {
 			eprintf("%s: unsupported x86 bits: %d\n", __func__, bits);
 			return NULL;
@@ -87,39 +87,39 @@ char *gdbr_get_reg_profile(int arch, int bits) {
 		break;
 	case RZ_SYS_ARCH_ARM:
 		if (bits == 32) {
-#include "reg/arm32.h"
+#include "reg/arm32.hpp"
 		} else if (bits == 64) {
-#include "reg/arm64.h"
+#include "reg/arm64.hpp"
 		} else {
 			eprintf("%s: unsupported arm bits: %d\n", __func__, bits);
 			return NULL;
 		}
 		break;
 	case RZ_SYS_ARCH_SH:
-#include "reg/sh.h"
+#include "reg/sh.hpp"
 		break;
 	case RZ_SYS_ARCH_LM32:
-#include "reg/lm32.h"
+#include "reg/lm32.hpp"
 		break;
 	case RZ_SYS_ARCH_RISCV:
 		if (bits == 64) {
-#include "reg/riscv64.h"
+#include "reg/riscv64.hpp"
 		} else {
 			eprintf("%s: unsupported riscv bits: %d\n", __func__, bits);
 			return NULL;
 		}
 		break;
 	case RZ_SYS_ARCH_MIPS:
-#include "reg/mips.h"
+#include "reg/mips.hpp"
 		break;
 	case RZ_SYS_ARCH_AVR:
-#include "reg/avr.h"
+#include "reg/avr.hpp"
 		break;
 	case RZ_SYS_ARCH_V850:
-#include "reg/v850.h"
+#include "reg/v850.hpp"
 		break;
 	case RZ_SYS_ARCH_TRICORE:
-#include "reg/tricore.h"
+#include "reg/tricore.hpp"
 		break;
 	}
 	return NULL;

@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: 2020 HoundThe <cgkajm@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include <rz_bin.h>
-#include <rz_core.h>
-#include <rz_bin_dwarf.h>
-#include "../unit/minunit.h"
+#include <rz_util.hpp>
+#include <rz_bin.hpp>
+#include <rz_core.hpp>
+#include <rz_bin_dwarf.hpp>
+#include "../unit/minunit.hpp"
 
 static bool check_line_samples_eq(
 	const RzBinSourceLineInfo *actual,
@@ -360,9 +360,9 @@ bool test_dwarf3_cpp_many_comp_units(void) {
 		{ 0x12b5, 23, 23, "main.cpp" },
 		{ 0x12ba, 23, 24, "main.cpp" },
 		{ 0x12bf, 24, 1, "main.cpp" },
-		{ 0x12c6, 2, 3, "mammal.h" },
-		{ 0x12d2, 2, 12, "mammal.h" },
-		{ 0x12e0, 2, 15, "mammal.h" },
+		{ 0x12c6, 2, 3, "mammal.hpp" },
+		{ 0x12d2, 2, 12, "mammal.hpp" },
+		{ 0x12e0, 2, 15, "mammal.hpp" },
 		{ 0x12e3, 0, 0, NULL },
 		{ 0x12e4, 4, 3, "main.cpp" },
 		{ 0x12f4, 4, 9, "main.cpp" },
@@ -471,16 +471,16 @@ bool test_dwarf_cpp_empty_line_info(void) { // this should work for dwarf2 aswel
 	mu_assert_streq(dir, "/usr/local/Cellar/mingw-w64/5.0.4_1/toolchain-i686/i686-w64-mingw32/include/psdk_inc", "Directory table");
 
 	CHECK_LINEOP_FILE_ENTRY(0, 1, 0, 0, "invalid_parameter_handler.c");
-	CHECK_LINEOP_FILE_ENTRY(1, 2, 0, 0, "interlockedapi.h");
-	CHECK_LINEOP_FILE_ENTRY(2, 3, 0, 0, "intrin-impl.h");
+	CHECK_LINEOP_FILE_ENTRY(1, 2, 0, 0, "interlockedapi.hpp");
+	CHECK_LINEOP_FILE_ENTRY(2, 3, 0, 0, "intrin-impl.hpp");
 
-	CHECK_LINEOP_FILE_ENTRY(14, 2, 0, 0, "wtypesbase.h");
-	CHECK_LINEOP_FILE_ENTRY(15, 2, 0, 0, "unknwnbase.h");
-	CHECK_LINEOP_FILE_ENTRY(16, 2, 0, 0, "objidlbase.h");
+	CHECK_LINEOP_FILE_ENTRY(14, 2, 0, 0, "wtypesbase.hpp");
+	CHECK_LINEOP_FILE_ENTRY(15, 2, 0, 0, "unknwnbase.hpp");
+	CHECK_LINEOP_FILE_ENTRY(16, 2, 0, 0, "objidlbase.hpp");
 
-	CHECK_LINEOP_FILE_ENTRY(29, 2, 0, 0, "winsmcrd.h");
-	CHECK_LINEOP_FILE_ENTRY(30, 2, 0, 0, "winscard.h");
-	CHECK_LINEOP_FILE_ENTRY(31, 2, 0, 0, "commdlg.h");
+	CHECK_LINEOP_FILE_ENTRY(29, 2, 0, 0, "winsmcrd.hpp");
+	CHECK_LINEOP_FILE_ENTRY(30, 2, 0, 0, "winscard.hpp");
+	CHECK_LINEOP_FILE_ENTRY(31, 2, 0, 0, "commdlg.hpp");
 
 	CHECK_LINEOP_OPCODE(0, DW_LNS_set_column);
 	CHECK_LINEOP_OPCODE(1, DW_LNE_set_address);
@@ -606,9 +606,9 @@ bool test_dwarf2_cpp_many_comp_units(void) {
 		{ 0x12b5, 23, 23, "main.cpp" },
 		{ 0x12ba, 23, 24, "main.cpp" },
 		{ 0x12bf, 24, 1, "main.cpp" },
-		{ 0x12c6, 2, 3, "mammal.h" },
-		{ 0x12d2, 2, 12, "mammal.h" },
-		{ 0x12e0, 2, 15, "mammal.h" },
+		{ 0x12c6, 2, 3, "mammal.hpp" },
+		{ 0x12d2, 2, 12, "mammal.hpp" },
+		{ 0x12e0, 2, 15, "mammal.hpp" },
 		{ 0x12e3, 0, 0, NULL },
 		{ 0x12e4, 4, 3, "main.cpp" },
 		{ 0x12f4, 4, 9, "main.cpp" },
@@ -714,9 +714,9 @@ bool test_dwarf4_cpp_many_comp_units(void) {
 		{ 0x4012f0, 12, 0, "../main.cpp" },
 		{ 0x4012f8, 12, 23, "../main.cpp" },
 		{ 0x4012ff, 0, 0, NULL },
-		{ 0x401300, 2, 0, "../mammal.h" },
-		{ 0x40131c, 2, 12, "../mammal.h" },
-		{ 0x40131f, 2, 15, "../mammal.h" },
+		{ 0x401300, 2, 0, "../mammal.hpp" },
+		{ 0x40131c, 2, 12, "../mammal.hpp" },
+		{ 0x40131f, 2, 15, "../mammal.hpp" },
 		{ 0x401321, 0, 0, NULL },
 		{ 0x401330, 5, 0, "../main.cpp" },
 		{ 0x401340, 5, 19, "../main.cpp" },
@@ -822,11 +822,11 @@ bool test_big_endian_dwarf2(void) {
 		{ 0x10000f34, 34, 17, "/home/hound/Projects/r2test/dwarf/cpp/sudoku_cpp/grid.cpp" },
 		{ 0x10000f38, 53, 22, "/home/hound/Projects/r2test/dwarf/cpp/sudoku_cpp/grid.cpp" },
 		{ 0x10000f44, 38, 54, "/home/hound/Projects/r2test/dwarf/cpp/sudoku_cpp/grid.cpp" },
-		{ 0x10000f44, 335, 2, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/char_traits.h" },
+		{ 0x10000f44, 335, 2, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/char_traits.hpp" },
 		{ 0x10000f44, 570, 18, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/ostream" },
 		{ 0x10000f5c, 572, 14, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/ostream" },
 		{ 0x10000f60, 42, 22, "/home/hound/Projects/r2test/dwarf/cpp/sudoku_cpp/grid.cpp" },
-		{ 0x10000f60, 335, 2, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/char_traits.h" },
+		{ 0x10000f60, 335, 2, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/char_traits.hpp" },
 		{ 0x10000f60, 570, 18, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/ostream" },
 		{ 0x10000f78, 53, 13, "/home/hound/Projects/r2test/dwarf/cpp/sudoku_cpp/grid.cpp" },
 		{ 0x10000f78, 53, 18, "/home/hound/Projects/r2test/dwarf/cpp/sudoku_cpp/grid.cpp" },
@@ -839,49 +839,49 @@ bool test_big_endian_dwarf2(void) {
 		{ 0x10000fb4, 38, 17, "/home/hound/Projects/r2test/dwarf/cpp/sudoku_cpp/grid.cpp" },
 		{ 0x10000fc0, 38, 35, "/home/hound/Projects/r2test/dwarf/cpp/sudoku_cpp/grid.cpp" },
 		{ 0x10000fcc, 39, 22, "/home/hound/Projects/r2test/dwarf/cpp/sudoku_cpp/grid.cpp" },
-		{ 0x10000fcc, 335, 2, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/char_traits.h" },
+		{ 0x10000fcc, 335, 2, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/char_traits.hpp" },
 		{ 0x10000fcc, 570, 18, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/ostream" },
 		{ 0x10000fe4, 40, 17, "/home/hound/Projects/r2test/dwarf/cpp/sudoku_cpp/grid.cpp" },
-		{ 0x10000fe4, 335, 2, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/char_traits.h" },
+		{ 0x10000fe4, 335, 2, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/char_traits.hpp" },
 		{ 0x10000fe4, 570, 18, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/ostream" },
 		{ 0x10000ffc, 41, 17, "/home/hound/Projects/r2test/dwarf/cpp/sudoku_cpp/grid.cpp" },
 		{ 0x10001008, 41, 35, "/home/hound/Projects/r2test/dwarf/cpp/sudoku_cpp/grid.cpp" },
 		{ 0x10001014, 41, 54, "/home/hound/Projects/r2test/dwarf/cpp/sudoku_cpp/grid.cpp" },
-		{ 0x10001014, 335, 2, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/char_traits.h" },
+		{ 0x10001014, 335, 2, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/char_traits.hpp" },
 		{ 0x10001014, 570, 18, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/ostream" },
 		{ 0x1000102c, 572, 14, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/ostream" },
 		{ 0x10001030, 46, 17, "/home/hound/Projects/r2test/dwarf/cpp/sudoku_cpp/grid.cpp" },
 		{ 0x1000103c, 46, 35, "/home/hound/Projects/r2test/dwarf/cpp/sudoku_cpp/grid.cpp" },
 		{ 0x10001048, 47, 22, "/home/hound/Projects/r2test/dwarf/cpp/sudoku_cpp/grid.cpp" },
-		{ 0x10001048, 335, 2, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/char_traits.h" },
+		{ 0x10001048, 335, 2, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/char_traits.hpp" },
 		{ 0x10001048, 570, 18, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/ostream" },
 		{ 0x10001060, 48, 17, "/home/hound/Projects/r2test/dwarf/cpp/sudoku_cpp/grid.cpp" },
 		{ 0x10001060, 48, 34, "/home/hound/Projects/r2test/dwarf/cpp/sudoku_cpp/grid.cpp" },
 		{ 0x10001074, 49, 17, "/home/hound/Projects/r2test/dwarf/cpp/sudoku_cpp/grid.cpp" },
 		{ 0x10001080, 49, 35, "/home/hound/Projects/r2test/dwarf/cpp/sudoku_cpp/grid.cpp" },
 		{ 0x1000108c, 50, 22, "/home/hound/Projects/r2test/dwarf/cpp/sudoku_cpp/grid.cpp" },
-		{ 0x1000108c, 335, 2, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/char_traits.h" },
+		{ 0x1000108c, 335, 2, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/char_traits.hpp" },
 		{ 0x1000108c, 570, 18, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/ostream" },
 		{ 0x100010a4, 572, 14, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/ostream" },
 		{ 0x100010a8, 46, 54, "/home/hound/Projects/r2test/dwarf/cpp/sudoku_cpp/grid.cpp" },
-		{ 0x100010a8, 335, 2, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/char_traits.h" },
+		{ 0x100010a8, 335, 2, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/char_traits.hpp" },
 		{ 0x100010a8, 570, 18, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/ostream" },
 		{ 0x100010c0, 572, 14, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/ostream" },
 		{ 0x100010c4, 49, 54, "/home/hound/Projects/r2test/dwarf/cpp/sudoku_cpp/grid.cpp" },
-		{ 0x100010c4, 335, 2, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/char_traits.h" },
+		{ 0x100010c4, 335, 2, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/char_traits.hpp" },
 		{ 0x100010c4, 570, 18, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/ostream" },
 		{ 0x100010dc, 572, 14, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/ostream" },
 		{ 0x100010e0, 53, 32, "/home/hound/Projects/r2test/dwarf/cpp/sudoku_cpp/grid.cpp" },
-		{ 0x100010e0, 335, 2, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/char_traits.h" },
+		{ 0x100010e0, 335, 2, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/char_traits.hpp" },
 		{ 0x100010e0, 570, 18, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/ostream" },
 		{ 0x100010f8, 572, 14, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/ostream" },
 		{ 0x100010fc, 54, 24, "/home/hound/Projects/r2test/dwarf/cpp/sudoku_cpp/grid.cpp" },
 		{ 0x100010fc, 600, 19, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/ostream" },
-		{ 0x10001108, 450, 30, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/basic_ios.h" },
-		{ 0x10001114, 49, 7, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/basic_ios.h" },
-		{ 0x1000111c, 874, 2, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.h" },
-		{ 0x10001128, 875, 4, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.h" },
-		{ 0x10001128, 875, 51, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.h" },
+		{ 0x10001108, 450, 30, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/basic_ios.hpp" },
+		{ 0x10001114, 49, 7, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/basic_ios.hpp" },
+		{ 0x1000111c, 874, 2, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.hpp" },
+		{ 0x10001128, 875, 4, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.hpp" },
+		{ 0x10001128, 875, 51, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.hpp" },
 		{ 0x1000112c, 600, 19, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/ostream" },
 		{ 0x1000113c, 622, 25, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/ostream" },
 		{ 0x10001144, 55, 13, "/home/hound/Projects/r2test/dwarf/cpp/sudoku_cpp/grid.cpp" },
@@ -894,30 +894,30 @@ bool test_big_endian_dwarf2(void) {
 		{ 0x10001178, 34, 26, "/home/hound/Projects/r2test/dwarf/cpp/sudoku_cpp/grid.cpp" },
 		{ 0x1000117c, 34, 17, "/home/hound/Projects/r2test/dwarf/cpp/sudoku_cpp/grid.cpp" },
 		{ 0x10001180, 570, 18, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/ostream" },
-		{ 0x100011ac, 50, 18, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/basic_ios.h" },
-		{ 0x100011b4, 876, 2, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.h" },
-		{ 0x100011b4, 876, 21, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.h" },
-		{ 0x100011c0, 877, 2, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.h" },
-		{ 0x100011c0, 877, 27, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.h" },
-		{ 0x100011c4, 877, 23, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.h" },
-		{ 0x100011e0, 877, 27, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.h" },
+		{ 0x100011ac, 50, 18, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/basic_ios.hpp" },
+		{ 0x100011b4, 876, 2, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.hpp" },
+		{ 0x100011b4, 876, 21, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.hpp" },
+		{ 0x100011c0, 877, 2, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.hpp" },
+		{ 0x100011c0, 877, 27, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.hpp" },
+		{ 0x100011c4, 877, 23, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.hpp" },
+		{ 0x100011e0, 877, 27, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.hpp" },
 		{ 0x100011e4, 55, 42, "/home/hound/Projects/r2test/dwarf/cpp/sudoku_cpp/grid.cpp" },
 		{ 0x100011e4, 600, 19, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/ostream" },
-		{ 0x100011f0, 450, 30, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/basic_ios.h" },
-		{ 0x100011fc, 49, 7, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/basic_ios.h" },
-		{ 0x10001204, 874, 2, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.h" },
-		{ 0x10001210, 875, 4, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.h" },
-		{ 0x10001210, 875, 51, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.h" },
+		{ 0x100011f0, 450, 30, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/basic_ios.hpp" },
+		{ 0x100011fc, 49, 7, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/basic_ios.hpp" },
+		{ 0x10001204, 874, 2, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.hpp" },
+		{ 0x10001210, 875, 4, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.hpp" },
+		{ 0x10001210, 875, 51, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.hpp" },
 		{ 0x10001214, 600, 19, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/ostream" },
 		{ 0x10001224, 622, 25, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/ostream" },
 		{ 0x1000122c, 600, 46, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/ostream" },
-		{ 0x10001230, 50, 18, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/basic_ios.h" },
-		{ 0x10001238, 876, 2, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.h" },
-		{ 0x10001238, 876, 21, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.h" },
-		{ 0x10001244, 877, 2, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.h" },
-		{ 0x10001244, 877, 27, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.h" },
-		{ 0x10001248, 877, 23, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.h" },
-		{ 0x10001264, 877, 27, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.h" },
+		{ 0x10001230, 50, 18, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/basic_ios.hpp" },
+		{ 0x10001238, 876, 2, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.hpp" },
+		{ 0x10001238, 876, 21, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.hpp" },
+		{ 0x10001244, 877, 2, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.hpp" },
+		{ 0x10001244, 877, 27, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.hpp" },
+		{ 0x10001248, 877, 23, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.hpp" },
+		{ 0x10001264, 877, 27, "/home/hound/Crosscompilation/powerpc64-linux-musl-cross/powerpc64-linux-musl/include/c++/9.3.0/bits/locale_facets.hpp" },
 		{ 0x10001268, 58, 1, "/home/hound/Projects/r2test/dwarf/cpp/sudoku_cpp/grid.cpp" },
 		{ 0x100012bc, 61, 1, "/home/hound/Projects/r2test/dwarf/cpp/sudoku_cpp/grid.cpp" },
 		{ 0x100012bc, 62, 5, "/home/hound/Projects/r2test/dwarf/cpp/sudoku_cpp/grid.cpp" },

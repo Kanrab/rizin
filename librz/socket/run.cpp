@@ -8,52 +8,52 @@
 #include <stdlib.h>
 #include <string.h>
 #include <fcntl.h>
-#include <rz_socket.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_cons.h>
+#include <rz_socket.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_cons.hpp>
 #include <sys/stat.h>
 #include <sys/types.h>
 
 #if __APPLE__ && HAVE_FORK
-#include <spawn.h>
-#include <sys/wait.h>
-#include <mach/exception_types.h>
-#include <mach/mach_init.h>
-#include <mach/mach_port.h>
-#include <mach/mach_traps.h>
-#include <mach/task.h>
-#include <mach/task_info.h>
-#include <mach/thread_act.h>
-#include <mach/thread_info.h>
-#include <mach/vm_map.h>
-#include <mach-o/loader.h>
-#include <mach-o/nlist.h>
+#include <spawn.hpp>
+#include <sys/wait.hpp>
+#include <mach/exception_types.hpp>
+#include <mach/mach_init.hpp>
+#include <mach/mach_port.hpp>
+#include <mach/mach_traps.hpp>
+#include <mach/task.hpp>
+#include <mach/task_info.hpp>
+#include <mach/thread_act.hpp>
+#include <mach/thread_info.hpp>
+#include <mach/vm_map.hpp>
+#include <mach-o/loader.hpp>
+#include <mach-o/nlist.hpp>
 #endif
 
 #if HAVE_OPENPTY && HAVE_FORKPTY && HAVE_LOGIN_TTY
 #if defined(__APPLE__) || defined(__NetBSD__) || defined(__OpenBSD__)
-#include <util.h>
+#include <util.hpp>
 #elif defined(__FreeBSD__) || defined(__DragonFly__)
-#include <libutil.h>
+#include <libutil.hpp>
 #else
-#include <pty.h>
-#include <utmp.h>
+#include <pty.hpp>
+#include <utmp.hpp>
 #endif
 #endif
 
 #if __UNIX__
-#include <sys/ioctl.h>
-#include <sys/resource.h>
-#include <grp.h>
-#include <errno.h>
+#include <sys/ioctl.hpp>
+#include <sys/resource.hpp>
+#include <grp.hpp>
+#include <errno.hpp>
 #if defined(__sun)
-#include <sys/filio.h>
+#include <sys/filio.hpp>
 #endif /* __sun */
 #endif /* __UNIX__ */
 #ifdef _MSC_VER
-#include <direct.h> // to compile chdir in msvc windows
-#include <process.h> // to compile execv in msvc windows
+#include <direct.hpp> // to compile chdir in msvc windows
+#include <process.hpp> // to compile execv in msvc windows
 #define pid_t int
 #endif
 
@@ -1071,7 +1071,7 @@ RZ_API int rz_run_start(RzRunProfile *p) {
 		char **envp = rz_sys_get_environ();
 		short spflags = POSIX_SPAWN_SETEXEC;
 
-		// https://opensource.apple.com/source/gdb/gdb-2831/src/gdb/macosx/macosx-nat-inferior.c.auto.html
+		// https://opensource.apple.com/source/gdb/gdb-2831/src/gdb/macosx/macosx-nat-inferior.c.auto.hpptml
 		if (p->_aslr != -1 && p->_aslr) {
 #define _POSIX_SPAWN_DISABLE_ASLR 0x0100
 			spflags |= _POSIX_SPAWN_DISABLE_ASLR;

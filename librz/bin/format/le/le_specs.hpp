@@ -4,7 +4,7 @@
 
 #ifndef LE_SPECS_H
 #define LE_SPECS_H
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 typedef enum {
 	ENTRY_EMPTY = 0,

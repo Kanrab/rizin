@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: 2014 defragger <rlaemmert@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "arch.h"
-#include "gdbclient/responses.h"
-#include "gdbclient/core.h"
-#include "gdbr_common.h"
-#include "utils.h"
-#include "rz_util/rz_str.h"
+#include "arch.hpp"
+#include "gdbclient/responses.hpp"
+#include "gdbclient/core.hpp"
+#include "gdbr_common.hpp"
+#include "utils.hpp"
+#include "rz_util/rz_str.hpp"
 
 int handle_g(libgdbr_t *g) {
 	if (unpack_hex(g->data, g->data_len, g->data) < 0) {
@@ -182,8 +182,8 @@ int handle_vFile_close(libgdbr_t *g) {
 	return send_ack(g);
 }
 
-#include <rz_debug.h>
-#include <gdbclient/commands.h>
+#include <rz_debug.hpp>
+#include <gdbclient/commands.hpp>
 
 static int stop_reason_exit(libgdbr_t *g) {
 	int status = 0, pid = g->pid;
@@ -365,7 +365,7 @@ int handle_stop_reason(libgdbr_t *g) {
 				continue;
 			}
 			if (rz_str_startswith(ptr1, "hwbreak")) {
-				g->stop_reason.hwbreak = true;
+				g->stop_reason.hppwbreak = true;
 				continue;
 			}
 			if (rz_str_startswith(ptr1, "create")) {

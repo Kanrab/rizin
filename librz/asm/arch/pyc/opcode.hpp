@@ -5,10 +5,10 @@
 #ifndef OPCODE_H
 #define OPCODE_H
 
-#include <rz_types.h>
-#include <rz_list.h>
-#include <rz_util.h>
-#include <rz_analysis.h>
+#include <rz_types.hpp>
+#include <rz_list.hpp>
+#include <rz_util.hpp>
+#include <rz_analysis.hpp>
 
 #define OBJECT_SIZE_ON_STACK 1
 

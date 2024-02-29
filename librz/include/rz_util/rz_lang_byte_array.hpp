@@ -5,7 +5,7 @@
 #ifndef RZ_LANG_BYTE_ARRAY_H
 #define RZ_LANG_BYTE_ARRAY_H
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 #ifdef __cplusplus
 extern "C" {

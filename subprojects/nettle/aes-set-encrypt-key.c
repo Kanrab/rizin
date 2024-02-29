@@ -37,12 +37,12 @@
 */
 
 #if HAVE_CONFIG_H
-# include "config.h"
+# include "config.hpp"
 #endif
 
 #include <stdlib.h>
 
-#include "aes.h"
+#include "aes.hpp"
 
 void
 aes_set_encrypt_key(struct aes_ctx *ctx,

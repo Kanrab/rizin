@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2017-2020 condret <condr3t@protonmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_io.h>
+#include <rz_io.hpp>
 
 RZ_API int rz_io_fd_open(RzIO *io, const char *uri, int flags, int mode) {
 	RzIODesc *desc = rz_io_desc_open(io, uri, flags, mode);

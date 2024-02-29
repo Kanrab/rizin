@@ -4,7 +4,7 @@
 #ifndef _TRANSPORT_H_
 #define _TRANSPORT_H_
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 #include <stdint.h>
 
 #ifndef HAVE_EPRINTF

@@ -3,14 +3,14 @@
 
 #ifndef RZ_BIN_JAVA_CLASS_ATTRIBUTE_H
 #define RZ_BIN_JAVA_CLASS_ATTRIBUTE_H
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_bin.h>
-#include "class_exceptions.h"
-#include "class_line_number.h"
-#include "class_local_variable.h"
-#include "class_module.h"
-#include "class_const_pool.h"
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_bin.hpp>
+#include "class_exceptions.hpp"
+#include "class_line_number.hpp"
+#include "class_local_variable.hpp"
+#include "class_module.hpp"
+#include "class_const_pool.hpp"
 
 typedef enum {
 	ATTRIBUTE_TYPE_INVALID = 0,

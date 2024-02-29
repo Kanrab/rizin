@@ -8,7 +8,7 @@
 extern "C" {
 #endif
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 RZ_API bool rz_calculate_luhn_value(const char *data, ut64 *result);
 

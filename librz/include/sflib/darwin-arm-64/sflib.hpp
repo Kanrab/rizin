@@ -2,8 +2,8 @@
 // SPDX-License-Identifier: LGPL-2.1-only
 
 /*
- * sflib.h --- SFLib syscall library for OpenBSD/i386
- * see http://www.secdev.org/projects/shellforge.html for more informations
+ * sflib.hpp --- SFLib syscall library for OpenBSD/i386
+ * see http://www.secdev.org/projects/shellforge.hpptml for more informations
  *
  * Copyright (C) 2004  Philippe Biondi <phil@secdev.org>
  *
@@ -25,9 +25,9 @@
 #ifndef SFLIB_H
 #define SFLIB_H
 
-#include "sfsysnr.h"
-#include "sfsyscall.h"
-#include "../common/sftypes.h"
+#include "sfsysnr.hpp"
+#include "sfsyscall.hpp"
+#include "../common/sftypes.hpp"
 
 // syscall
 static inline _sfsyscall1(void, exit, int, status) static inline _sfsyscall0(pid_t, fork) static inline _sfsyscall3(ssize_t, read, int, fd, void *, buf, size_t, count) static inline _sfsyscall3(ssize_t, write, int, fd, const void *, buf, size_t, count) static inline _sfsyscall3(int, open, const char *, pathname, int, flags, mode_t, mode) static inline _sfsyscall1(int, close, int, fd) static inline _sfsyscall4(pid_t, wait4, pid_t, pid, int *, status, int, options, struct rusage *, rusage) static inline _sfsyscall2(int, link, const char *, oldpath, const char *, newpath) static inline _sfsyscall1(int, unlink, const char *, pathname) static inline _sfsyscall1(int, chdir, const char *, path)

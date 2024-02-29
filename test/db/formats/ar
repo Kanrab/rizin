@@ -21,10 +21,10 @@ FILE=ar://bins/ar/libgdbr.a//xml.o
 CMDS=px 64
 EXPECT=<<EOF
 - offset -   0 1  2 3  4 5  6 7  8 9  A B  C D  E F  0123456789ABCDEF
-0x08000040  5548 89e5 4883 ec30 4889 7dd8 6448 8b04  UH..H..0H.}.dH..
-0x08000050  2528 0000 0048 8945 f831 c048 8b45 d80f  %(...H.E.1.H.E..
+0x08000040  5548 89e5 4883 ec30 4889 7dd8 6448 8b04  UH..hpp..0H.}.dH..
+0x08000050  2528 0000 0048 8945 f831 c048 8b45 d80f  %(...hpp.E.1.hpp.E..
 0x08000060  b640 7e83 f001 84c0 7407 b8ff ffff ffeb  .@~.....t.......
-0x08000070  5148 8d55 e848 8b45 d848 8d35 301e 0000  QH.U.H.E.H.50...
+0x08000070  5148 8d55 e848 8b45 d848 8d35 301e 0000  QH.U.hpp.E.hpp.50...
 EOF
 RUN
 
@@ -33,10 +33,10 @@ FILE=ar://bins/ar/libgdbr.a//core.o
 CMDS=px 64
 EXPECT=<<EOF
 - offset -   0 1  2 3  4 5  6 7  8 9  A B  C D  E F  0123456789ABCDEF
-0x08000040  5548 89e5 4883 ec20 4889 7de8 bf80 0000  UH..H.. H.}.....
-0x08000050  00e8 8285 0000 4889 45f8 4883 7df8 0075  ......H.E.H.}..u
-0x08000060  07b8 ffff ffff eb77 488b 45e8 488b 4020  .......wH.E.H.@ 
-0x08000070  8d50 ff48 8b45 f889 d148 8d15 d821 0000  .P.H.E...H...!..
+0x08000040  5548 89e5 4883 ec20 4889 7de8 bf80 0000  UH..hpp.. H.}.....
+0x08000050  00e8 8285 0000 4889 45f8 4883 7df8 0075  ......hpp.E.hpp.}..u
+0x08000060  07b8 ffff ffff eb77 488b 45e8 488b 4020  .......wH.E.hpp.@ 
+0x08000070  8d50 ff48 8b45 f889 d148 8d15 d821 0000  .P.hpp.E...hpp...!..
 EOF
 RUN
 
@@ -228,42 +228,42 @@ nth paddr      vaddr      bind   type   size lib name
 42  ---------- ---------- GLOBAL NOTYPE 0        imp.snprintf
 43  ---------- ---------- GLOBAL NOTYPE 0        imp.r_socket_connect_serial
 44  ---------- ---------- GLOBAL NOTYPE 0        imp.r_socket_connect
-45  ---------- ---------- GLOBAL NOTYPE 0        imp.handle_qSupported
+45  ---------- ---------- GLOBAL NOTYPE 0        imp.hppandle_qSupported
 46  ---------- ---------- GLOBAL NOTYPE 0        imp.strncmp
-47  ---------- ---------- GLOBAL NOTYPE 0        imp.handle_qC
+47  ---------- ---------- GLOBAL NOTYPE 0        imp.hppandle_qC
 50  ---------- ---------- GLOBAL NOTYPE 0        imp.strcmp
 52  ---------- ---------- GLOBAL NOTYPE 0        imp.r_socket_close
 53  ---------- ---------- GLOBAL NOTYPE 0        imp.free
 54  ---------- ---------- GLOBAL NOTYPE 0        imp.write_thread_id
 55  ---------- ---------- GLOBAL NOTYPE 0        imp.strtok
-57  ---------- ---------- GLOBAL NOTYPE 0        imp.handle_stop_reason
+57  ---------- ---------- GLOBAL NOTYPE 0        imp.hppandle_stop_reason
 60  ---------- ---------- GLOBAL NOTYPE 0        imp.calloc
-61  ---------- ---------- GLOBAL NOTYPE 0        imp.handle_attach
-66  ---------- ---------- GLOBAL NOTYPE 0        imp.handle_lldb_read_reg
+61  ---------- ---------- GLOBAL NOTYPE 0        imp.hppandle_attach
+66  ---------- ---------- GLOBAL NOTYPE 0        imp.hppandle_lldb_read_reg
 67  ---------- ---------- GLOBAL NOTYPE 0        imp.memcpy
-69  ---------- ---------- GLOBAL NOTYPE 0        imp.handle_g
+69  ---------- ---------- GLOBAL NOTYPE 0        imp.hppandle_g
 71  ---------- ---------- GLOBAL NOTYPE 0        imp.stderr
 72  ---------- ---------- GLOBAL NOTYPE 0        imp.fprintf
-73  ---------- ---------- GLOBAL NOTYPE 0        imp.handle_m
+73  ---------- ---------- GLOBAL NOTYPE 0        imp.hppandle_m
 74  ---------- ---------- GLOBAL NOTYPE 0        imp.memmove
 76  ---------- ---------- GLOBAL NOTYPE 0        imp.pack_hex
-77  ---------- ---------- GLOBAL NOTYPE 0        imp.handle_M
+77  ---------- ---------- GLOBAL NOTYPE 0        imp.hppandle_M
 81  ---------- ---------- GLOBAL NOTYPE 0        imp.strncpy
-83  ---------- ---------- GLOBAL NOTYPE 0        imp.handle_G
-85  ---------- ---------- GLOBAL NOTYPE 0        imp.handle_P
+83  ---------- ---------- GLOBAL NOTYPE 0        imp.hppandle_G
+85  ---------- ---------- GLOBAL NOTYPE 0        imp.hppandle_P
 88  ---------- ---------- GLOBAL NOTYPE 0        imp.strlen
 89  ---------- ---------- GLOBAL NOTYPE 0        imp.strchr
 90  ---------- ---------- GLOBAL NOTYPE 0        imp.strcpy
-91  ---------- ---------- GLOBAL NOTYPE 0        imp.hex2char
-93  ---------- ---------- GLOBAL NOTYPE 0        imp.hexdump
+91  ---------- ---------- GLOBAL NOTYPE 0        imp.hppex2char
+93  ---------- ---------- GLOBAL NOTYPE 0        imp.hppexdump
 94  ---------- ---------- GLOBAL NOTYPE 0        imp.r_socket_write
 95  ---------- ---------- GLOBAL NOTYPE 0        imp.signal
-96  ---------- ---------- GLOBAL NOTYPE 0        imp.handle_cont
-98  ---------- ---------- GLOBAL NOTYPE 0        imp.handle_setbp
-104 ---------- ---------- GLOBAL NOTYPE 0        imp.handle_removebp
-106 ---------- ---------- GLOBAL NOTYPE 0        imp.handle_vFile_open
-108 ---------- ---------- GLOBAL NOTYPE 0        imp.handle_vFile_pread
-110 ---------- ---------- GLOBAL NOTYPE 0        imp.handle_vFile_close
+96  ---------- ---------- GLOBAL NOTYPE 0        imp.hppandle_cont
+98  ---------- ---------- GLOBAL NOTYPE 0        imp.hppandle_setbp
+104 ---------- ---------- GLOBAL NOTYPE 0        imp.hppandle_removebp
+106 ---------- ---------- GLOBAL NOTYPE 0        imp.hppandle_vFile_open
+108 ---------- ---------- GLOBAL NOTYPE 0        imp.hppandle_vFile_pread
+110 ---------- ---------- GLOBAL NOTYPE 0        imp.hppandle_vFile_close
 113 ---------- ---------- GLOBAL NOTYPE 0        imp.__ctype_b_loc
 114 ---------- ---------- GLOBAL NOTYPE 0        imp.unpack_hex
 116 ---------- ---------- GLOBAL NOTYPE 0        imp.r_str_append

@@ -26,10 +26,10 @@
 #ifndef _LIBELF_H_
 #define _LIBELF_H_ 1
 
-#include "elf/common.h"
-#include "elf/internal.h"
-#include "elf/external.h"
-#include "bfdlink.h"
+#include "elf/common.hpp"
+#include "elf/internal.hpp"
+#include "elf/external.hpp"
+#include "bfdlink.hpp"
 
 /* The number of entries in a section is its size divided by the size
    of a single entry.  This is normally only applicable to reloc and
@@ -921,7 +921,7 @@ struct elf_backend_data {
 	const struct ecoff_debug_swap *elf_backend_ecoff_debug_swap;
 
 	/* This function implements `bfd_elf_bfd_from_remote_memory';
-     see elf.c, elfcode.h.  */
+     see elf.c, elfcode.hpp.  */
 	bfd *(*elf_backend_bfd_from_remote_memory)(bfd *templ, bfd_vma ehdr_vma, bfd_vma *loadbasep,
 		int (*target_read_memory)(bfd_vma vma, bfd_byte *myaddr, int len));
 

@@ -1,17 +1,17 @@
 // SPDX-FileCopyrightText: 2022 Rot127 <unisono@quyllur.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "ppc_il.h"
-#include "capstone.h"
-#include "ppc_analysis.h"
-#include <capstone/ppc.h>
-#include <rz_il/rz_il_opcodes.h>
-#include <rz_util/rz_log.h>
-#include <rz_util/rz_assert.h>
-#include <rz_endian.h>
-#include <rz_analysis.h>
-#include <rz_il.h>
-#include <rz_types.h>
+#include "ppc_il.hpp"
+#include "capstone.hpp"
+#include "ppc_analysis.hpp"
+#include <capstone/ppc.hpp>
+#include <rz_il/rz_il_opcodes.hpp>
+#include <rz_util/rz_log.hpp>
+#include <rz_util/rz_assert.hpp>
+#include <rz_endian.hpp>
+#include <rz_analysis.hpp>
+#include <rz_il.hpp>
+#include <rz_types.hpp>
 
 RZ_IPI RzAnalysisILConfig *rz_ppc_cs_64_il_config(bool big_endian) {
 	RzAnalysisILConfig *r = rz_analysis_il_config_new(64, big_endian, 64);
@@ -518,7 +518,7 @@ RZ_IPI bool ppc_decrements_ctr(RZ_BORROW cs_insn *insn, const cs_mode mode) {
 // IL helper BEGIN
 //
 
-#include <rz_il/rz_il_opbuilder_begin.h>
+#include <rz_il/rz_il_opbuilder_begin.hpp>
 
 /**
  * \brief Returns the value of the a bit at position \p pos in CR.
@@ -1114,7 +1114,7 @@ RZ_IPI RZ_OWN RzILOpEffect *ppc_set_xer(RzILOpPure *val, cs_mode mode) {
 	// https://github.com/Rot127/rizin/tree/Examples-ppc-rzil-isav3-regs
 }
 
-#include <rz_il/rz_il_opbuilder_end.h>
+#include <rz_il/rz_il_opbuilder_end.hpp>
 
 //
 // IL helper END

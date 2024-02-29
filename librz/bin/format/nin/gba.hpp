@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2014 condret <condr3t@protonmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 const ut8 lic_gba[] = {
 	0x24, 0xff, 0xae, 0x51, 0x69, 0x9a, 0xa2, 0x21, 0x3d, 0x84, 0x82,

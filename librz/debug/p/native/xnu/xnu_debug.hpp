@@ -11,8 +11,8 @@
 #ifndef _XNU_DEBUG_H
 #define _XNU_DEBUG_H
 
-#include <rz_util/rz_log.h>
-#include <rz_debug.h>
+#include <rz_util/rz_log.hpp>
+#include <rz_debug.hpp>
 
 #define LOG_MACH_ERROR(name, rc) \
 	do { \
@@ -42,57 +42,57 @@
 #define PT_FIRSTMACH   32 /* for machine-specific requests */
 int ptrace(int _request, pid_t _pid, caddr_t _addr, int _data);
 #else
-#include <sys/ptrace.h>
+#include <sys/ptrace.hpp>
 #if !__POWERPC__
-#include <sys/proc_info.h>
-#include <libproc.h>
+#include <sys/proc_info.hpp>
+#include <libproc.hpp>
 #define HAS_LIBPROC
 #endif
 #endif
 #include <sys/types.h>
-#include <sys/wait.h>
-#include <mach/exception_types.h>
-#include <mach/mach_init.h>
-#include <mach/mach_port.h>
-#include <mach/mach_interface.h>
-#include <mach/mach_traps.h>
-#include <mach/mach_types.h>
-// no available for ios #include <mach/mach_vm.h>
-#include <mach/mach_error.h>
-#include <mach/task.h>
-#include <mach/task_info.h>
-#include <mach/thread_act.h>
-#include <mach/thread_info.h>
-#include <mach/vm_map.h>
-#include <mach-o/loader.h>
-#include <mach-o/nlist.h>
-#include <errno.h>
-#include <unistd.h>
-#include <sys/sysctl.h>
+#include <sys/wait.hpp>
+#include <mach/exception_types.hpp>
+#include <mach/mach_init.hpp>
+#include <mach/mach_port.hpp>
+#include <mach/mach_interface.hpp>
+#include <mach/mach_traps.hpp>
+#include <mach/mach_types.hpp>
+// no available for ios #include <mach/mach_vm.hpp>
+#include <mach/mach_error.hpp>
+#include <mach/task.hpp>
+#include <mach/task_info.hpp>
+#include <mach/thread_act.hpp>
+#include <mach/thread_info.hpp>
+#include <mach/vm_map.hpp>
+#include <mach-o/loader.hpp>
+#include <mach-o/nlist.hpp>
+#include <errno.hpp>
+#include <unistd.hpp>
+#include <sys/sysctl.hpp>
 #include <sys/fcntl.h>
-#include <sys/proc.h>
+#include <sys/proc.hpp>
 
 // G3
 #if __POWERPC__
-#include <sys/ptrace.h>
+#include <sys/ptrace.hpp>
 #include <sys/types.h>
-#include <sys/wait.h>
-#include <mach/ppc/_types.h>
-#include <mach/ppc/thread_status.h>
+#include <sys/wait.hpp>
+#include <mach/ppc/_types.hpp>
+#include <mach/ppc/thread_status.hpp>
 // iPhone5
 #elif __aarch64
-#include <mach/aarch64/thread_status.h>
+#include <mach/aarch64/thread_status.hpp>
 // iPhone
 #elif __arm
-#include <mach/arm/thread_status.h>
+#include <mach/arm/thread_status.hpp>
 #elif __arm64
-#include <mach/arm/thread_status.h>
+#include <mach/arm/thread_status.hpp>
 #else
 // iMac
 /* x86 32/64 */
-#include <mach/i386/thread_status.h>
-#include <sys/ucontext.h>
-#include <mach/i386/_structs.h>
+#include <mach/i386/thread_status.hpp>
+#include <sys/ucontext.hpp>
+#include <mach/i386/_structs.hpp>
 
 // APPLE
 

@@ -3,7 +3,7 @@ if get_option('enable_tests')
   test_conf_data.set_quoted('TEST_BUILD_TYPES_DIR', fs.as_posix(types_build_dir))
   test_config_h = configure_file(
     input: 'test_config.h.in',
-    output: 'test_config.h',
+    output: 'test_config.hpp',
     configuration: test_conf_data,
   )
 

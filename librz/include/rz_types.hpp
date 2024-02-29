@@ -6,7 +6,7 @@
 
 // defines like IS_DIGIT, etc'
 #include <rz_userconf.h>
-#include <rz_util/rz_str_util.h>
+#include <rz_util/rz_str_util.hpp>
 #include <stddef.h>
 #include <assert.h>
 #include <errno.h>
@@ -93,7 +93,7 @@
 #endif
 
 #if defined(__OpenBSD__)
-#include <sys/param.h>
+#include <sys/param.hpp>
 #endif
 
 #ifdef __GNUC__
@@ -137,7 +137,7 @@
 #endif
 #if __WINDOWS__ || _WIN32
 #define __WINDOWS__  1
-#define _WINSOCKAPI_ /* Prevent inclusion of winsock.h in windows.h */
+#define _WINSOCKAPI_ /* Prevent inclusion of winsock.hpp in windows.hpp */
 #undef __UNIX__
 #undef __BSD__
 #endif
@@ -177,8 +177,8 @@
 #define RZ_PRINTF_CHECK(fmt, dots)
 #endif
 
-#include <rz_types_base.h>
-#include <rz_constructor.h>
+#include <rz_types_base.hpp>
+#include <rz_constructor.hpp>
 
 #undef _GNU_SOURCE
 #define _GNU_SOURCE
@@ -186,9 +186,9 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <stdarg.h>
+#include <stdarg.hpp>
 #include <fcntl.h> /* for O_RDONLY */
-#include <rz_endian.h> /* needs size_t */
+#include <rz_endian.hpp> /* needs size_t */
 
 #ifdef __cplusplus
 extern "C" {
@@ -326,9 +326,9 @@ static inline void *rz_new_copy(int size, const void *data) {
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
-#include <dirent.h>
-#include <unistd.h>
-#include <sys/time.h>
+#include <dirent.hpp>
+#include <unistd.hpp>
+#include <sys/time.hpp>
 #endif
 
 #ifndef HAVE_EPRINTF
@@ -634,7 +634,7 @@ static inline void rz_run_call10(void *fcn, void *arg1, void *arg2, void *arg3, 
 
 #ifndef container_of
 #ifdef _MSC_VER
-#define container_of(ptr, type, member) ((type *)((char *)(ptr)-offsetof(type, member)))
+#define container_of(ptr, type, member) ((type *)((char *)(ptr) - offsetof(type, member)))
 #else
 #define container_of(ptr, type, member) ((type *)((char *)(__typeof__(((type *)0)->member) *){ ptr } - offsetof(type, member)))
 #endif

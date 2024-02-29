@@ -4,10 +4,10 @@
 #ifndef RL78_H
 #define RL78_H
 
-#include "rl78_instr.h"
+#include "rl78_instr.hpp"
 
-#include <rz_util.h>
-#include <rz_types.h>
+#include <rz_util.hpp>
+#include <rz_types.hpp>
 
 bool rl78_dis(RL78Instr RZ_OUT *instr, size_t RZ_OUT *bytes_read,
 	const ut8 *buf, size_t buf_len);

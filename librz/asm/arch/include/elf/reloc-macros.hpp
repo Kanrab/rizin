@@ -20,7 +20,7 @@
    along with this program; if not, write to the Free Software Foundation,
    Inc., 51 Franklin Street - Fifth Floor, Boston, MA 02110-1301, USA.  */
 
-/* These macros are used by the various *.h target specific header
+/* These macros are used by the various *.hpp target specific header
    files to either generate an enum containing all the known relocations
    for that target, or if RELOC_MACROS_GEN_FUNC is defined, a recognition
    function is generated instead.  (This is used by binutils/readelf.c)

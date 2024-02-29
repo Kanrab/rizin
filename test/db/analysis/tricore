@@ -289,13 +289,13 @@ s 0x80000004
 pd 30
 EOF
 EXPECT=<<EOF
-            0x80000004      8c80           ld.h  d15, [a8]#0           ; load half word
+            0x80000004      8c80           ld.hpp  d15, [a8]#0           ; load half word
             0x80000006      0000           nop                         ; nop operation
-            0x80000008      8c80           ld.h  d15, [a8]#0           ; load half word
+            0x80000008      8c80           ld.hpp  d15, [a8]#0           ; load half word
             0x8000000a      0000           nop                         ; nop operation
-            0x8000000c      8c80           ld.h  d15, [a8]#0           ; load half word
+            0x8000000c      8c80           ld.hpp  d15, [a8]#0           ; load half word
             0x8000000e      0000           nop                         ; nop operation
-            0x80000010      8c80           ld.h  d15, [a8]#0           ; load half word
+            0x80000010      8c80           ld.hpp  d15, [a8]#0           ; load half word
             0x80000012      0000           nop                         ; nop operation
             0x80000014      85f12000       ld.w  d1, #0xf0000020       ; load word
         ,=< 0x80000018      6f010400       jz.t  d1, 0, 0x80000020     ; jump if zero bit
@@ -541,7 +541,7 @@ EXPECT=<<EOF
 |           0x800843be      st.w  [a14]#-0x2c, d15
 |           0x800843c2      ld.w  d15, [a14]#-0x2c
 |           0x800843c6      mov.a a15, d15
-|           0x800843c8      ld.h  d15, [a15]#4
+|           0x800843c8      ld.hpp  d15, [a15]#4
 |           0x800843ca      eq    d15, d15, #0
 |           0x800843cc      and   d15, #0xff
 |       ,=< 0x800843ce      jnz   d15, 0x800844ca
@@ -552,9 +552,9 @@ EXPECT=<<EOF
 |     ,===< 0x800843da      jeq   d15, 1, 0x8008448a
 |    ,====< 0x800843de      j     0x800844d4
 |    ||`--> 0x800843e0      mov   d15, #0
-|    || |   0x800843e2      st.h  [a14]#-4, d15
+|    || |   0x800843e2      st.hpp  [a14]#-4, d15
 |    || |   0x800843e6      mov   d15, #0
-|    || |   0x800843e8      st.h  [a14]#-2, d15
+|    || |   0x800843e8      st.hpp  [a14]#-2, d15
 |    || |   0x800843ec      mov   d15, #0
 |    || |   0x800843ee      st.b  [a14]#-0x49, d15
 |    || |   0x800843f2      ld.w  d15, [a14]#-0x64
@@ -563,8 +563,8 @@ EXPECT=<<EOF
 |    || |   0x800843fa      st.w  [a14]#-0x30, d15
 |    || |   0x800843fe      ld.w  d15, [a14]#-0x30
 |    || |   0x80084402      mov.a a15, d15
-|    || |   0x80084404      ld.h  d15, [a15]#4
-|    || |   0x80084406      st.h  [a14]#-4, d15
+|    || |   0x80084404      ld.hpp  d15, [a15]#4
+|    || |   0x80084406      st.hpp  [a14]#-4, d15
 |    || |   0x8008440a      ld.w  d15, [a14]#-0x64
 |    || |   0x8008440e      mov.a a15, d15
 |    || |   0x80084410      ld.w  d15, [a15]#0
@@ -579,16 +579,16 @@ EXPECT=<<EOF
 |    || |   0x8008442a      ld.bu d15, [a14]#-0x49
 |    || |   0x8008442e      extr.u d15, d15, #0, #0x10
 |    || |   0x80084432      rsub  d15, d15, #0x10
-|    || |   0x80084436      st.h  [a14]#-2, d15
-|    || |   0x8008443a      ld.hu d15, [a14]#-2
-|    || |   0x8008443e      ld.hu d2, [a14]#-4
+|    || |   0x80084436      st.hpp  [a14]#-2, d15
+|    || |   0x8008443a      ld.hppu d15, [a14]#-2
+|    || |   0x8008443e      ld.hppu d2, [a14]#-4
 |    ||,==< 0x80084442      jge.u d2, d15, 0x8008444e
-|    ||||   0x80084446      ld.h  d15, [a14]#-4
-|    ||||   0x8008444a      st.h  [a14]#-2, d15
+|    ||||   0x80084446      ld.hpp  d15, [a14]#-4
+|    ||||   0x8008444a      st.hpp  [a14]#-2, d15
 |    ||`--> 0x8008444e      ld.w  d15, [a14]#-0x64
 |    || |   0x80084452      mov.a a15, d15
 |    || |   0x80084454      ld.w  d3, [a15]#4
-|    || |   0x80084456      ld.h  d15, [a14]#-2
+|    || |   0x80084456      ld.hpp  d15, [a14]#-2
 |    || |   0x8008445a      mov.d d4, a14
 |    || |   0x8008445c      addi  d2, d4, #-0x48
 |    || |   0x80084460      mov.a a4, d3
@@ -599,7 +599,7 @@ EXPECT=<<EOF
 |    || |   0x8008446c      ld.w  d15, [a14]#-0x64
 |    || |   0x80084470      mov.a a15, d15
 |    || |   0x80084472      ld.w  d3, [a15]#0
-|    || |   0x80084474      ld.hu d15, [a14]#-2
+|    || |   0x80084474      ld.hppu d15, [a14]#-2
 |    || |   0x80084478      mov.d d4, a14
 |    || |   0x8008447a      addi  d2, d4, #-0x48
 |    || |   0x8008447e      mov.a a4, d3

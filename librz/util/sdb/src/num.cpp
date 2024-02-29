@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2011-2016 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: MIT
 
-#include "sdb.h"
-#include <rz_types.h>
+#include "sdb.hpp"
+#include <rz_types.hpp>
 
 // check if key exists and if it's a number.. rename?
 RZ_API bool sdb_num_exists(Sdb *s, const char *key) {

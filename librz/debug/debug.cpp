@@ -4,11 +4,11 @@
 // SPDX-FileCopyrightText: 2009-2018 saucec0de
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_debug.h>
-#include <rz_drx.h>
-#include <rz_core.h>
-#include <rz_windows.h>
-#include <signal.h>
+#include <rz_debug.hpp>
+#include <rz_drx.hpp>
+#include <rz_core.hpp>
+#include <rz_windows.hpp>
+#include <signal.hpp>
 
 RZ_LIB_VERSION(rz_debug);
 

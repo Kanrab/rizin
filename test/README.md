@@ -186,8 +186,8 @@ Rizin, but to test new API or new code we suggest to write small unit tests.
 
 The basic structure of a unit test is the following:
 ```C
-#include <rz_XXXXX.h>
-#include "minunit.h" // Place at the bottom of includes.
+#include <rz_XXXXX.hpp>
+#include "minunit.hpp" // Place at the bottom of includes.
 
 static bool test_my_feature(void) {
 	// code to test the behaviour

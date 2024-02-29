@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: 2014 condret <condr3t@protonmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_asm.h>
+#include <rz_types.hpp>
+#include <rz_asm.hpp>
 #include <stdio.h>
 #include <string.h>
-#include "spc700_opcode_table.h"
+#include "spc700_opcode_table.hpp"
 
 static ut64 spc700_op_size(Spc700ArgType arg) {
 	switch (arg) {

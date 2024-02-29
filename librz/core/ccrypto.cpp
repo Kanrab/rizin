@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2023 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
+#include <rz_core.hpp>
 
 static RzCmdStatus core_crypto_plugin_print(RzCmdStateOutput *state, const RzCryptoPlugin *plugin) {
 	PJ *pj = state->d.pj;

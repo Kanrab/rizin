@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2020 FXTi <zjxiang1998@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include "minunit.h"
+#include <rz_util.hpp>
+#include "minunit.hpp"
 
 static bool test_rz_big_from_to_int(void) {
 	RzNumBig *a = rz_big_new();

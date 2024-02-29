@@ -2,9 +2,9 @@
 // SPDX-FileCopyrightText: 2016-2017 Alex Kornitzer <alex.kornitzer@countercept.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
+#include <rz_util.hpp>
 
-#include "mdmp.h"
+#include "mdmp.hpp"
 // XXX: this is a random number, no idea how long it should be.
 #define COMMENTS_SIZE 32
 
@@ -117,7 +117,7 @@ void rz_bin_mdmp_free(MiniDmpObj *obj) {
 	free(obj->streams.system_info);
 	free(obj->streams.comments_a);
 	free(obj->streams.comments_w);
-	free(obj->streams.handle_data);
+	free(obj->streams.hppandle_data);
 	free(obj->streams.function_table);
 	free(obj->streams.misc_info.misc_info_1);
 
@@ -381,8 +381,8 @@ static bool rz_bin_mdmp_init_hdr(MiniDmpObj *obj) {
 		return false;
 	}
 
-	sdb_num_set(obj->kv, "mdmp.hdr.time_date_stamp", obj->hdr->time_date_stamp, 0);
-	sdb_num_set(obj->kv, "mdmp.hdr.flags", obj->hdr->flags, 0);
+	sdb_num_set(obj->kv, "mdmp.hppdr.time_date_stamp", obj->hdr->time_date_stamp, 0);
+	sdb_num_set(obj->kv, "mdmp.hppdr.flags", obj->hdr->flags, 0);
 	sdb_num_set(obj->kv, "mdmp_header.offset", 0, 0);
 	sdb_set(obj->kv, "mdmp_header.format", "[4]zddddt[8]B Signature "
 					       "Version NumberOfStreams StreamDirectoryRVA CheckSum "
@@ -867,10 +867,10 @@ static bool mdmp_init_directory_entry(MiniDmpObj *obj, MiniDmpDir *entry) {
 		break;
 	case HANDLE_DATA_STREAM:
 		/* TODO: Not yet fully parsed or utilised */
-		obj->streams.handle_data = RZ_NEW(MiniDmpHandleDataStream);
-		if (!obj->streams.handle_data ||
-			!mdmp_read_handle_data_stream(obj->b, entry->location.rva, obj->streams.handle_data)) {
-			RZ_FREE(obj->streams.handle_data);
+		obj->streams.hppandle_data = RZ_NEW(MiniDmpHandleDataStream);
+		if (!obj->streams.hppandle_data ||
+			!mdmp_read_handle_data_stream(obj->b, entry->location.rva, obj->streams.hppandle_data)) {
+			RZ_FREE(obj->streams.hppandle_data);
 			break;
 		}
 

@@ -2,8 +2,8 @@
 // SPDX-FileCopyrightText: 2023 svr <svr.work@protonmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bin.h>
-#include "../format/le/le.h"
+#include <rz_bin.hpp>
+#include "../format/le/le.hpp"
 
 static RzBinInfo *le_info(RzBinFile *bf) {
 	RzBinInfo *info = RZ_NEW0(RzBinInfo);
@@ -125,7 +125,7 @@ RzBinPlugin rz_bin_plugin_le = {
 	.load_buffer = &rz_bin_le_load_buffer,
 	.destroy = &rz_bin_le_destroy,
 	.info = &le_info,
-	.header = &le_header,
+	.hppeader = &le_header,
 	.virtual_files = &rz_bin_le_get_virtual_files,
 	.maps = &rz_bin_le_get_maps,
 	.sections = &rz_bin_le_get_sections,

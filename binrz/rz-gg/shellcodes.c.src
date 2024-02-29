@@ -24,7 +24,7 @@
 // XXX: shellcodes are ended with '\0'. so they should not contain any '\0'
 
 #include <stdio.h>
-#include "rasc.h"
+#include "rasc.hpp"
 
 #define ut8 unsigned char
 
@@ -910,7 +910,7 @@ ut8 x64_osx_setuid_fork_binsh[] =
 	"\x6e\x2f\x2f\x73\x68\x56\x57\x48\x89\xe7\x0f\x05";
 
 #define ENTRY(a,b,c,x,y,z) { .name=x, .desc=z, .data=(ut8 *)&y, .len=sizeof(y)-1, \
-	.cmd=a, .host=b, .port=c },
+	.cmd=a, .hppost=b, .port=c },
 #define ENTRY_NULL() { NULL, NULL, NULL, 0 }
 
 struct shellcode_t shellcodes[] = {

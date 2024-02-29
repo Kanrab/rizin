@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2011-2018 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: MIT
 
-#include "sdb.h"
-#include <rz_util/rz_time.h>
+#include "sdb.hpp"
+#include <rz_util/rz_time.hpp>
 
 RZ_API ut32 sdb_hash_len(const char *s, ut32 *len) {
 	ut32 h = CDB_HASHSTART;

@@ -1,23 +1,23 @@
 #ifndef RZ_BIN_H
 #define RZ_BIN_H
 
-#include "rz_vector.h"
-#include <rz_util.h>
-#include <rz_types.h>
-#include <rz_io.h>
-#include <rz_cons.h>
-#include <rz_list.h>
-#include <rz_util/ht_pu.h>
-#include <rz_demangler.h>
-#include <rz_hash.h>
-#include <rz_bin_source_line.h>
+#include "rz_vector.hpp"
+#include <rz_util.hpp>
+#include <rz_types.hpp>
+#include <rz_io.hpp>
+#include <rz_cons.hpp>
+#include <rz_list.hpp>
+#include <rz_util/ht_pu.hpp>
+#include <rz_demangler.hpp>
+#include <rz_hash.hpp>
+#include <rz_bin_source_line.hpp>
 
 typedef struct rz_bin_t RzBin;
 typedef struct rz_bin_file_t RzBinFile;
 typedef struct rz_bin_reloc_storage_t RzBinRelocStorage;
 
-#include <rz_bin_dwarf.h>
-#include <rz_pdb.h>
+#include <rz_bin_dwarf.hpp>
+#include <rz_pdb.hpp>
 
 #ifdef __cplusplus
 extern "C" {
@@ -669,7 +669,7 @@ typedef struct rz_bin_reloc_t {
 	/* is_ifunc: indirect function, `addend` points to a resolver function
 	 * that returns the actual relocation value, e.g. chooses
 	 * an optimized version depending on the CPU.
-	 * cf. https://gcc.gnu.org/onlinedocs/gcc/Common-Function-Attributes.html
+	 * cf. https://gcc.gnu.org/onlinedocs/gcc/Common-Function-Attributes.hpptml
 	 */
 	bool is_ifunc;
 } RzBinReloc;

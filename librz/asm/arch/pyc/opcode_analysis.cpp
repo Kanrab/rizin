@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2020 FXTi <zjxiang1998@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "opcode.h"
+#include "opcode.hpp"
 
 // The actual code of one opcode varies across the versions.
 // That's why I specify one opcode by its name, not its code.
@@ -35,7 +35,7 @@ static void analysis_BINARY_AND(RzAnalysisOp *op, pyc_opcode_object *op_obj, ut3
 }
 
 static void analysis_BINARY_CALL(RzAnalysisOp *op, pyc_opcode_object *op_obj, ut32 oparg) {
-	// https://github.com/python/cpython/blob/v1.4b3/Include/opcode.h
+	// https://github.com/python/cpython/blob/v1.4b3/Include/opcode.hpp
 	// I can not find this opcode even in v1.4 version source code.
 	op->type = RZ_ANALYSIS_OP_TYPE_UNK;
 }
@@ -408,7 +408,7 @@ static void analysis_LOAD_GLOBAL(RzAnalysisOp *op, pyc_opcode_object *op_obj, ut
 }
 
 static void analysis_LOAD_GLOBALS(RzAnalysisOp *op, pyc_opcode_object *op_obj, ut32 oparg) {
-	// https://github.com/python/cpython/blob/24260ec91623c18569225229d5becb852010ae2c/Include/opcode.h#L80
+	// https://github.com/python/cpython/blob/24260ec91623c18569225229d5becb852010ae2c/Include/opcode.hpp#L80
 	// Can't find this opcode
 	op->type = RZ_ANALYSIS_OP_TYPE_UNK;
 }
@@ -484,7 +484,7 @@ static void analysis_PRINT_NEWLINE_TO(RzAnalysisOp *op, pyc_opcode_object *op_ob
 }
 
 static void analysis_RAISE_EXCEPTION(RzAnalysisOp *op, pyc_opcode_object *op_obj, ut32 oparg) {
-	// https://github.com/python/cpython/blob/6c3a3aa17b028f6b93067083d32c7eaa4338757c/Include/opcode.h#L89
+	// https://github.com/python/cpython/blob/6c3a3aa17b028f6b93067083d32c7eaa4338757c/Include/opcode.hpp#L89
 	// Can't find this opcode
 	op->type = RZ_ANALYSIS_OP_TYPE_UNK;
 }
@@ -498,7 +498,7 @@ static void analysis_RERAISE(RzAnalysisOp *op, pyc_opcode_object *op_obj, ut32 o
 }
 
 static void analysis_RESERVE_FAST(RzAnalysisOp *op, pyc_opcode_object *op_obj, ut32 oparg) {
-	// https://github.com/python/cpython/blob/6c3a3aa17b028f6b93067083d32c7eaa4338757c/Include/opcode.h#L134
+	// https://github.com/python/cpython/blob/6c3a3aa17b028f6b93067083d32c7eaa4338757c/Include/opcode.hpp#L134
 	// Can't find this opcode
 	op->type = RZ_ANALYSIS_OP_TYPE_UNK;
 }
@@ -616,7 +616,7 @@ static void analysis_STORE_SUBSCR(RzAnalysisOp *op, pyc_opcode_object *op_obj, u
 }
 
 static void analysis_UNARY_CALL(RzAnalysisOp *op, pyc_opcode_object *op_obj, ut32 oparg) {
-	// https://github.com/python/cpython/blob/v1.4b3/Include/opcode.h
+	// https://github.com/python/cpython/blob/v1.4b3/Include/opcode.hpp
 	// I can not find this opcode even in v1.4 version source code.
 	op->type = RZ_ANALYSIS_OP_TYPE_UNK;
 }
@@ -662,7 +662,7 @@ static void analysis_UNPACK_TUPLE(RzAnalysisOp *op, pyc_opcode_object *op_obj, u
 }
 
 static void analysis_UNPACK_VARARG(RzAnalysisOp *op, pyc_opcode_object *op_obj, ut32 oparg) {
-	// https://github.com/python/cpython/blob/v1.4b3/Include/opcode.h
+	// https://github.com/python/cpython/blob/v1.4b3/Include/opcode.hpp
 	// I can not find this opcode even in v1.4 version source code.
 	op->type = RZ_ANALYSIS_OP_TYPE_UNK;
 }

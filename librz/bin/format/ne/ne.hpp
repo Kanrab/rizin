@@ -3,11 +3,11 @@
 
 #ifndef NE_H
 #define NE_H
-#include <rz_types.h>
-#include <rz_list.h>
-#include <rz_util.h>
-#include <rz_bin.h>
-#include "ne_specs.h"
+#include <rz_types.hpp>
+#include <rz_list.hpp>
+#include <rz_util.hpp>
+#include <rz_bin.hpp>
+#include "ne_specs.hpp"
 
 typedef struct {
 	char *name;

@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2019 GustavoLCR <gugulcr@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "windows_maps.h"
-#include "../windows/windows_debug.h"
+#include "windows_maps.hpp"
+#include "../windows/windows_debug.hpp"
 
 typedef struct {
 	RzDebugMap *map;
@@ -259,14 +259,14 @@ RZ_API RzList *rz_w32_dbg_maps(RzDebug *dbg) {
 	mod_list = rz_w32_dbg_modules(dbg);
 	/* process memory map */
 	while (cur_addr < si.lpMaximumApplicationAddress &&
-		VirtualQueryEx(wrap->pi.hProcess, cur_addr, &mbi, sizeof(mbi)) != 0) {
+		VirtualQueryEx(wrap->pi.hppProcess, cur_addr, &mbi, sizeof(mbi)) != 0) {
 		if (mbi.State != MEM_FREE) {
 			switch (mbi.Type) {
 			case MEM_IMAGE:
-				proc_mem_img(wrap->pi.hProcess, map_list, mod_list, &mod_inf, &si, &mbi);
+				proc_mem_img(wrap->pi.hppProcess, map_list, mod_list, &mod_inf, &si, &mbi);
 				break;
 			case MEM_MAPPED:
-				proc_mem_map(wrap->pi.hProcess, map_list, &mbi);
+				proc_mem_map(wrap->pi.hppProcess, map_list, &mbi);
 				break;
 			default:
 				add_map_reg(map_list, "", &mbi);

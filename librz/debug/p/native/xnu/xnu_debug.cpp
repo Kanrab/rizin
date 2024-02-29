@@ -2,21 +2,21 @@
 // SPDX-FileCopyrightText: 2015-2019 alvaro_fe <alvaro.felipe91@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_debug.h>
-#include <rz_reg.h>
-#include <rz_lib.h>
-#include <rz_analysis.h>
+#include <rz_debug.hpp>
+#include <rz_reg.hpp>
+#include <rz_lib.hpp>
+#include <rz_analysis.hpp>
 #include <string.h>
-#include <mach/mach_host.h>
-#include <mach/host_priv.h>
-#include <mach/mach_vm.h>
-#include <mach/thread_status.h>
-#include <mach/vm_statistics.h>
+#include <mach/mach_host.hpp>
+#include <mach/host_priv.hpp>
+#include <mach/mach_vm.hpp>
+#include <mach/thread_status.hpp>
+#include <mach/vm_statistics.hpp>
 
-#include <TargetConditionals.h>
+#include <TargetConditionals.hpp>
 
-#include "xnu_debug.h"
-#include "xnu_threads.h"
+#include "xnu_debug.hpp"
+#include "xnu_threads.hpp"
 
 extern int proc_regionfilename(int pid, uint64_t address, void *buffer, uint32_t buffersize);
 
@@ -283,7 +283,7 @@ int xnu_continue(RzDebug *dbg, int pid, int tid, int sig) {
 
 char *xnu_reg_profile(RzDebug *dbg) {
 #if __POWERPC__
-#include "reg/darwin-ppc.h"
+#include "reg/darwin-ppc.hpp"
 #else
 	RzXnuDebug *ctx = dbg->plugin_data;
 	if (!ctx || !ctx->cpu) {
@@ -292,15 +292,15 @@ char *xnu_reg_profile(RzDebug *dbg) {
 	}
 #if __i386__ || __x86_64__
 	if (ctx->cpu == CPU_TYPE_X86_64) {
-#include "reg/darwin-x64.h"
+#include "reg/darwin-x64.hpp"
 	} else {
-#include "reg/darwin-x86.h"
+#include "reg/darwin-x86.hpp"
 	}
 #elif __APPLE__ && (__aarch64__ || __arm64__ || __arm__)
 	if (ctx->cpu == CPU_TYPE_ARM64) {
-#include "reg/darwin-arm64.h"
+#include "reg/darwin-arm64.hpp"
 	} else {
-#include "reg/darwin-arm.h"
+#include "reg/darwin-arm.hpp"
 	}
 #else
 #error "Unsupported Apple architecture"
@@ -858,7 +858,7 @@ static void xnu_collect_thread_state(thread_t port, void *tirp) {
 
 #define CORE_ALL_SECT 0
 
-#include <sys/sysctl.h>
+#include <sys/sysctl.hpp>
 
 static uid_t uidFromPid(pid_t pid) {
 	uid_t uid = -1;
@@ -934,8 +934,8 @@ bool xnu_generate_corefile(RzDebug *dbg, RzBuffer *dest) {
 		goto cleanup;
 	}
 
-	tir.header = header;
-	tir.hoffset = hoffset;
+	tir.hppeader = header;
+	tir.hppoffset = hoffset;
 	tir.flavors = flavors;
 	tir.tstate_size = tstate_size;
 

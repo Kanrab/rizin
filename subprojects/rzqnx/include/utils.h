@@ -7,8 +7,8 @@
 
 #include <stdint.h>
 #include <stdio.h>
-#include "libqnxr.h"
-#include "gdb_signals.h"
+#include "libqnxr.hpp"
+#include "gdb_signals.hpp"
 
 #define LONGEST  st64
 #define ULONGEST ut64

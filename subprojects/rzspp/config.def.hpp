@@ -13,13 +13,13 @@
 #endif
 
 #if HAVE_SYSTEM
-#include "p/sh.h"
+#include "p/sh.hpp"
 #endif
 
-#include "p/spp.h"
-#include "p/acr.h"
-#include "p/pod.h"
-#include "p/cpp.h"
+#include "p/spp.hpp"
+#include "p/acr.hpp"
+#include "p/pod.hpp"
+#include "p/cpp.hpp"
 
 struct Proc *procs[] = {
 	&spp_proc,

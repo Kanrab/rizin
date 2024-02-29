@@ -4,7 +4,7 @@
 #ifndef RZ_XOR_H
 #define RZ_XOR_H
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 #define RZ_HASH_XOR8_DIGEST_SIZE 1
 #define RZ_HASH_XOR_BLOCK_LENGTH 0

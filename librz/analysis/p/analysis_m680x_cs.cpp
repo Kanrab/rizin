@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: 2015-2019 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_asm.h>
-#include <rz_lib.h>
-#include <capstone/capstone.h>
+#include <rz_asm.hpp>
+#include <rz_lib.hpp>
+#include <capstone/capstone.hpp>
 
-#include <capstone/m680x.h>
+#include <capstone/m680x.hpp>
 
 static int m680xmode(const char *str) {
 	if (!str) {

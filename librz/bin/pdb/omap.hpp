@@ -4,7 +4,7 @@
 #ifndef PDB_OMAP_H
 #define PDB_OMAP_H
 
-#include <rz_util.h>
+#include <rz_util.hpp>
 
 typedef struct {
 	ut32 from;

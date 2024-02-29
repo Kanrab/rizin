@@ -5,7 +5,7 @@ e cfg.bigendian=true
 pxw 16
 EOF
 EXPECT=<<EOF
-0x00400410  0x31ed4989 0xd15e4889 0xe24883e4 0xf0505449  1.I..^H..H...PTI
+0x00400410  0x31ed4989 0xd15e4889 0xe24883e4 0xf0505449  1.I..^H..hpp...PTI
 EOF
 RUN
 
@@ -16,7 +16,7 @@ e cfg.bigendian=false
 pxw 16
 EOF
 EXPECT=<<EOF
-0x00400410  0x8949ed31 0x89485ed1 0xe48348e2 0x495450f0  1.I..^H..H...PTI
+0x00400410  0x8949ed31 0x89485ed1 0xe48348e2 0x495450f0  1.I..^H..hpp...PTI
 EOF
 RUN
 

@@ -1,17 +1,17 @@
 // SPDX-FileCopyrightText: 2009-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util/rz_regex.h>
-#include <rz_vector.h>
-#include <rz_core.h>
-#include <rz_socket.h>
-#include <rz_cmp.h>
-#include <config.h>
-#include <rz_util.h>
+#include <rz_util/rz_regex.hpp>
+#include <rz_vector.hpp>
+#include <rz_core.hpp>
+#include <rz_socket.hpp>
+#include <rz_cmp.hpp>
+#include <config.hpp>
+#include <rz_util.hpp>
 #if __UNIX__
-#include <signal.h>
+#include <signal.hpp>
 #endif
-#include "core_private.h"
+#include "core_private.hpp"
 
 #define DB core->sdb
 

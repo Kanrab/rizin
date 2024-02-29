@@ -1,7 +1,7 @@
 #ifndef HAD_CONFIG_H
 #define HAD_CONFIG_H
 #ifndef _HAD_ZIPCONF_H
-#include "zipconf.h"
+#include "zipconf.hpp"
 #endif
 /* BEGIN DEFINES */
 // clang-format off

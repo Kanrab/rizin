@@ -2,13 +2,13 @@
 // SPDX-FileCopyrightText: 2013-2018 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_asm.h>
-#include <rz_lib.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_asm.hpp>
+#include <rz_lib.hpp>
 #include <stdio.h>
 #include <string.h>
-#include "gb_op_table.h"
+#include "gb_op_table.hpp"
 
 static int gbOpLength(int gboptype) {
 	switch (gboptype) {

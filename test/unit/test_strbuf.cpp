@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2019 radare <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include "minunit.h"
+#include <rz_util.hpp>
+#include "minunit.hpp"
 
 bool test_rz_strbuf_slice(void) {
 	RzStrBuf *sa = rz_strbuf_new("foo,bar,cow");

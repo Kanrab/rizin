@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: 2017 Fangrui Song <i@maskray.me>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <stddef.h>
+#include <stddef.hpp>
 #include <stdio.h>
 #include <stdlib.h>
-#include <rz_util.h>
-#include "minunit.h"
+#include <rz_util.hpp>
+#include "minunit.hpp"
 
 static void random_iota(int *a, int n) {
 	int i;

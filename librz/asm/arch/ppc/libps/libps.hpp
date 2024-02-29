@@ -3,7 +3,7 @@
 
 #ifndef LIBPS_H
 #define LIBPS_H
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 typedef struct {
 	ut32 value;

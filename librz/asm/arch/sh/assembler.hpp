@@ -4,8 +4,8 @@
 #ifndef RZ_SH_ASSEMBLER_H
 #define RZ_SH_ASSEMBLER_H
 
-#include "common.h"
-#include "disassembler.h"
+#include "common.hpp"
+#include "disassembler.hpp"
 
 RZ_IPI ut16 sh_assembler(RZ_NONNULL const char *buffer, ut64 pc, RZ_NULLABLE bool *success);
 

@@ -2,11 +2,11 @@
 // SPDX-FileCopyrightText: 2009-2019 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util/rz_regex.h>
-#include <rz_vector.h>
-#include <rz_types.h>
-#include <rz_core.h>
-#include <rz_asm.h>
+#include <rz_util/rz_regex.hpp>
+#include <rz_vector.hpp>
+#include <rz_types.hpp>
+#include <rz_core.hpp>
+#include <rz_asm.hpp>
 
 static RzCoreAsmHit *find_addr(RzList /*<RzCoreAsmHit *>*/ *hits, ut64 addr);
 static int prune_hits_in_hit_range(RzList /*<RzCoreAsmHit *>*/ *hits, RzCoreAsmHit *hit);

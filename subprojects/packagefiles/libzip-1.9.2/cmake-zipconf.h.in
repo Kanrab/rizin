@@ -2,7 +2,7 @@
 #define _HAD_ZIPCONF_H
 
 /*
-   zipconf.h -- platform specific include file
+   zipconf.hpp -- platform specific include file
 
    This file was generated automatically by CMake
    based on ../cmake-zipconf.h.in.
@@ -50,4 +50,4 @@ typedef @ZIP_UINT64_T@ zip_uint64_t;
 #define ZIP_INT64_MAX	 0x7fffffffffffffffLL
 #define ZIP_UINT64_MAX	 0xffffffffffffffffULL
 
-#endif /* zipconf.h */
+#endif /* zipconf.hpp */

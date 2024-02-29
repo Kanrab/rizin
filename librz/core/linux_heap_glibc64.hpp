@@ -2,5 +2,5 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #define HEAP64 1
-#include "linux_heap_glibc.h"
+#include "linux_heap_glibc.hpp"
 #undef HEAP64

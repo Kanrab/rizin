@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2021 Florian Märkl <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_io.h>
-#include "minunit.h"
+#include <rz_io.hpp>
+#include "minunit.hpp"
 
 static const char *ihex_sample =
 	":020000021000EC\r\n"

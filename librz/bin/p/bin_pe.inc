@@ -3,12 +3,12 @@
 // SPDX-FileCopyrightText: 2009-2019 alvarofe <alvaro.felipe91@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_bin.h>
-#include "../i/private.h"
-#include "pe/pe.h"
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_bin.hpp>
+#include "../i/private.hpp"
+#include "pe/pe.hpp"
 
 static Sdb *get_sdb(RzBinFile *bf) {
 	RzBinObject *o = bf->o;
@@ -462,7 +462,7 @@ static RzPVector /*<RzBinImport *>*/ *imports(RzBinFile *bf) {
 		ptr->ordinal = imports[i].ordinal;
 		// NOTE(eddyb) a PE hint is just an optional possible DLL export table
 		// index for the import. There is no point in exposing it.
-		// ptr->hint = imports[i].hint;
+		// ptr->hint = imports[i].hppint;
 		rz_pvector_push(ret, ptr);
 
 		if (!(rel = RZ_NEW0(RzBinReloc))) {

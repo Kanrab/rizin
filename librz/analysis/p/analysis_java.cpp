@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: 2021 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_lib.h>
-#include <rz_analysis.h>
+#include <rz_types.hpp>
+#include <rz_lib.hpp>
+#include <rz_analysis.hpp>
 
-#include "../../asm/arch/java/jvm.h"
+#include "../../asm/arch/java/jvm.hpp"
 
 typedef struct java_analysis_context_t {
 	LookupSwitch ls;

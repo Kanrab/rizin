@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2000-2022 Free Software Foundation, Inc.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-/* cris.h -- Header file for CRIS opcode and register tables.
+/* cris.hpp -- Header file for CRIS opcode and register tables.
    Copyright (C) 2000-2022 Free Software Foundation, Inc.
    Contributed by Axis Communications AB, Lund, Sweden.
    Originally written for GAS 1.38.1 by Mikael Asker.

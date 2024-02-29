@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: 2020 ret2libc <sirmy15@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <tree_sitter/api.h>
-#include <rz_core.h>
-#include <rz_cons.h>
-#include <rz_cmd.h>
+#include <tree_sitter/api.hpp>
+#include <rz_core.hpp>
+#include <rz_cons.hpp>
+#include <rz_cmd.hpp>
 
-#include "core_private.h"
+#include "core_private.hpp"
 
 /**
  * Describe what needs to be autocompleted.

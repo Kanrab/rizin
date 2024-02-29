@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2020 condret <condr3t@protonmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include "minunit.h"
+#include <rz_util.hpp>
+#include "minunit.hpp"
 
 static bool test_rz_id_pool_broken_parameters(void) {
 	mu_assert_ptreq(rz_id_pool_new(42, 3), NULL, "broken parameters");

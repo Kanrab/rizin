@@ -2,11 +2,11 @@
 // SPDX-FileCopyrightText: 2009-2019 dso <dso@rice.edu>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
-#include <rz_util.h>
-#include <rz_io.h>
+#include <rz_core.hpp>
+#include <rz_util.hpp>
+#include <rz_io.hpp>
 
-#include "core_private.h"
+#include "core_private.hpp"
 
 /* \brief Maps in a file and yank from \p offset the number of \p len bytes from \p filename.
  *

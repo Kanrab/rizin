@@ -1,5 +1,5 @@
 NAME=pic18c
-FILE=ihex://bins/pic18c/FreeRTOS-pic18c.hex
+FILE=ihex://bins/pic18c/FreeRTOS-pic18c.hppex
 CMDS=<<EOF
 e asm.arch=pic
 e asm.cpu=pic18

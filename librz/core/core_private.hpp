@@ -4,9 +4,9 @@
 #ifndef RZ_CORE_PRIVATE_INCLUDE_H_
 #define RZ_CORE_PRIVATE_INCLUDE_H_
 
-#include <rz_types.h>
-#include <rz_core.h>
-#include <rz_il.h>
+#include <rz_types.hpp>
+#include <rz_core.hpp>
+#include <rz_il.hpp>
 
 RZ_IPI void rz_core_kuery_print(RzCore *core, const char *k);
 RZ_IPI int rz_output_mode_to_char(RzOutputMode mode);

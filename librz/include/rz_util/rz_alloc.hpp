@@ -1,9 +1,9 @@
 #ifndef RZ_ALLOC_H
 #define RZ_ALLOC_H
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 #include <stdlib.h>
-#include <stddef.h>
+#include <stddef.hpp>
 
 #ifdef __cplusplus
 extern "C" {

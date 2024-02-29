@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <rz_userconf.h>
-#include <rz_debug.h>
+#include <rz_debug.hpp>
 
 int procfs_pid_slurp(int pid, char *prop, char *out, size_t len) {
 	int fd, ret = -1;

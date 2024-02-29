@@ -1,4 +1,4 @@
-### winreg.h ###
+### winreg.hpp ###
 
 AbortSystemShutdownA=func
 func.AbortSystemShutdownA.args=1

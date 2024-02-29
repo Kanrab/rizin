@@ -5,11 +5,11 @@
 // SPDX-FileCopyrightText: 2015-2019 astuder <github@adrianstuder.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_asm.h>
-#include <rz_lib.h>
+#include <rz_asm.hpp>
+#include <rz_lib.hpp>
 #include <string.h>
 
-#include "8051_ops.h"
+#include "8051_ops.hpp"
 
 static const char *_8051_regs[] = {
 	"r0", "r1", "r2", "r3", "r4", "r5", "r6", "r7", // 0x00

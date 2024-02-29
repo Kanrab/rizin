@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2023 billow <billow.fun@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <zstd.h>
-#include <rz_bin_dwarf.h>
-#include "dwarf_private.h"
-#include "../format/elf/elf.h"
+#include <zstd.hpp>
+#include <rz_bin_dwarf.hpp>
+#include "dwarf_private.hpp"
+#include "../format/elf/elf.hpp"
 
 RZ_IPI RzBinSection *rz_bin_dwarf_section_by_name(RzBinFile *binfile, const char *sn, bool is_dwo) {
 	rz_return_val_if_fail(binfile && sn, NULL);

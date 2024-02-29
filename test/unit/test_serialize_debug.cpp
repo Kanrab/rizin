@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2021 Dhruv Maroo <dhruvmaru007@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_debug.h>
-#include <rz_core.h>
-#include "minunit.h"
-#include "test_sdb.h"
+#include <rz_debug.hpp>
+#include <rz_core.hpp>
+#include "minunit.hpp"
+#include "test_sdb.hpp"
 
 Sdb *get_ref_sdb() {
 	Sdb *ref_sdb = sdb_new0();

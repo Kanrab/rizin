@@ -19,16 +19,16 @@
    Free Software Foundation, 51 Franklin Street - Fifth Floor, Boston,
    MA 02110-1301, USA.  */
 
-#include "sysdep.h"
+#include "sysdep.hpp"
 #include <stdlib.h>
 #include <stdio.h>
 #include <sys/types.h>
 #include <string.h>
-#include "xtensa-isa.h"
-#include "ansidecl.h"
-#include <setjmp.h>
-#include "disas-asm.h"
-#include "libiberty.h"
+#include "xtensa-isa.hpp"
+#include "ansidecl.hpp"
+#include <setjmp.hpp>
+#include "disas-asm.hpp"
+#include "libiberty.hpp"
 
 
 #if defined(_MSC_VER)

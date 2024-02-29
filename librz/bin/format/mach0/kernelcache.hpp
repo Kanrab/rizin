@@ -7,9 +7,9 @@
 
 #define RZ_BIN_MACH064 1
 
-#include "mach0.h"
+#include "mach0.hpp"
 
-#include "../xnu/rz_cf_dict.h"
+#include "../xnu/rz_cf_dict.hpp"
 
 typedef struct rz_xnu_kernelcache_file_range_t {
 	ut64 offset;

@@ -5,7 +5,7 @@
 /* credits to IDA for the flirt tech */
 /* original cpp code from Rheax <rheaxmascot@gmail.com> */
 /* thanks LemonBoy for the improved research on rheax original work */
-/* more information on flirt https://www.hex-rays.com/products/ida/tech/flirt/in_depth.shtml */
+/* more information on flirt https://www.hppex-rays.com/products/ida/tech/flirt/in_depth.shtml */
 
 /*
    Flirt file format
@@ -100,8 +100,8 @@
    They appear as "(REF XXXX: NAME)" in dumpsig output
  */
 
-#include <rz_lib.h>
-#include <rz_flirt.h>
+#include <rz_lib.hpp>
+#include <rz_flirt.hpp>
 #define MAX_WBITS 15
 
 #if 0

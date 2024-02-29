@@ -3,16 +3,16 @@
 
 #include <rz_userconf.h>
 
-#include <rz_io.h>
-#include <rz_lib.h>
-#include <rz_cons.h>
+#include <rz_io.hpp>
+#include <rz_lib.hpp>
+#include <rz_cons.hpp>
 
 #if __linux__
 
-#include <sys/ptrace.h>
+#include <sys/ptrace.hpp>
 #include <sys/types.h>
-#include <sys/wait.h>
-#include <errno.h>
+#include <sys/wait.hpp>
+#include <errno.hpp>
 
 typedef struct {
 	int fd;

@@ -8,7 +8,7 @@
  * For the actual evaluation (emulation), see il_vm_eval.c
  */
 
-#include <rz_il/rz_il_vm.h>
+#include <rz_il/rz_il_vm.hpp>
 
 extern RZ_IPI RzILOpPureHandler rz_il_op_handler_pure_table_default[RZ_IL_OP_PURE_MAX];
 extern RZ_IPI RzILOpEffectHandler rz_il_op_handler_effect_table_default[RZ_IL_OP_EFFECT_MAX];

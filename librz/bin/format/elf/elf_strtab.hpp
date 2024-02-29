@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2021 RizinOrg <info@rizin.re>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "elf.h"
+#include "elf.hpp"
 
 #ifndef _INCLUDE_STRTAB_H_
 #define _INCLUDE_STRTAB_H_

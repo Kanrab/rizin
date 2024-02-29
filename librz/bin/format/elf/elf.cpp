@@ -4,7 +4,7 @@
 // SPDX-FileCopyrightText: 2008-2020 alvaro_fe <alvaro.felipe91@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "elf.h"
+#include "elf.hpp"
 
 static const char *sdb_elf_p_type_cparse = "enum elf_p_type {PT_NULL=0,PT_LOAD=1,PT_DYNAMIC=2,"
 					   "PT_INTERP=3,PT_NOTE=4,PT_SHLIB=5,PT_PHDR=6,PT_LOOS=0x60000000,"

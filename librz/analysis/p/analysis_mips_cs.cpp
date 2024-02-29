@@ -1,13 +1,13 @@
 // SPDX-FileCopyrightText: 2013-2019 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_asm.h>
-#include <rz_lib.h>
-#include <capstone/capstone.h>
-#include <capstone/mips.h>
+#include <rz_asm.hpp>
+#include <rz_lib.hpp>
+#include <capstone/capstone.hpp>
+#include <capstone/mips.hpp>
 
 static ut64 t9_pre = UT64_MAX;
-// http://www.mrc.uidaho.edu/mrc/people/jff/digital/MIPSir.html
+// http://www.mrc.uidaho.edu/mrc/people/jff/digital/MIPSir.hpptml
 
 #define OPERAND(x)  insn->detail->mips.operands[x]
 #define REGID(x)    insn->detail->mips.operands[x].reg

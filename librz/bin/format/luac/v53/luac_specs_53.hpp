@@ -5,7 +5,7 @@
 #ifndef BUILD_LUAC_SPECS_53_H
 #define BUILD_LUAC_SPECS_53_H
 
-#include "librz/bin/format/luac/luac_common.h"
+#include "librz/bin/format/luac/luac_common.hpp"
 
 typedef double LUA_NUMBER;
 typedef ut64 LUA_INTEGER;

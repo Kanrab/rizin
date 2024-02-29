@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2012-2018 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_asm.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_asm.hpp>
 
 #include "../arch/z80/z80.c"
 #include "../arch/z80/z80asm.c"

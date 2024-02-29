@@ -12,9 +12,9 @@
  * https://en.wikipedia.org/wiki/SREC_(file_format)
  */
 
-#include <rz_io.h>
-#include <rz_lib.h>
-#include <rz_util.h>
+#include <rz_io.hpp>
+#include <rz_lib.hpp>
+#include <rz_util.hpp>
 
 #define SREC_SIZE        64
 #define NMAX             100

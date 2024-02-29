@@ -4,7 +4,7 @@
 #ifndef DECODE_H
 #define DECODE_H
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 char *decode(ut32 ins_pos, ut32 *next_ins_pos);
 

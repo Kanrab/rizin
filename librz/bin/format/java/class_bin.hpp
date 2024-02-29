@@ -4,17 +4,17 @@
 
 #ifndef RZ_BIN_JAVA_CLASS_H
 #define RZ_BIN_JAVA_CLASS_H
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_bin.h>
-#include <rz_demangler.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_bin.hpp>
+#include <rz_demangler.hpp>
 
-#include "class_attribute.h"
-#include "class_const_pool.h"
-#include "class_field.h"
-#include "class_interface.h"
-#include "class_method.h"
-#include "rz_vector.h"
+#include "class_attribute.hpp"
+#include "class_const_pool.hpp"
+#include "class_field.hpp"
+#include "class_interface.hpp"
+#include "class_method.hpp"
+#include "rz_vector.hpp"
 
 typedef enum {
 	ACCESS_FLAG_PUBLIC /*    */ = 0x0001,

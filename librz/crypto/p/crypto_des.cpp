@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2017 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_lib.h>
-#include <rz_crypto.h>
-#include <rz_util.h>
+#include <rz_lib.hpp>
+#include <rz_crypto.hpp>
+#include <rz_util.hpp>
 
 struct des_state {
 	ut32 keylo[16]; // round key low

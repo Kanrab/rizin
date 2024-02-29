@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2013 th0rpe <josediazfer@yahoo.es>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "ins.h"
-#include "hashvector.h"
-#include <rz_types.h>
+#include "ins.hpp"
+#include "hashvector.hpp"
+#include <rz_types.hpp>
 
 static const st32 hash_const_01 = 0x2474f685;
 static const st32 hash_const_02 = 0x42fbc0b8;

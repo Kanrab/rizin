@@ -8,9 +8,9 @@
 extern "C" {
 #endif
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <sdb.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <sdb.hpp>
 
 RZ_LIB_VERSION_HEADER(rz_syscall);
 

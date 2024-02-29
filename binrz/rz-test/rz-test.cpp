@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: 2020-2021 thestr4ng3r <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "rz_test.h"
-#include <assert.h>
-#include <rz_cons.h>
-#include <rz_main.h>
-#include <rz_windows.h>
-#include <rz_util/rz_print.h>
+#include "rz_test.hpp"
+#include <assert.hpp>
+#include <rz_cons.hpp>
+#include <rz_main.hpp>
+#include <rz_windows.hpp>
+#include <rz_util/rz_print.hpp>
 
 #define Color_INSERT   Color_BGREEN
 #define Color_DELETE   Color_BRED

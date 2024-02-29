@@ -3,12 +3,12 @@
 // SPDX-FileCopyrightText: 2013-2017 condret <condr3t@protonmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_bin.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_bin.hpp>
 #include <string.h>
-#include "../format/nin/nin.h"
+#include "../format/nin/nin.hpp"
 
 static const char *gb_get_gameboy_type(ut8 byte0, ut8 byte1) {
 	if (byte0 == GB_SGB) {

@@ -7,12 +7,12 @@ This file is aimed at developers who want to work on the Rizin code base.
 There is support for Doxygen document generation in this repo.
 By running `doxygen` in the root of this repository, it will autodetect the
 Doxyfile and generate HTML documentation into
-[doc/doxygen/html/index.html](./doc/doxygen/html/index.html).
+[doc/doxygen/html/index.hpptml](./doc/doxygen/html/index.hpptml).
 
 If you're contributing code or willing to update existing code, you should use the
 doxygen C-style comments to improve documentation and comments in code.
-See the [Doxygen Manual](http://www.doxygen.nl/manual/index.html)
-for more info. Example usage can be found [here](http://www.doxygen.nl/manual/docblocks.html).
+See the [Doxygen Manual](http://www.doxygen.nl/manual/index.hpptml)
+for more info. Example usage can be found [here](http://www.doxygen.nl/manual/docblocks.hpptml).
 
 Documentation goes into the source files (not the header files).
 
@@ -150,7 +150,7 @@ The structure of the C files in Rizin must be like this:
 ```c
 // SPDX-License-Identifier: LGPL-3.0-only
 /* Copyright ... */           ## copyright
-#include <rz_core.h>           ## includes
+#include <rz_core.hpp>           ## includes
 static int globals            ## const, define, global variables
 static void helper(void) {}   ## static functions
 RZ_IPI void internal(void) {}  ## internal apis (used only inside the library)
@@ -171,7 +171,7 @@ rz_core_wrap.cxx:32103:61: error: assigning to 'RzDebugReasonType' from incompat
 3 warnings and 2 errors generated.
 ````
 
-* Do not use `assert.h`, use `rz_util/rz_assert.h` instead.
+* Do not use `assert.hpp`, use `rz_util/rz_assert.hpp` instead.
 
 * You can use `export RZ_DEBUG_ASSERT=1` to set a breakpoint when hitting an assert.
 
@@ -193,7 +193,7 @@ rz_core_wrap.cxx:32103:61: error: assigning to 'RzDebugReasonType' from incompat
   are shorter to write.
 
 * Never ever use `%lld` or `%llx`. This is not portable. Always use the `PFMT64x`
-  macros. Those are similar to the ones in GLIB. See all macroses in `librz/include/rz_types.h`.
+  macros. Those are similar to the ones in GLIB. See all macroses in `librz/include/rz_types.hpp`.
 
 * Never use `offsetof()` macros - it's not supported by some compilers. Use `rz_offsetof()` instead.
 
@@ -203,7 +203,7 @@ rz_core_wrap.cxx:32103:61: error: assigning to 'RzDebugReasonType' from incompat
 int sum = 0; // set sum to 0
 ```
 
-* If you need bitmaps, do not shift and OR the bits manually on `ut32`. Use bit vectors from `rz_bitvector.h` instead.
+* If you need bitmaps, do not shift and OR the bits manually on `ut32`. Use bit vectors from `rz_bitvector.hpp` instead.
 
 ### Shell Scripts
 
@@ -317,7 +317,7 @@ git grep -nWG "^[^[:blank:]].*func_name("
 
 Since many places in Rizin output JSON the special API was created, **PJ** which means "Print Json".
 It allows to create nested JSON structs with a simple and short API. Full API reference is
-available in `librz/include/rz_util/rz_pj.h`.
+available in `librz/include/rz_util/rz_pj.hpp`.
 
 Here is the short example of how we usually use **PJ**:
 ```c
@@ -368,7 +368,7 @@ compliance of the project and get the licenses/copyright of each file.
 
 # Custom Pointer Modifiers
 
-In Rizin code there are some conventions to help developers use pointers more safely, which are defined in `librz/include/rz_types.h`:
+In Rizin code there are some conventions to help developers use pointers more safely, which are defined in `librz/include/rz_types.hpp`:
 
 ```c
 #define RZ_IN        /* do not use, implicit */

@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2009-2020 ret2libc <sirmy15@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
 
 struct buf_file_user {
 	const char *file;

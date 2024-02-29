@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2020 Francesco Tamagni <mrmacete@protonmail.ch>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "dyldcache.h"
+#include "dyldcache.hpp"
 
 static void rebase_bytes_v1(RzDyldRebaseInfo1 *rebase_info, ut8 *buf, ut64 offset, int count, ut64 start_of_write) {
 	int in_buf = 0;

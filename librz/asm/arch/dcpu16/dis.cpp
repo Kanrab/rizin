@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "dcpu16.h"
+#include "dcpu16.hpp"
 
 struct op_code {
 	ut8 opcode;

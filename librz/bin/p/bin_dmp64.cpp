@@ -1,13 +1,13 @@
 // SPDX-FileCopyrightText: 2020 abcSup <zifan.tan@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_util/rz_print.h>
-#include <rz_lib.h>
-#include <rz_bin.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_util/rz_print.hpp>
+#include <rz_lib.hpp>
+#include <rz_bin.hpp>
 
-#include "dmp/dmp64.h"
+#include "dmp/dmp64.hpp"
 
 static Sdb *get_sdb(RzBinFile *bf) {
 	rz_return_val_if_fail(bf && bf->o, NULL);
@@ -275,7 +275,7 @@ RzBinPlugin rz_bin_plugin_dmp64 = {
 	.license = "LGPL3",
 	.destroy = &destroy,
 	.get_sdb = &get_sdb,
-	.header = &header,
+	.hppeader = &header,
 	.info = &info,
 	.load_buffer = &load_buffer,
 	.check_buffer = &check_buffer,

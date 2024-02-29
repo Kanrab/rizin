@@ -5,11 +5,11 @@
 #ifndef RZ_TH_HASH_TABLE_H
 #define RZ_TH_HASH_TABLE_H
 
-#include <rz_th.h>
-#include <rz_util/ht_pp.h>
-#include <rz_util/ht_up.h>
-#include <rz_util/ht_uu.h>
-#include <rz_util/ht_pu.h>
+#include <rz_th.hpp>
+#include <rz_util/ht_pp.hpp>
+#include <rz_util/ht_up.hpp>
+#include <rz_util/ht_uu.hpp>
+#include <rz_util/ht_pu.hpp>
 
 #ifdef __cplusplus
 extern "C" {

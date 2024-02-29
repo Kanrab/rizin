@@ -10,7 +10,7 @@ x 0x100 @ 0x0
 EOF
 EXPECT=<<EOF
 - offset -   0 1  2 3  4 5  6 7  8 9  A B  C D  E F  0123456789ABCDEF
-0x00000000  3c69 6e69 743e 0006 4865 6c6c 6f20 000a  <init>..Hello ..
+0x00000000  3c69 6e69 743e 0006 4865 6c6c 6f20 000a  <init>..hppello ..
 0x00000010  4865 6c6c 6f2e 6a61 7661 0001 4c00 074c  Hello.java..L..L
 0x00000020  4865 6c6c 6f3b 0002 4c4c 0015 4c6a 6176  Hello;..LL..Ljav
 0x00000030  612f 696f 2f50 7269 6e74 5374 7265 616d  a/io/PrintStream
@@ -40,7 +40,7 @@ x 0x100 @ 0x0
 EOF
 EXPECT=<<EOF
 - offset -   0 1  2 3  4 5  6 7  8 9  A B  C D  E F  0123456789ABCDEF
-0x00000000  3c69 6e69 743e 0006 4865 6c6c 6f20 000a  <init>..Hello ..
+0x00000000  3c69 6e69 743e 0006 4865 6c6c 6f20 000a  <init>..hppello ..
 0x00000010  4865 6c6c 6f2e 6a61 7661 0001 4c00 074c  Hello.java..L..L
 0x00000020  4865 6c6c 6f3b 0002 4c4c 0015 4c6a 6176  Hello;..LL..Ljav
 0x00000030  612f 696f 2f50 7269 6e74 5374 7265 616d  a/io/PrintStream

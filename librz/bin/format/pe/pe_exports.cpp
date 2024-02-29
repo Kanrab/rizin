@@ -3,7 +3,7 @@
 // SPDX-FileCopyrightText: 2008-2019 inisider <inisider@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "pe.h"
+#include "pe.hpp"
 
 typedef struct {
 	char shortname[8];

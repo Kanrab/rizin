@@ -2367,7 +2367,7 @@ commands:
             type: RZ_CMD_ARG_TYPE_STRING
             optional: true
       - name: asc
-        summary: Dump syscall info into .h file
+        summary: Dump syscall info into .hpp file
         cname: analysis_syscall_dump_c
         args:
           - name: syscall

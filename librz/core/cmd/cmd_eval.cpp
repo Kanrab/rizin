@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2009-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <stddef.h>
+#include <stddef.hpp>
 #include <stdbool.h>
-#include <rz_core.h>
-#include "../core_private.h"
+#include <rz_core.hpp>
+#include "../core_private.hpp"
 
 static bool load_theme(RzCore *core, const char *path) {
 	if (!rz_file_exists(path)) {

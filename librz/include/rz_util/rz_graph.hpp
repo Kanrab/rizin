@@ -1,7 +1,7 @@
 #ifndef RZ_GRAPH_H
 #define RZ_GRAPH_H
 
-#include <rz_list.h>
+#include <rz_list.hpp>
 
 #ifdef __cplusplus
 extern "C" {

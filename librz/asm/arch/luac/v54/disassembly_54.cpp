@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 // SPDX-FileCopyrightText: 2021 Heersin <teablearcher@gmail.com>
 
-#include "arch_54.h"
+#include "arch_54.hpp"
 
 int lua54_disasm(RzAsmOp *op, const ut8 *buf, int len, LuaOpNameList opnames) {
 	if (len < 4) {

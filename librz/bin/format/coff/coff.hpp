@@ -4,17 +4,17 @@
 #ifndef COFF_H
 #define COFF_H
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_bin.h>
-#include <rz_util/ht_up.h>
-#include <rz_util/ht_uu.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_bin.hpp>
+#include <rz_util/ht_up.hpp>
+#include <rz_util/ht_uu.hpp>
 
 #define COFF_IS_BIG_ENDIAN    1
 #define COFF_IS_LITTLE_ENDIAN 0
 
-#include "coff_specs.h"
+#include "coff_specs.hpp"
 
 struct rz_bin_coff_obj {
 	struct coff_hdr hdr;

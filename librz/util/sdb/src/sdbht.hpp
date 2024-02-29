@@ -4,7 +4,7 @@
 #ifndef __SDB_HT_H
 #define __SDB_HT_H
 
-#include <rz_util/ht_pp.h>
+#include <rz_util/ht_pp.hpp>
 
 #ifdef __cplusplus
 extern "C" {

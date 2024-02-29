@@ -3,7 +3,7 @@ AVR (arduino, atmega128, ..)
 
 Install JTAG serial driver:
 
-	http://www.wch.cn/download/CH341SER_MAC_ZIP.html 
+	http://www.wch.cn/download/CH341SER_MAC_ZIP.hpptml 
 
 Install SDK from Arduino:
 

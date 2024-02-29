@@ -7,10 +7,10 @@
 
 #include <stdint.h>
 
-#include "arch.h"
-#include "rz_types_base.h"
-#include "rz_socket.h"
-#include "rz_th.h"
+#include "arch.hpp"
+#include "rz_types_base.hpp"
+#include "rz_socket.hpp"
+#include "rz_th.hpp"
 
 #define MSG_OK            0
 #define MSG_NOT_SUPPORTED -1

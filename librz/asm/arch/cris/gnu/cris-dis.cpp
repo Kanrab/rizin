@@ -24,10 +24,10 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>
-#include "disas-asm.h"
-#include "sysdep.h"
-#include "opcode/cris.h"
-#include "libiberty.h"
+#include "disas-asm.hpp"
+#include "sysdep.hpp"
+#include "opcode/cris.hpp"
+#include "libiberty.hpp"
 
 /* Return TRUE if the start of STR matches PREFIX, FALSE otherwise.  */
 

@@ -1,13 +1,13 @@
 // SPDX-FileCopyrightText: 2018 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_bin.h>
-#include <rz_util/ht_uu.h>
-#include "../i/private.h"
-#include "mach0/coresymbolication.h"
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_bin.hpp>
+#include <rz_util/ht_uu.hpp>
+#include "../i/private.hpp"
+#include "mach0/coresymbolication.hpp"
 
 // enable debugging messages
 #define D              if (0)
@@ -477,7 +477,7 @@ RzBinPlugin rz_bin_plugin_symbols = {
 	.size = &size,
 	.baddr = &baddr,
 	.info = &info,
-	.header = &header,
+	.hppeader = &header,
 	.destroy = &destroy,
 	.lines = lines
 };

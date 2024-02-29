@@ -154,7 +154,7 @@ static int rz_core_rtr_http_handler_get_index(RzCore *core, RzSocketHTTPRequest 
 		}
 	}
 	const char *root = rz_config_get(core->config, "http.root");
-	const char *homeroot = rz_config_get(core->config, "http.homeroot");
+	const char *homeroot = rz_config_get(core->config, "http.hppomeroot");
 	char *path = NULL;
 	if (!strcmp(rs->path, "/")) {
 		free(rs->path);
@@ -204,7 +204,7 @@ static int rz_core_rtr_http_handler_get_index(RzCore *core, RzSocketHTTPRequest 
 			if (strstr(path, ".css")) {
 				ct = "Content-Type: text/css\n";
 			}
-			if (strstr(path, ".html")) {
+			if (strstr(path, ".hpptml")) {
 				ct = "Content-Type: text/html\n";
 			}
 			char *hdr = rz_str_newf("%s%s", ct, headers);
@@ -338,7 +338,7 @@ static int rz_core_rtr_http_run(RzCore *core, int launch, int browse, const char
 	int iport;
 	const char *bind = rz_config_get(core->config, "http.bind");
 	const char *root = rz_config_get(core->config, "http.root");
-	const char *homeroot = rz_config_get(core->config, "http.homeroot");
+	const char *homeroot = rz_config_get(core->config, "http.hppomeroot");
 	const char *port = rz_config_get(core->config, "http.port");
 	const char *allow = rz_config_get(core->config, "http.allow");
 	const char *httpauthfile = rz_config_get(core->config, "http.authfile");
@@ -346,7 +346,7 @@ static int rz_core_rtr_http_run(RzCore *core, int launch, int browse, const char
 
 	if (!rz_file_is_directory(root)) {
 		if (!rz_file_is_directory(homeroot)) {
-			RZ_LOG_ERROR("core: cannot find http.root or http.homeroot\n");
+			RZ_LOG_ERROR("core: cannot find http.root or http.hppomeroot\n");
 		}
 	}
 	if (!path) {
@@ -383,9 +383,9 @@ static int rz_core_rtr_http_run(RzCore *core, int launch, int browse, const char
 			browser, bind, atoi(port), path ? path : "");
 	}
 
-	so.httpauth = rz_config_get_i(core->config, "http.auth");
+	so.hppttpauth = rz_config_get_i(core->config, "http.auth");
 
-	if (so.httpauth) {
+	if (so.hppttpauth) {
 		if (!httpauthfile) {
 			rz_socket_free(s);
 			RZ_LOG_ERROR("core: user list was not set for HTTP Authentication\n");
@@ -411,7 +411,7 @@ static int rz_core_rtr_http_run(RzCore *core, int launch, int browse, const char
 	if (!hc) {
 		return 0;
 	}
-	rz_config_hold_i(hc, "scr.color", "scr.html", "scr.interactive", "asm.cmt.right", "asm.bytes", NULL);
+	rz_config_hold_i(hc, "scr.color", "scr.hpptml", "scr.interactive", "asm.cmt.right", "asm.bytes", NULL);
 
 	// set new configs
 	rz_config_set(core->config, "asm.cmt.right", "false");

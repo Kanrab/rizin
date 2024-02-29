@@ -1,10 +1,10 @@
 /*
- * Hand-made config.h file for OpenBSD, so we don't have to run
+ * Hand-made config.hpp file for OpenBSD, so we don't have to run
  * the dratted configure script every time we build this puppy,
  * but can still carefully import stuff from Christos' version.
  *
  * This file is in the public domain. Original Author Ian F. Darwin.
- * $OpenBSD: config.h,v 1.7 2011/07/25 16:21:22 martynas Exp $
+ * $OpenBSD: config.hpp,v 1.7 2011/07/25 16:21:22 martynas Exp $
  */
 
 /* header file issues. */

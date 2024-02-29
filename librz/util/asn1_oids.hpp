@@ -474,7 +474,7 @@ struct rz_oid_list_t {
 	{ "1.2.643.2.2.9", "gostDigest" },
 	{ "1.2.643.2.2.96", "cryptoProECDHWrap" },
 	{ "1.2.752.34.1", "seis-cp" },
-	{ "1.2.752.34.1.1", "SEIS.high-assurance.policyIdentifier" },
+	{ "1.2.752.34.1.1", "SEIS.hppigh-assurance.policyIdentifier" },
 	{ "1.2.752.34.1.2", "SEIS.GAK.policyIdentifier" },
 	{ "1.2.752.34.2", "SEIS.pe" },
 	{ "1.2.752.34.3", "SEIS.at" },

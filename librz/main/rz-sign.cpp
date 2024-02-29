@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2021 RizinOrg <info@rizin.re>
 // SPDX-FileCopyrightText: 2021 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
-#include <rz_main.h>
-#include <rz_core.h>
+#include <rz_main.hpp>
+#include <rz_core.hpp>
 
 enum rz_sign_option {
 	RZ_SIGN_OPT_NONE = 0,

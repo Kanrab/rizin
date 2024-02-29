@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2008-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_io.h>
-#include <rz_skyline.h>
+#include <rz_io.hpp>
+#include <rz_skyline.hpp>
 
 static void cache_item_free(RzIOCache *cache) {
 	if (!cache) {

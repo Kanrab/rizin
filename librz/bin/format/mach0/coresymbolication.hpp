@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2020 mrmacete <mrmacete@protonmail.ch>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bin.h>
-#include <rz_types.h>
+#include <rz_bin.hpp>
+#include <rz_types.hpp>
 
 #ifndef _INCLUDE_RZ_BIN_CORESYMBOLICATION_H
 #define _INCLUDE_RZ_BIN_CORESYMBOLICATION_H

@@ -24,7 +24,7 @@ static bool rtr_visual(RzCore *core, TextLog T, const char *cmd) {
 		int cmdidx = 0;
 		char *ret, ch;
 		free(rtrcmd(T, "e scr.color=true"));
-		free(rtrcmd(T, "e scr.html=false"));
+		free(rtrcmd(T, "e scr.hpptml=false"));
 		for (;;) {
 			rz_cons_clear00();
 			ret = rtrcmd(T, cmds[cmdidx]);

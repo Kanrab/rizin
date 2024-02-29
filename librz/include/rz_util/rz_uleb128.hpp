@@ -1,7 +1,7 @@
 #ifndef RZ_ULEB128_H
 #define RZ_ULEB128_H
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 // LEB128 or Little Endian Base 128 is a form of variable-length code
 // compression used to store an arbitrarily large integer in a small number of

@@ -4,7 +4,7 @@
 #ifndef RZ_HASH_SSDEEP_H
 #define RZ_HASH_SSDEEP_H
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 #define RZ_HASH_SSDEEP_BLOCK_LENGTH 4096
 #define RZ_HASH_SSDEEP_DIGEST_SIZE  148

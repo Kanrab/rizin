@@ -1,9 +1,9 @@
 #ifndef RZ_CONFIG_H
 #define RZ_CONFIG_H
 
-#include "rz_types.h"
-#include "rz_util.h"
-#include "rz_util/rz_serialize.h"
+#include "rz_types.hpp"
+#include "rz_util.hpp"
+#include "rz_util/rz_serialize.hpp"
 
 #ifdef __cplusplus
 extern "C" {

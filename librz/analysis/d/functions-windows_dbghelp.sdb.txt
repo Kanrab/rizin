@@ -1,4 +1,4 @@
-### dbghelp.h ###
+### dbghelp.hpp ###
 
 EnumDirTree=func
 func.EnumDirTree.args=6

@@ -4,8 +4,8 @@
 #ifndef RZ_IL_BOOL_H
 #define RZ_IL_BOOL_H
 
-#include <rz_types.h>
-#include <rz_util.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
 
 #ifdef __cplusplus
 extern "C" {

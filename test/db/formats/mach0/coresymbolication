@@ -257,9 +257,9 @@ EXPECT=<<EOF
 0x100006520	/Users/ftamagni/src/TestRTTI/TestRTTI/SceneDelegate.m	42	1
 0x100006524	/Users/ftamagni/src/TestRTTI/TestRTTI/SceneDelegate.m	48	1
 0x100006528	/Users/ftamagni/src/TestRTTI/TestRTTI/SceneDelegate.m	55	1
-0x10000652c	/Users/ftamagni/src/TestRTTI/TestRTTI/SceneDelegate.h	13	42
-0x10000653c	/Users/ftamagni/src/TestRTTI/TestRTTI/SceneDelegate.h	13	0
-0x100006540	/Users/ftamagni/src/TestRTTI/TestRTTI/SceneDelegate.h	0	0
+0x10000652c	/Users/ftamagni/src/TestRTTI/TestRTTI/SceneDelegate.hpp	13	42
+0x10000653c	/Users/ftamagni/src/TestRTTI/TestRTTI/SceneDelegate.hpp	13	0
+0x100006540	/Users/ftamagni/src/TestRTTI/TestRTTI/SceneDelegate.hpp	0	0
 0x100006550	/Users/ftamagni/src/TestRTTI/TestRTTI/SceneDelegate.m	15	0
 0x100006564	-	0	0
 --
@@ -305,9 +305,9 @@ EXPECT=<<EOF
 0x100006520	/Users/ftamagni/src/TestRTTI/TestRTTI/SceneDelegate.m	39	0
 0x100006524	/Users/ftamagni/src/TestRTTI/TestRTTI/SceneDelegate.m	45	0
 0x100006528	/Users/ftamagni/src/TestRTTI/TestRTTI/SceneDelegate.m	51	0
-0x10000652c	/Users/ftamagni/src/TestRTTI/TestRTTI/SceneDelegate.h	13	0
-0x10000653c	/Users/ftamagni/src/TestRTTI/TestRTTI/SceneDelegate.h	13	0
-0x100006540	/Users/ftamagni/src/TestRTTI/TestRTTI/SceneDelegate.h	0	0
+0x10000652c	/Users/ftamagni/src/TestRTTI/TestRTTI/SceneDelegate.hpp	13	0
+0x10000653c	/Users/ftamagni/src/TestRTTI/TestRTTI/SceneDelegate.hpp	13	0
+0x100006540	/Users/ftamagni/src/TestRTTI/TestRTTI/SceneDelegate.hpp	0	0
 0x100006550	/Users/ftamagni/src/TestRTTI/TestRTTI/SceneDelegate.m	15	0
 0x100006564	-	0	0
 --

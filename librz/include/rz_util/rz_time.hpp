@@ -1,8 +1,8 @@
 #ifndef RZ_TIME_H
 #define RZ_TIME_H
 
-#include <rz_types.h>
-#include <time.h>
+#include <rz_types.hpp>
+#include <time.hpp>
 
 #define RZ_NSEC_PER_SEC  1000000000ULL
 #define RZ_NSEC_PER_MSEC 1000000ULL

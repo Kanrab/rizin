@@ -190,7 +190,7 @@ FILE=bins/mach0/mac-ls
 CMDS=pfc zdq foo bar cow
 EXPECT=<<EOF
 struct {
-    char* foo; // "UH..AWAVAUATSH..H."
+    char* foo; // "UH..AWAVAUATSH..hpp."
     int32_t bar; // 4085860352
     uint64_t cow; // -450213120875525823
 }

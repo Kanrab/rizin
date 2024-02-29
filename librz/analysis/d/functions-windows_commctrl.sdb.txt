@@ -1,4 +1,4 @@
-### commctrl.h ###
+### commctrl.hpp ###
 
 CreateMappedBitmap=func
 func.CreateMappedBitmap.args=5
@@ -171,11 +171,11 @@ func.GetEffectiveClientRect.arg.2=const INT *,lpInfo
 func.GetEffectiveClientRect.ret=void
 
 HIMAGELIST_QueryInterface=func
-func.HIMAGELIST_QueryInterface.args=3
-func.HIMAGELIST_QueryInterface.arg.0=HIMAGELIST,himl
-func.HIMAGELIST_QueryInterface.arg.1=REFIID,riid
-func.HIMAGELIST_QueryInterface.arg.2=void **,ppv
-func.HIMAGELIST_QueryInterface.ret=HRESULT
+func.hppIMAGELIST_QueryInterface.args=3
+func.hppIMAGELIST_QueryInterface.arg.0=HIMAGELIST,himl
+func.hppIMAGELIST_QueryInterface.arg.1=REFIID,riid
+func.hppIMAGELIST_QueryInterface.arg.2=void **,ppv
+func.hppIMAGELIST_QueryInterface.ret=HRESULT
 
 ImageList_Add=func
 func.ImageList_Add.args=3

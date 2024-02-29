@@ -2,8 +2,8 @@
 // SPDX-FileCopyrightText: 2022-2023 billow <billow.fun@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_il/rz_il_opbuilder_begin.h>
-#include "8051_il.h"
+#include <rz_il/rz_il_opbuilder_begin.hpp>
+#include "8051_il.hpp"
 
 static bool is_register_memory_map(ut8 reg) {
 	static const ut8 hook_registers[0x100] = {
@@ -563,7 +563,7 @@ RZ_IPI RzILOpEffect *rz_8051_il_op(RZ_NONNULL RzAnalysis *analysis, RZ_NONNULL c
 	return eff;
 }
 
-#include "rz_il/rz_il_opbuilder_end.h"
+#include "rz_il/rz_il_opbuilder_end.hpp"
 
 RZ_IPI RzAnalysisILConfig *rz_8051_il_config(RZ_NONNULL RzAnalysis *analysis) {
 	rz_return_val_if_fail(analysis, NULL);

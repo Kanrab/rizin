@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2023 billow <billow.fun@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bin_dwarf.h>
-#include "dwarf_private.h"
+#include <rz_bin_dwarf.hpp>
+#include "dwarf_private.hpp"
 /**
  * \brief Parses attribute value based on its definition
  *        and stores it into `value`
@@ -42,11 +42,11 @@ RZ_IPI bool RzBinDwarfAttr_parse(
 	case DW_FORM_data16:
 		value->kind = RzBinDwarfAttr_UConstant;
 		if (reader->big_endian) {
-			U_OR_RET_FALSE(64, value->u128.High);
+			U_OR_RET_FALSE(64, value->u128.hppigh);
 			U_OR_RET_FALSE(64, value->u128.Low);
 		} else {
 			U_OR_RET_FALSE(64, value->u128.Low);
-			U_OR_RET_FALSE(64, value->u128.High);
+			U_OR_RET_FALSE(64, value->u128.hppigh);
 		}
 		break;
 	case DW_FORM_sdata:

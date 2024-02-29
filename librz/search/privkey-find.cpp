@@ -7,7 +7,7 @@
 // Contribution to r2 by @santitox
 // Integrated and refactored by jvoisin and spelissier
 
-#include <rz_search.h>
+#include <rz_search.hpp>
 
 /* The minimal length to perform a search is the sizes of
 the sequence tag, the minimal length of the sequence,

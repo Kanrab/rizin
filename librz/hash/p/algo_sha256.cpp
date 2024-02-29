@@ -1,15 +1,15 @@
 // SPDX-FileCopyrightText: 2021 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_hash.h>
-#include <rz_util/rz_assert.h>
+#include <rz_hash.hpp>
+#include <rz_util/rz_assert.hpp>
 
 #if HAVE_LIB_SSL
 /**
  * Use OpenSSL lib, not the Rizin implementation
  */
 
-#include "../algorithms/openssl_common.h"
+#include "../algorithms/openssl_common.hpp"
 rz_openssl_plugin_define_hash_cfg(sha256, EVP_sha256, true);
 
 #else /* HAVE_LIB_SSL */
@@ -17,7 +17,7 @@ rz_openssl_plugin_define_hash_cfg(sha256, EVP_sha256, true);
  * Use Rizin implementation, not OpenSSL lib
  */
 
-#include "../algorithms/sha2/sha2.h"
+#include "../algorithms/sha2/sha2.hpp"
 
 static void *plugin_sha256_context_new() {
 	return RZ_NEW0(RZ_SHA256_CTX);

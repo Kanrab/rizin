@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 1995 Tatu Ylonen <ylo@cs.hut.fi>
+// SPDX-FileCopyrightText: 1995 Tatu Ylonen <ylo@cs.hpput.fi>
 // SPDX-FileCopyrightText: 2000, 2001 Markus Friedl
 // SPDX-License-Identifier: BSD-2-Clause
 
@@ -37,8 +37,8 @@
  * Else pictures would be too dense, and drawing the frame would
  * fail, too, because the key type would not fit in anymore.
  */
-#include <rz_hash.h>
-#include <rz_util.h>
+#include <rz_hash.hpp>
+#include <rz_util.hpp>
 
 #define FLDBASE   8
 #define FLDSIZE_Y (FLDBASE + 1)

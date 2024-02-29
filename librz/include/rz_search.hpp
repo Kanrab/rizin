@@ -1,10 +1,10 @@
 #ifndef RZ_SEARCH_H
 #define RZ_SEARCH_H
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_list.h>
-#include <rz_io.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_list.hpp>
+#include <rz_io.hpp>
 
 #ifdef __cplusplus
 extern "C" {

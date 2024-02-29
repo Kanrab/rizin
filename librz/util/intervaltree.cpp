@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2019 thestr4ng3r <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util/rz_intervaltree.h>
-#include <rz_util/rz_assert.h>
+#include <rz_util/rz_intervaltree.hpp>
+#include <rz_util/rz_assert.hpp>
 
 #define unwrap(rbnode) ((rbnode) ? container_of(rbnode, RzIntervalNode, node) : NULL)
 

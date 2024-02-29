@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2011-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: MIT
 
-#include <rz_io.h>
-#include <rz_lib.h>
-#include <rz_core.h>
-#include <rz_socket.h>
+#include <rz_io.hpp>
+#include <rz_lib.hpp>
+#include <rz_core.hpp>
+#include <rz_socket.hpp>
 #include <sys/types.h>
 
 typedef struct {

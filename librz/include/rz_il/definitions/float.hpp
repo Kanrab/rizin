@@ -1,8 +1,8 @@
 #ifndef RZ_IL_FLOAT_H
 #define RZ_IL_FLOAT_H
 
-#include <rz_util.h>
-#include <rz_types.h>
+#include <rz_util.hpp>
+#include <rz_types.hpp>
 
 #ifdef __cplusplus
 extern "C" {

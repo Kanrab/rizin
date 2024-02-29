@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: 2022 Rot127 <unisono@quyllur.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "ppc_il.h"
-#include "ppc_analysis.h"
-#include "rz_il/rz_il_opcodes.h"
-#include <rz_types.h>
+#include "ppc_il.hpp"
+#include "ppc_analysis.hpp"
+#include "rz_il/rz_il_opcodes.hpp"
+#include <rz_types.hpp>
 
-#include <rz_il/rz_il_opbuilder_begin.h>
+#include <rz_il/rz_il_opbuilder_begin.hpp>
 
 /**
  * \brief Set "ca" bit if, after an add operation on \p a and \p b , the M+1 bit is set.
@@ -61,4 +61,4 @@ RZ_IPI RZ_OWN RzILOpEffect *ppc_cmp_set_cr(RZ_BORROW RzILOpPure *left, RZ_BORROW
 	return SEQ4(set_left, set_right, set_so, cond_l);
 }
 
-#include <rz_il/rz_il_opbuilder_end.h>
+#include <rz_il/rz_il_opbuilder_end.hpp>

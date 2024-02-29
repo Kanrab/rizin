@@ -4,7 +4,7 @@
 #ifndef _INCLUDE_XNU_THREADS_H_
 #define _INCLUDE_XNU_THREADS_H_
 
-#include "xnu_debug.h"
+#include "xnu_debug.hpp"
 
 #if __POWERPC__
 // TODO add better support for PPC
@@ -13,7 +13,7 @@
 #define RZ_REG_STATE_SZ PPC_THREAD_STATE_SZ
 
 #elif __arm || __arm64 || __aarch64
-#include <mach/arm/thread_status.h>
+#include <mach/arm/thread_status.hpp>
 #ifndef ARM_THREAD_STATE
 #define ARM_THREAD_STATE 1
 #endif

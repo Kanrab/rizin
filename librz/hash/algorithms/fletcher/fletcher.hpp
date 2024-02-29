@@ -4,7 +4,7 @@
 #ifndef RZ_FLETCHER_H
 #define RZ_FLETCHER_H
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 #define RZ_HASH_FLETCHER8_DIGEST_SIZE 1
 #define RZ_HASH_FLETCHER_BLOCK_LENGTH 0

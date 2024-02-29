@@ -425,7 +425,7 @@
 #ico files
 0	string	\102\101\050\000\000\000\056\000\000\000\000\000\000\000	Icon for MS Windows
 
-### # Windows icons (Ian Springer <ips@fpk.hp.com>)
+### # Windows icons (Ian Springer <ips@fpk.hppp.com>)
 ### 0	string	\000\000\001\000
 ### !:mime	image/x-ico
 ### >4	byte	1			MS Windows icon resource - 1 icon
@@ -534,7 +534,7 @@
 # number of characters -- indicated by the ulelong at offset 60.
 #>>(64.l)  lestring16 >0 Description: %15.15s
 
-# From: Alex Beregszaszi <alex@fsn.hu>
+# From: Alex Beregszaszi <alex@fsn.hppu>
 0	string	COWD		VMWare3
 >4	byte	3	 	disk image
 >>32	lelong	x		(%d/

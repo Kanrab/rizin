@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include "minunit.h"
+#include <rz_util.hpp>
+#include "minunit.hpp"
 
 int test_overflow_add(void) {
 	mu_assert_true(UT8_ADD_OVFCHK(250, 32), "ut8-add 1");

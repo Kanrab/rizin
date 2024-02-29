@@ -5,10 +5,10 @@
 #ifndef BFLT_H
 #define BFLT_H
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_bin.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_bin.hpp>
 
 /* Version 4 */
 #define FLAT_VERSION     0x00000004L

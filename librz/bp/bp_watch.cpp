@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2010-2017 rkx1209 <rkx1209dev@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bp.h>
+#include <rz_bp.hpp>
 
 RZ_IPI void rz_bp_item_insert(RzBreakpoint *bp, RzBreakpointItem *b);
 

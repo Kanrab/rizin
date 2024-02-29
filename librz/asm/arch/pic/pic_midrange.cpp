@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2018 courk <courk@courk.cc>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "pic_midrange.h"
+#include "pic_midrange.hpp"
 
 static const PicMidrangeOpInfo
 	pic_midrange_op_info[PIC_MIDRANGE_OPCODE_INVALID] = {

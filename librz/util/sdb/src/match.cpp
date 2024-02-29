@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2015-2016 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: MIT
 
-#include "sdb.h"
+#include "sdb.hpp"
 #include <ctype.h>
 
 static inline int haveSuffix(const char *glob, int glob_len, const char *sfx) {

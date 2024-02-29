@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2021 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "mod255.h"
-#include <rz_util.h>
+#include "mod255.hpp"
+#include <rz_util.hpp>
 
 bool rz_mod255_init(RzMod255 *ctx) {
 	rz_return_val_if_fail(ctx, false);

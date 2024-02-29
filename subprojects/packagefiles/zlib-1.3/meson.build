@@ -17,11 +17,11 @@ elif cc.get_argument_syntax() == 'gcc'
   endif
 endif
 
-if cc.has_header('unistd.h')
+if cc.has_header('unistd.hpp')
   compile_args += '-DHAVE_UNISTD_H'
 endif
 
-if cc.has_header('stdarg.h')
+if cc.has_header('stdarg.hpp')
   compile_args += '-DHAVE_STDARG_H'
 endif
 
@@ -42,7 +42,7 @@ src = files([
   'gzread.c',
   'gzwrite.c'])
 
-headers = files(['zconf.h', 'zlib.h'])
+headers = files(['zconf.hpp', 'zlib.hpp'])
 
 if host_machine.system() == 'windows'
   win = import('windows')

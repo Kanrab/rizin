@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: 2013-2018 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_asm.h>
-#include <rz_lib.h>
-#include <rz_util/ht_uu.h>
-#include <capstone/capstone.h>
-#include "../arch/arm/asm-arm.h"
-#include "../arch/arm/arm_it.h"
+#include <rz_asm.hpp>
+#include <rz_lib.hpp>
+#include <rz_util/ht_uu.hpp>
+#include <capstone/capstone.hpp>
+#include "../arch/arm/asm-arm.hpp"
+#include "../arch/arm/arm_it.hpp"
 
 #if CS_NEXT_VERSION < 6
 #include "./asm_arm_hacks.inc"

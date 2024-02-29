@@ -5,9 +5,9 @@
  * \file Implements common bit operation perfomed on values.
  */
 
-#include <rz_util/rz_assert.h>
-#include <rz_il/rz_il_opcodes.h>
-#include <rz_types.h>
+#include <rz_util/rz_assert.hpp>
+#include <rz_il/rz_il_opcodes.hpp>
+#include <rz_types.hpp>
 
 /**
  * \brief Extracts \p length bits from \p start of \p value and returns them as U32.

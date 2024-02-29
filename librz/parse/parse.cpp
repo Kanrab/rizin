@@ -5,10 +5,10 @@
 
 #include <stdio.h>
 
-#include <rz_types.h>
-#include <rz_parse.h>
-#include <rz_lib.h>
-#include <config.h>
+#include <rz_types.hpp>
+#include <rz_parse.hpp>
+#include <rz_lib.hpp>
+#include <config.hpp>
 
 RZ_LIB_VERSION(rz_parse);
 

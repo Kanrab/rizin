@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2021 GustavoLCR <gugulcr@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_windows.h>
-#include <DbgHelp.h>
-#include <w32dbg_wrap.h>
+#include <rz_windows.hpp>
+#include <DbgHelp.hpp>
+#include <w32dbg_wrap.hpp>
 
 #define DEF_PROC(proc) static proc##_t *w32_##proc
 #define GET_PROC(proc) \
@@ -96,8 +96,8 @@ static RzList *backtrace_windows(RzDebug *dbg, ut64 at) {
 	}
 	CONTEXT *ctx = (CONTEXT *)rz_reg_arena_peek(dbg->reg);
 	rz_th_lock_enter(lock);
-	w32_SymInitialize(wrap->pi.hProcess, NULL, TRUE);
-	while (w32_StackWalk64(machine_type, wrap->pi.hProcess, wrap->pi.hThread, &stack, ctx, NULL, w32_SymFunctionTableAccess64, w32_SymGetModuleBase64, NULL)) {
+	w32_SymInitialize(wrap->pi.hppProcess, NULL, TRUE);
+	while (w32_StackWalk64(machine_type, wrap->pi.hppProcess, wrap->pi.hppThread, &stack, ctx, NULL, w32_SymFunctionTableAccess64, w32_SymGetModuleBase64, NULL)) {
 		RzDebugFrame *frame = RZ_NEW0(RzDebugFrame);
 		if (!frame) {
 			break;
@@ -111,7 +111,7 @@ static RzList *backtrace_windows(RzDebug *dbg, ut64 at) {
 			break;
 		}
 	}
-	w32_SymCleanup(wrap->pi.hProcess);
+	w32_SymCleanup(wrap->pi.hppProcess);
 	rz_th_lock_leave(lock);
 	free(ctx);
 	return list;

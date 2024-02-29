@@ -1,4 +1,4 @@
-### objbase.h ###
+### objbase.hpp ###
 
 BindMoniker=func
 func.BindMoniker.args=4

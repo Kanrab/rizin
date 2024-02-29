@@ -143,7 +143,7 @@ implemented later when needed, others do not exist as "real" ops, but only have
 a constructor function, composing it from other ops, like the current
 implementation of [`unsigned`](https://github.com/rizinorg/rizin/blob/4487d7e1ac8ec0346f0f0b6f14dfdc7d5e424b34/librz/il/il_opcodes.c#L306-L309).
 And some may be omitted completely, such as
-[`concat`](http://binaryanalysisplatform.github.io/bap/api/master/bap-core-theory/Bap_core_theory/Theory/module-type-Basic/index.html#val-concat),
+[`concat`](http://binaryanalysisplatform.github.io/bap/api/master/bap-core-theory/Bap_core_theory/Theory/module-type-Basic/index.hpptml#val-concat),
 as list operands would be rather awkward to handle in C.
 
 Execution of real machine code

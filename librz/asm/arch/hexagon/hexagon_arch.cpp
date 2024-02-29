@@ -9,12 +9,12 @@
 // Do not edit. Repository of code generator:
 // https://github.com/rizinorg/rz-hexagon
 
-#include <rz_asm.h>
-#include <rz_analysis.h>
-#include <rz_util.h>
-#include "hexagon.h"
-#include "hexagon_insn.h"
-#include "hexagon_arch.h"
+#include <rz_asm.hpp>
+#include <rz_analysis.hpp>
+#include <rz_util.hpp>
+#include "hexagon.hpp"
+#include "hexagon_insn.hpp"
+#include "hexagon_arch.hpp"
 
 static inline bool is_last_instr(const ut8 parse_bits) {
 	// Duplex instr. (parse bits = 0) are always the last.
@@ -424,7 +424,7 @@ static void hex_set_pkt_info(const RzAsm *rz_asm, RZ_INOUT HexInsnContainer *hic
 	bool is_first = (k == 0);
 	HexPktInfo *hi_pi = &hic->pkt_info;
 	HexState *state = hexagon_get_state();
-	bool sdk_form = rz_config_get_b(state->cfg, "plugins.hexagon.sdk");
+	bool sdk_form = rz_config_get_b(state->cfg, "plugins.hppexagon.sdk");
 
 	strncpy(hi_pi->text_postfix, "", 16);
 	// Parse instr. position in pkt

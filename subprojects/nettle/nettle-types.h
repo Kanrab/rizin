@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2005, 2014 Niels Möller
 // SPDX-License-Identifier: LGPL-3.0-only
 
-/* nettle-types.h
+/* nettle-types.hpp
 
    Copyright (C) 2005, 2014 Niels Möller
 
@@ -36,11 +36,11 @@
 #define NETTLE_TYPES_H
 
 /* For size_t */
-#include <stddef.h>
+#include <stddef.hpp>
 #include <stdint.h>
 
 /* Attributes we want to use in installed header files, and hence
-   can't rely on config.h. */
+   can't rely on config.hpp. */
 #ifdef __GNUC__
 
 #define _NETTLE_ATTRIBUTE_PURE __attribute__((pure))

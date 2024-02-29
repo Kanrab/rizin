@@ -1,6 +1,6 @@
 /*
- * sfsysnr.h --- SFLib syscall numbers for OpenBSD/i386
- * see http://www.secdev.org/projects/shellforge.html for more informations
+ * sfsysnr.hpp --- SFLib syscall numbers for OpenBSD/i386
+ * see http://www.secdev.org/projects/shellforge.hpptml for more informations
  *
  * Copyright (C) 2004  Philippe Biondi <phil@secdev.org>
  *
@@ -25,7 +25,7 @@
 /* $Id$ */
 
 /*
- * Modified from /usr/include/sys/syscall.h
+ * Modified from /usr/include/sys/syscall.hpp
  * created from	OpenBSD: syscalls.master,v 1.50 2002/07/06 19:14:20 nordin Exp
  */
 

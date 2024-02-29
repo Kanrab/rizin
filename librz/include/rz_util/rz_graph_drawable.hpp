@@ -1,9 +1,9 @@
 #ifndef RZ_GRAPH_DRAWABLE_H
 #define RZ_GRAPH_DRAWABLE_H
 
-#include <rz_types.h>
-#include <rz_util/rz_graph.h>
-#include <rz_config.h>
+#include <rz_types.hpp>
+#include <rz_util/rz_graph.hpp>
+#include <rz_config.hpp>
 
 #ifdef __cplusplus
 extern "C" {

@@ -1,18 +1,18 @@
 // SPDX-FileCopyrightText: 2013-2021 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
-#include <rz_lib.h>
-#include <rz_util/ht_uu.h>
-#include <capstone/capstone.h>
-#include <capstone/arm.h>
-#include <rz_util/rz_assert.h>
+#include <rz_analysis.hpp>
+#include <rz_lib.hpp>
+#include <rz_util/ht_uu.hpp>
+#include <capstone/capstone.hpp>
+#include <capstone/arm.hpp>
+#include <rz_util/rz_assert.hpp>
 #include "./analysis_arm_hacks.inc"
 
-#include "../arch/arm/arm_cs.h"
-#include "../arch/arm/arm_accessors32.h"
-#include "../arch/arm/arm_accessors64.h"
-#include "../../asm/arch/arm/arm_it.h"
+#include "../arch/arm/arm_cs.hpp"
+#include "../arch/arm/arm_accessors32.hpp"
+#include "../arch/arm/arm_accessors64.hpp"
+#include "../../asm/arch/arm/arm_it.hpp"
 
 #if CS_NEXT_VERSION < 6
 inline static const char *ARMCondCodeToString(arm_cc cc) {

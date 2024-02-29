@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2021 Anton Kochkov <anton.kochkov@gmail.com
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include <rz_socket.h>
-#include "minunit.h"
+#include <rz_util.hpp>
+#include <rz_socket.hpp>
+#include "minunit.hpp"
 
 static char tmp_path[1000];
 static const char *runprofile =

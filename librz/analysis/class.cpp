@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: 2018 thestr4ng3r <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
-#include <rz_vector.h>
-#include <rz_util/rz_graph_drawable.h>
-#include <rz_util/rz_table.h>
-#include "../include/rz_analysis.h"
-#include "../include/rz_util/rz_graph.h"
+#include <rz_analysis.hpp>
+#include <rz_vector.hpp>
+#include <rz_util/rz_graph_drawable.hpp>
+#include <rz_util/rz_table.hpp>
+#include "../include/rz_analysis.hpp"
+#include "../include/rz_util/rz_graph.hpp"
 
 static void rz_analysis_class_base_delete_class(RzAnalysis *analysis, const char *class_name);
 static void rz_analysis_class_method_delete_class(RzAnalysis *analysis, const char *class_name);

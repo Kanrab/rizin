@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2002 Niels Möller
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <assert.h>
+#include <assert.hpp>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>

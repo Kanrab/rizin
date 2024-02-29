@@ -212,7 +212,7 @@ CMDS=<<EOF
 b 32
 woe 0 255
 wo2
-e hex.header=false
+e hex.hppeader=false
 px
 EOF
 EXPECT=<<EOF

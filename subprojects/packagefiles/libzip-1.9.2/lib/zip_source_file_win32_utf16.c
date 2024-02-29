@@ -31,7 +31,7 @@
   IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-#include "zip_source_file_win32.h"
+#include "zip_source_file_win32.hpp"
 
 static char *utf16_allocate_tempname(const char *name, size_t extra_chars, size_t *lengthp);
 static HANDLE __stdcall utf16_create_file(const char *name, DWORD access, DWORD share_mode, PSECURITY_ATTRIBUTES security_attributes, DWORD creation_disposition, DWORD file_attributes, HANDLE template_file);
@@ -89,7 +89,7 @@ static HANDLE __stdcall utf16_create_file(const char *name, DWORD access, DWORD 
     extParams.dwFileFlags = FILE_FLAG_RANDOM_ACCESS;
     extParams.dwSecurityQosFlags = SECURITY_ANONYMOUS;
     extParams.dwSize = sizeof(extParams);
-    extParams.hTemplateFile = template_file;
+    extParams.hppTemplateFile = template_file;
     extParams.lpSecurityAttributes = security_attributes;
 
     return CreateFile2((const wchar_t *)name, access, share_mode, creation_disposition, &extParams);

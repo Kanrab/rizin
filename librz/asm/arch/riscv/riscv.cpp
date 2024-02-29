@@ -25,13 +25,13 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <ctype.h>
-#include <stdarg.h>
-#include <rz_asm.h>
-#include <rz_lib.h>
+#include <stdarg.hpp>
+#include <rz_asm.hpp>
+#include <rz_lib.hpp>
 #include <string.h>
 
-#include "riscv-opc.h"
-#include "riscv.h"
+#include "riscv-opc.hpp"
+#include "riscv.hpp"
 
 #define ARRAY_SIZE(a) (sizeof(a) / sizeof(*a))
 
@@ -248,7 +248,7 @@ static void get_insn_args (char *buf, const char *d, insn_t l, uint64_t pc) {
 				switch (csr)
 				 {
 #define DECLARE_CSR(name, num) case num: csr_name = #name; break;
-#include "riscv-opc.h"
+#include "riscv-opc.hpp"
 #undef DECLARE_CSR
 				 }
 				if (csr_name) {

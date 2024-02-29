@@ -3,7 +3,7 @@
 // SPDX-FileCopyrightText: 2021 heersin <teablearcher@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_il/definitions/value.h>
+#include <rz_il/definitions/value.hpp>
 
 /**
  * Returns a new RzILVal (Any type)

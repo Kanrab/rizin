@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2015 Jeffrey Crowell <crowell@bu.edu>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include "minunit.h"
+#include <rz_util.hpp>
+#include "minunit.hpp"
 
 bool test_rz_base64_decode_dyn(void) {
 	char *hello = (char *)rz_base64_decode_dyn("aGVsbG8=", -1);

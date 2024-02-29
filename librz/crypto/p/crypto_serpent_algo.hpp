@@ -4,8 +4,8 @@
 #ifndef CRYPTO_SERPENT_ALGO_H
 #define CRYPTO_SERPENT_ALGO_H
 
-#include <rz_crypto.h>
-#include <rz_util.h>
+#include <rz_crypto.hpp>
+#include <rz_util.hpp>
 #define DW_BY_BLOCK       4
 #define DW_BY_USERKEY     8
 #define NB_ROUNDS         32

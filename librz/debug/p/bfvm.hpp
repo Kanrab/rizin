@@ -4,8 +4,8 @@
 #ifndef _R_BFVM_INCLUDE_
 #define _R_BFVM_INCLUDE_
 
-#include <rz_io.h>
-#include <rz_util.h>
+#include <rz_io.hpp>
+#include <rz_util.hpp>
 
 #define BFVM_SCREEN_ADDR 0x50000
 #define BFVM_SCREEN_SIZE 4096

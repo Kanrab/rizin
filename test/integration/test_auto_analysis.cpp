@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: 2023 Siddharth Mishra <misra.cxx@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
-#include <rz_analysis.h>
-#include <rz_project.h>
+#include <rz_core.hpp>
+#include <rz_analysis.hpp>
+#include <rz_project.hpp>
 
-#include "../unit/minunit.h"
+#include "../unit/minunit.hpp"
 
 typedef struct test_fcn_level {
 	const char *fcn_name; ///< name of function

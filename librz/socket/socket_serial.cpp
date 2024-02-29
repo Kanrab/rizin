@@ -1,13 +1,13 @@
 // SPDX-FileCopyrightText: 2017 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_socket.h>
+#include <rz_socket.hpp>
 #if __UNIX__
 
-#include <errno.h>
+#include <errno.hpp>
 #include <string.h>
 #include <fcntl.h>
-#include <termios.h>
+#include <termios.hpp>
 
 static int set_interface_attribs(int fd, int speed, int parity) {
 	struct termios tty;

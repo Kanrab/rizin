@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: 2019 Vasilij Schneidermann <mail@vasilij.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_lib.h>
-#include <rz_util.h>
-#include <rz_flag.h>
-#include <rz_analysis.h>
-#include <rz_parse.h>
+#include <rz_lib.hpp>
+#include <rz_util.hpp>
+#include <rz_flag.hpp>
+#include <rz_analysis.hpp>
+#include <rz_parse.hpp>
 
 #define MAXARGS 4
 #define BUFSIZE 64

@@ -3,8 +3,8 @@
 
 #ifndef RZ_ASM_AVR_DISASSEMBLER_H
 #define RZ_ASM_AVR_DISASSEMBLER_H
-#include <rz_types.h>
-#include <rz_util.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
 
 typedef enum {
 	AVR_OP_INVALID = 0,

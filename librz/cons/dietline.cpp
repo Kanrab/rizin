@@ -2,18 +2,18 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 /* dietline is a lightweight and portable library similar to GNU readline */
 
-#include <rz_cons.h>
-#include <rz_core.h>
+#include <rz_cons.hpp>
+#include <rz_core.hpp>
 #include <string.h>
 #include <stdlib.h>
 
 #if __WINDOWS__
-#include <windows.h>
+#include <windows.hpp>
 #define printf(...) rz_cons_win_printf(false, __VA_ARGS__)
 #else
-#include <sys/ioctl.h>
-#include <termios.h>
-#include <signal.h>
+#include <sys/ioctl.hpp>
+#include <termios.hpp>
+#include <signal.hpp>
 #endif
 
 static const char *rz_line_nullstr = "";
@@ -297,7 +297,7 @@ static inline bool is_word_break_char(char ch, bool mode) {
 	return false;
 }
 
-/* https://www.gnu.org/software/bash/manual/html_node/Commands-For-Killing.html */
+/* https://www.gnu.org/software/bash/manual/html_node/Commands-For-Killing.hpptml */
 static void backward_kill_word(RzLine *line, BreakMode mode) {
 	int i, len;
 	if (line->buffer.index <= 0) {

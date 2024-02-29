@@ -5,10 +5,10 @@
 #ifndef RZ_IL_VM_H
 #define RZ_IL_VM_H
 
-#include <rz_il/definitions/definitions.h>
-#include <rz_il/rz_il_opcodes.h>
-#include <rz_il/rz_il_events.h>
-#include <rz_il/rz_il_reg.h>
+#include <rz_il/definitions/definitions.hpp>
+#include <rz_il/rz_il_opcodes.hpp>
+#include <rz_il/rz_il_events.hpp>
+#include <rz_il/rz_il_reg.hpp>
 
 #ifdef __cplusplus
 extern "C" {

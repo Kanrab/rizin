@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2012-2021 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_socket.h>
-#include <rz_util.h>
+#include <rz_socket.hpp>
+#include <rz_util.hpp>
 
 static bool *breaked = NULL;
 

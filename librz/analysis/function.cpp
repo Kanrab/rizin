@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2019 thestr4ng3r <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
+#include <rz_analysis.hpp>
 
 static bool get_functions_block_cb(RzAnalysisBlock *block, void *user) {
 	RzList *list = user;

@@ -1,4 +1,4 @@
-### winhttp.h ###
+### winhttp.hpp ###
 
 WINHTTP_WEB_SOCKET_BUFFER_TYPE=typedef
 typedef.WINHTTP_WEB_SOCKET_BUFFER_TYPE=int

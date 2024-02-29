@@ -3,11 +3,11 @@
 
 #include <stdio.h>
 #include <string.h>
-#include <stdarg.h>
+#include <stdarg.hpp>
 #include <stdlib.h>
 #include <fcntl.h>
 #include <ctype.h>
-#include "sdb.h"
+#include "sdb.hpp"
 
 typedef struct {
 	char *buf;

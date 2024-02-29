@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: 2020 HoundThe <cgkajm@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
-#include <rz_analysis.h>
-#include <rz_util.h>
-#include <rz_util/rz_graph_drawable.h>
-#include "minunit.h"
+#include <rz_core.hpp>
+#include <rz_analysis.hpp>
+#include <rz_util.hpp>
+#include <rz_util/rz_graph_drawable.hpp>
+#include "minunit.hpp"
 
 bool test_inherit_graph_creation() {
 	RzCore *core = rz_core_new();

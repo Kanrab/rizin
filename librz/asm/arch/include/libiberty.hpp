@@ -42,12 +42,12 @@
 extern "C" {
 #endif
 
-#include "ansidecl.h"
+#include "ansidecl.hpp"
 
 /* Get a definition for size_t.  */
-#include <stddef.h>
+#include <stddef.hpp>
 /* Get a definition for va_list.  */
-#include <stdarg.h>
+#include <stdarg.hpp>
 
 #include <stdio.h>
 
@@ -185,7 +185,7 @@ extern char *getpwd(void);
 /* Prototypes vary from system to system, so we only provide a
    prototype on systems where we know that we need it.  */
 #ifdef __MINGW32__
-/* Forward declaration to avoid #include <sys/time.h>.   */
+/* Forward declaration to avoid #include <sys/time.hpp>.   */
 struct timeval;
 extern int gettimeofday(struct timeval *, void *);
 #endif

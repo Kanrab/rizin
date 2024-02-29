@@ -1,4 +1,4 @@
-### fileapi.h ###
+### fileapi.hpp ###
 
 LPBY_HANDLE_FILE_INFORMATION=type
 type.LPBY_HANDLE_FILE_INFORMATION=p

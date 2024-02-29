@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2021 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "fletcher.h"
-#include <rz_util.h>
+#include "fletcher.hpp"
+#include <rz_util.hpp>
 
 // Fletcher 8
 

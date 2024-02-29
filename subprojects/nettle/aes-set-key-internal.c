@@ -39,12 +39,12 @@
 /* Originally written by Rafael R. Sevilla <dido@pacific.net.ph> */
 
 #if HAVE_CONFIG_H
-# include "config.h"
+# include "config.hpp"
 #endif
 
-#include "aes-internal.h"
-#include <assert.h>
-#include "macros.h"
+#include "aes-internal.hpp"
+#include <assert.hpp>
+#include "macros.hpp"
 
 void
 _nettle_aes_set_key(unsigned nr, unsigned nk,

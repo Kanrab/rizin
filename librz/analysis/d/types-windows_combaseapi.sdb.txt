@@ -1,4 +1,4 @@
-### combaseapi.h ###
+### combaseapi.hpp ###
 
 AgileReferenceOptions=typedef
 typedef.AgileReferenceOptions=int

@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2020 Florian Märkl <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
+#include <rz_analysis.hpp>
 
-#include "minunit.h"
+#include "minunit.hpp"
 
 const RzAnalysisHint empty_hint = {
 	.addr = UT64_MAX,
@@ -22,7 +22,7 @@ const RzAnalysisHint empty_hint = {
 	.bits = 0,
 	.new_bits = 0,
 	.immbase = 0,
-	.high = 0,
+	.hppigh = 0,
 	.nword = 0,
 	.stackframe = UT64_MAX,
 };
@@ -130,7 +130,7 @@ bool test_rz_analysis_addr_hints() {
 	CHECK
 
 	rz_analysis_hint_set_high(analysis, 0x1337);
-	cur.high = true;
+	cur.hppigh = true;
 	CHECK
 
 	rz_analysis_hint_set_stackframe(analysis, 0x1337, 0x4321);
@@ -196,7 +196,7 @@ bool test_rz_analysis_addr_hints() {
 	CHECK
 
 	rz_analysis_hint_unset_high(analysis, 0x1337);
-	cur.high = false;
+	cur.hppigh = false;
 	CHECK
 
 	rz_analysis_hint_unset_stackframe(analysis, 0x1337);

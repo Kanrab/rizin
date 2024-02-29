@@ -30,9 +30,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <errno.h>
+#include <errno.hpp>
 #include <ctype.h>
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 static int getc_nospace(FILE *f) {
 	int c;

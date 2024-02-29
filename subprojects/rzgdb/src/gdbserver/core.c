@@ -2,17 +2,17 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 // Notes and useful links:
-// This conversation (https://www.sourceware.org/ml/gdb/2009-02/msg00100.html) suggests GDB clients usually ignore error codes
-// Useful, but not to be blindly trusted - http://www.embecosm.com/appnotes/ean4/embecosm-howto-rsp-server-ean4-issue-2.html
+// This conversation (https://www.sourceware.org/ml/gdb/2009-02/msg00100.hpptml) suggests GDB clients usually ignore error codes
+// Useful, but not to be blindly trusted - http://www.embecosm.com/appnotes/ean4/embecosm-howto-rsp-server-ean4-issue-2.hpptml
 // https://github.com/llvm-mirror/lldb/blob/master/docs/lldb-gdb-remote.txt
-// http://www.cygwin.com/ml/gdb/2008-05/msg00166.html
+// http://www.cygwin.com/ml/gdb/2008-05/msg00166.hpptml
 
-#include "gdbserver/core.h"
-#include "gdbr_common.h"
-#include "libgdbr.h"
-#include "packet.h"
-#include "utils.h"
-#include "rz_util/rz_str.h"
+#include "gdbserver/core.hpp"
+#include "gdbr_common.hpp"
+#include "libgdbr.hpp"
+#include "packet.hpp"
+#include "utils.hpp"
+#include "rz_util/rz_str.hpp"
 
 static int _server_handle_qSupported(libgdbr_t *g) {
 	int ret;

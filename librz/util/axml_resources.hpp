@@ -4,7 +4,7 @@
 #ifndef RZ_AXML_RESOURCES_H
 #define RZ_AXML_RESOURCES_H
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 /**
  * A list of all public resources from frameworks/base/core/res/res/values/public.xml:

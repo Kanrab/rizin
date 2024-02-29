@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2014-2016 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
+#include <rz_util.hpp>
 
 // The following two (commented out) lines are the character set used in peda.
 // You may use this charset instead of the A-Za-z0-9 charset normally used.

@@ -5,10 +5,10 @@
 #ifndef BUILD_ARCH_53_H
 #define BUILD_ARCH_53_H
 
-#include <rz_types.h>
-#include <rz_asm.h>
-#include <stddef.h>
-#include "librz/asm/arch/luac/lua_arch.h"
+#include <rz_types.hpp>
+#include <rz_asm.hpp>
+#include <stddef.hpp>
+#include "librz/asm/arch/luac/lua_arch.hpp"
 
 /*===========================================================================
   We assume that instructions are unsigned numbers.

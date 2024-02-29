@@ -2,11 +2,11 @@
 // SPDX-FileCopyrightText: 2021 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_demangler.h>
-#include <rz_util.h>
-#include <rz_libdemangle.h>
-#include <rz_lib.h>
-#include <config.h>
+#include <rz_demangler.hpp>
+#include <rz_util.hpp>
+#include <rz_libdemangle.hpp>
+#include <rz_lib.hpp>
+#include <config.hpp>
 
 #define DEFINE_DEMANGLER_PLUGIN(name, lang, lic, auth, handler) \
 	static char *handler##_cast(const char *symbol, RzDemanglerFlag flags) { \

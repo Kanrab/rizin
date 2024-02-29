@@ -3,8 +3,8 @@
 // SPDX-FileCopyrightText: 2021 thestr4ng3r <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_bin_source_line.h>
+#include <rz_types.hpp>
+#include <rz_bin_source_line.hpp>
 #include <ctype.h>
 
 RZ_API void rz_bin_source_line_info_builder_init(RzBinSourceLineInfoBuilder *builder) {

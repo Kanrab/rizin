@@ -9,11 +9,11 @@
 #undef _GNU_SOURCE
 #endif
 #define _GNU_SOURCE
-#include <rz_types.h>
-#include <rz_list.h>
-#include <rz_vector.h>
+#include <rz_types.hpp>
+#include <rz_list.hpp>
+#include <rz_vector.hpp>
 
-#include <rz_util/rz_th_ht.h>
+#include <rz_util/rz_th_ht.hpp>
 
 #ifdef __cplusplus
 extern "C" {

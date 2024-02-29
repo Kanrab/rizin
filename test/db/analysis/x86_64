@@ -947,7 +947,7 @@ CMDS=<<EOF
 e analysis.jmp.cref=true
 e asm.sub.rel=false
 e asm.bytes=false
-e asm.hint.lea=false
+e asm.hppint.lea=false
 e scr.utf8=false
 e scr.color=false
 s $S
@@ -998,7 +998,7 @@ CMDS=<<EOF
 e analysis.jmp.cref=true
 e asm.sub.rel=false
 e asm.bytes=false
-e asm.hint.lea=false
+e asm.hppint.lea=false
 e scr.utf8=false
 e scr.color=false
 s $S
@@ -1044,7 +1044,7 @@ CMDS=<<EOF
 e analysis.jmp.cref=true
 e asm.sub.rel=false
 e asm.bytes=false
-e asm.hint.lea=false
+e asm.hppint.lea=false
 e scr.utf8=false
 e scr.color=false
 e asm.lines.wide=true
@@ -1091,7 +1091,7 @@ CMDS=<<EOF
 e analysis.jmp.cref=true
 e asm.sub.rel=false
 e asm.bytes=false
-e asm.hint.lea=false
+e asm.hppint.lea=false
 e scr.utf8=false
 e scr.color=false
 e asm.lines.wide=true
@@ -1136,7 +1136,7 @@ FILE=bins/elf/analysis/ls-alxchk
 CMDS=<<EOF
 e asm.sub.rel=false
 e asm.bytes=false
-e asm.hint.lea=false
+e asm.hppint.lea=false
 e scr.utf8=false
 e scr.color=false
 e asm.lines.wide=true
@@ -1846,13 +1846,13 @@ NAME=axt avr
 FILE=bins/firmware/main.avr
 CMDS=<<EOF
 e asm.bytes=true
-f str.hello 12 @ 0x276
-Csb 12 @ str.hello
-axd 0x260 @ str.hello
+f str.hppello 12 @ 0x276
+Csb 12 @ str.hppello
+axd 0x260 @ str.hppello
 pd 1 @ 0x260
 EOF
 EXPECT=<<EOF
-            ; DATA XREF from str.hello @ 
+            ; DATA XREF from str.hppello @ 
             0x00000260      80e0           ldi   r24, 0x00
 EOF
 RUN
@@ -1865,10 +1865,10 @@ e analysis.arch=x86
 e scr.color=false
 e scr.wheel=false
 aa
-axt @ str.Hello_World
+axt @ str.hppello_World
 EOF
 EXPECT=<<EOF
-main 0x40050a [DATA] mov edi, str.Hello_World
+main 0x40050a [DATA] mov edi, str.hppello_World
 EOF
 RUN
 
@@ -2552,7 +2552,7 @@ aae
 axt @ 0x80484e0
 EOF
 EXPECT=<<EOF
-main 0x8048432 [STRING] lea eax, str.Hello_PIC
+main 0x8048432 [STRING] lea eax, str.hppello_PIC
 EOF
 RUN
 
@@ -2606,7 +2606,7 @@ aae
 pd 1 @ 0x08048432
 EOF
 EXPECT=<<EOF
-|           0x08048432      8d83e0e4ffff   lea   eax, str.Hello_PIC    ; 0x80484e0 ; "Hello PIC!"
+|           0x08048432      8d83e0e4ffff   lea   eax, str.hppello_PIC    ; 0x80484e0 ; "Hello PIC!"
 EOF
 RUN
 
@@ -2622,7 +2622,7 @@ aae
 pd 1 @ 0x08048432
 EOF
 EXPECT=<<EOF
-[36m|[0m           [32m0x08048432[0m      [37mlea[0m[37m   [0m[36meax[0m[37m, [33mstr.Hello_PIC[0m[0m[0m
+[36m|[0m           [32m0x08048432[0m      [37mlea[0m[37m   [0m[36meax[0m[37m, [33mstr.hppello_PIC[0m[0m[0m
 EOF
 RUN
 

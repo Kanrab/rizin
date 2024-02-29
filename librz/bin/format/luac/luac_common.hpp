@@ -6,9 +6,9 @@
 #ifndef BUILD_LUAC_COMMON_H
 #define BUILD_LUAC_COMMON_H
 
-#include <rz_bin.h>
-#include <rz_lib.h>
-#include <rz_list.h>
+#include <rz_bin.hpp>
+#include <rz_lib.hpp>
+#include <rz_list.hpp>
 
 typedef ut32 LUA_INSTRUCTION;
 
@@ -91,7 +91,7 @@ typedef LuaProtoHeavy LuaProto;
  * \brief Store constant type, data, and offset of this constant in luac file
  */
 typedef struct lua_constant_entry {
-	ut8 tag; ///< type of this constant, see LUA_V* macros in luac_common.h
+	ut8 tag; ///< type of this constant, see LUA_V* macros in luac_common.hpp
 	void *data; ///< can be Number/Integer/String
 	int data_len; ///< len of data
 	ut64 offset; ///< addr of this constant

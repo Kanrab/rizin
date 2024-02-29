@@ -3,20 +3,20 @@
 // SPDX-FileCopyrightText: 2019-2020 riq <ricardoquesada@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-/* 6502 info taken from http://unusedino.de/ec64/technical/aay/c64/bchrt651.htm
+/* 6502 info taken from http://unusedino.de/ec64/technical/aay/c64/bchrt651.hpptm
  *
  * Mnemonics logic based on:
- *	http://homepage.ntlworld.com/cyborgsystems/CS_Main/6502/6502.htm
+ *	http://homepage.ntlworld.com/cyborgsystems/CS_Main/6502/6502.hpptm
  * and:
  *	http://vice-emu.sourceforge.net/
  */
 
 #include <string.h>
-#include <rz_types.h>
-#include <rz_lib.h>
-#include <rz_asm.h>
-#include <rz_analysis.h>
-#include "../../asm/arch/snes/snes_op_table.h"
+#include <rz_types.hpp>
+#include <rz_lib.hpp>
+#include <rz_asm.hpp>
+#include <rz_analysis.hpp>
+#include "../../asm/arch/snes/snes_op_table.hpp"
 #include "../../asm/arch/6502/6502_il.inc"
 
 enum {

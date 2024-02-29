@@ -2,11 +2,11 @@
 // SPDX-FileCopyrightText: 2022 GustavoLCR <gugulcr@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "minunit.h"
-#include <rz_util/rz_regex.h>
-#include <rz_util/rz_strbuf.h>
-#include <rz_util/rz_str.h>
-#include <rz_vector.h>
+#include "minunit.hpp"
+#include <rz_util/rz_regex.hpp>
+#include <rz_util/rz_strbuf.hpp>
+#include <rz_util/rz_str.hpp>
+#include <rz_vector.hpp>
 
 bool exec_regex(RzRegex *regex, const char *str, RzRegexMatch **out) {
 	RzPVector *matches = rz_regex_match_all_not_grouped(regex, str, RZ_REGEX_ZERO_TERMINATED, 0, RZ_REGEX_DEFAULT);

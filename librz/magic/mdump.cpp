@@ -33,13 +33,13 @@
 
 #if !USE_LIB_MAGIC
 
-#include "file.h"
+#include "file.hpp"
 #include <stdio.h>
-#include <errno.h>
+#include <errno.hpp>
 #include <string.h>
-#include <stdarg.h>
+#include <stdarg.hpp>
 #include <stdlib.h>
-#include <time.h>
+#include <time.hpp>
 
 #define SZOF(a) (sizeof(a) / sizeof(a[0]))
 

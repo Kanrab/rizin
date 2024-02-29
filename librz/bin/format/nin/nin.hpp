@@ -3,7 +3,7 @@
 // SPDX-FileCopyrightText: 2013-2017 condret <condr3t@protonmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 #include <string.h>
 
 enum {

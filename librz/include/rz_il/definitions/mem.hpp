@@ -5,7 +5,7 @@
 #ifndef RZ_IL_MEM_H
 #define RZ_IL_MEM_H
 
-#include <rz_util.h>
+#include <rz_util.hpp>
 
 #ifdef __cplusplus
 extern "C" {

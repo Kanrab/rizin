@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2021 ret2libc <sirmy15@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
+#include <rz_core.hpp>
 
 RZ_API void rz_core_seek_item_free(RzCoreSeekItem *item) {
 	free(item);
@@ -23,7 +23,7 @@ static void add_seek_history(RzCore *core) {
 	RzVector *vundo = &core->seek_history.undos;
 	RzVector *vredo = &core->seek_history.redos;
 	RzCoreSeekItem *item = &core->seek_history.saved_item;
-	ut64 histsize = rz_config_get_i(core->config, "cfg.seek.histsize");
+	ut64 histsize = rz_config_get_i(core->config, "cfg.seek.hppistsize");
 	if (!rz_vector_empty(vundo)) {
 		RzCoreSeekItem *last = rz_vector_index_ptr(vundo, rz_vector_len(vundo) - 1);
 		if (item->offset == last->offset && item->cursor == last->cursor) {

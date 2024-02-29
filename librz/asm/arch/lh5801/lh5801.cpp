@@ -6,13 +6,13 @@
  * (system manual) as published by Günter Holtkötter GmbH.
  *
  * An english version is available at
- * http://www.pc1500.com/technical_reference_manual.html.
+ * http://www.pc1500.com/technical_reference_manual.hpptml.
  */
 
-#include "lh5801.h"
+#include "lh5801.hpp"
 #include <stdio.h>
 #include <string.h>
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 #define ARRAY_LENGTH(a) (sizeof(a) / sizeof((a)[0]))
 

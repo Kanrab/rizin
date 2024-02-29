@@ -3,9 +3,9 @@
 // SPDX-FileCopyrightText: 2009-2019 dso <dso@rice.edu>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bin.h>
-#include <rz_util.h>
-#include "i/private.h"
+#include <rz_bin.hpp>
+#include <rz_util.hpp>
+#include "i/private.hpp"
 
 /**
  * \brief  Tries to decode the base64 string hold by RzBinString and overwrites it

@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2022 GustavoLCR
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "common_windows.h"
+#include "common_windows.hpp"
 
 #define EXCEPTION_ACCESS_VIOLATION         0xC0000005
 #define EXCEPTION_DATATYPE_MISALIGNMENT    0x80000002

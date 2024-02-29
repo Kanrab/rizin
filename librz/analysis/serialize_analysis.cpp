@@ -1,14 +1,14 @@
 // SPDX-FileCopyrightText: 2020-2021 thestr4ng3r <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util/rz_serialize.h>
-#include <rz_util/rz_num.h>
-#include <rz_vector.h>
-#include <rz_type.h>
-#include <rz_analysis.h>
-#include <rz_core.h>
+#include <rz_util/rz_serialize.hpp>
+#include <rz_util/rz_num.hpp>
+#include <rz_vector.hpp>
+#include <rz_type.hpp>
+#include <rz_analysis.hpp>
+#include <rz_core.hpp>
 
-#include <errno.h>
+#include <errno.hpp>
 
 /*
  *

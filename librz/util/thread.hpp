@@ -8,12 +8,12 @@
 #undef _GNU_SOURCE
 #endif
 #define _GNU_SOURCE
-#include <rz_th.h>
-#include <rz_types.h>
-#include <rz_util/rz_assert.h>
+#include <rz_th.hpp>
+#include <rz_types.hpp>
+#include <rz_util/rz_assert.hpp>
 
 #if __WINDOWS__
-#include <rz_windows.h>
+#include <rz_windows.hpp>
 #define RZ_TH_TID    HANDLE
 #define RZ_TH_LOCK_T CRITICAL_SECTION
 #define RZ_TH_COND_T CONDITION_VARIABLE
@@ -21,10 +21,10 @@
 #define RZ_TH_RET_T  DWORD WINAPI
 #elif HAVE_PTHREAD
 #define __GNU
-#include <semaphore.h>
-#include <pthread.h>
+#include <semaphore.hpp>
+#include <pthread.hpp>
 #if __linux__
-#include <sched.h>
+#include <sched.hpp>
 #endif
 #if __linux__ && __GLIBC_MINOR < 12
 #define HAVE_PTHREAD_NP 0
@@ -32,13 +32,13 @@
 #define HAVE_PTHREAD_NP 1
 #endif
 #if __APPLE__
-#include <pthread.h>
+#include <pthread.hpp>
 #endif
 #if __FreeBSD__ || __OpenBSD__ || __DragonFly__
 #if __FreeBSD__
-#include <sys/cpuset.h>
+#include <sys/cpuset.hpp>
 #endif
-#include <pthread_np.h>
+#include <pthread_np.hpp>
 #endif
 #define RZ_TH_TID    pthread_t
 #define RZ_TH_LOCK_T pthread_mutex_t
@@ -51,22 +51,22 @@
 
 #if __APPLE__
 // Here to avoid polluting mach types macro redefinitions...
-#include <mach/thread_act.h>
-#include <mach/thread_policy.h>
+#include <mach/thread_act.hpp>
+#include <mach/thread_policy.hpp>
 #endif
 
 #if __APPLE__ || __NetBSD__ || __FreeBSD__ || __OpenBSD__ || __DragonFly__ || __sun
-#include <sys/param.h>
-#include <sys/sysctl.h>
+#include <sys/param.hpp>
+#include <sys/sysctl.hpp>
 #endif
 
 #if __sun
-#include <sys/pset.h>
+#include <sys/pset.hpp>
 #endif
 
 #if __HAIKU__
-#include <kernel/scheduler.h>
-#include <OS.h>
+#include <kernel/scheduler.hpp>
+#include <OS.hpp>
 #endif
 
 struct rz_th_sem_t {

@@ -44,7 +44,7 @@ bin=s
 /core/config
 asm.arch=x86
 asm.bits=64
-cfg.seek.histsize=63
+cfg.seek.hppistsize=63
 cfg.seek.silent=false
 cfg.wseek=false
 prj.compress=false

@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: 2020 abcSup <zifan.tan@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
 
-#include "dmp64.h"
-#include "../pe/pe_specs.h"
+#include "dmp64.hpp"
+#include "../pe/pe_specs.hpp"
 
 static bool rz_bin_dmp64_init_triage(struct rz_bin_dmp64_obj_t *obj) {
 	if (rz_buf_size(obj->b) < sizeof(dmp64_header) + sizeof(dmp64_triage)) {

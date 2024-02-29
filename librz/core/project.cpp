@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2020-2021 Florian Märkl <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_project.h>
+#include <rz_project.hpp>
 
 #define RZ_PROJECT_KEY_TYPE    "type"
 #define RZ_PROJECT_KEY_VERSION "version"

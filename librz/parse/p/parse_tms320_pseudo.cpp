@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2021 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_lib.h>
-#include <rz_flag.h>
-#include <rz_analysis.h>
-#include <rz_parse.h>
+#include <rz_lib.hpp>
+#include <rz_flag.hpp>
+#include <rz_analysis.hpp>
+#include <rz_parse.hpp>
 
 // https://www.ti.com/lit/ug/spru732j/spru732j.pdf
 #include "parse_common.c"

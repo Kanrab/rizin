@@ -1,4 +1,4 @@
-### securitybaseapi.h ###
+### securitybaseapi.hpp ###
 
 AccessCheck=func
 func.AccessCheck.args=8

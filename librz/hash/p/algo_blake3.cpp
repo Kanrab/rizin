@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2022 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_hash.h>
-#include <rz_util/rz_assert.h>
-#include <blake3.h>
+#include <rz_hash.hpp>
+#include <rz_util/rz_assert.hpp>
+#include <blake3.hpp>
 
 static void *plugin_blake3_context_new() {
 	return RZ_NEW0(blake3_hasher);

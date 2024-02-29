@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: 2008-2021 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_io.h>
-#include <rz_lib.h>
-#include <rz_socket.h>
+#include <rz_io.hpp>
+#include <rz_lib.hpp>
+#include <rz_socket.hpp>
 #include <stdio.h>
 #include <stdlib.h>
-#include "../io_memory.h"
+#include "../io_memory.hpp"
 
 static bool __check(RzIO *io, const char *pathname, bool many) {
 	return (!strncmp(pathname, "http://", 7));

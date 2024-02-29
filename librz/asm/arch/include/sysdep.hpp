@@ -25,11 +25,11 @@
 /* Do system-dependent stuff, mainly driven by autoconf-detected info.
 
    Well, some generic common stuff is done here too, like including
-   ansidecl.h.  That's because the .h files in bfd/hosts files I'm
+   ansidecl.hpp.  That's because the .hpp files in bfd/hosts files I'm
    trying to replace often did that.  If it can be dropped from this
    file (check in a non-ANSI environment!), it should be.  */
 
-#include "ansidecl.h"
+#include "ansidecl.hpp"
 
 #ifdef HAVE_STDLIB_H
 #include <stdlib.h>
@@ -39,6 +39,6 @@
 #include <string.h>
 #else
 #ifdef HAVE_STRINGS_H
-#include <strings.h>
+#include <strings.hpp>
 #endif
 #endif

@@ -2,8 +2,8 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <string.h>
-#include <rz_core.h>
-#include "../core_private.h"
+#include <rz_core.hpp>
+#include "../core_private.hpp"
 
 RZ_IPI RzCmdStatus rz_yank_handler(RzCore *core, int argc, const char **argv, RzCmdStateOutput *state) {
 	if (argc > 1) {

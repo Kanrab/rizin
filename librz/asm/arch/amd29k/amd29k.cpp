@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2019 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
-#include "amd29k.h"
-#include "amd29k_internal.h"
+#include "amd29k.hpp"
+#include "amd29k_internal.hpp"
 #include <stdio.h>
 #include <string.h>
-#include <rz_analysis.h>
+#include <rz_analysis.hpp>
 
 #define CPU_ANY "*"
 

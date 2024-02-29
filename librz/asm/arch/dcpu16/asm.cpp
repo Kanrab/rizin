@@ -35,7 +35,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
-#include "dcpu16.h"
+#include "dcpu16.hpp"
 
 #define NOTEND 1 /* endian hack */
 

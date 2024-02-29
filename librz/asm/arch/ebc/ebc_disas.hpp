@@ -4,7 +4,7 @@
 #ifndef RZ_EBC_DISAS_H
 #define RZ_EBC_DISAS_H
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 #define EBC_OPCODE_MASK     0x3F
 #define EBC_MODIFIER_MASK   0xC0

@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2013-2015 th0rpe <josediazfer@yahoo.es>
 // SPDX-License-Identifier: LGPL-3.0-only
 /* this .c is included , not compiled */
-#include "hashvector.h"
+#include "hashvector.hpp"
 
 extern st32 get_hashfunc_01(st32 A1, st32 A2);
 extern st32 get_hashfunc_02(st32 A1, st32 A2);

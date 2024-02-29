@@ -1,4 +1,4 @@
-### winnls.h ###
+### winnls.hpp ###
 
 CompareStringA=func
 func.CompareStringA.args=6

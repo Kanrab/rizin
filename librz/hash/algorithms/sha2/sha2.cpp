@@ -36,8 +36,8 @@
  */
 
 #include <string.h> /* memcpy()/memset() or bcopy()/bzero() */
-#include "sha2.h"
-#include <rz_util/rz_mem.h>
+#include "sha2.hpp"
+#include <rz_util/rz_mem.hpp>
 
 #define WEAK_ALIASING 0
 
@@ -80,7 +80,7 @@
  *
  * The FreeBSD machine this was written on defines BYTE_ORDER
  * appropriately by including <sys/types.h> (which in turn includes
- * <machine/endian.h> where the appropriate definitions are actually
+ * <machine/endian.hpp> where the appropriate definitions are actually
  * made).
  */
 #ifndef BYTE_ORDER
@@ -96,7 +96,7 @@
 #endif
 
 /*** SHA-256/384/512 Various Length Definitions ***********************/
-/* NOTE: Most of these are in sha2.h */
+/* NOTE: Most of these are in sha2.hpp */
 #define SHA256_SHORT_BLOCK_LENGTH (SHA256_BLOCK_LENGTH - 8)
 #define SHA384_SHORT_BLOCK_LENGTH (SHA384_BLOCK_LENGTH - 16)
 #define SHA512_SHORT_BLOCK_LENGTH (SHA512_BLOCK_LENGTH - 16)
@@ -388,7 +388,7 @@ void SHA256_Transform(RZ_SHA256_CTX *context, const ut8 *data) {
 
 	j = 0;
 	do {
-		/* Apply the SHA-256 compression function to update a..h with copy */
+		/* Apply the SHA-256 compression function to update a..hpp with copy */
 		T1 = h + Sigma1_256(e) + Ch(e, f, g) + K256[j] + (W256[j] = rz_read_be32(data));
 		data += 4;
 		T2 = Sigma0_256(a) + Maj(a, b, c);
@@ -411,7 +411,7 @@ void SHA256_Transform(RZ_SHA256_CTX *context, const ut8 *data) {
 		s1 = W256[(j + 14) & 0x0f];
 		s1 = sigma1_256(s1);
 
-		/* Apply the SHA-256 compression function to update a..h */
+		/* Apply the SHA-256 compression function to update a..hpp */
 		T1 = h + Sigma1_256(e) + Ch(e, f, g) + K256[j] +
 			(W256[j & 0x0f] += s1 + W256[(j + 9) & 0x0f] + s0);
 		T2 = Sigma0_256(a) + Maj(a, b, c);
@@ -700,10 +700,10 @@ void SHA512_Transform(RZ_SHA512_CTX *context, const ut64 *data) {
 #if BYTE_ORDER == LITTLE_ENDIAN
 		/* Convert TO host byte order */
 		REVERSE64(*data++, W512[j]);
-		/* Apply the SHA-512 compression function to update a..h */
+		/* Apply the SHA-512 compression function to update a..hpp */
 		T1 = h + Sigma1_512(e) + Ch(e, f, g) + K512[j] + W512[j];
 #else /* BYTE_ORDER == LITTLE_ENDIAN */
-		/* Apply the SHA-512 compression function to update a..h with copy */
+		/* Apply the SHA-512 compression function to update a..hpp with copy */
 		T1 = h + Sigma1_512(e) + Ch(e, f, g) + K512[j] + (W512[j] = *data++);
 #endif /* BYTE_ORDER == LITTLE_ENDIAN */
 		T2 = Sigma0_512(a) + Maj(a, b, c);
@@ -726,7 +726,7 @@ void SHA512_Transform(RZ_SHA512_CTX *context, const ut64 *data) {
 		s1 = W512[(j + 14) & 0x0f];
 		s1 = sigma1_512(s1);
 
-		/* Apply the SHA-512 compression function to update a..h */
+		/* Apply the SHA-512 compression function to update a..hpp */
 		T1 = h + Sigma1_512(e) + Ch(e, f, g) + K512[j] +
 			(W512[j & 0x0f] += s1 + W512[(j + 9) & 0x0f] + s0);
 		T2 = Sigma0_512(a) + Maj(a, b, c);

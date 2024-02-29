@@ -4,8 +4,8 @@
 // SPDX-FileCopyrightText: 2008-2020 alvaro_fe <alvaro.felipe91@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "elf.h"
-#include <rz_util/ht_uu.h>
+#include "elf.hpp"
+#include <rz_util/ht_uu.hpp>
 
 struct relocs_segment {
 	ut64 offset;

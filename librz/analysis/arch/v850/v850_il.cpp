@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2024 billow <billow.fun@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "v850_il.h"
+#include "v850_il.hpp"
 
 static const char *v850_registers[] = {
 	"r0",
@@ -40,7 +40,7 @@ static const char *v850_registers[] = {
 
 	/*
 	 * \see Section 3.3-3.5  https://www.renesas.com/us/en/document/mas/rh850g3kh-users-manual-software
-	 * \see SR_get() in v850_disas.h
+	 * \see SR_get() in v850_disas.hpp
 	 * regID Symbol*/
 	/*0 */ "EIPC",
 	/*1 */ "EIPSW",
@@ -189,7 +189,7 @@ static const V850_FLG *flag_find(const char *p, const char *x) {
 	return NULL;
 }
 
-#include <rz_il/rz_il_opbuilder_begin.h>
+#include <rz_il/rz_il_opbuilder_begin.hpp>
 
 static RzILOpEffect *SETGbs(const char *p, unsigned n, ...) {
 	va_list args;

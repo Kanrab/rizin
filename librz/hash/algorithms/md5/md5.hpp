@@ -4,7 +4,7 @@
 #ifndef RZ_HASH_MD5_H
 #define RZ_HASH_MD5_H
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 #define RZ_HASH_MD5_DIGEST_SIZE  0x10
 #define RZ_HASH_MD5_BLOCK_LENGTH 0x40
@@ -12,9 +12,9 @@
 #include <string.h>
 
 /*  The below was retrieved from
- *  http://www.openbsd.org/cgi-bin/cvsweb/~checkout~/src/sys/crypto/md5.h?rev=1.1
+ *  http://www.openbsd.org/cgi-bin/cvsweb/~checkout~/src/sys/crypto/md5.hpp?rev=1.1
  *  With the following changes: uint64_t => ut32[2]
- *  Commented out #include <sys/cdefs.h>
+ *  Commented out #include <sys/cdefs.hpp>
  *  Commented out the __BEGIN and __END _DECLS, and the __attributes.
  */
 

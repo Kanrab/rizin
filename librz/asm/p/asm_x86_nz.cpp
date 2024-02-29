@@ -3,11 +3,11 @@
 // SPDX-FileCopyrightText: 2008-2020 emvivre
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_flag.h>
-#include <rz_core.h>
-#include <rz_asm.h>
-#include <rz_lib.h>
-#include <rz_types.h>
+#include <rz_flag.hpp>
+#include <rz_core.hpp>
+#include <rz_asm.hpp>
+#include <rz_lib.hpp>
+#include <rz_types.hpp>
 #include <stdio.h>
 #include <string.h>
 

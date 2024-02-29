@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: 2014-2019 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
-#include <rz_lib.h>
-#include <capstone/capstone.h>
-#include <capstone/systemz.h>
-// instruction set: http://www.tachyonsoft.com/inst390m.htm
+#include <rz_analysis.hpp>
+#include <rz_lib.hpp>
+#include <capstone/capstone.hpp>
+#include <capstone/systemz.hpp>
+// instruction set: http://www.tachyonsoft.com/inst390m.hpptm
 
 #define INSOP(n) insn->detail->sysz.operands[n]
 

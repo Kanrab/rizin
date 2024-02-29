@@ -3,8 +3,8 @@
 
 #include <stdio.h>
 
-#include <rz_util/rz_rbtree.h>
-#include <rz_util.h>
+#include <rz_util/rz_rbtree.hpp>
+#include <rz_util.hpp>
 
 static inline bool red(RBNode *x) {
 	return x && x->red;

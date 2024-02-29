@@ -299,7 +299,7 @@ FILE=malloc://1024
 CMDS=<<EOF
 wx 32000000424c41424c41424c41424c41
 pfn troll "izi hu swagg plop"
-.pfw troll.hu 42
+.pfw troll.hppu 42
 .pfw troll.swagg "B*A AA"
 .pfw troll.plop 4000
 pf. troll

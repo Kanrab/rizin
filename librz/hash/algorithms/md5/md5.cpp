@@ -13,8 +13,8 @@
  *  If we don't do this, it might pick up the systems broken MD5.
  *  - Alan DeKok <aland@ox.org>
  */
-#include "md5.h"
-#include <rz_util/rz_mem.h>
+#include "md5.hpp"
+#include <rz_util/rz_mem.hpp>
 
 /*	The below was retrieved from
  *	http://www.openbsd.org/cgi-bin/cvsweb/~checkout~/src/sys/crypto/md5.c?rev=1.1

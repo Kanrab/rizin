@@ -1,8 +1,8 @@
 #ifndef RZ_STR_CONSTPOOL_H
 #define RZ_STR_CONSTPOOL_H
 
-#include <rz_types.h>
-#include <sdbht.h>
+#include <rz_types.hpp>
+#include <sdbht.hpp>
 
 #include <stdbool.h>
 

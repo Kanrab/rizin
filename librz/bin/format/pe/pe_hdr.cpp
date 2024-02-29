@@ -3,7 +3,7 @@
 // SPDX-FileCopyrightText: 2008-2019 inisider <inisider@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "pe.h"
+#include "pe.hpp"
 
 static bool read_dos_header_aux(RzBuffer *buf, ut64 *offset, PE_(image_dos_header) * header) {
 	return rz_buf_read_le16_offset(buf, offset, &header->e_magic) &&

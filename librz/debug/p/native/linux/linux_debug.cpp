@@ -3,21 +3,21 @@
 
 #include <rz_userconf.h>
 
-#include <rz_debug.h>
-#include <rz_reg.h>
-#include <rz_lib.h>
-#include <rz_analysis.h>
-#include <signal.h>
-#include <sys/uio.h>
-#include <errno.h>
-#include "linux_debug.h"
-#include "../procfs.h"
+#include <rz_debug.hpp>
+#include <rz_reg.hpp>
+#include <rz_lib.hpp>
+#include <rz_analysis.hpp>
+#include <signal.hpp>
+#include <sys/uio.hpp>
+#include <errno.hpp>
+#include "linux_debug.hpp"
+#include "../procfs.hpp"
 
-#include <sys/syscall.h>
-#include <unistd.h>
-#include <elf.h>
+#include <sys/syscall.hpp>
+#include <unistd.hpp>
+#include <elf.hpp>
 
-#include "linux_ptrace.h"
+#include "linux_ptrace.hpp"
 
 #ifdef __GLIBC__
 #define HAVE_YMM 1
@@ -54,35 +54,35 @@ long rz_debug_ptrace_get_x86_xstate(RzDebug *dbg, pid_t pid, struct iovec *iov) 
 
 char *linux_reg_profile(RzDebug *dbg) {
 #if __arm__
-#include "reg/linux-arm.h"
+#include "reg/linux-arm.hpp"
 #elif __riscv
-#include "reg/linux-riscv64.h"
+#include "reg/linux-riscv64.hpp"
 #elif __arm64__ || __aarch64__
-#include "reg/linux-arm64.h"
+#include "reg/linux-arm64.hpp"
 #elif __mips__
 	if ((dbg->bits & RZ_SYS_BITS_32) && (dbg->bp->endian == 1)) {
-#include "reg/linux-mips.h"
+#include "reg/linux-mips.hpp"
 	} else {
-#include "reg/linux-mips64.h"
+#include "reg/linux-mips64.hpp"
 	}
 #elif (__i386__ || __x86_64__)
 	if (dbg->bits & RZ_SYS_BITS_32) {
 #if __x86_64__
-#include "reg/linux-x64-32.h"
+#include "reg/linux-x64-32.hpp"
 #else
-#include "reg/linux-x86.h"
+#include "reg/linux-x86.hpp"
 #endif
 	} else {
-#include "reg/linux-x64.h"
+#include "reg/linux-x64.hpp"
 	}
 #elif __powerpc__
 	if (dbg->bits & RZ_SYS_BITS_32) {
-#include "reg/linux-ppc.h"
+#include "reg/linux-ppc.hpp"
 	} else {
-#include "reg/linux-ppc64.h"
+#include "reg/linux-ppc64.hpp"
 	}
 #elif __s390x__
-#include "reg/linux-s390x.h"
+#include "reg/linux-s390x.hpp"
 #else
 #error "Unsupported Linux CPU"
 	return NULL;

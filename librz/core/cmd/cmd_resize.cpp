@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <string.h>
-#include <rz_core.h>
+#include <rz_core.hpp>
 
 static int rebase_helper(RzCore *core, ut64 oldbase, ut64 newbase) {
 	rz_debug_bp_rebase(core->dbg, oldbase, newbase);

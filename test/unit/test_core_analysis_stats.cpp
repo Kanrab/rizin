@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2022 Florian Märkl <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
-#include "minunit.h"
+#include <rz_core.hpp>
+#include "minunit.hpp"
 
 bool test_stats_bounds(void) {
 	RzCore *core = rz_core_new();

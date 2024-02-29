@@ -30,10 +30,10 @@
  *     https://github.com/abbec/dos32a/blob/master/src/sb/sbind.asm
  **/
 
-#include "le.h"
-#include <rz_bin.h>
-#include <rz_types.h>
-#include <sdbht.h>
+#include "le.hpp"
+#include <rz_bin.hpp>
+#include <rz_types.hpp>
+#include <sdbht.hpp>
 
 #define CHECK(expr) \
 	if (!(expr)) { \

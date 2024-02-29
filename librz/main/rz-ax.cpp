@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2007-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_main.h>
-#include <rz_util.h>
-#include <rz_util/rz_print.h>
+#include <rz_main.hpp>
+#include <rz_util.hpp>
+#include <rz_util/rz_print.hpp>
 
 #define RZ_AX_FLAG_HEX_TO_RAW       (1ull << 0) //  -s (hexstr -> raw)
 #define RZ_AX_FLAG_SWAP_ENDIANNESS  (1ull << 1) //  -e (swap endianness)
@@ -225,7 +225,7 @@ static int help(void) {
 		"  -N      binary number        ;  rz-ax -N 0x1234 # \\x34\\x12\\x00\\x00\n"
 		"  -r      rz style output      ;  rz-ax -r 0x1234\n"
 		"  -s      hexstr -> raw        ;  rz-ax -s 43 4a 50\n"
-		"  -S      raw -> hexstr        ;  rz-ax -S < /bin/ls > ls.hex\n"
+		"  -S      raw -> hexstr        ;  rz-ax -S < /bin/ls > ls.hppex\n"
 		"  -t      tstamp -> str        ;  rz-ax -t 1234567890\n"
 		"  -x      hash string          ;  rz-ax -x linux osx\n"
 		"  -u      units                ;  rz-ax -u 389289238 # 317.0M\n"

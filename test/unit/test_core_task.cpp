@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2020 Florian Märkl <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
-#include "minunit.h"
+#include <rz_core.hpp>
+#include "minunit.hpp"
 
 static void *my_function(RzCore *core, void *user) {
 	size_t val = (size_t)user;

@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2011-2016 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: MIT
 
-#include "sdb.h"
+#include "sdb.hpp"
 
 RZ_API void sdb_ns_lock(Sdb *s, int lock, int depth) {
 	SdbListIter *it;

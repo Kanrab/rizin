@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2009-2019 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_debug.h>
+#include <rz_debug.hpp>
 
-#include "xnu_debug.h"
-#include "xnu_threads.h"
+#include "xnu_debug.hpp"
+#include "xnu_threads.hpp"
 
 static void xnu_thread_free(xnu_thread_t *thread) {
 	kern_return_t kr;

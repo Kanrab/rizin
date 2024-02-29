@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 // SPDX-FileCopyrightText: 2021 Heersin <teablearcher@gmail.com>
 
-#include "arch_54.h"
+#include "arch_54.hpp"
 
 static LuaInstruction encode_instruction(ut8 opcode, const char *arg_start, ut16 flag, ut8 arg_num) {
 	LuaInstruction instruction = 0;

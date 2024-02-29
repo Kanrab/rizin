@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2022 Dhruv Maroo <dhruvmaru007@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "disassembler.h"
-#include "common.h"
-#include "regs.h"
+#include "disassembler.hpp"
+#include "common.hpp"
+#include "regs.hpp"
 
 extern const SHOpRaw sh_op_lookup[];
 extern const ut32 OPCODE_NUM;

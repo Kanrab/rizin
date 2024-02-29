@@ -1,4 +1,4 @@
-### combaseapi.h ###
+### combaseapi.hpp ###
 
 CLSIDFromProgID=func
 func.CLSIDFromProgID.args=2

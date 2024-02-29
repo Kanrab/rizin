@@ -3,7 +3,7 @@
 
 #ifndef GB_H
 #define GB_H
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 typedef struct gb_user_t {
 	ut8 mbc_id;

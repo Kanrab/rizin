@@ -3,14 +3,14 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <stdio.h>
-#include <stdarg.h>
+#include <stdarg.hpp>
 #include <string.h>
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_asm.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_asm.hpp>
 
-#include <8051_ass.h>
+#include <8051_ass.hpp>
 #include "../arch/8051/8051_disas.c"
 
 static int disassemble(RzAsm *a, RzAsmOp *op, const ut8 *buf, int len) {

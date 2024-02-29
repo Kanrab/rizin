@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2021 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "class_method.h"
-#include "class_private.h"
+#include "class_method.hpp"
+#include "class_private.hpp"
 
 #define METHOD_ACCESS_FLAGS_SIZE 16
 static const AccessFlagsReadable access_flags_list[METHOD_ACCESS_FLAGS_SIZE] = {

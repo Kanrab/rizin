@@ -2,12 +2,12 @@
 // SPDX-FileCopyrightText: 2009-2020 nibble <nibble.ds@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
-#include <rz_util.h>
-#include <rz_list.h>
-#include <rz_util/rz_path.h>
-#include <rz_lib.h>
-#include <config.h>
+#include <rz_analysis.hpp>
+#include <rz_util.hpp>
+#include <rz_list.hpp>
+#include <rz_util/rz_path.hpp>
+#include <rz_lib.hpp>
+#include <config.hpp>
 
 RZ_LIB_VERSION(rz_analysis);
 
@@ -96,7 +96,7 @@ RZ_API RzAnalysis *rz_analysis_new(void) {
 	analysis->os = strdup(RZ_SYS_OS);
 	analysis->esil_goto_limit = RZ_ANALYSIS_ESIL_GOTO_LIMIT;
 	analysis->opt.nopskip = true; // skip nops in code analysis
-	analysis->opt.hpskip = false; // skip `mov reg,reg` and `lea reg,[reg]`
+	analysis->opt.hpppskip = false; // skip `mov reg,reg` and `lea reg,[reg]`
 	analysis->gp = 0LL;
 	analysis->sdb = sdb_new0();
 	analysis->cpp_abi = RZ_ANALYSIS_CPP_ABI_ITANIUM;

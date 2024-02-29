@@ -2,11 +2,11 @@
 // SPDX-FileCopyrightText: 2018 r00tus3r <iamakshayajayan@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
-#include <rz_core.h>
-#include <rz_flag.h>
-#include <rz_cons.h>
-#include <rz_cmd.h>
+#include <rz_analysis.hpp>
+#include <rz_core.hpp>
+#include <rz_flag.hpp>
+#include <rz_cons.hpp>
+#include <rz_cmd.hpp>
 
 #define VMI_CLASS_TYPE_INFO_NAME "__vmi_class_type_info"
 #define SI_CLASS_TYPE_INFO_NAME  "__si_class_type_info"

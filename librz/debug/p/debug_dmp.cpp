@@ -1,13 +1,13 @@
 // SPDX-FileCopyrightText: 2022 GustavoLCR <gugulcr@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
-#include <rz_debug.h>
-#include <dmp_specs.h>
-#include <dmp64.h>
-#include <pe_specs.h>
-#include <winkd.h>
-#include "common_winkd.h"
+#include <rz_core.hpp>
+#include <rz_debug.hpp>
+#include <dmp_specs.hpp>
+#include <dmp64.hpp>
+#include <pe_specs.hpp>
+#include <winkd.hpp>
+#include "common_winkd.hpp"
 
 #include "native/bt/windows-x64.c"
 #include "native/bt/generic-all.c"
@@ -715,18 +715,18 @@ static bool debug_dmp_sync_registers(RzDebug *dbg, RzReg *reg, bool to_debugger)
 static char *rz_debug_dmp_reg_profile(RzDebug *dbg) {
 	DmpCtx *ctx = dbg->plugin_data;
 	if (!ctx) {
-#include "native/reg/windows-x64.h"
+#include "native/reg/windows-x64.hpp"
 	}
 	if (ctx->windctx.is_arm) {
 		if (ctx->windctx.is_64bit) {
-#include "native/reg/windows-arm64.h"
+#include "native/reg/windows-arm64.hpp"
 		}
-#include "native/reg/windows-arm.h"
+#include "native/reg/windows-arm.hpp"
 	}
 	if (ctx->windctx.is_64bit) {
-#include "native/reg/windows-x64.h"
+#include "native/reg/windows-x64.hpp"
 	}
-#include "native/reg/windows-x86.h"
+#include "native/reg/windows-x86.hpp"
 	return NULL;
 }
 

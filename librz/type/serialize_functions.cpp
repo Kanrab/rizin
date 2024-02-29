@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: 2021 Anton Kochkov <anton.kochkov@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util/rz_serialize.h>
-#include <rz_list.h>
-#include <rz_vector.h>
-#include <rz_type.h>
-#include <sdb.h>
+#include <rz_util/rz_serialize.hpp>
+#include <rz_list.hpp>
+#include <rz_vector.hpp>
+#include <rz_type.hpp>
+#include <sdb.hpp>
 
 /**
  * Parse a type or take it from the cache if it has been parsed before already.

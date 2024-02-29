@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2019-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include <rz_util/rz_alloc.h>
+#include <rz_util.hpp>
+#include <rz_util/rz_alloc.hpp>
 
 RZ_API RZ_OWN void *rz_malloc_aligned(size_t size, size_t alignment) {
 #if HAVE_POSIX_MEMALIGN

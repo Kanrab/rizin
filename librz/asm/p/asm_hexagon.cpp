@@ -9,15 +9,15 @@
 // Do not edit. Repository of code generator:
 // https://github.com/rizinorg/rz-hexagon
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_asm.h>
-#include <rz_lib.h>
-#include <rz_util/rz_print.h>
-#include <rz_vector.h>
-#include "hexagon.h"
-#include "hexagon_insn.h"
-#include "hexagon_arch.h"
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_asm.hpp>
+#include <rz_lib.hpp>
+#include <rz_util/rz_print.hpp>
+#include <rz_vector.hpp>
+#include "hexagon.hpp"
+#include "hexagon_insn.hpp"
+#include "hexagon_arch.hpp"
 
 static RZ_OWN RzPVector /*<RzAsmTokenPattern *>*/ *get_token_patterns(HexState *state) {
 	RzPVector *pvec = state->token_patterns;
@@ -150,10 +150,10 @@ static bool hexagon_init(void **user) {
 
 	RzConfig *cfg = state->cfg; // Rename for SETCB macros.
 	// Add nodes
-	SETCB("plugins.hexagon.imm.hash", "true", &hex_cfg_set, "Display ## before 32bit immediates and # before immidiates with other width.");
-	SETCB("plugins.hexagon.imm.sign", "true", &hex_cfg_set, "True: Print them with sign. False: Print signed immediates in unsigned representation.");
-	SETCB("plugins.hexagon.sdk", "false", &hex_cfg_set, "Print packet syntax in objdump style.");
-	SETCB("plugins.hexagon.reg.alias", "true", &hex_cfg_set, "Print the alias of registers (Alias from C0 = SA0).");
+	SETCB("plugins.hppexagon.imm.hash", "true", &hex_cfg_set, "Display ## before 32bit immediates and # before immidiates with other width.");
+	SETCB("plugins.hppexagon.imm.sign", "true", &hex_cfg_set, "True: Print them with sign. False: Print signed immediates in unsigned representation.");
+	SETCB("plugins.hppexagon.sdk", "false", &hex_cfg_set, "Print packet syntax in objdump style.");
+	SETCB("plugins.hppexagon.reg.alias", "true", &hex_cfg_set, "Print the alias of registers (Alias from C0 = SA0).");
 
 	state->token_patterns = get_token_patterns(state);
 	rz_asm_compile_token_patterns(state->token_patterns);

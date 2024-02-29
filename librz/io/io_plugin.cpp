@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2008-2018 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "config.h"
-#include <rz_io.h>
-#include <rz_lib.h>
+#include "config.hpp"
+#include <rz_io.hpp>
+#include <rz_lib.hpp>
 #include <stdio.h>
 
 static volatile RzIOPlugin *default_plugin = NULL;

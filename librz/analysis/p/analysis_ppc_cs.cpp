@@ -1,14 +1,14 @@
 // SPDX-FileCopyrightText: 2013-2019 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
-#include <rz_lib.h>
-#include <capstone/capstone.h>
-#include <capstone/ppc.h>
-#include "../../asm/arch/ppc/libvle/vle.h"
-#include "../arch/ppc/ppc_analysis.h"
-#include "../arch/ppc/ppc_il.h"
-#include "rz_util/rz_strbuf.h"
+#include <rz_analysis.hpp>
+#include <rz_lib.hpp>
+#include <capstone/capstone.hpp>
+#include <capstone/ppc.hpp>
+#include "../../asm/arch/ppc/libvle/vle.hpp"
+#include "../arch/ppc/ppc_analysis.hpp"
+#include "../arch/ppc/ppc_il.hpp"
+#include "rz_util/rz_strbuf.hpp"
 
 #define SPR_HID0 0x3f0 /* Hardware Implementation Register 0 */
 #define SPR_HID1 0x3f1 /* Hardware Implementation Register 1 */
@@ -997,7 +997,7 @@ static int analyze_op(RzAnalysis *a, RzAnalysisOp *op, ut64 addr, const ut8 *buf
 			opex(&op->opex, ctx->handle, insn);
 		}
 		struct Getarg gop = {
-			.handle = ctx->handle,
+			.hppandle = ctx->handle,
 			.insn = insn,
 			.bits = a->bits
 		};

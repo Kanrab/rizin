@@ -1,4 +1,4 @@
-/*	$OpenBSD: file.h,v 1.22 2009/10/27 23:59:37 deraadt Exp $ */
+/*	$OpenBSD: file.hpp,v 1.22 2009/10/27 23:59:37 deraadt Exp $ */
 /*
  * Copyright (c) Ian F. Darwin 1986-1995.
  * Software written by Ian F. Darwin and others;
@@ -27,25 +27,25 @@
  * SUCH DAMAGE.
  */
 /*
- * file.h - definitions for file(1) program
- * @(#)$Id: file.h,v 1.22 2009/10/27 23:59:37 deraadt Exp $
+ * file.hpp - definitions for file(1) program
+ * @(#)$Id: file.hpp,v 1.22 2009/10/27 23:59:37 deraadt Exp $
  */
 
 #ifndef __file_h__
 #define __file_h__
 
-#include "mconfig.h"
-#include <rz_magic.h>
+#include "mconfig.hpp"
+#include <rz_magic.hpp>
 
 #include <stdio.h> /* Include that here, to make sure __P gets defined */
-#include <errno.h>
+#include <errno.hpp>
 #include <fcntl.h> /* For open and flags */
-#include <inttypes.h> // TODO: use utX
-#include <rz_util/rz_regex.h>
+#include <inttypes.hpp> // TODO: use utX
+#include <rz_util/rz_regex.hpp>
 #include <sys/types.h>
 /* Do this here and now, because struct stat gets re-defined on solaris */
 #include <sys/stat.h>
-#include <stdarg.h>
+#include <stdarg.hpp>
 
 /* Type for Unicode characters */
 typedef unsigned long unichar;

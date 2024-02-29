@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: 2009-2019 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_cons.h>
+#include <rz_cons.hpp>
 #include <string.h>
 #if __UNIX__
-#include <errno.h>
+#include <errno.hpp>
 #elif __WINDOWS__
-#include <rz_windows.h>
+#include <rz_windows.hpp>
 #endif
 
 #define I rz_cons_singleton()

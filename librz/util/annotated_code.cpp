@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2020 NIRMAL MANOJ C <nimmumanoj@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util/rz_annotated_code.h>
-#include <rz_core.h>
-#include <rz_util.h>
+#include <rz_util/rz_annotated_code.hpp>
+#include <rz_core.hpp>
+#include <rz_util.hpp>
 
 RZ_API RzAnnotatedCode *rz_annotated_code_new(char *code) {
 	RzAnnotatedCode *r = RZ_NEW0(RzAnnotatedCode);

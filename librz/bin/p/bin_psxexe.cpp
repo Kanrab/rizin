@@ -3,11 +3,11 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <string.h>
-#include <rz_types.h>
-#include <rz_lib.h>
-#include <rz_bin.h>
-#include "../i/private.h"
-#include "psxexe/psxexe.h"
+#include <rz_types.hpp>
+#include <rz_lib.hpp>
+#include <rz_bin.hpp>
+#include "../i/private.hpp"
+#include "psxexe/psxexe.hpp"
 
 static bool check_buffer(RzBuffer *b) {
 	ut8 magic[PSXEXE_ID_LEN];

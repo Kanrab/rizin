@@ -2,16 +2,16 @@
 // SPDX-FileCopyrightText: 2011-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
-#include <rz_config.h>
-#include <rz_demangler.h>
-#include <rz_util.h>
-#include <rz_list.h>
-#include <rz_util/rz_time.h>
-#include <rz_basefind.h>
+#include <rz_core.hpp>
+#include <rz_config.hpp>
+#include <rz_demangler.hpp>
+#include <rz_util.hpp>
+#include <rz_list.hpp>
+#include <rz_util/rz_time.hpp>
+#include <rz_basefind.hpp>
 
-#include "core_private.h"
-#include "rz_vector.h"
+#include "core_private.hpp"
+#include "rz_vector.hpp"
 
 #define is_invalid_address_va(va, vaddr, paddr)  (((va) && (vaddr) == UT64_MAX) || (!(va) && (paddr) == UT64_MAX))
 #define is_invalid_address_va2(va, vaddr, paddr) (((va) != VA_FALSE && (vaddr) == UT64_MAX) || ((va) == VA_FALSE && (paddr) == UT64_MAX))

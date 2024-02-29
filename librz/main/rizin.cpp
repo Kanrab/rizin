@@ -5,11 +5,11 @@
 #define ALLOW_THREADED    0
 #define UNCOLORIZE_NONTTY 0
 
-#include <rz_core.h>
-#include <rz_demangler.h>
-#include <rz_project.h>
-#include <rz_flirt.h>
-#include <rz_socket.h>
+#include <rz_core.hpp>
+#include <rz_demangler.hpp>
+#include <rz_project.hpp>
+#include <rz_flirt.hpp>
+#include <rz_socket.hpp>
 
 static bool is_valid_gdb_file(RzCoreFile *fh) {
 	RzIODesc *d = fh && fh->core ? rz_io_desc_get(fh->core->io, fh->fd) : NULL;
@@ -358,7 +358,7 @@ beach:
 }
 
 static bool mustSaveHistory(RzConfig *c) {
-	if (!rz_config_get_i(c, "scr.histsave")) {
+	if (!rz_config_get_i(c, "scr.hppistsave")) {
 		return false;
 	}
 	if (!rz_cons_is_interactive()) {

@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2022 Dhruv Maroo <dhruvmaru007@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "sh_il.h"
-#include <rz_il/rz_il_opbuilder_begin.h>
-#include "../../../asm/arch/sh/regs.h"
+#include "sh_il.hpp"
+#include <rz_il/rz_il_opbuilder_begin.hpp>
+#include "../../../asm/arch/sh/regs.hpp"
 
 /**
  * \file sh_il.c
@@ -1655,7 +1655,7 @@ static RzILOpEffect *sh_il_unimpl(const SHOp *op, ut64 pc, RzAnalysis *analysis,
 	return EMPTY();
 }
 
-#include <rz_il/rz_il_opbuilder_end.h>
+#include <rz_il/rz_il_opbuilder_end.hpp>
 
 typedef RzILOpEffect *(*sh_il_op)(const SHOp *op, ut64 pc, RzAnalysis *analysis, SHILContext *ctx);
 

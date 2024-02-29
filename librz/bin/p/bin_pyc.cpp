@@ -2,8 +2,8 @@
 // SPDX-FileCopyrightText: 2016-2020 x0urc3
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bin.h>
-#include "../format/pyc/pyc.h"
+#include <rz_bin.hpp>
+#include "../format/pyc/pyc.hpp"
 
 static bool check_buffer(RzBuffer *b) {
 	if (rz_buf_size(b) > 4) {

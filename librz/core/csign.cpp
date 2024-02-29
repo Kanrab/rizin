@@ -3,8 +3,8 @@
 // SPDX-FileCopyrightText: 2014-2016 jfrankowski <jody.frankowski@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
-#include <rz_flirt.h>
+#include <rz_core.hpp>
+#include <rz_flirt.hpp>
 
 typedef struct map_string_value_t {
 	const char *name;

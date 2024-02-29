@@ -10,7 +10,7 @@
  *
  * It is intended to be used like this, for example when lifting IL from an architecture:
  *
- *     #include <rz_il/rz_il_opbuilder_begin.h>
+ *     #include <rz_il/rz_il_opbuilder_begin.hpp>
  *
  *     RzILOpEffect *lift_my_op() {
  *         return SEQ3(
@@ -19,21 +19,21 @@
  *             STORE(0xcafe, VARG("a")));
  *     }
  *
- *     #include <rz_il/rz_il_opbuilder_end.h>
+ *     #include <rz_il/rz_il_opbuilder_end.hpp>
  *
  * Because of their short nature, these macros may conflict with other code. As such,
  * it should never be included in any public headers, and should be closed by an
- * `#include <rz_il/rz_il_opbuilder_end.h>` when not needed anymore, which `#undef`s
+ * `#include <rz_il/rz_il_opbuilder_end.hpp>` when not needed anymore, which `#undef`s
  * everything again.
  *
- * Consequently, when editing this file, always make sure to keep `rz_il_opbuilder_end.h`
+ * Consequently, when editing this file, always make sure to keep `rz_il_opbuilder_end.hpp`
  * in sync!
  */
 
 #ifndef RZ_IL_OPBUILDER_BEGIN_H
 #define RZ_IL_OPBUILDER_BEGIN_H
 
-#include <rz_il/rz_il_opcodes.h>
+#include <rz_il/rz_il_opcodes.hpp>
 
 #define DUP(op) rz_il_op_pure_dup(op)
 

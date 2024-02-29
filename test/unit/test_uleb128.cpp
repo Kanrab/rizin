@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2019 ret2libc <sirmy15@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include <rz_io.h>
+#include <rz_util.hpp>
+#include <rz_io.hpp>
 #include <stdlib.h>
-#include "minunit.h"
+#include "minunit.hpp"
 
 bool test_uleb128_small(void) {
 	int len;

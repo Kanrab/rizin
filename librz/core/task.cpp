@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2014-2019 thestr4ng3r <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
+#include <rz_core.hpp>
 
 RZ_API void rz_core_task_scheduler_init(RzCoreTaskScheduler *sched,
 	RzCoreTaskContextSwitch ctx_switch, void *ctx_switch_user,

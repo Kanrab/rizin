@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2019 GustavoLCR <gugulcr@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "ne.h"
+#include "ne.hpp"
 
 static char *__get_target_os(rz_bin_ne_obj_t *bin) {
 	switch (bin->ne_header->targOS) {

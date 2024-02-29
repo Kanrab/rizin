@@ -2,11 +2,11 @@
 // SPDX-FileCopyrightText: 2009-2019 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_bin.h>
-#include "../format/p9/p9bin.h"
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_bin.hpp>
+#include "../format/p9/p9bin.hpp"
 
 static bool check_buffer(RzBuffer *buf) {
 	return rz_bin_p9_get_arch(buf, NULL, NULL);

@@ -4,16 +4,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include <rz_core.h>
-#include <rz_main.h>
-#include <rz_types.h>
-#include <rz_search.h>
-#include <rz_util.h>
-#include <rz_util/rz_print.h>
-#include <rz_cons.h>
-#include <rz_lib.h>
-#include <rz_io.h>
-#include <rz_bin.h>
+#include <rz_core.hpp>
+#include <rz_main.hpp>
+#include <rz_types.hpp>
+#include <rz_search.hpp>
+#include <rz_util.hpp>
+#include <rz_util/rz_print.hpp>
+#include <rz_cons.hpp>
+#include <rz_lib.hpp>
+#include <rz_io.hpp>
+#include <rz_bin.hpp>
 
 typedef struct {
 	bool showstr;
@@ -537,7 +537,7 @@ RZ_API int rz_main_rz_find(int argc, const char **argv) {
 			break;
 		case 'e':
 			ro.mode = RZ_SEARCH_REGEXP;
-			ro.hexstr = 0;
+			ro.hppexstr = 0;
 			rz_list_append(ro.keywords, (void *)opt.arg);
 			break;
 		case 'E':
@@ -546,13 +546,13 @@ RZ_API int rz_main_rz_find(int argc, const char **argv) {
 			break;
 		case 's':
 			ro.mode = RZ_SEARCH_KEYWORD;
-			ro.hexstr = false;
+			ro.hppexstr = false;
 			ro.widestr = false;
 			rz_list_append(ro.keywords, (void *)opt.arg);
 			break;
 		case 'w':
 			ro.mode = RZ_SEARCH_KEYWORD;
-			ro.hexstr = false;
+			ro.hppexstr = false;
 			ro.widestr = true;
 			rz_list_append(ro.keywords, (void *)opt.arg);
 			break;
@@ -584,7 +584,7 @@ RZ_API int rz_main_rz_find(int argc, const char **argv) {
 			char *hexdata = rz_hex_bin2strdup((ut8 *)data, data_size);
 			if (hexdata) {
 				ro.mode = RZ_SEARCH_KEYWORD;
-				ro.hexstr = true;
+				ro.hppexstr = true;
 				ro.widestr = false;
 				rz_list_append(ro.keywords, (void *)hexdata);
 			}
@@ -595,7 +595,7 @@ RZ_API int rz_main_rz_find(int argc, const char **argv) {
 			break;
 		case 'x':
 			ro.mode = RZ_SEARCH_KEYWORD;
-			ro.hexstr = 1;
+			ro.hppexstr = 1;
 			ro.widestr = 0;
 			rz_list_append(ro.keywords, (void *)opt.arg);
 			break;

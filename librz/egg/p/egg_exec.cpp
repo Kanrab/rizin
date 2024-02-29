@@ -1,6 +1,6 @@
 // SPDX-FileCopyrightText: 2011 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
-#include <rz_egg.h>
+#include <rz_egg.hpp>
 
 #if 0
 linux setresuid(0,0)+execv(/bin/sh)

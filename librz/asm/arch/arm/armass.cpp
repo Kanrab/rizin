@@ -5,8 +5,8 @@
 #include <string.h>
 #include <ctype.h>
 #include <stdlib.h>
-#include <rz_util.h>
-#include "armass16_const.h"
+#include <rz_util.hpp>
+#include "armass16_const.hpp"
 
 // TODO: only lo registers accessible in thumb arm
 

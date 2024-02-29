@@ -1,49 +1,49 @@
 type.DWORD_PTE.size=32
-type.HACCEL.size=32
-type.HALF_PTR=w
-type.HALF_PTR.size=16
-type.HANDLE.size=32
-type.HBITMAP.size=32
-type.HBRUSH.size=32
-type.HCOLORSPACE.size=32
-type.HCONV.size=32
-type.HCONVLIST.size=32
-type.HCURSOR.size=32
-type.HDC.size=32
-type.HDDEDATA.size=32
-type.HDESK.size=32
-type.HDROP.size=32
-type.HDWP.size=32
-type.HENHMETAFILE.size=32
-type.HFILE.size=32
-type.HFONT.size=32
-type.HGDIOBJ.size=32
-type.HGLOBAL.size=32
-type.HHOOK.size=32
-type.HICON.size=32
-type.HINSTANCE.size=32
-type.HKEY.size=32
-type.HKL.size=32
-type.HLOCAL.size=32
-type.HMENU.size=32
-type.HMETAFILE.size=32
-type.HMODULE.size=32
-type.HMONITOR.size=32
-type.HPALETTE.size=32
-type.HPEN.size=32
-type.HRESULT.size=32
-type.HRGN.size=32
-type.HRSRC.size=32
-type.HSZ.size=32
-type.HWINSTA.size=32
-type.HWND.size=32
+type.hppACCEL.size=32
+type.hppALF_PTR=w
+type.hppALF_PTR.size=16
+type.hppANDLE.size=32
+type.hppBITMAP.size=32
+type.hppBRUSH.size=32
+type.hppCOLORSPACE.size=32
+type.hppCONV.size=32
+type.hppCONVLIST.size=32
+type.hppCURSOR.size=32
+type.hppDC.size=32
+type.hppDDEDATA.size=32
+type.hppDESK.size=32
+type.hppDROP.size=32
+type.hppDWP.size=32
+type.hppENHMETAFILE.size=32
+type.hppFILE.size=32
+type.hppFONT.size=32
+type.hppGDIOBJ.size=32
+type.hppGLOBAL.size=32
+type.hppHOOK.size=32
+type.hppICON.size=32
+type.hppINSTANCE.size=32
+type.hppKEY.size=32
+type.hppKL.size=32
+type.hppLOCAL.size=32
+type.hppMENU.size=32
+type.hppMETAFILE.size=32
+type.hppMODULE.size=32
+type.hppMONITOR.size=32
+type.hppPALETTE.size=32
+type.hppPEN.size=32
+type.hppRESULT.size=32
+type.hppRGN.size=32
+type.hppRSRC.size=32
+type.hppSZ.size=32
+type.hppWINSTA.size=32
+type.hppWND.size=32
 type.INT_PTR.size=32
 type.LPCTSTR.size=32
 type.LPTSTR.size=32
 type.LPFILETIME.size=32
 type.PVOID.size=32
 
-### winbase.h ###
+### winbase.hpp ###
 
 func.AccessCheckAndAuditAlarmA.cc=stdcall
 func.AccessCheckByTypeAndAuditAlarmA.cc=stdcall
@@ -524,7 +524,7 @@ func.lstrcpynW.cc=stdcall
 func.lstrlenA.cc=stdcall
 func.lstrlenW.cc=stdcall
 
-### processenv.h ###
+### processenv.hpp ###
 
 func.ExpandEnvironmentStringsA.cc=stdcall
 func.ExpandEnvironmentStringsW.cc=stdcall
@@ -551,7 +551,7 @@ func.SetEnvironmentVariableW.cc=stdcall
 func.SetStdHandle.cc=stdcall
 func.SetStdHandleEx.cc=stdcall
 
-### fileapi.h ###
+### fileapi.hpp ###
 
 func.AreFileApisANSI.cc=stdcall
 func.CompareFileTime.cc=stdcall
@@ -646,7 +646,7 @@ func.WriteFile.cc=stdcall
 func.WriteFileEx.cc=stdcall
 func.WriteFileGather.cc=stdcall
 
-### debugapi.h ###
+### debugapi.hpp ###
 
 func.CheckRemoteDebuggerPresent.cc=stdcall
 func.ContinueDebugEvent.cc=stdcall
@@ -659,7 +659,7 @@ func.OutputDebugStringW.cc=stdcall
 func.WaitForDebugEvent.cc=stdcall
 func.WaitForDebugEventEx.cc=stdcall
 
-### utilapiset.h ###
+### utilapiset.hpp ###
 
 func.Beep.cc=stdcall
 func.DecodePointer.cc=stdcall
@@ -669,7 +669,7 @@ func.EncodePointer.cc=stdcall
 func.EncodeRemotePointer.cc=stdcall
 func.EncodeSystemPointer.cc=stdcall
 
-### handleapi.h ###
+### handleapi.hpp ###
 
 func.CloseHandle.cc=stdcall
 func.CompareObjectHandles.cc=stdcall
@@ -677,7 +677,7 @@ func.DuplicateHandle.cc=stdcall
 func.GetHandleInformation.cc=stdcall
 func.SetHandleInformation.cc=stdcall
 
-### fibersapi.h ###
+### fibersapi.hpp ###
 
 func.FlsAlloc.cc=stdcall
 func.FlsFree.cc=stdcall
@@ -685,7 +685,7 @@ func.FlsGetValue.cc=stdcall
 func.FlsSetValue.cc=stdcall
 func.IsThreadAFiber.cc=stdcall
 
-### namedpipeapi.h ###
+### namedpipeapi.hpp ###
 
 func.CallNamedPipeW.cc=stdcall
 func.ConnectNamedPipe.cc=stdcall
@@ -701,30 +701,30 @@ func.SetNamedPipeHandleState.cc=stdcall
 func.TransactNamedPipe.cc=stdcall
 func.WaitNamedPipeW.cc=stdcall
 
-### profileapi.h ###
+### profileapi.hpp ###
 
 func.QueryPerformanceCounter.cc=stdcall
 func.QueryPerformanceFrequency.cc=stdcall
 
-### heapapi.h ###
+### heapapi.hpp ###
 
 func.GetProcessHeap.cc=stdcall
 func.GetProcessHeaps.cc=stdcall
-func.HeapAlloc.cc=stdcall
-func.HeapCompact.cc=stdcall
-func.HeapCreate.cc=stdcall
-func.HeapDestroy.cc=stdcall
-func.HeapFree.cc=stdcall
-func.HeapLock.cc=stdcall
-func.HeapQueryInformation.cc=stdcall
-func.HeapReAlloc.cc=stdcall
-func.HeapSetInformation.cc=stdcall
-func.HeapSize.cc=stdcall
-func.HeapUnlock.cc=stdcall
-func.HeapValidate.cc=stdcall
-func.HeapWalk.cc=stdcall
+func.hppeapAlloc.cc=stdcall
+func.hppeapCompact.cc=stdcall
+func.hppeapCreate.cc=stdcall
+func.hppeapDestroy.cc=stdcall
+func.hppeapFree.cc=stdcall
+func.hppeapLock.cc=stdcall
+func.hppeapQueryInformation.cc=stdcall
+func.hppeapReAlloc.cc=stdcall
+func.hppeapSetInformation.cc=stdcall
+func.hppeapSize.cc=stdcall
+func.hppeapUnlock.cc=stdcall
+func.hppeapValidate.cc=stdcall
+func.hppeapWalk.cc=stdcall
 
-### ioapiset.h ###
+### ioapiset.hpp ###
 
 func.CancelIo.cc=stdcall
 func.CancelIoEx.cc=stdcall
@@ -737,7 +737,7 @@ func.GetQueuedCompletionStatus.cc=stdcall
 func.GetQueuedCompletionStatusEx.cc=stdcall
 func.PostQueuedCompletionStatus.cc=stdcall
 
-### synchapi.h ###
+### synchapi.hpp ###
 
 func.AcquireSRWLockExclusive.cc=stdcall
 func.AcquireSRWLockShared.cc=stdcall
@@ -794,7 +794,7 @@ func.WaitForSingleObjectEx.cc=stdcall
 func.WakeAllConditionVariable.cc=stdcall
 func.WakeConditionVariable.cc=stdcall
 
-### interlockedapi.h ###
+### interlockedapi.hpp ###
 
 func.InitializeSListHead.cc=stdcall
 func.InterlockedFlushSList.cc=stdcall
@@ -803,7 +803,7 @@ func.InterlockedPushEntrySList.cc=stdcall
 func.InterlockedPushListSListEx.cc=stdcall
 func.QueryDepthSList.cc=stdcall
 
-### processthreadsapi.h ###
+### processthreadsapi.hpp ###
 
 func.CreateProcessA.cc=stdcall
 func.CreateProcessAsUserA.cc=stdcall
@@ -885,7 +885,7 @@ func.TlsGetValue.cc=stdcall
 func.TlsSetValue.cc=stdcall
 func.UpdateProcThreadAttribute.cc=stdcall
 
-### sysinfoapi.h ###
+### sysinfoapi.hpp ###
 
 func.DnsHostnameToComputerNameExW.cc=stdcall
 func.EnumSystemFirmwareTables.cc=stdcall
@@ -932,7 +932,7 @@ func.SetSystemTimeAdjustment.cc=stdcall
 func.SetSystemTimeAdjustmentPrecise.cc=stdcall
 func.VerSetConditionMask.cc=stdcall
 
-### memoryapi.h ###
+### memoryapi.hpp ###
 
 func.AllocateUserPhysicalPages.cc=stdcall
 func.AllocateUserPhysicalPagesNuma.cc=stdcall
@@ -987,7 +987,7 @@ func.VirtualUnlock.cc=stdcall
 func.VirtualUnlockEx.cc=stdcall
 func.WriteProcessMemory.cc=stdcall
 
-### enclaveapi.h ###
+### enclaveapi.hpp ###
 
 func.CallEnclave.cc=stdcall
 func.CreateEnclave.cc=stdcall
@@ -999,7 +999,7 @@ func.LoadEnclaveImageA.cc=stdcall
 func.LoadEnclaveImageW.cc=stdcall
 func.TerminateEnclave.cc=stdcall
 
-### threadpoollegacyapiset.h ###
+### threadpoollegacyapiset.hpp ###
 
 func.ChangeTimerQueueTimer.cc=stdcall
 func.CreateTimerQueue.cc=stdcall
@@ -1009,7 +1009,7 @@ func.DeleteTimerQueueTimer.cc=stdcall
 func.QueueUserWorkItem.cc=stdcall
 func.UnregisterWaitEx.cc=stdcall
 
-### threadpoolapiset.h ###
+### threadpoolapiset.hpp ###
 
 func.CallbackMayRunLong.cc=stdcall
 func.CancelThreadpoolIo.cc=stdcall
@@ -1049,11 +1049,11 @@ func.WaitForThreadpoolTimerCallbacks.cc=stdcall
 func.WaitForThreadpoolWaitCallbacks.cc=stdcall
 func.WaitForThreadpoolWorkCallbacks.cc=stdcall
 
-### jobapi.h ###
+### jobapi.hpp ###
 
 func.IsProcessInJob.cc=stdcall
 
-### jobapi2.h ###
+### jobapi2.hpp ###
 
 func.AssignProcessToJobObject.cc=stdcall
 func.CreateJobObjectW.cc=stdcall
@@ -1065,7 +1065,7 @@ func.SetInformationJobObject.cc=stdcall
 func.SetIoRateControlInformationJobObject.cc=stdcall
 func.TerminateJobObject.cc=stdcall
 
-### wow64apiset.h ###
+### wow64apiset.hpp ###
 
 func.GetSystemWow64Directory2A.cc=stdcall
 func.GetSystemWow64Directory2W.cc=stdcall
@@ -1078,7 +1078,7 @@ func.Wow64DisableWow64FsRedirection.cc=stdcall
 func.Wow64RevertWow64FsRedirection.cc=stdcall
 func.Wow64SetThreadDefaultGuestMachine.cc=stdcall
 
-### libloaderapi.h ###
+### libloaderapi.hpp ###
 
 func.AddDllDirectory.cc=stdcall
 func.DisableThreadLibraryCalls.cc=stdcall
@@ -1114,7 +1114,7 @@ func.RemoveDllDirectory.cc=stdcall
 func.SetDefaultDllDirectories.cc=stdcall
 func.SizeofResource.cc=stdcall
 
-### securitybaseapi.h ###
+### securitybaseapi.hpp ###
 
 func.AccessCheck.cc=stdcall
 func.AccessCheckAndAuditAlarmW.cc=stdcall
@@ -1221,19 +1221,19 @@ func.SetSecurityDescriptorRMControl.cc=stdcall
 func.SetSecurityDescriptorSacl.cc=stdcall
 func.SetTokenInformation.cc=stdcall
 
-### systemtopologyapi.h ###
+### systemtopologyapi.hpp ###
 
 func.GetNumaHighestNodeNumber.cc=stdcall
 func.GetNumaNodeProcessorMaskEx.cc=stdcall
 func.GetNumaProximityNodeEx.cc=stdcall
 
-### processtopologyapi.h ###
+### processtopologyapi.hpp ###
 
 func.GetProcessGroupAffinity.cc=stdcall
 func.GetThreadGroupAffinity.cc=stdcall
 func.SetThreadGroupAffinity.cc=stdcall
 
-### realtimeapiset.h ###
+### realtimeapiset.hpp ###
 
 func.ConvertAuxiliaryCounterToPerformanceCounter.cc=stdcall
 func.ConvertPerformanceCounterToAuxiliaryCounter.cc=stdcall
@@ -1247,7 +1247,7 @@ func.QueryThreadCycleTime.cc=stdcall
 func.QueryUnbiasedInterruptTime.cc=stdcall
 func.QueryUnbiasedInterruptTimePrecise.cc=stdcall
 
-### consoleapi.h ###
+### consoleapi.hpp ###
 
 func.AllocConsole.cc=stdcall
 func.AttachConsole.cc=stdcall
@@ -1267,7 +1267,7 @@ func.SetConsoleMode.cc=stdcall
 func.WriteConsoleA.cc=stdcall
 func.WriteConsoleW.cc=stdcall
 
-### consoleapi2.h ###
+### consoleapi2.hpp ###
 
 func.CreateConsoleScreenBuffer.cc=stdcall
 func.FillConsoleOutputAttribute.cc=stdcall
@@ -1309,12 +1309,12 @@ func.WriteConsoleOutputCharacterA.cc=stdcall
 func.WriteConsoleOutputCharacterW.cc=stdcall
 func.WriteConsoleOutputW.cc=stdcall
 
-### libloaderapi2.h ###
+### libloaderapi2.hpp ###
 
 func.LoadPackagedLibrary.cc=stdcall
 func.QueryOptionalDelayLoadedAPI.cc=stdcall
 
-### winreg.h ###
+### winreg.hpp ###
 
 func.AbortSystemShutdownA.cc=stdcall
 func.AbortSystemShutdownW.cc=stdcall
@@ -1408,7 +1408,7 @@ func.RegSetValueW.cc=stdcall
 func.RegUnLoadKeyA.cc=stdcall
 func.RegUnLoadKeyW.cc=stdcall
 
-### winnls.h ###
+### winnls.hpp ###
 
 func.CompareStringA.cc=stdcall
 func.ConvertDefaultLocale.cc=stdcall
@@ -1520,7 +1520,7 @@ func.SetUserGeoID.cc=stdcall
 func.SetUserGeoName.cc=stdcall
 func.VerifyScripts.cc=stdcall
 
-### datetimeapi.h ###
+### datetimeapi.hpp ###
 
 func.GetDateFormatA.cc=stdcall
 func.GetDateFormatEx.cc=stdcall
@@ -1529,7 +1529,7 @@ func.GetTimeFormatA.cc=stdcall
 func.GetTimeFormatEx.cc=stdcall
 func.GetTimeFormatW.cc=stdcall
 
-### stringapiset.h ###
+### stringapiset.hpp ###
 
 func.CompareStringEx.cc=stdcall
 func.CompareStringOrdinal.cc=stdcall
@@ -1540,7 +1540,7 @@ func.GetStringTypeW.cc=stdcall
 func.MultiByteToWideChar.cc=stdcall
 func.WideCharToMultiByte.cc=stdcall
 
-### dpapi.h ###
+### dpapi.hpp ###
 
 func.CryptProtectData.cc=stdcall
 func.CryptProtectMemory.cc=stdcall
@@ -1548,7 +1548,7 @@ func.CryptUnprotectData.cc=stdcall
 func.CryptUnprotectMemory.cc=stdcall
 func.CryptUpdateProtectedState.cc=stdcall
 
-### winuser.h ###
+### winuser.hpp ###
 
 func.ActivateKeyboardLayout.cc=stdcall
 func.AddClipboardFormatListener.cc=stdcall
@@ -1937,8 +1937,8 @@ func.GetWindowThreadProcessId.cc=stdcall
 func.GetWindowWord.cc=stdcall
 func.GrayStringA.cc=stdcall
 func.GrayStringW.cc=stdcall
-func.HideCaret.cc=stdcall
-func.HiliteMenuItem.cc=stdcall
+func.hppideCaret.cc=stdcall
+func.hppiliteMenuItem.cc=stdcall
 func.InSendMessage.cc=stdcall
 func.InSendMessageEx.cc=stdcall
 func.InflateRect.cc=stdcall
@@ -2255,7 +2255,7 @@ func.wsprintfW.cc=cdecl
 func.wvsprintfA.cc=stdcall
 func.wvsprintfW.cc=stdcall
 
-### errhandlingapi.h ###
+### errhandlingapi.hpp ###
 
 func.AddVectoredContinueHandler.cc=stdcall
 func.AddVectoredExceptionHandler.cc=stdcall
@@ -2276,7 +2276,7 @@ func.SetUnhandledExceptionFilter.cc=stdcall
 func.TerminateProcessOnMemoryExhaustion.cc=stdcall
 func.UnhandledExceptionFilter.cc=stdcall
 
-### ws2tcpip.h ###
+### ws2tcpip.hpp ###
 
 func.FreeAddrInfoEx.cc=stdcall
 func.FreeAddrInfoExW.cc=stdcall
@@ -2300,7 +2300,7 @@ func.getaddrinfo.cc=stdcall
 func.getnameinfo.cc=stdcall
 func.inet_pton.cc=stdcall
 
-### wincrypt.h ###
+### wincrypt.hpp ###
 
 func.CertAddCRLContextToStore.cc=stdcall
 func.CertAddCRLLinkToStore.cc=stdcall
@@ -2563,7 +2563,7 @@ func.PFXImportCertStore.cc=stdcall
 func.PFXIsPFXBlob.cc=stdcall
 func.PFXVerifyPassword.cc=stdcall
 
-### userenv.h ###
+### userenv.hpp ###
 
 func.CreateAppContainerProfile.cc=stdcall
 func.CreateProfile.cc=stdcall
@@ -2608,7 +2608,7 @@ func.RsopSetPolicySettingStatus.cc=stdcall
 func.UnloadUserProfile.cc=stdcall
 func.UnregisterGPNotification.cc=stdcall
 
-### winber.h ###
+### winber.hpp ###
 
 func.ber_alloc_t.cc=cdecl
 func.ber_bvdup.cc=cdecl
@@ -2624,7 +2624,7 @@ func.ber_printf.cc=cdecl
 func.ber_scanf.cc=cdecl
 func.ber_skip_tag.cc=cdecl
 
-### shlwapi.h ###
+### shlwapi.hpp ###
 
 func.AssocCreate.cc=stdcall
 func.AssocGetPerceivedType.cc=stdcall
@@ -2646,7 +2646,7 @@ func.GetAcceptLanguagesA.cc=stdcall
 func.GetAcceptLanguagesW.cc=stdcall
 func.GetMenuPosFromID.cc=stdcall
 func.GetProcessReference.cc=stdcall
-func.HashData.cc=stdcall
+func.hashData.cc=stdcall
 func.IStream_Copy.cc=stdcall
 func.IStream_Read.cc=stdcall
 func.IStream_ReadPidl.cc=stdcall
@@ -2991,7 +2991,7 @@ func.wnsprintfW.cc=cdecl
 func.wvnsprintfA.cc=stdcall
 func.wvnsprintfW.cc=stdcall
 
-### rtlsupportapi.h ###
+### rtlsupportapi.hpp ###
 
 func.RtlAddFunctionTable.cc=cdecl
 func.RtlAddGrowableFunctionTable.cc=stdcall
@@ -3011,7 +3011,7 @@ func.RtlUnwind.cc=stdcall
 func.RtlUnwindEx.cc=stdcall
 func.RtlVirtualUnwind.cc=stdcall
 
-### oleauto.h ###
+### oleauto.hpp ###
 
 func.BstrFromVector.cc=stdcall
 func.ClearCustData.cc=stdcall
@@ -3384,7 +3384,7 @@ func.VariantTimeToDosDateTime.cc=stdcall
 func.VariantTimeToSystemTime.cc=stdcall
 func.VectorFromBstr.cc=stdcall
 
-### winldap.h ###
+### winldap.hpp ###
 
 func.LdapGetLastError.cc=cdecl
 func.LdapMapErrorToWin32.cc=cdecl
@@ -3618,7 +3618,7 @@ func.ldap_value_freeA.cc=cdecl
 func.ldap_value_freeW.cc=cdecl
 func.ldap_value_free_len.cc=cdecl
 
-### shellapi.h ###
+### shellapi.hpp ###
 
 func.AssocCreateForClasses.cc=stdcall
 func.CommandLineToArgvW.cc=stdcall
@@ -3682,7 +3682,7 @@ func.Shell_NotifyIconA.cc=stdcall
 func.Shell_NotifyIconGetRect.cc=stdcall
 func.Shell_NotifyIconW.cc=stdcall
 
-### pathcch.h ###
+### pathcch.hpp ###
 
 func.PathAllocCanonicalize.cc=stdcall
 func.PathAllocCombine.cc=stdcall
@@ -3707,7 +3707,7 @@ func.PathCchStripPrefix.cc=stdcall
 func.PathCchStripToRoot.cc=stdcall
 func.PathIsUNCEx.cc=stdcall
 
-### wincred.h ###
+### wincred.hpp ###
 
 func.CredDeleteA.cc=stdcall
 func.CredDeleteW.cc=stdcall
@@ -3758,7 +3758,7 @@ func.CredWriteDomainCredentialsA.cc=stdcall
 func.CredWriteDomainCredentialsW.cc=stdcall
 func.CredWriteW.cc=stdcall
 
-### timezoneapi.h ###
+### timezoneapi.hpp ###
 
 func.EnumDynamicTimeZoneInformation.cc=stdcall
 func.FileTimeToSystemTime.cc=stdcall
@@ -3773,7 +3773,7 @@ func.SystemTimeToTzSpecificLocalTimeEx.cc=stdcall
 func.TzSpecificLocalTimeToSystemTime.cc=stdcall
 func.TzSpecificLocalTimeToSystemTimeEx.cc=stdcall
 
-### shellscalingapi.h ###
+### shellscalingapi.hpp ###
 
 func.GetDpiForMonitor.cc=stdcall
 func.GetDpiForShellUIComponent.cc=stdcall
@@ -3786,7 +3786,7 @@ func.RevokeScaleChangeNotifications.cc=stdcall
 func.SetProcessDpiAwareness.cc=stdcall
 func.UnregisterScaleChangeEvent.cc=stdcall
 
-### commctrl.h ###
+### commctrl.hpp ###
 
 func.CreateMappedBitmap.cc=stdcall
 func.CreateStatusWindowA.cc=stdcall
@@ -3808,7 +3808,7 @@ func.FlatSB_SetScrollProp.cc=stdcall
 func.FlatSB_SetScrollRange.cc=stdcall
 func.FlatSB_ShowScrollBar.cc=stdcall
 func.GetEffectiveClientRect.cc=stdcall
-func.HIMAGELIST_QueryInterface.cc=stdcall
+func.hppIMAGELIST_QueryInterface.cc=stdcall
 func.ImageList_Add.cc=stdcall
 func.ImageList_AddMasked.cc=stdcall
 func.ImageList_BeginDrag.cc=stdcall
@@ -3855,12 +3855,12 @@ func.TaskDialogIndirect.cc=stdcall
 func.UninitializeFlatSB.cc=stdcall
 func._TrackMouseEvent.cc=stdcall
 
-### minidumpapiset.h ###
+### minidumpapiset.hpp ###
 
 func.MiniDumpReadDumpStream.cc=stdcall
 func.MiniDumpWriteDump.cc=stdcall
 
-### dbghelp.h ###
+### dbghelp.hpp ###
 
 func.EnumDirTree.cc=stdcall
 func.EnumDirTreeW.cc=stdcall
@@ -4057,7 +4057,7 @@ func.UnDecorateSymbolName.cc=stdcall
 func.UnDecorateSymbolNameW.cc=stdcall
 func.UnmapDebugInformation.cc=stdcall
 
-### combaseapi.h ###
+### combaseapi.hpp ###
 
 func.CLSIDFromProgID.cc=stdcall
 func.CLSIDFromProgIDEx.cc=stdcall
@@ -4146,7 +4146,7 @@ func.StringFromCLSID.cc=stdcall
 func.StringFromGUID2.cc=stdcall
 func.StringFromIID.cc=stdcall
 
-### secext.h ###
+### secext.hpp ###
 
 func.GetComputerObjectNameA.cc=stdcall
 func.GetComputerObjectNameW.cc=stdcall
@@ -4155,7 +4155,7 @@ func.GetUserNameExW.cc=stdcall
 func.TranslateNameA.cc=stdcall
 func.TranslateNameW.cc=stdcall
 
-### psapi.h ###
+### psapi.hpp ###
 
 func.EmptyWorkingSet.cc=stdcall
 func.EnumDeviceDrivers.cc=stdcall
@@ -4212,7 +4212,7 @@ func.K32InitializeProcessForWsWatch.cc=stdcall
 func.K32QueryWorkingSet.cc=stdcall
 func.K32QueryWorkingSetEx.cc=stdcall
 
-### winver.h ###
+### winver.hpp ###
 
 func.GetFileVersionInfoA.cc=stdcall
 func.GetFileVersionInfoExA.cc=stdcall
@@ -4231,7 +4231,7 @@ func.VerLanguageNameW.cc=stdcall
 func.VerQueryValueA.cc=stdcall
 func.VerQueryValueW.cc=stdcall
 
-### evntrace.h ###
+### evntrace.hpp ###
 
 func.CloseTrace.cc=stdcall
 func.ControlTraceA.cc=stdcall
@@ -4273,7 +4273,7 @@ func.UnregisterTraceGuids.cc=stdcall
 func.UpdateTraceA.cc=stdcall
 func.UpdateTraceW.cc=stdcall
 
-### ncryptprotect.h ###
+### ncryptprotect.hpp ###
 
 func.NCryptCloseProtectionDescriptor.cc=stdcall
 func.NCryptCreateProtectionDescriptor.cc=stdcall
@@ -4288,7 +4288,7 @@ func.NCryptStreamOpenToUnprotectEx.cc=stdcall
 func.NCryptStreamUpdate.cc=stdcall
 func.NCryptUnprotectSecret.cc=stdcall
 
-### powerbase.h ###
+### powerbase.hpp ###
 
 func.CallNtPowerInformation.cc=stdcall
 func.GetPwrCapabilities.cc=stdcall
@@ -4296,7 +4296,7 @@ func.PowerDeterminePlatformRoleEx.cc=stdcall
 func.PowerRegisterSuspendResumeNotification.cc=stdcall
 func.PowerUnregisterSuspendResumeNotification.cc=stdcall
 
-### powersetting.h ###
+### powersetting.hpp ###
 
 func.PowerGetActiveScheme.cc=stdcall
 func.PowerReadACValue.cc=stdcall
@@ -4309,7 +4309,7 @@ func.PowerUnregisterFromEffectivePowerModeNotifications.cc=stdcall
 func.PowerWriteACValueIndex.cc=stdcall
 func.PowerWriteDCValueIndex.cc=stdcall
 
-### evntprov.h ###
+### evntprov.hpp ###
 
 func.EventActivityIdControl.cc=stdcall
 func.EventEnabled.cc=stdcall
@@ -4322,13 +4322,13 @@ func.EventWriteEx.cc=stdcall
 func.EventWriteString.cc=stdcall
 func.EventWriteTransfer.cc=stdcall
 
-### evntcons.h ###
+### evntcons.hpp ###
 
 func.EventAccessControl.cc=stdcall
 func.EventAccessQuery.cc=stdcall
 func.EventAccessRemove.cc=stdcall
 
-### shobjidl_core.h ###
+### shobjidl_core.hpp ###
 
 func.GetCurrentProcessExplicitAppUserModelID.cc=stdcall
 func.SHAssocEnumHandlers.cc=stdcall
@@ -4353,7 +4353,7 @@ func.SHSetTemporaryPropertyForItem.cc=stdcall
 func.SHSimpleIDListFromPath.cc=stdcall
 func.SetCurrentProcessExplicitAppUserModelID.cc=stdcall
 
-### mssip.h ###
+### mssip.hpp ###
 
 func.CryptSIPAddProvider.cc=stdcall
 func.CryptSIPCreateIndirectData.cc=stdcall
@@ -4367,7 +4367,7 @@ func.CryptSIPRetrieveSubjectGuid.cc=stdcall
 func.CryptSIPRetrieveSubjectGuidForCatalogFile.cc=stdcall
 func.CryptSIPVerifyIndirectData.cc=stdcall
 
-### olectl.h ###
+### olectl.hpp ###
 
 func.DllRegisterServer.cc=stdcall
 func.DllUnregisterServer.cc=stdcall
@@ -4384,7 +4384,7 @@ func.OleLoadPicturePath.cc=stdcall
 func.OleSavePictureFile.cc=stdcall
 func.OleTranslateColor.cc=stdcall
 
-### cfgmgr32.h ###
+### cfgmgr32.hpp ###
 
 func.CM_Add_Empty_Log_Conf.cc=stdcall
 func.CM_Add_Empty_Log_Conf_Ex.cc=stdcall
@@ -4616,7 +4616,7 @@ func.CM_Unregister_Device_Interface_ExA.cc=stdcall
 func.CM_Unregister_Device_Interface_ExW.cc=stdcall
 func.CM_Unregister_Notification.cc=stdcall
 
-### sddl.h ###
+### sddl.hpp ###
 
 func.ConvertSecurityDescriptorToStringSecurityDescriptorA.cc=stdcall
 func.ConvertSecurityDescriptorToStringSecurityDescriptorW.cc=stdcall
@@ -4627,7 +4627,7 @@ func.ConvertStringSecurityDescriptorToSecurityDescriptorW.cc=stdcall
 func.ConvertStringSidToSidA.cc=stdcall
 func.ConvertStringSidToSidW.cc=stdcall
 
-### winsvc.h ###
+### winsvc.hpp ###
 
 func.ChangeServiceConfig2A.cc=stdcall
 func.ChangeServiceConfig2W.cc=stdcall
@@ -4683,11 +4683,11 @@ func.UnlockServiceDatabase.cc=stdcall
 func.UnsubscribeServiceChangeNotifications.cc=stdcall
 func.WaitServiceState.cc=stdcall
 
-### securityappcontainer.h ###
+### securityappcontainer.hpp ###
 
 func.GetAppContainerNamedObjectPath.cc=stdcall
 
-### objbase.h ###
+### objbase.hpp ###
 
 func.BindMoniker.cc=stdcall
 func.CLSIDFromProgIDEx.cc=stdcall
@@ -4736,7 +4736,7 @@ func.StgGetIFillLockBytesOnILockBytes.cc=stdcall
 func.StgOpenAsyncDocfileOnIFillLockBytes.cc=stdcall
 func.StgOpenLayoutDocfile.cc=stdcall
 
-### compressapi.h ###
+### compressapi.hpp ###
 
 func.CloseCompressor.cc=stdcall
 func.CloseDecompressor.cc=stdcall
@@ -4751,7 +4751,7 @@ func.ResetDecompressor.cc=stdcall
 func.SetCompressorInformation.cc=stdcall
 func.SetDecompressorInformation.cc=stdcall
 
-### winhttp.h ###
+### winhttp.hpp ###
 
 func.WinHttpAddRequestHeaders.cc=stdcall
 func.WinHttpCheckPlatform.cc=stdcall
@@ -4801,7 +4801,7 @@ func.WinHttpWebSocketShutdown.cc=stdcall
 func.WinHttpWriteData.cc=stdcall
 func.WinHttpWriteProxySettings.cc=stdcall
 
-### winsock2.h ###
+### winsock2.hpp ###
 
 func.__WSAFDIsSet.cc=stdcall
 func.accept.cc=stdcall
@@ -4819,11 +4819,11 @@ func.getservbyname.cc=stdcall
 func.getservbyport.cc=stdcall
 func.getsockname.cc=stdcall
 func.getsockopt.cc=stdcall
-func.htond.cc=stdcall
-func.htonf.cc=stdcall
-func.htonl.cc=stdcall
-func.htonll.cc=stdcall
-func.htons.cc=stdcall
+func.hpptond.cc=stdcall
+func.hpptonf.cc=stdcall
+func.hpptonl.cc=stdcall
+func.hpptonll.cc=stdcall
+func.hpptons.cc=stdcall
 func.inet_addr.cc=stdcall
 func.inet_ntoa.cc=stdcall
 func.ioctlsocket.cc=stdcall
@@ -4916,7 +4916,7 @@ func.WSAStringToAddressW.cc=stdcall
 func.WSAUnhookBlockingHook.cc=stdcall
 func.WSAWaitForMultipleEvents.cc=stdcall
 
-### ws2spi.h ###
+### ws2spi.hpp ###
 
 func.NSPStartup.cc=stdcall
 func.WPUCloseEvent.cc=stdcall
@@ -4970,7 +4970,7 @@ func.WSCUpdateProvider.cc=stdcall
 func.WSCUpdateProvider32.cc=stdcall
 func.WSPStartup.cc=stdcall
 
-### bcrypt.h ###
+### bcrypt.hpp ###
 
 func.BCryptAddContextFunction.cc=stdcall
 func.BCryptCloseAlgorithmProvider.cc=stdcall
@@ -5026,7 +5026,7 @@ func.BCryptSignHash.cc=stdcall
 func.BCryptUnregisterConfigChangeNotify.cc=stdcall
 func.BCryptVerifySignature.cc=stdcall
 
-### ncrypt.h ###
+### ncrypt.hpp ###
 
 func.NCryptCreateClaim.cc=stdcall
 func.NCryptCreatePersistedKey.cc=stdcall
@@ -5056,7 +5056,7 @@ func.NCryptTranslateHandle.cc=stdcall
 func.NCryptVerifyClaim.cc=stdcall
 func.NCryptVerifySignature.cc=stdcall
 
-### nspapi.h ###
+### nspapi.hpp ###
 
 func.EnumProtocolsA.cc=stdcall
 func.EnumProtocolsW.cc=stdcall

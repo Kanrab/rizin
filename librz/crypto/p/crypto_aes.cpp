@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2015-2017 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_lib.h>
-#include <rz_crypto.h>
-#include <rz_util.h>
-#include <aes.h>
+#include <rz_lib.hpp>
+#include <rz_crypto.hpp>
+#include <rz_util.hpp>
+#include <aes.hpp>
 
 static void encryptaes(struct aes_ctx *ctx, ut8 *in, ut8 *out) {
 	switch (ctx->key_size) {

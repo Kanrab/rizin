@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 // SPDX-FileCopyrightText: 2021 Heersin <teablearcher@gmail.com>
 
-#include "luac_specs_54.h"
+#include "luac_specs_54.hpp"
 
 static void lua_load_block(RzBuffer *buffer, void *dest, size_t size, ut64 offset, ut64 data_size) {
 	if (offset + size > data_size) {

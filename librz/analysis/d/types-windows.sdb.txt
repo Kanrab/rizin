@@ -381,7 +381,7 @@ typedef.EXCEPTION_RECORD=struct _EXCEPTION_RECORD
 _EXCEPTION_REGISTRATION_RECORD=struct
 struct._EXCEPTION_REGISTRATION_RECORD=Next,Handler
 struct._EXCEPTION_REGISTRATION_RECORD.Next=struct _EXCEPTION_REGISTRATION_RECORD*,0,0
-struct._EXCEPTION_REGISTRATION_RECORD.Handler=VOID*,8,0
+struct._EXCEPTION_REGISTRATION_RECORD.hppandler=VOID*,8,0
 
 LPTOP_LEVEL_EXCEPTION_FILTER=typedef
 typedef.LPTOP_LEVEL_EXCEPTION_FILTER=void*
@@ -426,121 +426,121 @@ type.PADDR=p
 type.PADDR.size=32
 
 HANDLE=typedef
-typedef.HANDLE=void*
+typedef.hppANDLE=void*
 
 HACCEL=typedef
-typedef.HACCEL=HANDLE
+typedef.hppACCEL=HANDLE
 
 HCALL=typedef
-typedef.HCALL=DWORD
+typedef.hppCALL=DWORD
 
 HBITMAP=typedef
-typedef.HBITMAP=HANDLE
+typedef.hppBITMAP=HANDLE
 
 HBRUSH=typedef
-typedef.HBRUSH=HANDLE
+typedef.hppBRUSH=HANDLE
 
 HCOLORSPACE=typedef
-typedef.HCOLORSPACE=HANDLE
+typedef.hppCOLORSPACE=HANDLE
 
 HCONV=typedef
-typedef.HCONV=HANDLE
+typedef.hppCONV=HANDLE
 
 HCONVLIST=typedef
-typedef.HCONVLIST=HANDLE
+typedef.hppCONVLIST=HANDLE
 
 HCURSOR=typedef
-typedef.HCURSOR=HANDLE
+typedef.hppCURSOR=HANDLE
 
 HDC=typedef
-typedef.HDC=HANDLE
+typedef.hppDC=HANDLE
 
 HDDEDATA=typedef
-typedef.HDDEDATA=HANDLE
+typedef.hppDDEDATA=HANDLE
 
 HDESK=typedef
-typedef.HDESK=HANDLE
+typedef.hppDESK=HANDLE
 
 HDROP=typedef
-typedef.HDROP=HANDLE
+typedef.hppDROP=HANDLE
 
 HDWP=typedef
-typedef.HDWP=HANDLE
+typedef.hppDWP=HANDLE
 
 HENHMETAFILE=typedef
-typedef.HENHMETAFILE=HANDLE
+typedef.hppENHMETAFILE=HANDLE
 
 HFILE=typedef
-typedef.HFILE=HANDLE
+typedef.hppFILE=HANDLE
 
 HFONT=typedef
-typedef.HFONT=HANDLE
+typedef.hppFONT=HANDLE
 
 HGDIOBJ=typedef
-typedef.HGDIOBJ=HANDLE
+typedef.hppGDIOBJ=HANDLE
 
 HGLOBAL=typedef
-typedef.HGLOBAL=HANDLE
+typedef.hppGLOBAL=HANDLE
 
 HHOOK=typedef
-typedef.HHOOK=HANDLE
+typedef.hppHOOK=HANDLE
 
 HICON=typedef
-typedef.HICON=HANDLE
+typedef.hppICON=HANDLE
 
 HINSTANCE=typedef
-typedef.HINSTANCE=HANDLE
+typedef.hppINSTANCE=HANDLE
 
 HKEY=typedef
-typedef.HKEY=HANDLE
+typedef.hppKEY=HANDLE
 
 HKL=typedef
-typedef.HKL=HANDLE
+typedef.hppKL=HANDLE
 
 HLOCAL=typedef
-typedef.HLOCAL=HANDLE
+typedef.hppLOCAL=HANDLE
 
 HMENU=typedef
-typedef.HMENU=HANDLE
+typedef.hppMENU=HANDLE
 
 HMETAFILE=typedef
-typedef.HMETAFILE=HANDLE
+typedef.hppMETAFILE=HANDLE
 
 HMODULE=typedef
-typedef.HMODULE=HINSTANCE
+typedef.hppMODULE=HINSTANCE
 
 HMONITOR=typedef
-typedef.HMONITOR=HANDLE
+typedef.hppMONITOR=HANDLE
 
 HPALETTE=typedef
-typedef.HPALETTE=HANDLE
+typedef.hppPALETTE=HANDLE
 
 HPEN=typedef
-typedef.HPEN=HANDLE
+typedef.hppPEN=HANDLE
 
 HRESULT=typedef
-typedef.HRESULT=LONG
+typedef.hppRESULT=LONG
 
 HRGN=typedef
-typedef.HRGN=HANDLE
+typedef.hppRGN=HANDLE
 
 HRSRC=typedef
-typedef.HRSRC=HANDLE
+typedef.hppRSRC=HANDLE
 
 HSZ=typedef
-typedef.HSZ=HANDLE
+typedef.hppSZ=HANDLE
 
 HWINSTA=typedef
-typedef.HWINSTA=HANDLE
+typedef.hppWINSTA=HANDLE
 
 HWND=typedef
-typedef.HWND=HANDLE
+typedef.hppWND=HANDLE
 
 HMACHINE=typedef
-typedef.HMACHINE=HANDLE
+typedef.hppMACHINE=HANDLE
 
 HPRINTER=typedef
-typedef.HPRINTER=HANDLE
+typedef.hppPRINTER=HANDLE
 
 tagRGBQUAD=struct
 struct.tagRGBQUAD=rgbBlue,rgbGreen,rgbRed,rgbReserved
@@ -693,19 +693,19 @@ typedef.LPCWSTR=const WCHAR*
 type.LPCWSTR=z
 
 HCERTSTORE=typedef
-typedef.HCERTSTORE=HANDLE
+typedef.hppCERTSTORE=HANDLE
 
 IUnknown=typedef
 typedef.IUnknown=void
 
 HCRYPTMSG=typedef
-typedef.HCRYPTMSG=HANDLE
+typedef.hppCRYPTMSG=HANDLE
 
 HCERT_SERVER_OCSP_RESPONSE=type
-type.HCERT_SERVER_OCSP_RESPONSE=p
+type.hppCERT_SERVER_OCSP_RESPONSE=p
 
 HCRYPTOIDFUNCSET=type
-type.HCRYPTOIDFUNCSET=p
+type.hppCRYPTOIDFUNCSET=p
 
 ALG_ID=typedef
 typedef.ALG_ID=unsigned int
@@ -714,34 +714,34 @@ PSYSTEMTIME=typedef
 typedef.PSYSTEMTIME=SYSTEMTIME
 
 HCRYPTPROV_OR_NCRYPT_KEY_HANDLE=type
-type.HCRYPTPROV_OR_NCRYPT_KEY_HANDLE=p
+type.hppCRYPTPROV_OR_NCRYPT_KEY_HANDLE=p
 
 PDWORD=typedef
 typedef.PDWORD=LPDWORD
 
 HCRYPTOIDFUNCADDR=type
-type.HCRYPTOIDFUNCADDR=p
+type.hppCRYPTOIDFUNCADDR=p
 
 HCERTCHAINENGINE=type
-type.HCERTCHAINENGINE=p
+type.hppCERTCHAINENGINE=p
 
 HCRYPTPROV_LEGACY=type
-type.HCRYPTPROV_LEGACY=p
+type.hppCRYPTPROV_LEGACY=p
 
 HCRYPTKEY=type
-type.HCRYPTKEY=p
+type.hppCRYPTKEY=p
 
 HCRYPTDEFAULTCONTEXT=type
-type.HCRYPTDEFAULTCONTEXT=p
+type.hppCRYPTDEFAULTCONTEXT=p
 
 HCRYPTHASH=type
-type.HCRYPTHASH=p
+type.hppCRYPTHASH=p
 
 HCRYPTPROV=type
-type.HCRYPTPROV=p
+type.hppCRYPTPROV=p
 
 HCRYPTASYNC=type
-type.HCRYPTASYNC=p
+type.hppCRYPTASYNC=p
 
 PREASON_CONTEXT=type
 type.PREASON_CONTEXT=p
@@ -828,7 +828,7 @@ COMPUTER_NAME_FORMAT=typedef
 typedef.COMPUTER_NAME_FORMAT=int
 
 HEAP_INFORMATION_CLASS=typedef
-typedef.HEAP_INFORMATION_CLASS=int
+typedef.hppEAP_INFORMATION_CLASS=int
 
 LPPROCESS_HEAP_ENTRY=type
 type.LPPROCESS_HEAP_ENTRY=p
@@ -1267,7 +1267,7 @@ PGROUP_POLICY_OBJECTW=type
 type.PGROUP_POLICY_OBJECTW=p
 
 HINTERNET=type
-type.HINTERNET=p
+type.hppINTERNET=p
 
 LPURL_COMPONENTS=type
 type.LPURL_COMPONENTS=p
@@ -1371,7 +1371,7 @@ PHANDLER_ROUTINE=type
 type.PHANDLER_ROUTINE=p
 
 HPCON=type
-type.HPCON=p
+type.hppPCON=p
 
 _CHAR_INFO_Char=union
 union._CHAR_INFO_Char=UnicodeChar,AsciiChar
@@ -1432,7 +1432,7 @@ LPMONITORINFO=type
 type.LPMONITORINFO=p
 
 HRAWINPUT=typedef
-typedef.HRAWINPUT=HANDLE
+typedef.hppRAWINPUT=HANDLE
 
 LPCMENUITEMINFOW=type
 type.LPCMENUITEMINFOW=p
@@ -1571,7 +1571,7 @@ WNDPROC=type
 type.WNDPROC=p
 
 HPOWERNOTIFY=type
-type.HPOWERNOTIFY=p
+type.hppPOWERNOTIFY=p
 
 DIALOG_DPI_CHANGE_BEHAVIORS=typedef
 typedef.DIALOG_DPI_CHANGE_BEHAVIORS=int
@@ -1586,13 +1586,13 @@ DISPLAYCONFIG_TOPOLOGY_ID=typedef
 typedef.DISPLAYCONFIG_TOPOLOGY_ID=int
 
 HSYNTHETICPOINTERDEVICE=type
-type.HSYNTHETICPOINTERDEVICE=p
+type.hppSYNTHETICPOINTERDEVICE=p
 
 PICONINFOEXA=type
 type.PICONINFOEXA=p
 
 HDEVNOTIFY=type
-type.HDEVNOTIFY=p
+type.hppDEVNOTIFY=p
 
 PBSMINFO=type
 type.PBSMINFO=p
@@ -1655,7 +1655,7 @@ PROPENUMPROCEXA=type
 type.PROPENUMPROCEXA=p
 
 HTOUCHINPUT=type
-type.HTOUCHINPUT=p
+type.hppTOUCHINPUT=p
 
 DESKTOPENUMPROCW=type
 type.DESKTOPENUMPROCW=p
@@ -1676,7 +1676,7 @@ MONITORENUMPROC=type
 type.MONITORENUMPROC=p
 
 HWINEVENTHOOK=typedef
-typedef.HWINEVENTHOOK=HANDLE
+typedef.hppWINEVENTHOOK=HANDLE
 
 PMAPPING_SERVICE_INFO=type
 type.PMAPPING_SERVICE_INFO=p
@@ -1889,7 +1889,7 @@ PINT_PTR=typedef
 typedef.PINT_PTR=INT_PTR*
 
 HIMAGELIST=type
-type.HIMAGELIST=p
+type.hppIMAGELIST=p
 
 LPCTBBUTTON=type
 type.LPCTBBUTTON=p
@@ -2283,7 +2283,7 @@ DEVINSTID_W=type
 type.DEVINSTID_W=z
 
 HCMNOTIFICATION=type
-type.HCMNOTIFICATION=p
+type.hppCMNOTIFICATION=p
 
 RES_DES=typedef
 typedef.RES_DES=DWORD_PTR
@@ -2347,14 +2347,14 @@ SERVICE_STATUS_HANDLE=typedef
 typedef.SERVICE_STATUS_HANDLE=HANDLE
 
 HOOKPROC=typedef
-typedef.HOOKPROC=void *
+typedef.hppOOKPROC=void *
 
 tagDEC=struct
 struct.tagDEC=wReserved,scale,sign,Hi32,Lo64
 struct.tagDEC.wReserved=USHORT,0,0
 struct.tagDEC.scale=BYTE,2,0
 struct.tagDEC.sign=BYTE,3,0
-struct.tagDEC.Hi32=ULONG,4,0
+struct.tagDEC.hppi32=ULONG,4,0
 struct.tagDEC.Lo64=ULONGLONG,8,0
 
 DECIMAL=typedef

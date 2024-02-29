@@ -1,25 +1,25 @@
 // SPDX-FileCopyrightText: 2007-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "rz_types.h"
-#include "rz_util.h"
+#include "rz_types.hpp"
+#include "rz_util.hpp"
 #include <stdio.h>
-#include <time.h>
+#include <time.hpp>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
-#include <rz_lib.h>
+#include <rz_lib.hpp>
 #if __UNIX__
-#include <sys/time.h>
-#include <sys/mman.h>
+#include <sys/time.hpp>
+#include <sys/mman.hpp>
 #include <limits.h>
 #endif
 #if HAVE_COPYFILE
-#include <copyfile.h>
+#include <copyfile.hpp>
 #endif
 #if _MSC_VER
-#include <rz_windows.h>
-#include <process.h>
+#include <rz_windows.hpp>
+#include <process.hpp>
 #endif
 
 #define BS 1024

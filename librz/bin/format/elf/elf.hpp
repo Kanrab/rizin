@@ -3,12 +3,12 @@
 // SPDX-FileCopyrightText: 2009 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_bin.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_bin.hpp>
 
-#include "elf_specs.h"
+#include "elf_specs.hpp"
 
 #ifndef _INCLUDE_ELF_H_
 #define _INCLUDE_ELF_H_
@@ -153,7 +153,7 @@ typedef struct rz_bin_elf_reloc_t {
 	ut64 sto;
 } RzBinElfReloc;
 
-typedef struct rz_bin_elf_dt_dynamic_t RzBinElfDtDynamic; // elf_dynamic.h
+typedef struct rz_bin_elf_dt_dynamic_t RzBinElfDtDynamic; // elf_dynamic.hpp
 
 /// A single file entry in a PT_NOTE of type NT_FILE
 typedef struct Elf_(rz_bin_elf_note_file_t) {

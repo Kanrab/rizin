@@ -16,12 +16,12 @@
 // You should have received a copy of the GNU Lesser General Public
 // License along with this library.
 
-#include <rz_io.h>
-#include <rz_lib.h>
-#include <rz_socket.h>
-#include <rz_util.h>
-#include <transport.h>
-#include <winkd.h>
+#include <rz_io.hpp>
+#include <rz_lib.hpp>
+#include <rz_socket.hpp>
+#include <rz_util.hpp>
+#include <transport.hpp>
+#include <winkd.hpp>
 
 typedef struct {
 	RzIODesc *fd;

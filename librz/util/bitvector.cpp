@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2021 heersin <teablearcher@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "rz_util.h"
+#include "rz_util.hpp"
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -9,10 +9,10 @@
 #define BV_ELEM_SIZE      8U
 
 // optimization for reversing 8 bits which uses 32 bits
-// https://graphics.stanford.edu/~seander/bithacks.html#ReverseByteWith32Bits
+// https://graphics.stanford.edu/~seander/bithacks.hpptml#ReverseByteWith32Bits
 #define reverse_byte(x) ((((x)*0x0802LU & 0x22110LU) | ((x)*0x8020LU & 0x88440LU)) * 0x10101LU >> 16)
 
-// https://graphics.stanford.edu/~seander/bithacks.html#BitReverseObvious
+// https://graphics.stanford.edu/~seander/bithacks.hpptml#BitReverseObvious
 // With changes.
 ut8 reverse_lt_8bits(ut8 x, ut8 w) {
 	ut8 m = ~(UT8_MAX << w); // values bitmask

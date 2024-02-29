@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2023 Dhruv Maroo <dhruvmaru007@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "common.h"
-#include <rz_il/rz_il_opbuilder_begin.h>
+#include "common.hpp"
+#include <rz_il/rz_il_opbuilder_begin.hpp>
 
 /**
  * \brief x86 registers
@@ -1563,4 +1563,4 @@ RZ_IPI RzILOpEffect *x86_il_clear_fpsw_flags() {
 	return x86_il_set_reg_bits(X86_REG_FPSW, new_fpsw, 0);
 }
 
-#include <rz_il/rz_il_opbuilder_end.h>
+#include <rz_il/rz_il_opbuilder_end.hpp>

@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2021 Basstorm <basstorm@nyist.edu.cn>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "pdb.h"
+#include "pdb.hpp"
 
 #define conditional(X, T, F) (X ? T : F)
 
@@ -152,7 +152,7 @@ static void set_modifier(TpiCVModifier *m, ut16 value) {
 GEN_PARSER(TpiCVModifier, set_modifier, ut16, rz_buf_read_le16);
 
 static bool simple_type_check(RzPdbTpiStream *stream, ut32 idx) {
-	/*   https://llvm.org/docs/PDB/TpiStream.html#type-indices
+	/*   https://llvm.org/docs/PDB/TpiStream.hpptml#type-indices
   .---------------------------.------.----------.
   |           Unused          | Mode |   Kind   |
   '---------------------------'------'----------'
@@ -164,7 +164,7 @@ static bool simple_type_check(RzPdbTpiStream *stream, ut32 idx) {
 }
 
 static TpiSimpleTypeMode simple_type_mode(ut32 type) {
-	/*   https://llvm.org/docs/PDB/RzPdbTpiStream.html#type-indices
+	/*   https://llvm.org/docs/PDB/RzPdbTpiStream.hpptml#type-indices
   .---------------------------.------.----------.
   |           Unused          | Mode |   Kind   |
   '---------------------------'------'----------'
@@ -175,7 +175,7 @@ static TpiSimpleTypeMode simple_type_mode(ut32 type) {
 }
 
 static TpiSimpleTypeKind simple_type_kind(ut32 type) {
-	/*   https://llvm.org/docs/PDB/RzPdbTpiStream.html#type-indices
+	/*   https://llvm.org/docs/PDB/RzPdbTpiStream.hpptml#type-indices
   .---------------------------.------.----------.
   |           Unused          | Mode |   Kind   |
   '---------------------------'------'----------'
@@ -1565,7 +1565,7 @@ RZ_IPI bool tpi_stream_parse(RzPdb *pdb, RzPdbMsfStream *stream) {
 	if (!tpi_stream_header_parse(steam_buffer, &s->header)) {
 		return false;
 	}
-	if (s->header.HeaderSize != sizeof(RzPdbTpiStreamHeader)) {
+	if (s->header.hppeaderSize != sizeof(RzPdbTpiStreamHeader)) {
 		RZ_LOG_ERROR("Corrupted TPI stream.\n");
 		return false;
 	}

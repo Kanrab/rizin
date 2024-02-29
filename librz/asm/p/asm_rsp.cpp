@@ -2,15 +2,15 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 // TODO: add assembler
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_asm.h>
-#include <rz_lib.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_asm.hpp>
+#include <rz_lib.hpp>
 
-#include <stdarg.h>
+#include <stdarg.hpp>
 #include <stdio.h>
 
-#include "rsp_idec.h"
+#include "rsp_idec.hpp"
 
 static int disassemble(RzAsm *a, RzAsmOp *op, const ut8 *buf, int len) {
 	rsp_instruction rz_instr;

@@ -9,9 +9,9 @@ typedef int integer_t;
 
 // NOTE(eddyb) the following have been slightly modified to work under rizin.
 
-#include "mach0_defines.h"
+#include "mach0_defines.hpp"
 
-// HACK(eddyb) everything below is from the old mach0_specs.h, should replace
+// HACK(eddyb) everything below is from the old mach0_specs.hpp, should replace
 // with proper original definitions.
 
 #undef MACH0_

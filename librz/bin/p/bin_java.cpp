@@ -2,13 +2,13 @@
 // SPDX-FileCopyrightText: 2021-2023 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_bin.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_bin.hpp>
 
-#include "../format/java/class_bin.h"
-#include "../../asm/arch/java/const.h"
+#include "../format/java/class_bin.hpp"
+#include "../../asm/arch/java/const.hpp"
 
 #define rz_bin_file_get_java_class(bf) ((RzBinJavaClass *)bf->o->bin_obj)
 

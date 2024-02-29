@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2009-2021 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <stddef.h>
-#include <rz_cons.h>
-#include <rz_core.h>
-#include "../core_private.h"
+#include <stddef.hpp>
+#include <rz_cons.hpp>
+#include <rz_core.hpp>
+#include "../core_private.hpp"
 
 static bool listFlag(RzFlagItem *flag, void *user) {
 	rz_list_append(user, flag);

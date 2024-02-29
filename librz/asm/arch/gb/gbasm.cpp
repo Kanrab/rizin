@@ -2,9 +2,9 @@
 // SPDX-FileCopyrightText: 2012-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include <rz_types.h>
-#include <rz_asm.h>
+#include <rz_util.hpp>
+#include <rz_types.hpp>
+#include <rz_asm.hpp>
 #include <string.h>
 
 static void str_op(char *c) {

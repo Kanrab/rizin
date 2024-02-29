@@ -4,9 +4,9 @@
 #ifndef _winkd_H_
 #define _winkd_H_
 
-#include <rz_util.h>
+#include <rz_util.hpp>
 #include <stdint.h>
-#include "kd.h"
+#include "kd.hpp"
 
 typedef struct WindProc {
 	ut64 eprocess;

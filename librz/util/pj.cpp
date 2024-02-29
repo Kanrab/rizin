@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2018-2019 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include <rz_util/rz_print.h>
+#include <rz_util.hpp>
+#include <rz_util/rz_print.hpp>
 
 RZ_API void pj_raw(PJ *j, const char *msg) {
 	rz_return_if_fail(j && msg);

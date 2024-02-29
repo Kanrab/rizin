@@ -4,7 +4,7 @@
 #ifndef P9BIN_H
 #define P9BIN_H
 
-#include <rz_util.h>
+#include <rz_util.hpp>
 
 /*
  * Binary loader for Plan 9's a.out executable format

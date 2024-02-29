@@ -221,7 +221,7 @@
 # Android
 
 # Android bootimg:
-# https://android.googlesource.com/platform/system/tools/mkbootimg/+/refs/heads/master/include/bootimg/bootimg.h
+# https://android.googlesource.com/platform/system/tools/mkbootimg/+/refs/heads/master/include/bootimg/bootimg.hpp
 0	string	ANDROID!    Android boot image
 0	string	VNDRBOOT    Android vendor boot image
 

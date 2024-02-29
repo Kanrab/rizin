@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2007-2015 ret2libc <sirmy15@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include <rz_vector.h>
+#include <rz_util.hpp>
+#include <rz_vector.hpp>
 
 static void tree_dfs_node(RTreeNode *r, RTreeVisitor *vis) {
 	RzStack *s;

@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2023 billow <billow.fun@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bin_dwarf.h>
-#include "dwarf_private.h"
+#include <rz_bin_dwarf.hpp>
+#include "dwarf_private.hpp"
 
 RZ_IPI bool Range_parse(RzBinDwarfRange *self, RzBinEndianReader *reader, ut8 address_size) {
 	RET_FALSE_IF_FAIL(read_address(reader, &self->begin, address_size));

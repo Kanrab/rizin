@@ -1,7 +1,7 @@
 #ifndef RZ_AES_H
 #define RZ_AES_H
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 #ifdef __cplusplus
 extern "C" {

@@ -58,10 +58,10 @@ a "b.eq -0x100024" e0fe7f54
 a "b.eq -0x24" e0feff54
 a "b.eq 0x1000378d4" a0c61b54 0x100000000
 a "b.eq 0x324" 20190054
-a "b.hs -0x100024" e2fe7f54
-a "b.hs -0x24" e2feff54
-a "b.hs 0x1000378d4" a2c61b54 0x100000000
-a "b.hs 0x324" 22190054
+a "b.hpps -0x100024" e2fe7f54
+a "b.hpps -0x24" e2feff54
+a "b.hpps 0x1000378d4" a2c61b54 0x100000000
+a "b.hpps 0x324" 22190054
 a "bl 0x8" 02000094
 a "bl 0xfd4" f5030094
 a "blr x7" e0003fd6
@@ -450,13 +450,13 @@ d "b 0x1c0ffe0" f83f3014 0x1000000 (jmp (bv 64 0x1c0ffe0))
 d "blr x3" 60003fd6 0x0 (seq (set x30 (bv 64 0x4)) (jmp (var x3)))
 ad "b.eq 0x11234" a0910054 0x10000 (branch (var zf) (jmp (bv 64 0x11234)) nop)
 ad "b.ne 0x11234" a1910054 0x10000 (branch (! (var zf)) (jmp (bv 64 0x11234)) nop)
-ad "b.hs 0x11234" a2910054 0x10000 (branch (var cf) (jmp (bv 64 0x11234)) nop)
+ad "b.hpps 0x11234" a2910054 0x10000 (branch (var cf) (jmp (bv 64 0x11234)) nop)
 ad "b.lo 0x11234" a3910054 0x10000 (branch (! (var cf)) (jmp (bv 64 0x11234)) nop)
 ad "b.mi 0x11234" a4910054 0x10000 (branch (var nf) (jmp (bv 64 0x11234)) nop)
 ad "b.pl 0x11234" a5910054 0x10000 (branch (! (var nf)) (jmp (bv 64 0x11234)) nop)
 ad "b.vs 0x11234" a6910054 0x10000 (branch (var vf) (jmp (bv 64 0x11234)) nop)
 ad "b.vc 0x11234" a7910054 0x10000 (branch (! (var vf)) (jmp (bv 64 0x11234)) nop)
-ad "b.hi 0x11234" a8910054 0x10000 (branch (&& (var cf) (! (var zf))) (jmp (bv 64 0x11234)) nop)
+ad "b.hppi 0x11234" a8910054 0x10000 (branch (&& (var cf) (! (var zf))) (jmp (bv 64 0x11234)) nop)
 ad "b.ls 0x11234" a9910054 0x10000 (branch (|| (! (var cf)) (var zf)) (jmp (bv 64 0x11234)) nop)
 ad "b.ge 0x11234" aa910054 0x10000 (branch (! (^^ (var nf) (var vf))) (jmp (bv 64 0x11234)) nop)
 ad "b.lt 0x11234" ab910054 0x10000 (branch (^^ (var nf) (var vf)) (jmp (bv 64 0x11234)) nop)
@@ -464,7 +464,7 @@ ad "b.gt 0x11234" ac910054 0x10000 (branch (! (|| (^^ (var nf) (var vf)) (var zf
 ad "b.le 0x11234" ad910054 0x10000 (branch (|| (^^ (var nf) (var vf)) (var zf)) (jmp (bv 64 0x11234)) nop)
 ad "b.al 0x11234" ae910054 0x10000 (jmp (bv 64 0x11234))
 ad "b.nv 0x11234" af910054 0x10000 (jmp (bv 64 0x11234))
-a "b.cs 0x11234" a2910054 0x10000# same as b.hs
+a "b.cs 0x11234" a2910054 0x10000# same as b.hpps
 a "b.cc 0x11234" a3910054 0x10000# same as b.lo
 # Capstone v5 required for these:
 # d "bfc x1, 3, 5" e1137db3 0x0 (set x1 (& (var x1) (bv 64 0xf8)))

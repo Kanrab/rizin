@@ -3,31 +3,31 @@
 
 #include <math.h>
 #ifdef _WIN32
-#  include <windows.h>
-#  include "msvc_compat/windows_extra.h"
+#  include <windows.hpp>
+#  include "msvc_compat/windows_extra.hpp"
 
 #else
-#  include <sys/param.h>
-#  include <sys/mman.h>
+#  include <sys/param.hpp>
+#  include <sys/mman.hpp>
 #  if !defined(__pnacl__) && !defined(__native_client__) && !defined(__HAIKU__)
-#    include <sys/syscall.h>
+#    include <sys/syscall.hpp>
 #    if !defined(SYS_write) && defined(__NR_write)
 #      define SYS_write __NR_write
 #    endif
-#    include <sys/uio.h>
+#    include <sys/uio.hpp>
 #  endif
-#  include <pthread.h>
+#  include <pthread.hpp>
 #  ifdef JEMALLOC_OS_UNFAIR_LOCK
-#    include <os/lock.h>
+#    include <os/lock.hpp>
 #  endif
 #  ifdef JEMALLOC_GLIBC_MALLOC_HOOK
-#    include <sched.h>
+#    include <sched.hpp>
 #  endif
-#  include <errno.h>
-#  include <sys/time.h>
-#  include <time.h>
+#  include <errno.hpp>
+#  include <sys/time.hpp>
+#  include <time.hpp>
 #  ifdef JEMALLOC_HAVE_MACH_ABSOLUTE_TIME
-#    include <mach/mach_time.h>
+#    include <mach/mach_time.hpp>
 #  endif
 #endif
 #include <sys/types.h>
@@ -36,20 +36,20 @@
 #ifndef SIZE_T_MAX
 #  define SIZE_T_MAX	SIZE_MAX
 #endif
-#include <stdarg.h>
+#include <stdarg.hpp>
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
-#include <stddef.h>
+#include <stddef.hpp>
 #ifndef offsetof
 #  define offsetof(type, member)	((size_t)&(((type *)NULL)->member))
 #endif
 #include <string.h>
-#include <strings.h>
+#include <strings.hpp>
 #include <ctype.h>
 #ifdef _MSC_VER
-#  include <io.h>
+#  include <io.hpp>
 typedef intptr_t ssize_t;
 #  define PATH_MAX 1024
 #  define STDERR_FILENO 2
@@ -68,7 +68,7 @@ isblank(int c)
 }
 #endif
 #else
-#  include <unistd.h>
+#  include <unistd.hpp>
 #endif
 #include <fcntl.h>
 

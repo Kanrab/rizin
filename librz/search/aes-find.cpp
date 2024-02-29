@@ -12,8 +12,8 @@
  * This source is public domain. Feel free to use it and distribute it.
  */
 
-#include <rz_search.h>
-#include <rz_crypto/rz_aes.h>
+#include <rz_search.hpp>
+#include <rz_crypto/rz_aes.hpp>
 
 #define AES128_SEARCH_LENGTH 24
 #define AES192_SEARCH_LENGTH 32

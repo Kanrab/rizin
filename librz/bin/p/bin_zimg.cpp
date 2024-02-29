@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: 2011-2019 ninjahacker <wardjm@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_bin.h>
-#include "zimg/zimg.h"
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_bin.hpp>
+#include "zimg/zimg.hpp"
 
 static Sdb *get_sdb(RzBinFile *bf) {
 	rz_return_val_if_fail(bf && bf->o, false);

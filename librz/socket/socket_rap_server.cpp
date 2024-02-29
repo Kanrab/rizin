@@ -2,8 +2,8 @@
 // SPDX-FileCopyrightText: 2014-2019 condret <condr3t@protonmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_socket.h>
-#include <rz_util.h>
+#include <rz_socket.hpp>
+#include <rz_util.hpp>
 
 RZ_API RzSocketRapServer *rz_socket_rap_server_new(bool use_ssl, const char *port) {
 	rz_return_val_if_fail(port, NULL);

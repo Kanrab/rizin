@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2021 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "parity.h"
-#include <rz_util.h>
+#include "parity.hpp"
+#include <rz_util.hpp>
 
 bool rz_parity_init(RzParity *ctx) {
 	rz_return_val_if_fail(ctx, false);

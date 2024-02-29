@@ -3,9 +3,9 @@
 
 #include <rz_userconf.h>
 
-#include <rz_io.h>
-#include <rz_lib.h>
-#include <rz_cons.h>
+#include <rz_io.hpp>
+#include <rz_lib.hpp>
+#include <rz_cons.hpp>
 
 #if __APPLE__ && DEBUGGER
 
@@ -13,27 +13,27 @@ static int __get_pid(RzIODesc *desc);
 #define EXCEPTION_PORT 0
 
 // NOTE: mach/mach_vm is not available for iOS
-#include <mach/exception_types.h>
-#include <mach/mach_host.h>
-#include <mach/host_priv.h>
-#include <mach/mach_init.h>
-#include <mach/mach_port.h>
-#include <mach/mach_traps.h>
-#include <mach/processor_set.h>
-#include <mach/mach_error.h>
-#include <mach/task.h>
-#include <mach/task_info.h>
-#include <mach/thread_act.h>
-#include <mach/thread_info.h>
-#include <mach/vm_map.h>
-#include <mach-o/loader.h>
-#include <mach-o/nlist.h>
-#include <sys/ptrace.h>
+#include <mach/exception_types.hpp>
+#include <mach/mach_host.hpp>
+#include <mach/host_priv.hpp>
+#include <mach/mach_init.hpp>
+#include <mach/mach_port.hpp>
+#include <mach/mach_traps.hpp>
+#include <mach/processor_set.hpp>
+#include <mach/mach_error.hpp>
+#include <mach/task.hpp>
+#include <mach/task_info.hpp>
+#include <mach/thread_act.hpp>
+#include <mach/thread_info.hpp>
+#include <mach/vm_map.hpp>
+#include <mach-o/loader.hpp>
+#include <mach-o/nlist.hpp>
+#include <sys/ptrace.hpp>
 #include <sys/types.h>
 #include <sys/types.h>
-#include <sys/wait.h>
-#include <sys/wait.h>
-#include <errno.h>
+#include <sys/wait.hpp>
+#include <sys/wait.hpp>
+#include <errno.hpp>
 
 #define MACH_ERROR_STRING(ret) \
 	(mach_error_string(ret) ? mach_error_string(ret) : "(unknown)")
@@ -376,7 +376,7 @@ static RzIODesc *__open(RzIO *io, const char *file, int rw, int mode) {
 			perror("ptrace: Cannot attach");
 			eprintf("\n\nPlease ensure your rizin binary is signed and it has the right entitlements to make debugger work. ");
 			eprintf("Be aware that binaries signed by Apple cannot be debugged due to the Apple System Integrity Protection (SIP).\n");
-			eprintf("\nFor more info look at: https://book.rizin.re/debugger/apple.html#sign-rizin-binary\n\n");
+			eprintf("\nFor more info look at: https://book.rizin.re/debugger/apple.hpptml#sign-rizin-binary\n\n");
 			eprintf("ERRNO: %d (EINVAL)\n", errno);
 			break;
 		default:

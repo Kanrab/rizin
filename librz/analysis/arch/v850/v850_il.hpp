@@ -4,8 +4,8 @@
 #ifndef RIZIN_V850_IL_H
 #define RIZIN_V850_IL_H
 
-#include <rz_analysis.h>
-#include <v850_disas.h>
+#include <rz_analysis.hpp>
+#include <v850_disas.hpp>
 
 enum {
 	C_BGT = 0b1111,

@@ -4,7 +4,7 @@
 #ifndef RIZIN_TRICORE_IL_H
 #define RIZIN_TRICORE_IL_H
 
-#include <rz_il/rz_il_opbuilder_begin.h>
+#include <rz_il/rz_il_opbuilder_begin.hpp>
 
 #define BOOL_TO_BV32(b) BOOL_TO_BV(b, 32)
 #define BOOL_TO_BV8(b)  BOOL_TO_BV(b, 8)

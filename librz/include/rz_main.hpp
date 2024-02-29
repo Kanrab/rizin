@@ -5,8 +5,8 @@
 #ifndef RZ_MAIN_H
 #define RZ_MAIN_H
 
-#include <rz_types.h>
-#include <rz_getopt.h>
+#include <rz_types.hpp>
+#include <rz_getopt.hpp>
 
 #ifdef __cplusplus
 extern "C" {

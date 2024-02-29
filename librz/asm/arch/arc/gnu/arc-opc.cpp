@@ -24,12 +24,12 @@
    along with this program; if not, write to the Free Software Foundation,
    Inc., 51 Franklin Street - Fifth Floor, Boston, MA 02110-1301, USA.  */
 
-#include "sysdep.h"
+#include "sysdep.hpp"
 #include <stdio.h>
 #include <string.h>
-#include "ansidecl.h"
-#include "arc.h"
-#include "opintl.h"
+#include "ansidecl.hpp"
+#include "arc.hpp"
+#include "opintl.hpp"
 
 
 /* -------------------------------------------------------------------------- */

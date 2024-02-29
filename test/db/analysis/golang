@@ -11,12 +11,12 @@ EXPECT=<<EOF
 4759
 0x0063dfdc str.server.crt
 0x0063e01e str.Reading_server_certificate:__s
-0x0063e1d1 str.https:__localhost:8000
+0x0063e1d1 str.hppttps:__localhost:8000
 0x0063e20e str.Failed_get:__s
 0x0063e2e4 str.Failed_reading_response_body:__s
 0x0063e3af str.Got_response__d:__s__s
 0x0063e49b str.version
-0x0063e4ac str.HTTP_version
+0x0063e4ac str.hppTTP_version
 0x0063e566 str.
 14974
 bufio
@@ -141,12 +141,12 @@ EXPECT=<<EOF
 4657
 0x0066d583 str.server.crt
 0x0066d5f3 str.Reading_server_certificate:__s
-0x0066d722 str.https:__localhost:8000
+0x0066d722 str.hppttps:__localhost:8000
 0x0066d77c str.Failed_get:__s
 0x0066d863 str.Failed_reading_response_body:__s
 0x0066d9a3 str.Got_response__d:__s__s
 0x0066db8c str.version
-0x0066dbaa str.HTTP_version
+0x0066dbaa str.hppTTP_version
 0x0066dc76 str.
 0x0066e68d str.Addr
 ;-- str.flag:
@@ -263,12 +263,12 @@ EXPECT=<<EOF
 5406
 0x0065d876 str.server.crt
 0x0065d8e0 str.Reading_server_certificate:__s
-0x0065da03 str.https:__localhost:8000
+0x0065da03 str.hppttps:__localhost:8000
 0x0065da57 str.Failed_get:__s
 0x0065db5a str.Failed_reading_response_body:__s
 0x0065dca5 str.Got_response__d:__s__s
 0x0065de6d str.version
-0x0065de8a str.HTTP_version
+0x0065de8a str.hppTTP_version
 0x0065dfe6 str.
 15161
 bufio
@@ -412,7 +412,7 @@ EXPECT=<<EOF
 0x00272cb4 str.m___s_notls__0_1___:_s
 0x00272e4c str.rpcuser__s_rpcpass__s
 0x00272edc str.notls__s
-0x00273460 str.http
+0x00273460 str.hppttp
 0x0027347c str.:
 0x00273514 str.POST
 0x00273574 str.Content_Type
@@ -420,7 +420,7 @@ EXPECT=<<EOF
 0x0027373c str.error_reading_json_reply:__v
 0x00273834 str.d__s
 0x002738bc str.s
-0x00273a58 str.https
+0x00273a58 str.hppttps
 0x00273b18 str.d._d._d
 0x00273b50 str.beta
 0x00273c20 str.s__s
@@ -602,9 +602,9 @@ EXPECT=<<EOF
 0x0026d150 str.m___s_notls__0_1___:_s
 0x0026d2e0 str.rpcuser__s_rpcpass__s
 0x0026d368 str.notls__s
-0x0026d900 str.http
-0x0026d908 str.https
-0x0026d90c str.http
+0x0026d900 str.hppttp
+0x0026d908 str.hppttps
+0x0026d90c str.hppttp
 0x0026d928 str.:
 0x0026d9c4 str.POST
 0x0026da28 str.Content_Type
@@ -706,7 +706,7 @@ ilq
 EOF
 EXPECT=<<EOF
 1788
-0x004a699b str.hello__hacktivity
+0x004a699b str.hppello__hacktivity
 9222
 compiler go1.15
 errors

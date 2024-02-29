@@ -2,9 +2,9 @@
 #ifndef RZ_ANNOTATEDCODE_H
 #define RZ_ANNOTATEDCODE_H
 
-// #include <rz_core.h>
-#include <rz_types.h>
-#include <rz_vector.h>
+// #include <rz_core.hpp>
+#include <rz_types.hpp>
+#include <rz_vector.hpp>
 
 #ifdef __cplusplus
 extern "C" {

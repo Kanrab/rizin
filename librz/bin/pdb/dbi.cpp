@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2021 Basstorm <basstorm@nyist.edu.cn>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "pdb.h"
+#include "pdb.hpp"
 
 RZ_IPI void dbi_stream_free(RzPdbDbiStream *stream) {
 	if (!stream) {

@@ -4,7 +4,7 @@
 /* ansi 256 color extension for rz_cons */
 /* https://en.wikipedia.org/wiki/ANSI_color */
 
-#include <rz_cons.h>
+#include <rz_cons.hpp>
 
 int color_table[256] = { 0 };
 int value_range[6] = { 0x00, 0x5f, 0x87, 0xaf, 0xd7, 0xff };

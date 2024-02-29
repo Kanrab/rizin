@@ -4,7 +4,7 @@
 // SPDX-FileCopyrightText: 2021 Anton Kochkov <anton.kochkov@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
+#include <rz_core.hpp>
 
 RZ_IPI void rz_core_spaces_print(RzCore *core, RzSpaces *spaces, RzCmdStateOutput *state) {
 	const RzSpace *cur = rz_spaces_current(spaces);

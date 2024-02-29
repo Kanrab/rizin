@@ -4,7 +4,7 @@
 #ifndef RZ_HASH_SHA1_H
 #define RZ_HASH_SHA1_H
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 #define RZ_HASH_SHA1_DIGEST_SIZE  0x14
 #define RZ_HASH_SHA1_BLOCK_LENGTH 0x40

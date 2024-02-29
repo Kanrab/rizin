@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2014-2018 Fedor Sakharov <fedor.sakharov@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
 
-#include "v850_disas.h"
+#include "v850_disas.hpp"
 
 #define R1 GR_get(get_reg1(inst))
 #define R2 GR_get(get_reg2(inst))
@@ -43,17 +43,17 @@ static const char *instrs[] = {
 	[V850_ANDI] = "andi",
 	[V850_MULHI] = "mulhi",
 	[V850_LDB] = "ld.b",
-	[V850_LDH] = "ld.h",
+	[V850_LDH] = "ld.hpp",
 	[V850_LDW] = "ld.w",
 	[V850_STB] = "st.b",
-	[V850_STH] = "st.h",
+	[V850_STH] = "st.hpp",
 	[V850_STW] = "st.w",
 
 	[V850_LDBU] = "ld.bu",
-	[V850_LDHU] = "ld.hu",
+	[V850_LDHU] = "ld.hppu",
 	[V850_LDDW] = "ld.dw",
 	[V850_SLDBU] = "sld.bu",
-	[V850_SLDHU] = "sld.hu",
+	[V850_SLDHU] = "sld.hppu",
 	[V850_STDW] = "st.dw",
 	[V850_MULU] = "mulu",
 	[V850_MAC] = "mac",

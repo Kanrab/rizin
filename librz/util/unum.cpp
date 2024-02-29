@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2007-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <errno.h>
+#include <errno.hpp>
 #include <math.h> /* for ceill */
-#include <rz_util.h>
+#include <rz_util.hpp>
 
 static ut64 rz_num_tailff(RzNum *num, const char *hex);
 

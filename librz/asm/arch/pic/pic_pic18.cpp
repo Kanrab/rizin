@@ -2,9 +2,9 @@
 // SPDX-FileCopyrightText: 2015-2018 thestr4ng3r <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
-#include "pic_pic18.h"
+#include "pic_pic18.hpp"
 
 // PIC18CXXX instruction set
 

@@ -4,10 +4,10 @@
 #ifndef RZ_REGEX_H
 #define RZ_REGEX_H
 
-#include <rz_util/rz_strbuf.h>
-#include <rz_vector.h>
-#include <rz_types.h>
-#include <rz_list.h>
+#include <rz_util/rz_strbuf.hpp>
+#include <rz_vector.hpp>
+#include <rz_types.hpp>
+#include <rz_list.hpp>
 #include <sys/types.h>
 
 #define RZ_REGEX_SIZE size_t

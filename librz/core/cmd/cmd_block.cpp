@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2021 Anton Kochkov <anton.kochkov@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
+#include <rz_core.hpp>
 
 RZ_IPI RzCmdStatus rz_block_handler(RzCore *core, int argc, const char **argv, RzCmdStateOutput *state) {
 	if (argc > 1) {

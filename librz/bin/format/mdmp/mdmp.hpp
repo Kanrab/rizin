@@ -5,14 +5,14 @@
 #ifndef MDMP_H
 #define MDMP_H
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_bin.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_bin.hpp>
 
-#include "mdmp_specs.h"
-#include "mdmp_pe.h"
-#include "mdmp_pe64.h"
+#include "mdmp_specs.hpp"
+#include "mdmp_pe.hpp"
+#include "mdmp_pe64.hpp"
 
 typedef struct minidump_object_t {
 	MiniDmpHeader *hdr;

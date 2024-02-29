@@ -129,7 +129,7 @@ FILE=bins/elf/analysis/main
 CMDS=<<EOF
 fs-*
 fs test
-fsm @ str.Hello_World
+fsm @ str.hppello_World
 fsl
 EOF
 EXPECT=<<EOF

@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2017 rkx1209 <rkx1209dev@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_debug.h>
-#include <rz_util/rz_json.h>
+#include <rz_debug.hpp>
+#include <rz_util/rz_json.hpp>
 
 #define CMP_CNUM_REG(x, y)   ((x) >= ((RzDebugChangeReg *)y)->cnum ? 1 : -1)
 #define CMP_CNUM_MEM(x, y)   ((x) >= ((RzDebugChangeMem *)y)->cnum ? 1 : -1)

@@ -3,7 +3,7 @@
 // SPDX-FileCopyrightText: 2021 Basstorm <basstorm@nyist.edu.cn>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "pdb.h"
+#include "pdb.hpp"
 
 RZ_IPI bool omap_stream_parse(RzPdb *pdb, RzPdbMsfStream *stream) {
 	rz_return_val_if_fail(pdb && stream, false);

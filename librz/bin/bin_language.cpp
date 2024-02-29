@@ -3,7 +3,7 @@
 // SPDX-FileCopyrightText: 2018-2019 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bin.h>
+#include <rz_bin.hpp>
 
 #define LANGUAGE_WITH_BLOCKS               " with blocks"
 #define language_apply_blocks_mask(x, b)   (b ? (RZ_BIN_LANGUAGE_BLOCKS | (x)) : (x))

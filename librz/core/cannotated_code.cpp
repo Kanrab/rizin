@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: 2020 NIRMAL MANOJ C <nimmumanoj@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
-#include <rz_util/rz_annotated_code.h>
+#include <rz_util/rz_annotated_code.hpp>
 
-#include <rz_util.h>
-#include <rz_core.h>
-#include <rz_types.h>
-#include <rz_vector.h>
+#include <rz_util.hpp>
+#include <rz_core.hpp>
+#include <rz_types.hpp>
+#include <rz_vector.hpp>
 
 RZ_API void rz_core_annotated_code_print_json(RzAnnotatedCode *code) {
 	PJ *pj = pj_new();

@@ -1,4 +1,4 @@
-### psapi.h ###
+### psapi.hpp ###
 
 EmptyWorkingSet=func
 func.EmptyWorkingSet.args=1

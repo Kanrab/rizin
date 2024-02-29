@@ -3,11 +3,11 @@
 
 /* Common functions for both client and server. Not part of the libgdbr interface */
 
-#include "libgdbr.h"
-#include "gdbr_common.h"
-#include "packet.h"
-#include "utils.h"
-#include "rz_util/rz_str.h"
+#include "libgdbr.hpp"
+#include "gdbr_common.hpp"
+#include "packet.hpp"
+#include "utils.hpp"
+#include "rz_util/rz_str.hpp"
 
 int handle_qSupported(libgdbr_t *g) {
 	char *tok = NULL;

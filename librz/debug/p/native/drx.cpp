@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2014 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
-/* -------------------- drx.h ------------------- */
+/* -------------------- drx.hpp ------------------- */
 #define DRXN       8
 #define DR_STATUS  6
 #define DR_CONTROL 7

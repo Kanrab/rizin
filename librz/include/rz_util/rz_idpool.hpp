@@ -4,9 +4,9 @@
 #ifndef RZ_ID_STORAGE_H
 #define RZ_ID_STORAGE_H
 
-#include <rz_vector.h>
-#include <rz_types.h>
-#include <rz_list.h>
+#include <rz_vector.hpp>
+#include <rz_types.hpp>
+#include <rz_list.hpp>
 
 #ifdef __cplusplus
 extern "C" {

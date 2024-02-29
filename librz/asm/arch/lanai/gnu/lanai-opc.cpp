@@ -65,8 +65,8 @@
    `casx', `clrx', `clruw' synthetic instructions for v9.  */
 
 #include <stdio.h>
-#include "ansidecl.h"
-#include "opcode/lanai.h"
+#include "ansidecl.hpp"
+#include "opcode/lanai.hpp"
 
 const char *architecture_pname[] = {
 	"v0",
@@ -371,37 +371,37 @@ struct lanai_opcode lanai_opcodes[] = {
   { "uld",	RM_PAIR(0,1,1)			,"o[*1],d",  F_ALIAS,0},
   { "uld",	RM_PAIR(0,0,1)			,"o[1*],d",  F_ALIAS,0},
  
-  { "ld.h",	0xf0030c02,0x0000f3fd		,"[++1],d",  F_HALF|F_SPLS,0},
-  { "ld.h",	0xf0030402,0x0000fbfd		,"[1++],d",  F_HALF|F_SPLS,0},
-  { "ld.h",	0xf0030ffe,0x0000f001		,"[--1],d",  F_HALF|F_SPLS,0},
-  { "ld.h",	0xf00307fe,0x0000f801		,"[1--],d",  F_HALF|F_SPLS,0},
-  { "ld.h",  RRM_PAIR(0,1,0,L3_SIGNED_HALFWORD)	,"2[1],d",   F_HALF|F_RRM,0},
-  { "ld.h",  RRM_PAIR(0,1,1,L3_SIGNED_HALFWORD)	,"2[*1],d",  F_HALF|F_RRM,0},
-  { "ld.h",  RRM_PAIR(0,0,1,L3_SIGNED_HALFWORD)	,"2[1*],d",  F_HALF|F_RRM,0},
-  { "ld.h",  RRM_PAIR(0,1,0,L3_SIGNED_HALFWORD)	,"[162],d",  F_HALF|F_RRM,0},
-  { "ld.h",  RRM_PAIR(0,1,1,L3_SIGNED_HALFWORD)	,"[*162],d", F_HALF|F_RRM,0},
-  { "ld.h",  RRM_PAIR(0,0,1,L3_SIGNED_HALFWORD)	,"[1*62],d", F_HALF|F_RRM,0},
-  { "ld.h",	0xf0030800,0x007cf400		,"[i],d",    F_HALF|F_SPLS,0},
-/*{ "ld.h", SPLS_PAIR(0,L3_SIGNED_HALFWORD,1,0)	,"[i],d",    F_HALF|F_SPLS,0},*/
-  { "ld.h", SPLS_PAIR(0,L3_SIGNED_HALFWORD,1,0)	,"i[1],d",   F_HALF|F_SPLS,0},
-  { "ld.h", SPLS_PAIR(0,L3_SIGNED_HALFWORD,1,1)	,"i[*1],d",  F_HALF|F_SPLS,0},
-  { "ld.h", SPLS_PAIR(0,L3_SIGNED_HALFWORD,0,1)	,"i[1*],d",  F_HALF|F_SPLS,0},
+  { "ld.hpp",	0xf0030c02,0x0000f3fd		,"[++1],d",  F_HALF|F_SPLS,0},
+  { "ld.hpp",	0xf0030402,0x0000fbfd		,"[1++],d",  F_HALF|F_SPLS,0},
+  { "ld.hpp",	0xf0030ffe,0x0000f001		,"[--1],d",  F_HALF|F_SPLS,0},
+  { "ld.hpp",	0xf00307fe,0x0000f801		,"[1--],d",  F_HALF|F_SPLS,0},
+  { "ld.hpp",  RRM_PAIR(0,1,0,L3_SIGNED_HALFWORD)	,"2[1],d",   F_HALF|F_RRM,0},
+  { "ld.hpp",  RRM_PAIR(0,1,1,L3_SIGNED_HALFWORD)	,"2[*1],d",  F_HALF|F_RRM,0},
+  { "ld.hpp",  RRM_PAIR(0,0,1,L3_SIGNED_HALFWORD)	,"2[1*],d",  F_HALF|F_RRM,0},
+  { "ld.hpp",  RRM_PAIR(0,1,0,L3_SIGNED_HALFWORD)	,"[162],d",  F_HALF|F_RRM,0},
+  { "ld.hpp",  RRM_PAIR(0,1,1,L3_SIGNED_HALFWORD)	,"[*162],d", F_HALF|F_RRM,0},
+  { "ld.hpp",  RRM_PAIR(0,0,1,L3_SIGNED_HALFWORD)	,"[1*62],d", F_HALF|F_RRM,0},
+  { "ld.hpp",	0xf0030800,0x007cf400		,"[i],d",    F_HALF|F_SPLS,0},
+/*{ "ld.hpp", SPLS_PAIR(0,L3_SIGNED_HALFWORD,1,0)	,"[i],d",    F_HALF|F_SPLS,0},*/
+  { "ld.hpp", SPLS_PAIR(0,L3_SIGNED_HALFWORD,1,0)	,"i[1],d",   F_HALF|F_SPLS,0},
+  { "ld.hpp", SPLS_PAIR(0,L3_SIGNED_HALFWORD,1,1)	,"i[*1],d",  F_HALF|F_SPLS,0},
+  { "ld.hpp", SPLS_PAIR(0,L3_SIGNED_HALFWORD,0,1)	,"i[1*],d",  F_HALF|F_SPLS,0},
  
-  { "uld.h",	0xf0031c02,0x0000e3fd		,"[++1],d",  F_HALF|F_SPLS,0},
-  { "uld.h",	0xf0031402,0x0000ebfd		,"[1++],d",  F_HALF|F_SPLS,0},
-  { "uld.h",	0xf0031ffe,0x0000e001		,"[--1],d",  F_HALF|F_SPLS,0},
-  { "uld.h",	0xf00317fe,0x0000e801		,"[1--],d",  F_HALF|F_SPLS,0},
-  { "uld.h",RRM_PAIR(0,1,0,L3_UNSIGNED_HALFWORD),"2[1],d",   F_HALF|F_RRM,0},
-  { "uld.h",RRM_PAIR(0,1,1,L3_UNSIGNED_HALFWORD),"2[*1],d",  F_HALF|F_RRM,0},
-  { "uld.h",RRM_PAIR(0,0,1,L3_UNSIGNED_HALFWORD),"2[1*],d",  F_HALF|F_RRM,0},
-  { "uld.h",RRM_PAIR(0,1,0,L3_UNSIGNED_HALFWORD),"[162],d",  F_HALF|F_RRM,0},
-  { "uld.h",RRM_PAIR(0,1,1,L3_UNSIGNED_HALFWORD),"[*162],d", F_HALF|F_RRM,0},
-  { "uld.h",RRM_PAIR(0,0,1,L3_UNSIGNED_HALFWORD),"[1*62],d", F_HALF|F_RRM,0},
-  { "uld.h",	0xf0031800,0x007ce400		,"[i],d",    F_HALF|F_SPLS,0},
-/*{ "uld.h",SPLS_PAIR(0,L3_UNSIGNED_HALFWORD,1,0),"[i],d",   F_HALF|F_SPLS,0},*/
-  { "uld.h",SPLS_PAIR(0,L3_UNSIGNED_HALFWORD,1,0),"i[1],d",  F_HALF|F_SPLS,0},
-  { "uld.h",SPLS_PAIR(0,L3_UNSIGNED_HALFWORD,1,1),"i[*1],d", F_HALF|F_SPLS,0},
-  { "uld.h",SPLS_PAIR(0,L3_UNSIGNED_HALFWORD,0,1),"i[1*],d", F_HALF|F_SPLS,0},
+  { "uld.hpp",	0xf0031c02,0x0000e3fd		,"[++1],d",  F_HALF|F_SPLS,0},
+  { "uld.hpp",	0xf0031402,0x0000ebfd		,"[1++],d",  F_HALF|F_SPLS,0},
+  { "uld.hpp",	0xf0031ffe,0x0000e001		,"[--1],d",  F_HALF|F_SPLS,0},
+  { "uld.hpp",	0xf00317fe,0x0000e801		,"[1--],d",  F_HALF|F_SPLS,0},
+  { "uld.hpp",RRM_PAIR(0,1,0,L3_UNSIGNED_HALFWORD),"2[1],d",   F_HALF|F_RRM,0},
+  { "uld.hpp",RRM_PAIR(0,1,1,L3_UNSIGNED_HALFWORD),"2[*1],d",  F_HALF|F_RRM,0},
+  { "uld.hpp",RRM_PAIR(0,0,1,L3_UNSIGNED_HALFWORD),"2[1*],d",  F_HALF|F_RRM,0},
+  { "uld.hpp",RRM_PAIR(0,1,0,L3_UNSIGNED_HALFWORD),"[162],d",  F_HALF|F_RRM,0},
+  { "uld.hpp",RRM_PAIR(0,1,1,L3_UNSIGNED_HALFWORD),"[*162],d", F_HALF|F_RRM,0},
+  { "uld.hpp",RRM_PAIR(0,0,1,L3_UNSIGNED_HALFWORD),"[1*62],d", F_HALF|F_RRM,0},
+  { "uld.hpp",	0xf0031800,0x007ce400		,"[i],d",    F_HALF|F_SPLS,0},
+/*{ "uld.hpp",SPLS_PAIR(0,L3_UNSIGNED_HALFWORD,1,0),"[i],d",   F_HALF|F_SPLS,0},*/
+  { "uld.hpp",SPLS_PAIR(0,L3_UNSIGNED_HALFWORD,1,0),"i[1],d",  F_HALF|F_SPLS,0},
+  { "uld.hpp",SPLS_PAIR(0,L3_UNSIGNED_HALFWORD,1,1),"i[*1],d", F_HALF|F_SPLS,0},
+  { "uld.hpp",SPLS_PAIR(0,L3_UNSIGNED_HALFWORD,0,1),"i[1*],d", F_HALF|F_SPLS,0},
  
   { "ld.b",	0xf0034c01,0x0000b3fe		,"[++1],d",  F_BYTE|F_SPLS,0},
   { "ld.b",	0xf0034401,0x0000bbfe		,"[1++],d",  F_BYTE|F_SPLS,0},
@@ -492,21 +492,21 @@ struct lanai_opcode lanai_opcodes[] = {
   { "st",	RM_PAIR(1,1,1)			,"d,o[*1]",  F_RM,0},
   { "st",	RM_PAIR(1,0,1)			,"d,o[1*]",  F_RM,0},
  
-  { "st.h",	0xf0032c02,0x0000d3fd		,"d,[++1]",  F_HALF|F_SPLS,0},
-  { "st.h",	0xf0032402,0x0000dbfd		,"d,[1++]",  F_HALF|F_SPLS,0},
-  { "st.h",	0xf0032ffe,0x0000d001		,"d,[--1]",  F_HALF|F_SPLS,0},
-  { "st.h",	0xf00327fe,0x0000d801		,"d,[1--]",  F_HALF|F_SPLS,0},
-  { "st.h",  RRM_PAIR(1,1,0,L3_SIGNED_HALFWORD)	,"d,2[1]",   F_HALF|F_RRM,0},
-  { "st.h",  RRM_PAIR(1,1,1,L3_SIGNED_HALFWORD)	,"d,2[*1]",  F_HALF|F_RRM,0},
-  { "st.h",  RRM_PAIR(1,0,1,L3_SIGNED_HALFWORD)	,"d,2[1*]",  F_HALF|F_RRM,0},
-  { "st.h",  RRM_PAIR(1,1,0,L3_SIGNED_HALFWORD)	,"d,[162]",  F_HALF|F_RRM,0},
-  { "st.h",  RRM_PAIR(1,1,1,L3_SIGNED_HALFWORD)	,"d,[*162]", F_HALF|F_RRM,0},
-  { "st.h",  RRM_PAIR(1,0,1,L3_SIGNED_HALFWORD)	,"d,[1*62]", F_HALF|F_RRM,0},
-  { "st.h",	0xf0032800,0x007cd400		,"d,[i]",    F_HALF|F_SPLS,0},
-/*{ "st.h", SPLS_PAIR(1,L3_SIGNED_HALFWORD,1,0)	,"d,[i]",    F_HALF|F_SPLS,0},*/
-  { "st.h", SPLS_PAIR(1,L3_SIGNED_HALFWORD,1,0)	,"d,i[1]",   F_HALF|F_SPLS,0},
-  { "st.h", SPLS_PAIR(1,L3_SIGNED_HALFWORD,1,1)	,"d,i[*1]",  F_HALF|F_SPLS,0},
-  { "st.h", SPLS_PAIR(1,L3_SIGNED_HALFWORD,0,1)	,"d,i[1*]",  F_HALF|F_SPLS,0},
+  { "st.hpp",	0xf0032c02,0x0000d3fd		,"d,[++1]",  F_HALF|F_SPLS,0},
+  { "st.hpp",	0xf0032402,0x0000dbfd		,"d,[1++]",  F_HALF|F_SPLS,0},
+  { "st.hpp",	0xf0032ffe,0x0000d001		,"d,[--1]",  F_HALF|F_SPLS,0},
+  { "st.hpp",	0xf00327fe,0x0000d801		,"d,[1--]",  F_HALF|F_SPLS,0},
+  { "st.hpp",  RRM_PAIR(1,1,0,L3_SIGNED_HALFWORD)	,"d,2[1]",   F_HALF|F_RRM,0},
+  { "st.hpp",  RRM_PAIR(1,1,1,L3_SIGNED_HALFWORD)	,"d,2[*1]",  F_HALF|F_RRM,0},
+  { "st.hpp",  RRM_PAIR(1,0,1,L3_SIGNED_HALFWORD)	,"d,2[1*]",  F_HALF|F_RRM,0},
+  { "st.hpp",  RRM_PAIR(1,1,0,L3_SIGNED_HALFWORD)	,"d,[162]",  F_HALF|F_RRM,0},
+  { "st.hpp",  RRM_PAIR(1,1,1,L3_SIGNED_HALFWORD)	,"d,[*162]", F_HALF|F_RRM,0},
+  { "st.hpp",  RRM_PAIR(1,0,1,L3_SIGNED_HALFWORD)	,"d,[1*62]", F_HALF|F_RRM,0},
+  { "st.hpp",	0xf0032800,0x007cd400		,"d,[i]",    F_HALF|F_SPLS,0},
+/*{ "st.hpp", SPLS_PAIR(1,L3_SIGNED_HALFWORD,1,0)	,"d,[i]",    F_HALF|F_SPLS,0},*/
+  { "st.hpp", SPLS_PAIR(1,L3_SIGNED_HALFWORD,1,0)	,"d,i[1]",   F_HALF|F_SPLS,0},
+  { "st.hpp", SPLS_PAIR(1,L3_SIGNED_HALFWORD,1,1)	,"d,i[*1]",  F_HALF|F_SPLS,0},
+  { "st.hpp", SPLS_PAIR(1,L3_SIGNED_HALFWORD,0,1)	,"d,i[1*]",  F_HALF|F_SPLS,0},
  
   { "st.b",	0xf0036c01,0x000093fe		,"d,[++1]",  F_BYTE|F_SPLS,0},
   { "st.b",	0xf0036401,0x00009bfe		,"d,[1++]",  F_BYTE|F_SPLS,0},

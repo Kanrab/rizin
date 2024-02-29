@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2021 Basstorm <basstorm@nyist.edu.cn>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
-#include <rz_list.h>
+#include <rz_analysis.hpp>
+#include <rz_list.hpp>
 
 /**
  * \brief Create a new instance of global variable

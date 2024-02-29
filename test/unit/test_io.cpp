@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2017 condret <condr3t@protonmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_io.h>
-#include "minunit.h"
+#include <rz_io.hpp>
+#include "minunit.hpp"
 
 bool test_rz_io_cache(void) {
 	RzIO *io = rz_io_new();

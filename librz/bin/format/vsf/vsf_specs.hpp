@@ -3,10 +3,10 @@
 #ifndef VSF_SPECS_H
 #define VSF_SPECS_H
 
-#include <rz_types_base.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_bin.h>
+#include <rz_types_base.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_bin.hpp>
 
 /* Snapshot format for VICE: http://vice-emu.sourceforge.net/ */
 

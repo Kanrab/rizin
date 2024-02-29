@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2021 Florian Märkl <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_il/rz_il_reg.h>
-#include <rz_il/rz_il_vm.h>
-#include <rz_util.h>
+#include <rz_il/rz_il_reg.hpp>
+#include <rz_il/rz_il_vm.hpp>
+#include <rz_util.hpp>
 
 static int reg_offset_cmp(const void *value, const void *list_data, void *user) {
 	return ((RzRegItem *)value)->offset - ((RzRegItem *)list_data)->offset;

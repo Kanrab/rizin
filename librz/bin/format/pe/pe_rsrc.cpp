@@ -3,8 +3,8 @@
 // SPDX-FileCopyrightText: 2008-2019 inisider <inisider@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "pe.h"
-#include <rz_util/ht_uu.h>
+#include "pe.hpp"
+#include <rz_util/ht_uu.hpp>
 
 static void _free_resource(rz_pe_resource *rs) {
 	if (rs) {

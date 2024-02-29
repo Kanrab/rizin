@@ -2,9 +2,9 @@
 // SPDX-FileCopyrightText: 2022 wingdeans <wingdeans@protonmail.com>
 // SPDX-License-Identifier: Apache-2.0
 
-#include "pe.h"
-#include "dotnet.h"
-#include <rz_util/rz_alloc.h>
+#include "pe.hpp"
+#include "dotnet.hpp"
+#include <rz_util/rz_alloc.hpp>
 
 #define MAX_METADATA_STRING_LENGTH 256
 

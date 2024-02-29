@@ -2,10 +2,10 @@
 // SPDX-FileCopyrightText: 2021 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util/rz_path.h>
-#include <rz_core.h>
-#include <rz_cmd.h>
-#include <rz_cons.h>
+#include <rz_util/rz_path.hpp>
+#include <rz_core.hpp>
+#include <rz_cmd.hpp>
+#include <rz_cons.hpp>
 
 RZ_IPI RzCmdStatus rz_history_list_or_exec_handler(RzCore *core, int argc, const char **argv) {
 	if (argc == 1) {

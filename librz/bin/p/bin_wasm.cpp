@@ -4,13 +4,13 @@
 
 // http://webassembly.org/docs/binary-encoding/#module-structure
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_bin.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_bin.hpp>
 
-#include "wasm/wasm.h"
-#include "../format/wasm/wasm.h"
+#include "wasm/wasm.hpp"
+#include "../format/wasm/wasm.hpp"
 
 static bool check_buffer(RzBuffer *rbuf) {
 	ut8 buf[4] = { 0 };

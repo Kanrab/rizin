@@ -31,7 +31,7 @@
   IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-#include "zip_source_file_win32.h"
+#include "zip_source_file_win32.hpp"
 
 static char *ansi_allocate_tempname(const char *name, size_t extra_chars, size_t *lengthp);
 static void ansi_make_tempname(char *buf, size_t len, const char *name, zip_uint32_t i);

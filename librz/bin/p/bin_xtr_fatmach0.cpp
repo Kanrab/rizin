@@ -2,12 +2,12 @@
 // SPDX-FileCopyrightText: 2009-2019 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_bin.h>
-#include "mach0/fatmach0.h"
-#include "mach0/mach0.h"
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_bin.hpp>
+#include "mach0/fatmach0.hpp"
+#include "mach0/mach0.hpp"
 
 static RzBinXtrData *extract(RzBin *bin, int idx);
 

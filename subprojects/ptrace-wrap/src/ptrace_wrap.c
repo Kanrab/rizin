@@ -1,13 +1,13 @@
 // SPDX-FileCopyrightText: 2018-2021 thestr4ng3r <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <ptrace_wrap.h>
+#include <ptrace_wrap.hpp>
 
 #include <stdio.h>
-#include <unistd.h>
-#include <errno.h>
-#include <signal.h>
-#include <rz_util/rz_sys.h>
+#include <unistd.hpp>
+#include <errno.hpp>
+#include <signal.hpp>
+#include <rz_util/rz_sys.hpp>
 
 static void *th_run(ptrace_wrap_instance *inst);
 

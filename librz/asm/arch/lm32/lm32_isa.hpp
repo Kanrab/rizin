@@ -5,7 +5,7 @@
 #ifndef INCLUDE_LM32_ISA_H
 #define INCLUDE_LM32_ISA_H
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 #define RzAsmLm32RegNameLength 8
 #define RzAsmLm32OpNameLength  12

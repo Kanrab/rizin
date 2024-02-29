@@ -4,7 +4,7 @@
 #ifndef RZ_BASEFIND_H
 #define RZ_BASEFIND_H
 
-#include <rz_core.h>
+#include <rz_core.hpp>
 
 #ifdef __cplusplus
 extern "C" {

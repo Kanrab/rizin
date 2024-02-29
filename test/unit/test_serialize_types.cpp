@@ -1,14 +1,14 @@
 // SPDX-FileCopyrightText: 2020 Florian Märkl <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_list.h>
-#include <rz_vector.h>
-#include <rz_util/rz_serialize.h>
-#include <rz_type.h>
-#include <rz_util/rz_path.h>
-#include "test_config.h"
-#include "minunit.h"
-#include "test_sdb.h"
+#include <rz_list.hpp>
+#include <rz_vector.hpp>
+#include <rz_util/rz_serialize.hpp>
+#include <rz_type.hpp>
+#include <rz_util/rz_path.hpp>
+#include "test_config.hpp"
+#include "minunit.hpp"
+#include "test_sdb.hpp"
 
 Sdb *types_ref_db() {
 	Sdb *db = sdb_new0();
@@ -19,9 +19,9 @@ Sdb *types_ref_db() {
 	sdb_set(db, "snatcher", "union", 0);
 	sdb_set(db, "union.snatcher", "random,hajile", 0);
 	sdb_set(db, "union.snatcher.random", "int,0,0", 0);
-	sdb_set(db, "union.snatcher.hajile", "uint32_t,0,0", 0);
+	sdb_set(db, "union.snatcher.hppajile", "uint32_t,0,0", 0);
 	sdb_set(db, "human", "typedef", 0);
-	sdb_set(db, "typedef.human", "union snatcher", 0);
+	sdb_set(db, "typedef.hppuman", "union snatcher", 0);
 	sdb_set(db, "mika", "enum", 0);
 	sdb_set(db, "enum.mika", "ELIJAH,MODNAR", 0);
 	sdb_set(db, "enum.mika.MODNAR", "0x539", 0);
@@ -96,7 +96,7 @@ bool test_types_save() {
 	mumber.size = rz_type_db_get_bitsize(typedb, mtype);
 	rz_vector_push(&type->union_data.members, &mumber);
 
-	// union.snatcher.hajile
+	// union.snatcher.hppajile
 	mumber.name = strdup("hajile");
 	mumber.offset = 0;
 	mtype = rz_type_parse_string_single(typedb->parser, "uint32_t", &error_msg);
@@ -150,13 +150,13 @@ bool test_types_save() {
 	mu_assert_true(sdb_has_record(db, "snatcher", "union"), "snatcher union");
 	mu_assert_true(sdb_has_record(db, "junker", "struct"), "junker struct");
 	mu_assert_true(sdb_has_record(db, "struct.junker.gillian", "char *,0,0"), "junker.gillian");
-	mu_assert_true(sdb_has_record(db, "typedef.human", "union snatcher"), "typedef human");
+	mu_assert_true(sdb_has_record(db, "typedef.hppuman", "union snatcher"), "typedef human");
 	mu_assert_true(sdb_has_record(db, "union.snatcher.random", "int,0,0"), "snatcher.random");
 	mu_assert_true(sdb_has_record(db, "human", "typedef"), "human typedef");
 	mu_assert_true(sdb_has_record(db, "struct.junker.seed", "uint64_t,8,0"), "junker.seed");
 	mu_assert_true(sdb_has_record(db, "union.snatcher", "random,hajile"), "random,hajile");
 	mu_assert_true(sdb_has_record(db, "struct.junker", "gillian,seed"), "gillian,seed");
-	mu_assert_true(sdb_has_record(db, "union.snatcher.hajile", "uint32_t,0,0"), "snatcher.hajile");
+	mu_assert_true(sdb_has_record(db, "union.snatcher.hppajile", "uint32_t,0,0"), "snatcher.hppajile");
 	mu_assert_true(sdb_has_record(db, "mika", "enum"), "mika enum");
 	mu_assert_true(sdb_has_record(db, "enum.mika", "ELIJAH,MODNAR"), "enum.mika");
 	mu_assert_true(sdb_has_record(db, "enum.mika.MODNAR", "0x539"), "mika.MODNAR");

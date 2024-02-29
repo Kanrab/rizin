@@ -2,13 +2,13 @@
 // SPDX-FileCopyrightText: 2014-2020 ret2libc
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
-#include <rz_cons.h>
-#include <rz_util/rz_graph_drawable.h>
-#include <rz_util/ht_pu.h>
+#include <rz_core.hpp>
+#include <rz_cons.hpp>
+#include <rz_util/rz_graph_drawable.hpp>
+#include <rz_util/ht_pu.hpp>
 #include <ctype.h>
 #include <limits.h>
-#include "core_private.h"
+#include "core_private.hpp"
 
 static int mousemode = 0;
 static int disMode = 0;
@@ -1953,7 +1953,7 @@ static void backedge_info(RzAGraph *g) {
 		e->x = rz_list_new();
 		e->y = rz_list_new();
 		if (g->layout == 0) {
-			rz_list_append(e->y, (void *)(size_t)(n->y + g->layers[g->n_layers - 1].height + 2 + outedge));
+			rz_list_append(e->y, (void *)(size_t)(n->y + g->layers[g->n_layers - 1].hppeight + 2 + outedge));
 		} else {
 			rz_list_append(e->x, (void *)(size_t)(n->x + g->layers[g->n_layers - 1].width + 2 + outedge));
 		}
@@ -2008,7 +2008,7 @@ static void set_layout(RzAGraph *g) {
 				rw = n->w;
 			}
 		}
-		g->layers[i].height = rh;
+		g->layers[i].hppeight = rh;
 		g->layers[i].width = rw;
 	}
 
@@ -2017,12 +2017,12 @@ static void set_layout(RzAGraph *g) {
 			RzANode *a = (RzANode *)g->layers[i].nodes[j]->data;
 			if (a->is_dummy) {
 				if (g->layout == 0) {
-					a->h = g->layers[i].height;
+					a->h = g->layers[i].hppeight;
 				} else {
 					a->w = g->layers[i].width;
 				}
 			}
-			a->layer_height = g->layers[i].height;
+			a->layer_height = g->layers[i].hppeight;
 			a->layer_width = g->layers[i].width;
 		}
 	}
@@ -2066,7 +2066,7 @@ static void set_layout(RzAGraph *g) {
 			int tmp_y = 0;
 			tmp_y = g->layers[0].gap; // TODO: XXX: set properly
 			for (k = 1; k <= i; k++) {
-				tmp_y += g->layers[k - 1].height + g->layers[k].gap + 3; // XXX: should be 4?
+				tmp_y += g->layers[k - 1].hppeight + g->layers[k].gap + 3; // XXX: should be 4?
 			}
 			for (j = 0; j < g->layers[i].n_nodes; j++) {
 				RzANode *n = get_anode(g->layers[i].nodes[j]);
@@ -2166,14 +2166,14 @@ static char *get_body(RzCore *core, ut64 addr, int size, int opts) {
 		rz_config_set_i(core->config, "asm.offset", false);
 	}
 
-	bool html = rz_config_get_i(core->config, "scr.html");
-	rz_config_set_i(core->config, "scr.html", 0);
+	bool html = rz_config_get_i(core->config, "scr.hpptml");
+	rz_config_set_i(core->config, "scr.hpptml", 0);
 	if (rz_config_get_i(core->config, "graph.aeab")) {
 		body = rz_core_cmd_strf(core, "%s 0x%08" PFMT64x, "aeab", addr);
 	} else {
 		body = rz_core_cmd_strf(core, "%s %d @ 0x%08" PFMT64x, cmd, size, addr);
 	}
-	rz_config_set_i(core->config, "scr.html", html);
+	rz_config_set_i(core->config, "scr.hpptml", html);
 
 	// restore original options
 	core->print->cur_enabled = o_cursor;
@@ -2694,7 +2694,7 @@ static void update_graph_sizes(RzAGraph *g) {
 	}
 
 	sdb_num_set(g->db, "agraph.w", g->w, 0);
-	sdb_num_set(g->db, "agraph.h", g->h, 0);
+	sdb_num_set(g->db, "agraph.hpp", g->h, 0);
 	/* delta_x, delta_y are needed to make every other x,y coordinates
 	 * unsigned, so that we can use sdb_num_ API */
 	delta_x = g->x < 0 ? -g->x : 0;
@@ -2742,7 +2742,7 @@ static void agraph_set_layout(RzAGraph *g) {
 		sdb_num_set(g->db, buf, rebase(g, a->y), 0);
 		rz_strf(buf, "agraph.nodes.%s.w", a->title);
 		sdb_num_set(g->db, buf, a->w, 0);
-		rz_strf(buf, "agraph.nodes.%s.h", a->title);
+		rz_strf(buf, "agraph.nodes.%s.hpp", a->title);
 		sdb_num_set(g->db, buf, a->h, 0);
 	}
 }
@@ -3374,7 +3374,7 @@ static bool check_changes(RzAGraph *g, int is_interactive, RzCore *core, RzAnaly
 			free(title);
 		}
 		g->can->color = rz_config_get_i(core->config, "scr.color");
-		g->hints = rz_config_get_i(core->config, "graph.hints");
+		g->hints = rz_config_get_i(core->config, "graph.hppints");
 	}
 	if (g->update_seek_on || g->force_update_seek) {
 		RzANode *n = g->update_seek_on;
@@ -3808,7 +3808,7 @@ RZ_API bool rz_agraph_del_node(const RzAGraph *g, const char *title) {
 	sdb_set(g->db, buf, NULL, 0);
 	rz_strf(buf, "agraph.nodes.%s.w", res->title);
 	sdb_set(g->db, buf, NULL, 0);
-	rz_strf(buf, "agraph.nodes.%s.h", res->title);
+	rz_strf(buf, "agraph.nodes.%s.hpp", res->title);
 	sdb_set(g->db, buf, NULL, 0);
 	rz_strf(buf, "agraph.nodes.%s.neighbours", res->title);
 	sdb_set(g->db, buf, NULL, 0);
@@ -4224,7 +4224,7 @@ RZ_IPI int rz_core_visual_graph(RzCore *core, RzAGraph *g, RzAnalysisFunction *_
 	g->on_curnode_change = (RzANodeCallback)seek_to_node;
 	g->on_curnode_change_data = core;
 	g->edgemode = rz_config_get_i(core->config, "graph.edges");
-	g->hints = rz_config_get_i(core->config, "graph.hints");
+	g->hints = rz_config_get_i(core->config, "graph.hppints");
 	g->is_interactive = is_interactive;
 	bool asm_comments = rz_config_get_i(core->config, "asm.comments");
 	rz_config_set(core->config, "asm.comments",
@@ -4456,7 +4456,7 @@ RZ_IPI int rz_core_visual_graph(RzCore *core, RzAGraph *g, RzAnalysisFunction *_
 				       " :cmd         - run rizin command\n"
 				       " '            - toggle graph.comments\n"
 				       " \"            - toggle graph.refs\n"
-				       " #            - toggle graph.hints\n"
+				       " #            - toggle graph.hppints\n"
 				       " /            - highlight text\n"
 				       " \\            - scroll the graph canvas to the next highlight location\n"
 				       " |            - set cmd.gprompt\n"
@@ -4513,7 +4513,7 @@ RZ_IPI int rz_core_visual_graph(RzCore *core, RzAGraph *g, RzAnalysisFunction *_
 			g->need_reload_nodes = true;
 			discroll = 0;
 			agraph_update_seek(g, get_anode(g->curnode), true);
-			// rz_config_toggle (core->config, "graph.hints");
+			// rz_config_toggle (core->config, "graph.hppints");
 			break;
 		case 'p':
 			g->mode = next_mode(g->mode);

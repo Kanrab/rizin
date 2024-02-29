@@ -6,11 +6,11 @@
 #ifndef RZ_IO_H
 #define RZ_IO_H
 
-#include "rz_list.h"
-#include <rz_util.h>
-#include <rz_bind.h>
-#include "rz_vector.h"
-#include "rz_skyline.h"
+#include "rz_list.hpp"
+#include <rz_util.hpp>
+#include <rz_bind.hpp>
+#include "rz_vector.hpp"
+#include "rz_skyline.hpp"
 
 #define RZ_IO_SEEK_SET 0
 #define RZ_IO_SEEK_CUR 1
@@ -25,7 +25,7 @@
 #include <sys/types.h>
 #else
 #if DEBUGGER && HAVE_PTRACE
-#include <sys/ptrace.h>
+#include <sys/ptrace.hpp>
 #endif
 #endif
 

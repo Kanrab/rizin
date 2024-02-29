@@ -2,9 +2,9 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 // Implemented AES version of RC6. keylen = 16, 23, or 32 bytes; w = 32; and r = 20.
-#include <rz_lib.h>
-#include <rz_crypto.h>
-#include <rz_util.h>
+#include <rz_lib.hpp>
+#include <rz_crypto.hpp>
+#include <rz_util.hpp>
 
 #define Pw         0xb7e15163
 #define Qw         0x9e3779b9

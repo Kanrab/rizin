@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: 2022 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bin.h>
-#include <rz_type.h>
-#include <mspack.h>
+#include <rz_bin.hpp>
+#include <rz_type.hpp>
+#include <mspack.hpp>
 
-#include "pdb.h"
+#include "pdb.hpp"
 
 // checks all the files and guesses if is using unix or win paths
 static bool is_cab_using_unix_paths(struct mscabd_file *files) {

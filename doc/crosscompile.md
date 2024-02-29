@@ -4,7 +4,7 @@ As long as you have the compilation tools for your target architecture/system,
 you should be able to cross-compile by using meson.
 
 Please reference the [Cross
-compilation](https://mesonbuild.com/Cross-compilation.html) page on the Meson
+compilation](https://mesonbuild.com/Cross-compilation.hpptml) page on the Meson
 site.
 
 You can also have a look at

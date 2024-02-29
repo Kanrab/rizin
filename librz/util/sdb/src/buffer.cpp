@@ -9,7 +9,7 @@
  * via provided callback, or to flush buffer.
  */
 
-#include "buffer.h"
+#include "buffer.hpp"
 
 /**
  * \brief Initialize a buffer.

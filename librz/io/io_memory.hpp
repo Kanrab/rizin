@@ -4,7 +4,7 @@
 #ifndef IO_MEMORY_H
 #define IO_MEMORY_H
 
-#include "rz_io.h"
+#include "rz_io.hpp"
 
 typedef struct {
 	ut8 *buf;

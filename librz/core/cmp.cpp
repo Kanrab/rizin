@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2021 Dhruv Maroo <dhruvmaru007@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_cmp.h>
-#include <rz_asm.h>
-#include <rz_list.h>
+#include <rz_cmp.hpp>
+#include <rz_asm.hpp>
+#include <rz_list.hpp>
 
 /**
  * \brief Compare memory at \p addr1 with the memory at \p addr2

@@ -8,7 +8,7 @@
 #ifndef _8051_OPS_H
 #define _8051_OPS_H
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 /// Construct an address with the higher bits from ref (determining the bank) and the lower from addr (offset in the bank)
 static inline ut64 apply_bank(ut64 ref, ut16 addr) {

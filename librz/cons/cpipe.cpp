@@ -2,11 +2,11 @@
 // SPDX-FileCopyrightText: 2024 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_cons.h>
+#include <rz_cons.hpp>
 #include <limits.h>
 
 #if __WINDOWS__
-#include <io.h>
+#include <io.hpp>
 
 /**
  * \brief Duplicates a file descriptor and returns the new one.

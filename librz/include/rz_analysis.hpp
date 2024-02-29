@@ -12,21 +12,21 @@
 
 #define RZ_ANALYSIS_OP_INVALID_STACKPTR 0
 
-#include <rz_types.h>
-#include <rz_io.h>
-#include <rz_reg.h>
-#include <rz_list.h>
-#include <rz_search.h>
-#include <rz_util.h>
-#include <rz_bind.h>
-#include <rz_syscall.h>
-#include <rz_util/set.h>
-#include <rz_flag.h>
-#include <rz_bin.h>
-#include <rz_type.h>
-#include <rz_il.h>
-#include <rz_platform.h>
-#include <rz_cmd.h>
+#include <rz_types.hpp>
+#include <rz_io.hpp>
+#include <rz_reg.hpp>
+#include <rz_list.hpp>
+#include <rz_search.hpp>
+#include <rz_util.hpp>
+#include <rz_bind.hpp>
+#include <rz_syscall.hpp>
+#include <rz_util/set.hpp>
+#include <rz_flag.hpp>
+#include <rz_bin.hpp>
+#include <rz_type.hpp>
+#include <rz_il.hpp>
+#include <rz_platform.hpp>
+#include <rz_cmd.hpp>
 
 #define esilprintf(op, fmt, ...) rz_strbuf_setf(&op->esil, fmt, ##__VA_ARGS__)
 
@@ -99,7 +99,7 @@ typedef enum rz_analysis_arch_info_type_t {
 	RZ_ANALYSIS_ARCHINFO_ENUM_SIZE,
 } RzAnalysisInfoType;
 
-/* copypaste from rz_asm.h */
+/* copypaste from rz_asm.hpp */
 
 #define RZ_ANALYSIS_GET_OFFSET(x, y, z) \
 	(x && x->binb.bin && x->binb.get_offset) ? x->binb.get_offset(x->binb.bin, y, z) : -1
@@ -2043,7 +2043,7 @@ RZ_API RZ_OWN RzAnalysisData *rz_analysis_data(RZ_NONNULL RzAnalysis *analysis, 
 RZ_API RzAnalysisDataKind rz_analysis_data_kind(RZ_NONNULL RzAnalysis *a, ut64 addr, RZ_NONNULL const ut8 *buf, size_t len);
 RZ_API RzAnalysisData *rz_analysis_data_new(ut64 addr, RzAnalysisDataInfoType type, ut64 n, const ut8 *buf, int len);
 RZ_API void rz_analysis_data_free(RZ_NULLABLE RzAnalysisData *d);
-#include <rz_cons.h>
+#include <rz_cons.hpp>
 RZ_API char *rz_analysis_data_to_string(RzAnalysisData *d, RzConsPrintablePalette *pal);
 
 /* meta

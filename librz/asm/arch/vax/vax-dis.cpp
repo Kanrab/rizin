@@ -23,13 +23,13 @@
    Foundation, Inc., 51 Franklin Street - Fifth Floor, Boston,
    MA 02110-1301, USA.  */
 
-#include "sysdep.h"
-#include <setjmp.h>
+#include "sysdep.hpp"
+#include <setjmp.hpp>
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "vax.h"
-#include "disas-asm.h"
+#include "vax.hpp"
+#include "disas-asm.hpp"
 
 static char *reg_names[] = {
 	"r0", "r1", "r2", "r3", "r4", "r5", "r6", "r7",

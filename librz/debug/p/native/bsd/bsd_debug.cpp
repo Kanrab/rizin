@@ -1,30 +1,30 @@
 // SPDX-FileCopyrightText: 2009-2019 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <signal.h>
-#include <errno.h>
-#include <sys/param.h>
+#include <signal.hpp>
+#include <errno.hpp>
+#include <sys/param.hpp>
 #include <sys/types.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <sys/sysctl.h>
+#include <sys/socket.hpp>
+#include <netinet/in.hpp>
+#include <sys/sysctl.hpp>
 #include <sys/types.h>
-#include <sys/wait.h>
-#include <sys/un.h>
-#include <arpa/inet.h>
-#include <kvm.h>
+#include <sys/wait.hpp>
+#include <sys/un.hpp>
+#include <arpa/inet.hpp>
+#include <kvm.hpp>
 #include <limits.h>
-#include <sys/ptrace.h>
+#include <sys/ptrace.hpp>
 #include <sys/types.h>
-#include <sys/wait.h>
-#include <kvm.h>
+#include <sys/wait.hpp>
+#include <kvm.hpp>
 #include <limits.h>
-#include "bsd_debug.h"
+#include "bsd_debug.hpp"
 #if __KFBSD__ || __DragonFly__
-#include <sys/user.h>
-#include <libutil.h>
+#include <sys/user.hpp>
+#include <libutil.hpp>
 #elif __OpenBSD__ || __NetBSD__
-#include <sys/proc.h>
+#include <sys/proc.hpp>
 #endif
 
 #if __KFBSD__

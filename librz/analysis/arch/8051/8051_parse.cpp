@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2023 billow <billow.fun@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "8051_il.h"
-#include <rz_util.h>
-#include <rz_endian.h>
+#include "8051_il.hpp"
+#include <rz_util.hpp>
+#include <rz_endian.hpp>
 
 static I8051OpAddressing *addressing_addr(I8051AddressingMode mode, ut8 addr) {
 	I8051OpAddressing *a = RZ_NEW0(I8051OpAddressing);

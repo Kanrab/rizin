@@ -3,7 +3,7 @@
 // SPDX-FileCopyrightText: 2008-2019 inisider <inisider@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "pe.h"
+#include "pe.hpp"
 
 RZ_OWN RzList /*<RzBinSymbol *>*/ *PE_(rz_bin_pe_get_clr_symbols)(RzBinPEObj *bin) {
 	if (!bin || !bin->clr || !bin->clr->methoddefs) {

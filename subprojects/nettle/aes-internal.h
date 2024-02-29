@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2002, 2013 Niels Möller
 // SPDX-License-Identifier: LGPL-3.0-only
 
-/* aes-internal.h
+/* aes-internal.hpp
 
    The aes/rijndael block cipher.
 
@@ -37,7 +37,7 @@
 #ifndef NETTLE_AES_INTERNAL_H_INCLUDED
 #define NETTLE_AES_INTERNAL_H_INCLUDED
 
-#include "aes.h"
+#include "aes.hpp"
 
 /* Define to use only small tables. */
 #ifndef AES_SMALL

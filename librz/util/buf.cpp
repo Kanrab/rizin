@@ -2,9 +2,9 @@
 // SPDX-FileCopyrightText: 2009-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_io.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_io.hpp>
 
 typedef enum {
 	RZ_BUFFER_FILE,

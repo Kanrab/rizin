@@ -4,7 +4,7 @@
 #define ASM_AMD_29K_H
 
 #include <stdint.h>
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 #ifdef __cplusplus
 extern "C" {

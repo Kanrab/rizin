@@ -19,7 +19,7 @@
 #include "float_internal.c"
 #include <rz_userconf.h>
 #include <math.h>
-#include <fenv.h>
+#include <fenv.hpp>
 
 /**
  * \defgroup Generate Nan and infinite for float/double/long double
@@ -645,7 +645,7 @@ RZ_API RZ_OWN RzFloat *rz_float_new_from_bv(RZ_NONNULL const RzBitVector *bv) {
 
 /**
  * \brief create RzFloat by giving hex value, most used in writing testcases
- * ref : http://www.jhauser.us/arithmetic/TestFloat-3/doc/TestFloat-general.html
+ * ref : http://www.jhauser.us/arithmetic/TestFloat-3/doc/TestFloat-general.hpptml
  * \param value 32-bit/64-bit value to represent 32-bit/64-bit bitvector (big endian)
  * \param format float format
  * \return new RzFloat

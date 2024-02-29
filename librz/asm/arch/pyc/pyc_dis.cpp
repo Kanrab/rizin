@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2016-2020 x0urc3
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "pyc_dis.h"
+#include "pyc_dis.hpp"
 
 static const char *cmp_op[] = { "<", "<=", "==", "!=", ">", ">=", "in", "not in", "is", "is not", "exception match", "BAD" };
 

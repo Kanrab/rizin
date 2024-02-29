@@ -9,7 +9,7 @@
 #ifndef RZ_SKIP_LIST_H
 #define RZ_SKIP_LIST_H
 
-#include <rz_list.h>
+#include <rz_list.hpp>
 
 typedef struct rz_skiplist_node_t {
 	void *data; // pointer to the value

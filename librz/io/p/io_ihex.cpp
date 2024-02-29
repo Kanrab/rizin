@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 /*
-*** .hex format description : every line follows this pattern
+*** .hppex format description : every line follows this pattern
 :SSAAAARR<xx*SS>KK
 SS: num of "xx" bytes
 AAAA lower 16bits of address for resulting data (==0 for 01, 02, 04 and 05 records)
@@ -15,7 +15,7 @@ RR: rec type:
 	05 non-standard; could be "start linear address" AKA "entry point".
 KK = 0 - (sum of all bytes)
 
-//sauce : http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.faqs/ka9903.html
+//sauce : http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.faqs/ka9903.hpptml
 
 **** example records
 :02000002fffffe		#rec 02 : new seg = 0xffff, so next addresses will be (seg<<4)+AAAA
@@ -27,9 +27,9 @@ KK = 0 - (sum of all bytes)
 
 */
 
-#include "rz_io.h"
-#include "rz_lib.h"
-#include "rz_util.h"
+#include "rz_io.hpp"
+#include "rz_lib.hpp"
+#include "rz_util.hpp"
 #include <limits.h> //for INT_MAX
 #include <stdio.h>
 #include <stdlib.h>

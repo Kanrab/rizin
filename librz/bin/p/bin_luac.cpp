@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 // SPDX-FileCopyrightText: 2021 Heersin <teablearcher@gmail.com>
 
-#include <rz_bin.h>
-#include <rz_lib.h>
-#include "librz/bin/format/luac/luac_common.h"
+#include <rz_bin.hpp>
+#include <rz_lib.hpp>
+#include "librz/bin/format/luac/luac_common.hpp"
 
 #define GET_INTERNAL_BIN_INFO_OBJ(bf) ((LuacBinInfo *)(bf)->o->bin_obj)
 

@@ -6,9 +6,9 @@
  * Outputs the IL statements in a graph format.
  */
 
-#include <rz_il/rz_il_vm.h>
-#include <rz_util.h>
-#include <rz_util/rz_graph_drawable.h>
+#include <rz_il/rz_il_vm.hpp>
+#include <rz_util.hpp>
+#include <rz_util/rz_graph_drawable.hpp>
 
 static void il_op_pure_graph_resolve(RzILOpPure *op, RzGraph /*<RzGraphNodeInfo *>*/ *g, RzGraphNode *from);
 static void il_op_effect_graph_resolve(RzILOpEffect *op, RzGraph /*<RzGraphNodeInfo *>*/ *g, RzGraphNode *from);

@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2020 Florian Märkl <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util/rz_pj.h>
-#include "minunit.h"
+#include <rz_types.hpp>
+#include <rz_util/rz_pj.hpp>
+#include "minunit.hpp"
 
 bool test_pj_reset() {
 	PJ *j = pj_new();

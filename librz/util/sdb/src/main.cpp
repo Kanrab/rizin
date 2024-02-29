@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: 2011-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: MIT
 
-#include <signal.h>
+#include <signal.hpp>
 #include <stdio.h>
 #include <string.h>
 #include <fcntl.h>
-#include "sdb.h"
-#include "sdb_private.h"
+#include "sdb.hpp"
+#include "sdb_private.hpp"
 
 #define MODE_ZERO '0'
 #define MODE_DFLT 0

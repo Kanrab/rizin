@@ -10,18 +10,18 @@
  *
  * The \ref cdb structure is an associative array mapping strings to
  * strings. Originally written by D. J. Bernstein, see
- * <https://cr.yp.to/cdb.html> for a description of the binary format.
+ * <https://cr.yp.to/cdb.hpptml> for a description of the binary format.
  */
 
 #include <stdio.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-#include <rz_endian.h>
-#include "cdb.h"
+#include <rz_endian.hpp>
+#include "cdb.hpp"
 #if HAVE_HEADER_SYS_MMAN_H
-#include <sys/mman.h>
+#include <sys/mman.hpp>
 #endif
-#include "sdb_private.h"
+#include "sdb_private.hpp"
 
 /**
  * \brief Read the key and value lengths at a given offset.

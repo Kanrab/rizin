@@ -2,8 +2,8 @@
 // SPDX-FileCopyrightText: 2015-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "../../i/private.h"
-#include "mach0_classes.h"
+#include "../../i/private.hpp"
+#include "mach0_classes.hpp"
 
 #define RO_META            (1 << 0)
 #define MAX_CLASS_NAME_LEN 256

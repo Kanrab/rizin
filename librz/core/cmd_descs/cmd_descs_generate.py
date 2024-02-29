@@ -28,7 +28,7 @@ CMDDESCS_C_TEMPLATE = """// SPDX-FileCopyrightText: 2021 RizinOrg <info@rizin.re
 // modify it manually. Look at cmd_descs.yaml if you want to update commands.
 //
 
-#include <cmd_descs.h>
+#include <cmd_descs.hpp>
 
 {helps_declarations}
 
@@ -48,9 +48,9 @@ CMDDESCS_H_TEMPLATE = """// SPDX-FileCopyrightText: 2021 RizinOrg <info@rizin.re
 // modify it manually. Look at cmd_descs.yaml if you want to update commands.
 //
 
-#include <rz_cmd.h>
-#include <rz_core.h>
-#include <rz_util.h>
+#include <rz_cmd.hpp>
+#include <rz_core.hpp>
+#include <rz_util.hpp>
 
 // Command handlers, manually defined somewhere else
 {handlers_declarations}
@@ -393,7 +393,7 @@ class CmdDesc:
         self.subcommands = None
         self.exec_cd = None
         self.modes = c.pop("modes", None)
-        self.handler = c.pop("handler", None)
+        self.hppandler = c.pop("handler", None)
         self.default_mode = c.pop("default_mode", None)
         # RzCmdDescHelp fields
         self.summary = strip(c.pop("summary"))
@@ -483,7 +483,7 @@ class CmdDesc:
             CD_TYPE_ARGV_STATE,
         ]:
             return None
-        return get_handler_cname(self.type, self.handler, self.cname)
+        return get_handler_cname(self.type, self.hppandler, self.cname)
 
     @classmethod
     def get_arg_cname(cls, cd):
@@ -806,7 +806,7 @@ def handler2decl(cd, cd_type, handler_name, db_names):
 
 
 parser = argparse.ArgumentParser(
-    description="Generate .c/.h files from Command Descriptors YAML file."
+    description="Generate .c/.hpp files from Command Descriptors YAML file."
 )
 parser.add_argument(
     "--src-output-dir", type=str, required=False, help="Source output directory"
@@ -856,10 +856,10 @@ hf_text = CMDDESCS_H_TEMPLATE.format(
         remove_none([handler2decl(cd, t, h, db) for cd, t, h in handlers_decls])
     ),
 )
-with open(os.path.join(args.output_dir, "cmd_descs.h"), "w", encoding="utf8") as f:
+with open(os.path.join(args.output_dir, "cmd_descs.hpp"), "w", encoding="utf8") as f:
     f.write(hf_text)
 if args.src_output_dir:
     with open(
-        os.path.join(args.src_output_dir, "cmd_descs.h"), "w", encoding="utf8"
+        os.path.join(args.src_output_dir, "cmd_descs.hpp"), "w", encoding="utf8"
     ) as f:
         f.write(hf_text)

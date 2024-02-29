@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2014-2018 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: MIT
 
-#include "sdb.h"
-#include <stdarg.h>
+#include "sdb.hpp"
+#include <stdarg.hpp>
 #include <string.h>
 
 // TODO: convert into a function

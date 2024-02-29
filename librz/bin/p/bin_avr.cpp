@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2016-2017 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bin.h>
-#include <rz_lib.h>
+#include <rz_bin.hpp>
+#include <rz_lib.hpp>
 
 #define CHECK4INSTR(b, instr, size) \
 	if (!instr(b, 0) || \

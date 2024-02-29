@@ -2,11 +2,11 @@
 // SPDX-FileCopyrightText: 2016 unlogic
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_asm.h>
-#include <rz_types.h>
+#include <rz_asm.hpp>
+#include <rz_types.hpp>
 #include <stdio.h>
 #include <string.h>
-#include "z80_tab.h"
+#include "z80_tab.hpp"
 
 static ut8 z80_op_24_branch_index_res(ut8 hex) {
 	if (hex < 0x40) {

@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: 2007-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
+#include <rz_util.hpp>
 #if __UNIX__
-#include <sys/mman.h>
+#include <sys/mman.hpp>
 #elif __WINDOWS__
-#include <rz_windows.h>
+#include <rz_windows.hpp>
 #endif
 
 #define SET_BIT(p, n) ((p) |= (1 << (n)))

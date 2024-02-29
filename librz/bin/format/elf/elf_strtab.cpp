@@ -2,8 +2,8 @@
 // SPDX-FileCopyrightText: 2021 RizinOrg <info@rizin.re>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "elf_strtab.h"
-#include "elf.h"
+#include "elf_strtab.hpp"
+#include "elf.hpp"
 
 RZ_BORROW const char *Elf_(rz_bin_elf_strtab_get)(RZ_NONNULL RzBinElfStrtab *strtab, ut64 index) {
 	rz_return_val_if_fail(strtab, false);

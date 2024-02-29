@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2022 Florian Märkl <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include <rz_socket.h>
-#include "minunit.h"
+#include <rz_util.hpp>
+#include <rz_socket.hpp>
+#include "minunit.hpp"
 
 static void *ping_back_th(void *user) {
 	rz_sys_usleep(10000);

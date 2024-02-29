@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2016-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_flag.h>
-#include <rz_util.h>
+#include <rz_flag.hpp>
+#include <rz_util.hpp>
 
 static RzFlagZoneItem *rz_flag_zone_get(RzFlag *f, const char *name) {
 	RzListIter *iter;

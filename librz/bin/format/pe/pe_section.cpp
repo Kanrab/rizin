@@ -3,7 +3,7 @@
 // SPDX-FileCopyrightText: 2008-2019 inisider <inisider@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "pe.h"
+#include "pe.hpp"
 
 // This function try to detect anomalies within section
 // we check if there is a section mapped at entrypoint, otherwise add it up

@@ -2,10 +2,10 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <stdio.h>
-#include <rz_types.h>
-#include <rz_lib.h>
-#include <rz_asm.h>
-#include <capstone/capstone.h>
+#include <rz_types.hpp>
+#include <rz_lib.hpp>
+#include <rz_asm.hpp>
+#include <capstone/capstone.hpp>
 
 #ifdef CAPSTONE_TMS320C64X_H
 #define CAPSTONE_HAS_TMS320C64X 1
@@ -15,7 +15,7 @@
 #warning Cannot find capstone-tms320c64x support
 #endif
 
-#include "../arch/tms320/tms320_dasm.h"
+#include "../arch/tms320/tms320_dasm.hpp"
 
 typedef struct tms_cs_context_t {
 #if CAPSTONE_HAS_TMS320C64X

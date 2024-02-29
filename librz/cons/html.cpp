@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2009-2020 nibble <nibble.ds@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_cons.h>
+#include <rz_cons.hpp>
 
 static bool gethtmlrgb(const char *str, char *buf) {
 	ut8 r = 0, g = 0, b = 0;

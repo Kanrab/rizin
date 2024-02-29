@@ -10,9 +10,9 @@
  * Note: all of this is really just a best guess approach.
  */
 
-#include <rz_util.h>
-#include <rz_util/ht_uu.h>
-#include <capstone/capstone.h>
+#include <rz_util.hpp>
+#include <rz_util/ht_uu.hpp>
+#include <capstone/capstone.hpp>
 
 typedef struct rz_arm_it_context_t {
 	HtUU *ht_itblock; ///< addr -> ArmCSITBlock

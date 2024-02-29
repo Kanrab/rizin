@@ -22,7 +22,7 @@ paddr      size   vaddr      vsize  align perm name
 ----------------------------------------------------
 0x00000000 0x2e3c 0x00000000 0x2e3c 0x0   -rwx TEXT
 0x00002e3c 0x2e3c 0x00002e40 0x21b4 0x0   -rwx DATA
- 1 fd: 4 +0x00000000 0x00000000 * 0x00002e3b r-x vmap.hdr+text
+ 1 fd: 4 +0x00000000 0x00000000 * 0x00002e3b r-x vmap.hppdr+text
  2 fd: 5 +0x00000000 0x00002fc8 - 0x00004ff3 rwx mmap.data+bss
  3 fd: 4 +0x00002e3c 0x00002e40 - 0x00002fc7 r-x vmap.data+bss
 EOF
@@ -141,7 +141,7 @@ vaddr      paddr      target     type   name
 0x00004fe8
 0x00000114
 0x00002f29
-ldr r0, str.Hola
+ldr r0, str.hppola
 EOF
 RUN
 
@@ -172,7 +172,7 @@ paddr      size   vaddr      vsize  align perm name
 ----------------------------------------------------
 0x00000000 0x2e3c 0x06908000 0x2e3c 0x0   -rwx TEXT
 0x00002e3c 0x2e3c 0x0690ae40 0x21b4 0x0   -rwx DATA
- 1 fd: 4 +0x00000000 0x06908000 * 0x0690ae3b r-x vmap.hdr+text
+ 1 fd: 4 +0x00000000 0x06908000 * 0x0690ae3b r-x vmap.hppdr+text
  2 fd: 5 +0x00000000 0x0690afc8 - 0x0690cff3 rwx mmap.data+bss
  3 fd: 4 +0x00002e3c 0x0690ae40 - 0x0690afc7 r-x vmap.data+bss
 vaddr      paddr      target     type   name 
@@ -275,7 +275,7 @@ vaddr      paddr      target     type   name
 0x0690cfe8
 0x06908114
 0x0690af29
-ldr r0, str.Hola
+ldr r0, str.hppola
 EOF
 RUN
 
@@ -424,7 +424,7 @@ paddr      size   vaddr      vsize  align perm name
 ----------------------------------------------------
 0x00000000 0x2e3c 0x06908000 0x2e3c 0x0   -rwx TEXT
 0x00002e3c 0x2e3c 0x0690ae40 0x21b4 0x0   -rwx DATA
- 1 fd: 4 +0x00000000 0x06908000 * 0x0690ae3b r-x vmap.hdr+text
+ 1 fd: 4 +0x00000000 0x06908000 * 0x0690ae3b r-x vmap.hppdr+text
  2 fd: 5 +0x00000000 0x0690afc8 - 0x0690cff3 rwx mmap.data+bss
  3 fd: 4 +0x00002e3c 0x0690ae40 - 0x0690afc7 r-x vmap.data+bss
 vaddr      paddr      target     type   name 
@@ -527,7 +527,7 @@ vaddr      paddr      target     type   name
 0x0690cfe8
 0x06908114
 0x0690af29
-ldr r0, str.Hola
+ldr r0, str.hppola
 EOF
 RUN
 

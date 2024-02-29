@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2020 thestr4ng3r <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "rz_test.h"
+#include "rz_test.hpp"
 
-#include <assert.h>
+#include <assert.hpp>
 
 #define LINEFMT "%s, line %" PFMT64u ": "
 

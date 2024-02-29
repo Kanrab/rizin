@@ -4,10 +4,10 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <stdio.h>
-#include <rz_types.h>
-#include <rz_util.h>
-#include "mach0.h"
-#include <rz_hash.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include "mach0.hpp"
+#include <rz_hash.hpp>
 
 #include "mach0_utils.inc"
 
@@ -237,7 +237,7 @@ static bool init_hdr(struct MACH0_(obj_t) * bin) {
 	ut8 machohdrbytes[sizeof(struct MACH0_(mach_header))] = { 0 };
 	int len;
 
-	if (rz_buf_read_at(bin->b, 0 + bin->options.header_at, magicbytes, 4) < 1) {
+	if (rz_buf_read_at(bin->b, 0 + bin->options.hppeader_at, magicbytes, 4) < 1) {
 		return false;
 	}
 	if (rz_read_le32(magicbytes) == 0xfeedface) {
@@ -255,7 +255,7 @@ static bool init_hdr(struct MACH0_(obj_t) * bin) {
 	} else {
 		return false; // object files are magic == 0, but body is different :?
 	}
-	len = rz_buf_read_at(bin->b, 0 + bin->options.header_at, machohdrbytes, sizeof(machohdrbytes));
+	len = rz_buf_read_at(bin->b, 0 + bin->options.hppeader_at, machohdrbytes, sizeof(machohdrbytes));
 	if (len != sizeof(machohdrbytes)) {
 		bprintf("Error: read (hdr)\n");
 		return false;
@@ -1453,7 +1453,7 @@ static int init_items(struct MACH0_(obj_t) * bin) {
 		// return false;
 	}
 	// bprintf ("Commands: %d\n", bin->hdr.ncmds);
-	for (ut64 i = 0, off = sizeof(struct MACH0_(mach_header)) + bin->options.header_at;
+	for (ut64 i = 0, off = sizeof(struct MACH0_(mach_header)) + bin->options.hppeader_at;
 		i < bin->hdr.ncmds; i++, off += lc.cmdsize) {
 		if (off > bin->size || off + sizeof(struct load_command) > bin->size) {
 			bprintf("mach0: out of bounds command\n");
@@ -1731,7 +1731,7 @@ static int init_items(struct MACH0_(obj_t) * bin) {
 		}
 	}
 	bool has_chained_fixups = false;
-	for (ut64 i = 0, off = sizeof(struct MACH0_(mach_header)) + bin->options.header_at;
+	for (ut64 i = 0, off = sizeof(struct MACH0_(mach_header)) + bin->options.hppeader_at;
 		i < bin->hdr.ncmds; i++, off += lc.cmdsize) {
 
 		if (!read_load_command(&lc, bin->b, off, bin->big_endian)) {
@@ -2397,13 +2397,13 @@ static int walk_exports(struct MACH0_(obj_t) * bin, RExportsIterator iterator, v
 				if (res == UT64_MAX) {
 					break;
 				}
-				resolver = res + bin->options.header_at;
+				resolver = res + bin->options.hppeader_at;
 			} else if (isReexport) {
 				p += strlen((char *)p) + 1;
 				// TODO: handle this
 			}
 			if (!isReexport) {
-				offset += bin->options.header_at;
+				offset += bin->options.hppeader_at;
 			}
 			if (iterator && !isReexport) {
 				char *name = NULL;

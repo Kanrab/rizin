@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2015-2019 nodepad <nod3pad@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_bin.h>
-#include <rz_lib.h>
-#include "mz/mz.h"
+#include <rz_types.hpp>
+#include <rz_bin.hpp>
+#include <rz_lib.hpp>
+#include "mz/mz.hpp"
 
 /* half-magic */
 #define HM(x) (int)((int)(x[0] << 8) | (int)(x[1]))
@@ -267,7 +267,7 @@ RzBinPlugin rz_bin_plugin_mz = {
 	.maps = &rz_bin_maps_of_file_sections,
 	.sections = &sections,
 	.info = &info,
-	.header = &header,
+	.hppeader = &header,
 	.relocs = &relocs,
 };
 

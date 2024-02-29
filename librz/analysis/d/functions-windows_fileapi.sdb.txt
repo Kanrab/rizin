@@ -1,4 +1,4 @@
-### fileapi.h ###
+### fileapi.hpp ###
 
 AreFileApisANSI=func
 func.AreFileApisANSI.args=0

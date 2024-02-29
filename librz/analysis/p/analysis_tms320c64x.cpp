@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2017 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
-#include <rz_lib.h>
-#include <capstone/capstone.h>
+#include <rz_analysis.hpp>
+#include <rz_lib.hpp>
+#include <capstone/capstone.hpp>
 
 #ifdef CAPSTONE_TMS320C64X_H
 #define CAPSTONE_HAS_TMS320C64X 1

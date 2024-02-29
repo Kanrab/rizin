@@ -9,9 +9,9 @@
 
 #ifdef MDMP_PE_H
 #undef MDMP_PE_H
-#include "mdmp_pe.h"
+#include "mdmp_pe.hpp"
 #else
-#include "mdmp_pe.h"
+#include "mdmp_pe.hpp"
 #undef MDMP_PE_H
 #endif
 

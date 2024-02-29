@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2020 Florian Märkl <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
-#include "minunit.h"
-#include "test_config.h"
+#include <rz_analysis.hpp>
+#include "minunit.hpp"
+#include "test_config.hpp"
 
 #include "test_analysis_block_invars.inl"
 

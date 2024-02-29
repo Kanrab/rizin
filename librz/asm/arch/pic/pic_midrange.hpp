@@ -4,8 +4,8 @@
 #ifndef PIC_MIDRANGE_H
 #define PIC_MIDRANGE_H
 
-#include <rz_asm.h>
-#include <rz_types.h>
+#include <rz_asm.hpp>
+#include <rz_types.hpp>
 
 typedef enum {
 	PIC_MIDRANGE_OP_ARGS_NONE = 0,

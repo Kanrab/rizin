@@ -2,9 +2,9 @@
 // SPDX-FileCopyrightText: 2019-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
-#include <rz_hash.h>
-#include <rz_util/ht_uu.h>
+#include <rz_analysis.hpp>
+#include <rz_hash.hpp>
+#include <rz_util/ht_uu.hpp>
 
 #define unwrap(rbnode) ((rbnode) ? container_of(rbnode, RzAnalysisBlock, _rb) : NULL)
 

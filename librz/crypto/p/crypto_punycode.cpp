@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2009-2016 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_crypto.h>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_crypto.hpp>
 
 static bool punycode_set_key(RzCrypto *cry, const ut8 *key, int keylen, int mode, int direction) {
 	cry->dir = direction;

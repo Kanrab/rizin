@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2022 heersin <teablearcher@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
+#include <rz_util.hpp>
 
 /**
  * \file : Internal function for float

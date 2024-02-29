@@ -1,4 +1,4 @@
-### consoleapi2.h ###
+### consoleapi2.hpp ###
 
 CreateConsoleScreenBuffer=func
 func.CreateConsoleScreenBuffer.args=5

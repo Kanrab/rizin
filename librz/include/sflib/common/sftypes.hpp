@@ -1,6 +1,6 @@
 /*
- * sftypes.h -- shellforge lib types
- *              see http://www.cartel-securite.net/pbiondi/shellforge.html
+ * sftypes.hpp -- shellforge lib types
+ *              see http://www.cartel-securite.net/pbiondi/shellforge.hpptml
  *              for more informations
  *
  * Copyright (C) 2003  Philippe Biondi <biondi@cartel-securite.fr>
@@ -546,7 +546,7 @@ struct cmsghdr
 #define LOCK_RW         192     /* ... Which allows concurrent read & write ops */
 
 		
-/**************** from ptrace.h *********/
+/**************** from ptrace.hpp *********/
 
 
 enum __ptrace_request
@@ -639,7 +639,7 @@ enum __ptrace_request
 
 
 /************************ ioctl ******************/
-/* from asm/ioctl.h */
+/* from asm/ioctl.hpp */
 
 #define _IOC_NRBITS     8
 #define _IOC_TYPEBITS   8
@@ -699,7 +699,7 @@ extern unsigned int __invalid_size_argument_for_IOC;
 #define IOCSIZE_MASK    (_IOC_SIZEMASK << _IOC_SIZESHIFT)
 #define IOCSIZE_SHIFT   (_IOC_SIZESHIFT)
 
-/* from asm/ioctls.h */
+/* from asm/ioctls.hpp */
 
 #define TCGETS          0x5401
 #define TCSETS          0x5402 /* Clashes with SNDCTL_TMR_START sound ioctl */
@@ -779,7 +779,7 @@ extern unsigned int __invalid_size_argument_for_IOC;
 
 
 /********************** termio *******************/
-/* from /usr/include/asm/termios.h */
+/* from /usr/include/asm/termios.hpp */
 
 struct winsize {
 	unsigned short ws_row;
@@ -1005,7 +1005,7 @@ struct termios {
 #endif /* SFTYPES_H */
 
 /****************** Elf headers ***************/
-/*  From /usr/include/elf.h */
+/*  From /usr/include/elf.hpp */
 
 
 
@@ -1873,7 +1873,7 @@ typedef struct
 
 /* This vector is normally only used by the program interpreter.  The
    usual definition in an ABI supplement uses the name auxv_t.  The
-   vector is not usually defined in a standard <elf.h> file, but it
+   vector is not usually defined in a standard <elf.hpp> file, but it
    can't hurt.  We rename it to avoid conflicts.  The sizes of these
    types are an arrangement between the exec server and the program
    interpreter, so we don't fully specify them here.  */

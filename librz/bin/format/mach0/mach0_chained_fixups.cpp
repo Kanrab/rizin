@@ -16,7 +16,7 @@
  * see also mach0_relocs.c for additional modification of the data that might happen.
  */
 
-#include "mach0.h"
+#include "mach0.hpp"
 
 #include "mach0_utils.inc"
 
@@ -425,7 +425,7 @@ RZ_API void MACH0_(chained_fixups_foreach)(struct MACH0_(obj_t) * obj, mach0_cha
 						struct dyld_chained_ptr_arm64e_rebase p;
 						dyld_chained_ptr_arm64e_rebase_read(&p, raw_ptr);
 						delta = p.next;
-						fixup.result = ((ut64)p.high8 << 56) | p.target;
+						fixup.result = ((ut64)p.hppigh8 << 56) | p.target;
 					}
 					break;
 				}
@@ -441,7 +441,7 @@ RZ_API void MACH0_(chained_fixups_foreach)(struct MACH0_(obj_t) * obj, mach0_cha
 						struct dyld_chained_ptr_arm64e_cache_rebase p;
 						dyld_chained_ptr_arm64e_cache_rebase_read(&p, raw_ptr);
 						delta = p.next;
-						fixup.result = ((ut64)p.high8 << 56) | p.target;
+						fixup.result = ((ut64)p.hppigh8 << 56) | p.target;
 						fixup.result += obj->baddr;
 					}
 					break;
@@ -460,7 +460,7 @@ RZ_API void MACH0_(chained_fixups_foreach)(struct MACH0_(obj_t) * obj, mach0_cha
 						struct dyld_chained_ptr_64_rebase p;
 						dyld_chained_ptr_64_rebase_read(&p, raw_ptr);
 						delta = p.next;
-						fixup.result = (((ut64)p.high8 << 56) | p.target);
+						fixup.result = (((ut64)p.hppigh8 << 56) | p.target);
 						if (segment->pointer_format == DYLD_CHAINED_PTR_64_OFFSET) {
 							fixup.result += obj->baddr;
 						}
@@ -495,7 +495,7 @@ RZ_API void MACH0_(chained_fixups_foreach)(struct MACH0_(obj_t) * obj, mach0_cha
 							struct dyld_chained_ptr_arm64e_rebase p;
 							dyld_chained_ptr_arm64e_rebase_read(&p, raw_ptr);
 							delta = p.next;
-							fixup.result = obj->baddr + (((ut64)p.high8 << 56) | p.target);
+							fixup.result = obj->baddr + (((ut64)p.hppigh8 << 56) | p.target);
 						}
 					}
 					break;

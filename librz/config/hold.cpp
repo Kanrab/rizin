@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2006-2021 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_config.h>
+#include <rz_config.hpp>
 
 static void rz_config_hold_char_free(RzConfigHoldChar *hc) {
 	free(hc->key);

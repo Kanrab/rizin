@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2013-2018 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "arm_it.h"
+#include "arm_it.hpp"
 
 typedef union arm_cs_itblock_t {
 	ut8 off[4]; ///< offsets of the up to 4 conditioned instructions from the addr of the it, 0-terminated if less than 4.

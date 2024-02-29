@@ -3,7 +3,7 @@
 /*
 Usage Example:
 
-	#include <rz_core.h>
+	#include <rz_core.hpp>
 	int main() {
 		RzCoreBind rcb;
 		RzCore *core = rz_core_new ();
@@ -17,9 +17,9 @@ Usage Example:
 	}
 */
 
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_socket.h>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_socket.hpp>
 
 #define RZP_PID(x)    (((RzPipe *)(x)->data)->pid)
 #define RZP_INPUT(x)  (((RzPipe *)(x)->data)->input[0])

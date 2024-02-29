@@ -4,10 +4,10 @@
 
 #ifndef LE_H
 #define LE_H
-#include <rz_bin.h>
-#include <rz_types.h>
-#include <sdbht.h>
-#include "le_specs.h"
+#include <rz_bin.hpp>
+#include <rz_types.hpp>
+#include <sdbht.hpp>
+#include "le_specs.hpp"
 
 typedef struct LE_object_s {
 	ut32 virtual_size;

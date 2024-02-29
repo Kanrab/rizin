@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2021 RizinOrg <info@rizin.re>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "elf.h"
+#include "elf.hpp"
 
 static bool start_a_sequence_of_instruction(RzBinSymbol *symbol) {
 	return strlen(symbol->name) > 3 && rz_str_startswith(symbol->name, "$a.");

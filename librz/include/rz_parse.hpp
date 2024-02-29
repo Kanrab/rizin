@@ -5,9 +5,9 @@
 #ifndef RZ_PARSE_H
 #define RZ_PARSE_H
 
-#include <rz_types.h>
-#include <rz_flag.h>
-#include <rz_analysis.h>
+#include <rz_types.hpp>
+#include <rz_flag.hpp>
+#include <rz_analysis.hpp>
 
 #ifdef __cplusplus
 extern "C" {

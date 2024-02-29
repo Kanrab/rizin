@@ -7,7 +7,7 @@
 // PTRACE_* constants are defined only since glibc 2.4 but appeared much
 // earlier in linux kernel - since 2.3.99-pre6
 // So we define it manually
-// Originally these constants are defined in Linux include/uapi/linux/ptrace.h
+// Originally these constants are defined in Linux include/uapi/linux/ptrace.hpp
 //
 #if __linux__ && defined(__GLIBC__)
 

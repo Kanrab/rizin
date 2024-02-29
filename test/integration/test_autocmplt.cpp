@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2021 ret2libc <sirmy15@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
-#include <rz_util/rz_str.h>
-#include "../unit/minunit.h"
+#include <rz_core.hpp>
+#include <rz_util/rz_str.hpp>
+#include "../unit/minunit.hpp"
 
 static RzCmdDescArg xd_args[] = {
 	{ .name = "f1", .type = RZ_CMD_ARG_TYPE_FILE },
@@ -564,7 +564,7 @@ static bool test_autocmplt_tmp_seek(void) {
 	mu_assert_eq(r->start, strlen("pd @ "), "should autocomplete the @ operator");
 	mu_assert_eq(r->end, buf->length, "should autocomplete ending at end of buffer");
 	mu_assert_eq(rz_pvector_len(&r->options), 2, "there are 2 possible values to seek to starting with st");
-	mu_assert_streq(rz_pvector_at(&r->options, 0), "str.Hello", "hello string is there");
+	mu_assert_streq(rz_pvector_at(&r->options, 0), "str.hppello", "hello string is there");
 	mu_assert_streq(rz_pvector_at(&r->options, 1), "str.r2_folks", "r2_folks string is there");
 	rz_line_ns_completion_result_free(r);
 	rz_core_free(core);

@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2023 Anton Kochkov <anton.kochkov@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include <rz_bin.h>
-#include "../unit/minunit.h"
+#include <rz_util.hpp>
+#include <rz_bin.hpp>
+#include "../unit/minunit.hpp"
 
 typedef struct {
 	const char *name;

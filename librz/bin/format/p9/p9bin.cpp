@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2011 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "p9bin.h"
-#include <rz_asm.h>
+#include "p9bin.hpp"
+#include <rz_asm.hpp>
 
 int rz_bin_p9_get_arch(RzBuffer *b, int *bits, int *big_endian) {
 	ut32 a;

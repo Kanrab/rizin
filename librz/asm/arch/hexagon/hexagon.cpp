@@ -11,15 +11,15 @@
 
 #include <stdio.h>
 #include <stdbool.h>
-#include <rz_types.h>
-#include <rz_lib.h>
-#include <rz_util.h>
-#include <rz_asm.h>
-#include <rz_analysis.h>
-#include <rz_util/rz_assert.h>
-#include "hexagon.h"
-#include "hexagon_insn.h"
-#include "hexagon_arch.h"
+#include <rz_types.hpp>
+#include <rz_lib.hpp>
+#include <rz_util.hpp>
+#include <rz_asm.hpp>
+#include <rz_analysis.hpp>
+#include <rz_util/rz_assert.hpp>
+#include "hexagon.hpp"
+#include "hexagon_insn.hpp"
+#include "hexagon_arch.hpp"
 
 char *hex_get_ctr_regs(int opcode_reg, bool get_alias) {
 	switch (opcode_reg) {

@@ -3,7 +3,7 @@
 
 #ifndef WASM_ASM_H
 #define WASM_ASM_H
-#include <rz_util.h>
+#include <rz_util.hpp>
 
 /***
  * Core

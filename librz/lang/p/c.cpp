@@ -5,9 +5,9 @@
  * A plugin allowing to run "scripts" written in C language
  */
 
-#include <rz_lib.h>
-#include <rz_core.h>
-#include <rz_lang.h>
+#include <rz_lib.hpp>
+#include <rz_core.hpp>
+#include <rz_lang.hpp>
 
 #if __UNIX__
 static int ac = 0;
@@ -102,7 +102,7 @@ static int lang_c_init(void *user) {
 static int lang_c_run(RzLang *lang, const char *code, int len) {
 	FILE *fd = rz_sys_fopen(".tmp.c", "w");
 	if (fd) {
-		fputs("#include <rz_core.h>\n\nvoid entry(RzCore *core, int argc, const char **argv) {\n", fd);
+		fputs("#include <rz_core.hpp>\n\nvoid entry(RzCore *core, int argc, const char **argv) {\n", fd);
 		fputs(code, fd);
 		fputs("\n}\n", fd);
 		fclose(fd);

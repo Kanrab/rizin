@@ -457,7 +457,7 @@ EXPECT=<<EOF
 0x080484a8 0 sym..rodata
 0x080484a8 4 obj._fp_hw
 0x080484ac 4 obj._IO_stdin_used
-0x080484b0 13 str.Hello_world
+0x080484b0 13 str.hppello_world
 0x080484c0 44 section..eh_frame_hdr
 0x080484c0 44 segment.GNU_EH_FRAME
 0x080484c0 0 sym..eh_frame_hdr

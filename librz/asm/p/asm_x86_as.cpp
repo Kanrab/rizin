@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2011-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_lib.h>
-#include <rz_asm.h>
-#include "../binutils_as.h"
+#include <rz_lib.hpp>
+#include <rz_asm.hpp>
+#include "../binutils_as.hpp"
 
 #define ASSEMBLER "RZ_X86_AS"
 

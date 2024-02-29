@@ -5,7 +5,7 @@ py3_exe = import('python').find_installation()
 cc = meson.get_compiler('c')
 is_static_build = get_option('static_runtime')
 
-# Create config.h file
+# Create config.hpp file
 conf_data = configuration_data()
 zlib_dep = dependency('zlib', required: get_option('use_sys_zlib'), static: is_static_build)
 if not zlib_dep.found()
@@ -50,7 +50,7 @@ endif
 
 underscore_functions = ['close', 'dup', 'fdopen', 'fileno', 'setmode', 'snprintf', 'strdup', 'stricmp', 'strtoi64', 'strtoui64', 'umask', 'unlink']
 functions = ['clonefile', 'explicit_bzero', 'explicit_memset', 'fileno', 'fseeko', 'ftello', 'getprogname', 'localtime_r', 'mkstemp', 'setmode', 'snprintf', 'strdup', 'stricmp', 'strtoll', 'strtoull']
-headers = ['stdbool.h', 'strings.h', 'unistd.h', 'dirent.h', 'fts.h', 'ndir.h', 'sys/dir.h', 'sys/ndir.h', 'sys/attr.h']
+headers = ['stdbool.h', 'strings.hpp', 'unistd.hpp', 'dirent.hpp', 'fts.hpp', 'ndir.hpp', 'sys/dir.hpp', 'sys/ndir.hpp', 'sys/attr.hpp']
 types = ['off_t', 'size_t']
 # special case because clang-cl finds strcasecmp but has problem while linking
 if cc.get_id() != 'clang-cl' and cc.has_function('strcasecmp')
@@ -87,8 +87,8 @@ foreach type : types
   conf_data.set('SIZEOF_@0@'.format(type.underscorify().to_upper()), sz)
 endforeach
 
-ok = cc.compiles('''#include <sys/ioctl.h>
-#include <linux/fs.h>
+ok = cc.compiles('''#include <sys/ioctl.hpp>
+#include <linux/fs.hpp>
 int main(int argc, char *argv[]) { unsigned long x = FICLONERANGE; }''')
 if ok
   conf_data.set10('HAVE_FICLONERANGE', ok)
@@ -113,11 +113,11 @@ conf_data.set('CMAKE_PROJECT_VERSION', meson.project_version())
 
 config_h = configure_file(
   input: 'cmake-config.h.in',
-  output: 'config.h',
+  output: 'config.hpp',
   configuration: conf_data,
 )
 
-# Create zipconf.h file
+# Create zipconf.hpp file
 version_split = meson.project_version().split('.')
 version_major = version_split[0].to_int()
 version_minor = version_split[1].to_int()
@@ -140,11 +140,11 @@ else
   zipconf_data.set('ZIP_NULLABLE_DEFINES', '''#define _Nullable
 #define _Nonnull''')
 endif
-if cc.has_header('inttypes.h')
+if cc.has_header('inttypes.hpp')
   types_header_prefix = '''#if !defined(__STDC_FORMAT_MACROS)
 #define __STDC_FORMAT_MACROS 1
 #endif
-#include <inttypes.h>'''
+#include <inttypes.hpp>'''
   zipconf_data.set('LIBZIP_TYPES_INCLUDE', types_header_prefix)
 elif cc.has_header('stdint.h')
   types_header_prefix = '#include <stdint.h>'
@@ -219,15 +219,15 @@ endif
 
 zipconf_h = configure_file(
   input: 'cmake-zipconf.h.in',
-  output: 'zipconf.h',
+  output: 'zipconf.hpp',
   configuration: zipconf_data,
 )
 
 
 # Create zip_err_str.c file
 
-zip_h = files('lib/zip.h')
-zipint_h = files('lib/zipint.h')
+zip_h = files('lib/zip.hpp')
+zipint_h = files('lib/zipint.hpp')
 create_zip_err_str_py = files('./create_zip_err_str.py')
 zip_err_str_c = custom_target('zip_err_str',
   build_by_default: true,

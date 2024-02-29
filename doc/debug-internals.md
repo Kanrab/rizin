@@ -8,7 +8,7 @@ The bulk of the debugger functionality within Rizin core is split between the
 the tree follows.
 
 
-## librz/include/r_debug.h
+## librz/include/r_debug.hpp
 
 This is the main header file for the debugger. It defines all the relevant
 structures and top-level functions, APIs, etc. The debugger plug-in API is also
@@ -51,7 +51,7 @@ Rizin supports a multitude of different types of breakpoints.
 
     librz/bp/bp.c            // main breakpoint management code
     librz/bp/io.c            // setting and resetting(??) breakpoints
-    librz/bp/parser.h        // header for breakpoint parser (??)
+    librz/bp/parser.hpp        // header for breakpoint parser (??)
     librz/bp/parser.c        // code for breakpoint parser (??)
     librz/bp/plugin.c        // breakpoint plugin management
     librz/bp/traptrace.c     // traptrace (??)
@@ -102,7 +102,7 @@ user manual or try "d?" to get a crash course.
 As mentioned before, the platform specific debugger functionality is delegated
 to back-end plugins that implement the necessary interactions, protocols, or
 otherwise to get the job done. These plug-ins implement the rizin debugger
-plug-in API defined in r_debug.h.
+plug-in API defined in r_debug.hpp.
 
 
 ### librz/debug/p/debug_bf.c
@@ -110,7 +110,7 @@ plug-in API defined in r_debug.h.
 A debugger plug-in capable of debugging brainfuck code!
 
     librz/debug/p/bfvm.c     // Brainfuck VM implementation
-    librz/debug/p/bfvm.h
+    librz/debug/p/bfvm.hpp
 
 
 ### librz/debug/p/debug_bochs.c
@@ -149,53 +149,53 @@ following files:
     // architecture-specific register handling
     librz/debug/p/native/drx.c                       // x86-specific debug registers
     librz/debug/p/native/reg.c                       // cute include of the files below
-    librz/debug/p/native/reg/kfbsd-x64.h
-    librz/debug/p/native/reg/kfbsd-x86.h
-    librz/debug/p/native/reg/netbsd-x64.h
-    librz/debug/p/native/reg/netbsd-x86.h
-    librz/debug/p/native/reg/windows-x64.h
-    librz/debug/p/native/reg/windows-x86.h
+    librz/debug/p/native/reg/kfbsd-x64.hpp
+    librz/debug/p/native/reg/kfbsd-x86.hpp
+    librz/debug/p/native/reg/netbsd-x64.hpp
+    librz/debug/p/native/reg/netbsd-x86.hpp
+    librz/debug/p/native/reg/windows-x64.hpp
+    librz/debug/p/native/reg/windows-x86.hpp
     
     // platform-specific debugger code on Linux
     librz/debug/p/native/linux/linux_debug.c         // main linux-specific debugging code
-    librz/debug/p/native/linux/linux_debug.h         // including cute penguin ascii art
+    librz/debug/p/native/linux/linux_debug.hpp         // including cute penguin ascii art
     
     // architecture-specific register handling on Linux (?? what is this format??)
-    librz/debug/p/native/linux/reg/linux-arm.h
-    librz/debug/p/native/linux/reg/linux-arm64.h
-    librz/debug/p/native/linux/reg/linux-mips.h
-    librz/debug/p/native/linux/reg/linux-ppc.h
-    librz/debug/p/native/linux/reg/linux-x64.h
-    librz/debug/p/native/linux/reg/linux-x64-32.h
-    librz/debug/p/native/linux/reg/linux-x86.h
+    librz/debug/p/native/linux/reg/linux-arm.hpp
+    librz/debug/p/native/linux/reg/linux-arm64.hpp
+    librz/debug/p/native/linux/reg/linux-mips.hpp
+    librz/debug/p/native/linux/reg/linux-ppc.hpp
+    librz/debug/p/native/linux/reg/linux-x64.hpp
+    librz/debug/p/native/linux/reg/linux-x64-32.hpp
+    librz/debug/p/native/linux/reg/linux-x86.hpp
     
     // platform-specific debugger code on Windows
     librz/debug/p/native/w32.c                       // !! not used by anything else
     librz/debug/p/native/maps/windows.c              // platform-specific memory map handling
     librz/debug/p/native/windows/windows_debug.c     // main code for win32 debugger plugin
-    librz/debug/p/native/windows/windows_debug.h     // including cute windows ascii art
+    librz/debug/p/native/windows/windows_debug.hpp     // including cute windows ascii art
     
     // platform-specific debugger code on XNU (OSX/iOS/etc)
     librz/debug/p/native/darwin.c                    // !! not used by anything else
     librz/debug/p/native/maps/darwin.c               // platform-specific memory map handling
     librz/debug/p/native/xnu/xnu_debug.c             // main XNU-specific debugging code
-    librz/debug/p/native/xnu/xnu_debug.h             // including cute apple ascii art
+    librz/debug/p/native/xnu/xnu_debug.hpp             // including cute apple ascii art
     librz/debug/p/native/xnu/trap_arm.c              // ARM family hardware bps (??)
     librz/debug/p/native/xnu/trap_x86.c              // x86 family hardware bps (??)
     librz/debug/p/native/xnu/xnu_excthreads.c        // additional XNU thread handling
     librz/debug/p/native/xnu/xnu_threads.c           // XNU thread and register handling
-    librz/debug/p/native/xnu/xnu_threads.h
+    librz/debug/p/native/xnu/xnu_threads.hpp
     
     // architecture-specific register handling on XNU (?? what is this format??)
-    librz/debug/p/native/xnu/reg/darwin-x86.h
-    librz/debug/p/native/xnu/reg/darwin-arm.h
-    librz/debug/p/native/xnu/reg/darwin-ppc.h
-    librz/debug/p/native/xnu/reg/darwin-arm64.h
-    librz/debug/p/native/xnu/reg/darwin-x64.h
+    librz/debug/p/native/xnu/reg/darwin-x86.hpp
+    librz/debug/p/native/xnu/reg/darwin-arm.hpp
+    librz/debug/p/native/xnu/reg/darwin-ppc.hpp
+    librz/debug/p/native/xnu/reg/darwin-arm64.hpp
+    librz/debug/p/native/xnu/reg/darwin-x64.hpp
 
     // platform-specific debugger code on BSD
     librz/debug/p/native/bsd/bsd_debug.c         // main BSD debugging code
-    librz/debug/p/native/bsd/bsd_debug.h
+    librz/debug/p/native/bsd/bsd_debug.hpp
 
 
 ### librz/debug/p/debug_qnx.c

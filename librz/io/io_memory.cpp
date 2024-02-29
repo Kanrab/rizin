@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2008-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "io_memory.h"
+#include "io_memory.hpp"
 
 static inline ut32 _io_malloc_sz(RzIODesc *desc) {
 	if (!desc) {

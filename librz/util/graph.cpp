@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2007-2020 ret2libc <sirmy15@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
+#include <rz_util.hpp>
 
 enum {
 	WHITE_COLOR = 0,

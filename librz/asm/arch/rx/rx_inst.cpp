@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2024 heersin <teablearcher@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "rx_inst.h"
+#include "rx_inst.hpp"
 
 #define AssignOpVar(vid, field, expr) \
 	{ \

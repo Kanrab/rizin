@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2022 GustavoLCR <gugulcr@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "common_winkd.h"
-#include <bin/pdb/pdb_downloader.h>
+#include "common_winkd.hpp"
+#include <bin/pdb/pdb_downloader.hpp>
 
 void winkd_build_profile(WindCtx *ctx, RzTypeDB *db) {
 	ctx->profile = RZ_NEW0(Profile);

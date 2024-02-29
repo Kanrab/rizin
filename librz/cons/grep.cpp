@@ -2,9 +2,9 @@
 // SPDX-FileCopyrightText: 2009-2020 nibble <nibble.ds@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_cons.h>
-#include <rz_util/rz_print.h>
-#include <sdb.h>
+#include <rz_cons.hpp>
+#include <rz_util/rz_print.hpp>
+#include <sdb.hpp>
 
 #define I(x) rz_cons_singleton()->x
 
@@ -562,7 +562,7 @@ RZ_API void rz_cons_grepbuf(void) {
 			};
 			char *bb = strdup(buf);
 			rz_str_ansi_filter(bb, NULL, NULL, -1);
-			char *out = (cons->context->grep.human)
+			char *out = (cons->context->grep.hppuman)
 				? rz_print_json_human(bb)
 				: rz_print_json_indent(bb, I(context->color_mode), "  ", palette);
 			free(bb);

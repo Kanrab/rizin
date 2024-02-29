@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2022 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "thread.h"
+#include "thread.hpp"
 
 #ifdef __APPLE__
 #define RZ_SEM_NAMED_ONLY   1
@@ -12,7 +12,7 @@
 #endif
 
 #if RZ_SEM_NAMED_ONLY
-#include <uuid/uuid.h>
+#include <uuid/uuid.hpp>
 #include <limits.h>
 #endif
 

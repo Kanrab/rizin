@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: 2019 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
-#include <rz_cons.h>
-#include <rz_windows.h>
-#include "../core_private.h"
-#include "modes.h"
+#include <rz_core.hpp>
+#include <rz_cons.hpp>
+#include <rz_windows.hpp>
+#include "../core_private.hpp"
+#include "modes.hpp"
 
 static void prompt_read(const char *p, char *buf, int buflen) {
 	if (!buf || buflen < 1) {

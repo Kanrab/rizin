@@ -1,4 +1,4 @@
-### bcrypt.h ###
+### bcrypt.hpp ###
 
 BCryptAddContextFunction=func
 func.BCryptAddContextFunction.args=5

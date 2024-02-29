@@ -3,8 +3,8 @@
 
 #include <stdlib.h>
 #include <string.h>
-#include <rz_util.h>
-#include "./x509.h"
+#include <rz_util.hpp>
+#include "./x509.hpp"
 
 static bool pkcs7_attributes_parse(RzPKCS7Attributes *attribute, RzASN1Object *object);
 

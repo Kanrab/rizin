@@ -2,13 +2,13 @@
 // SPDX-FileCopyrightText: 2021 Basstorm <basstorm@nyist.edu.cn>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bin.h>
-#include <rz_type.h>
+#include <rz_bin.hpp>
+#include <rz_type.hpp>
 #include <string.h>
-#include <rz_demangler.h>
-#include <mspack.h>
+#include <rz_demangler.hpp>
+#include <mspack.hpp>
 
-#include "pdb.h"
+#include "pdb.hpp"
 
 static bool pdb_stream_parse(RzPdb *pdb, RzPdbMsfStream *stream) {
 	if (!pdb || !stream) {

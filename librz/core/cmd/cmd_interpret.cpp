@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2020 ret2libc <sirmy15@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_cmd.h>
-#include <rz_core.h>
-#include <cmd_descs.h>
-#include "../core_private.h"
+#include <rz_cmd.hpp>
+#include <rz_core.hpp>
+#include <cmd_descs.hpp>
+#include "../core_private.hpp"
 
 RZ_IPI RzCmdStatus rz_interpret_handler(RzCore *core, int argc, const char **argv) {
 	if (argc == 1) {

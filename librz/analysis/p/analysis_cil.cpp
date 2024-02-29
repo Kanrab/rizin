@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2022 wingdeans <wingdeans@protonmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
-#include "../../asm/arch/cil/cil_dis.h"
+#include <rz_analysis.hpp>
+#include "../../asm/arch/cil/cil_dis.hpp"
 
 /**
  * Resolves InlineMethod token to paddr

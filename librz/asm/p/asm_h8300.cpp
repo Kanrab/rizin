@@ -3,10 +3,10 @@
 
 #include <stdio.h>
 #include <string.h>
-#include <rz_types.h>
-#include <rz_lib.h>
-#include <rz_asm.h>
-#include <h8300_disas.h>
+#include <rz_types.hpp>
+#include <rz_lib.hpp>
+#include <rz_asm.hpp>
+#include <h8300_disas.hpp>
 
 static int disassemble(RzAsm *a, RzAsmOp *op, const ut8 *buf, int len) {
 	struct h8300_cmd cmd;

@@ -5,13 +5,13 @@
 /*
 https://www.3dbrew.org/wiki/FIRM
 More formats to support: https://www.3dbrew.org/wiki/Category:File_formats
-https://github.com/LumaTeam/Luma3DS/blob/master/arm9/source/3dsheaders.h
+https://github.com/LumaTeam/Luma3DS/blob/master/arm9/source/3dsheaders.hpp
 */
 
 #ifndef NIN_N3DS_H
 #define NIN_N3DS_H
 
-#include <rz_types_base.h>
+#include <rz_types_base.hpp>
 
 enum {
 	N3DS_COPY_MODE_NDMA = 0,

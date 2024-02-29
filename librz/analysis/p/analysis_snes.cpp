@@ -2,12 +2,12 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <string.h>
-#include <rz_types.h>
-#include <rz_lib.h>
-#include <rz_asm.h>
-#include <rz_analysis.h>
-#include "../../asm/arch/snes/snes_op_table.h"
-#include "../../asm/p/asm_snes.h"
+#include <rz_types.hpp>
+#include <rz_lib.hpp>
+#include <rz_asm.hpp>
+#include <rz_analysis.hpp>
+#include "../../asm/arch/snes/snes_op_table.hpp"
+#include "../../asm/p/asm_snes.hpp"
 
 static int snes_anop(RzAnalysis *analysis, RzAnalysisOp *op, ut64 addr, const ut8 *data, int len, RzAnalysisOpMask mask) {
 	struct snes_asm_flags *snesflags = (struct snes_asm_flags *)analysis->plugin_data;

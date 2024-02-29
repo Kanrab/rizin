@@ -3,9 +3,9 @@
 // SPDX-FileCopyrightText: 2014-2018 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_windows.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_windows.hpp>
 
 #define UTF_LAST_BLOCK                (281)
 #define UTF_BLOCKS_COUNT              RZ_ARRAY_SIZE(utf_blocks)

@@ -6,17 +6,17 @@
 // this file was based on analysis_i8080.c
 
 #include <string.h>
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_asm.h>
-#include <rz_analysis.h>
-#include <rz_reg.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_asm.hpp>
+#include <rz_analysis.hpp>
+#include <rz_reg.hpp>
 #define GB_DIS_LEN_ONLY
 #include "../../asm/arch/gb/gbdis.c"
-#include "../arch/gb/gb_makros.h"
+#include "../arch/gb/gb_makros.hpp"
 #include "../arch/gb/meta_gb_cmt.c"
 #include "../arch/gb/gb_il.inc"
-#include <gb.h>
+#include <gb.hpp>
 
 // lookup tables for disassembly
 static const char *regs_1[] = { "Z", "N", "H", "C" };

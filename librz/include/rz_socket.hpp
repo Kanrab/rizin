@@ -1,9 +1,9 @@
 #ifndef RZ_SOCKET_H
 #define RZ_SOCKET_H
 
-#include "rz_types.h"
-#include "rz_bind.h"
-#include "rz_list.h"
+#include "rz_types.hpp"
+#include "rz_bind.hpp"
+#include "rz_list.hpp"
 
 #ifdef __cplusplus
 extern "C" {
@@ -20,16 +20,16 @@ RZ_LIB_VERSION_HEADER(rz_socket);
 #include <sys/socket.h>
 #include <sys/wait.h>
 #elif __WINDOWS__
-#include <rz_windows.h>
+#include <rz_windows.hpp>
 #endif
 
 #if HAVE_LIB_SSL
-#include <openssl/ssl.h>
-#include <openssl/err.h>
+#include <openssl/ssl.hpp>
+#include <openssl/err.hpp>
 #endif
 
 #if __UNIX__
-#include <netinet/tcp.h>
+#include <netinet/tcp.hpp>
 #endif
 
 /* For the Mingw-W64 toolchain */

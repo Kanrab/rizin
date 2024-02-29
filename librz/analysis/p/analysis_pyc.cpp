@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: 2016-2020 FXTi <zjxiang1998@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_lib.h>
-#include <rz_util.h>
-#include <rz_asm.h>
+#include <rz_types.hpp>
+#include <rz_lib.hpp>
+#include <rz_util.hpp>
+#include <rz_asm.hpp>
 
-#include "../../asm/arch/pyc/pyc_dis.h"
+#include "../../asm/arch/pyc/pyc_dis.hpp"
 
 #define JMP_OFFSET(ops, v) ((ops)->jump_use_instruction_offset ? (v)*2 : (v))
 

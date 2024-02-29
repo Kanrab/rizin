@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2008-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
+#include <rz_util.hpp>
 
-// TODO: use rz_list instead of list.h
+// TODO: use rz_list instead of list.hpp
 // TODO: redesign this api.. why? :)
 // TODO: add tags to ranges
 

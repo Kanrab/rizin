@@ -1,13 +1,13 @@
 // SPDX-FileCopyrightText: 2009-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_list.h>
-#include <rz_util/rz_log.h>
-#include <rz_util/rz_str.h>
-#include <rz_reg.h>
-#include <rz_util.h>
-#include <rz_util/rz_assert.h>
-#include <rz_lib.h>
+#include <rz_list.hpp>
+#include <rz_util/rz_log.hpp>
+#include <rz_util/rz_str.hpp>
+#include <rz_reg.hpp>
+#include <rz_util.hpp>
+#include <rz_util/rz_assert.hpp>
+#include <rz_lib.hpp>
 #include <string.h>
 
 #define GDB_NAME_SZ   16
@@ -352,14 +352,14 @@ static void add_item_to_regset(RZ_BORROW RzReg *reg, RZ_BORROW RzRegItem *item) 
 	if (!reg->regset[t].regs) {
 		reg->regset[t].regs = rz_list_newf((RzListFree)rz_reg_item_free);
 	}
-	if (!reg->regset[t].ht_regs) {
-		reg->regset[t].ht_regs = ht_pp_new0();
+	if (!reg->regset[t].hppt_regs) {
+		reg->regset[t].hppt_regs = ht_pp_new0();
 	}
 
 	// Dynamically update the list of supported bit sizes
 	reg->bits |= item->size;
 	rz_list_append(reg->regset[t].regs, item);
-	ht_pp_insert(reg->regset[t].ht_regs, item->name, item);
+	ht_pp_insert(reg->regset[t].hppt_regs, item->name, item);
 
 	// Update the overall type of registers into a regset
 	if (item->type == RZ_REG_TYPE_ANY) {

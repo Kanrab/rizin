@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2020 eagleoflqj <liumeo@pku.edu.cn>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_lib.h>
-#include "../binutils_as.h"
+#include <rz_lib.hpp>
+#include "../binutils_as.hpp"
 
 #define ASSEMBLER "RZ_PPC_AS"
 

@@ -3,10 +3,10 @@
 // SPDX-FileCopyrightText: 2016-2020 l0stb1t
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_io.h>
-#include <rz_bin.h>
-#include "marshal.h"
-#include "pyc_magic.h"
+#include <rz_io.hpp>
+#include <rz_bin.hpp>
+#include "marshal.hpp"
+#include "pyc_magic.hpp"
 
 // avoiding using rizin internals asserts
 #define if_true_return(cond, ret) \

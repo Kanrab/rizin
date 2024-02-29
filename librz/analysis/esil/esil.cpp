@@ -2,10 +2,10 @@
 // SPDX-FileCopyrightText: 2014-2021 condret <condr3t@protonmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_bind.h>
+#include <rz_analysis.hpp>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_bind.hpp>
 
 #define FLG(x) RZ_ANALYSIS_ESIL_FLAG_##x
 #define cpuflag(x, y) \
@@ -246,8 +246,8 @@ RZ_API int rz_analysis_esil_mem_read(RzAnalysisEsil *esil, ut64 addr, ut8 *buf, 
 	int ret = 0;
 	rz_return_val_if_fail(buf && esil, 0);
 	addr &= esil->addrmask;
-	if (esil->cb.hook_mem_read) {
-		ret = esil->cb.hook_mem_read(esil, addr, buf, len);
+	if (esil->cb.hppook_mem_read) {
+		ret = esil->cb.hppook_mem_read(esil, addr, buf, len);
 	}
 	if (!ret && esil->cb.mem_read) {
 		ret = esil->cb.mem_read(esil, addr, buf, len);
@@ -318,8 +318,8 @@ RZ_API int rz_analysis_esil_mem_write(RzAnalysisEsil *esil, ut64 addr, const ut8
 	rz_return_val_if_fail(esil && buf, 0);
 	int ret = 0;
 	addr &= esil->addrmask;
-	if (esil->cb.hook_mem_write) {
-		ret = esil->cb.hook_mem_write(esil, addr, buf, len);
+	if (esil->cb.hppook_mem_write) {
+		ret = esil->cb.hppook_mem_write(esil, addr, buf, len);
 	}
 	if (!ret && esil->cb.mem_write) {
 		ret = esil->cb.mem_write(esil, addr, buf, len);
@@ -460,8 +460,8 @@ RZ_API int rz_analysis_esil_get_parm(RzAnalysisEsil *esil, const char *str, ut64
 
 RZ_API int rz_analysis_esil_reg_write(RzAnalysisEsil *esil, const char *dst, ut64 num) {
 	int ret = 0;
-	if (esil && esil->cb.hook_reg_write) {
-		ret = esil->cb.hook_reg_write(esil, dst, &num);
+	if (esil && esil->cb.hppook_reg_write) {
+		ret = esil->cb.hppook_reg_write(esil, dst, &num);
 	}
 	if (!ret && esil && esil->cb.reg_write) {
 		ret = esil->cb.reg_write(esil, dst, num);
@@ -471,10 +471,10 @@ RZ_API int rz_analysis_esil_reg_write(RzAnalysisEsil *esil, const char *dst, ut6
 
 RZ_API int rz_analysis_esil_reg_read_nocallback(RzAnalysisEsil *esil, const char *regname, ut64 *num, int *size) {
 	int ret;
-	void *old_hook_reg_read = (void *)esil->cb.hook_reg_read;
-	esil->cb.hook_reg_read = NULL;
+	void *old_hook_reg_read = (void *)esil->cb.hppook_reg_read;
+	esil->cb.hppook_reg_read = NULL;
 	ret = rz_analysis_esil_reg_read(esil, regname, num, size);
-	esil->cb.hook_reg_read = old_hook_reg_read;
+	esil->cb.hppook_reg_read = old_hook_reg_read;
 	return ret;
 }
 
@@ -491,8 +491,8 @@ RZ_API int rz_analysis_esil_reg_read(RzAnalysisEsil *esil, const char *regname, 
 	if (size) {
 		*size = esil->analysis->bits;
 	}
-	if (esil->cb.hook_reg_read) {
-		ret = esil->cb.hook_reg_read(esil, regname, num, size);
+	if (esil->cb.hppook_reg_read) {
+		ret = esil->cb.hppook_reg_read(esil, regname, num, size);
 	}
 	if (!ret && esil->cb.reg_read) {
 		ret = esil->cb.reg_read(esil, regname, num, size);
@@ -619,7 +619,7 @@ static bool esil_bf(RzAnalysisEsil *esil) {
 
 static bool esil_pf(RzAnalysisEsil *esil) {
 	// Set if the number of set bits in the least significant _byte_ is a multiple of 2.
-	//   - Taken from: https://graphics.stanford.edu/~seander/bithacks.html#ParityWith64Bits
+	//   - Taken from: https://graphics.stanford.edu/~seander/bithacks.hpptml#ParityWith64Bits
 	const ut64 c1 = 0x0101010101010101ULL;
 	const ut64 c2 = 0x8040201008040201ULL;
 	const ut64 c3 = 0x1FF;
@@ -1819,10 +1819,10 @@ static bool esil_poke_n(RzAnalysisEsil *esil, int bits) {
 			}
 			// this is a internal peek performed before a poke
 			// we disable hooks to avoid run hooks on internal peeks
-			void *oldhook = (void *)esil->cb.hook_mem_read;
-			esil->cb.hook_mem_read = NULL;
+			void *oldhook = (void *)esil->cb.hppook_mem_read;
+			esil->cb.hppook_mem_read = NULL;
 			rz_analysis_esil_mem_read(esil, addr, b, bytes);
-			esil->cb.hook_mem_read = oldhook;
+			esil->cb.hppook_mem_read = oldhook;
 			n = rz_read_ble64(b, esil->analysis->big_endian);
 			esil->old = n;
 			esil->cur = num;
@@ -2870,8 +2870,8 @@ static bool runword(RzAnalysisEsil *esil, const char *word) {
 	if (iscommand(esil, word, &op)) {
 		// run action
 		if (op) {
-			if (esil->cb.hook_command) {
-				if (esil->cb.hook_command(esil, word)) {
+			if (esil->cb.hppook_command) {
+				if (esil->cb.hppook_command(esil, word)) {
 					return 1; // XXX cannot return != 1
 				}
 			}

@@ -1,15 +1,15 @@
 /**
- * \file rz_float.h
+ * \file rz_float.hpp
  * rizin's float representation based on bitvector
  * current design targets the IEEE-754 float format implementation
  * take berkeley softfloat algorithm as a ref
- * ref : http://www.jhauser.us/arithmetic/SoftFloat.html
+ * ref : http://www.jhauser.us/arithmetic/SoftFloat.hpptml
  */
 
 #ifndef RZ_FLOAT_H
 #define RZ_FLOAT_H
-#include <rz_types.h>
-#include <rz_util/rz_bitvector.h>
+#include <rz_types.hpp>
+#include <rz_util/rz_bitvector.hpp>
 
 /**
  *

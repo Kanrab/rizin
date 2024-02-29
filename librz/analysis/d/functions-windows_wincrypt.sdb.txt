@@ -1,4 +1,4 @@
-### wincrypt.h ###
+### wincrypt.hpp ###
 
 CertAddCRLContextToStore=func
 func.CertAddCRLContextToStore.args=4

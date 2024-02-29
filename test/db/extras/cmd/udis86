@@ -9,7 +9,7 @@ aa
 pd 1 @ 0x0040050a
 EOF
 EXPECT=<<EOF
-|           0x0040050a      bfc4054000     mov edi, str.Hello_World    ; 0x4005c4 ; "Hello World"
+|           0x0040050a      bfc4054000     mov edi, str.hppello_World    ; 0x4005c4 ; "Hello World"
 EOF
 RUN
 
@@ -86,10 +86,10 @@ e analysis.arch=x86.udis
 e scr.color=false
 e scr.wheel=false
 aa
-axt @ str.Hello_World
+axt @ str.hppello_World
 EOF
 EXPECT=<<EOF
-sym.main 0x40050a [data] mov edi, str.Hello_World
+sym.main 0x40050a [data] mov edi, str.hppello_World
 EOF
 RUN
 

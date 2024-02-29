@@ -4,8 +4,8 @@
 
 #ifndef RZ_DEMANGLER_H
 #define RZ_DEMANGLER_H
-#include <rz_types.h>
-#include <rz_list.h>
+#include <rz_types.hpp>
+#include <rz_list.hpp>
 
 #ifdef __cplusplus
 extern "C" {

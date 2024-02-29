@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2021 RizinOrg <info@rizin.re>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "elf.h"
+#include "elf.hpp"
 
 static bool get_phdr_entry(ELFOBJ *bin, Elf_(Phdr) * segment, ut64 offset) {
 	if (!Elf_(rz_bin_elf_read_word)(bin, &offset, &segment->p_type) ||

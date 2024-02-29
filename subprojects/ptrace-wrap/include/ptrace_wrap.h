@@ -4,9 +4,9 @@
 #ifndef PTRACE_WRAP_H
 #define PTRACE_WRAP_H
 
-#include <pthread.h>
-#include <semaphore.h>
-#include <sys/ptrace.h>
+#include <pthread.hpp>
+#include <semaphore.hpp>
+#include <sys/ptrace.hpp>
 
 #ifdef __GLIBC__
 typedef enum __ptrace_request ptrace_wrap_ptrace_request;

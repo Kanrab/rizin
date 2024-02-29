@@ -3,8 +3,8 @@
 #endif
 
 #if defined(__ELF__) && defined(__CET__) && defined(__has_include)
-#if __has_include(<cet.h>)
-#include <cet.h>
+#if __has_include(<cet.hpp>)
+#include <cet.hpp>
 #endif
 #endif
 

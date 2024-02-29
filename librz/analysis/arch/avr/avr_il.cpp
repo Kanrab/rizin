@@ -2,8 +2,8 @@
 // SPDX-FileCopyrightText: 2021-2022 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "avr_il.h"
-#include <rz_il/rz_il_opbuilder_begin.h>
+#include "avr_il.hpp"
+#include <rz_il/rz_il_opbuilder_begin.hpp>
 
 /** \file avr_il.c
  * Converts AVR instructions into RzIL statements
@@ -3019,7 +3019,7 @@ static RzILOpEffect *avr_il_xch(AVROp *aop, AVROp *next_op, ut64 pc, RzAnalysis 
 	return SEQ3(let, set, store);
 }
 
-#include <rz_il/rz_il_opbuilder_end.h>
+#include <rz_il/rz_il_opbuilder_end.hpp>
 
 typedef RzILOpEffect *(*avr_il_op)(AVROp *aop, AVROp *next_op, ut64 pc, RzAnalysis *analysis);
 

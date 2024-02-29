@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2022 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_th.h>
-#include "thread.h"
+#include <rz_th.hpp>
+#include "thread.hpp"
 
 /**
  * \brief RzThreadQueue is a thread-safe queue that can be listened on from multiple threads.

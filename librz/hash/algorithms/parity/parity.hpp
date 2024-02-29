@@ -4,7 +4,7 @@
 #ifndef RZ_PARITY_H
 #define RZ_PARITY_H
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 #define RZ_HASH_PARITY_DIGEST_SIZE  1
 #define RZ_HASH_PARITY_BLOCK_LENGTH 0

@@ -4,9 +4,9 @@
 #ifndef RZ_PROJECT_H
 #define RZ_PROJECT_H
 
-#include <rz_util/rz_serialize.h>
-#include <rz_core.h>
-#include <sdb.h>
+#include <rz_util/rz_serialize.hpp>
+#include <rz_core.hpp>
+#include <sdb.hpp>
 
 #ifdef __cplusplus
 extern "C" {

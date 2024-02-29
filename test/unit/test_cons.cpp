@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_cons.h>
-#include "minunit.h"
+#include <rz_cons.hpp>
+#include "minunit.hpp"
 
 bool test_rz_cons() {
 	// NOTE: not initializing a value here results in UB

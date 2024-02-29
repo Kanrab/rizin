@@ -84,7 +84,7 @@ extern "C" {
 #include <stdbool.h>
 #include <stdint.h>
 #include <limits.h>
-#include <strings.h>
+#include <strings.hpp>
 
 #define	JEMALLOC_VERSION "4.5.0-0-g04380e79f1e2428bd0ad000bbc6e3d2dfc6b66a5"
 #define	JEMALLOC_VERSION_MAJOR 4
@@ -188,7 +188,7 @@ extern "C" {
 /*
  * The je_ prefix on the following public symbol declarations is an artifact
  * of namespace management, and should be omitted in application code unless
- * JEMALLOC_NO_DEMANGLE is defined (see jemalloc_mangle.h).
+ * JEMALLOC_NO_DEMANGLE is defined (see jemalloc_mangle.hpp).
  */
 extern JEMALLOC_EXPORT const char	*je_malloc_conf;
 extern JEMALLOC_EXPORT void		(*je_malloc_message)(void *cbopaque,

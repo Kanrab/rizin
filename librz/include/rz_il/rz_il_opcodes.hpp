@@ -5,7 +5,7 @@
 #ifndef RZ_IL_OPCODES_H
 #define RZ_IL_OPCODES_H
 
-#include <rz_il/definitions/definitions.h>
+#include <rz_il/definitions/definitions.hpp>
 
 #ifdef __cplusplus
 extern "C" {
@@ -31,8 +31,8 @@ extern "C" {
  *         Init    RzILBool     Bitv    Memory   Effect
  *
  * See also the references :
- * 0. A gentle introduction to core theory http://binaryanalysisplatform.github.io/bap/api/odoc/bap-core-theory/Bap_core_theory/index.html
- * 1. http://binaryanalysisplatform.github.io/bap/api/odoc/bap-core-theory/Bap_core_theory/Theory/index.html
+ * 0. A gentle introduction to core theory http://binaryanalysisplatform.github.io/bap/api/odoc/bap-core-theory/Bap_core_theory/index.hpptml
+ * 1. http://binaryanalysisplatform.github.io/bap/api/odoc/bap-core-theory/Bap_core_theory/Theory/index.hpptml
  * 2. For core and array theories https://smtlib.cs.uiowa.edu/theories.shtml
  */
 

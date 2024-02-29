@@ -2,15 +2,15 @@
 // SPDX-FileCopyrightText: 2009-2019 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_bin.h>
-#include <rz_core.h>
-#include "../i/private.h"
-#include "mach0/mach0.h"
-#include "objc/mach0_classes.h"
-#include <rz_util/ht_uu.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_bin.hpp>
+#include <rz_core.hpp>
+#include "../i/private.hpp"
+#include "mach0/mach0.hpp"
+#include "objc/mach0_classes.hpp"
+#include <rz_util/ht_uu.hpp>
 
 // wip settings
 
@@ -834,7 +834,7 @@ RzBinPlugin rz_bin_plugin_mach0 = {
 	.imports = &imports,
 	.size = &size,
 	.info = &info,
-	.header = MACH0_(mach_headerfields),
+	.hppeader = MACH0_(mach_headerfields),
 	.fields = MACH0_(mach_fields),
 	.libs = &libs,
 	.relocs = &relocs,

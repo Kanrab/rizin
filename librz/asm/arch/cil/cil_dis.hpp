@@ -4,7 +4,7 @@
 #ifndef CIL_ASM_H
 #define CIL_ASM_H
 
-#include <rz_util/rz_strbuf.h>
+#include <rz_util/rz_strbuf.hpp>
 
 // eg. OPCODE_SINGLE(CIL_OP_NOP, "nop", InlineNone, 0x00, NEXT)
 // ->

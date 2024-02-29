@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2020 FXTi <zjxiang1998@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "opcode.h"
+#include "opcode.hpp"
 
 const char *format_extended_arg(ut32 oparg) {
 	return rz_str_newf("%u", oparg * (1 << 16));

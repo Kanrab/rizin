@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2020 GustavoLCR <gugulcr@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_skyline.h>
+#include <rz_skyline.hpp>
 
 #define CMP_BEGIN_GTE_PART(addr, part) \
 	(((addr) > (rz_itv_begin(((RzSkylineItem *)(part))->itv))) - ((addr) < (rz_itv_begin(((RzSkylineItem *)(part))->itv))))

@@ -4,11 +4,11 @@
 #ifndef MZ_H
 #define MZ_H
 
-#include <rz_types.h>
-#include <rz_list.h>
-#include <rz_util.h>
-#include <rz_bin.h>
-#include "mz_specs.h"
+#include <rz_types.hpp>
+#include <rz_list.hpp>
+#include <rz_util.hpp>
+#include <rz_bin.hpp>
+#include "mz_specs.hpp"
 
 struct rz_bin_mz_segment_t {
 	ut64 paddr;

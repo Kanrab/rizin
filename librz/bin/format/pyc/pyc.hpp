@@ -5,12 +5,12 @@
 #ifndef PYC_H
 #define PYC_H
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_bin.h>
-#include "pyc_magic.h"
-#include "marshal.h"
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_bin.hpp>
+#include "pyc_magic.hpp"
+#include "marshal.hpp"
 
 bool pyc_get_sections_symbols(RzBinPycObj *pyc, RzPVector /*<RzBinSection *>*/ *sections, RzPVector /*<RzBinSymbol *>*/ *symbols, RzList /*<pyc_code_object *>*/ *mem, RzBuffer *buf, ut32 magic);
 bool pyc_is_code(ut8 b, ut32 magic);

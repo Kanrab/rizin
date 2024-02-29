@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2009-2021 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
-#include <rz_demangler.h>
-#include "config.h"
+#include <rz_core.hpp>
+#include <rz_demangler.hpp>
+#include "config.hpp"
 
 #define CB(x, y) \
 	static bool lib_##x##_cb(RzLibPlugin *pl, void *user, void *data) { \

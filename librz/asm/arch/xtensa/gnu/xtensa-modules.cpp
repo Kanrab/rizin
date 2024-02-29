@@ -21,9 +21,9 @@
 #ifndef ATTRIBUTE_UNUSED
 #define ATTRIBUTE_UNUSED
 #endif
-//#include "ansidecl.h"
-#include "../../include/xtensa-isa.h"
-#include "../../include/xtensa-isa-internal.h"
+//#include "ansidecl.hpp"
+#include "../../include/xtensa-isa.hpp"
+#include "../../include/xtensa-isa-internal.hpp"
 
 /* Sysregs.  */
 
@@ -16055,157 +16055,157 @@ static xtensa_opcode_internal opcodes[] = {
   { "mul.aa.ll", 184 /* xt_iclass_mac16_aa */,
     0,
     Opcode_mul_aa_ll_encode_fns, 0, 0 },
-  { "mul.aa.hl", 184 /* xt_iclass_mac16_aa */,
+  { "mul.aa.hppl", 184 /* xt_iclass_mac16_aa */,
     0,
     Opcode_mul_aa_hl_encode_fns, 0, 0 },
   { "mul.aa.lh", 184 /* xt_iclass_mac16_aa */,
     0,
     Opcode_mul_aa_lh_encode_fns, 0, 0 },
-  { "mul.aa.hh", 184 /* xt_iclass_mac16_aa */,
+  { "mul.aa.hpph", 184 /* xt_iclass_mac16_aa */,
     0,
     Opcode_mul_aa_hh_encode_fns, 0, 0 },
   { "umul.aa.ll", 184 /* xt_iclass_mac16_aa */,
     0,
     Opcode_umul_aa_ll_encode_fns, 0, 0 },
-  { "umul.aa.hl", 184 /* xt_iclass_mac16_aa */,
+  { "umul.aa.hppl", 184 /* xt_iclass_mac16_aa */,
     0,
     Opcode_umul_aa_hl_encode_fns, 0, 0 },
   { "umul.aa.lh", 184 /* xt_iclass_mac16_aa */,
     0,
     Opcode_umul_aa_lh_encode_fns, 0, 0 },
-  { "umul.aa.hh", 184 /* xt_iclass_mac16_aa */,
+  { "umul.aa.hpph", 184 /* xt_iclass_mac16_aa */,
     0,
     Opcode_umul_aa_hh_encode_fns, 0, 0 },
   { "mul.ad.ll", 185 /* xt_iclass_mac16_ad */,
     0,
     Opcode_mul_ad_ll_encode_fns, 0, 0 },
-  { "mul.ad.hl", 185 /* xt_iclass_mac16_ad */,
+  { "mul.ad.hppl", 185 /* xt_iclass_mac16_ad */,
     0,
     Opcode_mul_ad_hl_encode_fns, 0, 0 },
   { "mul.ad.lh", 185 /* xt_iclass_mac16_ad */,
     0,
     Opcode_mul_ad_lh_encode_fns, 0, 0 },
-  { "mul.ad.hh", 185 /* xt_iclass_mac16_ad */,
+  { "mul.ad.hpph", 185 /* xt_iclass_mac16_ad */,
     0,
     Opcode_mul_ad_hh_encode_fns, 0, 0 },
   { "mul.da.ll", 186 /* xt_iclass_mac16_da */,
     0,
     Opcode_mul_da_ll_encode_fns, 0, 0 },
-  { "mul.da.hl", 186 /* xt_iclass_mac16_da */,
+  { "mul.da.hppl", 186 /* xt_iclass_mac16_da */,
     0,
     Opcode_mul_da_hl_encode_fns, 0, 0 },
   { "mul.da.lh", 186 /* xt_iclass_mac16_da */,
     0,
     Opcode_mul_da_lh_encode_fns, 0, 0 },
-  { "mul.da.hh", 186 /* xt_iclass_mac16_da */,
+  { "mul.da.hpph", 186 /* xt_iclass_mac16_da */,
     0,
     Opcode_mul_da_hh_encode_fns, 0, 0 },
   { "mul.dd.ll", 187 /* xt_iclass_mac16_dd */,
     0,
     Opcode_mul_dd_ll_encode_fns, 0, 0 },
-  { "mul.dd.hl", 187 /* xt_iclass_mac16_dd */,
+  { "mul.dd.hppl", 187 /* xt_iclass_mac16_dd */,
     0,
     Opcode_mul_dd_hl_encode_fns, 0, 0 },
   { "mul.dd.lh", 187 /* xt_iclass_mac16_dd */,
     0,
     Opcode_mul_dd_lh_encode_fns, 0, 0 },
-  { "mul.dd.hh", 187 /* xt_iclass_mac16_dd */,
+  { "mul.dd.hpph", 187 /* xt_iclass_mac16_dd */,
     0,
     Opcode_mul_dd_hh_encode_fns, 0, 0 },
   { "mula.aa.ll", 188 /* xt_iclass_mac16a_aa */,
     0,
     Opcode_mula_aa_ll_encode_fns, 0, 0 },
-  { "mula.aa.hl", 188 /* xt_iclass_mac16a_aa */,
+  { "mula.aa.hppl", 188 /* xt_iclass_mac16a_aa */,
     0,
     Opcode_mula_aa_hl_encode_fns, 0, 0 },
   { "mula.aa.lh", 188 /* xt_iclass_mac16a_aa */,
     0,
     Opcode_mula_aa_lh_encode_fns, 0, 0 },
-  { "mula.aa.hh", 188 /* xt_iclass_mac16a_aa */,
+  { "mula.aa.hpph", 188 /* xt_iclass_mac16a_aa */,
     0,
     Opcode_mula_aa_hh_encode_fns, 0, 0 },
   { "muls.aa.ll", 188 /* xt_iclass_mac16a_aa */,
     0,
     Opcode_muls_aa_ll_encode_fns, 0, 0 },
-  { "muls.aa.hl", 188 /* xt_iclass_mac16a_aa */,
+  { "muls.aa.hppl", 188 /* xt_iclass_mac16a_aa */,
     0,
     Opcode_muls_aa_hl_encode_fns, 0, 0 },
   { "muls.aa.lh", 188 /* xt_iclass_mac16a_aa */,
     0,
     Opcode_muls_aa_lh_encode_fns, 0, 0 },
-  { "muls.aa.hh", 188 /* xt_iclass_mac16a_aa */,
+  { "muls.aa.hpph", 188 /* xt_iclass_mac16a_aa */,
     0,
     Opcode_muls_aa_hh_encode_fns, 0, 0 },
   { "mula.ad.ll", 189 /* xt_iclass_mac16a_ad */,
     0,
     Opcode_mula_ad_ll_encode_fns, 0, 0 },
-  { "mula.ad.hl", 189 /* xt_iclass_mac16a_ad */,
+  { "mula.ad.hppl", 189 /* xt_iclass_mac16a_ad */,
     0,
     Opcode_mula_ad_hl_encode_fns, 0, 0 },
   { "mula.ad.lh", 189 /* xt_iclass_mac16a_ad */,
     0,
     Opcode_mula_ad_lh_encode_fns, 0, 0 },
-  { "mula.ad.hh", 189 /* xt_iclass_mac16a_ad */,
+  { "mula.ad.hpph", 189 /* xt_iclass_mac16a_ad */,
     0,
     Opcode_mula_ad_hh_encode_fns, 0, 0 },
   { "muls.ad.ll", 189 /* xt_iclass_mac16a_ad */,
     0,
     Opcode_muls_ad_ll_encode_fns, 0, 0 },
-  { "muls.ad.hl", 189 /* xt_iclass_mac16a_ad */,
+  { "muls.ad.hppl", 189 /* xt_iclass_mac16a_ad */,
     0,
     Opcode_muls_ad_hl_encode_fns, 0, 0 },
   { "muls.ad.lh", 189 /* xt_iclass_mac16a_ad */,
     0,
     Opcode_muls_ad_lh_encode_fns, 0, 0 },
-  { "muls.ad.hh", 189 /* xt_iclass_mac16a_ad */,
+  { "muls.ad.hpph", 189 /* xt_iclass_mac16a_ad */,
     0,
     Opcode_muls_ad_hh_encode_fns, 0, 0 },
   { "mula.da.ll", 190 /* xt_iclass_mac16a_da */,
     0,
     Opcode_mula_da_ll_encode_fns, 0, 0 },
-  { "mula.da.hl", 190 /* xt_iclass_mac16a_da */,
+  { "mula.da.hppl", 190 /* xt_iclass_mac16a_da */,
     0,
     Opcode_mula_da_hl_encode_fns, 0, 0 },
   { "mula.da.lh", 190 /* xt_iclass_mac16a_da */,
     0,
     Opcode_mula_da_lh_encode_fns, 0, 0 },
-  { "mula.da.hh", 190 /* xt_iclass_mac16a_da */,
+  { "mula.da.hpph", 190 /* xt_iclass_mac16a_da */,
     0,
     Opcode_mula_da_hh_encode_fns, 0, 0 },
   { "muls.da.ll", 190 /* xt_iclass_mac16a_da */,
     0,
     Opcode_muls_da_ll_encode_fns, 0, 0 },
-  { "muls.da.hl", 190 /* xt_iclass_mac16a_da */,
+  { "muls.da.hppl", 190 /* xt_iclass_mac16a_da */,
     0,
     Opcode_muls_da_hl_encode_fns, 0, 0 },
   { "muls.da.lh", 190 /* xt_iclass_mac16a_da */,
     0,
     Opcode_muls_da_lh_encode_fns, 0, 0 },
-  { "muls.da.hh", 190 /* xt_iclass_mac16a_da */,
+  { "muls.da.hpph", 190 /* xt_iclass_mac16a_da */,
     0,
     Opcode_muls_da_hh_encode_fns, 0, 0 },
   { "mula.dd.ll", 191 /* xt_iclass_mac16a_dd */,
     0,
     Opcode_mula_dd_ll_encode_fns, 0, 0 },
-  { "mula.dd.hl", 191 /* xt_iclass_mac16a_dd */,
+  { "mula.dd.hppl", 191 /* xt_iclass_mac16a_dd */,
     0,
     Opcode_mula_dd_hl_encode_fns, 0, 0 },
   { "mula.dd.lh", 191 /* xt_iclass_mac16a_dd */,
     0,
     Opcode_mula_dd_lh_encode_fns, 0, 0 },
-  { "mula.dd.hh", 191 /* xt_iclass_mac16a_dd */,
+  { "mula.dd.hpph", 191 /* xt_iclass_mac16a_dd */,
     0,
     Opcode_mula_dd_hh_encode_fns, 0, 0 },
   { "muls.dd.ll", 191 /* xt_iclass_mac16a_dd */,
     0,
     Opcode_muls_dd_ll_encode_fns, 0, 0 },
-  { "muls.dd.hl", 191 /* xt_iclass_mac16a_dd */,
+  { "muls.dd.hppl", 191 /* xt_iclass_mac16a_dd */,
     0,
     Opcode_muls_dd_hl_encode_fns, 0, 0 },
   { "muls.dd.lh", 191 /* xt_iclass_mac16a_dd */,
     0,
     Opcode_muls_dd_lh_encode_fns, 0, 0 },
-  { "muls.dd.hh", 191 /* xt_iclass_mac16a_dd */,
+  { "muls.dd.hpph", 191 /* xt_iclass_mac16a_dd */,
     0,
     Opcode_muls_dd_hh_encode_fns, 0, 0 },
   { "mula.da.ll.lddec", 192 /* xt_iclass_mac16al_da */,
@@ -16214,10 +16214,10 @@ static xtensa_opcode_internal opcodes[] = {
   { "mula.da.ll.ldinc", 192 /* xt_iclass_mac16al_da */,
     0,
     Opcode_mula_da_ll_ldinc_encode_fns, 0, 0 },
-  { "mula.da.hl.lddec", 192 /* xt_iclass_mac16al_da */,
+  { "mula.da.hppl.lddec", 192 /* xt_iclass_mac16al_da */,
     0,
     Opcode_mula_da_hl_lddec_encode_fns, 0, 0 },
-  { "mula.da.hl.ldinc", 192 /* xt_iclass_mac16al_da */,
+  { "mula.da.hppl.ldinc", 192 /* xt_iclass_mac16al_da */,
     0,
     Opcode_mula_da_hl_ldinc_encode_fns, 0, 0 },
   { "mula.da.lh.lddec", 192 /* xt_iclass_mac16al_da */,
@@ -16226,10 +16226,10 @@ static xtensa_opcode_internal opcodes[] = {
   { "mula.da.lh.ldinc", 192 /* xt_iclass_mac16al_da */,
     0,
     Opcode_mula_da_lh_ldinc_encode_fns, 0, 0 },
-  { "mula.da.hh.lddec", 192 /* xt_iclass_mac16al_da */,
+  { "mula.da.hpph.lddec", 192 /* xt_iclass_mac16al_da */,
     0,
     Opcode_mula_da_hh_lddec_encode_fns, 0, 0 },
-  { "mula.da.hh.ldinc", 192 /* xt_iclass_mac16al_da */,
+  { "mula.da.hpph.ldinc", 192 /* xt_iclass_mac16al_da */,
     0,
     Opcode_mula_da_hh_ldinc_encode_fns, 0, 0 },
   { "mula.dd.ll.lddec", 193 /* xt_iclass_mac16al_dd */,
@@ -16238,10 +16238,10 @@ static xtensa_opcode_internal opcodes[] = {
   { "mula.dd.ll.ldinc", 193 /* xt_iclass_mac16al_dd */,
     0,
     Opcode_mula_dd_ll_ldinc_encode_fns, 0, 0 },
-  { "mula.dd.hl.lddec", 193 /* xt_iclass_mac16al_dd */,
+  { "mula.dd.hppl.lddec", 193 /* xt_iclass_mac16al_dd */,
     0,
     Opcode_mula_dd_hl_lddec_encode_fns, 0, 0 },
-  { "mula.dd.hl.ldinc", 193 /* xt_iclass_mac16al_dd */,
+  { "mula.dd.hppl.ldinc", 193 /* xt_iclass_mac16al_dd */,
     0,
     Opcode_mula_dd_hl_ldinc_encode_fns, 0, 0 },
   { "mula.dd.lh.lddec", 193 /* xt_iclass_mac16al_dd */,
@@ -16250,10 +16250,10 @@ static xtensa_opcode_internal opcodes[] = {
   { "mula.dd.lh.ldinc", 193 /* xt_iclass_mac16al_dd */,
     0,
     Opcode_mula_dd_lh_ldinc_encode_fns, 0, 0 },
-  { "mula.dd.hh.lddec", 193 /* xt_iclass_mac16al_dd */,
+  { "mula.dd.hpph.lddec", 193 /* xt_iclass_mac16al_dd */,
     0,
     Opcode_mula_dd_hh_lddec_encode_fns, 0, 0 },
-  { "mula.dd.hh.ldinc", 193 /* xt_iclass_mac16al_dd */,
+  { "mula.dd.hpph.ldinc", 193 /* xt_iclass_mac16al_dd */,
     0,
     Opcode_mula_dd_hh_ldinc_encode_fns, 0, 0 },
   { "lddec", 194 /* xt_iclass_mac16_l */,
@@ -17983,7 +17983,7 @@ Slot_inst_decode (const xtensa_insnbuf insn)
 		    if (Field_t3_Slot_inst_get (insn) == 0 &&
 			    Field_tlo_Slot_inst_get (insn) == 0 &&
 			    Field_r3_Slot_inst_get (insn) == 0) {
-			    return 289; /* mula.dd.hl.ldinc */
+			    return 289; /* mula.dd.hppl.ldinc */
 		    }
 		    break;
 	    case 10:
@@ -17997,7 +17997,7 @@ Slot_inst_decode (const xtensa_insnbuf insn)
 		    if (Field_t3_Slot_inst_get (insn) == 0 &&
 			    Field_tlo_Slot_inst_get (insn) == 0 &&
 			    Field_r3_Slot_inst_get (insn) == 0) {
-			    return 293; /* mula.dd.hh.ldinc */
+			    return 293; /* mula.dd.hpph.ldinc */
 		    }
 		    break;
 	    }
@@ -18016,7 +18016,7 @@ Slot_inst_decode (const xtensa_insnbuf insn)
 		    if (Field_t3_Slot_inst_get (insn) == 0 &&
 			    Field_tlo_Slot_inst_get (insn) == 0 &&
 			    Field_r3_Slot_inst_get (insn) == 0) {
-			    return 288; /* mula.dd.hl.lddec */
+			    return 288; /* mula.dd.hppl.lddec */
 		    }
 		    break;
 	    case 10:
@@ -18030,7 +18030,7 @@ Slot_inst_decode (const xtensa_insnbuf insn)
 		    if (Field_t3_Slot_inst_get (insn) == 0 &&
 			    Field_tlo_Slot_inst_get (insn) == 0 &&
 			    Field_r3_Slot_inst_get (insn) == 0) {
-			    return 292; /* mula.dd.hh.lddec */
+			    return 292; /* mula.dd.hpph.lddec */
 		    }
 		    break;
 	    }
@@ -18053,7 +18053,7 @@ Slot_inst_decode (const xtensa_insnbuf insn)
 			    Field_r3_Slot_inst_get (insn) == 0 &&
 			    Field_t3_Slot_inst_get (insn) == 0 &&
 			    Field_tlo_Slot_inst_get (insn) == 0) {
-			    return 243; /* mul.dd.hl */
+			    return 243; /* mul.dd.hppl */
 		    }
 		    break;
 	    case 6:
@@ -18071,7 +18071,7 @@ Slot_inst_decode (const xtensa_insnbuf insn)
 			    Field_r3_Slot_inst_get (insn) == 0 &&
 			    Field_t3_Slot_inst_get (insn) == 0 &&
 			    Field_tlo_Slot_inst_get (insn) == 0) {
-			    return 245; /* mul.dd.hh */
+			    return 245; /* mul.dd.hpph */
 		    }
 		    break;
 	    case 8:
@@ -18089,7 +18089,7 @@ Slot_inst_decode (const xtensa_insnbuf insn)
 			    Field_r3_Slot_inst_get (insn) == 0 &&
 			    Field_t3_Slot_inst_get (insn) == 0 &&
 			    Field_tlo_Slot_inst_get (insn) == 0) {
-			    return 271; /* mula.dd.hl */
+			    return 271; /* mula.dd.hppl */
 		    }
 		    break;
 	    case 10:
@@ -18107,7 +18107,7 @@ Slot_inst_decode (const xtensa_insnbuf insn)
 			    Field_r3_Slot_inst_get (insn) == 0 &&
 			    Field_t3_Slot_inst_get (insn) == 0 &&
 			    Field_tlo_Slot_inst_get (insn) == 0) {
-			    return 273; /* mula.dd.hh */
+			    return 273; /* mula.dd.hpph */
 		    }
 		    break;
 	    case 12:
@@ -18125,7 +18125,7 @@ Slot_inst_decode (const xtensa_insnbuf insn)
 			    Field_r3_Slot_inst_get (insn) == 0 &&
 			    Field_t3_Slot_inst_get (insn) == 0 &&
 			    Field_tlo_Slot_inst_get (insn) == 0) {
-			    return 275; /* muls.dd.hl */
+			    return 275; /* muls.dd.hppl */
 		    }
 		    break;
 	    case 14:
@@ -18143,7 +18143,7 @@ Slot_inst_decode (const xtensa_insnbuf insn)
 			    Field_r3_Slot_inst_get (insn) == 0 &&
 			    Field_t3_Slot_inst_get (insn) == 0 &&
 			    Field_tlo_Slot_inst_get (insn) == 0) {
-			    return 277; /* muls.dd.hh */
+			    return 277; /* muls.dd.hpph */
 		    }
 		    break;
 	    }
@@ -18162,7 +18162,7 @@ Slot_inst_decode (const xtensa_insnbuf insn)
 		    if (Field_r_Slot_inst_get (insn) == 0 &&
 			    Field_t3_Slot_inst_get (insn) == 0 &&
 			    Field_tlo_Slot_inst_get (insn) == 0) {
-			    return 235; /* mul.ad.hl */
+			    return 235; /* mul.ad.hppl */
 		    }
 		    break;
 	    case 6:
@@ -18176,7 +18176,7 @@ Slot_inst_decode (const xtensa_insnbuf insn)
 		    if (Field_r_Slot_inst_get (insn) == 0 &&
 			    Field_t3_Slot_inst_get (insn) == 0 &&
 			    Field_tlo_Slot_inst_get (insn) == 0) {
-			    return 237; /* mul.ad.hh */
+			    return 237; /* mul.ad.hpph */
 		    }
 		    break;
 	    case 8:
@@ -18190,7 +18190,7 @@ Slot_inst_decode (const xtensa_insnbuf insn)
 		    if (Field_r_Slot_inst_get (insn) == 0 &&
 			    Field_t3_Slot_inst_get (insn) == 0 &&
 			    Field_tlo_Slot_inst_get (insn) == 0) {
-			    return 255; /* mula.ad.hl */
+			    return 255; /* mula.ad.hppl */
 		    }
 		    break;
 	    case 10:
@@ -18204,7 +18204,7 @@ Slot_inst_decode (const xtensa_insnbuf insn)
 		    if (Field_r_Slot_inst_get (insn) == 0 &&
 			    Field_t3_Slot_inst_get (insn) == 0 &&
 			    Field_tlo_Slot_inst_get (insn) == 0) {
-			    return 257; /* mula.ad.hh */
+			    return 257; /* mula.ad.hpph */
 		    }
 		    break;
 	    case 12:
@@ -18218,7 +18218,7 @@ Slot_inst_decode (const xtensa_insnbuf insn)
 		    if (Field_r_Slot_inst_get (insn) == 0 &&
 			    Field_t3_Slot_inst_get (insn) == 0 &&
 			    Field_tlo_Slot_inst_get (insn) == 0) {
-			    return 259; /* muls.ad.hl */
+			    return 259; /* muls.ad.hppl */
 		    }
 		    break;
 	    case 14:
@@ -18232,7 +18232,7 @@ Slot_inst_decode (const xtensa_insnbuf insn)
 		    if (Field_r_Slot_inst_get (insn) == 0 &&
 			    Field_t3_Slot_inst_get (insn) == 0 &&
 			    Field_tlo_Slot_inst_get (insn) == 0) {
-			    return 261; /* muls.ad.hh */
+			    return 261; /* muls.ad.hpph */
 		    }
 		    break;
 	    }
@@ -18247,7 +18247,7 @@ Slot_inst_decode (const xtensa_insnbuf insn)
 		    break;
 	    case 9:
 		    if (Field_r3_Slot_inst_get (insn) == 0) {
-			    return 281; /* mula.da.hl.ldinc */
+			    return 281; /* mula.da.hppl.ldinc */
 		    }
 		    break;
 	    case 10:
@@ -18257,7 +18257,7 @@ Slot_inst_decode (const xtensa_insnbuf insn)
 		    break;
 	    case 11:
 		    if (Field_r3_Slot_inst_get (insn) == 0) {
-			    return 285; /* mula.da.hh.ldinc */
+			    return 285; /* mula.da.hpph.ldinc */
 		    }
 		    break;
 	    }
@@ -18272,7 +18272,7 @@ Slot_inst_decode (const xtensa_insnbuf insn)
 		    break;
 	    case 9:
 		    if (Field_r3_Slot_inst_get (insn) == 0) {
-			    return 280; /* mula.da.hl.lddec */
+			    return 280; /* mula.da.hppl.lddec */
 		    }
 		    break;
 	    case 10:
@@ -18282,7 +18282,7 @@ Slot_inst_decode (const xtensa_insnbuf insn)
 		    break;
 	    case 11:
 		    if (Field_r3_Slot_inst_get (insn) == 0) {
-			    return 284; /* mula.da.hh.lddec */
+			    return 284; /* mula.da.hpph.lddec */
 		    }
 		    break;
 	    }
@@ -18301,7 +18301,7 @@ Slot_inst_decode (const xtensa_insnbuf insn)
 		    if (Field_s_Slot_inst_get (insn) == 0 &&
 			    Field_w_Slot_inst_get (insn) == 0 &&
 			    Field_r3_Slot_inst_get (insn) == 0) {
-			    return 239; /* mul.da.hl */
+			    return 239; /* mul.da.hppl */
 		    }
 		    break;
 	    case 6:
@@ -18315,7 +18315,7 @@ Slot_inst_decode (const xtensa_insnbuf insn)
 		    if (Field_s_Slot_inst_get (insn) == 0 &&
 			    Field_w_Slot_inst_get (insn) == 0 &&
 			    Field_r3_Slot_inst_get (insn) == 0) {
-			    return 241; /* mul.da.hh */
+			    return 241; /* mul.da.hpph */
 		    }
 		    break;
 	    case 8:
@@ -18329,7 +18329,7 @@ Slot_inst_decode (const xtensa_insnbuf insn)
 		    if (Field_s_Slot_inst_get (insn) == 0 &&
 			    Field_w_Slot_inst_get (insn) == 0 &&
 			    Field_r3_Slot_inst_get (insn) == 0) {
-			    return 263; /* mula.da.hl */
+			    return 263; /* mula.da.hppl */
 		    }
 		    break;
 	    case 10:
@@ -18343,7 +18343,7 @@ Slot_inst_decode (const xtensa_insnbuf insn)
 		    if (Field_s_Slot_inst_get (insn) == 0 &&
 			    Field_w_Slot_inst_get (insn) == 0 &&
 			    Field_r3_Slot_inst_get (insn) == 0) {
-			    return 265; /* mula.da.hh */
+			    return 265; /* mula.da.hpph */
 		    }
 		    break;
 	    case 12:
@@ -18357,7 +18357,7 @@ Slot_inst_decode (const xtensa_insnbuf insn)
 		    if (Field_s_Slot_inst_get (insn) == 0 &&
 			    Field_w_Slot_inst_get (insn) == 0 &&
 			    Field_r3_Slot_inst_get (insn) == 0) {
-			    return 267; /* muls.da.hl */
+			    return 267; /* muls.da.hppl */
 		    }
 		    break;
 	    case 14:
@@ -18371,7 +18371,7 @@ Slot_inst_decode (const xtensa_insnbuf insn)
 		    if (Field_s_Slot_inst_get (insn) == 0 &&
 			    Field_w_Slot_inst_get (insn) == 0 &&
 			    Field_r3_Slot_inst_get (insn) == 0) {
-			    return 269; /* muls.da.hh */
+			    return 269; /* muls.da.hpph */
 		    }
 		    break;
 	    }
@@ -18386,7 +18386,7 @@ Slot_inst_decode (const xtensa_insnbuf insn)
 		    break;
 	    case 1:
 		    if (Field_r_Slot_inst_get (insn) == 0) {
-			    return 231; /* umul.aa.hl */
+			    return 231; /* umul.aa.hppl */
 		    }
 		    break;
 	    case 2:
@@ -18396,7 +18396,7 @@ Slot_inst_decode (const xtensa_insnbuf insn)
 		    break;
 	    case 3:
 		    if (Field_r_Slot_inst_get (insn) == 0) {
-			    return 233; /* umul.aa.hh */
+			    return 233; /* umul.aa.hpph */
 		    }
 		    break;
 	    case 4:
@@ -18406,7 +18406,7 @@ Slot_inst_decode (const xtensa_insnbuf insn)
 		    break;
 	    case 5:
 		    if (Field_r_Slot_inst_get (insn) == 0) {
-			    return 227; /* mul.aa.hl */
+			    return 227; /* mul.aa.hppl */
 		    }
 		    break;
 	    case 6:
@@ -18416,7 +18416,7 @@ Slot_inst_decode (const xtensa_insnbuf insn)
 		    break;
 	    case 7:
 		    if (Field_r_Slot_inst_get (insn) == 0) {
-			    return 229; /* mul.aa.hh */
+			    return 229; /* mul.aa.hpph */
 		    }
 		    break;
 	    case 8:
@@ -18426,7 +18426,7 @@ Slot_inst_decode (const xtensa_insnbuf insn)
 		    break;
 	    case 9:
 		    if (Field_r_Slot_inst_get (insn) == 0) {
-			    return 247; /* mula.aa.hl */
+			    return 247; /* mula.aa.hppl */
 		    }
 		    break;
 	    case 10:
@@ -18436,7 +18436,7 @@ Slot_inst_decode (const xtensa_insnbuf insn)
 		    break;
 	    case 11:
 		    if (Field_r_Slot_inst_get (insn) == 0) {
-			    return 249; /* mula.aa.hh */
+			    return 249; /* mula.aa.hpph */
 		    }
 		    break;
 	    case 12:
@@ -18446,7 +18446,7 @@ Slot_inst_decode (const xtensa_insnbuf insn)
 		    break;
 	    case 13:
 		    if (Field_r_Slot_inst_get (insn) == 0) {
-			    return 251; /* muls.aa.hl */
+			    return 251; /* muls.aa.hppl */
 		    }
 		    break;
 	    case 14:
@@ -18456,7 +18456,7 @@ Slot_inst_decode (const xtensa_insnbuf insn)
 		    break;
 	    case 15:
 		    if (Field_r_Slot_inst_get (insn) == 0) {
-			    return 253; /* muls.aa.hh */
+			    return 253; /* muls.aa.hpph */
 		    }
 		    break;
 	    }

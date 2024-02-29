@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2008-2016 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_search.h>
-#include <rz_list.h>
+#include <rz_search.hpp>
+#include <rz_list.hpp>
 #include <ctype.h>
 
 // Experimental search engine (fails, because stops at first hit of every block read

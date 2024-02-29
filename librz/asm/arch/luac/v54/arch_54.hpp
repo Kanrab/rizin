@@ -4,9 +4,9 @@
 #ifndef BUILD_ARCH_54_H
 #define BUILD_ARCH_54_H
 
-#include <rz_types.h>
-#include <rz_asm.h>
-#include "librz/asm/arch/luac/lua_arch.h"
+#include <rz_types.hpp>
+#include <rz_asm.hpp>
+#include "librz/asm/arch/luac/lua_arch.hpp"
 
 /*===========================================================================
   We assume that instructions are unsigned 32-bit integers.

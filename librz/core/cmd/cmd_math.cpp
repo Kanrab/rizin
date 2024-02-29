@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: 2009-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <stddef.h>
+#include <stddef.hpp>
 #include <math.h> // required for signbit
-#include "rz_cons.h"
-#include "rz_core.h"
-#include "rz_util.h"
-#include "rz_types.h"
+#include "rz_cons.hpp"
+#include "rz_core.hpp"
+#include "rz_util.hpp"
+#include "rz_types.hpp"
 
 #define HIGHLIGHT_SZ 1024
 

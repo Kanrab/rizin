@@ -1,21 +1,21 @@
 // SPDX-FileCopyrightText: 2009-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util/rz_regex.h>
-#include <rz_core.h>
-#include <rz_debug.h>
-#include <sdb.h>
+#include <rz_util/rz_regex.hpp>
+#include <rz_core.hpp>
+#include <rz_debug.hpp>
+#include <sdb.hpp>
 #define TN_KEY_LEN 32
 #define TN_KEY_FMT "%" PFMT64u
 
-#include "rz_heap_glibc.h"
+#include "rz_heap_glibc.hpp"
 
 #if HAVE_JEMALLOC
-#include "rz_heap_jemalloc.h"
+#include "rz_heap_jemalloc.hpp"
 #include "../linux_heap_jemalloc.c"
 #endif
 
-#include "../core_private.h"
+#include "../core_private.hpp"
 
 #define CMD_CHECK_DEBUG_DEAD(core) \
 	do { \
@@ -1263,7 +1263,7 @@ RZ_IPI void rz_core_static_debug_stop(void *u) {
 }
 
 #if __WINDOWS__
-#include "..\debug\p\native\windows\windows_message.h"
+#include "..\debug\p\native\windows\windows_message.hpp"
 #endif
 
 RZ_IPI void rz_core_debug_bp_add(RzCore *core, ut64 addr, const char *arg_perm, const char *arg_size, bool hwbp, bool watch) {
@@ -1461,7 +1461,7 @@ static void debug_trace_calls(RzCore *core, ut64 from, ut64 to, ut64 final_addr)
 	rz_cons_break_push(rz_core_static_debug_stop, core->dbg);
 	rz_reg_arena_swap(core->dbg->reg, true);
 	if (final_addr != UT64_MAX) {
-		bool hwbp = rz_config_get_b(core->config, "dbg.hwbp");
+		bool hwbp = rz_config_get_b(core->config, "dbg.hppwbp");
 		bp_final = rz_debug_bp_add(core->dbg, final_addr, 0, hwbp, false, 0, NULL, 0);
 		if (!bp_final) {
 			RZ_LOG_ERROR("core: Cannot set breakpoint at final address (%" PFMT64x ")\n", final_addr);
@@ -1810,7 +1810,7 @@ static void consumeBuffer(RzBuffer *buf, const char *cmd, const char *errmsg) {
 
 // db
 RZ_IPI RzCmdStatus rz_cmd_debug_add_bp_handler(RzCore *core, int argc, const char **argv) {
-	bool hwbp = rz_config_get_b(core->config, "dbg.hwbp");
+	bool hwbp = rz_config_get_b(core->config, "dbg.hppwbp");
 	rz_core_debug_bp_add(core, core->offset, NULL, NULL, hwbp, false);
 	return RZ_CMD_STATUS_OK;
 }
@@ -1974,7 +1974,7 @@ RZ_IPI RzCmdStatus rz_cmd_debug_add_bp_noreturn_func_handler(RzCore *core, int a
 
 // dbm
 RZ_IPI RzCmdStatus rz_cmd_debug_add_bp_module_handler(RzCore *core, int argc, const char **argv) {
-	bool hwbp = rz_config_get_b(core->config, "dbg.hwbp");
+	bool hwbp = rz_config_get_b(core->config, "dbg.hppwbp");
 	ut64 delta = rz_num_math(core->num, argv[2]);
 	RzBreakpointItem *bp = rz_debug_bp_add(core->dbg, 0, 0, hwbp, false, 0, argv[1], delta);
 	if (!bp) {
@@ -2328,7 +2328,7 @@ RZ_IPI RzCmdStatus rz_cmd_debug_bp_set_expr_cur_offset_handler(RzCore *core, int
 
 // dbw
 RZ_IPI RzCmdStatus rz_cmd_debug_add_watchpoint_handler(RzCore *core, int argc, const char **argv) {
-	bool hwbp = rz_config_get_b(core->config, "dbg.hwbp");
+	bool hwbp = rz_config_get_b(core->config, "dbg.hppwbp");
 	rz_core_debug_bp_add(core, core->offset, argv[1], argc > 2 ? argv[2] : NULL, hwbp, true);
 	return RZ_CMD_STATUS_OK;
 }

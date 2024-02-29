@@ -1,15 +1,15 @@
 // SPDX-FileCopyrightText: 2007-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "rz_types.h"
-#include "rz_util.h"
-#include "rz_cons.h"
-#include "rz_bin.h"
+#include "rz_types.hpp"
+#include "rz_util.hpp"
+#include "rz_cons.hpp"
+#include "rz_bin.hpp"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include <stdarg.h>
+#include <stdarg.hpp>
 
 // TODO: simplify this horrible loop
 RZ_API void rz_str_trim_path(char *s) {

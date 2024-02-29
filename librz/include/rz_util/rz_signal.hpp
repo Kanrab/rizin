@@ -1,10 +1,10 @@
 #ifndef RZ_SIGNAL_H
 #define RZ_SIGNAL_H
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 #if __UNIX__
-#include <signal.h>
+#include <signal.hpp>
 #endif
 
 #ifdef __cplusplus

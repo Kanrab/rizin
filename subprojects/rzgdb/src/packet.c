@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2014-2016 defragger <rlaemmert@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "packet.h"
-#include "utils.h"
+#include "packet.hpp"
+#include "utils.hpp"
 
 #define READ_TIMEOUT (250 * 1000)
 

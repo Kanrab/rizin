@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2021 theopechli <theofilos.pechlivanis@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
+#include <rz_core.hpp>
 
 RZ_API RzCmdStatus rz_core_lang_plugin_print(RzLangPlugin *lp, RzCmdStateOutput *state) {
 	const char *license = lp->license

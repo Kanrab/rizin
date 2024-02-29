@@ -1,4 +1,4 @@
-### dbghelp.h ###
+### dbghelp.hpp ###
 
 PENUMLOADED_MODULES_CALLBACK=type
 type.PENUMLOADED_MODULES_CALLBACK=p

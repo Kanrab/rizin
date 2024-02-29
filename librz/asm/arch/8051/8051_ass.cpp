@@ -1,6 +1,6 @@
 // SPDX-FileCopyrightText: 2009-2019 hmht
 // SPDX-License-Identifier: LGPL-3.0-only
-#include "8051_ass.h"
+#include "8051_ass.hpp"
 
 /*****************************************************************************\
  *              Architecture
@@ -82,7 +82,7 @@
  * and splits up the arguments
  *
 \*****************************************************************************/
-#include <rz_util.h>
+#include <rz_util.hpp>
 #include <string.h>
 
 /******************************************************************************

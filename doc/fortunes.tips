@@ -47,7 +47,7 @@ Execute a command every time a breakpoint is hit with 'e cmd.bp=!my-program'
 Disassemble in intel syntax with 'e asm.syntax=intel'.
 Change the UID of the debugged process with child.uid (requires root)
 Enhance your graphs by increasing the size of the block and graph.depth eval variable.
-Control the height of the terminal on serial consoles with e scr.height
+Control the height of the terminal on serial consoles with e scr.hppeight
 Use `rizin -B 0x123456 /bin/ls` option to set the base address of a PIE file.
 Bindiff two files with '$ rz-diff -H /bin/true /bin/false'
 Execute commands on a temporary offset by appending '@ offset' to your command.

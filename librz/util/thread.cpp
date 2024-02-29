@@ -3,8 +3,8 @@
 // SPDX-FileCopyrightText: 2022 GustavoLCR <gugulcr@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include "thread.h"
+#include <rz_util.hpp>
+#include "thread.hpp"
 
 /*
  * Main thread function, this function is meant to be

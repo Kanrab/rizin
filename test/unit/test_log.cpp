@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2022 Riccardo Schirone <sirmy15@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include "minunit.h"
+#include <rz_util.hpp>
+#include "minunit.hpp"
 
 static int small_check(const char *output, const char *funcname, const char *filename,
 	ut32 lineno, RzLogLevel level, const char *tag, const char *fmtstr, ...) {

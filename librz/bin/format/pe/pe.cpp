@@ -6,11 +6,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_hash.h>
-#include "pe.h"
-#include <time.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_hash.hpp>
+#include "pe.hpp"
+#include <time.hpp>
 
 PE_DWord PE_(bin_pe_rva_to_paddr)(RzBinPEObj *bin, PE_DWord rva) {
 	PE_DWord section_base;

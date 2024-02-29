@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2018-2020 ret2libc <sirmy15@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
+#include <rz_util.hpp>
 
 #ifdef RZ_ASSERT_STDOUT
 static void stdout_log(const char *output, const char *funcname, const char *filename,

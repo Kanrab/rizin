@@ -4,7 +4,7 @@
 #ifndef RZ_ADLER32_H
 #define RZ_ADLER32_H
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 #define RZ_HASH_ADLER32_DIGEST_SIZE  4
 #define RZ_HASH_ADLER32_BLOCK_LENGTH 0

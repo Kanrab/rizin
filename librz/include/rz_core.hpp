@@ -4,35 +4,35 @@
 #ifndef RZ_CORE_H
 #define RZ_CORE_H
 
-#include <rz_main.h>
-#include <rz_types.h>
-#include <rz_magic.h>
-#include <rz_agraph.h>
-#include <rz_io.h>
-#include <rz_lib.h>
-#include <rz_diff.h>
-#include <rz_egg.h>
-#include <rz_lang.h>
-#include <rz_asm.h>
-#include <rz_parse.h>
-#include <rz_analysis.h>
-#include <rz_cmd.h>
-#include <rz_cons.h>
-#include <rz_search.h>
-#include <rz_sign.h>
-#include <rz_debug.h>
-#include <rz_flag.h>
-#include <rz_config.h>
-#include <rz_bin.h>
-#include <rz_hash.h>
-#include <rz_util.h>
-#include <rz_util/ht_uu.h>
-#include <rz_util/rz_print.h>
-#include <rz_crypto.h>
-#include <rz_bind.h>
-#include <rz_util/rz_annotated_code.h>
-#include <rz_heap_glibc.h>
-#include <rz_windows_heap.h>
+#include <rz_main.hpp>
+#include <rz_types.hpp>
+#include <rz_magic.hpp>
+#include <rz_agraph.hpp>
+#include <rz_io.hpp>
+#include <rz_lib.hpp>
+#include <rz_diff.hpp>
+#include <rz_egg.hpp>
+#include <rz_lang.hpp>
+#include <rz_asm.hpp>
+#include <rz_parse.hpp>
+#include <rz_analysis.hpp>
+#include <rz_cmd.hpp>
+#include <rz_cons.hpp>
+#include <rz_search.hpp>
+#include <rz_sign.hpp>
+#include <rz_debug.hpp>
+#include <rz_flag.hpp>
+#include <rz_config.hpp>
+#include <rz_bin.hpp>
+#include <rz_hash.hpp>
+#include <rz_util.hpp>
+#include <rz_util/ht_uu.hpp>
+#include <rz_util/rz_print.hpp>
+#include <rz_crypto.hpp>
+#include <rz_bind.hpp>
+#include <rz_util/rz_annotated_code.hpp>
+#include <rz_heap_glibc.hpp>
+#include <rz_windows_heap.hpp>
 
 #ifdef __cplusplus
 extern "C" {
@@ -944,7 +944,7 @@ RZ_API bool rz_heap_write_chunk(RzCore *core, RzHeapChunkSimple *chunk_simple);
 RZ_API RZ_OWN RzList /*<RzWindowsHeapBlock *>*/ *rz_heap_windows_blocks_list(RzCore *core);
 RZ_API RZ_OWN RzList /*<RzWindowsHeapInfo *>*/ *rz_heap_windows_heap_list(RzCore *core);
 
-// XXX dupe from rz_bin.h
+// XXX dupe from rz_bin.hpp
 /* bin.c */
 #define RZ_CORE_BIN_ACC_STRINGS          0x001
 #define RZ_CORE_BIN_ACC_INFO             0x002

@@ -3,8 +3,8 @@
 // SPDX-FileCopyrightText: 2008-2020 thestr4ng3r <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
-#include <rz_core.h>
+#include <rz_analysis.hpp>
+#include <rz_core.hpp>
 
 static bool item_matches_filter(RzAnalysisMetaItem *item, RzAnalysisMetaType type, RZ_NULLABLE const RzSpace *space) {
 	return (type == RZ_META_TYPE_ANY || item->type == type) && (!space || item->space == space);

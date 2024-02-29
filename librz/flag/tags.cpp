@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2018 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_flag.h>
+#include <rz_flag.hpp>
 
 RZ_API void rz_flag_tags_set(RzFlag *f, const char *name, const char *words) {
 	rz_return_if_fail(f && name && words);

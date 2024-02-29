@@ -3,13 +3,13 @@
 // SPDX-FileCopyrightText: 2022 Dhruv Maroo <dhruvmaru007@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_cons.h>
-#include <rz_util.h>
+#include <rz_cons.hpp>
+#include <rz_util.hpp>
 
 #define BUFFER_SIZE 0x500
 
 #if __WINDOWS__
-#include <rz_windows.h>
+#include <rz_windows.hpp>
 
 #if NTDDI_VERSION >= NTDDI_VISTA
 typedef _Success_(return != FALSE) BOOL(WINAPI *InitializeProcThreadAttributeList_t)(
@@ -427,8 +427,8 @@ RZ_API RZ_OWN RzSubprocess *rz_subprocess_start_opt(RZ_NONNULL const RzSubproces
 	}
 	free(env);
 
-	CloseHandle(proc_info.hThread);
-	proc->proc = proc_info.hProcess;
+	CloseHandle(proc_info.hppThread);
+	proc->proc = proc_info.hppProcess;
 
 beach:
 
@@ -515,15 +515,15 @@ static RzSubprocessWaitReason subprocess_wait(RzSubprocess *proc, ut64 timeout_m
 	bool bytes_enabled = n_bytes != 0;
 
 	if (stdout_enabled) {
-		stdout_overlapped.hEvent = CreateEvent(NULL, TRUE, FALSE, NULL);
-		if (!stdout_overlapped.hEvent) {
+		stdout_overlapped.hppEvent = CreateEvent(NULL, TRUE, FALSE, NULL);
+		if (!stdout_overlapped.hppEvent) {
 			return RZ_SUBPROCESS_DEAD;
 		}
 	}
 	if (stderr_enabled) {
-		stderr_overlapped.hEvent = CreateEvent(NULL, TRUE, FALSE, NULL);
-		if (!stderr_overlapped.hEvent) {
-			CloseHandle(stdout_overlapped.hEvent);
+		stderr_overlapped.hppEvent = CreateEvent(NULL, TRUE, FALSE, NULL);
+		if (!stderr_overlapped.hppEvent) {
+			CloseHandle(stdout_overlapped.hppEvent);
 			return RZ_SUBPROCESS_DEAD;
 		}
 	}
@@ -546,11 +546,11 @@ static RzSubprocessWaitReason subprocess_wait(RzSubprocess *proc, ut64 timeout_m
 		size_t proc_index = 0;
 		if (stdout_enabled && !stdout_eof) {
 			stdout_index = handles.len;
-			rz_vector_push(&handles, &stdout_overlapped.hEvent);
+			rz_vector_push(&handles, &stdout_overlapped.hppEvent);
 		}
 		if (stderr_enabled && !stderr_eof) {
 			stderr_index = handles.len;
-			rz_vector_push(&handles, &stderr_overlapped.hEvent);
+			rz_vector_push(&handles, &stderr_overlapped.hppEvent);
 		}
 		if (!child_dead) {
 			proc_index = handles.len;
@@ -585,7 +585,7 @@ static RzSubprocessWaitReason subprocess_wait(RzSubprocess *proc, ut64 timeout_m
 				continue;
 			}
 			rz_strbuf_append_n(&proc->out, (const char *)stdout_buf, r);
-			ResetEvent(stdout_overlapped.hEvent);
+			ResetEvent(stdout_overlapped.hppEvent);
 			if (r >= 0 && n_bytes) {
 				n_bytes -= r;
 				if (n_bytes <= 0) {
@@ -609,7 +609,7 @@ static RzSubprocessWaitReason subprocess_wait(RzSubprocess *proc, ut64 timeout_m
 					break;
 				}
 			}
-			ResetEvent(stderr_overlapped.hEvent);
+			ResetEvent(stderr_overlapped.hppEvent);
 			stderr_eof = do_read(proc->stderr_read, stderr_buf, sizeof(stderr_buf) - 1, n_bytes, &stderr_overlapped);
 			continue;
 		}
@@ -624,11 +624,11 @@ static RzSubprocessWaitReason subprocess_wait(RzSubprocess *proc, ut64 timeout_m
 		break;
 	}
 	rz_vector_clear(&handles);
-	if (stdout_overlapped.hEvent) {
-		CloseHandle(stdout_overlapped.hEvent);
+	if (stdout_overlapped.hppEvent) {
+		CloseHandle(stdout_overlapped.hppEvent);
 	}
-	if (stderr_overlapped.hEvent) {
-		CloseHandle(stderr_overlapped.hEvent);
+	if (stderr_overlapped.hppEvent) {
+		CloseHandle(stderr_overlapped.hppEvent);
 	}
 	return child_dead ? RZ_SUBPROCESS_DEAD : RZ_SUBPROCESS_BYTESREAD;
 }
@@ -730,8 +730,8 @@ RZ_API bool rz_subprocess_login_tty(RZ_BORROW RZ_NONNULL const RzPty *pty) {
 
 #else // __WINDOWS__
 
-#include <errno.h>
-#include <sys/wait.h>
+#include <errno.hpp>
+#include <sys/wait.hpp>
 
 struct rz_subprocess_t {
 	pid_t pid;

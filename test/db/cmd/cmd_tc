@@ -58,7 +58,7 @@ f field.Employee.Employee::_ivar__shortWord @ 0x100003328
 f field.Employee.Employee::_ivar__username @ 0x100003330
 f field.Employee.Employee::_ivar__firstName @ 0x100003338
 f field.Employee.Employee::_ivar__wideWord @ 0x100003340
-f method.Employee.helloWorld @ 0x100001ae0
+f method.Employee.hppelloWorld @ 0x100001ae0
 f method.Employee.sayHello @ 0x100001b10
 f method.Employee.p0 @ 0x100001b40
 f method.Employee.p1 @ 0x100001b60
@@ -181,7 +181,7 @@ f field.Employee.Employee::_ivar__firstName @ 0x10000c230
 f field.Employee.Employee::_ivar__wideWord @ 0x10000c234
 f method.class.Employee.sayHello @ 0x100007958
 f method.Employee.sayHello @ 0x100007984
-f method.Employee.helloWorld @ 0x1000079b0
+f method.Employee.hppelloWorld @ 0x1000079b0
 f method.Employee.p0 @ 0x1000079dc
 f method.Employee.p1 @ 0x1000079f8
 f method.Employee.p2 @ 0x100007a14
@@ -303,7 +303,7 @@ f field.Employee.Employee::_ivar__firstName @ 0x10000c1e0
 f field.Employee.Employee::_ivar__wideWord @ 0x10000c1e4
 f method.class.Employee.sayHello @ 0x1000079a8
 f method.Employee.sayHello @ 0x1000079d8
-f method.Employee.helloWorld @ 0x100007a08
+f method.Employee.hppelloWorld @ 0x100007a08
 f method.Employee.p0 @ 0x100007a38
 f method.Employee.p1 @ 0x100007a54
 f method.Employee.p2 @ 0x100007a70

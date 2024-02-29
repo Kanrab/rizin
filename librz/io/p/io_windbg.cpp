@@ -2,8 +2,8 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #define INITGUID
-#include <rz_core.h>
-#include <DbgEng.h>
+#include <rz_core.hpp>
+#include <DbgEng.hpp>
 
 typedef HRESULT(__stdcall *DebugCreate_t)(
 	_In_ REFIID InterfaceId,

@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: 2023 Rot127 <unisono@quyllur.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_il.h>
-#include <rz_util.h>
-#include "minunit.h"
-#include "rz_il/rz_il_opcodes.h"
-#include "rz_il/rz_il_vm.h"
+#include <rz_il.hpp>
+#include <rz_util.hpp>
+#include "minunit.hpp"
+#include "rz_il/rz_il_opcodes.hpp"
+#include "rz_il/rz_il_vm.hpp"
 
 static bool test_il_extract32() {
 	RzILSortPure sort;

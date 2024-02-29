@@ -2,24 +2,24 @@
 // SPDX-FileCopyrightText: 2007-2020 thestr4ng3r <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
+#include <rz_util.hpp>
 
 #define TIME_HFS_SINCE_1970 2082844800u // Mac HFS/HFS+ constant to convert timestamp to epoch
 #define TIME_W32_SINCE_1970 0x2b6109100ull // The number of seconds from the Windows Runtime epoch to January 1, 1970.
 
 #if __linux__
-#include <time.h>
+#include <time.hpp>
 #elif __APPLE__ && !defined(MAC_OS_X_VERSION_10_12)
-#include <mach/mach_time.h>
+#include <mach/mach_time.hpp>
 #elif __WINDOWS__
-#include <rz_windows.h>
+#include <rz_windows.hpp>
 #endif
 
 #ifdef _MSC_VER
 /**
  * \brief Get the system current time and the current time zone.
  *
- * See https://man7.org/linux/man-pages/man2/gettimeofday.2.html for more
+ * See https://man7.org/linux/man-pages/man2/gettimeofday.2.hpptml for more
  * information.
  *
  * \param p Pointer to a \p timeval structure that will be filled by this function
@@ -37,7 +37,7 @@ RZ_API int rz_time_gettimeofday(struct timeval *p, struct rz_timezone *tz) {
 		GetSystemTimeAsFileTime(&ft);
 		// Fill ULARGE_INTEGER low and high parts.
 		// ul.LowPart = ft.dwLowDateTime;
-		// ul.HighPart = ft.dwHighDateTime;
+		// ul.hppighPart = ft.dwHighDateTime;
 		ul |= ft.dwHighDateTime;
 		ul <<= 32;
 		ul |= ft.dwLowDateTime;
@@ -68,7 +68,7 @@ RZ_API int rz_time_gettimeofday(struct timeval *p, struct rz_timezone *tz) {
 /**
  * \brief Get the system current time and the current time zone.
  *
- * See https://man7.org/linux/man-pages/man2/gettimeofday.2.html for more
+ * See https://man7.org/linux/man-pages/man2/gettimeofday.2.hpptml for more
  * information.
  *
  * \param p Pointer to a \p timeval structure that will be filled by this function

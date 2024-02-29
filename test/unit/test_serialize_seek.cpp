@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2023 Quentin Minster <quentin@minster.io>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
-#include "minunit.h"
-#include "test_sdb.h"
+#include <rz_core.hpp>
+#include "minunit.hpp"
+#include "test_sdb.hpp"
 
 Sdb *get_ref_sdb() {
 	Sdb *ref_sdb = sdb_new0();

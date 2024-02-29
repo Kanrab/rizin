@@ -3,8 +3,8 @@
 // SPDX-FileCopyrightText: 2008-2019 inisider <inisider@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "pe.h"
-#include <rz_hash.h>
+#include "pe.hpp"
+#include <rz_hash.hpp>
 
 static const char *PE_(bin_pe_get_claimed_authentihash)(RzBinPEObj *bin) {
 	if (!bin->spcinfo) {

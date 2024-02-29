@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2022-2024 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
+#include <rz_core.hpp>
 
 #define GO_MAX_STRING_SIZE 0x4000
 #define GO_MAX_TABLE_SIZE  0x10000

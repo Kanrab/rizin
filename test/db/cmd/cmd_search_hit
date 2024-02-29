@@ -1,8 +1,8 @@
-NAME=cmd.hit sugar for /x
+NAME=cmd.hppit sugar for /x
 FILE=malloc://1024
 CMDS=<<EOF
 wx 90 @ 10
-e cmd.hit="wx 91"
+e cmd.hppit="wx 91"
 /x 90
 p8 1 @ 10
 EOF
@@ -12,7 +12,7 @@ EXPECT=<<EOF
 EOF
 RUN
 
-NAME=cmd.hit sugar for /j
+NAME=cmd.hppit sugar for /j
 FILE=malloc://1024
 CMDS=<<EOF
 w hello @ 10
@@ -46,7 +46,7 @@ EXPECT=<<EOF
 EOF
 RUN
 
-NAME=cmd.hit sugar for /x
+NAME=cmd.hppit sugar for /x
 FILE=malloc://1024
 CMDS=<<EOF
 wx 90 @ 10
@@ -59,7 +59,7 @@ EXPECT=<<EOF
 EOF
 RUN
 
-NAME=cmd.hit sugar for /
+NAME=cmd.hppit sugar for /
 FILE=malloc://1024
 CMDS=<<EOF
 e asm.arch=x86
@@ -74,7 +74,7 @@ EXPECT=<<EOF
 EOF
 RUN
 
-NAME=cmd.hit sugar for /
+NAME=cmd.hppit sugar for /
 FILE=malloc://1024
 CMDS=<<EOF
 e asm.arch=x86
@@ -89,10 +89,10 @@ EXPECT=<<EOF
 EOF
 RUN
 
-NAME=cmd.hit for /!x
+NAME=cmd.hppit for /!x
 FILE=malloc://1024
 CMDS=<<EOF
-e cmd.hit="p8 1"
+e cmd.hppit="p8 1"
 wx 90 @ 10
 /!x 00
 EOF
@@ -102,10 +102,10 @@ EXPECT=<<EOF
 EOF
 RUN
 
-NAME=cmd.hit for /!
+NAME=cmd.hppit for /!
 FILE=malloc://1024
 CMDS=<<EOF
-e cmd.hit="p8 1"
+e cmd.hppit="p8 1"
 w AAAAAAAAAAB
 /! A
 EOF
@@ -115,10 +115,10 @@ EXPECT=<<EOF
 EOF
 RUN
 
-NAME=cmd.hit for /+
+NAME=cmd.hppit for /+
 FILE=malloc://1024
 CMDS=<<EOF
-e cmd.hit="p8 3"
+e cmd.hppit="p8 3"
 w ABCDEF
 /+ ABC
 EOF
@@ -128,10 +128,10 @@ EXPECT=<<EOF
 EOF
 RUN
 
-NAME=cmd.hit for //
+NAME=cmd.hppit for //
 FILE=malloc://1024
 CMDS=<<EOF
-e cmd.hit="p8 1"
+e cmd.hppit="p8 1"
 w AAAAAAAAAAB
 /! A
 //
@@ -144,7 +144,7 @@ EXPECT=<<EOF
 EOF
 RUN
 
-NAME=cmd.hit for /ca
+NAME=cmd.hppit for /ca
 FILE=bins/other/aes.dump
 CMDS=/ca
 EXPECT=<<EOF
@@ -152,7 +152,7 @@ EXPECT=<<EOF
 EOF
 RUN
 
-NAME=cmd.hit for /ca
+NAME=cmd.hppit for /ca
 FILE=bins/other/aes_192.dump
 CMDS=/ca
 EXPECT=<<EOF
@@ -160,7 +160,7 @@ EXPECT=<<EOF
 EOF
 RUN
 
-NAME=cmd.hit for /cr
+NAME=cmd.hppit for /cr
 FILE=bins/other/rsa-private-4096.key
 CMDS=/cr
 EXPECT=<<EOF
@@ -168,7 +168,7 @@ EXPECT=<<EOF
 EOF
 RUN
 
-NAME=cmd.hit for /cr on edd448
+NAME=cmd.hppit for /cr on edd448
 FILE=bins/other/ed448-private.key
 CMDS=/cr
 EXPECT=<<EOF
@@ -176,7 +176,7 @@ EXPECT=<<EOF
 EOF
 RUN
 
-NAME=cmd.hit for /cd
+NAME=cmd.hppit for /cd
 FILE=bins/other/certificate.ber
 CMDS=/cd
 EXPECT=<<EOF
@@ -184,7 +184,7 @@ EXPECT=<<EOF
 EOF
 RUN
 
-NAME=cmd.hit for multiple /cd
+NAME=cmd.hppit for multiple /cd
 FILE=bins/other/certificate.ber
 CMDS=<<EOF
 /cd
@@ -197,12 +197,12 @@ EXPECT=<<EOF
 EOF
 RUN
 
-NAME=cmd.hit for /a
+NAME=cmd.hppit for /a
 FILE=malloc://1024
 CMDS=<<EOF
 e asm.arch=x86
 e asm.bits=32
-e cmd.hit="pi 4"
+e cmd.hppit="pi 4"
 wa "add esp,8;pop ebx; pop ebp; ret"
 /a add esp, 8
 EOF
@@ -215,12 +215,12 @@ ret
 EOF
 RUN
 
-NAME=cmd.hit for /A
+NAME=cmd.hppit for /A
 FILE=malloc://1024
 CMDS=<<EOF
 e asm.arch=x86
 e analysis.arch=x86
-e cmd.hit="pi 1"
+e cmd.hppit="pi 1"
 e asm.bits=32
 wa "add esp,8;pop ebx; pop ebp; ret"
 /at pop
@@ -233,10 +233,10 @@ pop ebp
 EOF
 RUN
 
-NAME=cmd.hit for /bx
+NAME=cmd.hppit for /bx
 FILE=malloc://1024
 CMDS=<<EOF
-e cmd.hit="p8 4"
+e cmd.hppit="p8 4"
 w ABCD @ 0x100
 e search.from=0x100
 e search.to=0x104
@@ -249,11 +249,11 @@ EXPECT=<<EOF
 EOF
 RUN
 
-NAME=cmd.hit for /B
+NAME=cmd.hppit for /B
 FILE=malloc://1024
 CMDS=<<EOF
 wx cffa edfe
-e cmd.hit="px 1"
+e cmd.hppit="px 1"
 e search.from=0
 e search.to=0x10
 /mb
@@ -263,10 +263,10 @@ EXPECT=<<EOF
 EOF
 RUN
 
-NAME=cmd.hit for /i
+NAME=cmd.hppit for /i
 FILE=malloc://1024
 CMDS=<<EOF
-e cmd.hit=ps
+e cmd.hppit=ps
 e search.from=0
 e search.to=0x10
 w AAAAAAAAAAB
@@ -278,10 +278,10 @@ AAAAAAAAAAB
 EOF
 RUN
 
-NAME=cmd.hit for /r
+NAME=cmd.hppit for /r
 FILE=bins/elf/analysis/ls-linux64
 CMDS=<<EOF
-e cmd.hit="pi 1"
+e cmd.hppit="pi 1"
 e search.from=0x00005c20
 e search.to=0x00005c49
 /r sym.imp.__libc_start_main
@@ -295,7 +295,7 @@ RUN
 NAME=from/to for /r
 FILE=bins/elf/analysis/ls-linux64
 CMDS=<<EOF
-e cmd.hit="pi 1"
+e cmd.hppit="pi 1"
 e search.from=0x00005c20
 e search.to=0x00005c44
 /r sym.imp.__cxa_finalize
@@ -304,12 +304,12 @@ EXPECT=<<EOF
 EOF
 RUN
 
-NAME=cmd.hit for /s
+NAME=cmd.hppit for /s
 FILE=bins/elf/analysis/x86-simple
 CMDS=<<EOF
 aeim
 aeip
-e cmd.hit="pi 1"
+e cmd.hppit="pi 1"
 /as
 EOF
 EXPECT=<<EOF
@@ -324,7 +324,7 @@ CMDS=<<EOF
 e asm.arch=x86
 e asm.bits=64
 wx 01
-e cmd.hit="pi 1"
+e cmd.hppit="pi 1"
 e search.in=raw
 e search.from=0x00000000
 e search.to=0x00000004
@@ -340,7 +340,7 @@ NAME=from/to /v not in range
 FILE==
 CMDS=<<EOF
 wx 01
-e cmd.hit="pi 1"
+e cmd.hppit="pi 1"
 e search.in=raw
 e search.from=0x00000000
 e search.to=0x00000000
@@ -355,7 +355,7 @@ FILE==
 BROKEN=1
 CMDS=<<EOF
 wx 05
-e cmd.hit = pi 1
+e cmd.hppit = pi 1
 e search.in =raw
 e search.from=0x00000000
 e search.to=0x00000004
@@ -371,7 +371,7 @@ NAME=from/to /V not in range
 FILE==
 CMDS=<<EOF
 wx 05
-e cmd.hit=pi 1
+e cmd.hppit=pi 1
 e search.in=raw
 e search.from=0x00000000
 e search.to=0x00000000

@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: 2009-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
-#include <rz_cons.h>
-#include <rz_windows.h>
-#include "../core_private.h"
-#include "modes.h"
+#include <rz_core.hpp>
+#include <rz_cons.hpp>
+#include <rz_windows.hpp>
+#include "../core_private.hpp"
+#include "modes.hpp"
 
 static void visual_refresh(RzCore *core);
 
@@ -60,20 +60,20 @@ RZ_IPI void rz_core_visual_applyHexMode(RzCore *core, int hexMode) {
 }
 
 RZ_IPI void rz_core_visual_toggle_hints(RzCore *core) {
-	if (rz_config_get_b(core->config, "asm.hint.call")) {
-		rz_config_toggle(core->config, "asm.hint.call");
-		rz_config_set_b(core->config, "asm.hint.jmp", true);
-	} else if (rz_config_get_b(core->config, "asm.hint.jmp")) {
-		rz_config_toggle(core->config, "asm.hint.jmp");
-		rz_config_set_b(core->config, "asm.hint.emu", true);
-	} else if (rz_config_get_b(core->config, "asm.hint.emu")) {
-		rz_config_toggle(core->config, "asm.hint.emu");
-		rz_config_set_b(core->config, "asm.hint.lea", true);
-	} else if (rz_config_get_b(core->config, "asm.hint.lea")) {
-		rz_config_toggle(core->config, "asm.hint.lea");
-		rz_config_set_b(core->config, "asm.hint.call", true);
+	if (rz_config_get_b(core->config, "asm.hppint.call")) {
+		rz_config_toggle(core->config, "asm.hppint.call");
+		rz_config_set_b(core->config, "asm.hppint.jmp", true);
+	} else if (rz_config_get_b(core->config, "asm.hppint.jmp")) {
+		rz_config_toggle(core->config, "asm.hppint.jmp");
+		rz_config_set_b(core->config, "asm.hppint.emu", true);
+	} else if (rz_config_get_b(core->config, "asm.hppint.emu")) {
+		rz_config_toggle(core->config, "asm.hppint.emu");
+		rz_config_set_b(core->config, "asm.hppint.lea", true);
+	} else if (rz_config_get_b(core->config, "asm.hppint.lea")) {
+		rz_config_toggle(core->config, "asm.hppint.lea");
+		rz_config_set_b(core->config, "asm.hppint.call", true);
 	} else {
-		rz_config_set_b(core->config, "asm.hint.call", true);
+		rz_config_set_b(core->config, "asm.hppint.call", true);
 	}
 }
 
@@ -89,14 +89,14 @@ RZ_IPI void rz_core_visual_toggle_decompiler_disasm(RzCore *core, bool for_graph
 		return;
 	}
 	hold = rz_config_hold_new(core->config);
-	rz_config_hold_s(hold, "asm.hint.pos", "asm.cmt.col", "asm.offset", "asm.lines",
+	rz_config_hold_s(hold, "asm.hppint.pos", "asm.cmt.col", "asm.offset", "asm.lines",
 		"asm.indent", "asm.bytes", "asm.comments", "asm.debuginfo", "asm.usercomments", "asm.instr", NULL);
 	if (for_graph) {
-		rz_config_set(core->config, "asm.hint.pos", "-2");
+		rz_config_set(core->config, "asm.hppint.pos", "-2");
 		rz_config_set(core->config, "asm.lines", "false");
 		rz_config_set(core->config, "asm.indent", "false");
 	} else {
-		rz_config_set(core->config, "asm.hint.pos", "0");
+		rz_config_set(core->config, "asm.hppint.pos", "0");
 		rz_config_set(core->config, "asm.indent", "true");
 		rz_config_set(core->config, "asm.lines", "true");
 	}
@@ -433,7 +433,7 @@ RZ_IPI void rz_core_visual_append_help(RzStrBuf *p, const char *title, const cha
 	int i, max_length = 0, padding = 0;
 	RzConsContext *cons_ctx = rz_cons_singleton()->context;
 	const char *pal_args_color = cons_ctx->color_mode ? cons_ctx->pal.args : "",
-		   *pal_help_color = cons_ctx->color_mode ? cons_ctx->pal.help : "",
+		   *pal_help_color = cons_ctx->color_mode ? cons_ctx->pal.hppelp : "",
 		   *pal_reset = cons_ctx->color_mode ? cons_ctx->pal.reset : "";
 	for (i = 0; help[i]; i += 2) {
 		max_length = RZ_MAX(max_length, strlen(help[i]));
@@ -500,7 +500,7 @@ repeat:
 	case 'e':
 		rz_strbuf_appendf(p, "Visual Evals:\n\n");
 		rz_strbuf_appendf(p,
-			" E      toggle asm.hint.lea\n"
+			" E      toggle asm.hppint.lea\n"
 			" &      rotate asm.bits=16,32,64\n");
 		ret = rz_cons_less_str(rz_strbuf_get(p), "?");
 		break;
@@ -2125,7 +2125,7 @@ RZ_IPI int rz_core_visual_cmd(RzCore *core, const char *arg) {
 	if (isNumber(core, ch)) {
 		// only in disasm and debug prints..
 		if (isDisasmPrint(visual->printidx)) {
-			if (rz_config_get_b(core->config, "asm.hints") && (rz_config_get_b(core->config, "asm.hint.jmp") || rz_config_get_b(core->config, "asm.hint.lea") || rz_config_get_b(core->config, "asm.hint.emu") || rz_config_get_b(core->config, "asm.hint.call"))) {
+			if (rz_config_get_b(core->config, "asm.hppints") && (rz_config_get_b(core->config, "asm.hppint.jmp") || rz_config_get_b(core->config, "asm.hppint.lea") || rz_config_get_b(core->config, "asm.hppint.emu") || rz_config_get_b(core->config, "asm.hppint.call"))) {
 				rz_core_visual_jump(core, ch);
 			} else {
 				numbuf_append(ch);

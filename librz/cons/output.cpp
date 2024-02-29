@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: 2009-2019 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_cons.h>
-#include <rz_util/rz_assert.h>
+#include <rz_cons.hpp>
+#include <rz_util/rz_assert.hpp>
 #define I rz_cons_singleton()
 
 #if __WINDOWS__
-#include <rz_windows.h>
+#include <rz_windows.hpp>
 static void __fill_tail(int cols, int lines) {
 	lines++;
 	if (lines > 0) {

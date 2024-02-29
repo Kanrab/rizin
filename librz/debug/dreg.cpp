@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2009-2018 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h> // just to get the RzPrint instance
-#include <rz_debug.h>
-#include <rz_cons.h>
-#include <rz_reg.h>
+#include <rz_core.hpp> // just to get the RzPrint instance
+#include <rz_debug.hpp>
+#include <rz_cons.hpp>
+#include <rz_reg.hpp>
 
 RZ_API int rz_debug_reg_sync(RzDebug *dbg, int type, int write) {
 	int i, n, size;

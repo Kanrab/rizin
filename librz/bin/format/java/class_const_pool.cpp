@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2021 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "class_const_pool.h"
+#include "class_const_pool.hpp"
 
 static ConstPool *constant_pool_copy_from_buffer(RzBuffer *buf, ConstPool *cpool, const st64 size) {
 	if (size < 1) {

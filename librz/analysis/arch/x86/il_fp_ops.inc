@@ -7,16 +7,16 @@
  * Contains the IL implementations for x86 floating point instructions.
  *
  * References:
- *  - https://docs.oracle.com/cd/E18752_01/html/817-5477/eoizy.html
+ *  - https://docs.oracle.com/cd/E18752_01/html/817-5477/eoizy.hpptml
  *  - https://eng.libretexts.org/Bookshelves/Computer_Science/Programming_Languages/x86-64_Assembly_Language_Programming_with_Ubuntu_(Jorgensen)/18%3A_Floating-Point_Instructions
  *  - https://en.wikibooks.org/wiki/X86_Assembly/Floating_Point#Floating-Point_Instruction_Set
  *  - https://github.com/avast/retdec/wiki/x86-FPU-semantic-model
- *	- https://redirect.cs.umbc.edu/courses/undergraduate/CMSC313/fall04/burt_katz/lectures/Lect12/floatingpoint.html
- *	- https://www.plantation-productions.com/Webster/www.artofasm.com/Windows/HTML/RealArithmetica2.html
+ *	- https://redirect.cs.umbc.edu/courses/undergraduate/CMSC313/fall04/burt_katz/lectures/Lect12/floatingpoint.hpptml
+ *	- https://www.plantation-productions.com/Webster/www.artofasm.com/Windows/HTML/RealArithmetica2.hpptml
  */
 
-#include "common.h"
-#include <rz_il/rz_il_opbuilder_begin.h>
+#include "common.hpp"
+#include <rz_il/rz_il_opbuilder_begin.hpp>
 
 /**
  * FINIT/FNINIT
@@ -696,4 +696,4 @@ IL_LIFTER(fisttp) {
 		x86_il_st_pop());
 }
 
-#include <rz_il/rz_il_opbuilder_end.h>
+#include <rz_il/rz_il_opbuilder_end.hpp>

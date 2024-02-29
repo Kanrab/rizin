@@ -2,10 +2,10 @@
 // SPDX-FileCopyrightText: 2014 condret <condr3t@protonmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_asm.h>
-#include <rz_lib.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_asm.hpp>
+#include <rz_lib.hpp>
 #include "../arch/spc700/spc700dis.c"
 
 static int disassemble(RzAsm *a, RzAsmOp *rz_op, const ut8 *buf, int len) {

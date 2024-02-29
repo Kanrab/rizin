@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2013-2018 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_asm.h>
-#include <rz_lib.h>
-#include "cs_helper.h"
+#include <rz_asm.hpp>
+#include <rz_lib.hpp>
+#include "cs_helper.hpp"
 
 CAPSTONE_DEFINE_PLUGIN_FUNCTIONS(mips);
 

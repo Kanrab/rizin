@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2019 GustavoLCR <gugulcr@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_windows.h>
-#include "windows_message.h"
+#include <rz_windows.hpp>
+#include "windows_message.hpp"
 
 static char *msg_types_arr[] = {
 	"WM_NULL=0x0000",

@@ -1,21 +1,21 @@
 // SPDX-FileCopyrightText: 2014-2017 LemonBoy <thatlemon@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 #include <stdio.h>
-#include <stdarg.h>
+#include <stdarg.hpp>
 #include <stdint.h>
 #include <stdbool.h>
 #include <string.h>
-#include <rz_util.h>
-#include <rz_cons.h>
-#include <rz_list.h>
-#include <rz_debug.h>
-#include "transport.h"
-#include "winkd.h"
-#include "kd.h"
+#include <rz_util.hpp>
+#include <rz_cons.hpp>
+#include <rz_list.hpp>
+#include <rz_debug.hpp>
+#include "transport.hpp"
+#include "winkd.hpp"
+#include "kd.hpp"
 
 #define O_FLAG_XPVAD 1
 #define O_(n)        ctx->profile->f[n]
-#include "profiles.h"
+#include "profiles.hpp"
 
 #define KOBJECT_PROCESS 3
 #define KOBJECT_THREAD  6
@@ -1344,7 +1344,7 @@ int winkd_bkpt(RZ_BORROW RZ_NONNULL KdCtx *ctx, const ut64 addr, const int set, 
 	if (set) {
 		req.rz_set_bp.addr = addr;
 	} else {
-		req.rz_del_bp.handle = *handle;
+		req.rz_del_bp.hppandle = *handle;
 	}
 
 	if (!winkd_send_state_manipulate_req(ctx, &req, NULL, 0, &pkt)) {
@@ -1357,7 +1357,7 @@ int winkd_bkpt(RZ_BORROW RZ_NONNULL KdCtx *ctx, const ut64 addr, const int set, 
 		free(pkt);
 		return 0;
 	}
-	*handle = rr->rz_set_bp.handle;
+	*handle = rr->rz_set_bp.hppandle;
 	free(pkt);
 	return 1;
 }

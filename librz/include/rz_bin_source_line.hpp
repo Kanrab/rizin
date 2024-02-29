@@ -7,8 +7,8 @@
 #ifndef RIZIN_RZ_BIN_SOURCE_LINE_H
 #define RIZIN_RZ_BIN_SOURCE_LINE_H
 
-#include <rz_vector.h>
-#include <rz_util.h>
+#include <rz_vector.hpp>
+#include <rz_util.hpp>
 
 typedef struct rz_bin_source_line_info_t RzBinSourceLineInfo;
 

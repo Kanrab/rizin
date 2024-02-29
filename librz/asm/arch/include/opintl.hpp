@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 1998, 1999, 2000, 2007 Free Software Foundation, Inc.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-/* opintl.h - opcodes specific header for gettext code.
+/* opintl.hpp - opcodes specific header for gettext code.
    Copyright 1998, 1999, 2000, 2007 Free Software Foundation, Inc.
 
    Written by Tom Tromey <tromey@cygnus.com>
@@ -24,7 +24,7 @@
    MA 02110-1301, USA.  */
 
 #ifdef ENABLE_NLS
-#include <libintl.h>
+#include <libintl.hpp>
 /* Note the use of dgetext() and PACKAGE here, rather than gettext().
 
    This is because the code in this directory is used to build a library which

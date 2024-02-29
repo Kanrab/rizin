@@ -9,13 +9,13 @@
 #ifdef _MSC_VER
 typedef int pid_t;
 #else
-#include <unistd.h>
+#include <unistd.hpp>
 #endif
 
-#include "arch.h"
-#include "rz_types_base.h"
-#include "rz_socket.h"
-#include "dsmsgs.h"
+#include "arch.hpp"
+#include "rz_types_base.hpp"
+#include "rz_socket.hpp"
+#include "dsmsgs.hpp"
 
 #define MSG_OK            0
 #define MSG_NOT_SUPPORTED -1

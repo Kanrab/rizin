@@ -1,6 +1,6 @@
 #ifndef RZ_TREE_H
 #define RZ_TREE_H
-#include <rz_list.h>
+#include <rz_list.hpp>
 
 struct rz_tree_t;
 

@@ -23,7 +23,7 @@
    along with this program; see the file COPYING3. If not,
    see <http://www.gnu.org/licenses/>.  */
 
-#include "riscv.h"
+#include "riscv.hpp"
 #include <stdio.h>
 
 /* Register names used by gas and objdump.  */

@@ -6,8 +6,8 @@
  * Generates RzFlirtNodes from data contained in RzAnalysis.
  */
 
-#include <rz_flirt.h>
-#include <rz_util.h>
+#include <rz_flirt.hpp>
+#include <rz_util.hpp>
 
 #define starts_with_flag(b, c) (!strncmp(b, c, strlen(c)))
 

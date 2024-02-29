@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2009-2015 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bp.h>
-#include <rz_lib.h>
+#include <rz_bp.hpp>
+#include <rz_lib.hpp>
 
 RZ_API int rz_bp_plugin_del_byname(RzBreakpoint *bp, RZ_NONNULL const char *name) {
 	rz_return_val_if_fail(bp && name, false);

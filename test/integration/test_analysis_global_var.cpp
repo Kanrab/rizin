@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2021 Basstorm <basstorm@nyist.edu.cn>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
-#include <rz_core.h>
-#include "test_config.h"
-#include "../unit/minunit.h"
+#include <rz_analysis.hpp>
+#include <rz_core.hpp>
+#include "test_config.hpp"
+#include "../unit/minunit.hpp"
 
 bool test_rz_analysis_global_var() {
 	RzCore *core = rz_core_new();

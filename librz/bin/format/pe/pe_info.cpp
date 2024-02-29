@@ -3,7 +3,7 @@
 // SPDX-FileCopyrightText: 2008-2019 inisider <inisider@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "pe.h"
+#include "pe.hpp"
 
 static inline int is_thumb(RzBinPEObj *bin) {
 	return bin->nt_headers->optional_header.AddressOfEntryPoint & 1;

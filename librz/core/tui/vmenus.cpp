@@ -3,14 +3,14 @@
 
 #include <string.h>
 
-#include <rz_core.h>
-#include <rz_util.h>
-#include <rz_asm.h>
-#include <rz_util/rz_print.h>
-#include <rz_util/rz_strbuf.h>
+#include <rz_core.hpp>
+#include <rz_util.hpp>
+#include <rz_asm.hpp>
+#include <rz_util/rz_print.hpp>
+#include <rz_util/rz_strbuf.hpp>
 
-#include "../core_private.h"
-#include "modes.h"
+#include "../core_private.hpp"
+#include "modes.hpp"
 
 #define MAX_FORMAT 3
 
@@ -344,7 +344,7 @@ static void rz_core_vmenu_append_help(RzStrBuf *p, const char **help) {
 	int i;
 	RzConsContext *cons_ctx = rz_cons_singleton()->context;
 	const char *pal_args_color = cons_ctx->color_mode ? cons_ctx->pal.args : "",
-		   *pal_help_color = cons_ctx->color_mode ? cons_ctx->pal.help : "",
+		   *pal_help_color = cons_ctx->color_mode ? cons_ctx->pal.hppelp : "",
 		   *pal_reset = cons_ctx->color_mode ? cons_ctx->pal.reset : "";
 
 	for (i = 0; help[i]; i += 2) {

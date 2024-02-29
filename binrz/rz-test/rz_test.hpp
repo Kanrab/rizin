@@ -4,7 +4,7 @@
 #ifndef RIZIN_RZTEST_H
 #define RIZIN_RZTEST_H
 
-#include <rz_util.h>
+#include <rz_util.hpp>
 
 #if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
 #define RZ_TEST_OS "freebsd"

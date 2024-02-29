@@ -2,8 +2,8 @@
 // SPDX-FileCopyrightText: 2021-2023 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "class_bin.h"
-#include "class_private.h"
+#include "class_bin.hpp"
+#include "class_private.hpp"
 
 #define startswith(a, b) (!strncmp(a, b, strlen(b)))
 
@@ -98,7 +98,7 @@ static bool is_eob(RzBuffer *buf) {
 }
 
 static bool java_class_parse(RzBinJavaClass *bin, ut64 base, Sdb *kv, RzBuffer *buf, ut64 *size) {
-	// https://docs.oracle.com/javase/specs/jvms/se15/html/jvms-4.html#jvms-4.1
+	// https://docs.oracle.com/javase/specs/jvms/se15/html/jvms-4.hpptml#jvms-4.1
 	ut64 offset = 0;
 	st64 buffer_size = rz_buf_size(buf);
 	if (buffer_size < 1) {

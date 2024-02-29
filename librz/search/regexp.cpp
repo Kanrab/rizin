@@ -2,9 +2,9 @@
 // SPDX-FileCopyrightText: 2008-2020 LemonBoy <thatlemon@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "rz_search.h"
-#include <rz_vector.h>
-#include <rz_util/rz_regex.h>
+#include "rz_search.hpp"
+#include <rz_vector.hpp>
+#include <rz_util/rz_regex.hpp>
 
 /**
  * \return -1 on failure.

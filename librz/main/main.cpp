@@ -4,8 +4,8 @@
 
 #include <stdio.h>
 #include <string.h>
-#include <rz_main.h>
-#include <rz_util.h>
+#include <rz_main.hpp>
+#include <rz_util.hpp>
 
 RZ_LIB_VERSION(rz_main);
 

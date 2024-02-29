@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2010-2013 nibble <nibble.ds@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include "mach0_specs.h"
+#include <rz_types.hpp>
+#include "mach0_specs.hpp"
 
 #ifndef _INCLUDE_RZ_BIN_FATMACH0_H_
 #define _INCLUDE_RZ_BIN_FATMACH0_H_

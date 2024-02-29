@@ -1,15 +1,15 @@
 // SPDX-FileCopyrightText: 2014-2015 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
+#include <rz_util.hpp>
 #if HAVE_ZLIB
-#include <zlib.h>
+#include <zlib.hpp>
 #else
 #define MAX_WBITS 15
 #endif
 
 #if HAVE_LZMA
-#include <lzma.h>
+#include <lzma.hpp>
 #endif
 
 // set a maximum output buffer of 50MB

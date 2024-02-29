@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2023 billow <billow.fun@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "modi.h"
+#include "modi.hpp"
 
 static bool PDBModuleInfo_symbols(const PDBModuleInfo *modi, PDBSymbolIter *iter) {
 	RzBuffer *b = rz_buf_new_slice(modi->stream, 0, modi->symbols_size);

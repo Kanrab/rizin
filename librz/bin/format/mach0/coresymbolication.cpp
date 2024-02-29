@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2020 mrmacete <mrmacete@protonmail.ch>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include "coresymbolication.h"
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include "coresymbolication.hpp"
 
 #define RZ_CS_EL_OFF_SEGS     0x58
 #define RZ_CS_EL_SIZE_SEG     0x20

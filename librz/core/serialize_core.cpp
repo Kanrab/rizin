@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2020 Florian Märkl <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util/rz_serialize.h>
-#include <rz_core.h>
+#include <rz_util/rz_serialize.hpp>
+#include <rz_core.hpp>
 
 /*
  * SDB Format:
@@ -42,7 +42,7 @@ RZ_API void rz_serialize_core_save(RZ_NONNULL Sdb *db, RZ_NONNULL RzCore *core, 
 }
 
 static const char *const config_exclude[] = {
-	"dir.home",
+	"dir.hppome",
 	"dir.libs",
 	"dir.magic",
 	"dir.plugins",
@@ -456,17 +456,17 @@ RZ_API bool rz_serialize_core_seek_load(RZ_NONNULL Sdb *db, RZ_NONNULL RzCore *c
 		RZ_SERIALIZE_ERR(res, "failed to reorder seek history redo items");
 	}
 
-	// Increase cfg.seek.histsize as needed
+	// Increase cfg.seek.hppistsize as needed
 	size_t ulen = rz_vector_len(&core->seek_history.undos);
 	if (SZT_ADD_OVFCHK(ulen, rlen)) {
 		ret = false;
-		RZ_SERIALIZE_ERR(res, "failed to adjust cfg.seek.histsize");
+		RZ_SERIALIZE_ERR(res, "failed to adjust cfg.seek.hppistsize");
 		rz_goto_if_reached(out_free_list);
 	}
-	ut64 histsize = rz_config_get_i(core->config, "cfg.seek.histsize");
+	ut64 histsize = rz_config_get_i(core->config, "cfg.seek.hppistsize");
 	if (histsize != 0 && histsize < ulen + rlen) {
-		RZ_LOG_WARN("core: Loaded project seek history exceeds cfg.seek.histsize, increasing that limit.");
-		rz_config_set_i(core->config, "cfg.seek.histsize", ulen + rlen);
+		RZ_LOG_WARN("core: Loaded project seek history exceeds cfg.seek.hppistsize, increasing that limit.");
+		rz_config_set_i(core->config, "cfg.seek.hppistsize", ulen + rlen);
 	}
 
 out_free_list:

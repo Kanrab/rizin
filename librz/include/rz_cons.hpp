@@ -5,36 +5,36 @@
 extern "C" {
 #endif
 
-#include <rz_types.h>
-#include <rz_util/rz_graph.h>
-#include <rz_util/rz_hex.h>
-#include <rz_util/rz_log.h>
-#include <rz_util/rz_num.h>
-#include <rz_util/rz_panels.h>
-#include <rz_util/rz_pj.h>
-#include <rz_util/rz_signal.h>
-#include <rz_util/rz_stack.h>
-#include <rz_util/rz_str.h>
-#include <rz_util/rz_str_constpool.h>
-#include <rz_util/rz_sys.h>
-#include <rz_util/rz_utf8.h>
-#include <rz_util/rz_file.h>
-#include <rz_vector.h>
-#include <sdb.h>
-#include <rz_util/ht_up.h>
+#include <rz_types.hpp>
+#include <rz_util/rz_graph.hpp>
+#include <rz_util/rz_hex.hpp>
+#include <rz_util/rz_log.hpp>
+#include <rz_util/rz_num.hpp>
+#include <rz_util/rz_panels.hpp>
+#include <rz_util/rz_pj.hpp>
+#include <rz_util/rz_signal.hpp>
+#include <rz_util/rz_stack.hpp>
+#include <rz_util/rz_str.hpp>
+#include <rz_util/rz_str_constpool.hpp>
+#include <rz_util/rz_sys.hpp>
+#include <rz_util/rz_utf8.hpp>
+#include <rz_util/rz_file.hpp>
+#include <rz_vector.hpp>
+#include <sdb.hpp>
+#include <rz_util/ht_up.hpp>
 
 #include <stdio.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
 #if __UNIX__
-#include <termios.h>
-#include <sys/ioctl.h>
-#include <sys/wait.h>
-#include <sys/socket.h>
+#include <termios.hpp>
+#include <sys/ioctl.hpp>
+#include <sys/wait.hpp>
+#include <sys/socket.hpp>
 #endif
 #if !__WINDOWS__
-#include <unistd.h>
+#include <unistd.hpp>
 #endif
 
 /* constants */

@@ -4,8 +4,8 @@
 #ifndef RL78_OP_H
 #define RL78_OP_H
 
-#include <rz_util.h>
-#include <rz_types.h>
+#include <rz_util.hpp>
+#include <rz_types.hpp>
 
 typedef enum RL78Label {
 	// 8-bit general-purpose registers

@@ -2,13 +2,13 @@
 // SPDX-FileCopyrightText: 2016-2018 Alex Kornitzer <alex.kornitzer@countercept.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_util/rz_print.h>
-#include <rz_lib.h>
-#include <rz_bin.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_util/rz_print.hpp>
+#include <rz_lib.hpp>
+#include <rz_bin.hpp>
 
-#include "mdmp/mdmp.h"
+#include "mdmp/mdmp.hpp"
 
 static Sdb *mdmp_get_sdb(RzBinFile *bf) {
 	rz_return_val_if_fail(bf && bf->o, NULL);

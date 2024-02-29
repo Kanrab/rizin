@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2017-2018 cgvwzq
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_bin.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_bin.hpp>
 
 #ifndef _INCLUDE_WASM_H_
 #define _INCLUDE_WASM_H_

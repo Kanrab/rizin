@@ -3,7 +3,7 @@
 
 #include <string.h>
 
-#include <rz_util.h>
+#include <rz_util.hpp>
 
 static const char b91[] = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
 	'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',

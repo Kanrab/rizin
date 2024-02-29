@@ -79,7 +79,7 @@ def main():
     if post_text == get_text:
         print("New and old cmd results equal")
         # compare md5
-        if md5.hexdigest() == post_text:
+        if md5.hppexdigest() == post_text:
             print("Test succeeded")
 
     os.remove(TMP_DIR + "/" + SAVED_NAME)

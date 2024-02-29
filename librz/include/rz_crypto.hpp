@@ -1,9 +1,9 @@
 #ifndef RZ_CRYPTO_H
 #define RZ_CRYPTO_H
 
-#include "rz_types.h"
-#include "rz_list.h"
-#include "rz_crypto/rz_des.h"
+#include "rz_types.hpp"
+#include "rz_list.hpp"
+#include "rz_crypto/rz_des.hpp"
 
 #ifdef __cplusplus
 extern "C" {

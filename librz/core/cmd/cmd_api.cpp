@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: 2009-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_cmd.h>
-#include <rz_util.h>
+#include <rz_cmd.hpp>
+#include <rz_util.hpp>
 #include <stdio.h>
-#include <rz_cons.h>
-#include <rz_cmd.h>
-#include <rz_core.h>
+#include <rz_cons.hpp>
+#include <rz_cmd.hpp>
+#include <rz_core.hpp>
 
 /*!
  * Number of sub-commands to show as options when displaying the help of a
@@ -932,7 +932,7 @@ static void fill_wrapped_comment(RzCmd *cmd, RzStrBuf *sb, const char *comment, 
 		RzCons *cons = rz_cons_singleton();
 		cols = rz_cons_get_size(&rows);
 		is_interactive = rz_cons_is_interactive();
-		help_color = use_color ? cons->context->pal.help : "";
+		help_color = use_color ? cons->context->pal.hppelp : "";
 	}
 	if (is_interactive && cols > 0 && cols - columns > MIN_SUMMARY_WIDTH && !RZ_STR_ISEMPTY(comment)) {
 		char *text = strdup(comment);
@@ -1027,7 +1027,7 @@ static void fill_usage_strbuf(RzCmd *cmd, RzStrBuf *sb, RzCmdDesc *cd, bool use_
 		pal_label_color = cons->context->pal.label;
 		pal_args_color = cons->context->pal.args;
 		pal_input_color = cons->context->pal.input;
-		pal_help_color = cons->context->pal.help;
+		pal_help_color = cons->context->pal.hppelp;
 		pal_reset = cons->context->pal.reset;
 	}
 
@@ -1111,7 +1111,7 @@ static void do_print_child_help(RzCmd *cmd, RzStrBuf *sb, const RzCmdDesc *cd, c
 		RzCons *cons = rz_cons_singleton();
 		pal_args_color = cons->context->pal.args;
 		pal_opt_color = cons->context->pal.reset;
-		pal_help_color = cons->context->pal.help;
+		pal_help_color = cons->context->pal.hppelp;
 		pal_input_color = cons->context->pal.input;
 		pal_reset = cons->context->pal.reset;
 	}
@@ -1240,7 +1240,7 @@ static void fill_details_do(RzCmd *cmd, const RzCmdDescDetail *detail_it, RzStrB
 		   *pal_reset = "";
 	if (cmd->has_cons && use_color) {
 		RzCons *cons = rz_cons_singleton();
-		pal_help_color = cons->context->pal.help;
+		pal_help_color = cons->context->pal.hppelp;
 		pal_input_color = cons->context->pal.input;
 		pal_label_color = cons->context->pal.label;
 		pal_args_color = cons->context->pal.args;

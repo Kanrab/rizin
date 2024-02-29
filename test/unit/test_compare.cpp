@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2021 Dhruv Maroo <dhruvmaru007@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_cmp.h>
-#include "minunit.h"
+#include <rz_cmp.hpp>
+#include "minunit.hpp"
 
 char *data =
 	"abcdefghijklmnopqrstuvwxyz"

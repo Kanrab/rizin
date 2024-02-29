@@ -3,14 +3,14 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <string.h>
-#include <rz_lib.h>
-#include <rz_analysis.h>
-#include <rz_util.h>
-#include <rz_endian.h>
+#include <rz_lib.hpp>
+#include <rz_analysis.hpp>
+#include <rz_util.hpp>
+#include <rz_endian.hpp>
 
-#include <v850_disas.h>
+#include <v850_disas.hpp>
 #include "../arch/v850/v850_esil.inc"
-#include "../arch/v850/v850_il.h"
+#include "../arch/v850/v850_il.hpp"
 
 static int v850_op(RzAnalysis *analysis, RzAnalysisOp *op, ut64 addr, const ut8 *buf, int len, RzAnalysisOpMask mask) {
 	int ret = 0;

@@ -2,8 +2,8 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 // TODO: use rz_range here??
-#include <rz_bp.h>
-#include <rz_list.h>
+#include <rz_bp.hpp>
+#include <rz_list.hpp>
 
 RZ_API void rz_bp_traptrace_free(void *ptr) {
 	RzBreakpointTrace *trace = ptr;

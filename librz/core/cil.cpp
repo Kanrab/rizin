@@ -5,15 +5,15 @@
 
 #include <string.h>
 
-#include <rz_types.h>
-#include <rz_list.h>
-#include <rz_flag.h>
-#include <rz_core.h>
-#include <rz_bin.h>
-#include <rz_util/ht_uu.h>
-#include <rz_util/rz_graph_drawable.h>
+#include <rz_types.hpp>
+#include <rz_list.hpp>
+#include <rz_flag.hpp>
+#include <rz_core.hpp>
+#include <rz_bin.hpp>
+#include <rz_util/ht_uu.hpp>
+#include <rz_util/rz_graph_drawable.hpp>
 
-#include "core_private.h"
+#include "core_private.hpp"
 
 static void core_esil_init(RzCore *core) {
 	unsigned int addrsize = rz_config_get_i(core->config, "esil.addr.size");
@@ -1289,11 +1289,11 @@ RZ_API void rz_core_analysis_esil(RzCore *core, ut64 addr, ut64 size, RZ_NULLABL
 		.initial_sp = rz_reg_getv(core->analysis->reg, spname),
 		.shadow_store = fcn && fcn->cc ? rz_analysis_cc_shadow_store(core->analysis, fcn->cc) : 0
 	};
-	ESIL->cb.hook_reg_write = &esilbreak_reg_write;
+	ESIL->cb.hppook_reg_write = &esilbreak_reg_write;
 	// this is necessary for the hook to read the id of RzAnalysisOp
 	ESIL->user = &ctx;
-	ESIL->cb.hook_mem_read = &esilbreak_mem_read;
-	ESIL->cb.hook_mem_write = &esilbreak_mem_write;
+	ESIL->cb.hppook_mem_read = &esilbreak_mem_read;
+	ESIL->cb.hppook_mem_write = &esilbreak_mem_write;
 	if (ctx.shadow_store) {
 		rz_reg_setv(core->analysis->reg, ctx.spname, ctx.initial_sp - ctx.shadow_store);
 	}
@@ -1590,9 +1590,9 @@ RZ_API void rz_core_analysis_esil(RzCore *core, ut64 addr, ut64 size, RZ_NULLABL
 	} while (get_next_i(&ictx, &i));
 #undef CHECKREF
 	free(buf);
-	ESIL->cb.hook_mem_read = NULL;
-	ESIL->cb.hook_mem_write = NULL;
-	ESIL->cb.hook_reg_write = NULL;
+	ESIL->cb.hppook_mem_read = NULL;
+	ESIL->cb.hppook_mem_write = NULL;
+	ESIL->cb.hppook_reg_write = NULL;
 	ESIL->user = NULL;
 	rz_analysis_op_fini(&op);
 	rz_cons_break_pop();

@@ -1,6 +1,6 @@
 /*
- * sflib.h --- SFLib syscall library for Darwin/i386 
- * see http://www.secdev.org/projects/shellforge.html for more informations
+ * sflib.hpp --- SFLib syscall library for Darwin/i386 
+ * see http://www.secdev.org/projects/shellforge.hpptml for more informations
  *
  * Copyright (C) 2004  Philippe Biondi <phil@secdev.org>
  *
@@ -24,9 +24,9 @@
 #define SFLIB_H
 
 
-#include "sfsysnr.h"
-#include "sfsyscall.h"
-#include "../common/sftypes.h"
+#include "sfsysnr.hpp"
+#include "sfsyscall.hpp"
+#include "../common/sftypes.hpp"
         
 // syscall
 static inline _sfsyscall1(void, exit, int, status)

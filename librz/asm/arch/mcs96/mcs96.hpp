@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2015-2019 condret <condr3t@protonmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include <rz_types.h>
+#include <rz_util.hpp>
+#include <rz_types.hpp>
 
 typedef struct mcs96_op_t {
 	const char *ins;

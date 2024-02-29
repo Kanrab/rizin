@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2020 Florian Märkl <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_flag.h>
-#include "minunit.h"
+#include <rz_flag.hpp>
+#include "minunit.hpp"
 
 struct {
 	const char *base;

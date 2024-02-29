@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2021 Billow <billow.fun@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "rz_util/rz_ebcdic.h"
-#include "rz_util/rz_assert.h"
+#include "rz_util/rz_ebcdic.hpp"
+#include "rz_util/rz_assert.hpp"
 
 /**
  *  \file ebcdic.c

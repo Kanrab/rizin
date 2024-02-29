@@ -12,9 +12,9 @@
 	((BIT(val, B7) << 7) | (BIT(val, B6) << 6) | (BIT(val, B5) << 5) | (BIT(val, B4) << 4) | \
 		(BIT(val, B3) << 3) | (BIT(val, B2) << 2) | (BIT(val, B1) << 1) | (BIT(val, B0) << 0))
 
-#include <rz_lib.h>
-#include <rz_crypto.h>
-#include <rz_util.h>
+#include <rz_lib.hpp>
+#include <rz_crypto.hpp>
+#include <rz_util.hpp>
 
 // license:BSD-3-Clause
 // copyright-holders:Paul Leaman, Andreas Naive, Nicola Salmoria,Charles MacDonald

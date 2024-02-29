@@ -1,12 +1,12 @@
 #ifndef RZ_LIB_H
 #define RZ_LIB_H
 
-#include "rz_types.h"
-#include "rz_list.h"
-#include <rz_util/ht_pu.h>
+#include "rz_types.hpp"
+#include "rz_list.hpp"
+#include <rz_util/ht_pu.hpp>
 
 #if __UNIX__
-#include <dlfcn.h>
+#include <dlfcn.hpp>
 #endif
 
 #ifdef __cplusplus

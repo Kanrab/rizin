@@ -2,21 +2,21 @@
 // SPDX-FileCopyrightText: 2009-2021 nibble <nibble.ds@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "rz_util/rz_print.h"
-#include <rz_vector.h>
-#include <rz_util/rz_strbuf.h>
-#include <rz_util/rz_regex.h>
-#include <rz_util/rz_assert.h>
-#include <rz_list.h>
+#include "rz_util/rz_print.hpp"
+#include <rz_vector.hpp>
+#include <rz_util/rz_strbuf.hpp>
+#include <rz_util/rz_regex.hpp>
+#include <rz_util/rz_assert.hpp>
+#include <rz_list.hpp>
 #include <stdio.h>
-#include <rz_core.h>
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_asm.h>
+#include <rz_core.hpp>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_asm.hpp>
 #define USE_R2 1
-#include <spp.h>
-#include <config.h>
+#include <spp.hpp>
+#include <config.hpp>
 
 RZ_LIB_VERSION(rz_asm);
 
@@ -77,8 +77,8 @@ static bool is_register(const char *name, RZ_BORROW const RzRegSet *regset) {
 
 	bool found = false;
 	for (ut32 i = 0; i < RZ_REG_TYPE_LAST; ++i) {
-		if (regset[i].ht_regs) {
-			ht_pp_find(regset[i].ht_regs, name, &found);
+		if (regset[i].hppt_regs) {
+			ht_pp_find(regset[i].hppt_regs, name, &found);
 			if (found) {
 				return true;
 			}
@@ -1096,7 +1096,7 @@ RZ_API RzAsmCode *rz_asm_massemble(RzAsm *a, const char *assembly) {
 					rz_asm_set_cpu(a, ptr + 5);
 				} else if (!strncmp(ptr, ".os ", 4)) {
 					rz_syscall_setup(a->syscall, a->cur->arch, a->bits, asmcpu, ptr + 4);
-				} else if (!strncmp(ptr, ".hex ", 5)) {
+				} else if (!strncmp(ptr, ".hppex ", 5)) {
 					ret = rz_asm_op_set_hex(&op, ptr + 5);
 				} else if ((!strncmp(ptr, ".int16 ", 7)) || !strncmp(ptr, ".short ", 7)) {
 					ret = rz_asm_pseudo_int16(a, &op, ptr + 7);

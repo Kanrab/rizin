@@ -186,7 +186,7 @@ nth paddr      vaddr      bind   type  size lib                     name
 2   0x000002aa 0x000002aa LOCAL  FUNC  41   Hello                   void main(String[])
 0   0x0000020b 0x0000020b LOCAL  OBJ   0    Hello                   Hello.who
 1   0x0000000a 0x0000000a IMPORT METH  0    java.lang.Object        imp.void <init>()
-2   0x0000000f 0x0000000f IMPORT FIELD 0    Hello                   imp.Hello.who
+2   0x0000000f 0x0000000f IMPORT FIELD 0    Hello                   imp.hppello.who
 3   0x00000014 0x00000014 IMPORT FIELD 0    java.lang.System        imp.System.out
 5   0x0000001c 0x0000001c IMPORT METH  0    java.lang.StringBuilder imp.void <init>()
 7   0x00000024 0x00000024 IMPORT METH  0    java.lang.StringBuilder imp.StringBuilder append(String)
@@ -271,29 +271,29 @@ nth paddr      vaddr      bind   type  size lib                                 
 16  0x000028a5 0x000028a5 LOCAL  FUNC  47   org.radare2.installer.MainActivity   android.widget.TextView access$500(org.radare2.installer.MainActivity)
 17  0x000028e2 0x000028e2 LOCAL  FUNC  47   org.radare2.installer.MainActivity   Thread access$600(org.radare2.installer.MainActivity)
 18  0x0000291f 0x0000291f LOCAL  FUNC  59   org.radare2.installer.MainActivity   Thread access$602(org.radare2.installer.MainActivity, Thread)
-19  0x00002968 0x00002968 LOCAL  FUNC  47   org.radare2.installer.MainActivity   android.os.Handler access$700(org.radare2.installer.MainActivity)
+19  0x00002968 0x00002968 LOCAL  FUNC  47   org.radare2.installer.MainActivity   android.os.hppandler access$700(org.radare2.installer.MainActivity)
 20  0x000029a5 0x000029a5 LOCAL  FUNC  69   org.radare2.installer.MainActivity   boolean access$800(org.radare2.installer.MainActivity, String, String)
 0   0x00001c1f 0x00001c1f LOCAL  OBJ   0    org.radare2.installer.MainActivity   org.radare2.installer.MainActivity.outputView
-1   0x00001c27 0x00001c27 LOCAL  OBJ   0    org.radare2.installer.MainActivity   org.radare2.installer.MainActivity.handler
+1   0x00001c27 0x00001c27 LOCAL  OBJ   0    org.radare2.installer.MainActivity   org.radare2.installer.MainActivity.hppandler
 2   0x00001c2f 0x00001c2f LOCAL  OBJ   0    org.radare2.installer.MainActivity   org.radare2.installer.MainActivity.remoteRunButton
 3   0x00001c37 0x00001c37 LOCAL  OBJ   0    org.radare2.installer.MainActivity   org.radare2.installer.MainActivity.localRunButton
 4   0x00001c3f 0x00001c3f LOCAL  OBJ   0    org.radare2.installer.MainActivity   org.radare2.installer.MainActivity.context
 5   0x00001c47 0x00001c47 LOCAL  OBJ   0    org.radare2.installer.MainActivity   org.radare2.installer.MainActivity.mUtils
-6   0x00001c4f 0x00001c4f LOCAL  OBJ   0    org.radare2.installer.MainActivity   org.radare2.installer.MainActivity.http_url_default
+6   0x00001c4f 0x00001c4f LOCAL  OBJ   0    org.radare2.installer.MainActivity   org.radare2.installer.MainActivity.hppttp_url_default
 7   0x00001c57 0x00001c57 LOCAL  OBJ   0    org.radare2.installer.MainActivity   org.radare2.installer.MainActivity.onLocalRunButtonClick
 8   0x00001c5f 0x00001c5f LOCAL  OBJ   0    org.radare2.installer.MainActivity   org.radare2.installer.MainActivity.thread
 9   0x00001c67 0x00001c67 LOCAL  OBJ   0    org.radare2.installer.MainActivity   org.radare2.installer.MainActivity.onRemoteRunButtonClick
 1   0x0000000a 0x0000000a IMPORT METH  0    org.radare2.installer.MainActivity   imp.boolean download(String, String)
-2   0x0000000f 0x0000000f IMPORT FIELD 0    org.radare2.installer.MainActivity   imp.org.radare2.installer.MainActivity.handler
+2   0x0000000f 0x0000000f IMPORT FIELD 0    org.radare2.installer.MainActivity   imp.org.radare2.installer.MainActivity.hppandler
 3   0x00000014 0x00000014 IMPORT FIELD 0    org.radare2.installer.MainActivity   imp.org.radare2.installer.MainActivity.thread
 4   0x00000019 0x00000019 IMPORT FIELD 0    org.radare2.installer.MainActivity   imp.org.radare2.installer.MainActivity.outputView
 5   0x0000001e 0x0000001e IMPORT FIELD 0    org.radare2.installer.MainActivity   imp.org.radare2.installer.MainActivity.remoteRunButton
 6   0x00000023 0x00000023 IMPORT METH  0    org.radare2.installer.MainActivity   imp.boolean checkForRadare()
-7   0x00000028 0x00000028 IMPORT FIELD 0    org.radare2.installer.MainActivity   imp.org.radare2.installer.MainActivity.http_url_default
+7   0x00000028 0x00000028 IMPORT FIELD 0    org.radare2.installer.MainActivity   imp.org.radare2.installer.MainActivity.hppttp_url_default
 8   0x0000002d 0x0000002d IMPORT METH  0    org.radare2.installer.MainActivity   imp.void output(String)
 9   0x00000032 0x00000032 IMPORT FIELD 0    org.radare2.installer.MainActivity   imp.org.radare2.installer.MainActivity.mUtils
 10  0x00000037 0x00000037 IMPORT METH  0    android.app.Activity                 imp.void <init>()
-12  0x0000003f 0x0000003f IMPORT METH  0    android.os.Handler                   imp.void <init>()
+12  0x0000003f 0x0000003f IMPORT METH  0    android.os.hppandler                   imp.void <init>()
 15  0x0000004a 0x0000004a IMPORT METH  0    org.radare2.installer.MainActivity$2 imp.void <init>(org.radare2.installer.MainActivity)
 16  0x0000004f 0x0000004f IMPORT FIELD 0    org.radare2.installer.MainActivity   imp.org.radare2.installer.MainActivity.onLocalRunButtonClick
 18  0x00000057 0x00000057 IMPORT METH  0    org.radare2.installer.MainActivity$3 imp.void <init>(org.radare2.installer.MainActivity)
@@ -322,7 +322,7 @@ nth paddr      vaddr      bind   type  size lib                                 
 69  0x0000012e 0x0000012e IMPORT METH  0    java.io.File                         imp.void <init>(String)
 70  0x00000133 0x00000133 IMPORT METH  0    java.io.File                         imp.boolean exists()
 72  0x0000013b 0x0000013b IMPORT METH  0    org.radare2.installer.MainActivity$4 imp.void <init>(org.radare2.installer.MainActivity, String)
-73  0x00000140 0x00000140 IMPORT METH  0    android.os.Handler                   imp.boolean post(java.lang.Runnable)
+73  0x00000140 0x00000140 IMPORT METH  0    android.os.hppandler                   imp.boolean post(java.lang.Runnable)
 76  0x0000014b 0x0000014b IMPORT METH  0    java.io.FileInputStream              imp.void <init>(String)
 77  0x00000150 0x00000150 IMPORT METH  0    java.util.zip.GZIPInputStream        imp.void <init>(java.io.InputStream)
 78  0x00000155 0x00000155 IMPORT METH  0    java.lang.String                     imp.int lastIndexOf(int)
@@ -342,21 +342,21 @@ nth paddr      vaddr      bind   type  size lib                                 
 98  0x000001ad 0x000001ad IMPORT METH  0    org.radare2.installer.MainActivity$5 imp.void <init>(org.radare2.installer.MainActivity)
 100 0x000001b5 0x000001b5 IMPORT METH  0    java.net.URL                         imp.void <init>(String)
 101 0x000001ba 0x000001ba IMPORT METH  0    java.net.URL                         imp.java.net.URLConnection openConnection()
-104 0x000001c5 0x000001c5 IMPORT METH  0    java.net.HttpURLConnection           imp.void setRequestMethod(String)
-105 0x000001ca 0x000001ca IMPORT METH  0    java.net.HttpURLConnection           imp.void setInstanceFollowRedirects(boolean)
-106 0x000001cf 0x000001cf IMPORT METH  0    java.net.HttpURLConnection           imp.java.util.Map getRequestProperties()
-107 0x000001d4 0x000001d4 IMPORT METH  0    java.net.HttpURLConnection           imp.void connect()
-108 0x000001d9 0x000001d9 IMPORT METH  0    java.net.HttpURLConnection           imp.int getContentLength()
+104 0x000001c5 0x000001c5 IMPORT METH  0    java.net.hppttpURLConnection           imp.void setRequestMethod(String)
+105 0x000001ca 0x000001ca IMPORT METH  0    java.net.hppttpURLConnection           imp.void setInstanceFollowRedirects(boolean)
+106 0x000001cf 0x000001cf IMPORT METH  0    java.net.hppttpURLConnection           imp.java.util.Map getRequestProperties()
+107 0x000001d4 0x000001d4 IMPORT METH  0    java.net.hppttpURLConnection           imp.void connect()
+108 0x000001d9 0x000001d9 IMPORT METH  0    java.net.hppttpURLConnection           imp.int getContentLength()
 110 0x000001e1 0x000001e1 IMPORT METH  0    java.lang.StringBuilder              imp.StringBuilder append(int)
-113 0x000001ec 0x000001ec IMPORT METH  0    java.net.HttpURLConnection           imp.String getHeaderField(String)
+113 0x000001ec 0x000001ec IMPORT METH  0    java.net.hppttpURLConnection           imp.String getHeaderField(String)
 114 0x000001f1 0x000001f1 IMPORT METH  0    org.radare2.installer.Utils          imp.void StorePref(String, String)
-115 0x000001f6 0x000001f6 IMPORT METH  0    java.net.HttpURLConnection           imp.java.io.InputStream getInputStream()
+115 0x000001f6 0x000001f6 IMPORT METH  0    java.net.hppttpURLConnection           imp.java.io.InputStream getInputStream()
 117 0x000001fe 0x000001fe IMPORT METH  0    java.io.InputStream                  imp.int read(byte[])
 118 0x00000203 0x00000203 IMPORT METH  0    java.io.FileOutputStream             imp.void write(byte[], int, int)
 121 0x0000020e 0x0000020e IMPORT METH  0    org.radare2.installer.MainActivity   imp.void resetButtons()
 123 0x00000216 0x00000216 IMPORT METH  0    java.io.FileOutputStream             imp.void close()
 124 0x0000021b 0x0000021b IMPORT METH  0    java.io.InputStream                  imp.void close()
-125 0x00000220 0x00000220 IMPORT METH  0    java.net.HttpURLConnection           imp.void disconnect()
+125 0x00000220 0x00000220 IMPORT METH  0    java.net.hppttpURLConnection           imp.void disconnect()
 127 0x00000228 0x00000228 IMPORT METH  0    java.lang.Exception                  imp.void printStackTrace()
 128 0x0000022d 0x0000022d IMPORT METH  0    android.app.Activity                 imp.void onResume()
 131 0x00000238 0x00000238 IMPORT IMETH 0    android.content.SharedPreferences    imp.String getString(String, String)
@@ -675,7 +675,7 @@ address    min        max        name                               super
 address    index class                              flags name                   type                              
 -------------------------------------------------------------------------------------------------------------------
 0x00001c1f 0     org.radare2.installer.MainActivity P     outputView             android.widget.TextView
-0x00001c27 1     org.radare2.installer.MainActivity P     handler                android.os.Handler
+0x00001c27 1     org.radare2.installer.MainActivity P     handler                android.os.hppandler
 0x00001c2f 2     org.radare2.installer.MainActivity P     remoteRunButton        android.widget.Button
 0x00001c37 3     org.radare2.installer.MainActivity P     localRunButton         android.widget.Button
 0x00001c3f 4     org.radare2.installer.MainActivity P     context                android.content.Context
@@ -705,7 +705,7 @@ address    index class                              flags name
 0x000028a5 16    org.radare2.installer.MainActivity sh    android.widget.TextView access$500(org.radare2.installer.MainActivity)
 0x000028e2 17    org.radare2.installer.MainActivity sh    Thread access$600(org.radare2.installer.MainActivity)
 0x0000291f 18    org.radare2.installer.MainActivity sh    Thread access$602(org.radare2.installer.MainActivity, Thread)
-0x00002968 19    org.radare2.installer.MainActivity sh    android.os.Handler access$700(org.radare2.installer.MainActivity)
+0x00002968 19    org.radare2.installer.MainActivity sh    android.os.hppandler access$700(org.radare2.installer.MainActivity)
 0x000029a5 20    org.radare2.installer.MainActivity sh    boolean access$800(org.radare2.installer.MainActivity, String, String)
 EOF
 RUN
@@ -934,7 +934,7 @@ nth vaddr      bind type  lib                                  name
 8   ---------- NONE METH  org.radare2.installer.MainActivity   output
 9   ---------- NONE FIELD org.radare2.installer.MainActivity   mUtils
 10  ---------- NONE METH  android.app.Activity                 <init>
-12  ---------- NONE METH  android.os.Handler                   <init>
+12  ---------- NONE METH  android.os.hppandler                   <init>
 15  ---------- NONE METH  org.radare2.installer.MainActivity$2 <init>
 16  ---------- NONE FIELD org.radare2.installer.MainActivity   onLocalRunButtonClick
 18  ---------- NONE METH  org.radare2.installer.MainActivity$3 <init>
@@ -963,7 +963,7 @@ nth vaddr      bind type  lib                                  name
 69  ---------- NONE METH  java.io.File                         <init>
 70  ---------- NONE METH  java.io.File                         exists
 72  ---------- NONE METH  org.radare2.installer.MainActivity$4 <init>
-73  ---------- NONE METH  android.os.Handler                   post
+73  ---------- NONE METH  android.os.hppandler                   post
 76  ---------- NONE METH  java.io.FileInputStream              <init>
 77  ---------- NONE METH  java.util.zip.GZIPInputStream        <init>
 78  ---------- NONE METH  java.lang.String                     lastIndexOf
@@ -983,21 +983,21 @@ nth vaddr      bind type  lib                                  name
 98  ---------- NONE METH  org.radare2.installer.MainActivity$5 <init>
 100 ---------- NONE METH  java.net.URL                         <init>
 101 ---------- NONE METH  java.net.URL                         openConnection
-104 ---------- NONE METH  java.net.HttpURLConnection           setRequestMethod
-105 ---------- NONE METH  java.net.HttpURLConnection           setInstanceFollowRedirects
-106 ---------- NONE METH  java.net.HttpURLConnection           getRequestProperties
-107 ---------- NONE METH  java.net.HttpURLConnection           connect
-108 ---------- NONE METH  java.net.HttpURLConnection           getContentLength
+104 ---------- NONE METH  java.net.hppttpURLConnection           setRequestMethod
+105 ---------- NONE METH  java.net.hppttpURLConnection           setInstanceFollowRedirects
+106 ---------- NONE METH  java.net.hppttpURLConnection           getRequestProperties
+107 ---------- NONE METH  java.net.hppttpURLConnection           connect
+108 ---------- NONE METH  java.net.hppttpURLConnection           getContentLength
 110 ---------- NONE METH  java.lang.StringBuilder              append
-113 ---------- NONE METH  java.net.HttpURLConnection           getHeaderField
+113 ---------- NONE METH  java.net.hppttpURLConnection           getHeaderField
 114 ---------- NONE METH  org.radare2.installer.Utils          StorePref
-115 ---------- NONE METH  java.net.HttpURLConnection           getInputStream
+115 ---------- NONE METH  java.net.hppttpURLConnection           getInputStream
 117 ---------- NONE METH  java.io.InputStream                  read
 118 ---------- NONE METH  java.io.FileOutputStream             write
 121 ---------- NONE METH  org.radare2.installer.MainActivity   resetButtons
 123 ---------- NONE METH  java.io.FileOutputStream             close
 124 ---------- NONE METH  java.io.InputStream                  close
-125 ---------- NONE METH  java.net.HttpURLConnection           disconnect
+125 ---------- NONE METH  java.net.hppttpURLConnection           disconnect
 127 ---------- NONE METH  java.lang.Exception                  printStackTrace
 128 ---------- NONE METH  android.app.Activity                 onResume
 131 ---------- NONE IMETH android.content.SharedPreferences    getString
@@ -1156,8 +1156,8 @@ paddr      size  vaddr      vsize align perm name                               
 0x000005df 0x36  0x000005df 0x36  0x0   -r-x class.methods.a_1.attr.0.code                        
 0x0000060d 0x3a  0x0000060d 0x3a  0x0   -r-- class.methods.a_1.attr_0x60d                         
 0x00000623 0x2c  0x00000623 0x2c  0x0   -r-x class.methods.a_1.attr.0.code_0x623                  
-0x00000647 0x1b9 0x00000647 0x1b9 0x0   -r-- class.methods.hopskip_line_switch.attr               
-0x0000065d 0x1ab 0x0000065d 0x1ab 0x0   -r-x class.methods.hopskip_line_switch.attr.0.code        
+0x00000647 0x1b9 0x00000647 0x1b9 0x0   -r-- class.methods.hppopskip_line_switch.attr               
+0x0000065d 0x1ab 0x0000065d 0x1ab 0x0   -r-x class.methods.hppopskip_line_switch.attr.0.code        
 0x00000800 0x1d4 0x00000800 0x1d4 0x0   -r-- class.methods.straight_line_switch.attr              
 0x00000816 0x1c6 0x00000816 0x1c6 0x0   -r-x class.methods.straight_line_switch.attr.0.code       
 0x000009d4 0x1cc 0x000009d4 0x1cc 0x0   -r-- class.methods.straight_line_switch_.attr             
@@ -1255,12 +1255,12 @@ paddr      size   vaddr      vsize  align perm name                             
 ----------------------------------------------------------------------------------------------------------
 0x0000000a 0x1c13 0x0000000a 0x1c13 0x0   -r-- class.constant_pool                                  
 0x00001c1f 0x8    0x00001c1f 0x8    0x0   -r-- class.fields.outputView.attr                         
-0x00001c27 0x8    0x00001c27 0x8    0x0   -r-- class.fields.handler.attr                            
+0x00001c27 0x8    0x00001c27 0x8    0x0   -r-- class.fields.hppandler.attr                            
 0x00001c2f 0x8    0x00001c2f 0x8    0x0   -r-- class.fields.remoteRunButton.attr                    
 0x00001c37 0x8    0x00001c37 0x8    0x0   -r-- class.fields.localRunButton.attr                     
 0x00001c3f 0x8    0x00001c3f 0x8    0x0   -r-- class.fields.context.attr                            
 0x00001c47 0x8    0x00001c47 0x8    0x0   -r-- class.fields.mUtils.attr                             
-0x00001c4f 0x8    0x00001c4f 0x8    0x0   -r-- class.fields.http_url_default.attr                   
+0x00001c4f 0x8    0x00001c4f 0x8    0x0   -r-- class.fields.hppttp_url_default.attr                   
 0x00001c57 0x8    0x00001c57 0x8    0x0   -r-- class.fields.onLocalRunButtonClick.attr              
 0x00001c5f 0x8    0x00001c5f 0x8    0x0   -r-- class.fields.thread.attr                             
 0x00001c67 0xa    0x00001c67 0xa    0x0   -r-- class.fields.onRemoteRunButtonClick.attr             

@@ -22,7 +22,7 @@ rip = 0x00000000004004f7
 EOF
 RUN
 
-NAME=dbg.dc.loop.hwstep
+NAME=dbg.dc.loop.hppwstep
 FILE=bins/elf/analysis/x64-loop
 ARGS=-d
 CMDS=<<EOF

@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2021 thestr4ng3r <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bin.h>
-#include "minunit.h"
+#include <rz_bin.hpp>
+#include "minunit.hpp"
 
 bool test_source_line_info_builder_empty() {
 	RzBinSourceLineInfoBuilder bob;

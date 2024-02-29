@@ -2,11 +2,11 @@
 // SPDX-FileCopyrightText: 2009-2019 nibble <nibble.ds@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_bin.h>
-#include <rz_magic.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_bin.hpp>
+#include <rz_magic.hpp>
 
 static char *get_filetype(RzBuffer *b) {
 	ut8 buf[4096] = { 0 };

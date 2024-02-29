@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: 2021 Florian Märkl <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
-#include <rz_project.h>
+#include <rz_core.hpp>
+#include <rz_project.hpp>
 
-#include "../unit/minunit.h"
-#include "rz_config.h"
-#include "sdb.h"
+#include "../unit/minunit.hpp"
+#include "rz_config.hpp"
+#include "sdb.hpp"
 
 /**
  * \file

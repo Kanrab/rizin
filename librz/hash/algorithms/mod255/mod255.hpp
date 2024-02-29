@@ -4,7 +4,7 @@
 #ifndef RZ_MOD255_H
 #define RZ_MOD255_H
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 #define RZ_HASH_MOD255_DIGEST_SIZE  4
 #define RZ_HASH_MOD255_BLOCK_LENGTH 0

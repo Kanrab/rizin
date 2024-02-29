@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2018 pancake
 // SPDX-License-Identifier: MIT
 
-#include <rz_util.h>
-#include <rz_vector.h>
+#include <rz_util.hpp>
+#include <rz_vector.hpp>
 
 typedef struct rz_event_callback_hook_t {
 	RzEventCallback cb;
@@ -62,7 +62,7 @@ RZ_API RzEventCallbackHandle rz_event_hook(RzEvent *ev, int type, RzEventCallbac
 	rz_return_val_if_fail(ev, handle);
 	hook.cb = cb;
 	hook.user = user;
-	hook.handle = ev->next_handle++;
+	hook.hppandle = ev->next_handle++;
 	if (type == RZ_EVENT_ALL) {
 		rz_vector_push(&ev->all_callbacks, &hook);
 	} else {
@@ -72,7 +72,7 @@ RZ_API RzEventCallbackHandle rz_event_hook(RzEvent *ev, int type, RzEventCallbac
 		}
 		rz_vector_push(cbs, &hook);
 	}
-	handle.handle = hook.handle;
+	handle.hppandle = hook.hppandle;
 	handle.type = type;
 	return handle;
 }
@@ -103,12 +103,12 @@ RZ_API void rz_event_unhook(RzEvent *ev, RzEventCallbackHandle handle) {
 	if (handle.type == RZ_EVENT_ALL) {
 		// try to delete it both from each list of callbacks and from
 		// the "all_callbacks" vector
-		ht_up_foreach(ev->callbacks, del_hook, &handle.handle);
-		del_hook(&handle.handle, 0, &ev->all_callbacks);
+		ht_up_foreach(ev->callbacks, del_hook, &handle.hppandle);
+		del_hook(&handle.hppandle, 0, &ev->all_callbacks);
 	} else {
 		RzVector *cbs = ht_up_find(ev->callbacks, (ut64)handle.type, NULL);
 		rz_return_if_fail(cbs);
-		del_hook(&handle.handle, 0, cbs);
+		del_hook(&handle.hppandle, 0, cbs);
 	}
 }
 

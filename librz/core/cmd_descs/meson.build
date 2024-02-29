@@ -46,6 +46,6 @@ if (cmd_option.auto() or cmd_option.enabled()) and has_pyyaml
 elif cmd_option.enabled() and not has_pyyaml
   error('PyYAML python module was not found, but it is required to regenerate cmd_descs.[ch]')
 else
-  warning('PyYAML python module was not found, using cmd_descs.c/cmd_descs.h from source directory. Install PyYAML (either from your package manager or through pip) if you need to modify cmd_descs files.')
+  warning('PyYAML python module was not found, using cmd_descs.c/cmd_descs.hpp from source directory. Install PyYAML (either from your package manager or through pip) if you need to modify cmd_descs files.')
   cmd_descs_ch = cmd_descs_src_cpp
 endif

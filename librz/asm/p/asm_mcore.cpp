@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2018 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_asm.h>
-#include <rz_lib.h>
-#include "../arch/mcore/mcore.h"
+#include <rz_asm.hpp>
+#include <rz_lib.hpp>
+#include "../arch/mcore/mcore.hpp"
 
 static mcore_handle handle = { 0 };
 

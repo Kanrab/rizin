@@ -4,12 +4,12 @@
 #ifndef _QNX_H
 #define _QNX_H
 
-#include "qnx_specs.h"
+#include "qnx_specs.hpp"
 
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_types.h>
-#include <rz_bin.h>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_types.hpp>
+#include <rz_bin.hpp>
 
 enum {
 	LMF_HEADER_REC = 0,

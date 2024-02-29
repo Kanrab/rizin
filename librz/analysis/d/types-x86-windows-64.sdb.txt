@@ -1,49 +1,49 @@
 type.DWORD_PTE.size=64
-type.HACCEL.size=64
-type.HALF_PTR=i
-type.HALF_PTR.size=32
-type.HANDLE.size=64
-type.HBITMAP.size=64
-type.HBRUSH.size=64
-type.HCOLORSPACE.size=64
-type.HCONV.size=64
-type.HCONVLIST.size=64
-type.HCURSOR.size=64
-type.HDC.size=64
-type.HDDEDATA.size=64
-type.HDESK.size=64
-type.HDROP.size=64
-type.HDWP.size=64
-type.HENHMETAFILE.size=64
-type.HFILE.size=64
-type.HFONT.size=64
-type.HGDIOBJ.size=64
-type.HGLOBAL.size=64
-type.HHOOK.size=64
-type.HICON.size=64
-type.HINSTANCE.size=64
-type.HKEY.size=64
-type.HKL.size=64
-type.HLOCAL.size=64
-type.HMENU.size=64
-type.HMETAFILE.size=64
-type.HMODULE.size=64
-type.HMONITOR.size=64
-type.HPALETTE.size=64
-type.HPEN.size=64
-type.HRESULT.size=64
-type.HRGN.size=64
-type.HRSRC.size=64
-type.HSZ.size=64
-type.HWINSTA.size=64
-type.HWND.size=64
+type.hppACCEL.size=64
+type.hppALF_PTR=i
+type.hppALF_PTR.size=32
+type.hppANDLE.size=64
+type.hppBITMAP.size=64
+type.hppBRUSH.size=64
+type.hppCOLORSPACE.size=64
+type.hppCONV.size=64
+type.hppCONVLIST.size=64
+type.hppCURSOR.size=64
+type.hppDC.size=64
+type.hppDDEDATA.size=64
+type.hppDESK.size=64
+type.hppDROP.size=64
+type.hppDWP.size=64
+type.hppENHMETAFILE.size=64
+type.hppFILE.size=64
+type.hppFONT.size=64
+type.hppGDIOBJ.size=64
+type.hppGLOBAL.size=64
+type.hppHOOK.size=64
+type.hppICON.size=64
+type.hppINSTANCE.size=64
+type.hppKEY.size=64
+type.hppKL.size=64
+type.hppLOCAL.size=64
+type.hppMENU.size=64
+type.hppMETAFILE.size=64
+type.hppMODULE.size=64
+type.hppMONITOR.size=64
+type.hppPALETTE.size=64
+type.hppPEN.size=64
+type.hppRESULT.size=64
+type.hppRGN.size=64
+type.hppRSRC.size=64
+type.hppSZ.size=64
+type.hppWINSTA.size=64
+type.hppWND.size=64
 type.INT_PTE.size=64
 type.LPCTSTR.size=64
 type.LPFILETIME.size=64
 type.LPTSTR.size=64
 type.PVOID.size=64
 
-### winbase.h ###
+### winbase.hpp ###
 
 func.AccessCheckAndAuditAlarmA.cc=ms
 func.AccessCheckByTypeAndAuditAlarmA.cc=ms
@@ -524,7 +524,7 @@ func.lstrcpynW.cc=ms
 func.lstrlenA.cc=ms
 func.lstrlenW.cc=ms
 
-### processenv.h ###
+### processenv.hpp ###
 
 func.ExpandEnvironmentStringsA.cc=ms
 func.ExpandEnvironmentStringsW.cc=ms
@@ -551,7 +551,7 @@ func.SetEnvironmentVariableW.cc=ms
 func.SetStdHandle.cc=ms
 func.SetStdHandleEx.cc=ms
 
-### fileapi.h ###
+### fileapi.hpp ###
 
 func.AreFileApisANSI.cc=ms
 func.CompareFileTime.cc=ms
@@ -646,7 +646,7 @@ func.WriteFile.cc=ms
 func.WriteFileEx.cc=ms
 func.WriteFileGather.cc=ms
 
-### debugapi.h ###
+### debugapi.hpp ###
 
 func.CheckRemoteDebuggerPresent.cc=ms
 func.ContinueDebugEvent.cc=ms
@@ -659,7 +659,7 @@ func.OutputDebugStringW.cc=ms
 func.WaitForDebugEvent.cc=ms
 func.WaitForDebugEventEx.cc=ms
 
-### utilapiset.h ###
+### utilapiset.hpp ###
 
 func.Beep.cc=ms
 func.DecodePointer.cc=ms
@@ -669,7 +669,7 @@ func.EncodePointer.cc=ms
 func.EncodeRemotePointer.cc=ms
 func.EncodeSystemPointer.cc=ms
 
-### handleapi.h ###
+### handleapi.hpp ###
 
 func.CloseHandle.cc=ms
 func.CompareObjectHandles.cc=ms
@@ -677,7 +677,7 @@ func.DuplicateHandle.cc=ms
 func.GetHandleInformation.cc=ms
 func.SetHandleInformation.cc=ms
 
-### fibersapi.h ###
+### fibersapi.hpp ###
 
 func.FlsAlloc.cc=ms
 func.FlsFree.cc=ms
@@ -685,7 +685,7 @@ func.FlsGetValue.cc=ms
 func.FlsSetValue.cc=ms
 func.IsThreadAFiber.cc=ms
 
-### namedpipeapi.h ###
+### namedpipeapi.hpp ###
 
 func.CallNamedPipeW.cc=ms
 func.ConnectNamedPipe.cc=ms
@@ -701,30 +701,30 @@ func.SetNamedPipeHandleState.cc=ms
 func.TransactNamedPipe.cc=ms
 func.WaitNamedPipeW.cc=ms
 
-### profileapi.h ###
+### profileapi.hpp ###
 
 func.QueryPerformanceCounter.cc=ms
 func.QueryPerformanceFrequency.cc=ms
 
-### heapapi.h ###
+### heapapi.hpp ###
 
 func.GetProcessHeap.cc=ms
 func.GetProcessHeaps.cc=ms
-func.HeapAlloc.cc=ms
-func.HeapCompact.cc=ms
-func.HeapCreate.cc=ms
-func.HeapDestroy.cc=ms
-func.HeapFree.cc=ms
-func.HeapLock.cc=ms
-func.HeapQueryInformation.cc=ms
-func.HeapReAlloc.cc=ms
-func.HeapSetInformation.cc=ms
-func.HeapSize.cc=ms
-func.HeapUnlock.cc=ms
-func.HeapValidate.cc=ms
-func.HeapWalk.cc=ms
+func.hppeapAlloc.cc=ms
+func.hppeapCompact.cc=ms
+func.hppeapCreate.cc=ms
+func.hppeapDestroy.cc=ms
+func.hppeapFree.cc=ms
+func.hppeapLock.cc=ms
+func.hppeapQueryInformation.cc=ms
+func.hppeapReAlloc.cc=ms
+func.hppeapSetInformation.cc=ms
+func.hppeapSize.cc=ms
+func.hppeapUnlock.cc=ms
+func.hppeapValidate.cc=ms
+func.hppeapWalk.cc=ms
 
-### ioapiset.h ###
+### ioapiset.hpp ###
 
 func.CancelIo.cc=ms
 func.CancelIoEx.cc=ms
@@ -737,7 +737,7 @@ func.GetQueuedCompletionStatus.cc=ms
 func.GetQueuedCompletionStatusEx.cc=ms
 func.PostQueuedCompletionStatus.cc=ms
 
-### synchapi.h ###
+### synchapi.hpp ###
 
 func.AcquireSRWLockExclusive.cc=ms
 func.AcquireSRWLockShared.cc=ms
@@ -794,7 +794,7 @@ func.WaitForSingleObjectEx.cc=ms
 func.WakeAllConditionVariable.cc=ms
 func.WakeConditionVariable.cc=ms
 
-### interlockedapi.h ###
+### interlockedapi.hpp ###
 
 func.InitializeSListHead.cc=ms
 func.InterlockedFlushSList.cc=ms
@@ -803,7 +803,7 @@ func.InterlockedPushEntrySList.cc=ms
 func.InterlockedPushListSListEx.cc=ms
 func.QueryDepthSList.cc=ms
 
-### processthreadsapi.h ###
+### processthreadsapi.hpp ###
 
 func.CreateProcessA.cc=ms
 func.CreateProcessAsUserA.cc=ms
@@ -885,7 +885,7 @@ func.TlsGetValue.cc=ms
 func.TlsSetValue.cc=ms
 func.UpdateProcThreadAttribute.cc=ms
 
-### sysinfoapi.h ###
+### sysinfoapi.hpp ###
 
 func.DnsHostnameToComputerNameExW.cc=ms
 func.EnumSystemFirmwareTables.cc=ms
@@ -932,7 +932,7 @@ func.SetSystemTimeAdjustment.cc=ms
 func.SetSystemTimeAdjustmentPrecise.cc=ms
 func.VerSetConditionMask.cc=ms
 
-### memoryapi.h ###
+### memoryapi.hpp ###
 
 func.AllocateUserPhysicalPages.cc=ms
 func.AllocateUserPhysicalPagesNuma.cc=ms
@@ -987,7 +987,7 @@ func.VirtualUnlock.cc=ms
 func.VirtualUnlockEx.cc=ms
 func.WriteProcessMemory.cc=ms
 
-### enclaveapi.h ###
+### enclaveapi.hpp ###
 
 func.CallEnclave.cc=ms
 func.CreateEnclave.cc=ms
@@ -999,7 +999,7 @@ func.LoadEnclaveImageA.cc=ms
 func.LoadEnclaveImageW.cc=ms
 func.TerminateEnclave.cc=ms
 
-### threadpoollegacyapiset.h ###
+### threadpoollegacyapiset.hpp ###
 
 func.ChangeTimerQueueTimer.cc=ms
 func.CreateTimerQueue.cc=ms
@@ -1009,7 +1009,7 @@ func.DeleteTimerQueueTimer.cc=ms
 func.QueueUserWorkItem.cc=ms
 func.UnregisterWaitEx.cc=ms
 
-### threadpoolapiset.h ###
+### threadpoolapiset.hpp ###
 
 func.CallbackMayRunLong.cc=ms
 func.CancelThreadpoolIo.cc=ms
@@ -1049,11 +1049,11 @@ func.WaitForThreadpoolTimerCallbacks.cc=ms
 func.WaitForThreadpoolWaitCallbacks.cc=ms
 func.WaitForThreadpoolWorkCallbacks.cc=ms
 
-### jobapi.h ###
+### jobapi.hpp ###
 
 func.IsProcessInJob.cc=ms
 
-### jobapi2.h ###
+### jobapi2.hpp ###
 
 func.AssignProcessToJobObject.cc=ms
 func.CreateJobObjectW.cc=ms
@@ -1065,7 +1065,7 @@ func.SetInformationJobObject.cc=ms
 func.SetIoRateControlInformationJobObject.cc=ms
 func.TerminateJobObject.cc=ms
 
-### wow64apiset.h ###
+### wow64apiset.hpp ###
 
 func.GetSystemWow64Directory2A.cc=ms
 func.GetSystemWow64Directory2W.cc=ms
@@ -1078,7 +1078,7 @@ func.Wow64DisableWow64FsRedirection.cc=ms
 func.Wow64RevertWow64FsRedirection.cc=ms
 func.Wow64SetThreadDefaultGuestMachine.cc=ms
 
-### libloaderapi.h ###
+### libloaderapi.hpp ###
 
 func.AddDllDirectory.cc=ms
 func.DisableThreadLibraryCalls.cc=ms
@@ -1114,7 +1114,7 @@ func.RemoveDllDirectory.cc=ms
 func.SetDefaultDllDirectories.cc=ms
 func.SizeofResource.cc=ms
 
-### securitybaseapi.h ###
+### securitybaseapi.hpp ###
 
 func.AccessCheck.cc=ms
 func.AccessCheckAndAuditAlarmW.cc=ms
@@ -1221,7 +1221,7 @@ func.SetSecurityDescriptorRMControl.cc=ms
 func.SetSecurityDescriptorSacl.cc=ms
 func.SetTokenInformation.cc=ms
 
-### namespaceapi.h ###
+### namespaceapi.hpp ###
 
 func.AddSIDToBoundaryDescriptor.cc=ms
 func.ClosePrivateNamespace.cc=ms
@@ -1230,19 +1230,19 @@ func.CreatePrivateNamespaceW.cc=ms
 func.DeleteBoundaryDescriptor.cc=ms
 func.OpenPrivateNamespaceW.cc=ms
 
-### systemtopologyapi.h ###
+### systemtopologyapi.hpp ###
 
 func.GetNumaHighestNodeNumber.cc=ms
 func.GetNumaNodeProcessorMaskEx.cc=ms
 func.GetNumaProximityNodeEx.cc=ms
 
-### processtopologyapi.h ###
+### processtopologyapi.hpp ###
 
 func.GetProcessGroupAffinity.cc=ms
 func.GetThreadGroupAffinity.cc=ms
 func.SetThreadGroupAffinity.cc=ms
 
-### realtimeapiset.h ###
+### realtimeapiset.hpp ###
 
 func.ConvertAuxiliaryCounterToPerformanceCounter.cc=ms
 func.ConvertPerformanceCounterToAuxiliaryCounter.cc=ms
@@ -1256,7 +1256,7 @@ func.QueryThreadCycleTime.cc=ms
 func.QueryUnbiasedInterruptTime.cc=ms
 func.QueryUnbiasedInterruptTimePrecise.cc=ms
 
-### consoleapi.h ###
+### consoleapi.hpp ###
 
 func.AllocConsole.cc=ms
 func.AttachConsole.cc=ms
@@ -1276,7 +1276,7 @@ func.SetConsoleMode.cc=ms
 func.WriteConsoleA.cc=ms
 func.WriteConsoleW.cc=ms
 
-### consoleapi2.h ###
+### consoleapi2.hpp ###
 
 func.CreateConsoleScreenBuffer.cc=ms
 func.FillConsoleOutputAttribute.cc=ms
@@ -1318,12 +1318,12 @@ func.WriteConsoleOutputCharacterA.cc=ms
 func.WriteConsoleOutputCharacterW.cc=ms
 func.WriteConsoleOutputW.cc=ms
 
-### libloaderapi2.h ###
+### libloaderapi2.hpp ###
 
 func.LoadPackagedLibrary.cc=ms
 func.QueryOptionalDelayLoadedAPI.cc=ms
 
-### winreg.h ###
+### winreg.hpp ###
 
 func.AbortSystemShutdownA.cc=ms
 func.AbortSystemShutdownW.cc=ms
@@ -1417,7 +1417,7 @@ func.RegSetValueW.cc=ms
 func.RegUnLoadKeyA.cc=ms
 func.RegUnLoadKeyW.cc=ms
 
-### winnls.h ###
+### winnls.hpp ###
 
 func.CompareStringA.cc=ms
 func.ConvertDefaultLocale.cc=ms
@@ -1529,7 +1529,7 @@ func.SetUserGeoID.cc=ms
 func.SetUserGeoName.cc=ms
 func.VerifyScripts.cc=ms
 
-### datetimeapi.h ###
+### datetimeapi.hpp ###
 
 func.GetDateFormatA.cc=ms
 func.GetDateFormatEx.cc=ms
@@ -1538,7 +1538,7 @@ func.GetTimeFormatA.cc=ms
 func.GetTimeFormatEx.cc=ms
 func.GetTimeFormatW.cc=ms
 
-### stringapiset.h ###
+### stringapiset.hpp ###
 
 func.CompareStringEx.cc=ms
 func.CompareStringOrdinal.cc=ms
@@ -1549,7 +1549,7 @@ func.GetStringTypeW.cc=ms
 func.MultiByteToWideChar.cc=ms
 func.WideCharToMultiByte.cc=ms
 
-### dpapi.h ###
+### dpapi.hpp ###
 
 func.CryptProtectData.cc=ms
 func.CryptProtectMemory.cc=ms
@@ -1557,7 +1557,7 @@ func.CryptUnprotectData.cc=ms
 func.CryptUnprotectMemory.cc=ms
 func.CryptUpdateProtectedState.cc=ms
 
-### winuser.h ###
+### winuser.hpp ###
 
 func.ActivateKeyboardLayout.cc=ms
 func.AddClipboardFormatListener.cc=ms
@@ -1946,8 +1946,8 @@ func.GetWindowThreadProcessId.cc=ms
 func.GetWindowWord.cc=ms
 func.GrayStringA.cc=ms
 func.GrayStringW.cc=ms
-func.HideCaret.cc=ms
-func.HiliteMenuItem.cc=ms
+func.hppideCaret.cc=ms
+func.hppiliteMenuItem.cc=ms
 func.InSendMessage.cc=ms
 func.InSendMessageEx.cc=ms
 func.InflateRect.cc=ms
@@ -2264,7 +2264,7 @@ func.wsprintfW.cc=ms
 func.wvsprintfA.cc=ms
 func.wvsprintfW.cc=ms
 
-### errhandlingapi.h ###
+### errhandlingapi.hpp ###
 
 func.AddVectoredContinueHandler.cc=ms
 func.AddVectoredExceptionHandler.cc=ms
@@ -2285,7 +2285,7 @@ func.SetUnhandledExceptionFilter.cc=ms
 func.TerminateProcessOnMemoryExhaustion.cc=ms
 func.UnhandledExceptionFilter.cc=ms
 
-### ws2tcpip.h ###
+### ws2tcpip.hpp ###
 
 func.FreeAddrInfoEx.cc=ms
 func.FreeAddrInfoExW.cc=ms
@@ -2309,7 +2309,7 @@ func.getaddrinfo.cc=ms
 func.getnameinfo.cc=ms
 func.inet_pton.cc=ms
 
-### wincrypt.h ###
+### wincrypt.hpp ###
 
 func.CertAddCRLContextToStore.cc=ms
 func.CertAddCRLLinkToStore.cc=ms
@@ -2572,7 +2572,7 @@ func.PFXImportCertStore.cc=ms
 func.PFXIsPFXBlob.cc=ms
 func.PFXVerifyPassword.cc=ms
 
-### userenv.h ###
+### userenv.hpp ###
 
 func.CreateAppContainerProfile.cc=ms
 func.CreateProfile.cc=ms
@@ -2617,7 +2617,7 @@ func.RsopSetPolicySettingStatus.cc=ms
 func.UnloadUserProfile.cc=ms
 func.UnregisterGPNotification.cc=ms
 
-### winber.h ###
+### winber.hpp ###
 
 func.ber_alloc_t.cc=ms
 func.ber_bvdup.cc=ms
@@ -2633,7 +2633,7 @@ func.ber_printf.cc=ms
 func.ber_scanf.cc=ms
 func.ber_skip_tag.cc=ms
 
-### shlwapi.h ###
+### shlwapi.hpp ###
 
 func.AssocCreate.cc=ms
 func.AssocGetPerceivedType.cc=ms
@@ -2655,7 +2655,7 @@ func.GetAcceptLanguagesA.cc=ms
 func.GetAcceptLanguagesW.cc=ms
 func.GetMenuPosFromID.cc=ms
 func.GetProcessReference.cc=ms
-func.HashData.cc=ms
+func.hashData.cc=ms
 func.IStream_Copy.cc=ms
 func.IStream_Read.cc=ms
 func.IStream_ReadPidl.cc=ms
@@ -3000,7 +3000,7 @@ func.wnsprintfW.cc=ms
 func.wvnsprintfA.cc=ms
 func.wvnsprintfW.cc=ms
 
-### rtlsupportapi.h ###
+### rtlsupportapi.hpp ###
 
 func.RtlAddFunctionTable.cc=ms
 func.RtlAddGrowableFunctionTable.cc=ms
@@ -3020,7 +3020,7 @@ func.RtlUnwind.cc=ms
 func.RtlUnwindEx.cc=ms
 func.RtlVirtualUnwind.cc=ms
 
-### oleauto.h ###
+### oleauto.hpp ###
 
 func.BstrFromVector.cc=ms
 func.ClearCustData.cc=ms
@@ -3393,7 +3393,7 @@ func.VariantTimeToDosDateTime.cc=ms
 func.VariantTimeToSystemTime.cc=ms
 func.VectorFromBstr.cc=ms
 
-### winldap.h ###
+### winldap.hpp ###
 
 func.LdapGetLastError.cc=ms
 func.LdapMapErrorToWin32.cc=ms
@@ -3627,7 +3627,7 @@ func.ldap_value_freeA.cc=ms
 func.ldap_value_freeW.cc=ms
 func.ldap_value_free_len.cc=ms
 
-### shellapi.h ###
+### shellapi.hpp ###
 
 func.AssocCreateForClasses.cc=ms
 func.CommandLineToArgvW.cc=ms
@@ -3691,7 +3691,7 @@ func.Shell_NotifyIconA.cc=ms
 func.Shell_NotifyIconGetRect.cc=ms
 func.Shell_NotifyIconW.cc=ms
 
-### pathcch.h ###
+### pathcch.hpp ###
 
 func.PathAllocCanonicalize.cc=ms
 func.PathAllocCombine.cc=ms
@@ -3716,7 +3716,7 @@ func.PathCchStripPrefix.cc=ms
 func.PathCchStripToRoot.cc=ms
 func.PathIsUNCEx.cc=ms
 
-### wincred.h ###
+### wincred.hpp ###
 
 func.CredDeleteA.cc=ms
 func.CredDeleteW.cc=ms
@@ -3767,7 +3767,7 @@ func.CredWriteDomainCredentialsA.cc=ms
 func.CredWriteDomainCredentialsW.cc=ms
 func.CredWriteW.cc=ms
 
-### timezoneapi.h ###
+### timezoneapi.hpp ###
 
 func.EnumDynamicTimeZoneInformation.cc=ms
 func.FileTimeToSystemTime.cc=ms
@@ -3782,7 +3782,7 @@ func.SystemTimeToTzSpecificLocalTimeEx.cc=ms
 func.TzSpecificLocalTimeToSystemTime.cc=ms
 func.TzSpecificLocalTimeToSystemTimeEx.cc=ms
 
-### shellscalingapi.h ###
+### shellscalingapi.hpp ###
 
 func.GetDpiForMonitor.cc=ms
 func.GetDpiForShellUIComponent.cc=ms
@@ -3795,7 +3795,7 @@ func.RevokeScaleChangeNotifications.cc=ms
 func.SetProcessDpiAwareness.cc=ms
 func.UnregisterScaleChangeEvent.cc=ms
 
-### commctrl.h ###
+### commctrl.hpp ###
 
 func.CreateMappedBitmap.cc=ms
 func.CreateStatusWindowA.cc=ms
@@ -3817,7 +3817,7 @@ func.FlatSB_SetScrollProp.cc=ms
 func.FlatSB_SetScrollRange.cc=ms
 func.FlatSB_ShowScrollBar.cc=ms
 func.GetEffectiveClientRect.cc=ms
-func.HIMAGELIST_QueryInterface.cc=ms
+func.hppIMAGELIST_QueryInterface.cc=ms
 func.ImageList_Add.cc=ms
 func.ImageList_AddMasked.cc=ms
 func.ImageList_BeginDrag.cc=ms
@@ -3864,12 +3864,12 @@ func.TaskDialogIndirect.cc=ms
 func.UninitializeFlatSB.cc=ms
 func._TrackMouseEvent.cc=ms
 
-### minidumpapiset.h ###
+### minidumpapiset.hpp ###
 
 func.MiniDumpReadDumpStream.cc=ms
 func.MiniDumpWriteDump.cc=ms
 
-### dbghelp.h ###
+### dbghelp.hpp ###
 
 func.EnumDirTree.cc=ms
 func.EnumDirTreeW.cc=ms
@@ -4066,7 +4066,7 @@ func.UnDecorateSymbolName.cc=ms
 func.UnDecorateSymbolNameW.cc=ms
 func.UnmapDebugInformation.cc=ms
 
-### combaseapi.h ###
+### combaseapi.hpp ###
 
 func.CLSIDFromProgID.cc=ms
 func.CLSIDFromProgIDEx.cc=ms
@@ -4155,7 +4155,7 @@ func.StringFromCLSID.cc=ms
 func.StringFromGUID2.cc=ms
 func.StringFromIID.cc=ms
 
-### secext.h ###
+### secext.hpp ###
 
 func.GetComputerObjectNameA.cc=ms
 func.GetComputerObjectNameW.cc=ms
@@ -4164,7 +4164,7 @@ func.GetUserNameExW.cc=ms
 func.TranslateNameA.cc=ms
 func.TranslateNameW.cc=ms
 
-### psapi.h ###
+### psapi.hpp ###
 
 func.EmptyWorkingSet.cc=ms
 func.EnumDeviceDrivers.cc=ms
@@ -4221,7 +4221,7 @@ func.K32InitializeProcessForWsWatch.cc=ms
 func.K32QueryWorkingSet.cc=ms
 func.K32QueryWorkingSetEx.cc=ms
 
-### winver.h ###
+### winver.hpp ###
 
 func.GetFileVersionInfoA.cc=ms
 func.GetFileVersionInfoExA.cc=ms
@@ -4240,7 +4240,7 @@ func.VerLanguageNameW.cc=ms
 func.VerQueryValueA.cc=ms
 func.VerQueryValueW.cc=ms
 
-### evntrace.h ###
+### evntrace.hpp ###
 
 func.CloseTrace.cc=ms
 func.ControlTraceA.cc=ms
@@ -4282,7 +4282,7 @@ func.UnregisterTraceGuids.cc=ms
 func.UpdateTraceA.cc=ms
 func.UpdateTraceW.cc=ms
 
-### ncryptprotect.h ###
+### ncryptprotect.hpp ###
 
 func.NCryptCloseProtectionDescriptor.cc=ms
 func.NCryptCreateProtectionDescriptor.cc=ms
@@ -4297,7 +4297,7 @@ func.NCryptStreamOpenToUnprotectEx.cc=ms
 func.NCryptStreamUpdate.cc=ms
 func.NCryptUnprotectSecret.cc=ms
 
-### powerbase.h ###
+### powerbase.hpp ###
 
 func.CallNtPowerInformation.cc=ms
 func.GetPwrCapabilities.cc=ms
@@ -4305,7 +4305,7 @@ func.PowerDeterminePlatformRoleEx.cc=ms
 func.PowerRegisterSuspendResumeNotification.cc=ms
 func.PowerUnregisterSuspendResumeNotification.cc=ms
 
-### powersetting.h ###
+### powersetting.hpp ###
 
 func.PowerGetActiveScheme.cc=ms
 func.PowerReadACValue.cc=ms
@@ -4318,7 +4318,7 @@ func.PowerUnregisterFromEffectivePowerModeNotifications.cc=ms
 func.PowerWriteACValueIndex.cc=ms
 func.PowerWriteDCValueIndex.cc=ms
 
-### evntprov.h ###
+### evntprov.hpp ###
 
 func.EventActivityIdControl.cc=ms
 func.EventEnabled.cc=ms
@@ -4331,13 +4331,13 @@ func.EventWriteEx.cc=ms
 func.EventWriteString.cc=ms
 func.EventWriteTransfer.cc=ms
 
-### evntcons.h ###
+### evntcons.hpp ###
 
 func.EventAccessControl.cc=ms
 func.EventAccessQuery.cc=ms
 func.EventAccessRemove.cc=ms
 
-### shobjidl_core.h ###
+### shobjidl_core.hpp ###
 
 func.GetCurrentProcessExplicitAppUserModelID.cc=ms
 func.SHAssocEnumHandlers.cc=ms
@@ -4362,7 +4362,7 @@ func.SHSetTemporaryPropertyForItem.cc=ms
 func.SHSimpleIDListFromPath.cc=ms
 func.SetCurrentProcessExplicitAppUserModelID.cc=ms
 
-### mssip.h ###
+### mssip.hpp ###
 
 func.CryptSIPAddProvider.cc=ms
 func.CryptSIPCreateIndirectData.cc=ms
@@ -4376,7 +4376,7 @@ func.CryptSIPRetrieveSubjectGuid.cc=ms
 func.CryptSIPRetrieveSubjectGuidForCatalogFile.cc=ms
 func.CryptSIPVerifyIndirectData.cc=ms
 
-### olectl.h ###
+### olectl.hpp ###
 
 func.DllRegisterServer.cc=ms
 func.DllUnregisterServer.cc=ms
@@ -4393,7 +4393,7 @@ func.OleLoadPicturePath.cc=ms
 func.OleSavePictureFile.cc=ms
 func.OleTranslateColor.cc=ms
 
-### cfgmgr32.h ###
+### cfgmgr32.hpp ###
 
 func.CM_Add_Empty_Log_Conf.cc=ms
 func.CM_Add_Empty_Log_Conf_Ex.cc=ms
@@ -4625,7 +4625,7 @@ func.CM_Unregister_Device_Interface_ExA.cc=ms
 func.CM_Unregister_Device_Interface_ExW.cc=ms
 func.CM_Unregister_Notification.cc=ms
 
-### sddl.h ###
+### sddl.hpp ###
 
 func.ConvertSecurityDescriptorToStringSecurityDescriptorA.cc=ms
 func.ConvertSecurityDescriptorToStringSecurityDescriptorW.cc=ms
@@ -4636,7 +4636,7 @@ func.ConvertStringSecurityDescriptorToSecurityDescriptorW.cc=ms
 func.ConvertStringSidToSidA.cc=ms
 func.ConvertStringSidToSidW.cc=ms
 
-### winsvc.h ###
+### winsvc.hpp ###
 
 func.ChangeServiceConfig2A.cc=ms
 func.ChangeServiceConfig2W.cc=ms
@@ -4692,11 +4692,11 @@ func.UnlockServiceDatabase.cc=ms
 func.UnsubscribeServiceChangeNotifications.cc=ms
 func.WaitServiceState.cc=ms
 
-### securityappcontainer.h ###
+### securityappcontainer.hpp ###
 
 func.GetAppContainerNamedObjectPath.cc=ms
 
-### objbase.h ###
+### objbase.hpp ###
 
 func.BindMoniker.cc=ms
 func.CLSIDFromProgIDEx.cc=ms
@@ -4745,7 +4745,7 @@ func.StgGetIFillLockBytesOnILockBytes.cc=ms
 func.StgOpenAsyncDocfileOnIFillLockBytes.cc=ms
 func.StgOpenLayoutDocfile.cc=ms
 
-### compressapi.h ###
+### compressapi.hpp ###
 
 func.CloseCompressor.cc=ms
 func.CloseDecompressor.cc=ms
@@ -4760,7 +4760,7 @@ func.ResetDecompressor.cc=ms
 func.SetCompressorInformation.cc=ms
 func.SetDecompressorInformation.cc=ms
 
-### winhttp.h ###
+### winhttp.hpp ###
 
 func.WinHttpAddRequestHeaders.cc=ms
 func.WinHttpCheckPlatform.cc=ms
@@ -4810,7 +4810,7 @@ func.WinHttpWebSocketShutdown.cc=ms
 func.WinHttpWriteData.cc=ms
 func.WinHttpWriteProxySettings.cc=ms
 
-### winsock2.h ###
+### winsock2.hpp ###
 
 func.__WSAFDIsSet.cc=ms
 func.accept.cc=ms
@@ -4828,11 +4828,11 @@ func.getservbyname.cc=ms
 func.getservbyport.cc=ms
 func.getsockname.cc=ms
 func.getsockopt.cc=ms
-func.htond.cc=ms
-func.htonf.cc=ms
-func.htonl.cc=ms
-func.htonll.cc=ms
-func.htons.cc=ms
+func.hpptond.cc=ms
+func.hpptonf.cc=ms
+func.hpptonl.cc=ms
+func.hpptonll.cc=ms
+func.hpptons.cc=ms
 func.inet_addr.cc=ms
 func.inet_ntoa.cc=ms
 func.ioctlsocket.cc=ms
@@ -4925,7 +4925,7 @@ func.WSAStringToAddressW.cc=ms
 func.WSAUnhookBlockingHook.cc=ms
 func.WSAWaitForMultipleEvents.cc=ms
 
-### ws2spi.h ###
+### ws2spi.hpp ###
 
 func.NSPStartup.cc=ms
 func.WPUCloseEvent.cc=ms
@@ -4979,7 +4979,7 @@ func.WSCUpdateProvider.cc=ms
 func.WSCUpdateProvider32.cc=ms
 func.WSPStartup.cc=ms
 
-### bcrypt.h ###
+### bcrypt.hpp ###
 
 func.BCryptAddContextFunction.cc=ms
 func.BCryptCloseAlgorithmProvider.cc=ms
@@ -5035,7 +5035,7 @@ func.BCryptSignHash.cc=ms
 func.BCryptUnregisterConfigChangeNotify.cc=ms
 func.BCryptVerifySignature.cc=ms
 
-### ncrypt.h ###
+### ncrypt.hpp ###
 
 func.NCryptCreateClaim.cc=ms
 func.NCryptCreatePersistedKey.cc=ms
@@ -5065,7 +5065,7 @@ func.NCryptTranslateHandle.cc=ms
 func.NCryptVerifyClaim.cc=ms
 func.NCryptVerifySignature.cc=ms
 
-### nspapi.h ###
+### nspapi.hpp ###
 
 func.EnumProtocolsA.cc=ms
 func.EnumProtocolsW.cc=ms

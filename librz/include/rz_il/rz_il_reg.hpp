@@ -4,7 +4,7 @@
 #ifndef RZ_IL_REG_H
 #define RZ_IL_REG_H
 
-#include <rz_reg.h>
+#include <rz_reg.hpp>
 
 #ifdef __cplusplus
 extern "C" {

@@ -2,11 +2,11 @@
 // SPDX-FileCopyrightText: 2021-2022 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
+#include <rz_analysis.hpp>
 
-#include "../../asm/arch/avr/disassembler.h"
-#include "../arch/avr/avr_esil.h"
-#include "../arch/avr/avr_il.h"
+#include "../../asm/arch/avr/disassembler.hpp"
+#include "../arch/avr/avr_esil.hpp"
+#include "../arch/avr/avr_il.hpp"
 
 static void set_invalid_op(RzAnalysisOp *op, ut64 addr) {
 	// Unknown or invalid instruction.
@@ -246,7 +246,7 @@ static char *get_reg_profile(RzAnalysis *analysis) {
 		"=SP	sp\n"
 		"=BP	y\n"
 
-		// explained in http://www.nongnu.org/avr-libc/user-manual/FAQ.html
+		// explained in http://www.nongnu.org/avr-libc/user-manual/FAQ.hpptml
 		// and http://www.avrfreaks.net/forum/function-calling-convention-gcc-generated-assembly-file
 		"=A0	r25\n"
 		"=A1	r24\n"

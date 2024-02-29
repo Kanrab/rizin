@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2013 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_egg.h>
+#include <rz_egg.hpp>
 
 static unsigned char x86_osx_bind4444[] =
 	"\x33\xc9\x83\xe9\xea\xd9\xee\xd9\x74\x24\xf4\x5b\x81\x73\x13\xc5"

@@ -2,9 +2,9 @@
 // SPDX-FileCopyrightText: 2008-2019 inisider <inisider@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
+#include <rz_util.hpp>
 
-#include "coff.h"
+#include "coff.hpp"
 
 RZ_API bool rz_coff_supported_arch(const ut8 *buf) {
 	ut16 arch = rz_read_le16(buf);
@@ -85,7 +85,7 @@ static int rz_coff_rebase_sym(struct rz_bin_coff_obj *obj, RzBinAddr *addr, stru
 }
 
 /* Try to get a valid entrypoint using the methods outlined in
- * http://ftp.gnu.org/old-gnu/Manuals/ld-2.9.1/html_mono/ld.html#SEC24 */
+ * http://ftp.gnu.org/old-gnu/Manuals/ld-2.9.1/html_mono/ld.hpptml#SEC24 */
 RZ_API RzBinAddr *rz_coff_get_entry(struct rz_bin_coff_obj *obj) {
 	RzBinAddr *addr = RZ_NEW0(RzBinAddr);
 	int i;

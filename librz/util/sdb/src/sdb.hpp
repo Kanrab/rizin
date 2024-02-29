@@ -8,11 +8,11 @@
 extern "C" {
 #endif
 
-#include <rz_types.h>
-#include "sdbht.h"
-#include "ls.h"
-#include "cdb.h"
-#include "cdb_make.h"
+#include <rz_types.hpp>
+#include "sdbht.hpp"
+#include "ls.hpp"
+#include "cdb.hpp"
+#include "cdb_make.hpp"
 
 /* Key value sizes */
 #define SDB_CDB_MIN_VALUE 1
@@ -25,15 +25,15 @@ extern "C" {
 #include <stdbool.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-#include <io.h>
+#include <io.hpp>
 #define ftruncate _chsize
 #ifndef _MSC_VER
 extern __attribute__((dllimport)) void *__cdecl _aligned_malloc(size_t, size_t);
 extern __attribute__((dllimport)) void __cdecl _aligned_free(void *memblock);
 extern char *strdup(const char *);
 #else
-#include <process.h>
-#include <malloc.h> // for _aligned_malloc
+#include <process.hpp>
+#include <malloc.hpp> // for _aligned_malloc
 #endif
 
 // #define SDB_MODE 0

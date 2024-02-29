@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2021 ret2libc <rschirone91@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
-#include <rz_cmd.h>
-#include <rz_types.h>
+#include <rz_core.hpp>
+#include <rz_cmd.hpp>
+#include <rz_types.hpp>
 
 #undef GH
 #undef GHT

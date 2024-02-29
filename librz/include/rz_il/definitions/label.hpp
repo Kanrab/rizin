@@ -6,9 +6,9 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-#include <rz_util.h>
-#include <rz_type.h>
-#include <rz_il/definitions/value.h>
+#include <rz_util.hpp>
+#include <rz_type.hpp>
+#include <rz_il/definitions/value.hpp>
 
 #ifdef __cplusplus
 extern "C" {

@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: 2022 wingdeans <wingdeans@protonmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_asm.h>
-#include <rz_endian.h>
-#include <rz_util/rz_strbuf.h>
-#include "cil_dis.h"
+#include <rz_types.hpp>
+#include <rz_asm.hpp>
+#include <rz_endian.hpp>
+#include <rz_util/rz_strbuf.hpp>
+#include "cil_dis.hpp"
 
 /** \file
  * The read_## functions are dispatched based on the opcode `param`

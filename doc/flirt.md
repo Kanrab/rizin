@@ -15,7 +15,7 @@ it is  not possible  to redistribute the  .pat or the .sig files.  It
 doesn't  seems to  have watermarks.  However it's  a bit unclear  what
 licence the file generated should have.  Mentioning the files should
 be free of copyrighted material  (the original libs bytes). That said,
-there's a paragraph in [IDA F.L.I.R.T. Technology: In-Depth](https://www.hex-rays.com/products/ida/tech/flirt/in_depth.shtml)
+there's a paragraph in [IDA F.L.I.R.T. Technology: In-Depth](https://www.hppex-rays.com/products/ida/tech/flirt/in_depth.shtml)
 
 
 Create the .pat file

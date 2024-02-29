@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2021 RizinOrg <info@rizin.re>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "elf.h"
+#include "elf.hpp"
 
 static bool read_gnu_hash_table(ELFOBJ *bin, RzBinElfGnuHashTable *result) {
 	ut64 offset = result->offset;

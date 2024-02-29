@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2019 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include "minunit.h"
+#include <rz_util.hpp>
+#include "minunit.hpp"
 #define BUF_LENGTH 100
 
 // TODO test rz_str_chop_path

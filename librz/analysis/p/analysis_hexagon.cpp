@@ -9,14 +9,14 @@
 // Do not edit. Repository of code generator:
 // https://github.com/rizinorg/rz-hexagon
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_asm.h>
-#include <rz_analysis.h>
-#include <rz_lib.h>
-#include "hexagon.h"
-#include "hexagon_insn.h"
-#include "hexagon_arch.h"
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_asm.hpp>
+#include <rz_analysis.hpp>
+#include <rz_lib.hpp>
+#include "hexagon.hpp"
+#include "hexagon_insn.hpp"
+#include "hexagon_arch.hpp"
 
 RZ_API int hexagon_v6_op(RzAnalysis *analysis, RzAnalysisOp *op, ut64 addr, const ut8 *buf, int len, RzAnalysisOpMask mask) {
 	rz_return_val_if_fail(analysis && op && buf, -1);

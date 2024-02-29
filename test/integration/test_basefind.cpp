@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2015 Jeffrey Crowell <crowell@bu.edu>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
-#include <rz_basefind.h>
-#include "../unit/minunit.h"
+#include <rz_core.hpp>
+#include <rz_basefind.hpp>
+#include "../unit/minunit.hpp"
 
 static void basefind_options_set_valid(RzBaseFindOpt *options) {
 	options->start_address = 0;

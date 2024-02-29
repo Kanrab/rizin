@@ -2,9 +2,9 @@
 // SPDX-FileCopyrightText: 2016 FSF Inc
 // SPDX-License-Identifier: GPL-2.0-only
 
-#include <errno.h>
-#include <rz_types.h>
-#include "utils.h"
+#include <errno.hpp>
+#include <rz_types.hpp>
+#include "utils.hpp"
 
 #define I386_NUM_GREGS 16
 #define I386_NUM_FREGS 16
@@ -27,7 +27,7 @@
 #define I387_XMM0_REGNUM  (I387_ST0_REGNUM + 16)
 #define I387_MXCSR_REGNUM (I387_XMM0_REGNUM + I387_NUM_XMM_REGS)
 
-/* These correspond to the DSMSG_* versions in dsmsgs.h. */
+/* These correspond to the DSMSG_* versions in dsmsgs.hpp. */
 enum {
 	NTO_REG_GENERAL,
 	NTO_REG_FLOAT,
@@ -106,7 +106,7 @@ int errnoconvert(int x) {
 		{ NTO_ENAMETOOLONG, ENAMETOOLONG },
 		{ NTO_ENOSYS, ENOSYS }
 #elif defined(__MINGW32__) || defined(MINGW32) || defined(__NetBSD__)
-		/* The closest mappings from mingw's errno.h.  */
+		/* The closest mappings from mingw's errno.hpp.  */
 		{ NTO_ENAMETOOLONG, ENAMETOOLONG },
 		{ NTO_ELIBACC, ESRCH },
 		{ NTO_ELIBBAD, ESRCH },

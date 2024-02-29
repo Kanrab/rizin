@@ -1,16 +1,16 @@
 // SPDX-FileCopyrightText: 2021 Riccardo Schirone <sirmy15@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util/rz_path.h>
-#include <rz_util/rz_file.h>
-#include <rz_util/rz_sys.h>
-#include <rz_util/rz_str.h>
-#include <rz_util/rz_utf8.h>
-#include <rz_windows.h>
+#include <rz_util/rz_path.hpp>
+#include <rz_util/rz_file.hpp>
+#include <rz_util/rz_sys.hpp>
+#include <rz_util/rz_str.hpp>
+#include <rz_util/rz_utf8.hpp>
+#include <rz_windows.hpp>
 
 #if RZ_IS_PORTABLE
-#include <rz_constructor.h>
-#include <rz_th.h>
+#include <rz_constructor.hpp>
+#include <rz_th.hpp>
 
 static char *portable_prefix = NULL;
 static bool portable_prefix_searched = false;

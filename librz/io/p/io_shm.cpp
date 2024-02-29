@@ -1,25 +1,25 @@
 // SPDX-FileCopyrightText: 2008-2019 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "rz_io.h"
-#include "rz_lib.h"
+#include "rz_io.hpp"
+#include "rz_lib.hpp"
 #include <sys/types.h>
 
 #if HAVE_HEADER_LINUX_ASHMEM_H || HAVE_HEADER_SYS_SHM_H || __WINDOWS__
 #if HAVE_HEADER_LINUX_ASHMEM_H
-#include <linux/ashmem.h>
+#include <linux/ashmem.hpp>
 #endif
 #if HAVE_HEADER_SYS_SHM_H
-#include <sys/shm.h>
+#include <sys/shm.hpp>
 #endif
 #if HAVE_HEADER_SYS_IPC_H
-#include <sys/ipc.h>
+#include <sys/ipc.hpp>
 #endif
 #if HAVE_HEADER_SYS_MMAN_H
-#include <sys/mman.h>
+#include <sys/mman.hpp>
 #endif
 #if __WINDOWS__
-#include <windows.h>
+#include <windows.hpp>
 #endif
 
 typedef struct {

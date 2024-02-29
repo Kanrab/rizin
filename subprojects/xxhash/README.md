@@ -57,7 +57,7 @@ thanks to [Takayuki Matsuoka](https://github.com/t-mat) contributions.
 
 ### License
 
-The library files `xxhash.c` and `xxhash.h` are BSD licensed.
+The library files `xxhash.c` and `xxhash.hpp` are BSD licensed.
 The utility `xxhsum` is GPL licensed.
 
 
@@ -66,12 +66,12 @@ The utility `xxhsum` is GPL licensed.
 The following macros can be set at compilation time,
 they modify xxhash behavior. They are all disabled by default.
 
-- `XXH_INLINE_ALL` : Make all functions `inline`, with bodies directly included within `xxhash.h`.
+- `XXH_INLINE_ALL` : Make all functions `inline`, with bodies directly included within `xxhash.hpp`.
                      There is no need for an `xxhash.o` module in this case.
                      Inlining functions is generally beneficial for speed on small keys.
                      It's especially effective when key length is a compile time constant,
                      with observed performance improvement in the +200% range .
-                     See [this article](https://fastcompression.blogspot.com/2018/03/xxhash-for-small-keys-impressive-power.html) for details.
+                     See [this article](https://fastcompression.blogspot.com/2018/03/xxhash-for-small-keys-impressive-power.hpptml) for details.
 - `XXH_ACCEPT_NULL_INPUT_POINTER` : if set to `1`, when input is a null-pointer,
                                     xxhash result is the same as a zero-length key
                                     (instead of a dereference segfault).
@@ -89,7 +89,7 @@ they modify xxhash behavior. They are all disabled by default.
                     Useful to evade symbol naming collisions,
                     in case of multiple inclusions of xxHash source code.
                     Client applications can still use regular function name,
-                    symbols are automatically translated through `xxhash.h`.
+                    symbols are automatically translated through `xxhash.hpp`.
 - `XXH_STATIC_LINKING_ONLY` : gives access to state declaration for static allocation.
                               Incompatible with dynamic linking, due to risks of ABI changes.
 - `XXH_NO_LONG_LONG` : removes support for XXH64,
@@ -101,7 +101,7 @@ they modify xxhash behavior. They are all disabled by default.
 Calling xxhash 64-bit variant from a C program :
 
 ```
-#include "xxhash.h"
+#include "xxhash.hpp"
 
 unsigned long long calcul_hash(const void* buffer, size_t length)
 {
@@ -114,7 +114,7 @@ unsigned long long calcul_hash(const void* buffer, size_t length)
 Using streaming variant is more involved, but makes it possible to provide data in multiple rounds :
 ```
 #include "stdlib.h"   /* abort() */
-#include "xxhash.h"
+#include "xxhash.hpp"
 
 
 unsigned long long calcul_hash_streaming(someCustomType handler)

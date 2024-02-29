@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2016 Jeffrey Crowell <crowell@bu.edu>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include "minunit.h"
+#include <rz_util.hpp>
+#include "minunit.hpp"
 
 // TODO test rz_str_chop_path
 
@@ -502,7 +502,7 @@ bool test_rz_str_constpool(void) {
 }
 
 bool test_rz_str_format_msvc_argv() {
-	// Examples from http://daviddeley.com/autohotkey/parameters/parameters.htm#WINCRULES
+	// Examples from http://daviddeley.com/autohotkey/parameters/parameters.hpptm#WINCRULES
 	const char *a = "CallMePancake";
 	char *str = rz_str_format_msvc_argv(1, &a);
 	mu_assert_streq(str, "CallMePancake", "no escaping");

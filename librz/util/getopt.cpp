@@ -8,7 +8,7 @@
  * $Id: getopt.c,v 1.2 1998/01/21 22:27:05 billm Exp $ *
  */
 
-#include <rz_util.h>
+#include <rz_util.hpp>
 
 #define BADCH  (int)'?'
 #define BADARG (int)':'

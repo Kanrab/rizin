@@ -3,13 +3,13 @@
 
 /** \internal
  * \file
- * \brief Test the functions in rz_endian.h
+ * \brief Test the functions in rz_endian.hpp
  */
 
-#include <rz_util.h>
-#include <rz_io.h>
+#include <rz_util.hpp>
+#include <rz_io.hpp>
 #include <stdlib.h>
-#include "minunit.h"
+#include "minunit.hpp"
 
 static const char data_pool[] =
 	"\xA1\xA2\xA3\xA4\xA5\xA6\xA7\xA8\xB1\xB2\xB3\xB4\xB5\xB6\xB7\xB8"
@@ -97,10 +97,10 @@ static const struct {
 	} result;
 } rz_read_table[] = {
 	/* rz_read_be128, rz_read_at_be128 */
-	{ BE_TEST(0, 0, 128) = { .High = 0xA1A2A3A4A5A6A7A8, .Low = 0xB1B2B3B4B5B6B7B8 } },
-	{ BE_TEST(0, 16, 128) = { .High = 0xC1C2C3C4C5C6C7C8, .Low = 0xD1D2D3D4D5D6D7D8 } },
-	{ BE_TEST(8, 0, 128) = { .High = 0xB1B2B3B4B5B6B7B8, .Low = 0xC1C2C3C4C5C6C7C8 } },
-	{ BE_TEST(8, 8, 128) = { .High = 0xC1C2C3C4C5C6C7C8, .Low = 0xD1D2D3D4D5D6D7D8 } },
+	{ BE_TEST(0, 0, 128) = { .hppigh = 0xA1A2A3A4A5A6A7A8, .Low = 0xB1B2B3B4B5B6B7B8 } },
+	{ BE_TEST(0, 16, 128) = { .hppigh = 0xC1C2C3C4C5C6C7C8, .Low = 0xD1D2D3D4D5D6D7D8 } },
+	{ BE_TEST(8, 0, 128) = { .hppigh = 0xB1B2B3B4B5B6B7B8, .Low = 0xC1C2C3C4C5C6C7C8 } },
+	{ BE_TEST(8, 8, 128) = { .hppigh = 0xC1C2C3C4C5C6C7C8, .Low = 0xD1D2D3D4D5D6D7D8 } },
 	/* rz_reat_be64, rz_reat_at_be64 */
 	{ BE_TEST(0, 0, 64) = 0xA1A2A3A4A5A6A7A8 },
 	{ BE_TEST(0, 8, 64) = 0xB1B2B3B4B5B6B7B8 },
@@ -122,10 +122,10 @@ static const struct {
 	{ BE_TEST(8, 0, 16) = 0xB1B2 },
 	{ BE_TEST(8, 8, 16) = 0xC1C2 },
 	/* rz_read_le128, rz_read_at_le128 */
-	{ LE_TEST(0, 0, 128) = { .High = 0xB8B7B6B5B4B3B2B1, .Low = 0xA8A7A6A5A4A3A2A1 } },
-	{ LE_TEST(0, 16, 128) = { .High = 0xD8D7D6D5D4D3D2D1, .Low = 0xC8C7C6C5C4C3C2C1 } },
-	{ LE_TEST(8, 0, 128) = { .High = 0xC8C7C6C5C4C3C2C1, .Low = 0xB8B7B6B5B4B3B2B1 } },
-	{ LE_TEST(8, 8, 128) = { .High = 0xD8D7D6D5D4D3D2D1, .Low = 0xC8C7C6C5C4C3C2C1 } },
+	{ LE_TEST(0, 0, 128) = { .hppigh = 0xB8B7B6B5B4B3B2B1, .Low = 0xA8A7A6A5A4A3A2A1 } },
+	{ LE_TEST(0, 16, 128) = { .hppigh = 0xD8D7D6D5D4D3D2D1, .Low = 0xC8C7C6C5C4C3C2C1 } },
+	{ LE_TEST(8, 0, 128) = { .hppigh = 0xC8C7C6C5C4C3C2C1, .Low = 0xB8B7B6B5B4B3B2B1 } },
+	{ LE_TEST(8, 8, 128) = { .hppigh = 0xD8D7D6D5D4D3D2D1, .Low = 0xC8C7C6C5C4C3C2C1 } },
 	/* rz_reat_le64, rz_reat_at_le64 */
 	{ LE_TEST(0, 0, 64) = 0xA8A7A6A5A4A3A2A1 },
 	{ LE_TEST(0, 8, 64) = 0xB8B7B6B5B4B3B2B1 },

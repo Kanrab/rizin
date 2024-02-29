@@ -28,7 +28,7 @@ dB "?   C21:20 = R19:18" 14c03263 0x0
 d "?   C17:16 = R19:18" 10c03263 0x0
 d "?   PKTCOUNT = LR:FP" 12c03e63 0x0
 
-d "?   V31.h = vsat(V0.w,V13.w)" 7fc06d1f 0x0
+d "?   V31.hpp = vsat(V0.w,V13.w)" 7fc06d1f 0x0
 
 d "?   loop0(0x6c,#0x10)" 88c00069 0x68
 

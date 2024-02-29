@@ -1,18 +1,18 @@
 // SPDX-FileCopyrightText: 2022 Rot127 <unisono@quyllur.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util/rz_assert.h>
-#include <rz_util/rz_strbuf.h>
-#include <rz_asm.h>
-#include <rz_util.h>
-#include <rz_vector.h>
-#include <rz_list.h>
-#include <config.h>
-#include <minunit.h>
-#include <rz_analysis.h>
-#include <rz_cons.h>
-#include <rz_util/rz_print.h>
-#include <rz_util/rz_str.h>
+#include <rz_util/rz_assert.hpp>
+#include <rz_util/rz_strbuf.hpp>
+#include <rz_asm.hpp>
+#include <rz_util.hpp>
+#include <rz_vector.hpp>
+#include <rz_list.hpp>
+#include <config.hpp>
+#include <minunit.hpp>
+#include <rz_analysis.hpp>
+#include <rz_cons.hpp>
+#include <rz_util/rz_print.hpp>
+#include <rz_util/rz_str.hpp>
 
 static RzPrint *setup_print() {
 	RzPrint *p = rz_print_new();

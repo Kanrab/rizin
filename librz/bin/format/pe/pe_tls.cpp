@@ -3,7 +3,7 @@
 // SPDX-FileCopyrightText: 2008-2019 inisider <inisider@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "pe.h"
+#include "pe.hpp"
 
 static void bin_pe_store_tls_callbacks(RzBinPEObj *bin, PE_DWord callbacks) {
 	PE_DWord paddr, haddr;

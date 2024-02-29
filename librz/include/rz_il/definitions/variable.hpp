@@ -6,8 +6,8 @@
 #ifndef RZ_IL_VARIABLE_H
 #define RZ_IL_VARIABLE_H
 
-#include <rz_util/rz_bitvector.h>
-#include <rz_il/definitions/value.h>
+#include <rz_util/rz_bitvector.hpp>
+#include <rz_il/definitions/value.hpp>
 
 #ifdef __cplusplus
 extern "C" {

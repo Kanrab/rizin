@@ -3,9 +3,9 @@
 // SPDX-FileCopyrightText: 2020 Anton Kochkov <anton.kochkov@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "mcore.h"
+#include "mcore.hpp"
 
-#include <rz_analysis.h>
+#include <rz_analysis.hpp>
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -346,10 +346,10 @@ mcore_ops_t mcore_instructions[MCORE_INSTRS] = {
 	{ "ld.b", MCORE_CPU_DFLT, 0xafff, RZ_ANALYSIS_OP_TYPE_LOAD, 4, { { 0xf, 0, TYPE_NONE }, { 0xf0, 4, TYPE_NONE }, { 0xf00, 8, TYPE_NONE }, { 0x6000, 13, TYPE_NONE }, { 0 } } },
 	// 0b1011zzzziiiirrrr, st.b
 	{ "st.b", MCORE_CPU_DFLT, 0xbfff, RZ_ANALYSIS_OP_TYPE_STORE, 4, { { 0xf, 0, TYPE_NONE }, { 0xf0, 4, TYPE_NONE }, { 0xf00, 8, TYPE_NONE }, { 0x6000, 13, TYPE_NONE }, { 0 } } },
-	// 0b1100zzzziiiirrrr, ld.h
-	{ "ld.h", MCORE_CPU_DFLT, 0xcfff, RZ_ANALYSIS_OP_TYPE_LOAD, 4, { { 0xf, 0, TYPE_NONE }, { 0xf0, 4, TYPE_NONE }, { 0xf00, 8, TYPE_NONE }, { 0x6000, 13, TYPE_NONE }, { 0 } } },
-	// 0b1101zzzziiiirrrr, st.h
-	{ "st.h", MCORE_CPU_DFLT, 0xdfff, RZ_ANALYSIS_OP_TYPE_STORE, 4, { { 0xf, 0, TYPE_NONE }, { 0xf0, 4, TYPE_NONE }, { 0xf00, 8, TYPE_NONE }, { 0x6000, 13, TYPE_NONE }, { 0 } } },
+	// 0b1100zzzziiiirrrr, ld.hpp
+	{ "ld.hpp", MCORE_CPU_DFLT, 0xcfff, RZ_ANALYSIS_OP_TYPE_LOAD, 4, { { 0xf, 0, TYPE_NONE }, { 0xf0, 4, TYPE_NONE }, { 0xf00, 8, TYPE_NONE }, { 0x6000, 13, TYPE_NONE }, { 0 } } },
+	// 0b1101zzzziiiirrrr, st.hpp
+	{ "st.hpp", MCORE_CPU_DFLT, 0xdfff, RZ_ANALYSIS_OP_TYPE_STORE, 4, { { 0xf, 0, TYPE_NONE }, { 0xf0, 4, TYPE_NONE }, { 0xf00, 8, TYPE_NONE }, { 0x6000, 13, TYPE_NONE }, { 0 } } },
 	// 0b11100ddddddddddd, bt
 	{ "bt", MCORE_CPU_DFLT, 0xe7ff, RZ_ANALYSIS_OP_TYPE_CJMP, 1, { { 0x7ff, 0, TYPE_JMP }, { 0 }, { 0 }, { 0 }, { 0 } } },
 	// 0b11101ddddddddddd, bf

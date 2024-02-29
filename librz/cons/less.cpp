@@ -2,11 +2,11 @@
 // SPDX-FileCopyrightText: 2014-2019 Judge_Dredd <the.guard@mail.ru>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_cons.h>
-#include <rz_util/rz_regex.h>
-#include <rz_util.h>
-#include "pager_private.h"
-#include "rz_vector.h"
+#include <rz_cons.hpp>
+#include <rz_util/rz_regex.hpp>
+#include <rz_util.hpp>
+#include "pager_private.hpp"
+#include "rz_vector.hpp"
 
 #define I(x) rz_cons_singleton()->x
 

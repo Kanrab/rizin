@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2018 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bin.h>
+#include <rz_bin.hpp>
 
 RZ_API bool rz_bin_loader(RzBin *bin, ut32 boid, int options) {
 	// uses a plugin from bin.loader eval var and loads the selected binobj

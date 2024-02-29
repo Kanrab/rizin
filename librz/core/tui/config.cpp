@@ -3,14 +3,14 @@
 
 #include <string.h>
 
-#include <rz_core.h>
-#include <rz_util.h>
+#include <rz_core.hpp>
+#include <rz_util.hpp>
 
-#include "../core_private.h"
-#include <rz_asm.h>
-#include <rz_util/rz_print.h>
-#include <rz_util/rz_strbuf.h>
-#include <cmd_descs.h>
+#include "../core_private.hpp"
+#include <rz_asm.hpp>
+#include <rz_util/rz_print.hpp>
+#include <rz_util/rz_strbuf.hpp>
+#include <cmd_descs.hpp>
 
 static void config_visual_hit_i(RzCore *core, const char *name, int delta) {
 	struct rz_config_node_t *node;

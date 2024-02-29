@@ -47,11 +47,11 @@
 #define PDEBUG_PROTOVER_MAJOR 0x00000000
 #define PDEBUG_PROTOVER_MINOR 0x00000003
 
-#include <stddef.h>
+#include <stddef.hpp>
 
 /* These are pdebug specific errors, sent sometimes with the errno after
    an action failed.  Simply provides additional info on the reason for the
-   error.  Sent in the DSrMsg_err_t.hdr.subcmd byte.  */
+   error.  Sent in the DSrMsg_err_t.hppdr.subcmd byte.  */
 
 #define PDEBUG_ENOERR     0 /* No error.  */
 #define PDEBUG_ENOPTY     1 /* No Pseudo Terminals found.  */
@@ -106,7 +106,7 @@
 #define DS_MSG_OKDATA_FLAG   0x40000000
 #define DS_MSG_NO_RESPONSE   0x80000000
 
-#define QNXNTO_NSIG 57 /* From signals.h NSIG.  */
+#define QNXNTO_NSIG 57 /* From signals.hpp NSIG.  */
 
 /* Common message header. It must be 32 or 64 bit aligned.
    The top bit of cmd is 1 for BIG endian data format.  */
@@ -469,7 +469,7 @@ typedef struct {
 		struct {
 			ut32 ip;
 			ut32 dp;
-			ut32 flags; /* Defined in <sys/debug.h>. */
+			ut32 flags; /* Defined in <sys/debug.hpp>. */
 		} brk;
 		struct {
 			ut32 ip;

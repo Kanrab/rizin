@@ -3,8 +3,8 @@
 // SPDX-FileCopyrightText: 2017 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
 
 #define ROTL28(rs, sh) ((((rs) << (sh)) | ((rs) >> (28 - (sh)))) & 0x0FFFFFFF) // left 28
 #define ROTR28(rs, sh) ((((rs) >> (sh)) | ((rs) << (28 - (sh)))) & 0x0FFFFFFF) // right 28

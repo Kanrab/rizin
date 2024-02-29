@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 #include <stdio.h>
 #include <sys/stat.h>
-#include "ar.h"
+#include "ar.hpp"
 
 #define IS_PATH(c) (IS_ALPHANUM(c) || (c == '/') || (c == '\\') || (c == '.'))
 

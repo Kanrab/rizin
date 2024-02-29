@@ -5,14 +5,14 @@
 #include <string.h>
 #include <stdlib.h>
 #include <string.h>
-#include <rz_types.h>
-#include <rz_util.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
 
-#include "ins.h"
-#include "decode.h"
-#include "utils.h"
-#include "hashtable.h"
-#include "decode_funcs.h"
+#include "ins.hpp"
+#include "decode.hpp"
+#include "utils.hpp"
+#include "hashtable.hpp"
+#include "decode_funcs.hpp"
 
 extern char *ins_str[];
 extern ut32 ins_buff_len;

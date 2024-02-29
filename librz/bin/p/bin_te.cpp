@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: 2013-2019 xvilka <anton.kochkov@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_bin.h>
-#include "te/te_specs.h"
-#include "te/te.h"
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_bin.hpp>
+#include "te/te_specs.hpp"
+#include "te/te.hpp"
 
 static Sdb *get_sdb(RzBinFile *bf) {
 	RzBinObject *o = bf->o;

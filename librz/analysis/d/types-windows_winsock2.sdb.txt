@@ -1,4 +1,4 @@
-### winsock2.h ###
+### winsock2.hpp ###
 
 LPWSAQUERYSETA=type
 type.LPWSAQUERYSETA=p

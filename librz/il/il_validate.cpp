@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2022 Florian Märkl <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_il/rz_il_validate.h>
-#include <rz_util/ht_uu.h>
+#include <rz_il/rz_il_validate.hpp>
+#include <rz_util/ht_uu.hpp>
 
 /////////////////////////////////////////////////////////
 // ---------------------- context -----------------------
@@ -489,7 +489,7 @@ VALIDATOR_PURE(cast) {
 }
 
 VALIDATOR_PURE(append) {
-	RzILOpPure *x = op->op.append.high;
+	RzILOpPure *x = op->op.append.hppigh;
 	RzILOpPure *y = op->op.append.low;
 	RzILSortPure sx;
 	VALIDATOR_DESCEND(x, &sx);

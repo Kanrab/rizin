@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2009-2016 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "rz_core.h"
+#include "rz_core.hpp"
 
 #define RZ_QUIT_VALUE_KILL   5
 #define RZ_QUIT_VALUE_NOKILL 1
@@ -41,7 +41,7 @@ static int cmd_Quit(void *data, const char *input) {
 			exit(0);
 			return -2;
 		}
-		rz_config_set(core->config, "scr.histsave", "false");
+		rz_config_set(core->config, "scr.hppistsave", "false");
 	}
 	if (IS_DIGIT(input[0]) || input[0] == ' ') {
 		core->num->value = rz_num_math(core->num, input);

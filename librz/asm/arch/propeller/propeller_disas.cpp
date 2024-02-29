@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2014 Fedor Sakharov <fedor.sakharov@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
 
-#include "propeller_disas.h"
+#include "propeller_disas.hpp"
 
 static const char *instrs[] = {
 	[PROP_ABS] = "abs",

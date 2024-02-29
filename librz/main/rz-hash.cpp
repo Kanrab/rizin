@@ -3,13 +3,13 @@
 
 #include <stdio.h>
 #include <string.h>
-#include <rz_io.h>
-#include <rz_main.h>
-#include <rz_hash.h>
-#include <rz_util/rz_print.h>
-#include <rz_util.h>
-#include <rz_crypto.h>
-#include <rz_lib.h>
+#include <rz_io.hpp>
+#include <rz_main.hpp>
+#include <rz_hash.hpp>
+#include <rz_util/rz_print.hpp>
+#include <rz_util.hpp>
+#include <rz_crypto.hpp>
+#include <rz_lib.hpp>
 
 #define RZ_HASH_DEFAULT_BLOCK_SIZE 0x1000
 

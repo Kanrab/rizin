@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: 2010-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <config.h>
-#include <rz_core.h>
-#include <rz_cmd.h>
-#include <rz_list.h>
-#include <rz_lib.h>
+#include <config.hpp>
+#include <rz_core.hpp>
+#include <rz_cmd.hpp>
+#include <rz_list.hpp>
+#include <rz_lib.hpp>
 #include <stdio.h>
 
 static RzCorePlugin *core_static_plugins[] = { RZ_CORE_STATIC_PLUGINS };

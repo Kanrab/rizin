@@ -1,25 +1,25 @@
 #ifndef JEMALLOC_INTERNAL_H
 #define	JEMALLOC_INTERNAL_H
 
-#include "jemalloc_internal_defs.h"
-#include "jemalloc_internal_decls.h"
+#include "jemalloc_internal_defs.hpp"
+#include "jemalloc_internal_decls.hpp"
 
 #ifdef JEMALLOC_UTRACE
-#include <sys/ktrace.h>
+#include <sys/ktrace.hpp>
 #endif
 
 #define	JEMALLOC_NO_DEMANGLE
 #ifdef JEMALLOC_JET
 #  define JEMALLOC_N(n) jet_##n
-#  include "public_namespace.h"
+#  include "public_namespace.hpp"
 #  define JEMALLOC_NO_RENAME
-#  include "../jemalloc.h"
+#  include "../jemalloc.hpp"
 #  undef JEMALLOC_NO_RENAME
 #else
 #  define JEMALLOC_N(n) je_##n
-#  include "../jemalloc.h"
+#  include "../jemalloc.hpp"
 #endif
-#include "private_namespace.h"
+#include "private_namespace.hpp"
 
 static const bool config_debug =
 #ifdef JEMALLOC_DEBUG
@@ -150,26 +150,26 @@ static const bool config_cache_oblivious =
     ;
 
 #ifdef JEMALLOC_ATOMIC9
-#include <machine/atomic.h>
+#include <machine/atomic.hpp>
 #endif
 
 #if (defined(JEMALLOC_OSATOMIC) || defined(JEMALLOC_OSSPIN))
-#include <libkern/OSAtomic.h>
+#include <libkern/OSAtomic.hpp>
 #endif
 
 #ifdef JEMALLOC_ZONE
-#include <mach/mach_error.h>
-#include <mach/mach_init.h>
-#include <mach/vm_map.h>
+#include <mach/mach_error.hpp>
+#include <mach/mach_init.hpp>
+#include <mach/vm_map.hpp>
 #endif
 
-#include "ph.h"
+#include "ph.hpp"
 #ifndef __PGI
 #define	RB_COMPACT
 #endif
-#include "rb.h"
-#include "qr.h"
-#include "ql.h"
+#include "rb.hpp"
+#include "qr.hpp"
+#include "ql.hpp"
 
 /*
  * jemalloc can conceptually be broken into components (arena, tcache, etc.),
@@ -187,7 +187,7 @@ static const bool config_cache_oblivious =
 /******************************************************************************/
 #define	JEMALLOC_H_TYPES
 
-#include "jemalloc_internal_macros.h"
+#include "jemalloc_internal_macros.hpp"
 
 /* Page size index type. */
 typedef unsigned pszind_t;
@@ -358,7 +358,7 @@ typedef unsigned szind_t;
 /* Declare a variable-length array. */
 #if __STDC_VERSION__ < 199901L
 #  ifdef _MSC_VER
-#    include <malloc.h>
+#    include <malloc.hpp>
 #    define alloca _alloca
 #  else
 #    include <stdlib.h>
@@ -369,73 +369,73 @@ typedef unsigned szind_t;
 #  define VARIABLE_ARRAY(type, name, count) type name[(count)]
 #endif
 
-#include "nstime.h"
-#include "valgrind.h"
-#include "util.h"
-#include "atomic.h"
-#include "spin.h"
-#include "prng.h"
-#include "ticker.h"
-#include "ckh.h"
-#include "size_classes.h"
-#include "smoothstep.h"
-#include "stats.h"
-#include "ctl.h"
-#include "witness.h"
-#include "mutex.h"
-#include "tsd.h"
-#include "mb.h"
-#include "extent.h"
-#include "arena.h"
-#include "bitmap.h"
-#include "base.h"
-#include "rtree.h"
-#include "pages.h"
-#include "chunk.h"
-#include "huge.h"
-#include "tcache.h"
-#include "hash.h"
-#include "quarantine.h"
-#include "prof.h"
+#include "nstime.hpp"
+#include "valgrind.hpp"
+#include "util.hpp"
+#include "atomic.hpp"
+#include "spin.hpp"
+#include "prng.hpp"
+#include "ticker.hpp"
+#include "ckh.hpp"
+#include "size_classes.hpp"
+#include "smoothstep.hpp"
+#include "stats.hpp"
+#include "ctl.hpp"
+#include "witness.hpp"
+#include "mutex.hpp"
+#include "tsd.hpp"
+#include "mb.hpp"
+#include "extent.hpp"
+#include "arena.hpp"
+#include "bitmap.hpp"
+#include "base.hpp"
+#include "rtree.hpp"
+#include "pages.hpp"
+#include "chunk.hpp"
+#include "huge.hpp"
+#include "tcache.hpp"
+#include "hash.hpp"
+#include "quarantine.hpp"
+#include "prof.hpp"
 
 #undef JEMALLOC_H_TYPES
 /******************************************************************************/
 #define	JEMALLOC_H_STRUCTS
 
-#include "nstime.h"
-#include "valgrind.h"
-#include "util.h"
-#include "atomic.h"
-#include "spin.h"
-#include "prng.h"
-#include "ticker.h"
-#include "ckh.h"
-#include "size_classes.h"
-#include "smoothstep.h"
-#include "stats.h"
-#include "ctl.h"
-#include "witness.h"
-#include "mutex.h"
-#include "mb.h"
-#include "bitmap.h"
+#include "nstime.hpp"
+#include "valgrind.hpp"
+#include "util.hpp"
+#include "atomic.hpp"
+#include "spin.hpp"
+#include "prng.hpp"
+#include "ticker.hpp"
+#include "ckh.hpp"
+#include "size_classes.hpp"
+#include "smoothstep.hpp"
+#include "stats.hpp"
+#include "ctl.hpp"
+#include "witness.hpp"
+#include "mutex.hpp"
+#include "mb.hpp"
+#include "bitmap.hpp"
 #define	JEMALLOC_ARENA_STRUCTS_A
-#include "arena.h"
+#include "arena.hpp"
 #undef JEMALLOC_ARENA_STRUCTS_A
-#include "extent.h"
+#include "extent.hpp"
 #define	JEMALLOC_ARENA_STRUCTS_B
-#include "arena.h"
+#include "arena.hpp"
 #undef JEMALLOC_ARENA_STRUCTS_B
-#include "base.h"
-#include "rtree.h"
-#include "pages.h"
-#include "chunk.h"
-#include "huge.h"
-#include "tcache.h"
-#include "hash.h"
-#include "quarantine.h"
-#include "prof.h"
+#include "base.hpp"
+#include "rtree.hpp"
+#include "pages.hpp"
+#include "chunk.hpp"
+#include "huge.hpp"
+#include "tcache.hpp"
+#include "hash.hpp"
+#include "quarantine.hpp"
+#include "prof.hpp"
 
-#include "tsd.h"
+#include "tsd.hpp"
 
 #undef JEMALLOC_H_STRUCTS
 /******************************************************************************/
@@ -505,61 +505,61 @@ void	jemalloc_prefork(void);
 void	jemalloc_postfork_parent(void);
 void	jemalloc_postfork_child(void);
 
-#include "nstime.h"
-#include "valgrind.h"
-#include "util.h"
-#include "atomic.h"
-#include "spin.h"
-#include "prng.h"
-#include "ticker.h"
-#include "ckh.h"
-#include "size_classes.h"
-#include "smoothstep.h"
-#include "stats.h"
-#include "ctl.h"
-#include "witness.h"
-#include "mutex.h"
-#include "mb.h"
-#include "bitmap.h"
-#include "extent.h"
-#include "arena.h"
-#include "base.h"
-#include "rtree.h"
-#include "pages.h"
-#include "chunk.h"
-#include "huge.h"
-#include "tcache.h"
-#include "hash.h"
-#include "quarantine.h"
-#include "prof.h"
-#include "tsd.h"
+#include "nstime.hpp"
+#include "valgrind.hpp"
+#include "util.hpp"
+#include "atomic.hpp"
+#include "spin.hpp"
+#include "prng.hpp"
+#include "ticker.hpp"
+#include "ckh.hpp"
+#include "size_classes.hpp"
+#include "smoothstep.hpp"
+#include "stats.hpp"
+#include "ctl.hpp"
+#include "witness.hpp"
+#include "mutex.hpp"
+#include "mb.hpp"
+#include "bitmap.hpp"
+#include "extent.hpp"
+#include "arena.hpp"
+#include "base.hpp"
+#include "rtree.hpp"
+#include "pages.hpp"
+#include "chunk.hpp"
+#include "huge.hpp"
+#include "tcache.hpp"
+#include "hash.hpp"
+#include "quarantine.hpp"
+#include "prof.hpp"
+#include "tsd.hpp"
 
 #undef JEMALLOC_H_EXTERNS
 /******************************************************************************/
 #define	JEMALLOC_H_INLINES
 
-#include "nstime.h"
-#include "valgrind.h"
-#include "util.h"
-#include "atomic.h"
-#include "spin.h"
-#include "prng.h"
-#include "ticker.h"
-#include "ckh.h"
-#include "size_classes.h"
-#include "smoothstep.h"
-#include "stats.h"
-#include "ctl.h"
-#include "tsd.h"
-#include "witness.h"
-#include "mutex.h"
-#include "mb.h"
-#include "extent.h"
-#include "base.h"
-#include "rtree.h"
-#include "pages.h"
-#include "chunk.h"
-#include "huge.h"
+#include "nstime.hpp"
+#include "valgrind.hpp"
+#include "util.hpp"
+#include "atomic.hpp"
+#include "spin.hpp"
+#include "prng.hpp"
+#include "ticker.hpp"
+#include "ckh.hpp"
+#include "size_classes.hpp"
+#include "smoothstep.hpp"
+#include "stats.hpp"
+#include "ctl.hpp"
+#include "tsd.hpp"
+#include "witness.hpp"
+#include "mutex.hpp"
+#include "mb.hpp"
+#include "extent.hpp"
+#include "base.hpp"
+#include "rtree.hpp"
+#include "pages.hpp"
+#include "chunk.hpp"
+#include "huge.hpp"
 
 #ifndef JEMALLOC_ENABLE_INLINE
 pszind_t	psz2ind(size_t psz);
@@ -587,19 +587,19 @@ ticker_t	*decay_ticker_get(tsd_t *tsd, unsigned ind);
 #endif
 
 
-#include "bitmap.h"
+#include "bitmap.hpp"
 /*
- * Include portions of arena.h interleaved with tcache.h in order to resolve
+ * Include portions of arena.hpp interleaved with tcache.hpp in order to resolve
  * circular dependencies.
  */
 #define	JEMALLOC_ARENA_INLINE_A
-#include "arena.h"
+#include "arena.hpp"
 #undef JEMALLOC_ARENA_INLINE_A
-#include "tcache.h"
+#include "tcache.hpp"
 #define	JEMALLOC_ARENA_INLINE_B
-#include "arena.h"
+#include "arena.hpp"
 #undef JEMALLOC_ARENA_INLINE_B
-#include "hash.h"
-#include "quarantine.h"
+#include "hash.hpp"
+#include "quarantine.hpp"
 
 #endif /* JEMALLOC_INTERNAL_H */

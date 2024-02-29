@@ -5,7 +5,7 @@
 #ifndef PIC_PIC18_H
 #define PIC_PIC18_H
 
-#include <rz_asm.h>
+#include <rz_asm.hpp>
 
 int pic_pic18_disassemble(RzAsmOp *op, const ut8 *b, int l);
 

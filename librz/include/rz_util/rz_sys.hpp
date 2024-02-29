@@ -1,8 +1,8 @@
 #ifndef RZ_SYS_H
 #define RZ_SYS_H
 
-#include <rz_types.h>
-#include <rz_list.h>
+#include <rz_types.hpp>
+#include <rz_list.hpp>
 
 #if __WINDOWS__
 #define RZ_SYS_DEVNULL "nul"

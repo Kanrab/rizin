@@ -2,8 +2,8 @@
 // SPDX-FileCopyrightText: 2017-2018 alvaro <alvaro.felipe91@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_io.h>
-#include <rz_types.h>
+#include <rz_io.hpp>
+#include <rz_types.hpp>
 #include <string.h>
 
 const ut64 cleanup_masks[] = {

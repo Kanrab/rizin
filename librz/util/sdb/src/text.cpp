@@ -1,15 +1,15 @@
 // SPDX-FileCopyrightText: 2020 thestr4ng3r <info@florianmaerkl.de>
 // SPDX-License-Identifier: MIT
 
-#include "sdb.h"
+#include "sdb.hpp"
 
 #include <fcntl.h>
 #include <limits.h>
 #include <sys/stat.h>
 #if HAVE_HEADER_SYS_MMAN_H
-#include <sys/mman.h>
+#include <sys/mman.hpp>
 #endif
-#include "sdb_private.h"
+#include "sdb_private.hpp"
 
 /**
  * ********************

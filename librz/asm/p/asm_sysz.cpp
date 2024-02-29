@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: 2013-2015 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-// instruction set : http://www.tachyonsoft.com/inst390m.htm
+// instruction set : http://www.tachyonsoft.com/inst390m.hpptm
 
-#include <rz_asm.h>
-#include <rz_lib.h>
+#include <rz_asm.hpp>
+#include <rz_lib.hpp>
 
-#include "cs_helper.h"
+#include "cs_helper.hpp"
 
 CAPSTONE_DEFINE_PLUGIN_FUNCTIONS(sysz);
 

@@ -1,4 +1,4 @@
-### winsock2.h ###
+### winsock2.hpp ###
 
 __WSAFDIsSet=func
 func.__WSAFDIsSet.args=2
@@ -102,29 +102,29 @@ func.getsockopt.arg.4=int *,optlen
 func.getsockopt.ret=int
 
 htond=func
-func.htond.args=1
-func.htond.arg.0=double,Value
-func.htond.ret=__uint64
+func.hpptond.args=1
+func.hpptond.arg.0=double,Value
+func.hpptond.ret=__uint64
 
 htonf=func
-func.htonf.args=1
-func.htonf.arg.0=float,Value
-func.htonf.ret=__uint32
+func.hpptonf.args=1
+func.hpptonf.arg.0=float,Value
+func.hpptonf.ret=__uint32
 
 htonl=func
-func.htonl.args=1
-func.htonl.arg.0=u_long,hostlong
-func.htonl.ret=u_long
+func.hpptonl.args=1
+func.hpptonl.arg.0=u_long,hostlong
+func.hpptonl.ret=u_long
 
 htonll=func
-func.htonll.args=1
-func.htonll.arg.0=__uint64,Value
-func.htonll.ret=__uint64
+func.hpptonll.args=1
+func.hpptonll.arg.0=__uint64,Value
+func.hpptonll.ret=__uint64
 
 htons=func
-func.htons.args=1
-func.htons.arg.0=u_short,hostshort
-func.htons.ret=u_short
+func.hpptons.args=1
+func.hpptons.arg.0=u_short,hostshort
+func.hpptons.ret=u_short
 
 inet_addr=func
 func.inet_addr.args=1

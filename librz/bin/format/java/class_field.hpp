@@ -3,10 +3,10 @@
 
 #ifndef RZ_BIN_JAVA_CLASS_FIELD_H
 #define RZ_BIN_JAVA_CLASS_FIELD_H
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_bin.h>
-#include "class_attribute.h"
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_bin.hpp>
+#include "class_attribute.hpp"
 
 typedef enum {
 	FIELD_ACCESS_FLAG_PUBLIC /*   */ = 0x0001,

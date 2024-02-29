@@ -4,12 +4,12 @@
 #ifndef PPC_IL_H
 #define PPC_IL_H
 
-#include "ppc_analysis.h"
-#include <rz_reg.h>
-#include <rz_analysis.h>
-#include <rz_il.h>
-#include <rz_types.h>
-#include <capstone/capstone.h>
+#include "ppc_analysis.hpp"
+#include <rz_reg.hpp>
+#include <rz_analysis.hpp>
+#include <rz_il.hpp>
+#include <rz_types.hpp>
+#include <capstone/capstone.hpp>
 
 #define PPC_BYTE  8
 #define PPC_HWORD 16

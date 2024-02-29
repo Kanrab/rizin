@@ -4,14 +4,14 @@
 #ifndef X86_IL_COMMON_H
 #define X86_IL_COMMON_H
 
-#include "x86_il.h"
+#include "x86_il.hpp"
 
 #define X86_BIT(x)  UN(1, x)
 #define X86_TO32(x) UNSIGNED(32, x)
 
 #define IL_LIFTER(mnem) static RzILOpEffect *x86_il_##mnem(const X86ILIns *ins, ut64 pc, RzAnalysis *analysis, X86ILContext *ctx)
 
-// Namespace clash with android-ndk-25b's x86_64-linux-android/asm/processor-flags.h
+// Namespace clash with android-ndk-25b's x86_64-linux-android/asm/processor-flags.hpp
 #undef X86_EFLAGS_CF
 #undef X86_EFLAGS_PF
 #undef X86_EFLAGS_AF

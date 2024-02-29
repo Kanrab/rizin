@@ -3,7 +3,7 @@
 
 // XXX: All this stuff must be linked to the code injection api
 
-#include <rz_debug.h>
+#include <rz_debug.hpp>
 
 RZ_API RzDebugDesc *rz_debug_desc_new(int fd, char *path, int perm, int type, int off) {
 	RzDebugDesc *desc = RZ_NEW(RzDebugDesc);

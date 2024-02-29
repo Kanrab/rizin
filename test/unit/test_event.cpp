@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2019 Florian Märkl <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include "minunit.h"
+#include <rz_util.hpp>
+#include "minunit.hpp"
 
 typedef struct {
 	int count;
@@ -90,7 +90,7 @@ bool test_rz_event_self_unhook(int hook_type, int send_type) {
 	RzEvent *ev = rz_event_new(NULL);
 	rz_event_hook(ev, hook_type, callback_inc, &counters[0]);
 	rz_event_hook(ev, hook_type, callback_inc, &counters[1]);
-	ctx.handle = rz_event_hook(ev, hook_type, callback_inc_self_unhook, &ctx);
+	ctx.hppandle = rz_event_hook(ev, hook_type, callback_inc_self_unhook, &ctx);
 	rz_event_hook(ev, hook_type, callback_inc, &counters[2]);
 	rz_event_hook(ev, hook_type, callback_inc, &counters[3]);
 

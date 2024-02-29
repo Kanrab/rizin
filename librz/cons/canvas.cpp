@@ -2,8 +2,8 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <math.h>
-#include <rz_cons.h>
-#include <rz_util/rz_assert.h>
+#include <rz_cons.hpp>
+#include <rz_util/rz_assert.hpp>
 
 #define USE_UTF8       (rz_cons_singleton()->use_utf8)
 #define USE_UTF8_CURVY (rz_cons_singleton()->use_utf8_curvy)

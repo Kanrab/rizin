@@ -3,7 +3,7 @@
 // SPDX-FileCopyrightText: 2021 ret2libc <sirmy15@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
+#include <rz_core.hpp>
 
 #if __WINDOWS__
 #define START_ENV_CHAR "%"

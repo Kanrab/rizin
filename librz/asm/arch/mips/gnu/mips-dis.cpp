@@ -24,22 +24,22 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "ansidecl.h"
-#include "sysdep.h"
-#include "disas-asm.h"
-#include "libiberty.h"
-#include "elf/mips.h"
-#include "opintl.h"
+#include "ansidecl.hpp"
+#include "sysdep.hpp"
+#include "disas-asm.hpp"
+#include "libiberty.hpp"
+#include "elf/mips.hpp"
+#include "opintl.hpp"
 
 /* FIXME: These are needed to figure out if the code is mips16 or
    not. The low bit of the address is often a good indicator.  No
    symbol table is available when this code runs out in an embedded
    system as when it is used for disassembler support in a monitor.  */
 
-#include "opcode/mips.h"
+#include "opcode/mips.hpp"
 #if !defined(EMBEDDED_ENV)
 #define SYMTAB_AVAILABLE 1
-#include "elf-bfd.h"
+#include "elf-bfd.hpp"
 #endif
 
 /* Mips instructions are at maximum this many bytes long.  */

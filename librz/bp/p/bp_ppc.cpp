@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2010 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bp.h>
-#include <rz_lib.h>
+#include <rz_bp.hpp>
+#include <rz_lib.hpp>
 
 static struct rz_bp_arch_t rz_bp_plugin_ppc_bps[] = {
 	/* XXX: FIX those are not really breakpoint opcodes at all */

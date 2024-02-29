@@ -4,10 +4,10 @@
 #ifndef RL78_INSTR_H
 #define RL78_INSTR_H
 
-#include "rl78_operand.h"
+#include "rl78_operand.hpp"
 
-#include <rz_util.h>
-#include <rz_types.h>
+#include <rz_util.hpp>
+#include <rz_types.hpp>
 
 typedef enum RL78Operation {
 	RL78_OPERATION_NONE,

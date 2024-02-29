@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: LGPL-2.1-or-later
 // SPDX-FileCopyrightText: 1995-1997  Peter Mattis, Spencer Kimball and Josh MacDonald
 
-// Taken from https://github.com/GNOME/glib/blob/main/glib/gconstructor.h and adapted to Rizin
+// Taken from https://github.com/GNOME/glib/blob/main/glib/gconstructor.hpp and adapted to Rizin
 
 #ifndef __RZ_CONSTRUCTOR_H__
 #define __RZ_CONSTRUCTOR_H__

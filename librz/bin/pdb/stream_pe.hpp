@@ -4,7 +4,7 @@
 #ifndef PDB_PE_H
 #define PDB_PE_H
 
-#include <rz_util.h>
+#include <rz_util.hpp>
 
 typedef union {
 	ut32 physical_address;

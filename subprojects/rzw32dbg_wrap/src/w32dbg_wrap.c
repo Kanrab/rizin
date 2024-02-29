@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2019-2020 GustavoLCR <gugulcr@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <windows.h>
-#include <w32dbg_wrap.h>
+#include <windows.hpp>
+#include <w32dbg_wrap.hpp>
 
 static DWORD WINAPI __w32dbg_thread(LPVOID param) {
 	W32DbgWInst *inst = param;

@@ -6,8 +6,8 @@
 #define RZ_BIN_MACH064 1
 #include "bin_mach0.c"
 
-#include "objc/mach064_classes.h"
-#include "../format/mach0/kernelcache.h"
+#include "objc/mach064_classes.hpp"
+#include "../format/mach0/kernelcache.hpp"
 
 static bool check_buffer(RzBuffer *b) {
 	ut8 buf[4] = { 0 };
@@ -306,7 +306,7 @@ RzBinPlugin rz_bin_plugin_mach064 = {
 	.imports = &imports,
 	.info = &info,
 	.libs = &libs,
-	.header = &MACH0_(mach_headerfields),
+	.hppeader = &MACH0_(mach_headerfields),
 	.relocs = &relocs,
 	.fields = &MACH0_(mach_fields),
 	.create = &create,

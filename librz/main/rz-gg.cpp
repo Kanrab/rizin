@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: 2011-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_egg.h>
-#include <rz_bin.h>
-#include <rz_main.h>
-#include <rz_util/rz_print.h>
-#include <rz_util.h>
+#include <rz_egg.hpp>
+#include <rz_bin.hpp>
+#include <rz_main.hpp>
+#include <rz_util/rz_print.hpp>
+#include <rz_util.hpp>
 
 static int usage(int v) {
 	printf("%s%s%s", Color_CYAN, "Usage: ", Color_RESET);

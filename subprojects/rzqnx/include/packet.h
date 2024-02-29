@@ -8,15 +8,15 @@
 #include <stdint.h>
 #include <string.h>
 #include <stdlib.h>
-#include "libqnxr.h"
+#include "libqnxr.hpp"
 #include <stdio.h>
 #if __WINDOWS__
-#include <windows.h>
+#include <windows.hpp>
 #if !__CYGWIN__ && !defined(MSC_VER)
-#include <winsock.h>
+#include <winsock.hpp>
 #endif
 #else
-#include <unistd.h>
+#include <unistd.hpp>
 #endif
 
 int qnxr_send_nak(libqnxr_t *instance);

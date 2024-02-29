@@ -1,6 +1,6 @@
 /*
- * sfsysnr.h --- SFLib syscall numbers for Linux/i386 
- * see http://www.secdev.org/projects/shellforge.html for more informations
+ * sfsysnr.hpp --- SFLib syscall numbers for Linux/i386 
+ * see http://www.secdev.org/projects/shellforge.hpptml for more informations
  *
  * Copyright (C) 2004  Philippe Biondi <phil@secdev.org>
  *

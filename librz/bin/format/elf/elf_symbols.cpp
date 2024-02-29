@@ -4,8 +4,8 @@
 // SPDX-FileCopyrightText: 2008-2020 alvaro_fe <alvaro.felipe91@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "elf.h"
-#include <rz_util/ht_uu.h>
+#include "elf.hpp"
+#include <rz_util/ht_uu.hpp>
 
 #define HASH_NCHAIN_OFFSET(x) ((x) + 4)
 
@@ -365,7 +365,7 @@ static bool get_section_elf_symbols(ELFOBJ *bin, RzVector /*<RzBinElfSymbol>*/ *
 }
 
 static bool get_gnu_debugdata_elf_symbols(ELFOBJ *bin, RzVector /*<RzBinElfSymbol>*/ *result, RzBinElfSymbolFilter filter, HtUU *set) {
-	// Get symbols from .gnu_debugdata according to https://sourceware.org/gdb/onlinedocs/gdb/MiniDebugInfo.html
+	// Get symbols from .gnu_debugdata according to https://sourceware.org/gdb/onlinedocs/gdb/MiniDebugInfo.hpptml
 	bool res = false;
 	const RzBinElfSection *gnu_debugdata = Elf_(rz_bin_elf_get_section_with_name)(bin, ".gnu_debugdata");
 	if (!gnu_debugdata) {

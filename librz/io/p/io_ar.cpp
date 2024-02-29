@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2017 xarkes <antide.petit@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
-#include <rz_io.h>
-#include <rz_lib.h>
-#include <rz_util.h>
-#include <rz_cons.h>
-#include "ar.h"
+#include <rz_io.hpp>
+#include <rz_lib.hpp>
+#include <rz_util.hpp>
+#include <rz_cons.hpp>
+#include "ar.hpp"
 
 static bool rz_io_ar_plugin_open(RzIO *io, const char *file, bool many) {
 	return !strncmp("ar://", file, 5) || !strncmp("lib://", file, 6);

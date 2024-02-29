@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2019 v3l0c1r4pt0r <v3l0c1r4pt0r@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
-#include "or1k_disas.h"
+#include <rz_analysis.hpp>
+#include "or1k_disas.hpp"
 
 insn_type_descr_t types[] = {
 	[INSN_X] = { INSN_X, "%s",

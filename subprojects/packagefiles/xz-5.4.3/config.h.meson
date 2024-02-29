@@ -19,7 +19,7 @@
 /* Define to 1 if bswap_64 is available. */
 #mesondefine HAVE_BSWAP_64
 
-/* Define to 1 if you have the <byteswap.h> header file. */
+/* Define to 1 if you have the <byteswap.hpp> header file. */
 #mesondefine HAVE_BYTESWAP_H
 
 /* Define to 1 if the system has the type `CC_SHA256_CTX'. */
@@ -48,7 +48,7 @@
 /* Define to 1 if you have the `clock_gettime' function. */
 #mesondefine HAVE_CLOCK_GETTIME
 
-/* Define to 1 if you have the <CommonCrypto/CommonDigest.h> header file. */
+/* Define to 1 if you have the <CommonCrypto/CommonDigest.hpp> header file. */
 #mesondefine HAVE_COMMONCRYPTO_COMMONDIGEST_H
 
 /* Define if the GNU dcgettext() function is already present or preinstalled.
@@ -93,7 +93,7 @@
 /* Define to 1 if any of HAVE_DECODER_foo have been defined. */
 #mesondefine HAVE_DECODERS
 
-/* Define to 1 if you have the <dlfcn.h> header file. */
+/* Define to 1 if you have the <dlfcn.hpp> header file. */
 #mesondefine HAVE_DLFCN_H
 
 /* Define to 1 if arm encoder is enabled. */
@@ -141,7 +141,7 @@
 /* Define to 1 if you have the `futimesat' function. */
 #mesondefine HAVE_FUTIMESAT
 
-/* Define to 1 if you have the <getopt.h> header file. */
+/* Define to 1 if you have the <getopt.hpp> header file. */
 #mesondefine HAVE_GETOPT_H
 
 /* Define to 1 if you have the `getopt_long' function. */
@@ -153,10 +153,10 @@
 /* Define if you have the iconv() function and it works. */
 #mesondefine HAVE_ICONV
 
-/* Define to 1 if you have the <immintrin.h> header file. */
+/* Define to 1 if you have the <immintrin.hpp> header file. */
 #mesondefine HAVE_IMMINTRIN_H
 
-/* Define to 1 if you have the <inttypes.h> header file. */
+/* Define to 1 if you have the <inttypes.hpp> header file. */
 #mesondefine HAVE_INTTYPES_H
 
 /* Define to 1 if you have the <limits.h> header file. */
@@ -165,7 +165,7 @@
 /* Define to 1 if mbrtowc and mbstate_t are properly declared. */
 #mesondefine HAVE_MBRTOWC
 
-/* Define to 1 if you have the <memory.h> header file. */
+/* Define to 1 if you have the <memory.hpp> header file. */
 #mesondefine HAVE_MEMORY_H
 
 /* Define to 1 to enable bt2 match finder. */
@@ -183,10 +183,10 @@
 /* Define to 1 to enable hc4 match finder. */
 #mesondefine HAVE_MF_HC4
 
-/* Define to 1 if you have the <minix/sha2.h> header file. */
+/* Define to 1 if you have the <minix/sha2.hpp> header file. */
 #mesondefine HAVE_MINIX_SHA2_H
 
-/* Define to 1 if getopt.h declares extern int optreset. */
+/* Define to 1 if getopt.hpp declares extern int optreset. */
 #mesondefine HAVE_OPTRESET
 
 /* Define to 1 if you have the `pipe2' function. */
@@ -207,7 +207,7 @@
 /* Define to 1 if the system has the type `SHA256_CTX'. */
 #mesondefine HAVE_SHA256_CTX
 
-/* Define to 1 if you have the <sha256.h> header file. */
+/* Define to 1 if you have the <sha256.hpp> header file. */
 #mesondefine HAVE_SHA256_H
 
 /* Define to 1 if you have the `SHA256_Init' function. */
@@ -216,7 +216,7 @@
 /* Define to 1 if the system has the type `SHA2_CTX'. */
 #mesondefine HAVE_SHA2_CTX
 
-/* Define to 1 if you have the <sha2.h> header file. */
+/* Define to 1 if you have the <sha2.hpp> header file. */
 #mesondefine HAVE_SHA2_H
 
 /* Define to 1 if optimizing for size. */
@@ -231,13 +231,13 @@
 /* Define to 1 if you have the <stdlib.h> header file. */
 #mesondefine HAVE_STDLIB_H
 
-/* Define to 1 if you have the <strings.h> header file. */
+/* Define to 1 if you have the <strings.hpp> header file. */
 #mesondefine HAVE_STRINGS_H
 
 /* Define to 1 if you have the <string.h> header file. */
 #mesondefine HAVE_STRING_H
 
-/* Define to 1 if you have the <sys/capsicum.h> header file. */
+/* Define to 1 if you have the <sys/capsicum.hpp> header file. */
 #mesondefine HAVE_SYS_CAPSICUM_H
 
 /* Define to 1 if `st_atimensec' is a member of `struct stat'. */
@@ -255,19 +255,19 @@
 /* Define to 1 if `st_uatime' is a member of `struct stat'. */
 #mesondefine HAVE_STRUCT_STAT_ST_UATIME
 
-/* Define to 1 if you have the <sys/byteorder.h> header file. */
+/* Define to 1 if you have the <sys/byteorder.hpp> header file. */
 #mesondefine HAVE_SYS_BYTEORDER_H
 
-/* Define to 1 if you have the <sys/endian.h> header file. */
+/* Define to 1 if you have the <sys/endian.hpp> header file. */
 #mesondefine HAVE_SYS_ENDIAN_H
 
-/* Define to 1 if you have the <sys/param.h> header file. */
+/* Define to 1 if you have the <sys/param.hpp> header file. */
 #mesondefine HAVE_SYS_PARAM_H
 
 /* Define to 1 if you have the <sys/stat.h> header file. */
 #mesondefine HAVE_SYS_STAT_H
 
-/* Define to 1 if you have the <sys/time.h> header file. */
+/* Define to 1 if you have the <sys/time.hpp> header file. */
 #mesondefine HAVE_SYS_TIME_H
 
 /* Define to 1 if you have the <sys/types.h> header file. */
@@ -276,7 +276,7 @@
 /* Define to 1 if the system has the type `uintptr_t'. */
 #mesondefine HAVE_UINTPTR_T
 
-/* Define to 1 if you have the <unistd.h> header file. */
+/* Define to 1 if you have the <unistd.hpp> header file. */
 #mesondefine HAVE_UNISTD_H
 
 /* Define to 1 if you have the `utime' function. */
@@ -452,18 +452,18 @@
 /* Define to 1 if you need to in order for `stat' and other things to work. */
 #mesondefine _POSIX_SOURCE
 
-/* Define for Solaris 2.5.1 so the uint32_t typedef from <sys/synch.h>,
-   <pthread.h>, or <semaphore.h> is not used. If the typedef were allowed, the
+/* Define for Solaris 2.5.1 so the uint32_t typedef from <sys/synch.hpp>,
+   <pthread.hpp>, or <semaphore.hpp> is not used. If the typedef were allowed, the
    #define below would cause a syntax error. */
 #mesondefine _UINT32_T
 
-/* Define for Solaris 2.5.1 so the uint64_t typedef from <sys/synch.h>,
-   <pthread.h>, or <semaphore.h> is not used. If the typedef were allowed, the
+/* Define for Solaris 2.5.1 so the uint64_t typedef from <sys/synch.hpp>,
+   <pthread.hpp>, or <semaphore.hpp> is not used. If the typedef were allowed, the
    #define below would cause a syntax error. */
 #mesondefine _UINT64_T
 
-/* Define for Solaris 2.5.1 so the uint8_t typedef from <sys/synch.h>,
-   <pthread.h>, or <semaphore.h> is not used. If the typedef were allowed, the
+/* Define for Solaris 2.5.1 so the uint8_t typedef from <sys/synch.hpp>,
+   <pthread.hpp>, or <semaphore.hpp> is not used. If the typedef were allowed, the
    #define below would cause a syntax error. */
 #mesondefine _UINT8_T
 

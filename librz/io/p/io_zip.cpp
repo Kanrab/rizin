@@ -2,11 +2,11 @@
 // SPDX-FileCopyrightText: 2012-2016 Adam Pridgen <dso@rice.edu>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_io.h>
-#include <rz_lib.h>
-#include <rz_util.h>
-#include <rz_cons.h>
-#include <zip.h>
+#include <rz_io.hpp>
+#include <rz_lib.hpp>
+#include <rz_util.hpp>
+#include <rz_cons.hpp>
+#include <zip.hpp>
 
 typedef enum {
 	RZ_IO_PARENT_ZIP = 0x0001,

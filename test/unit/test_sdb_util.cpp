@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: MIT
 
-#include "minunit.h"
-#include <sdb.h>
+#include "minunit.hpp"
+#include <sdb.hpp>
 #include <fcntl.h>
 #include <stdio.h>
 

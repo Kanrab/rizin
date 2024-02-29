@@ -6,14 +6,14 @@
 #include <stdlib.h>
 #include <fcntl.h>
 #include <string.h>
-#include <stdarg.h>
+#include <stdarg.hpp>
 #include <stdint.h>
-#include "dis.h"
+#include "dis.hpp"
 
 static struct state _state;
 
-#include <rz_types.h>
-#include <rz_util/rz_assert.h>
+#include <rz_types.hpp>
+#include <rz_util/rz_assert.hpp>
 
 static inline struct state *get_state(void) {
 	memset(&_state, 0, sizeof(struct state));

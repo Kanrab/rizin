@@ -4,7 +4,7 @@
 #ifndef FNV_HASH_H
 #define FNV_HASH_H
 
-/** \file fnv_hash.h
+/** \file fnv_hash.hpp
  * This is a precomputed table of the following Fowler–Noll–Vo (FNV) hash
  * function with a base 64 limit.
  *

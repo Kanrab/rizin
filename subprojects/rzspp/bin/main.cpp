@@ -1,7 +1,7 @@
 /* MIT pancake <pancake@nopcode.org> (C) 2009-2020 */
 
-#include "../spp.h"
-#include "../rz_api.h"
+#include "../spp.hpp"
+#include "../rz_api.hpp"
 
 extern struct Proc *procs[];
 extern struct Proc *proc;

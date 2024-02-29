@@ -2,9 +2,9 @@
 // SPDX-FileCopyrightText: 2019 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include <rz_bin.h>
-#include "../unit/minunit.h"
+#include <rz_util.hpp>
+#include <rz_bin.hpp>
+#include "../unit/minunit.hpp"
 
 bool test_rz_bin(void) {
 	RzBin *bin = rz_bin_new();

@@ -21,17 +21,17 @@
    MA 02110-1301, USA.  */
 
 #include <ctype.h>
-#include <stdarg.h>
-#include <ansidecl.h>
+#include <stdarg.hpp>
+#include <ansidecl.hpp>
 #include <string.h>
 #include <stdio.h>
 
-#include "disas-asm.h"
-#include "arc.h"
-#include "arc-ext.h"
-#include "arc-dis.h"
-#include "arcompact-dis.h"
-#include "elf-bfd.h"
+#include "disas-asm.hpp"
+#include "arc.hpp"
+#include "arc-ext.hpp"
+#include "arc-dis.hpp"
+#include "arcompact-dis.hpp"
+#include "elf-bfd.hpp"
 
 static bfd_vma bfd_getm32(unsigned int);
 static bfd_vma bfd_getm32_ac(unsigned int) ATTRIBUTE_UNUSED;

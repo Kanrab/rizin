@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2016-2017 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_io.h>
-#include <rz_debug.h>
+#include <rz_io.hpp>
+#include <rz_debug.hpp>
 
 RzDebugPlugin rz_debug_plugin_null = {
 	.name = "null",

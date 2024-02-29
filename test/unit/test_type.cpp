@@ -2,12 +2,12 @@
 // SPDX-FileCopyrightText: 2020 HoundThe <cgkajm@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include <rz_type.h>
+#include <rz_util.hpp>
+#include <rz_type.hpp>
 
-#include "test_config.h"
-#include "minunit.h"
-#include "test_sdb.h"
+#include "test_config.hpp"
+#include "minunit.hpp"
+#include "test_sdb.hpp"
 
 static void setup_sdb_for_struct(Sdb *res) {
 	// td "struct kappa {int bar;int cow;};"

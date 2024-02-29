@@ -1,13 +1,13 @@
 // SPDX-FileCopyrightText: 2013-2019 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_asm.h>
-#include <rz_lib.h>
-#include <capstone/capstone.h>
+#include <rz_asm.hpp>
+#include <rz_lib.hpp>
+#include <capstone/capstone.hpp>
 
 static bool check_features(RzAsm *a, cs_insn *insn);
 
-#include "cs_helper.h"
+#include "cs_helper.hpp"
 
 CAPSTONE_DEFINE_PLUGIN_FUNCTIONS(x86);
 

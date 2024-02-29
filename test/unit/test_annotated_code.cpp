@@ -1,13 +1,13 @@
 // SPDX-FileCopyrightText: 2020 NIRMAL MANOJ C <nimmumanoj@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include <rz_vector.h>
-#include <rz_core.h>
-#include <rz_cons.h>
-#include <rz_util/rz_annotated_code.h>
+#include <rz_util.hpp>
+#include <rz_vector.hpp>
+#include <rz_core.hpp>
+#include <rz_cons.hpp>
+#include <rz_util/rz_annotated_code.hpp>
 
-#include "minunit.h"
+#include "minunit.hpp"
 
 static RzCodeAnnotation make_code_annotation(int st, int en, RzCodeAnnotationType typec,
 	ut64 offset, RSyntaxHighlightType types) {

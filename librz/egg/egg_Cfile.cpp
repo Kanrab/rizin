@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2011-2018 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_egg.h>
+#include <rz_egg.hpp>
 
 // compilation environment
 struct cEnv_t {
@@ -150,7 +150,7 @@ static struct cEnv_t *rz_egg_Cfile_set_cEnv(const char *arch, const char *os, in
 		cEnv->TEXT = "0.__TEXT.__text";
 	}
 
-	buffer = rz_str_newf("%s -fno-stack-protector -nostdinc -include '%s'/'%s'/sflib.h",
+	buffer = rz_str_newf("%s -fno-stack-protector -nostdinc -include '%s'/'%s'/sflib.hpp",
 		cEnv->CFLAGS, cEnv->SFLIBPATH, cEnv->TRIPLET);
 	if (!buffer) {
 		goto fail;

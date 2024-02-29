@@ -4,13 +4,13 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <string.h>
-#include <rz_types.h>
-#include <rz_lib.h>
-#include <rz_asm.h>
-#include <rz_analysis.h>
-#include <rz_util.h>
+#include <rz_types.hpp>
+#include <rz_lib.hpp>
+#include <rz_asm.hpp>
+#include <rz_analysis.hpp>
+#include <rz_util.hpp>
 
-#include <h8300_disas.h>
+#include <h8300_disas.hpp>
 
 #define emit(frag) rz_strbuf_appendf(&op->esil, frag)
 #define emitf(...) rz_strbuf_appendf(&op->esil, __VA_ARGS__)

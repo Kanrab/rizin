@@ -3,9 +3,9 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <math.h>
-#include <rz_flirt.h>
-#include <rz_util.h>
-#include "minunit.h"
+#include <rz_flirt.hpp>
+#include <rz_util.hpp>
+#include "minunit.hpp"
 
 #define test_flirt_pat_run(name) mu_run_test(test_flirt_pat_##name)
 #define test_flirt_pat_def(name, n_childs, string) \

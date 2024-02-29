@@ -23,7 +23,7 @@
  *    mem_write(addr: 0x0000000000000000, old: 0x00, new: 0x01)
  */
 
-#include <rz_il/rz_il_vm.h>
+#include <rz_il/rz_il_vm.hpp>
 
 #define PRETTY_PAD 2
 

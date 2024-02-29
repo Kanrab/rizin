@@ -1,9 +1,9 @@
-### processthreadsapi.h ###
+### processthreadsapi.hpp ###
 
 _PROCESS_INFORMATION=struct
 struct._PROCESS_INFORMATION=hProcess,hThread,dwProcessId,dwThreadId
-struct._PROCESS_INFORMATION.hProcess=HANDLE,0,0
-struct._PROCESS_INFORMATION.hThread=HANDLE,4,0
+struct._PROCESS_INFORMATION.hppProcess=HANDLE,0,0
+struct._PROCESS_INFORMATION.hppThread=HANDLE,4,0
 struct._PROCESS_INFORMATION.dwProcessId=DWORD,8,0
 struct._PROCESS_INFORMATION.dwThreadId=DWORD,12,0
 
@@ -33,9 +33,9 @@ struct._STARTUPINFOA.dwFlags=DWORD,44,0
 struct._STARTUPINFOA.wShowWindow=WORD,48,0
 struct._STARTUPINFOA.cbReserved2=WORD,50,0
 struct._STARTUPINFOA.lpReserved2=LPBYTE,52,0
-struct._STARTUPINFOA.hStdInput=HANDLE,56,0
-struct._STARTUPINFOA.hStdOutput=HANDLE,60,0
-struct._STARTUPINFOA.hStdError=HANDLE,64,0
+struct._STARTUPINFOA.hppStdInput=HANDLE,56,0
+struct._STARTUPINFOA.hppStdOutput=HANDLE,60,0
+struct._STARTUPINFOA.hppStdError=HANDLE,64,0
 
 STARTUPINFOA=typedef
 typedef.STARTUPINFOA=struct _STARTUPINFOA
@@ -60,9 +60,9 @@ struct._STARTUPINFOW.dwFlags=DWORD,44,0
 struct._STARTUPINFOW.wShowWindow=WORD,48,0
 struct._STARTUPINFOW.cbReserved2=WORD,50,0
 struct._STARTUPINFOW.lpReserved2=LPBYTE,52,0
-struct._STARTUPINFOW.hStdInput=HANDLE,56,0
-struct._STARTUPINFOW.hStdOutput=HANDLE,60,0
-struct._STARTUPINFOW.hStdError=HANDLE,64,0
+struct._STARTUPINFOW.hppStdInput=HANDLE,56,0
+struct._STARTUPINFOW.hppStdOutput=HANDLE,60,0
+struct._STARTUPINFOW.hppStdError=HANDLE,64,0
 
 STARTUPINFOW=typedef
 typedef.STARTUPINFOW=struct _STARTUPINFOW

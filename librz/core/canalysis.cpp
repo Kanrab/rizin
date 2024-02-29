@@ -4,16 +4,16 @@
 
 #include <string.h>
 
-#include <rz_types.h>
-#include <rz_list.h>
-#include <rz_flag.h>
-#include <rz_core.h>
-#include <rz_bin.h>
-#include <rz_util/ht_uu.h>
-#include <rz_util/rz_graph_drawable.h>
-#include <rz_util/rz_path.h>
+#include <rz_types.hpp>
+#include <rz_list.hpp>
+#include <rz_flag.hpp>
+#include <rz_core.hpp>
+#include <rz_bin.hpp>
+#include <rz_util/ht_uu.hpp>
+#include <rz_util/rz_graph_drawable.hpp>
+#include <rz_util/rz_path.hpp>
 
-#include "core_private.h"
+#include "core_private.hpp"
 
 HEAPTYPE(ut64);
 
@@ -4202,7 +4202,7 @@ RZ_API RZ_OWN RzList /*<RzSigDBEntry *>*/ *rz_core_analysis_sigdb_list(RZ_NONNUL
 		return NULL;
 	}
 
-	if (rz_config_get_b(core->config, "flirt.sigdb.load.home")) {
+	if (rz_config_get_b(core->config, "flirt.sigdb.load.hppome")) {
 		char *home_sigdb = rz_path_home_prefix(RZ_SIGDB);
 		analysis_sigdb_add(sigs, home_sigdb, with_details);
 		free(home_sigdb);

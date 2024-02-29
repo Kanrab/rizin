@@ -1,14 +1,14 @@
 // SPDX-FileCopyrightText: 2011-2013 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "rz_io.h"
-#include "rz_lib.h"
+#include "rz_io.hpp"
+#include "rz_lib.hpp"
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
 #undef RZ_API
 #define RZ_API static inline
-#include "../debug/p/bfvm.h"
+#include "../debug/p/bfvm.hpp"
 #include "../debug/p/bfvm.c"
 
 typedef struct {

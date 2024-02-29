@@ -49,8 +49,8 @@
 #define HT_NULL_VALUE  0
 #endif
 
-#include "ls.h"
-#include <rz_types.h>
+#include "ls.hpp"
+#include <rz_types.hpp>
 
 /* Kv represents a single key/value element in the hashtable */
 typedef struct Ht_(kv) {

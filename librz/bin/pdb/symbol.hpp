@@ -4,9 +4,9 @@
 #ifndef RIZIN_SYMBOL_H
 #define RIZIN_SYMBOL_H
 
-#include "symbol_enum.h"
-#include <rz_util/rz_buf.h>
-#include <rz_pdb.h>
+#include "symbol_enum.hpp"
+#include <rz_util/rz_buf.hpp>
+#include <rz_pdb.hpp>
 
 RZ_IPI bool PDBSectionOffset_parse(RzBuffer *b, PDBSectionOffset *section_offset);
 

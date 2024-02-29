@@ -4,8 +4,8 @@
 #ifndef _INCLUDE_ARMASS_H_
 #define _INCLUDE_ARMASS_H_
 
-#include <rz_types_base.h>
-#include "../arch/arm/aarch64_meta_macros.h"
+#include <rz_types_base.hpp>
+#include "../arch/arm/aarch64_meta_macros.hpp"
 
 int armass_assemble(const char *str, ut64 off, int thumb);
 

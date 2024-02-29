@@ -1,4 +1,4 @@
-### winldap.h ###
+### winldap.hpp ###
 
 LdapGetLastError=func
 func.LdapGetLastError.args=0

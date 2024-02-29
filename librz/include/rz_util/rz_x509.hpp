@@ -1,8 +1,8 @@
 #ifndef RZ_X509_H
 #define RZ_X509_H
 
-#include <rz_util/rz_asn1.h>
-#include <rz_util/rz_pj.h>
+#include <rz_util/rz_asn1.hpp>
+#include <rz_util/rz_pj.hpp>
 
 #ifdef __cplusplus
 extern "C" {

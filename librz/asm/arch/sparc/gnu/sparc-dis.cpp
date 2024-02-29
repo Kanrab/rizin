@@ -26,11 +26,11 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "sysdep.h"
-#include "opcode/sparc.h"
-#include "disas-asm.h"
+#include "sysdep.hpp"
+#include "opcode/sparc.hpp"
+#include "disas-asm.hpp"
 #ifndef _MSC_VER
-#include "libiberty.h"
+#include "libiberty.hpp"
 #else
 #include <stdlib.h>
 #define XNEWVEC(T, N)		((T *) malloc (sizeof (T) * (N)))
@@ -38,7 +38,7 @@
 #define XNEW(T)			((T *) malloc (sizeof (T)))
 #define xmalloc malloc
 #endif
-#include "opintl.h"
+#include "opintl.hpp"
 
 /* Bitmask of v9 architectures.  */
 #define MASK_V9 ((1 << SPARC_OPCODE_ARCH_V9) \
@@ -294,7 +294,7 @@ compare_opcodes (const void * a, const void * b)
       fprintf
 	(stderr,
 	 /* xgettext:c-format */
-	 _("Internal error:  bad sparc-opcode.h: \"%s\", %#.8lx, %#.8lx\n"),
+	 _("Internal error:  bad sparc-opcode.hpp: \"%s\", %#.8lx, %#.8lx\n"),
 	 op0->name, match0, lose0);
       op0->lose &= ~op0->match;
       lose0 = op0->lose;
@@ -305,7 +305,7 @@ compare_opcodes (const void * a, const void * b)
       fprintf
 	(stderr,
 	 /* xgettext:c-format */
-	 _("Internal error: bad sparc-opcode.h: \"%s\", %#.8lx, %#.8lx\n"),
+	 _("Internal error: bad sparc-opcode.hpp: \"%s\", %#.8lx, %#.8lx\n"),
 	 op1->name, match1, lose1);
       op1->lose &= ~op1->match;
       lose1 = op1->lose;
@@ -358,7 +358,7 @@ compare_opcodes (const void * a, const void * b)
 	  } else {
 		  fprintf (stderr,
 			  /* xgettext:c-format */
-			  _ ("Internal error: bad sparc-opcode.h: \"%s\" == \"%s\"\n"),
+			  _ ("Internal error: bad sparc-opcode.hpp: \"%s\" == \"%s\"\n"),
 			  op0->name, op1->name);
 	  }
     }

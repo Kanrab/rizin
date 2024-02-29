@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2021 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_hash.h>
-#include <rz_util/rz_assert.h>
+#include <rz_hash.hpp>
+#include <rz_util/rz_assert.hpp>
 
-#include "../algorithms/crc/crca.h"
+#include "../algorithms/crc/crca.hpp"
 
 #define plugin_crca_preset_context_new(crcalgo, preset) \
 	static void *plugin_crca_##crcalgo##_context_new() { \

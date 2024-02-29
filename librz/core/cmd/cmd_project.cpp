@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2009-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_project.h>
+#include <rz_project.hpp>
 
 RZ_IPI RzCmdStatus rz_project_save_handler(RzCore *core, int argc, const char **argv) {
 	const char *file;

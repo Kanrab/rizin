@@ -1,4 +1,4 @@
-/*	$OpenBSD: names.h,v 1.8 2009/04/24 18:54:34 chl Exp $ */
+/*	$OpenBSD: names.hpp,v 1.8 2009/04/24 18:54:34 chl Exp $ */
 /*
  * Copyright (c) Ian F. Darwin 1986-1995.
  * Software written by Ian F. Darwin and others;
@@ -27,13 +27,13 @@
  * SUCH DAMAGE.
  */
 /*
- * Names.h - names and types used by ascmagic in file(1).
+ * Names.hpp - names and types used by ascmagic in file(1).
  * These tokens are here because they can appear anywhere in
  * the first HOWMANY bytes, while tokens in MAGIC must
  * appear at fixed offsets into the file. Don't make HOWMANY
  * too high unless you have a very fast CPU.
  *
- * $Id: names.h,v 1.8 2009/04/24 18:54:34 chl Exp $
+ * $Id: names.hpp,v 1.8 2009/04/24 18:54:34 chl Exp $
  */
 
 /*
@@ -81,7 +81,7 @@ static const struct {
 	{ "BCPL program", "text/x-bcpl" },
 	{ "M4 macro language pre-processor", "text/x-m4" },
 	{ "PO (gettext message catalogue)", "text/x-po" },
-	{ "cannot happen error on names.h/types", "error/x-error" }
+	{ "cannot happen error on names.hpp/types", "error/x-error" }
 };
 
 /*
@@ -104,7 +104,7 @@ static const struct {
  * Unfortunately, Ada95 uses "package", and Modula-3 uses "import",
  * although I infer from the language spec at
  *
- *	http://www.research.digital.com/SRC/m3defn/html/m3.html
+ *	http://www.research.digital.com/SRC/m3defn/html/m3.hpptml
  *
  * that Modula-3 uses "IMPORT" rather than "import", i.e. it must be
  * in all caps.

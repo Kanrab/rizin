@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: 2009-2021 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
+#include <rz_core.hpp>
 #include <stdlib.h>
 #include <string.h>
-#include "core_private.h"
-#include "core_private_base.h"
+#include "core_private.hpp"
+#include "core_private_base.hpp"
 
 static bool core_file_do_load_for_debug(RzCore *r, ut64 baseaddr, const char *filenameuri);
 static bool core_file_do_load_for_io_plugin(RzCore *r, ut64 baseaddr, ut64 loadaddr);

@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2022 GustavoLCR <gugulcr@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_debug.h>
-#include <mdmp_windefs.h>
-#include <librz/bin/format/pe/pe64.h>
+#include <rz_debug.hpp>
+#include <mdmp_windefs.hpp>
+#include <librz/bin/format/pe/pe64.hpp>
 
 // the original PE64_UNWIND_CODE is a union
 typedef struct windows_x64_unwind_code_t {

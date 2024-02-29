@@ -49,7 +49,7 @@ d "st 1, [0x1044230]" 017e1f102f420401
 d "st.a r4, [r3, 4]" 04880111
 d "stb.a r4, [r3, 1]" 01884111
 d "sub sp, sp, 0x34" 347e8e53
-d "sub.hi r0, r0, r0" 0d000050
+d "sub.hppi r0, r0, r0" 0d000050
 d "sub.nz r0, r0, r14" 021c0050
 d "swi " 02feff1f
 d "xor r10, blink, sp" 00b84f79

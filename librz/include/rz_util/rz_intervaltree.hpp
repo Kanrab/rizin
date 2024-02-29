@@ -4,8 +4,8 @@
 #ifndef RZ_INTERVALTREE_H
 #define RZ_INTERVALTREE_H
 
-#include "rz_rbtree.h"
-#include "../rz_types.h"
+#include "rz_rbtree.hpp"
+#include "../rz_types.hpp"
 
 /*
  * RzIntervalTree is a special RBTree (augmented red-black tree)

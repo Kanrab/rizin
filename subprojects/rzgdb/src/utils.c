@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2014 defragger <rlaemmert@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "rz_types.h"
-#include "rz_util.h"
-#include "utils.h"
+#include "rz_types.hpp"
+#include "rz_util.hpp"
+#include "utils.hpp"
 
 // XXX: most of those functions are already implemented in rz_util. reuse!
 

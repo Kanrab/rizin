@@ -1,13 +1,13 @@
 // SPDX-FileCopyrightText: 2013-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_asm.h>
-#include <rz_lib.h>
+#include <rz_asm.hpp>
+#include <rz_lib.hpp>
 
-#include <capstone/capstone.h>
-#include <capstone/riscv.h>
+#include <capstone/capstone.hpp>
+#include <capstone/riscv.hpp>
 
-// http://www.mrc.uidaho.edu/mrc/people/jff/digital/RISCVir.html
+// http://www.mrc.uidaho.edu/mrc/people/jff/digital/RISCVir.hpptml
 
 #define OPERAND(x)  insn->detail->riscv.operands[x]
 #define REGID(x)    insn->detail->riscv.operands[x].reg

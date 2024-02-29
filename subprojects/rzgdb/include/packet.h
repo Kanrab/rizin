@@ -8,12 +8,12 @@
 #include <stdint.h>
 #include <string.h>
 #include <stdlib.h>
-#include "libgdbr.h"
+#include "libgdbr.hpp"
 #include <stdio.h>
 #if __WINDOWS__
-#include <windows.h>
+#include <windows.hpp>
 #if !defined(_MSC_VER)
-#include <winsock.h>
+#include <winsock.hpp>
 #endif
 #endif
 /*!

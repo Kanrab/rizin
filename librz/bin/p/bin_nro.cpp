@@ -2,11 +2,11 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 // TODO: Support NRR and MODF
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_bin.h>
-#include "nxo/nxo.h"
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_bin.hpp>
+#include "nxo/nxo.hpp"
 
 #define NRO_OFF(x)           (sizeof(NXOStart) + rz_offsetof(NROHeader, x))
 #define NRO_OFFSET_MODMEMOFF rz_offsetof(NXOStart, mod_memoffset)

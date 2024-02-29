@@ -1,4 +1,4 @@
-/* include/jemalloc/internal/jemalloc_internal_defs.h.  Generated from jemalloc_internal_defs.h.in by configure.  */
+/* include/jemalloc/internal/jemalloc_internal_defs.hpp.  Generated from jemalloc_internal_defs.h.in by configure.  */
 #ifndef JEMALLOC_INTERNAL_DEFS_H_
 #define	JEMALLOC_INTERNAL_DEFS_H_
 /*
@@ -214,13 +214,13 @@
 
 /*
  * Used to mark unreachable code to quiet "end of non-void" compiler warnings.
- * Don't use this directly; instead use unreachable() from util.h
+ * Don't use this directly; instead use unreachable() from util.hpp
  */
 #define JEMALLOC_INTERNAL_UNREACHABLE __builtin_unreachable
 
 /*
  * ffs*() functions to use for bitmapping.  Don't use these directly; instead,
- * use ffs_*() from util.h.
+ * use ffs_*() from util.hpp.
  */
 #define JEMALLOC_INTERNAL_FFSLL __builtin_ffsll
 #define JEMALLOC_INTERNAL_FFSL __builtin_ffsl
@@ -276,7 +276,7 @@
 /* Defined if transparent huge page support is enabled. */
 #define JEMALLOC_THP 
 
-/* Define if operating system has alloca.h header. */
+/* Define if operating system has alloca.hpp header. */
 #define JEMALLOC_HAS_ALLOCA_H 1
 
 /* C99 restrict keyword supported. */

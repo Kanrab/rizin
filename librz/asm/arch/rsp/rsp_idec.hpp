@@ -3,7 +3,7 @@
 #ifndef RZ_ASM_ARCH_RSP_RSP_IDEC_H
 #define RZ_ASM_ARCH_RSP_RSP_IDEC_H
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 extern const char *rsp_gp_reg_soft_names[];
 extern const char *rsp_c0_reg_soft_names[];

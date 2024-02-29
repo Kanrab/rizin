@@ -1,4 +1,4 @@
-### libloaderapi.h ###
+### libloaderapi.hpp ###
 
 ENUMRESNAMEPROCA=type
 type.ENUMRESNAMEPROCA=p

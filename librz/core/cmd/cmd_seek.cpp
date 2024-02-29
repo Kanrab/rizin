@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: 2009-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "rz_types.h"
-#include "rz_config.h"
-#include "rz_cons.h"
-#include "rz_core.h"
-#include "rz_debug.h"
-#include "rz_io.h"
+#include "rz_types.hpp"
+#include "rz_config.hpp"
+#include "rz_cons.hpp"
+#include "rz_core.hpp"
+#include "rz_debug.hpp"
+#include "rz_io.hpp"
 
 static void printPadded(RzCore *core, int pad) {
 	if (pad < 1) {

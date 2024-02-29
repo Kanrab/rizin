@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2023 Riccardo Schirone <sirmy15@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_crypto.h>
-#include "minunit.h"
+#include <rz_crypto.hpp>
+#include "minunit.hpp"
 
 bool test_use(void) {
 	RzCrypto *cry = rz_crypto_new();

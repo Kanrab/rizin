@@ -62,10 +62,10 @@ where a command could be registered together with all the information associated
 with it, like help messages, description, etc..
 
 The module
-[`RzCmd`](https://github.com/rizinorg/rizin/blob/6f40dfe493f0caf9e0541e1ee83e3d8012b5750f/librz/include/rz_cmd.h)
+[`RzCmd`](https://github.com/rizinorg/rizin/blob/6f40dfe493f0caf9e0541e1ee83e3d8012b5750f/librz/include/rz_cmd.hpp)
 is the one in charge of dealing with commands. It provides API to register a new
 "command descriptor" (called
-[`RzCmdDesc`](https://github.com/rizinorg/rizin/blob/6f40dfe493f0caf9e0541e1ee83e3d8012b5750f/librz/include/rz_cmd.h#L388)),
+[`RzCmdDesc`](https://github.com/rizinorg/rizin/blob/6f40dfe493f0caf9e0541e1ee83e3d8012b5750f/librz/include/rz_cmd.hpp#L388)),
 deregister it, call the right command descriptor handler based on a list of
 command name + arguments, get the help of a command and potentially do many
 other things.
@@ -93,7 +93,7 @@ so it should be simple to see where to place it. If we want to place it under th
 
 Now we need to choose what kind of command (`type` field in YAML) we want to
 have. We can see the various types in the
-[`RzCmdDescType`](https://github.com/rizinorg/rizin/blob/6f40dfe493f0caf9e0541e1ee83e3d8012b5750f/librz/include/rz_cmd.h#L326-L380)
+[`RzCmdDescType`](https://github.com/rizinorg/rizin/blob/6f40dfe493f0caf9e0541e1ee83e3d8012b5750f/librz/include/rz_cmd.hpp#L326-L380)
 enum, however let's assume we want a regular command, which is the default
 one, so no action is required in this regard.
 
@@ -134,7 +134,7 @@ RZ_IPI RzCmdStatus rz_sky_handler(RzCore *core, int argc, const char **argv) {
 ```
 
 The YAML file is used at built-time (by meson only) to autogenerate two
-files: `cmd_descs.c` and `cmd_descs.h`.
+files: `cmd_descs.c` and `cmd_descs.hpp`.
 
 ## Where is the handler of command `x`?
 

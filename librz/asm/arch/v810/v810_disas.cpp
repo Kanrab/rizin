@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2015 danielps
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
 
-#include "v810_disas.h"
+#include "v810_disas.hpp"
 
 static const char *instrs[] = {
 	[V810_MOV] = "mov",
@@ -38,17 +38,17 @@ static const char *instrs[] = {
 	[V810_JR] = "jr",
 	[V810_JAL] = "jal",
 	[V810_LDB] = "ld.b",
-	[V810_LDH] = "ld.h",
+	[V810_LDH] = "ld.hpp",
 	[V810_LDW] = "ld.w",
 	[V810_STB] = "st.b",
-	[V810_STH] = "st.h",
+	[V810_STH] = "st.hpp",
 	[V810_STW] = "st.w",
 	[V810_INB] = "in.b",
-	[V810_INH] = "in.h",
+	[V810_INH] = "in.hpp",
 	[V810_CAXI] = "caxi",
 	[V810_INW] = "in.w",
 	[V810_OUTB] = "out.b",
-	[V810_OUTH] = "out.h",
+	[V810_OUTH] = "out.hpp",
 	[V810_OUTW] = "out.w",
 	[V810_SETF] = "setf",
 	[V810_LDSR] = "ldsr",

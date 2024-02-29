@@ -1,4 +1,4 @@
-### shlwapi.h ###
+### shlwapi.hpp ###
 
 AssocCreate=func
 func.AssocCreate.args=3
@@ -152,12 +152,12 @@ func.GetProcessReference.arg.0=IUnknown **,punk
 func.GetProcessReference.ret=HRESULT
 
 HashData=func
-func.HashData.args=4
-func.HashData.arg.0=BYTE *,pbData
-func.HashData.arg.1=DWORD,cbData
-func.HashData.arg.2=BYTE *,pbHash
-func.HashData.arg.3=DWORD,cbHash
-func.HashData.ret=HRESULT
+func.hashData.args=4
+func.hashData.arg.0=BYTE *,pbData
+func.hashData.arg.1=DWORD,cbData
+func.hashData.arg.2=BYTE *,pbHash
+func.hashData.arg.3=DWORD,cbHash
+func.hashData.ret=HRESULT
 
 IStream_Copy=func
 func.IStream_Copy.args=3

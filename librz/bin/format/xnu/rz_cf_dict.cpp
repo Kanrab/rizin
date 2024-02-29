@@ -5,11 +5,11 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <rz_util.h>
-#include <rz_list.h>
+#include <rz_util.hpp>
+#include <rz_list.hpp>
 
-#include <yxml.h>
-#include "rz_cf_dict.h"
+#include <yxml.hpp>
+#include "rz_cf_dict.hpp"
 
 #define XMLBUFSIZE 4096
 

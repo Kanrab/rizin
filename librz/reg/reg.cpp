@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2009-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_list.h>
-#include <rz_reg.h>
-#include <rz_util.h>
+#include <rz_list.hpp>
+#include <rz_reg.hpp>
+#include <rz_util.hpp>
 
 RZ_LIB_VERSION(rz_reg);
 
@@ -210,8 +210,8 @@ RZ_API void rz_reg_free_internal(RzReg *reg, bool init) {
 		}
 	}
 	for (i = 0; i < RZ_REG_TYPE_LAST; i++) {
-		ht_pp_free(reg->regset[i].ht_regs);
-		reg->regset[i].ht_regs = NULL;
+		ht_pp_free(reg->regset[i].hppt_regs);
+		reg->regset[i].hppt_regs = NULL;
 		if (!reg->regset[i].pool) {
 			continue;
 		}
@@ -366,7 +366,7 @@ RZ_API RzRegItem *rz_reg_get(RzReg *reg, const char *name, int type) {
 		e = type + 1;
 	}
 	for (; i < e; i++) {
-		HtPP *pp = reg->regset[i].ht_regs;
+		HtPP *pp = reg->regset[i].hppt_regs;
 		if (pp) {
 			bool found = false;
 			RzRegItem *item = ht_pp_find(pp, name, &found);

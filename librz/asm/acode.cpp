@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <stdio.h>
-#include <rz_asm.h>
+#include <rz_asm.hpp>
 
 RZ_API RzAsmCode *rz_asm_code_new(void) {
 	return RZ_NEW0(RzAsmCode);

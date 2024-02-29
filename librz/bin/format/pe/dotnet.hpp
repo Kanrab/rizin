@@ -2,8 +2,8 @@
 // SPDX-FileCopyrightText: 2022 wingdeans <wingdeans@protonmail.com>
 // SPDX-License-Identifier: Apache-2.0
 
-#include <rz_types.h>
-#include <rz_vector.h>
+#include <rz_types.hpp>
+#include <rz_vector.hpp>
 
 #ifndef _INCLUDE_RZ_BIN_DOTNET_H_
 #define _INCLUDE_RZ_BIN_DOTNET_H_

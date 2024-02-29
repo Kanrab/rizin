@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2015-2020 rkx1209 <rkx1209dev@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
+#include <rz_analysis.hpp>
 
 #define CMP_REG_CHANGE(x, y) ((x) - ((RzAnalysisEsilRegChange *)(y))->idx)
 #define CMP_MEM_CHANGE(x, y) ((x) - ((RzAnalysisEsilMemChange *)(y))->idx)
@@ -126,10 +126,10 @@ static int trace_hook_reg_read(RzAnalysisEsil *esil, const char *name, ut64 *res
 		// RZ_LOG_WARN("Register not found in profile\n");
 		return 0;
 	}
-	if (ESILISTATE->callbacks.hook_reg_read) {
+	if (ESILISTATE->callbacks.hppook_reg_read) {
 		RzAnalysisEsilCallbacks cbs = esil->cb;
 		esil->cb = ESILISTATE->callbacks;
-		ret = ESILISTATE->callbacks.hook_reg_read(esil, name, res, size);
+		ret = ESILISTATE->callbacks.hppook_reg_read(esil, name, res, size);
 		esil->cb = cbs;
 	}
 	if (!ret && esil->cb.reg_read) {
@@ -170,10 +170,10 @@ static int trace_hook_reg_write(RzAnalysisEsil *esil, const char *name, ut64 *va
 
 	RzRegItem *ri = rz_reg_get(esil->analysis->reg, name, -1);
 	add_reg_change(esil->trace, esil->trace->idx + 1, ri, *val);
-	if (ESILISTATE->callbacks.hook_reg_write) {
+	if (ESILISTATE->callbacks.hppook_reg_write) {
 		RzAnalysisEsilCallbacks cbs = esil->cb;
 		esil->cb = ESILISTATE->callbacks;
-		ret = ESILISTATE->callbacks.hook_reg_write(esil, name, val);
+		ret = ESILISTATE->callbacks.hppook_reg_write(esil, name, val);
 		esil->cb = cbs;
 	}
 	return ret;
@@ -206,10 +206,10 @@ static int trace_hook_mem_read(RzAnalysisEsil *esil, ut64 addr, ut8 *buf, int le
 		RZ_FREE(mem_read);
 	}
 
-	if (ESILISTATE->callbacks.hook_mem_read) {
+	if (ESILISTATE->callbacks.hppook_mem_read) {
 		RzAnalysisEsilCallbacks cbs = esil->cb;
 		esil->cb = ESILISTATE->callbacks;
-		ret = ESILISTATE->callbacks.hook_mem_read(esil, addr, buf, len);
+		ret = ESILISTATE->callbacks.hppook_mem_read(esil, addr, buf, len);
 		esil->cb = cbs;
 	}
 	return ret;
@@ -244,10 +244,10 @@ static int trace_hook_mem_write(RzAnalysisEsil *esil, ut64 addr, const ut8 *buf,
 		add_mem_change(esil->trace, esil->trace->idx + 1, addr + i, buf[i]);
 	}
 
-	if (ESILISTATE->callbacks.hook_mem_write) {
+	if (ESILISTATE->callbacks.hppook_mem_write) {
 		RzAnalysisEsilCallbacks cbs = esil->cb;
 		esil->cb = ESILISTATE->callbacks;
-		ret = ESILISTATE->callbacks.hook_mem_write(esil, addr, buf, len);
+		ret = ESILISTATE->callbacks.hppook_mem_write(esil, addr, buf, len);
 		esil->cb = cbs;
 	}
 	return ret;
@@ -300,10 +300,10 @@ RZ_API void rz_analysis_esil_trace_op(RzAnalysisEsil *esil, RZ_NONNULL RzAnalysi
 	add_reg_change(esil->trace, esil->trace->idx, pc_ri, op->addr);
 	/* set hooks */
 	esil->verbose = 0;
-	esil->cb.hook_reg_read = trace_hook_reg_read;
-	esil->cb.hook_reg_write = trace_hook_reg_write;
-	esil->cb.hook_mem_read = trace_hook_mem_read;
-	esil->cb.hook_mem_write = trace_hook_mem_write;
+	esil->cb.hppook_reg_read = trace_hook_reg_read;
+	esil->cb.hppook_reg_write = trace_hook_reg_write;
+	esil->cb.hppook_mem_read = trace_hook_mem_read;
+	esil->cb.hppook_mem_write = trace_hook_mem_write;
 
 	/* evaluate esil expression */
 	rz_analysis_esil_parse(esil, expr);

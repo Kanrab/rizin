@@ -1,14 +1,14 @@
 // SPDX-FileCopyrightText: 2015-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_lib.h>
-#include <rz_core.h>
-#include <rz_lang.h>
+#include <rz_lib.hpp>
+#include <rz_core.hpp>
+#include <rz_lang.hpp>
 #if __WINDOWS__
-#include <windows.h>
+#include <windows.hpp>
 #endif
 #ifdef _MSC_VER
-#include <process.h>
+#include <process.hpp>
 #endif
 
 #if __WINDOWS__
@@ -18,15 +18,15 @@ static HANDLE myCreateChildProcess(const char *szCmdline) {
 	BOOL bSuccess = FALSE;
 	siStartInfo.cb = sizeof(STARTUPINFO);
 	siStartInfo.dwFlags |= STARTF_USESTDHANDLES;
-	siStartInfo.hStdInput = GetStdHandle(STD_INPUT_HANDLE);
-	siStartInfo.hStdOutput = GetStdHandle(STD_OUTPUT_HANDLE);
-	siStartInfo.hStdError = GetStdHandle(STD_ERROR_HANDLE);
+	siStartInfo.hppStdInput = GetStdHandle(STD_INPUT_HANDLE);
+	siStartInfo.hppStdOutput = GetStdHandle(STD_OUTPUT_HANDLE);
+	siStartInfo.hppStdError = GetStdHandle(STD_ERROR_HANDLE);
 
 	LPTSTR cmdline_ = rz_sys_conv_utf8_to_win(szCmdline);
 	bSuccess = CreateProcess(NULL, cmdline_, NULL, NULL,
 		TRUE, 0, NULL, NULL, &siStartInfo, &piProcInfo);
 	free(cmdline_);
-	return bSuccess ? piProcInfo.hProcess : NULL;
+	return bSuccess ? piProcInfo.hppProcess : NULL;
 }
 
 static HANDLE hPipeInOut = NULL;
@@ -56,7 +56,7 @@ static void lang_pipe_run_win(RzLang *lang) {
 			break;
 		}
 		OVERLAPPED oRead = { 0 };
-		oRead.hEvent = hRead;
+		oRead.hppEvent = hRead;
 		memset(buf, 0, PIPE_BUF_SIZE);
 		ReadFile(hPipeInOut, buf, PIPE_BUF_SIZE, NULL, &oRead);
 		HANDLE hReadEvents[] = { hRead, hproc };
@@ -75,7 +75,7 @@ static void lang_pipe_run_win(RzLang *lang) {
 		if (bSuccess && dwRead > 0) {
 			buf[sizeof(buf) - 1] = 0;
 			OVERLAPPED oWrite = { 0 };
-			oWrite.hEvent = hWritten;
+			oWrite.hppEvent = hWritten;
 			char *res = lang->cmd_str((RzCore *)lang->user, buf);
 			if (res) {
 				int res_len = strlen(res) + 1;
@@ -251,7 +251,7 @@ RZ_IPI int lang_pipe_run(RzLang *lang, const char *code, int len) {
 		goto pipe_cleanup;
 	}
 	OVERLAPPED oConnect = { 0 };
-	oConnect.hEvent = hConnected;
+	oConnect.hppEvent = hConnected;
 	hproc = myCreateChildProcess(code);
 	BOOL connected = FALSE;
 	if (hproc) {

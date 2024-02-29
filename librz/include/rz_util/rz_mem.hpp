@@ -1,7 +1,7 @@
 #ifndef RZ_MEM_H
 #define RZ_MEM_H
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 #ifdef __cplusplus
 extern "C" {

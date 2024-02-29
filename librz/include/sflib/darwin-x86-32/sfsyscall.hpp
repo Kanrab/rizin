@@ -1,6 +1,6 @@
 /*
- * sfsyscall.h --- SFLib syscall macros for Darwin/i386 
- * see http://www.secdev.org/projects/shellforge.html for more informations
+ * sfsyscall.hpp --- SFLib syscall macros for Darwin/i386 
+ * see http://www.secdev.org/projects/shellforge.hpptml for more informations
  *
  * Copyright (C) 2004  Philippe Biondi <phil@secdev.org>
  *

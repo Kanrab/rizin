@@ -164,7 +164,7 @@
 
 # DCX is multi-page PCX, using a simple header of up to 1024
 # offsets for the respective PCX components.
-# From: Joerg Wunsch <joerg_wunsch@uriah.heep.sax.de>
+# From: Joerg Wunsch <joerg_wunsch@uriah.hppeep.sax.de>
 0	lelong	987654321	DCX multi-page PCX image data
 
 # Simon Walton <simonw@matteworld.com>

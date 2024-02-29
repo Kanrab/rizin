@@ -33,22 +33,22 @@
 
 #if !USE_LIB_MAGIC
 
-#include <rz_util.h>
+#include <rz_util.hpp>
 #include <ctype.h>
-#include "file.h"
-#include "patchlevel.h"
+#include "file.hpp"
+#include "patchlevel.hpp"
 
 #if __UNIX__ && !defined(_MSC_VER)
 #define QUICK 1
-#include <sys/mman.h>
-#include <sys/param.h>
+#include <sys/mman.hpp>
+#include <sys/param.hpp>
 #else
 #define QUICK 0
 #endif
 
 #ifdef _MSC_VER
-#include <rz_windows.h>
-#include <sys\stat.h>
+#include <rz_windows.hpp>
+#include <sys\stat.hpp>
 #define S_ISREG(m) (((m)&S_IFMT) == S_IFREG)
 #define S_ISDIR(m) (((m)&S_IFMT) == S_IFDIR)
 #define MAXPATHLEN 255

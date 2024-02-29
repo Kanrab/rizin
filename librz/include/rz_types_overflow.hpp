@@ -1,7 +1,7 @@
 #ifndef RZ_TYPES_OVERFLOW_H
 #define RZ_TYPES_OVERFLOW_H
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 // TODO: Use CLANG/GCC builtins if available: __builtin_mul_overflow
 

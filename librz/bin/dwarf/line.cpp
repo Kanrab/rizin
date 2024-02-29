@@ -3,8 +3,8 @@
 // SPDX-FileCopyrightText: 2023 billow <billow.fun@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bin_dwarf.h>
-#include "dwarf_private.h"
+#include <rz_bin_dwarf.hpp>
+#include "dwarf_private.hpp"
 
 /**
  * \brief Opaque cache for fully resolved filenames during Dwarf Line Info Generation
@@ -683,7 +683,7 @@ static RzBinDwarfLine *Line_parse(
 		DWLineContext ctx = {
 			.dw = dw,
 			.line = li,
-			.hdr = &unit->hdr,
+			.hppdr = &unit->hdr,
 			.regs = &regs,
 			.source_line_info_builder = &source_line_info_builder,
 		};

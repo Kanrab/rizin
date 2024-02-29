@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: 2017-2018 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include <rz_cons.h>
+#include <rz_util.hpp>
+#include <rz_cons.hpp>
 #include <stdlib.h>
 #include <string.h>
-#include "./x509.h"
+#include "./x509.hpp"
 
 static bool rz_x509_validity_parse(RzX509Validity *validity, RzASN1Object *object) {
 	RzASN1Object *o;

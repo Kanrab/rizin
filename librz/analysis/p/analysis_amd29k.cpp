@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2019 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
-#include <rz_lib.h>
-#include "../../asm/arch/amd29k/amd29k.h"
+#include <rz_analysis.hpp>
+#include <rz_lib.hpp>
+#include "../../asm/arch/amd29k/amd29k.hpp"
 
 static char *get_reg_profile(RzAnalysis *analysis) {
 	const char *p =

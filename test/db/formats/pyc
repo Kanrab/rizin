@@ -366,7 +366,7 @@ CMDS=<<EOF
 is~hello_world
 EOF
 EXPECT=<<EOF
-1   0x00000052 0x00000052 NONE FUNC 9        <module>.hello_world
+1   0x00000052 0x00000052 NONE FUNC 9        <module>.hppello_world
 EOF
 REGEXP_FILTER_ERR=<<EOF
 free_object\s\(0\)

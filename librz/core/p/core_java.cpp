@@ -1,16 +1,16 @@
 // SPDX-FileCopyrightText: 2021 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_lib.h>
-#include <rz_demangler.h>
-#include <rz_cmd.h>
-#include <rz_core.h>
-#include <rz_cons.h>
+#include <rz_types.hpp>
+#include <rz_lib.hpp>
+#include <rz_demangler.hpp>
+#include <rz_cmd.hpp>
+#include <rz_core.hpp>
+#include <rz_cons.hpp>
 #include <string.h>
-#include <rz_analysis.h>
+#include <rz_analysis.hpp>
 
-#include "../format/java/class_bin.h"
+#include "../format/java/class_bin.hpp"
 
 #define name_args(name)    (cmd_##name##_args)
 #define name_help(name)    (cmd_##name##_help)

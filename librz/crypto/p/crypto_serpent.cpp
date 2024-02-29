@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2017 NicsTr <nicolas.bordes@grenoble-inp.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_lib.h>
-#include <rz_crypto.h>
-#include "crypto_serpent_algo.h"
+#include <rz_lib.hpp>
+#include <rz_crypto.hpp>
+#include "crypto_serpent_algo.hpp"
 
 static bool serpent_set_key(RzCrypto *cry, const ut8 *key, int keylen, int mode, int direction) {
 	rz_return_val_if_fail(cry->user && key, false);

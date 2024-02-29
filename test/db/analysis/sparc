@@ -196,11 +196,11 @@ EXPECT=<<EOF
 0x0001eb64  181 3004         sym._getopt_internal_r
 0x0001f720    1 116          sym._getopt_internal
 0x0001f7c4    1 44           sym.rpl_getopt_long
-0x0001f8d0   10 184          sym.hard_locale
+0x0001f8d0   10 184          sym.hppard_locale
 0x0001f998    1 8            sym.hash_get_n_entries
 0x0001ff34   27 480          sym.hash_initialize
 0x000201f0   26 324          sym.hash_free
-0x00021a50   26 416  -> 396  sym.human_options
+0x00021a50   26 416  -> 396  sym.hppuman_options
 0x00022250    8 224          sym._obstack_begin
 0x00022414   23 408          sym._obstack_newchunk
 0x00022768    1 700          sym.quote

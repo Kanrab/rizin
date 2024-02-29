@@ -1,11 +1,11 @@
 #ifndef RZ_REG_H
 #define RZ_REG_H
 
-#include <rz_types.h>
-#include <rz_list.h>
-#include <rz_util/rz_hex.h>
-#include <rz_util/rz_bitvector.h>
-#include <rz_util/rz_assert.h>
+#include <rz_types.hpp>
+#include <rz_list.hpp>
+#include <rz_util/rz_hex.hpp>
+#include <rz_util/rz_bitvector.hpp>
+#include <rz_util/rz_assert.hpp>
 
 #ifdef __cplusplus
 extern "C" {

@@ -24,7 +24,7 @@
 #ifndef XTENSA_LIBISA_H
 #define XTENSA_LIBISA_H
 
-#include "rz_types.h"
+#include "rz_types.hpp"
 
 #ifdef __cplusplus
 extern "C" {

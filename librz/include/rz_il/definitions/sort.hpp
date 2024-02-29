@@ -4,8 +4,8 @@
 #ifndef RZ_IL_SORT_H
 #define RZ_IL_SORT_H
 
-#include <rz_types.h>
-#include <rz_util/rz_float.h>
+#include <rz_types.hpp>
+#include <rz_util/rz_float.hpp>
 
 #ifdef __cplusplus
 extern "C" {

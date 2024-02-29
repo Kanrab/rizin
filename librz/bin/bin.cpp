@@ -3,13 +3,13 @@
 // SPDX-FileCopyrightText: 2009-2020 dso <dso@rice.edu>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bin.h>
-#include <rz_demangler.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_io.h>
-#include <config.h>
-#include "i/private.h"
+#include <rz_bin.hpp>
+#include <rz_demangler.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_io.hpp>
+#include <config.hpp>
+#include "i/private.hpp"
 
 RZ_LIB_VERSION(rz_bin);
 

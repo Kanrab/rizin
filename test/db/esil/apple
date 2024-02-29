@@ -17,10 +17,10 @@ EXPECT=<<EOF
 EOF
 RUN
 
-NAME=iphone-arm-esil pdsf scr.html=true
+NAME=iphone-arm-esil pdsf scr.hpptml=true
 FILE=bins/mach0/FileDP
 CMDS=<<EOF
-e scr.html=true
+e scr.hpptml=true
 e asm.flags=false
 s main
 e emu.str=true

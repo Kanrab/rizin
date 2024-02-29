@@ -7,11 +7,11 @@
  * Contains the IL implementations for x86 instructions.
  *
  * References:
- *  - https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html
+ *  - https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.hpptml
  */
 
-#include "common.h"
-#include <rz_il/rz_il_opbuilder_begin.h>
+#include "common.hpp"
+#include <rz_il/rz_il_opbuilder_begin.hpp>
 
 /**
  * ======== INSTRUCTION DOCUMENTATION FORMAT ========
@@ -2518,4 +2518,4 @@ IL_LIFTER(leave) {
 	return SEQ3(set_sp, pop.eff, set_bp);
 }
 
-#include <rz_il/rz_il_opbuilder_end.h>
+#include <rz_il/rz_il_opbuilder_end.hpp>

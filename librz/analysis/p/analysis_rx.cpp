@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: 2024 heersin <teablearcher@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <asm/arch/rx/rx.h>
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_asm.h>
-#include <rz_analysis.h>
+#include <asm/arch/rx/rx.hpp>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_asm.hpp>
+#include <rz_analysis.hpp>
 
 static void calculate_jmp_addr(RxInst *inst, RzAnalysisOp *op) {
 	if (inst->v0.kind == RX_OPERAND_COND) {

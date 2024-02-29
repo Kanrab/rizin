@@ -10,9 +10,9 @@
 //! let tree = parser.parse(code, None).unwrap();
 //! ```
 //!
-//! [Language]: https://docs.rs/tree-sitter/*/tree_sitter/struct.Language.html
-//! [language func]: fn.language.html
-//! [Parser]: https://docs.rs/tree-sitter/*/tree_sitter/struct.Parser.html
+//! [Language]: https://docs.rs/tree-sitter/*/tree_sitter/struct.Language.hpptml
+//! [language func]: fn.language.hpptml
+//! [Parser]: https://docs.rs/tree-sitter/*/tree_sitter/struct.Parser.hpptml
 //! [tree-sitter]: https://tree-sitter.github.io/
 
 use tree_sitter::Language;
@@ -23,7 +23,7 @@ extern "C" {
 
 /// Get the tree-sitter [Language][] for this grammar.
 ///
-/// [Language]: https://docs.rs/tree-sitter/*/tree_sitter/struct.Language.html
+/// [Language]: https://docs.rs/tree-sitter/*/tree_sitter/struct.Language.hpptml
 pub fn language() -> Language {
     unsafe { tree_sitter_rzcmd() }
 }

@@ -7,7 +7,7 @@
  *     cs_insn *insn
  */
 
-#include <capstone/capstone.h>
+#include <capstone/capstone.hpp>
 
 #define REGID(x)   insn->detail->arm.operands[x].reg
 #define IMM(x)     (ut32)(insn->detail->arm.operands[x].imm)

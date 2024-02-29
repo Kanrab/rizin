@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2019 ret2libc <sirmy15@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include "minunit.h"
+#include <rz_util.hpp>
+#include "minunit.hpp"
 
 bool test_space_basic(void) {
 	RzSpaces *sps = rz_spaces_new("spacename");

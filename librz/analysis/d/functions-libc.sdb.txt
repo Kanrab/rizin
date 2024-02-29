@@ -136,14 +136,14 @@ func.user_from_uid.args=2
 func.user_from_uid.arg.0=uid_t,uid
 func.user_from_uid.arg.1=int,nouser
 func.user_from_uid.ret=char*
-func.user_from_uid.include=pwd.h
+func.user_from_uid.include=pwd.hpp
 
 group_from_gid=func
 func.group_from_gid.args=2
 func.group_from_gid.arg.0=gid_t,gid
 func.group_from_gid.arg.1=int,nogroup
 func.group_from_gid.ret=char*
-func.group_from_uid.include=grp.h
+func.group_from_uid.include=grp.hpp
 
 setlocale=func
 func.setlocale.args=2
@@ -1132,22 +1132,22 @@ func.fminl.arg.1=long double,y
 func.fminl.ret=long double
 
 hypot=func
-func.hypot.args=2
-func.hypot.arg.0=double,x
-func.hypot.arg.1=double,y
-func.hypot.ret=double
+func.hppypot.args=2
+func.hppypot.arg.0=double,x
+func.hppypot.arg.1=double,y
+func.hppypot.ret=double
 
 hypotf=func
-func.hypotf.args=2
-func.hypotf.arg.0=float,x
-func.hypotf.arg.1=float,y
-func.hypotf.ret=float
+func.hppypotf.args=2
+func.hppypotf.arg.0=float,x
+func.hppypotf.arg.1=float,y
+func.hppypotf.ret=float
 
 hypotl=func
-func.hypotl.args=2
-func.hypotl.arg.0=long double,x
-func.hypotl.arg.1=long double,y
-func.hypotl.ret=long double
+func.hppypotl.args=2
+func.hppypotl.arg.0=long double,x
+func.hppypotl.arg.1=long double,y
+func.hppypotl.ret=long double
 
 ilogb=func
 func.ilogb.args=1
@@ -2799,14 +2799,14 @@ func.fchmod.arg.1=int,mode
 func.fchmod.ret=int
 
 humanize_number=func
-func.humanize_number.args=1
-func.humanize_number.arg.0=char*,buf
-func.humanize_number.arg.1=size_t,len
-func.humanize_number.arg.2=int64_t,number
-func.humanize_number.arg.3=const char*,suffix
-func.humanize_number.arg.4=int,scale
-func.humanize_number.arg.5=int,flags
-func.humanize_number.ret=int
+func.hppumanize_number.args=1
+func.hppumanize_number.arg.0=char*,buf
+func.hppumanize_number.arg.1=size_t,len
+func.hppumanize_number.arg.2=int64_t,number
+func.hppumanize_number.arg.3=const char*,suffix
+func.hppumanize_number.arg.4=int,scale
+func.hppumanize_number.arg.5=int,flags
+func.hppumanize_number.ret=int
 
 pututxline=func
 func.pututxline.args=1

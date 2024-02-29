@@ -5,13 +5,13 @@ agn title1 body1
 agg k~nodes=
 agg k~nodes.title1.body
 agg k~nodes.title1.w
-agg k~nodes.title1.h
+agg k~nodes.title1.hpp
 EOF
 EXPECT=<<EOF
 agraph.nodes=title1
 agraph.nodes.title1.body=base64:Ym9keTE=
 agraph.nodes.title1.w=0xc
-agraph.nodes.title1.h=0x4
+agraph.nodes.title1.hpp=0x4
 EOF
 RUN
 
@@ -24,18 +24,18 @@ agg k~nodes=
 agg k~nodes.Title with super long text and space.body=
 agg k~nodes.title2.body=
 agg k~nodes.Title with super long text and space.w
-agg k~nodes.Title with super long text and space.h
+agg k~nodes.Title with super long text and space.hpp
 agg k~nodes.title2.w
-agg k~nodes.title2.h
+agg k~nodes.title2.hpp
 EOF
 EXPECT=<<EOF
 agraph.nodes=Title with super long text and space,title2
 agraph.nodes.Title with super long text and space.body=base64:Ym9keTE=
 agraph.nodes.title2.body=base64:U3VwZXJMb25nQm9keVdpdGhBTG90IE9mIHRleHQgYW5kIHNwYWNlcw==
 agraph.nodes.Title with super long text and space.w=0x2a
-agraph.nodes.Title with super long text and space.h=0x4
+agraph.nodes.Title with super long text and space.hpp=0x4
 agraph.nodes.title2.w=0x2c
-agraph.nodes.title2.h=0x4
+agraph.nodes.title2.hpp=0x4
 EOF
 RUN
 
@@ -199,16 +199,16 @@ NAME=graph size
 FILE==
 CMDS=<<EOF
 agg k~agraph.w=
-agg k~agraph.h=
+agg k~agraph.hpp=
 agn title1 body1
 agg k~agraph.w=
-agg k~agraph.h=
+agg k~agraph.hpp=
 EOF
 EXPECT=<<EOF
 agraph.w=0
-agraph.h=0
+agraph.hpp=0
 agraph.w=12
-agraph.h=7
+agraph.hpp=7
 EOF
 RUN
 
@@ -235,7 +235,7 @@ CMDS=<<EOF
 agn title1 body1
 age title1 title1
 agg k~agraph.w=0x16
-agg k~agraph.h=0x4
+agg k~agraph.hpp=0x4
 EOF
 EXPECT=<<EOF
 EOF

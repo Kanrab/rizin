@@ -3,12 +3,12 @@
 
 #include <stdio.h>
 #include <fcntl.h>
-#include <errno.h>
+#include <errno.hpp>
 #include <string.h>
 #include <stdlib.h>
 #include <sys/stat.h>
-#include "sdb.h"
-#include "sdb_private.h"
+#include "sdb.hpp"
+#include "sdb_private.hpp"
 
 static inline SdbKv *next_kv(HtPP *ht, SdbKv *kv) {
 	return (SdbKv *)((char *)kv + ht->opt.elem_size);

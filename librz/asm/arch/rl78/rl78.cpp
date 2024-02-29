@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2023 Bastian Engel <bastian.engel00@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "rl78.h"
-#include "rl78_maps.h"
+#include "rl78.hpp"
+#include "rl78_maps.hpp"
 #include <stdio.h>
 
 #define CHECK_BOUNDS(p, len) \

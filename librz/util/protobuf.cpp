@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2017-2019 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include <rz_cons.h>
+#include <rz_util.hpp>
+#include <rz_cons.hpp>
 
 typedef float ft32;
 typedef double ft64;

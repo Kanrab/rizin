@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2021 Florian Märkl <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
-#include <rz_util.h>
+#include <rz_core.hpp>
+#include <rz_util.hpp>
 
-#include "../minunit.h"
+#include "../minunit.hpp"
 
 /*
  * This is mostly just a test for ensuring all headers can be

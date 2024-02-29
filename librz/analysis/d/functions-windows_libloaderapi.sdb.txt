@@ -1,4 +1,4 @@
-### libloaderapi.h ###
+### libloaderapi.hpp ###
 
 AddDllDirectory=func
 func.AddDllDirectory.args=1

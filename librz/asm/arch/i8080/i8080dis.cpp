@@ -30,7 +30,7 @@
 
 #include <string.h>
 #include <stdio.h>
-#include <assert.h>
+#include <assert.hpp>
 
 static char *reg[] = { "b", "c", "d", "e", "h", "l", "m", "a" };
 static char *rp[] = { "b", "d", "h", "sp" };

@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2014 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
+#include <rz_analysis.hpp>
 
 static int hook_flag_read(RzAnalysisEsil *esil, const char *flag, ut64 *num) {
 	sdb_array_add(esil->stats, "flg.read", flag, 0);
@@ -41,9 +41,9 @@ static int hook_NOP_mem_write(RzAnalysisEsil *esil, ut64 addr, const ut8 *buf, i
 
 RZ_API void rz_analysis_esil_mem_ro(RzAnalysisEsil *esil, int mem_readonly) {
 	if (mem_readonly) {
-		esil->cb.hook_mem_write = hook_NOP_mem_write;
+		esil->cb.hppook_mem_write = hook_NOP_mem_write;
 	} else {
-		esil->cb.hook_mem_write = NULL;
+		esil->cb.hppook_mem_write = NULL;
 	}
 }
 
@@ -55,16 +55,16 @@ RZ_API void rz_analysis_esil_stats(RzAnalysisEsil *esil, int enable) {
 			esil->stats = sdb_new0();
 		}
 		// reset sdb->stats
-		esil->cb.hook_reg_read = hook_reg_read;
-		esil->cb.hook_mem_read = hook_mem_read;
-		esil->cb.hook_mem_write = hook_mem_write;
-		esil->cb.hook_reg_write = hook_reg_write;
-		esil->cb.hook_flag_read = hook_flag_read;
-		esil->cb.hook_command = hook_command;
+		esil->cb.hppook_reg_read = hook_reg_read;
+		esil->cb.hppook_mem_read = hook_mem_read;
+		esil->cb.hppook_mem_write = hook_mem_write;
+		esil->cb.hppook_reg_write = hook_reg_write;
+		esil->cb.hppook_flag_read = hook_flag_read;
+		esil->cb.hppook_command = hook_command;
 	} else {
-		esil->cb.hook_mem_write = NULL;
-		esil->cb.hook_flag_read = NULL;
-		esil->cb.hook_command = NULL;
+		esil->cb.hppook_mem_write = NULL;
+		esil->cb.hppook_flag_read = NULL;
+		esil->cb.hppook_command = NULL;
 		sdb_free(esil->stats);
 		esil->stats = NULL;
 	}

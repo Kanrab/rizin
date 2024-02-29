@@ -4,9 +4,9 @@
 #ifndef RZ_DWARF_PRIVATE_H
 #define RZ_DWARF_PRIVATE_H
 
-#include <rz_util.h>
-#include <rz_bin_dwarf.h>
-#include "macro.h"
+#include <rz_util.hpp>
+#include <rz_bin_dwarf.hpp>
+#include "macro.hpp"
 
 static inline char *str_escape_copy(const char *p) {
 	if (!p) {
@@ -85,8 +85,8 @@ RZ_IPI void Range_free(RzBinDwarfRange *self);
 
 RZ_IPI void DebugRngLists_free(RzBinDwarfRngLists *self);
 
-#include "value.h"
-#include "op.h"
+#include "value.hpp"
+#include "op.hpp"
 
 RZ_IPI void rz_bin_dwarf_evaluation_cpy(RzBinDwarfEvaluation *dst, RzBinDwarfEvaluation *src);
 RZ_IPI void RzBinDwarfEvaluationResult_cpy(RzBinDwarfEvaluationResult *dst, RzBinDwarfEvaluationResult *src);

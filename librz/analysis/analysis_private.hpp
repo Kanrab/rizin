@@ -4,6 +4,6 @@
 #ifndef RZ_ANALYSIS_PRIVATE_H
 #define RZ_ANALYSIS_PRIVATE_H
 
-#include <rz_analysis.h>
+#include <rz_analysis.hpp>
 
 #endif // RZ_ANALYSIS_PRIVATE_H

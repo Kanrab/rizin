@@ -3,7 +3,7 @@
 // SPDX-FileCopyrightText: 2008-2019 inisider <inisider@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "pe.h"
+#include "pe.hpp"
 
 int PE_(read_image_import_directory)(RzBuffer *b, ut64 addr, PE_(image_import_directory) * import_dir) {
 	st64 o_addr = rz_buf_tell(b);
@@ -170,7 +170,7 @@ static int bin_pe_parse_imports(RzBinPEObj *bin,
 			(*importp)[*nimp].libname[PE_NAME_LENGTH] = '\0';
 			(*importp)[*nimp].vaddr = PE_(bin_pe_rva_to_va)(bin, FirstThunk + i * sizeof(PE_DWord));
 			(*importp)[*nimp].paddr = PE_(bin_pe_rva_to_paddr)(bin, FirstThunk) + i * sizeof(PE_DWord);
-			(*importp)[*nimp].hint = import_hint;
+			(*importp)[*nimp].hppint = import_hint;
 			(*importp)[*nimp].ordinal = import_ordinal;
 			(*importp)[*nimp].last = 0;
 			(*nimp)++;

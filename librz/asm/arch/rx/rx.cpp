@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2024 heersin <teablearcher@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "rx.h"
+#include "rx.hpp"
 #include "rx_str.inc"
 
 static ut64 prefetch_bytes(const ut8 *buf, size_t buf_len) {

@@ -11,15 +11,15 @@ http://developer.axis.com/old/documentation/hw/etraxfs/iop_howto/iop_howto.pdf
 #endif
 
 #include <stdio.h>
-#include <stdarg.h>
+#include <stdarg.hpp>
 #include <string.h>
 
-#include <rz_types.h>
-#include <rz_lib.h>
-#include <rz_util.h>
-#include <rz_asm.h>
+#include <rz_types.hpp>
+#include <rz_lib.hpp>
+#include <rz_util.hpp>
+#include <rz_asm.hpp>
 
-#include "disas-asm.h"
+#include "disas-asm.hpp"
 
 static unsigned long Offset = 0;
 static RzStrBuf *buf_global = NULL;

@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2009-2017 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_debug.h>
-#include <rz_lib.h>
-#include <config.h>
+#include <rz_debug.hpp>
+#include <rz_lib.hpp>
+#include <config.hpp>
 
 static RzDebugPlugin *debug_static_plugins[] = { RZ_DEBUG_STATIC_PLUGINS };
 

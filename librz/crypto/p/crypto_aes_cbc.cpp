@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2016-2017 rakholiyajenish.07 <rakholiyajenish.07@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_lib.h>
-#include <rz_crypto.h>
-#include <rz_util.h>
-#include <aes.h>
+#include <rz_lib.hpp>
+#include <rz_crypto.hpp>
+#include <rz_util.hpp>
+#include <aes.hpp>
 
 typedef struct aes_cbc_context_t {
 	struct aes_ctx st;

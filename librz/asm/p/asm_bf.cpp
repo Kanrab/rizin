@@ -2,8 +2,8 @@
 // SPDX-FileCopyrightText: 2009-2021 nibble <nibble.ds@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
-#include <rz_asm.h>
+#include <rz_analysis.hpp>
+#include <rz_asm.hpp>
 
 typedef struct {
 	RzPVector /*<RzAsmTokenPattern *>*/ *token_patterns;

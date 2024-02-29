@@ -4,7 +4,7 @@
 // SPDX-FileCopyrightText: 2008-2020 alvaro_fe <alvaro.felipe91@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "elf.h"
+#include "elf.hpp"
 
 #define EF_MIPS_ABI_O32 0x00001000 /* O32 ABI.  */
 #define EF_MIPS_ABI_O64 0x00002000 /* O32 extended for 64 bit.  */
@@ -1545,7 +1545,7 @@ RZ_OWN char *Elf_(rz_bin_elf_get_head_flag)(RZ_NONNULL ELFOBJ *bin) {
  * \param elf type
  * \return allocated string
  *
- * Use http://www.sco.com/developers/gabi/latest/ch4.eheader.html and the elf
+ * Use http://www.sco.com/developers/gabi/latest/ch4.eheader.hpptml and the elf
  * header (e_machine)
  */
 RZ_OWN char *Elf_(rz_bin_elf_get_machine_name)(RZ_NONNULL ELFOBJ *bin) {

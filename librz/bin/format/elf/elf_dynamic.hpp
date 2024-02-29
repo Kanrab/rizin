@@ -2,8 +2,8 @@
 // SPDX-FileCopyrightText: 2021 RizinOrg <info@rizin.re>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "elf.h"
-#include <rz_util/ht_uu.h>
+#include "elf.hpp"
+#include <rz_util/ht_uu.hpp>
 
 #ifndef _INCLUDE_ELF_DYNAMIC_H_
 #define _INCLUDE_ELF_DYNAMIC_H_

@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2015-2019 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "omf.h"
+#include "omf.hpp"
 
 static bool is_valid_omf_type(ut8 type) {
 	int ct = 0;

@@ -1,4 +1,4 @@
-### evntrace.h ###
+### evntrace.hpp ###
 
 CloseTrace=func
 func.CloseTrace.args=1

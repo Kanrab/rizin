@@ -1,14 +1,14 @@
 // SPDX-FileCopyrightText: 2014-2020 abcSup <zifan.tan@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
-#include <errno.h>
+#include <errno.hpp>
 
-#include <rz_crypto.h>
-#include <rz_hash.h>
-#include <rz_socket.h>
-#include <rz_util.h>
+#include <rz_crypto.hpp>
+#include <rz_hash.hpp>
+#include <rz_socket.hpp>
+#include <rz_util.hpp>
 
-#include "kd.h"
-#include "transport.h"
+#include "kd.hpp"
+#include "transport.hpp"
 
 #define BUF_SIZE 4096
 

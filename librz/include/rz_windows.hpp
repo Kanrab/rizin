@@ -10,7 +10,7 @@
  * header files as it will slow down compilation.
  */
 #if __WINDOWS__ || _WIN32 || _MSC_VER
-#include <sdkddkver.h>
+#include <sdkddkver.hpp>
 #ifdef NTDDI_WIN10_TH2
 /* Avoid using Developer Preview and default to Windows 10/Windows Server 2016 */
 #undef _WIN32_WINNT
@@ -55,13 +55,13 @@
 #define NODEFERWINDOWPOS // DeferWindowPos routines
 #define NOMCX            // Modem Configuration Extensions
 #define NOIME            // Input Method Manager
-/* Includes windows.h */
-#include <winsock2.h>
-#include <ws2tcpip.h>
+/* Includes windows.hpp */
+#include <winsock2.hpp>
+#include <ws2tcpip.hpp>
 typedef int socklen_t;
 #undef USE_SOCKETS
 #define __addr_t_defined
-#include <direct.h>
+#include <direct.hpp>
 /* Windows <=8 compatibility */
 #ifndef ENABLE_VIRTUAL_TERMINAL_PROCESSING
 #define ENABLE_VIRTUAL_TERMINAL_PROCESSING 0
@@ -69,6 +69,6 @@ typedef int socklen_t;
 #ifndef ENABLE_VIRTUAL_TERMINAL_INPUT
 #define ENABLE_VIRTUAL_TERMINAL_INPUT 0
 #endif
-#include <VersionHelpers.h>
+#include <VersionHelpers.hpp>
 #endif
 #endif

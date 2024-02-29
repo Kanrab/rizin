@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2015 condret <condr3t@protonmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
-#include <rz_types.h>
-#include <rz_lib.h>
+#include <rz_analysis.hpp>
+#include <rz_types.hpp>
+#include <rz_lib.hpp>
 
 static int mal_analysis(RzAnalysis *analysis, RzAnalysisOp *op, ut64 addr, const ut8 *data, int len, RzAnalysisOpMask mask) {
 	if (len) {

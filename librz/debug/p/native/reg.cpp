@@ -14,16 +14,16 @@ static char *rz_debug_native_reg_profile(RzDebug *dbg) {
 */
 #if defined(__arm64__)
 	if (dbg->bits == RZ_SYS_BITS_64) {
-#include "reg/windows-arm64.h"
+#include "reg/windows-arm64.hpp"
 	} else {
-#include "reg/windows-arm64_32.h"
+#include "reg/windows-arm64_32.hpp"
 	}
 #elif defined(__arm__)
-#include "reg/windows-arm.h"
+#include "reg/windows-arm.hpp"
 #elif defined(__x86_64__)
-#include "reg/windows-x64.h"
+#include "reg/windows-x64.hpp"
 #elif defined(__i386__)
-#include "reg/windows-x86.h"
+#include "reg/windows-x86.hpp"
 #endif
 #elif (__OpenBSD__ || __NetBSD__)
 /*                           __.--..__
@@ -35,9 +35,9 @@ static char *rz_debug_native_reg_profile(RzDebug *dbg) {
       \_,_,__,_/      \\
 */
 #if __i386__
-#include "reg/netbsd-x86.h"
+#include "reg/netbsd-x86.hpp"
 #elif __x86_64__
-#include "reg/netbsd-x64.h"
+#include "reg/netbsd-x64.hpp"
 #else
 #error "Unsupported BSD architecture"
 #endif
@@ -55,11 +55,11 @@ static char *rz_debug_native_reg_profile(RzDebug *dbg) {
       `----'
 */
 #if __i386__ || __i386
-#include "reg/kfbsd-x86.h"
+#include "reg/kfbsd-x86.hpp"
 #elif __x86_64__ || __amd64__
-#include "reg/kfbsd-x64.h"
+#include "reg/kfbsd-x64.hpp"
 #elif __aarch64__
-#include "reg/kfbsd-arm64.h"
+#include "reg/kfbsd-arm64.hpp"
 #else
 #error "Unsupported BSD architecture"
 #endif

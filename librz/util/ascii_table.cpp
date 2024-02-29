@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2018 r00tus3r <iamakshayajayan@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
+#include <rz_util.hpp>
 
 static const char *ascii_table =
 	"The following table contains the 128 ASCII characters.\n"

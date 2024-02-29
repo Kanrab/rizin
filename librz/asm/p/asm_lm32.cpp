@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: 2015 Felix Held
 // SPDX-License-Identifier: BSD-2-Clause
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_asm.h>
-#include "../arch/lm32/lm32_isa.h"
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_asm.hpp>
+#include "../arch/lm32/lm32_isa.hpp"
 
 #define LM32_UNUSED 0
 

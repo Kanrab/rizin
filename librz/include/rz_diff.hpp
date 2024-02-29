@@ -5,10 +5,10 @@
 #ifndef RZ_DIFF_H
 #define RZ_DIFF_H
 
-#include <rz_types.h>
-#include <rz_list.h>
-#include <rz_util/rz_pj.h>
-#include <rz_util/rz_strbuf.h>
+#include <rz_types.hpp>
+#include <rz_list.hpp>
+#include <rz_util/rz_pj.hpp>
+#include <rz_util/rz_strbuf.hpp>
 
 #ifdef __cplusplus
 extern "C" {

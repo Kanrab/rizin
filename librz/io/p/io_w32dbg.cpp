@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: 2008-2016 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 #if __WINDOWS__
-#include <rz_windows.h>
-#include <rz_core.h>
-#include <w32dbg_wrap.h>
+#include <rz_windows.hpp>
+#include <rz_core.hpp>
+#include <w32dbg_wrap.hpp>
 
 static ut64 __find_next_valid_addr(HANDLE h, ut64 from, ut64 to) {
 	// Align to next page and try to get to next valid addr
@@ -21,11 +21,11 @@ static ut64 __find_next_valid_addr(HANDLE h, ut64 from, ut64 to) {
 
 static int debug_os_read_at(W32DbgWInst *dbg, ut8 *buf, size_t len, ut64 addr) {
 	SIZE_T ret = 0;
-	if (!ReadProcessMemory(dbg->pi.hProcess, (void *)(size_t)addr, buf, len, &ret) && GetLastError() == ERROR_PARTIAL_COPY) {
+	if (!ReadProcessMemory(dbg->pi.hppProcess, (void *)(size_t)addr, buf, len, &ret) && GetLastError() == ERROR_PARTIAL_COPY) {
 		int skipped = 0;
-		if (!ReadProcessMemory(dbg->pi.hProcess, (void *)(size_t)addr, buf, 1, &ret)) {
+		if (!ReadProcessMemory(dbg->pi.hppProcess, (void *)(size_t)addr, buf, 1, &ret)) {
 			// We are starting a read from invalid memory
-			ut64 valid_addr = __find_next_valid_addr(dbg->pi.hProcess, addr, addr + len);
+			ut64 valid_addr = __find_next_valid_addr(dbg->pi.hppProcess, addr, addr + len);
 			if (valid_addr == UT64_MAX) {
 				return len;
 			}
@@ -38,12 +38,12 @@ static int debug_os_read_at(W32DbgWInst *dbg, ut8 *buf, size_t len, ut64 addr) {
 		int read_len = len - skipped;
 		int totRead = skipped;
 		while (totRead < len) {
-			while (!ReadProcessMemory(dbg->pi.hProcess, (void *)(size_t)addr, buf, read_len, &ret)) {
+			while (!ReadProcessMemory(dbg->pi.hppProcess, (void *)(size_t)addr, buf, read_len, &ret)) {
 				// Maybe read_len is too big, we are reaching invalid memory
 				read_len /= 2;
 				if (!read_len) {
 					// Reached the end of valid memory, find another to continue reading if possible
-					ut64 valid_addr = __find_next_valid_addr(dbg->pi.hProcess, addr, addr + len - totRead);
+					ut64 valid_addr = __find_next_valid_addr(dbg->pi.hppProcess, addr, addr + len - totRead);
 					if (valid_addr == UT64_MAX) {
 						return len;
 					}
@@ -70,7 +70,7 @@ static int __read(RzIO *io, RzIODesc *fd, ut8 *buf, size_t len) {
 
 static int w32dbg_write_at(W32DbgWInst *dbg, const ut8 *buf, size_t len, ut64 addr) {
 	SIZE_T ret;
-	return 0 != WriteProcessMemory(dbg->pi.hProcess, (void *)(size_t)addr, buf, len, &ret) ? len : 0;
+	return 0 != WriteProcessMemory(dbg->pi.hppProcess, (void *)(size_t)addr, buf, len, &ret) ? len : 0;
 }
 
 static int __write(RzIO *io, RzIODesc *fd, const ut8 *buf, size_t len) {
@@ -85,7 +85,7 @@ static bool __plugin_open(RzIO *io, const char *file, bool many) {
 }
 
 static inline bool current_handle_valid(W32DbgWInst *wrap, int pid) {
-	return wrap->pi.dwProcessId == pid && wrap->pi.hProcess != INVALID_HANDLE_VALUE;
+	return wrap->pi.dwProcessId == pid && wrap->pi.hppProcess != INVALID_HANDLE_VALUE;
 }
 
 static int __open_proc(RzIO *io, int pid, bool attach) {
@@ -98,7 +98,7 @@ static int __open_proc(RzIO *io, int pid, bool attach) {
 			return pid;
 		}
 		// We will get a new handle when we attach
-		CloseHandle(wrap->pi.hProcess);
+		CloseHandle(wrap->pi.hppProcess);
 	}
 
 	if (attach) {
@@ -114,7 +114,7 @@ static int __open_proc(RzIO *io, int pid, bool attach) {
 		return -1;
 	}
 	wrap->pi.dwProcessId = pid;
-	wrap->pi.hProcess = h_proc;
+	wrap->pi.hppProcess = h_proc;
 	return pid;
 }
 

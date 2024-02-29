@@ -2,11 +2,11 @@
 // SPDX-FileCopyrightText: 2022 Dhruv Maroo <dhruvmaru007@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_lib.h>
-#include <rz_util.h>
-#include <rz_asm.h>
-#include "../arch/sh/disassembler.h"
-#include "../arch/sh/assembler.h"
+#include <rz_lib.hpp>
+#include <rz_util.hpp>
+#include <rz_asm.hpp>
+#include "../arch/sh/disassembler.hpp"
+#include "../arch/sh/assembler.hpp"
 
 static int disassemble(RzAsm *a, RzAsmOp *op, const ut8 *buf, int len) {
 	SHOp *dis_op = sh_disassembler(rz_read_ble16(buf, a->big_endian));

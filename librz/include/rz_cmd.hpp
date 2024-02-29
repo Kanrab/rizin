@@ -1,9 +1,9 @@
 #ifndef RZ_CMD_H
 #define RZ_CMD_H
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_bind.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_bind.hpp>
 
 #ifdef __cplusplus
 extern "C" {

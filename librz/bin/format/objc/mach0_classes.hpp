@@ -2,10 +2,10 @@
 // SPDX-FileCopyrightText: 2018-2019 Francesco Tamagni <mrmacete@protonmail.ch>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bin.h>
+#include <rz_bin.hpp>
 
-#include "mach0/mach0_specs.h"
-#include "mach0/mach0.h"
+#include "mach0/mach0_specs.hpp"
+#include "mach0/mach0.hpp"
 
 #undef mach0_ut
 #undef rz_bin_plugin_mach

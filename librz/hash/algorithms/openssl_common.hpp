@@ -4,14 +4,14 @@
 #ifndef RZ_OPENSSL_COMMON_H
 #define RZ_OPENSSL_COMMON_H
 
-#include <openssl/evp.h>
-#include <openssl/err.h>
-#include <openssl/sha.h>
-#include <openssl/md4.h>
-#include <openssl/md5.h>
-#include <openssl/err.h>
+#include <openssl/evp.hpp>
+#include <openssl/err.hpp>
+#include <openssl/sha.hpp>
+#include <openssl/md4.hpp>
+#include <openssl/md5.hpp>
+#include <openssl/err.hpp>
 
-#include <rz_util.h>
+#include <rz_util.hpp>
 
 #define rz_openssl_plugin_context_new(pluginname) \
 	static void *openssl_plugin_##pluginname##_context_new() { \

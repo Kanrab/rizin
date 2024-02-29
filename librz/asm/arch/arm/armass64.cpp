@@ -5,7 +5,7 @@
 #include <string.h>
 #include <ctype.h>
 #include <stdlib.h>
-#include <rz_util.h>
+#include <rz_util.hpp>
 
 typedef enum optype_t {
 	ARM_NOTYPE = -1,
@@ -159,7 +159,7 @@ static bool isShiftedMask(ut64 value) {
 	return value && isMask((value - 1) | value);
 }
 
-// https://llvm.org/doxygen/AArch64AddressingModes_8h_source.html
+// https://llvm.org/doxygen/AArch64AddressingModes_8h_source.hpptml
 static ut32 encodeBitMasksWithSize(ut64 imm, ut32 reg_size) {
 	if (imm == 0 || imm == UT64_MAX || (reg_size != 64 && (imm >> reg_size != 0 || imm == (~0ULL >> (64 - reg_size))))) {
 		return UT32_MAX;
@@ -702,7 +702,7 @@ static ut32 mem_barrier(ArmOp *op, ut64 addr, int k) {
 	return data;
 }
 
-#include "armass64_const.h"
+#include "armass64_const.hpp"
 
 static ut32 msr(ArmOp *op, int w) {
 	ut32 data = UT32_MAX;

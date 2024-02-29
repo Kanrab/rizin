@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2021 RizinOrg <info@rizin.re>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "elf.h"
+#include "elf.hpp"
 
 static Elf_(Half) get_tiny_elf_phnum(ELFOBJ *bin) {
 	ut64 offset = 44;

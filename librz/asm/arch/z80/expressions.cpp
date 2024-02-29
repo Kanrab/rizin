@@ -23,7 +23,7 @@
    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-//#include "z80asm.h"
+//#include "z80asm.hpp"
 
 /* reading expressions. The following operators are supported
  * in order of precedence, with function name:

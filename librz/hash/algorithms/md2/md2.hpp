@@ -4,7 +4,7 @@
 #ifndef RZ_HASH_MD2_H
 #define RZ_HASH_MD2_H
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 #define RZ_HASH_MD2_DIGEST_SIZE     0x10
 #define RZ_HASH_MD2_BLOCK_LENGTH    0x10

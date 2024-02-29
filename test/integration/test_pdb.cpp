@@ -1,14 +1,14 @@
 // SPDX-FileCopyrightText: 2020 HoundThe <cgkajm@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include <rz_bin.h>
-#include <rz_core.h>
-#include <rz_pdb.h>
-#include <rz_util/rz_path.h>
-#include "test_types.h"
-#include "../../librz/bin/pdb/pdb.h"
-#include "../unit/minunit.h"
+#include <rz_util.hpp>
+#include <rz_bin.hpp>
+#include <rz_core.hpp>
+#include <rz_pdb.hpp>
+#include <rz_util/rz_path.hpp>
+#include "test_types.hpp"
+#include "../../librz/bin/pdb/pdb.hpp"
+#include "../unit/minunit.hpp"
 
 bool pdb_info_save_types(RzAnalysis *analysis, const char *file) {
 	RzPdb *pdb = rz_bin_pdb_parse_from_file(file);
@@ -38,7 +38,7 @@ bool test_pdb_tpi_cpp(void) {
 
 	RzPdbTpiStream *stream = pdb->s_tpi;
 	mu_assert_notnull(stream, "TPIs stream not found in current PDB");
-	mu_assert_eq(stream->header.HeaderSize + stream->header.TypeRecordBytes, 117156, "Wrong TPI size");
+	mu_assert_eq(stream->header.hppeaderSize + stream->header.TypeRecordBytes, 117156, "Wrong TPI size");
 	mu_assert_eq(stream->header.TypeIndexBegin, 0x1000, "Wrong beginning index");
 	RBIter it;
 	RzPdbTpiType *type;
@@ -199,7 +199,7 @@ bool test_pdb_tpi_rust(void) {
 
 	RzPdbTpiStream *stream = pdb->s_tpi;
 	mu_assert_notnull(stream, "TPIs stream not found in current PDB");
-	mu_assert_eq(stream->header.HeaderSize + stream->header.TypeRecordBytes, 305632, "Wrong TPI size");
+	mu_assert_eq(stream->header.hppeaderSize + stream->header.TypeRecordBytes, 305632, "Wrong TPI size");
 	mu_assert_eq(stream->header.TypeIndexBegin, 0x1000, "Wrong beginning index");
 	RBIter it;
 	RzPdbTpiType *type;
@@ -434,7 +434,7 @@ bool test_pdb_tpi_cpp_vs2019(void) {
 
 	RzPdbTpiStream *stream = pdb->s_tpi;
 	mu_assert_notnull(stream, "TPIs stream not found in current PDB");
-	mu_assert_eq(stream->header.HeaderSize + stream->header.TypeRecordBytes, 233588, "Wrong TPI size");
+	mu_assert_eq(stream->header.hppeaderSize + stream->header.TypeRecordBytes, 233588, "Wrong TPI size");
 	mu_assert_eq(stream->header.TypeIndexBegin, 0x1000, "Wrong beginning index");
 	RBIter it;
 	RzPdbTpiType *type;
@@ -669,7 +669,7 @@ bool test_pdb_tpi_arm(void) {
 
 	RzPdbTpiStream *stream = pdb->s_tpi;
 	mu_assert_notnull(stream, "TPIs stream not found in current PDB");
-	mu_assert_eq(stream->header.HeaderSize + stream->header.TypeRecordBytes, 454428, "Wrong TPI size");
+	mu_assert_eq(stream->header.hppeaderSize + stream->header.TypeRecordBytes, 454428, "Wrong TPI size");
 	mu_assert_eq(stream->header.TypeIndexBegin, 0x1000, "Wrong beginning index");
 	RBIter it;
 	RzPdbTpiType *type;

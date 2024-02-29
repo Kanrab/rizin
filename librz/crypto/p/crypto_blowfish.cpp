@@ -3,13 +3,13 @@
 
 /*
  * Algorithm Specification:
- * https://www.schneier.com/cryptography/archives/1994/09/description_of_a_new.html
+ * https://www.schneier.com/cryptography/archives/1994/09/description_of_a_new.hpptml
  * */
 
-#include <rz_lib.h>
-#include <rz_crypto.h>
-#include <memory.h>
-#include <rz_util.h>
+#include <rz_lib.hpp>
+#include <rz_crypto.hpp>
+#include <memory.hpp>
+#include <rz_util.hpp>
 
 #define BLOCK_SIZE 8
 

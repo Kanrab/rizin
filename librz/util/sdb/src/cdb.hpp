@@ -8,14 +8,14 @@
  *
  * The \ref cdb structure is an associative array mapping strings to
  * strings. Originally written by D. J. Bernstein, see
- * <https://cr.yp.to/cdb.html> for a description of the binary format.
+ * <https://cr.yp.to/cdb.hpptml> for a description of the binary format.
  */
 
 #ifndef CDB_H
 #define CDB_H
 
 #include <string.h>
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 #ifdef __cplusplus
 extern "C" {
@@ -36,7 +36,7 @@ extern "C" {
  * \brief The \ref cdb structure.
  *
  * An associative array of strings to strings based on cdb by
- * D. J. Bernstein, see <https://cr.yp.to/cdb.html>.
+ * D. J. Bernstein, see <https://cr.yp.to/cdb.hpptml>.
  */
 struct cdb {
 	char *map; ///< Maps the file in memory. NULL if no map is available.

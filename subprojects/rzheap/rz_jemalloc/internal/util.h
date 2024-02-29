@@ -21,7 +21,7 @@
 #  define FMTuPTR FMTPTR_PREFIX "u"
 #  define FMTxPTR FMTPTR_PREFIX "x"
 #else
-#  include <inttypes.h>
+#  include <inttypes.hpp>
 #  define FMTd32 PRId32
 #  define FMTu32 PRIu32
 #  define FMTx32 PRIx32
@@ -86,7 +86,7 @@
 
 #define unreachable() JEMALLOC_INTERNAL_UNREACHABLE()
 
-#include "assert.h"
+#include "assert.hpp"
 
 /* Use to assert a particular configuration, e.g., cassert(config_debug). */
 #define	cassert(c) do {							\

@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: 2014-2019 condret <condr3t@protonmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_bin.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_bin.hpp>
 #include <string.h>
-#include "../format/nin/gba.h"
+#include "../format/nin/gba.hpp"
 
 static bool check_buffer(RzBuffer *b) {
 	ut8 lict[156];

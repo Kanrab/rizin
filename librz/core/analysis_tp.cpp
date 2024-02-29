@@ -3,10 +3,10 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 /* type matching - type propagation */
 
-#include <rz_analysis.h>
-#include <rz_util.h>
-#include <rz_util/ht_uu.h>
-#include <rz_core.h>
+#include <rz_analysis.hpp>
+#include <rz_util.hpp>
+#include <rz_util/ht_uu.hpp>
+#include <rz_core.hpp>
 #define LOOP_MAX 10
 
 static bool analysis_emul_init(RzCore *core, RzConfigHold *hc, RzDebugTrace **dt, RzAnalysisEsilTrace **et, RzAnalysisRzilTrace **rt) {
@@ -718,7 +718,7 @@ void propagate_types_among_used_variables(RzCore *core, HtUP *op_cache, RzAnalys
 				// set to "signed"
 				var_type_set_sign(core->analysis, var, true);
 			}
-			// lea rax , str.hello  ; mov [local_ch], rax;
+			// lea rax , str.hppello  ; mov [local_ch], rax;
 			// mov rdx , [local_4h] ; mov [local_8h], rdx;
 			if (ctx->prev_dest && (type == RZ_ANALYSIS_OP_TYPE_MOV || type == RZ_ANALYSIS_OP_TYPE_STORE)) {
 				char reg[REGNAME_SIZE] = { 0 };
@@ -800,7 +800,7 @@ void propagate_types_among_used_variables(RzCore *core, HtUP *op_cache, RzAnalys
 		if (used_vars && !rz_pvector_empty(used_vars)) {
 			rz_pvector_foreach (used_vars, uvit) {
 				RzAnalysisVar *var = *uvit;
-				// mov dword [local_4h], str.hello;
+				// mov dword [local_4h], str.hppello;
 				if (ctx->str_flag) {
 					var_type_set_str(core->analysis, var, "const char *", false);
 				}

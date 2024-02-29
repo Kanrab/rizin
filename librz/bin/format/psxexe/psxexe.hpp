@@ -8,7 +8,7 @@
 #define PSXEXE_ID_LEN             8
 #define PSXEXE_TEXTSECTION_OFFSET 0x800
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 typedef struct psxexe_header {
 	ut8 id[8];

@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2020 HoundThe <cgkajm@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include <rz_bin.h>
-#include <rz_bin_dwarf.h>
-#include "../unit/minunit.h"
+#include <rz_util.hpp>
+#include <rz_bin.hpp>
+#include <rz_bin_dwarf.hpp>
+#include "../unit/minunit.hpp"
 
 #define UNIT(i) cu = rz_vector_index_ptr(&dw->info->units, i);
 #define DIE(i)  die = rz_vector_index_ptr(&cu->dies, i);

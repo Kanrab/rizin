@@ -5,9 +5,9 @@
 #ifndef MDMP_SPECS_H
 #define MDMP_SPECS_H
 
-#include <rz_types_base.h>
+#include <rz_types_base.hpp>
 
-#include "mdmp_windefs.h"
+#include "mdmp_windefs.hpp"
 
 #define MDMP_MEM_COMMIT  0x01000
 #define MDMP_MEM_FREE    0x10000

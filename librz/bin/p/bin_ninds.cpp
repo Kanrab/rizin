@@ -2,13 +2,13 @@
 // SPDX-FileCopyrightText: 2015-2019 a0rtega
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_bin.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_bin.hpp>
 #include <string.h>
 
-#include "../format/nin/nds.h"
+#include "../format/nin/nds.hpp"
 
 #define nds_get_hdr(bf) ((NDSHeader *)bf->o->bin_obj)
 

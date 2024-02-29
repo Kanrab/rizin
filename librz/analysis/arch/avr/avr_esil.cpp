@@ -5,8 +5,8 @@
 // SPDX-FileCopyrightText: 2022 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "avr_esil.h"
-#include <rz_crypto.h>
+#include "avr_esil.hpp"
+#include <rz_crypto.hpp>
 
 /** \file avr_esil.c
  * Converts AVR instructions into ESIL statements
@@ -1626,7 +1626,7 @@ RZ_IPI int rz_avr_esil_init(RzAnalysisEsil *esil) {
 	rz_analysis_esil_set_op(esil, "SPM_PAGE_ERASE", avr_custom_spm_page_erase, 0, 0, RZ_ANALYSIS_ESIL_OP_TYPE_CUSTOM);
 	rz_analysis_esil_set_op(esil, "SPM_PAGE_FILL", avr_custom_spm_page_fill, 0, 0, RZ_ANALYSIS_ESIL_OP_TYPE_CUSTOM);
 	rz_analysis_esil_set_op(esil, "SPM_PAGE_WRITE", avr_custom_spm_page_write, 0, 0, RZ_ANALYSIS_ESIL_OP_TYPE_CUSTOM);
-	esil->cb.hook_reg_write = esil_avr_hook_reg_write;
+	esil->cb.hppook_reg_write = esil_avr_hook_reg_write;
 
 	return true;
 }

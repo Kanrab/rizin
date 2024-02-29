@@ -3,7 +3,7 @@
 
 #ifndef CRYPTO_SM4_ALGO_H
 #define CRYPTO_SM4_ALGO_H
-#include <rz_util.h>
+#include <rz_util.hpp>
 
 #define SM4_ENCRYPT  1
 #define SM4_DECRYPT  2

@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 // SPDX-FileCopyrightText: 2021 Heersin <teablearcher@gmail.com>
 
-#include <rz_types.h>
-#include <rz_analysis.h>
+#include <rz_types.hpp>
+#include <rz_analysis.hpp>
 
-#include "librz/asm/arch/luac/lua_arch.h"
+#include "librz/asm/arch/luac/lua_arch.hpp"
 
 int rz_lua_analysis_op(RzAnalysis *analysis, RzAnalysisOp *op, ut64 addr, const ut8 *data, int len, RzAnalysisOpMask mask) {
 	if (!analysis->cpu) {

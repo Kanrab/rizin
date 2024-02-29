@@ -25,8 +25,8 @@
    MA 02110-1301, USA.  */
 
 #include <stdio.h>
-#include "sysdep.h"
-#include "opcode/mips.h"
+#include "sysdep.hpp"
+#include "opcode/mips.hpp"
 
 /* Short hand so the lines aren't too long.  */
 
@@ -695,9 +695,9 @@ const struct mips_opcode mips_builtin_opcodes[] =
 {"hibernate","",        0x42000023, 0xffffffff,	0, 			0,		V1	},
 {"ins",     "t,r,+A,+B", 0x7c000004, 0xfc00003f, WR_t|RD_s,    		0,		I33	},
 {"jr",      "s",	0x00000008, 0xfc1fffff,	UBD|RD_s,		0,		I1	},
-/* jr.hb is officially MIPS{32,64}R2, but it works on R1 as jr with
+/* jr.hppb is officially MIPS{32,64}R2, but it works on R1 as jr with
    the same hazard barrier effect.  */
-{"jr.hb",   "s",	0x00000408, 0xfc1fffff,	UBD|RD_s,		0,		I32	},
+{"jr.hppb",   "s",	0x00000408, 0xfc1fffff,	UBD|RD_s,		0,		I32	},
 {"j",       "s",	0x00000008, 0xfc1fffff,	UBD|RD_s,		0,		I1	}, /* jr */
 /* SVR4 PIC code requires special handling for j, so it must be a
    macro.  */
@@ -708,10 +708,10 @@ const struct mips_opcode mips_builtin_opcodes[] =
 {"j",       "a",	0x08000000, 0xfc000000,	UBD,			0,		I1	},
 {"jalr",    "s",	0x0000f809, 0xfc1fffff,	UBD|RD_s|WR_d,		0,		I1	},
 {"jalr",    "d,s",	0x00000009, 0xfc1f07ff,	UBD|RD_s|WR_d,		0,		I1	},
-/* jalr.hb is officially MIPS{32,64}R2, but it works on R1 as jalr
+/* jalr.hppb is officially MIPS{32,64}R2, but it works on R1 as jalr
    with the same hazard barrier effect.  */
-{"jalr.hb", "s",	0x0000fc09, 0xfc1fffff,	UBD|RD_s|WR_d,		0,		I32	},
-{"jalr.hb", "d,s",	0x00000409, 0xfc1f07ff,	UBD|RD_s|WR_d,		0,		I32	},
+{"jalr.hppb", "s",	0x0000fc09, 0xfc1fffff,	UBD|RD_s|WR_d,		0,		I32	},
+{"jalr.hppb", "d,s",	0x00000409, 0xfc1f07ff,	UBD|RD_s|WR_d,		0,		I32	},
 /* SVR4 PIC code requires special handling for jal, so it must be a
    macro.  */
 {"jal",     "d,s",	0,     (int) M_JAL_2,	INSN_MACRO,		0,		I1	},
@@ -1542,13 +1542,13 @@ const struct mips_opcode mips_builtin_opcodes[] =
 {"dextr_rs.l", "t,7,6",	0x7c0005bc, 0xfc00e7ff, WR_t|RD_a,		0,		D64	},
 {"dextr_rs.w", "t,7,6",	0x7c0001bc, 0xfc00e7ff, WR_t|RD_a,		0,		D64	},
 {"dextr_r.w", "t,7,6",	0x7c00013c, 0xfc00e7ff, WR_t|RD_a,		0,		D64	},
-{"dextr_s.h", "t,7,6",	0x7c0003bc, 0xfc00e7ff, WR_t|RD_a,		0,		D64	},
+{"dextr_s.hpp", "t,7,6",	0x7c0003bc, 0xfc00e7ff, WR_t|RD_a,		0,		D64	},
 {"dextrv.l", "t,7,s",	0x7c00047c, 0xfc00e7ff, WR_t|RD_a|RD_s,		0,		D64	},
 {"dextrv_r.l", "t,7,s",	0x7c00057c, 0xfc00e7ff, WR_t|RD_a|RD_s,		0,		D64	},
 {"dextrv_rs.l", "t,7,s", 0x7c0005fc, 0xfc00e7ff, WR_t|RD_a|RD_s,	0,		D64	},
 {"dextrv_rs.w", "t,7,s", 0x7c0001fc, 0xfc00e7ff, WR_t|RD_a|RD_s,	0,		D64	},
 {"dextrv_r.w", "t,7,s",	0x7c00017c, 0xfc00e7ff, WR_t|RD_a|RD_s,		0,		D64	},
-{"dextrv_s.h", "t,7,s",	0x7c0003fc, 0xfc00e7ff, WR_t|RD_a|RD_s,		0,		D64	},
+{"dextrv_s.hpp", "t,7,s",	0x7c0003fc, 0xfc00e7ff, WR_t|RD_a|RD_s,		0,		D64	},
 {"dextrv.w", "t,7,s",	0x7c00007c, 0xfc00e7ff, WR_t|RD_a|RD_s,		0,		D64	},
 {"dextr.w", "t,7,6",	0x7c00003c, 0xfc00e7ff, WR_t|RD_a,		0,		D64	},
 {"dinsv",   "t,s",	0x7c00000d, 0xfc00ffff, WR_t|RD_s,		0,		D64	},
@@ -1561,18 +1561,18 @@ const struct mips_opcode mips_builtin_opcodes[] =
 {"dpaq_sa.l.w", "7,s,t", 0x7c000330, 0xfc00e7ff, MOD_a|RD_s|RD_t,	0,		D32	},
 {"dpaq_s.w.ph", "7,s,t", 0x7c000130, 0xfc00e7ff, MOD_a|RD_s|RD_t,	0,		D32	},
 {"dpaq_s.w.qh", "7,s,t", 0x7c000134, 0xfc00e7ff, MOD_a|RD_s|RD_t,	0,		D64	},
-{"dpau.h.obl", "7,s,t",	0x7c0000f4, 0xfc00e7ff, MOD_a|RD_s|RD_t,	0,		D64	},
-{"dpau.h.obr", "7,s,t",	0x7c0001f4, 0xfc00e7ff, MOD_a|RD_s|RD_t,	0,		D64	},
-{"dpau.h.qbl", "7,s,t",	0x7c0000f0, 0xfc00e7ff, MOD_a|RD_s|RD_t,	0,		D32	},
-{"dpau.h.qbr", "7,s,t",	0x7c0001f0, 0xfc00e7ff, MOD_a|RD_s|RD_t,	0,		D32	},
+{"dpau.hpp.obl", "7,s,t",	0x7c0000f4, 0xfc00e7ff, MOD_a|RD_s|RD_t,	0,		D64	},
+{"dpau.hpp.obr", "7,s,t",	0x7c0001f4, 0xfc00e7ff, MOD_a|RD_s|RD_t,	0,		D64	},
+{"dpau.hpp.qbl", "7,s,t",	0x7c0000f0, 0xfc00e7ff, MOD_a|RD_s|RD_t,	0,		D32	},
+{"dpau.hpp.qbr", "7,s,t",	0x7c0001f0, 0xfc00e7ff, MOD_a|RD_s|RD_t,	0,		D32	},
 {"dpsq_sa.l.pw", "7,s,t", 0x7c000374, 0xfc00e7ff, MOD_a|RD_s|RD_t,	0,		D64	},
 {"dpsq_sa.l.w", "7,s,t", 0x7c000370, 0xfc00e7ff, MOD_a|RD_s|RD_t,	0,		D32	},
 {"dpsq_s.w.ph", "7,s,t", 0x7c000170, 0xfc00e7ff, MOD_a|RD_s|RD_t,	0,		D32	},
 {"dpsq_s.w.qh", "7,s,t", 0x7c000174, 0xfc00e7ff, MOD_a|RD_s|RD_t,	0,		D64	},
-{"dpsu.h.obl", "7,s,t",	0x7c0002f4, 0xfc00e7ff, MOD_a|RD_s|RD_t,	0,		D64	},
-{"dpsu.h.obr", "7,s,t",	0x7c0003f4, 0xfc00e7ff, MOD_a|RD_s|RD_t,	0,		D64	},
-{"dpsu.h.qbl", "7,s,t",	0x7c0002f0, 0xfc00e7ff, MOD_a|RD_s|RD_t,	0,		D32	},
-{"dpsu.h.qbr", "7,s,t",	0x7c0003f0, 0xfc00e7ff, MOD_a|RD_s|RD_t,	0,		D32	},
+{"dpsu.hpp.obl", "7,s,t",	0x7c0002f4, 0xfc00e7ff, MOD_a|RD_s|RD_t,	0,		D64	},
+{"dpsu.hpp.obr", "7,s,t",	0x7c0003f4, 0xfc00e7ff, MOD_a|RD_s|RD_t,	0,		D64	},
+{"dpsu.hpp.qbl", "7,s,t",	0x7c0002f0, 0xfc00e7ff, MOD_a|RD_s|RD_t,	0,		D32	},
+{"dpsu.hpp.qbr", "7,s,t",	0x7c0003f0, 0xfc00e7ff, MOD_a|RD_s|RD_t,	0,		D32	},
 {"dshilo",  "7,:",	0x7c0006bc, 0xfc07e7ff, MOD_a,			0,		D64	},
 {"dshilov", "7,s",	0x7c0006fc, 0xfc1fe7ff, MOD_a|RD_s,		0,		D64	},
 {"extpdp",  "t,7,6",	0x7c0002b8, 0xfc00e7ff, WR_t|RD_a|DSP_VOLA,	0,		D32	},
@@ -1581,10 +1581,10 @@ const struct mips_opcode mips_builtin_opcodes[] =
 {"extpv",   "t,7,s",	0x7c0000f8, 0xfc00e7ff, WR_t|RD_a|RD_s,		0,		D32	},
 {"extr_rs.w", "t,7,6",	0x7c0001b8, 0xfc00e7ff, WR_t|RD_a,		0,		D32	},
 {"extr_r.w", "t,7,6",	0x7c000138, 0xfc00e7ff, WR_t|RD_a,		0,		D32	},
-{"extr_s.h", "t,7,6",	0x7c0003b8, 0xfc00e7ff, WR_t|RD_a,		0,		D32	},
+{"extr_s.hpp", "t,7,6",	0x7c0003b8, 0xfc00e7ff, WR_t|RD_a,		0,		D32	},
 {"extrv_rs.w", "t,7,s",	0x7c0001f8, 0xfc00e7ff, WR_t|RD_a|RD_s,		0,		D32	},
 {"extrv_r.w", "t,7,s",	0x7c000178, 0xfc00e7ff, WR_t|RD_a|RD_s,		0,		D32	},
-{"extrv_s.h", "t,7,s",	0x7c0003f8, 0xfc00e7ff, WR_t|RD_a|RD_s,		0,		D32	},
+{"extrv_s.hpp", "t,7,s",	0x7c0003f8, 0xfc00e7ff, WR_t|RD_a|RD_s,		0,		D32	},
 {"extrv.w", "t,7,s",	0x7c000078, 0xfc00e7ff, WR_t|RD_a|RD_s,		0,		D32	},
 {"extr.w",  "t,7,6",	0x7c000038, 0xfc00e7ff, WR_t|RD_a,		0,		D32	},
 {"insv",    "t,s",	0x7c00000c, 0xfc00ffff, WR_t|RD_s,		0,		D32	},

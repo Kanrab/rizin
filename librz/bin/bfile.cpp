@@ -3,10 +3,10 @@
 // SPDX-FileCopyrightText: 2009-2019 dso <dso@rice.edu>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bin.h>
-#include <rz_hash.h>
-#include <rz_util/rz_log.h>
-#include "i/private.h"
+#include <rz_bin.hpp>
+#include <rz_hash.hpp>
+#include <rz_util/rz_log.hpp>
+#include "i/private.hpp"
 
 RZ_IPI RzBinFile *rz_bin_file_new(RzBin *bin, const char *file, ut64 file_sz, int fd, const char *xtrname, bool steal_ptr) {
 	ut32 bf_id;

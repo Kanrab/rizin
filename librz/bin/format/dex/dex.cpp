@@ -2,8 +2,8 @@
 // SPDX-FileCopyrightText: 2021-2023 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "dex.h"
-#include <rz_util.h>
+#include "dex.hpp"
+#include <rz_util.hpp>
 
 #define DEX_INVALID_CLASS  "Lunknown_class;"
 #define DEX_INVALID_METHOD "unknown_method"

@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2018 Florian Märkl <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include <rz_vector.h>
-#include "minunit.h"
+#include <rz_util.hpp>
+#include <rz_vector.hpp>
+#include "minunit.hpp"
 
 // allocates a vector of len ut32 values from 0 to len
 // with capacity len + padding

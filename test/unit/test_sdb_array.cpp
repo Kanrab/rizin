@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: MIT
 
-#include <sdb.h>
-#include "minunit.h"
+#include <sdb.hpp>
+#include "minunit.hpp"
 
 bool test_sdb_array_push_pop(void) {
 	Sdb *db = sdb_new(NULL, NULL, false);

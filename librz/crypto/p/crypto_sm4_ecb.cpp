@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2023 0xSh4dy <rakshitawasthi17@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_lib.h>
-#include <rz_crypto.h>
-#include "crypto_sm4.h"
+#include <rz_lib.hpp>
+#include <rz_crypto.hpp>
+#include "crypto_sm4.hpp"
 
 static const ut8 sbox[256] = { 0xd6, 0x90, 0xe9, 0xfe, 0xcc, 0xe1, 0x3d, 0xb7,
 	0x16, 0xb6, 0x14, 0xc2, 0x28, 0xfb, 0x2c, 0x05,

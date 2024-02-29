@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2014 Ilya V. Matveychikov <i.matveychikov@milabs.ru>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
+#include <rz_analysis.hpp>
 #include "analysis_tms320c64x.c"
-#include "../../asm/arch/tms320/tms320_dasm.h"
+#include "../../asm/arch/tms320/tms320_dasm.hpp"
 
 typedef int (*TMS_ANALYSIS_OP_FN)(RzAnalysis *analysis, RzAnalysisOp *op, ut64 addr, const ut8 *buf, int len);
 

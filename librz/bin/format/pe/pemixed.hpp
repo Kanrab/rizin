@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2018 JohnPeng47 <johnpeng47@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include "pe.h"
+#include <rz_types.hpp>
+#include "pe.hpp"
 
 #define SUB_BIN_DOS    0
 #define SUB_BIN_NATIVE 1

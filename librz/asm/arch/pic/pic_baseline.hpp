@@ -4,8 +4,8 @@
 #ifndef PIC_BASELINE_H
 #define PIC_BASELINE_H
 
-#include <rz_types.h>
-#include <rz_asm.h>
+#include <rz_types.hpp>
+#include <rz_asm.hpp>
 
 typedef enum {
 	PIC_BASELINE_OP_ARGS_NONE = 0,

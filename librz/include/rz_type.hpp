@@ -4,12 +4,12 @@
 #ifndef RZ_TYPE_H
 #define RZ_TYPE_H
 
-#include <rz_types.h>
-#include <rz_util/rz_num.h>
-#include <rz_util/rz_print.h>
-#include <rz_bind.h>
-#include <rz_io.h>
-#include <rz_list.h>
+#include <rz_types.hpp>
+#include <rz_util/rz_num.hpp>
+#include <rz_util/rz_print.hpp>
+#include <rz_bind.hpp>
+#include <rz_io.hpp>
+#include <rz_list.hpp>
 
 #ifdef __cplusplus
 extern "C" {

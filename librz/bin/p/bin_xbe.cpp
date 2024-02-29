@@ -3,15 +3,15 @@
 // SPDX-FileCopyrightText: 2014-2019 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_bin.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_bin.hpp>
 #include <string.h>
-#include "../format/xbe/xbe.h"
+#include "../format/xbe/xbe.hpp"
 
 static const char *kt_name[] = {
-#include "../format/xbe/kernel.h"
+#include "../format/xbe/kernel.hpp"
 };
 
 static bool read_xbe_header(xbe_header *hdr, RzBuffer *b, ut64 off) {

@@ -2,13 +2,13 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <string.h>
-#include <rz_bin.h>
-#include <rz_config.h>
-#include <rz_cons.h>
-#include <rz_core.h>
-#include <rz_demangler.h>
-#include "../bin/pdb/pdb_downloader.h"
-#include "../core_private.h"
+#include <rz_bin.hpp>
+#include <rz_config.hpp>
+#include <rz_cons.hpp>
+#include <rz_core.hpp>
+#include <rz_demangler.hpp>
+#include "../bin/pdb/pdb_downloader.hpp"
+#include "../core_private.hpp"
 
 static int bin_is_executable(RzBinObject *obj) {
 	void **it;

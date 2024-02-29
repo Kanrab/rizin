@@ -20,20 +20,20 @@
    Free Software Foundation, 51 Franklin Street - Fifth Floor, Boston,
    MA 02110-1301, USA.  */
 
-#include "sysdep.h"
-#include "disas-asm.h"
-#include "opcode/nios2.h"
-#include "libiberty.h"
+#include "sysdep.hpp"
+#include "disas-asm.hpp"
+#include "opcode/nios2.hpp"
+#include "libiberty.hpp"
 #include <string.h>
-#include <assert.h>
+#include <assert.hpp>
 #include <stdlib.h>
 
 /* No symbol table is available when this code runs out in an embedded
    system as when it is used for disassembler support in a monitor.  */
 #if !defined(EMBEDDED_ENV)
 #define SYMTAB_AVAILABLE 1
-#include "elf-bfd.h"
-//#include "elf/nios2.h"
+#include "elf-bfd.hpp"
+//#include "elf/nios2.hpp"
 #endif
 
 /* Length of Nios II instruction in bytes.  */

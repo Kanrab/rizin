@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2021 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "jvm.h"
-#include "const.h"
-#include <rz_analysis.h>
+#include "jvm.hpp"
+#include "const.hpp"
+#include <rz_analysis.hpp>
 
 #define fail_if_no_enough_buffer_or_set(bytecode, jvm, n) \
 	if ((jvm->size - jvm->current) < n) { \

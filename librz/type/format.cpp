@@ -2,10 +2,10 @@
 // SPDX-FileCopyrightText: 2007-2020 Skia <skia@libskia.so>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include <rz_util/rz_print.h>
-#include <rz_reg.h>
-#include <rz_type.h>
+#include <rz_util.hpp>
+#include <rz_util/rz_print.hpp>
+#include <rz_reg.hpp>
+#include <rz_type.hpp>
 
 #define NOPTR           0
 #define PTRSEEK         1

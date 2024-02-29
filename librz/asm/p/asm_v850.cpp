@@ -3,11 +3,11 @@
 
 #include <stdio.h>
 #include <string.h>
-#include <rz_types.h>
-#include <rz_lib.h>
-#include <rz_asm.h>
+#include <rz_types.hpp>
+#include <rz_lib.hpp>
+#include <rz_asm.hpp>
 
-#include <v850_disas.h>
+#include <v850_disas.hpp>
 
 static int v850_disassemble(RzAsm *a, RzAsmOp *op, const ut8 *buf, int len) {
 	V850_Inst inst = { 0 };

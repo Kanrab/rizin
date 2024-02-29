@@ -5,14 +5,14 @@
 #ifndef PYC_DIS_H
 #define PYC_DIS_H
 
-#include <rz_types.h>
-#include <rz_lib.h>
-#include <rz_util.h>
-#include <rz_asm.h>
+#include <rz_types.hpp>
+#include <rz_lib.hpp>
+#include <rz_util.hpp>
+#include <rz_asm.hpp>
 
-#include "opcode.h"
+#include "opcode.hpp"
 
-#include "../../../bin/format/pyc/marshal.h"
+#include "../../../bin/format/pyc/marshal.hpp"
 
 int rz_pyc_disasm(RzAsmOp *op, const ut8 *buf, RzList /*<py_code_objects *>*/ *cobjs, ut64 pc, pyc_opcodes *opcodes);
 

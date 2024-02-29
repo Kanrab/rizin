@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2017-2018 maijin <maijin21@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_asm.h>
-#include <rz_lib.h>
+#include <rz_asm.hpp>
+#include <rz_lib.hpp>
 
 static int chip8_disassemble(RzAsm *a, RzAsmOp *op, const ut8 *b, int l) {
 	ut16 opcode = rz_read_be16(b);

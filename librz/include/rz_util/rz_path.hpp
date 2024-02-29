@@ -1,7 +1,7 @@
 #ifndef RZ_UTIL_PATH_H_
 #define RZ_UTIL_PATH_H_
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 #ifdef __cplusplus
 extern "C" {

@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2023 billow <billow.fun@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <capstone/capstone.h>
-#include <capstone/tricore.h>
-#include "tricore.h"
+#include <capstone/capstone.hpp>
+#include <capstone/tricore.hpp>
+#include "tricore.hpp"
 
 static inline cs_mode tricore_cpu_to_cs_mode(const char *cpu_type) {
 	if (RZ_STR_ISNOTEMPTY(cpu_type)) {

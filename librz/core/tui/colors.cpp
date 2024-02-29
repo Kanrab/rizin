@@ -3,13 +3,13 @@
 
 #include <string.h>
 
-#include <rz_core.h>
-#include <rz_util.h>
+#include <rz_core.hpp>
+#include <rz_util.hpp>
 
-#include "../core_private.h"
-#include <rz_asm.h>
-#include <rz_util/rz_print.h>
-#include <rz_util/rz_strbuf.h>
+#include "../core_private.hpp"
+#include <rz_asm.hpp>
+#include <rz_util/rz_print.hpp>
+#include <rz_util/rz_strbuf.hpp>
 
 RZ_IPI void rz_core_visual_colors(RzCore *core) {
 	char *color = calloc(1, 64), cstr[32];

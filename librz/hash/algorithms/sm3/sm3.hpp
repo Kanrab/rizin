@@ -5,7 +5,7 @@
 #ifndef SM3_H
 #define SM3_H
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 #define SM3_DIGEST_SIZE 32
 #define SM3_BLOCK_SIZE  64

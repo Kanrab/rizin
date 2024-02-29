@@ -4,8 +4,8 @@
 #ifndef SH_RZIL_H
 #define SH_RZIL_H
 
-#include <rz_analysis.h>
-#include "../../../asm/arch/sh/disassembler.h"
+#include <rz_analysis.hpp>
+#include "../../../asm/arch/sh/disassembler.hpp"
 
 /**
  * \brief To store the context of the IL lifter ; Used to pass around information outside effects

@@ -4,11 +4,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <rz_lib.h>
-#include <rz_util.h>
-#include <rz_flag.h>
-#include <rz_analysis.h>
-#include <rz_parse.h>
+#include <rz_lib.hpp>
+#include <rz_util.hpp>
+#include <rz_flag.hpp>
+#include <rz_analysis.hpp>
+#include <rz_parse.hpp>
 
 static char *get_fcn_name(RzAnalysis *analysis, ut32 fcn_id) {
 	rz_cons_push();

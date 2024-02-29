@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 // SPDX-FileCopyrightText: 2021 Heersin <teablearcher@gmail.com>
 
-#include "luac_common.h"
+#include "luac_common.hpp"
 
 void luac_add_section(RzPVector /*<RzBinSection *>*/ *section_vec, char *name, ut64 offset, ut32 size, bool is_func) {
 	RzBinSection *bin_sec = RZ_NEW0(RzBinSection);
@@ -250,10 +250,10 @@ void _luac_build_info(LuaProto *proto, LuacBinInfo *info) {
 		proto_name = rz_str_dup((char *)proto->proto_name);
 	}
 
-	// 1.1 set section name as function_name.header
+	// 1.1 set section name as function_name.hppeader
 	current_offset = proto->offset;
 	current_size = proto->size;
-	section_name = rz_str_newf("%s.header", proto_name);
+	section_name = rz_str_newf("%s.hppeader", proto_name);
 	luac_add_section(info->section_vec, section_name, current_offset, current_size, false);
 	RZ_FREE(section_name);
 

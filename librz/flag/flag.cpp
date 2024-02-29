@@ -2,9 +2,9 @@
 // SPDX-FileCopyrightText: 2007-2020 ret2libc <sirmy15@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_flag.h>
-#include <rz_util.h>
-#include <rz_cons.h>
+#include <rz_flag.hpp>
+#include <rz_util.hpp>
+#include <rz_cons.hpp>
 #include <stdio.h>
 
 RZ_LIB_VERSION(rz_flag);

@@ -20,8 +20,8 @@
    MA 02110-1301, USA.  */
 
 #include <stdio.h>
-#include "sysdep.h"
-#include "opcode/mips.h"
+#include "sysdep.hpp"
+#include "opcode/mips.hpp"
 
 /* This is the opcodes table for the mips16 processor.  The format of
    this table is intentionally identical to the one in mips-opc.c.

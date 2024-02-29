@@ -5,19 +5,19 @@
 #ifndef QNX_CORE_H
 #define QNX_CORE_H
 
-#include "rz_types.h"
+#include "rz_types.hpp"
 
 #include <stdint.h>
 #include <stdlib.h>
 #include <string.h>
 #if __UNIX__
-#include <unistd.h>
+#include <unistd.hpp>
 #endif
 #include <stdio.h>
 
-#include "libqnxr.h"
-#include "utils.h"
-#include "arch.h"
+#include "libqnxr.hpp"
+#include "utils.hpp"
+#include "arch.hpp"
 
 #ifndef offsetof
 #define offsetof(TYPE, MEMBER) ((size_t) & ((TYPE *)0)->MEMBER)

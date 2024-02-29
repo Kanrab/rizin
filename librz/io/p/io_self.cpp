@@ -2,51 +2,51 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <rz_userconf.h>
-#include <rz_io.h>
-#include <rz_lib.h>
-#include <rz_cons.h>
+#include <rz_io.hpp>
+#include <rz_lib.hpp>
+#include <rz_cons.hpp>
 
 #if DEBUGGER
 #if __APPLE__
-#include <mach/vm_map.h>
-#include <mach/mach_init.h>
-#include <mach/mach_port.h>
-#include <mach/mach_interface.h>
-#include <mach/mach_traps.h>
-#include <mach/mach_types.h>
-// #include <mach/mach_vm.h>
-#include <mach/mach_error.h>
-#include <mach/task.h>
-#include <mach/task_info.h>
+#include <mach/vm_map.hpp>
+#include <mach/mach_init.hpp>
+#include <mach/mach_port.hpp>
+#include <mach/mach_interface.hpp>
+#include <mach/mach_traps.hpp>
+#include <mach/mach_types.hpp>
+// #include <mach/mach_vm.hpp>
+#include <mach/mach_error.hpp>
+#include <mach/task.hpp>
+#include <mach/task_info.hpp>
 void macosx_debug_regions(RzIO *io, task_t task, mach_vm_address_t address, int max);
 #elif __BSD__
 #if __FreeBSD__
-#include <sys/sysctl.h>
-#include <sys/user.h>
-#include <libutil.h>
+#include <sys/sysctl.hpp>
+#include <sys/user.hpp>
+#include <libutil.hpp>
 #elif __OpenBSD__ || __NetBSD__
-#include <sys/sysctl.h>
+#include <sys/sysctl.hpp>
 #elif __DragonFly__
 #include <sys/types.h>
-#include <sys/user.h>
-#include <sys/sysctl.h>
-#include <kvm.h>
+#include <sys/user.hpp>
+#include <sys/sysctl.hpp>
+#include <kvm.hpp>
 #endif
-#include <errno.h>
+#include <errno.hpp>
 bool bsd_proc_vmmaps(RzIO *io, int pid);
 #endif
 #ifdef __HAIKU__
-#include <kernel/image.h>
+#include <kernel/image.hpp>
 #endif
 #if defined __sun && defined _LP64
 #define _STRUCTURED_PROC 1 // to access newer proc data with additional fields
-#include <sys/procfs.h>
-#include <libproc.h>
+#include <sys/procfs.hpp>
+#include <libproc.hpp>
 #endif
 #ifdef _MSC_VER
-#include <rz_windows.h>
-#include <process.h> // to compile getpid for msvc windows
-#include <psapi.h>
+#include <rz_windows.hpp>
+#include <process.hpp> // to compile getpid for msvc windows
+#include <psapi.hpp>
 #endif
 
 typedef struct {
@@ -511,7 +511,7 @@ RZ_API RzLibStruct rizin_plugin = {
 #endif
 
 #if __APPLE__
-// mach/mach_vm.h not available for iOS
+// mach/mach_vm.hpp not available for iOS
 kern_return_t mach_vm_region_recurse(
 	vm_map_t target_task,
 	mach_vm_address_t *address,

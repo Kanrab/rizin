@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2015-2016 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "rz_io.h"
-#include "rz_lib.h"
-#include "rz_util.h"
+#include "rz_io.hpp"
+#include "rz_lib.hpp"
+#include "rz_util.hpp"
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>

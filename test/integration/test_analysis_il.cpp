@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2022 Florian Märkl <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
-#include "../unit/minunit.h"
+#include <rz_core.hpp>
+#include "../unit/minunit.hpp"
 
 /**
  * Test running an IL vm with Analysis connection independently of the global user-faced vm

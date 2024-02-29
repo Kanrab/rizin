@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2017-2020 condret
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_lib.h>
-#include <rz_core.h>
-#include <rz_lang.h>
+#include <rz_lib.hpp>
+#include <rz_core.hpp>
+#include <rz_lang.hpp>
 
 static int lang_lib_init(RzLang *user) {
 	return true;

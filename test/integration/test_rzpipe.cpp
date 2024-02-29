@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2020 ret2libc <sirmy15@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include <rz_socket.h>
-#include "../unit/minunit.h"
-#include "test_config.h"
+#include <rz_util.hpp>
+#include <rz_socket.hpp>
+#include "../unit/minunit.hpp"
+#include "test_config.hpp"
 
 static bool test_rzpipe(void) {
 #ifndef __WINDOWS__

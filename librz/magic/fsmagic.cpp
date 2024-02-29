@@ -34,18 +34,18 @@
 
 #if !USE_LIB_MAGIC
 
-#include <rz_magic.h>
-#include "file.h"
+#include <rz_magic.hpp>
+#include "file.hpp"
 #include <string.h>
 #include <stdlib.h>
 #include <sys/stat.h>
 /* Since major is a function on SVR4, we cannot use `ifndef major'.  */
 #ifdef MAJOR_IN_MKDEV
-#include <sys/mkdev.h>
+#include <sys/mkdev.hpp>
 #define HAVE_MAJOR
 #endif
 #ifdef MAJOR_IN_SYSMACROS
-#include <sys/sysmacros.h>
+#include <sys/sysmacros.hpp>
 #define HAVE_MAJOR
 #endif
 #ifdef major /* Might be defined in sys/types.h.  */

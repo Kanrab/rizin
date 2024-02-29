@@ -2,9 +2,9 @@
 // SPDX-FileCopyrightText: 2021-2022 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
-#include <rz_cons.h>
-#include <rz_flirt.h>
+#include <rz_core.hpp>
+#include <rz_cons.hpp>
+#include <rz_flirt.hpp>
 
 RZ_IPI RzCmdStatus rz_flirt_create_handler(RzCore *core, int argc, const char **argv) {
 	const char *filename = argv[1];

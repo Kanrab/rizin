@@ -1,4 +1,4 @@
-### sysinfoapi.h ###
+### sysinfoapi.hpp ###
 
 DnsHostnameToComputerNameExW=func
 func.DnsHostnameToComputerNameExW.args=3

@@ -2,10 +2,10 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <string.h>
-#include <rz_types.h>
-#include <rz_core.h>
+#include <rz_types.hpp>
+#include <rz_core.hpp>
 
-#include "axml_resources.h"
+#include "axml_resources.hpp"
 
 enum {
 	TYPE_STRING_POOL = 0x0001,

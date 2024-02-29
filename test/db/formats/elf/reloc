@@ -282,7 +282,7 @@ EXPECT=<<EOF
  7 fd: 5 +0x00000860 0x08000860 - 0x0800091f rwx vmap..eh_frame
 -- original
 - offset -   0 1  2 3  4 5  6 7  8 9  A B  C D  E F  0123456789ABCDEF
-0x0800006a  488b 45f0 488b 7808 b936 0600 0889 cee8  H.E.H.x..6......
+0x0800006a  488b 45f0 488b 7808 b936 0600 0889 cee8  H.E.hpp.x..6......
 - offset -   0 1  2 3  4 5  6 7  8 9  A B  C D  E F  0123456789ABCDEF
 0x0800064d  6669 6c65 6e61 6d65 2073 7065 6369 6669  filename specifi
 -- overwritten
@@ -407,8 +407,8 @@ pop eax
 leave
 ret
 - offset -   0 1  2 3  4 5  6 7  8 9  A B  C D  E F  0123456789ABCDEF
-0x0800007c  e8d7 c802 0055 89e5 68a2 0000 08e8 cec8  .....U..h.......
-0x0800008c  0200 31c0 c9c3 5589 e568 b100 0008 e8bd  ..1...U..h......
+0x0800007c  e8d7 c802 0055 89e5 68a2 0000 08e8 cec8  .....U..hpp.......
+0x0800008c  0200 31c0 c9c3 5589 e568 b100 0008 e8bd  ..1...U..hpp......
 0x0800009c  c802 0058 c9c3                           ...X..
 EOF
 RUN

@@ -5,7 +5,7 @@
 #ifndef _INCLUDE_XAP_DIS_H_
 #define _INCLUDE_XAP_DIS_H_
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 #define __packed __attribute__((__packed__))
 

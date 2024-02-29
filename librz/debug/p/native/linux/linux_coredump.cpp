@@ -1,14 +1,14 @@
 // SPDX-FileCopyrightText: 2016 Oscar Salvador <osalvador.vilardaga@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_debug.h>
+#include <rz_debug.hpp>
 
 #if __x86_64__ || __i386__ || __arm__ || __arm64__
-#include <sys/uio.h>
-#include <sys/ptrace.h>
-#include <asm/ptrace.h>
-#include "linux_coredump.h"
-#include "linux_ptrace.h"
+#include <sys/uio.hpp>
+#include <sys/ptrace.hpp>
+#include <asm/ptrace.hpp>
+#include "linux_coredump.hpp"
+#include "linux_ptrace.hpp"
 
 /* For compatibility */
 #if __x86_64__ || __arm64__

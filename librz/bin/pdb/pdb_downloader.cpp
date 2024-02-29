@@ -2,11 +2,11 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <string.h>
-#include <rz_util.h>
-#include <rz_core.h>
-#include <rz_windows.h>
-#include <rz_socket.h>
-#include "pdb_downloader.h"
+#include <rz_util.hpp>
+#include <rz_core.hpp>
+#include <rz_windows.hpp>
+#include <rz_socket.hpp>
+#include "pdb_downloader.hpp"
 
 static bool download_and_write(SPDBDownloaderOpt *opt, const char *file) {
 	char *dir = rz_str_newf("%s%s%s%s%s",

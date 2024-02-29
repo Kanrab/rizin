@@ -1,4 +1,4 @@
-### processthreadsapi.h ###
+### processthreadsapi.hpp ###
 
 CreateProcessA=func
 func.CreateProcessA.args=10

@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: 2021 borzacchiello <lucaborza@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util/rz_str_search.h>
-#include <rz_util/rz_utf8.h>
-#include <rz_util/rz_utf16.h>
-#include <rz_util/rz_utf32.h>
-#include <rz_util/rz_ebcdic.h>
+#include <rz_util/rz_str_search.hpp>
+#include <rz_util/rz_utf8.hpp>
+#include <rz_util/rz_utf16.hpp>
+#include <rz_util/rz_utf32.hpp>
+#include <rz_util/rz_ebcdic.hpp>
 
 typedef enum {
 	SKIP_STRING,

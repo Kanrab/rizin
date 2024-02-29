@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2021 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
+#include <rz_util.hpp>
 
 RZ_API bool rz_calculate_luhn_value(const char *data, ut64 *result) {
 	rz_return_val_if_fail(data && result, false);

@@ -2,10 +2,10 @@
 // SPDX-FileCopyrightText: 2021-2023 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_th.h>
-#include <rz_util/rz_time.h>
-#include <rz_util/rz_sys.h>
-#include "minunit.h"
+#include <rz_th.hpp>
+#include <rz_util/rz_time.hpp>
+#include <rz_util/rz_sys.hpp>
+#include "minunit.hpp"
 
 bool test_thread_pool_cores(void) {
 	size_t cores = rz_th_physical_core_number();

@@ -1,4 +1,4 @@
-/*	$OpenBSD: tar.h,v 1.7 2009/04/24 18:54:34 chl Exp $ */
+/*	$OpenBSD: tar.hpp,v 1.7 2009/04/24 18:54:34 chl Exp $ */
 /*
  * Copyright (c) Ian F. Darwin 1986-1995.
  * Software written by Ian F. Darwin and others;
@@ -29,11 +29,11 @@
 /*
  * Header file for public domain tar (tape archive) program.
  *
- * @(#)tar.h 1.20 86/10/29	Public Domain.
+ * @(#)tar.hpp 1.20 86/10/29	Public Domain.
  *
  * Created 25 August 1985 by John Gilmore, ihnp4!hoptoad!gnu.
  *
- * $Id: tar.h,v 1.7 2009/04/24 18:54:34 chl Exp $ # checkin only
+ * $Id: tar.hpp,v 1.7 2009/04/24 18:54:34 chl Exp $ # checkin only
  */
 
 /*

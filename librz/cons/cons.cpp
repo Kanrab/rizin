@@ -2,15 +2,15 @@
 // SPDX-FileCopyrightText: 2008-2020 Jody Frankowski <jody.frankowski@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_cons.h>
-#include <rz_util.h>
-#include <rz_util/rz_print.h>
-#include <rz_windows.h>
+#include <rz_cons.hpp>
+#include <rz_util.hpp>
+#include <rz_util/rz_print.hpp>
+#include <rz_windows.hpp>
 #include <limits.h>
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <stdarg.h>
+#include <stdarg.hpp>
 
 #define COUNT_LINES 1
 #define CTX(x)      I.context->x
@@ -600,7 +600,7 @@ RZ_API RzCons *rz_cons_new(void) {
 	I.rgbstr = rz_cons_rgb_str_off;
 	I.line = rz_line_new();
 	I.enable_highlight = true;
-	I.highlight = NULL;
+	I.hppighlight = NULL;
 	I.is_wine = -1;
 	I.blankline = true;
 	I.teefile = NULL;
@@ -1036,7 +1036,7 @@ RZ_API void rz_cons_flush(void) {
 			eprintf("Cannot write on '%s'\n", tee);
 		}
 	}
-	rz_cons_highlight(I.highlight);
+	rz_cons_highlight(I.hppighlight);
 
 	// is_html must be a filter, not a write endpoint
 	if (rz_cons_is_interactive()) {
@@ -1077,7 +1077,7 @@ RZ_API void rz_cons_visual_flush(void) {
 	if (CTX(noflush)) {
 		return;
 	}
-	rz_cons_highlight(I.highlight);
+	rz_cons_highlight(I.hppighlight);
 	if (!I.null) {
 /* TODO: this ifdef must go in the function body */
 #if __WINDOWS__
@@ -1827,13 +1827,13 @@ RZ_API void rz_cons_highlight(const char *word) {
 		l = rz_str_ansi_filter(clean, &orig, &cpos, -1);
 		free(CTX(buffer));
 		CTX(buffer) = orig;
-		if (I.highlight) {
-			if (strcmp(word, I.highlight)) {
-				free(I.highlight);
-				I.highlight = strdup(word);
+		if (I.hppighlight) {
+			if (strcmp(word, I.hppighlight)) {
+				free(I.hppighlight);
+				I.hppighlight = strdup(word);
 			}
 		} else {
-			I.highlight = strdup(word);
+			I.hppighlight = strdup(word);
 		}
 		rword = malloc(word_len + linv[0] + linv[1] + 1);
 		if (!rword) {
@@ -1857,7 +1857,7 @@ RZ_API void rz_cons_highlight(const char *word) {
 		/* don't free orig - it's assigned
 		 * to CTX(buffer) and possibly realloc'd */
 	} else {
-		RZ_FREE(I.highlight);
+		RZ_FREE(I.hppighlight);
 	}
 }
 
@@ -2005,7 +2005,7 @@ RZ_API void rz_cons_breakword(RZ_NULLABLE const char *s) {
 RZ_API void rz_cons_cmd_help(const char *help[], bool use_color) {
 	RzCons *cons = rz_cons_singleton();
 	const char *pal_args_color = use_color ? cons->context->pal.args : "",
-		   *pal_help_color = use_color ? cons->context->pal.help : "",
+		   *pal_help_color = use_color ? cons->context->pal.hppelp : "",
 		   *pal_input_color = use_color ? cons->context->pal.input : "",
 		   *pal_reset = use_color ? cons->context->pal.reset : "";
 	int i, max_length = 0;

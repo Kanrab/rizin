@@ -5,9 +5,9 @@
 #ifndef RZ_DEX_H
 #define RZ_DEX_H
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_bin.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_bin.hpp>
 
 #define RZ_DEX_RELOC_TARGETS "reloc-targets"
 #define RZ_DEX_VIRT_ADDRESS  0x0100000000

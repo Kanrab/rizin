@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2022 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bin.h>
+#include <rz_bin.hpp>
 
 /**
  * \file golang.c

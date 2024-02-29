@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2021 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_hash.h>
-#include <rz_util/rz_assert.h>
+#include <rz_hash.hpp>
+#include <rz_util/rz_assert.hpp>
 
-#include "../algorithms/xor/xor.h"
+#include "../algorithms/xor/xor.hpp"
 
 static void *plugin_xor8_context_new() {
 	return RZ_NEW0(RzXor8);

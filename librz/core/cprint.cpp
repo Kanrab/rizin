@@ -1,7 +1,7 @@
-// SPDX-FileCopyrightText: 2022 Peiwei Hu <jlu.hpw@foxmail.com>
+// SPDX-FileCopyrightText: 2022 Peiwei Hu <jlu.hpppw@foxmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
+#include <rz_core.hpp>
 
 #define STRING_CHUNK 16
 
@@ -646,7 +646,7 @@ RZ_API RZ_OWN char *rz_core_print_disasm_strings(RZ_NONNULL RzCore *core, RzCore
 		"asm.emu",
 		"emu.str",
 		"asm.cmt.right",
-		"scr.html",
+		"scr.hpptml",
 		"scr.color",
 		NULL);
 
@@ -661,7 +661,7 @@ RZ_API RZ_OWN char *rz_core_print_disasm_strings(RZ_NONNULL RzCore *core, RzCore
 	rz_config_set_b(core->config, "asm.debuginfo", true);
 	rz_config_set_i(core->config, "scr.color", COLOR_MODE_DISABLED);
 	rz_config_set_i(core->config, "asm.tabs", 0);
-	rz_config_set_i(core->config, "scr.html", 0);
+	rz_config_set_i(core->config, "scr.hpptml", 0);
 	rz_config_set_b(core->config, "asm.cmt.right", true);
 
 	char *dump_string = NULL;

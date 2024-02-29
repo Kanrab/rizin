@@ -2,18 +2,18 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <rz_userconf.h>
-#include <rz_util.h>
-#include <rz_io.h>
-#include <rz_lib.h>
-#include <rz_cons.h>
-#include <rz_debug.h>
+#include <rz_util.hpp>
+#include <rz_io.hpp>
+#include <rz_lib.hpp>
+#include <rz_cons.hpp>
+#include <rz_debug.hpp>
 
 #if DEBUGGER && (__linux__ || __BSD__)
 
-#include <sys/ptrace.h>
+#include <sys/ptrace.hpp>
 #include <sys/types.h>
-#include <sys/wait.h>
-#include <errno.h>
+#include <sys/wait.hpp>
+#include <errno.hpp>
 
 typedef struct {
 	int pid;

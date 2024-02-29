@@ -35,13 +35,13 @@
 */
 
 #if HAVE_CONFIG_H
-# include "config.h"
+# include "config.hpp"
 #endif
 
-#include <assert.h>
+#include <assert.hpp>
 
-#include "aes-internal.h"
-#include "macros.h"
+#include "aes-internal.hpp"
+#include "macros.hpp"
 
 /* For fat builds */
 #if HAVE_NATIVE_aes_encrypt

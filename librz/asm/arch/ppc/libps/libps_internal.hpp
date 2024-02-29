@@ -3,7 +3,7 @@
 
 #ifndef LIBPS_INTERNAL_H
 #define LIBPS_INTERNAL_H
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 #define TYPE_NONE 0
 #define TYPE_REG  1

@@ -3,17 +3,17 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <stdio.h>
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_util/rz_buf.h>
-#include <rz_util/rz_assert.h>
-#include <rz_lib.h>
-#include <rz_bin.h>
-#include <rz_io.h>
-#include <rz_cons.h>
-#include "../i/private.h"
-#include "elf/elf.h"
-#include <rz_util/ht_uu.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_util/rz_buf.hpp>
+#include <rz_util/rz_assert.hpp>
+#include <rz_lib.hpp>
+#include <rz_bin.hpp>
+#include <rz_io.hpp>
+#include <rz_cons.hpp>
+#include "../i/private.hpp"
+#include "elf/elf.hpp"
+#include <rz_util/ht_uu.hpp>
 
 #define rz_bin_file_get_elf(bf) ((ELFOBJ *)bf->o->bin_obj)
 

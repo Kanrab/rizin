@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2013 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_egg.h>
+#include <rz_egg.hpp>
 
 unsigned long armle_osx_reverse[] = {
 	0xe3a00002, 0xe3a01001, 0xe3a02006, 0xe3a0c061, 0xef000080, 0xe1a0a000, 0xeb000001,

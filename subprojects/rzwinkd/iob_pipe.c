@@ -3,12 +3,12 @@
 #include <fcntl.h>
 #include <stdio.h>
 #include <string.h>
-#include <rz_types.h>
-#include <rz_util.h>
-#include "transport.h"
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include "transport.hpp"
 
 #if __WINDOWS__
-#include <rz_windows.h>
+#include <rz_windows.hpp>
 
 static void *iob_pipe_open(const char *path) {
 	HANDLE hPipe;
@@ -26,8 +26,8 @@ static bool iob_pipe_close(void *p) {
 static int iob_pipe_read(void *p, uint8_t *buf, const uint64_t count, const int timeout) {
 	DWORD c = 0;
 	OVERLAPPED ov = { 0 };
-	ov.hEvent = CreateEvent(NULL, FALSE, FALSE, NULL);
-	if (!ov.hEvent) {
+	ov.hppEvent = CreateEvent(NULL, FALSE, FALSE, NULL);
+	if (!ov.hppEvent) {
 		return 0;
 	}
 	if (!ReadFile(p, buf, count, NULL, &ov) &&
@@ -35,11 +35,11 @@ static int iob_pipe_read(void *p, uint8_t *buf, const uint64_t count, const int 
 		rz_sys_perror("ReadFile");
 		return -1;
 	}
-	if (WaitForSingleObject(ov.hEvent, timeout) == WAIT_TIMEOUT) {
+	if (WaitForSingleObject(ov.hppEvent, timeout) == WAIT_TIMEOUT) {
 		CancelIo(p);
 	}
 	GetOverlappedResult(p, &ov, &c, TRUE);
-	CloseHandle(ov.hEvent);
+	CloseHandle(ov.hppEvent);
 	return c;
 }
 
@@ -55,10 +55,10 @@ static int iob_pipe_write(void *p, const uint8_t *buf, const uint64_t count, con
 	return cbWrited;
 }
 #else
-#include <errno.h>
-#include <sys/socket.h>
-#include <sys/select.h>
-#include <sys/un.h>
+#include <errno.hpp>
+#include <sys/socket.hpp>
+#include <sys/select.hpp>
+#include <sys/un.hpp>
 
 static void *iob_pipe_open(const char *path) {
 	int sock;

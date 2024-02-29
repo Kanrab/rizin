@@ -4,10 +4,10 @@
 #ifndef RZ_PLATFORM_H
 #define RZ_PLATFORM_H
 
-#include <rz_config.h>
-#include <rz_flag.h>
-#include <rz_il.h>
-#include <sdb.h>
+#include <rz_config.hpp>
+#include <rz_flag.hpp>
+#include <rz_il.hpp>
+#include <sdb.hpp>
 
 #ifdef __cplusplus
 extern "C" {

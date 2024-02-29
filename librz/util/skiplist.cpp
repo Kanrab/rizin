@@ -7,7 +7,7 @@
 
 // https://en.wikipedia.org/wiki/Skip_list
 
-#include <rz_skiplist.h>
+#include <rz_skiplist.hpp>
 
 #define SKIPLIST_MAX_DEPTH 31
 

@@ -1,14 +1,14 @@
 // SPDX-FileCopyrightText: 2021 Anton Kochkov <anton.kochkov@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_list.h>
-#include <rz_util/rz_str.h>
-#include <rz_util/rz_assert.h>
-#include <rz_type.h>
-#include <tree_sitter/api.h>
+#include <rz_types.hpp>
+#include <rz_list.hpp>
+#include <rz_util/rz_str.hpp>
+#include <rz_util/rz_assert.hpp>
+#include <rz_type.hpp>
+#include <tree_sitter/api.hpp>
 
-#include <types_parser.h>
+#include <types_parser.hpp>
 
 // Searching and storing types in the context of the parser (types and callables hashables)
 

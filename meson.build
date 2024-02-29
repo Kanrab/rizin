@@ -60,7 +60,7 @@ lib_name_prefix = []
 if is_static_libs_only and cc.get_id() == 'msvc'
   # On MSVC meson uses the .a suffix and lib as prefix, but cmake and other
   # tools expect a .lib suffix and no prefix
-  # https://mesonbuild.com/FAQ.html#why-does-building-my-project-with-msvc-output-static-libraries-called-libfooa
+  # https://mesonbuild.com/FAQ.hpptml#why-does-building-my-project-with-msvc-output-static-libraries-called-libfooa
   lib_name_suffix = 'lib'
   lib_name_prefix = ''
 endif
@@ -347,7 +347,7 @@ foreach it : ccs
     it_mth = it_cc.find_library('m', required: false, static: is_static_build)
   endif
   it_lrt = dependency('', required: false, native: it_native)
-  if not it_cc.has_function('clock_gettime', prefix: '#include <time.h>') and it_cc.has_header_symbol('features.h', '__GLIBC__')
+  if not it_cc.has_function('clock_gettime', prefix: '#include <time.hpp>') and it_cc.has_header_symbol('features.hpp', '__GLIBC__')
     it_lrt = it_cc.find_library('rt', required: true, static: is_static_build)
   endif
   have_lrt = not ['windows', 'darwin', 'openbsd', 'android', 'haiku'].contains(it_machine.system())
@@ -396,9 +396,9 @@ foreach it : ccs
   it_userconf.set10('WITH_GPL', get_option('use_gpl'))
   it_userconf.set10('WITH_SWIFT_DEMANGLER', get_option('use_swift_demangler'))
   it_userconf.set10('RZ_BUILD_DEBUG', get_option('buildtype').startswith('debug'))
-  ok = it_cc.has_header_symbol('sys/personality.h', 'ADDR_NO_RANDOMIZE')
+  ok = it_cc.has_header_symbol('sys/personality.hpp', 'ADDR_NO_RANDOMIZE')
   it_userconf.set10('HAVE_DECL_ADDR_NO_RANDOMIZE', ok)
-  ok = it_cc.has_header_symbol('sys/procctl.h', 'PROC_ASLR_CTL')
+  ok = it_cc.has_header_symbol('sys/procctl.hpp', 'PROC_ASLR_CTL')
   it_userconf.set10('HAVE_DECL_PROCCTL_ASLR_CTL', ok)
   it_userconf.set10('HAVE_THREADS', it_th.found())
   it_userconf.set10('HAVE_PTHREAD', have_pthread)
@@ -422,7 +422,7 @@ foreach it : ccs
     code = '#include <stdlib.h>\n\nint main() { char **env = environ; }'
     have_environ = cc.links(code, name: 'have environ')
   else
-    code = '#include <unistd.h>\nextern char **environ;\nint main() { char **env = environ; }'
+    code = '#include <unistd.hpp>\nextern char **environ;\nint main() { char **env = environ; }'
     have_environ = it_cc.links(code, name: 'have extern char **environ')
   endif
   it_userconf.set10('HAVE_ENVIRON', have_environ)
@@ -438,35 +438,35 @@ foreach it : ccs
       ['arc4random_uniform', '#include <stdlib.h>', []],
       ['explicit_bzero', '#include <string.h>', []],
       ['explicit_memset', '#include <string.h>', []],
-      ['clock_nanosleep', '#include <time.h>', []],
-      ['clock_gettime', '#include <time.h>', [it_lrt]],
-      ['sigaction', '#include <signal.h>', []],
-      ['pipe', '#include <unistd.h>', []],
-      ['execv', '#include <unistd.h>', []],
-      ['execve', '#include <unistd.h>', []],
-      ['execvp', '#include <unistd.h>', []],
-      ['execl', '#include <unistd.h>', []],
+      ['clock_nanosleep', '#include <time.hpp>', []],
+      ['clock_gettime', '#include <time.hpp>', [it_lrt]],
+      ['sigaction', '#include <signal.hpp>', []],
+      ['pipe', '#include <unistd.hpp>', []],
+      ['execv', '#include <unistd.hpp>', []],
+      ['execve', '#include <unistd.hpp>', []],
+      ['execvp', '#include <unistd.hpp>', []],
+      ['execl', '#include <unistd.hpp>', []],
       ['system', '#include <stdlib.h>', []],
       ['realpath', '#include <stdlib.h>', []],
-      ['fork', '#include <unistd.h>', []],
-      ['nice', '#include <unistd.h>', []],
-      ['copyfile', '#include <copyfile.h>', []],
+      ['fork', '#include <unistd.hpp>', []],
+      ['nice', '#include <unistd.hpp>', []],
+      ['copyfile', '#include <copyfile.hpp>', []],
       ['strlcpy', '#include <string.h>', []],
       ['strnlen', '#include <string.h>', []],
-      ['shm_open', '#include <sys/mman.h>', [it_lrt]],
+      ['shm_open', '#include <sys/mman.hpp>', [it_lrt]],
       ['openpty', '', [it_utl]],
       ['forkpty', '', [it_utl]],
       ['login_tty', '', [it_utl]],
-      ['pipe2', '#define _GNU_SOURCE\n#include <fcntl.h>\n#include <unistd.h>', []],
+      ['pipe2', '#define _GNU_SOURCE\n#include <fcntl.h>\n#include <unistd.hpp>', []],
       # copy_file_range for now disable on freebsd as it s not reliable even for small chunks
-      ['copy_file_range', '#ifdef __linux__\n#define _GNU_SOURCE\n#include <unistd.h>\n#endif', []],
+      ['copy_file_range', '#ifdef __linux__\n#define _GNU_SOURCE\n#include <unistd.hpp>\n#endif', []],
       ['backtrace', '', [it_lexecinfo]],
       ['__builtin_bswap16', '', []],
       ['__builtin_bswap32', '', []],
       ['__builtin_bswap64', '', []],
       ['__builtin_clzll', '', []],
       ['posix_memalign', '#include <stdlib.h>', []],
-      ['_aligned_malloc', '#include <malloc.h>', []],
+      ['_aligned_malloc', '#include <malloc.hpp>', []],
     ]
     func = item[0]
     ok = it_cc.has_function(func, prefix: item[1], dependencies: item[2])
@@ -474,11 +474,11 @@ foreach it : ccs
   endforeach
 
   foreach item : [
-      ['linux/ashmem.h', '', []],
-      ['sys/shm.h', '', []],
-      ['sys/ipc.h', '', []],
-      ['sys/mman.h', '', []],
-      ['inttypes.h', '', []],
+      ['linux/ashmem.hpp', '', []],
+      ['sys/shm.hpp', '', []],
+      ['sys/ipc.hpp', '', []],
+      ['sys/mman.hpp', '', []],
+      ['inttypes.hpp', '', []],
     ]
     hdr = item[0]
     ok = it_cc.has_header(hdr, prefix: item[1], dependencies: item[2])
@@ -534,7 +534,7 @@ if packager_version != ''
 endif
 rz_version_h = configure_file(
   input: 'librz/include/rz_build_version.h.in',
-  output: 'rz_build_version.h',
+  output: 'rz_build_version.hpp',
   configuration: versionconf,
   install_dir: rizin_incdir
 )

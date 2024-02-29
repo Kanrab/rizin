@@ -1,14 +1,14 @@
 // SPDX-FileCopyrightText: 2020 HoundThe <cgkajm@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
-#include <rz_analysis.h>
-#include <rz_bin.h>
-#include <rz_type.h>
-#include <rz_util/rz_path.h>
-#include "test_config.h"
-#include "test_types.h"
-#include "../unit/minunit.h"
+#include <rz_core.hpp>
+#include <rz_analysis.hpp>
+#include <rz_bin.hpp>
+#include <rz_type.hpp>
+#include <rz_util/rz_path.hpp>
+#include "test_config.hpp"
+#include "test_types.hpp"
+#include "../unit/minunit.hpp"
 
 #define check_fn(addr, name, sig) \
 	{ \

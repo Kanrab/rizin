@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2021 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "entropy.h"
+#include "entropy.hpp"
 #include <stdlib.h>
 #include <math.h>
-#include <rz_util/rz_assert.h>
+#include <rz_util/rz_assert.hpp>
 
 bool rz_entropy_init(RzEntropy *ctx) {
 	rz_return_val_if_fail(ctx, false);

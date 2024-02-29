@@ -4,7 +4,7 @@
 #ifndef RZ_CRCA_H
 #define RZ_CRCA_H
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 typedef ut64 utcrc;
 #define UTCRC_C(x) ((utcrc)(x))

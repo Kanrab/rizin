@@ -4,10 +4,10 @@
 #ifndef RZIL_ANALYSIS_X86_IL_H
 #define RZIL_ANALYSIS_X86_IL_H
 
-#include <rz_lib.h>
-#include <rz_analysis.h>
-#include <capstone/capstone.h>
-#include <capstone/x86.h>
+#include <rz_lib.hpp>
+#include <rz_analysis.hpp>
+#include <capstone/capstone.hpp>
+#include <capstone/x86.hpp>
 
 #define BITS_PER_BYTE    8
 #define GPR_FAMILY_COUNT 10

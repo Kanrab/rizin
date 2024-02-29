@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: 2022 billow <billow.fun@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
-#include <rz_analysis.h>
-#include <rz_project.h>
+#include <rz_core.hpp>
+#include <rz_analysis.hpp>
+#include <rz_project.hpp>
 
-#include "../unit/minunit.h"
-#include <rz_util/rz_graph_drawable.h>
+#include "../unit/minunit.hpp"
+#include <rz_util/rz_graph_drawable.hpp>
 
 static inline RzGraph *graph_by_function_name(RzCore *core, RzCoreGraphType t, const char *name) {
 	RzAnalysisFunction *f = rz_analysis_get_function_byname(core->analysis, name);

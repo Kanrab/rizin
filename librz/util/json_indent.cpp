@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2012-2017 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: MIT
 
-#include <rz_util.h>
+#include <rz_util.hpp>
 
 static void doIndent(int idt, char **o, const char *tab) {
 	int i;

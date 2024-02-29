@@ -5,7 +5,7 @@
 #ifndef PYC_MAGIC_H
 #define PYC_MAGIC_H
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 struct pyc_version {
 	ut32 magic;

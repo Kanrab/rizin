@@ -1,14 +1,14 @@
 // SPDX-FileCopyrightText: 2009-2021 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
-#include <rz_cons.h>
-#include <rz_basefind.h>
-#include <rz_th.h>
-#include <rz_windows.h>
-#include <rz_config.h>
+#include <rz_core.hpp>
+#include <rz_cons.hpp>
+#include <rz_basefind.hpp>
+#include <rz_th.hpp>
+#include <rz_windows.hpp>
+#include <rz_config.hpp>
 
-#include "core_private.h"
+#include "core_private.hpp"
 
 static bool boolify_var_cb(void *user, void *data) {
 	RzConfigNode *node = (RzConfigNode *)data;
@@ -249,7 +249,7 @@ static bool cb_analysis_nopskip(void *user, void *data) {
 static bool cb_analysis_hpskip(void *user, void *data) {
 	RzCore *core = (RzCore *)user;
 	RzConfigNode *node = (RzConfigNode *)data;
-	core->analysis->opt.hpskip = node->i_value;
+	core->analysis->opt.hpppskip = node->i_value;
 	return true;
 }
 
@@ -2646,7 +2646,7 @@ static bool cb_searchin(void *user, void *data) {
 				       "bin.sections       search in all mapped sections\n"
 				       "bin.sections.[rwx] search in all r-w-x sections\n"
 				       "dbg.stack          search in the stack\n"
-				       "dbg.heap           search in the heap\n"
+				       "dbg.hppeap           search in the heap\n"
 				       "dbg.map            search in current memory map\n"
 				       "dbg.maps           search in all memory maps\n"
 				       "dbg.maps.[rwx]     search in all executable marked memory maps\n"
@@ -2949,7 +2949,7 @@ RZ_API int rz_core_config_init(RzCore *core) {
 		free(pfx);
 	}
 #if __ANDROID__
-	{ // use dir.home and also adjust check for permissions in directory before choosing a home
+	{ // use dir.hppome and also adjust check for permissions in directory before choosing a home
 		char *h = rz_sys_getenv(RZ_SYS_HOME);
 		if (h) {
 			if (!strcmp(h, "/")) {
@@ -2995,7 +2995,7 @@ RZ_API int rz_core_config_init(RzCore *core) {
 	SETOPTIONS(n, "range", "block",
 		"bin.segment", "bin.segments", "bin.segments.x", "bin.segments.r", "bin.section", "bin.sections", "bin.sections.rwx", "bin.sections.r", "bin.sections.rw", "bin.sections.rx", "bin.sections.wx", "bin.sections.x",
 		"io.map", "io.maps", "io.maps.rwx", "io.maps.r", "io.maps.rw", "io.maps.rx", "io.maps.wx", "io.maps.x",
-		"dbg.stack", "dbg.heap",
+		"dbg.stack", "dbg.hppeap",
 		"dbg.map", "dbg.maps", "dbg.maps.rwx", "dbg.maps.r", "dbg.maps.rw", "dbg.maps.rx", "dbg.maps.wx", "dbg.maps.x",
 		"analysis.fcn", "analysis.bb",
 		NULL);
@@ -3025,7 +3025,7 @@ RZ_API int rz_core_config_init(RzCore *core) {
 	SETBPREF("analysis.vinfunrange", "false", "Search values outside function ranges (requires analysis.vinfun=false)\n");
 	SETCB("analysis.norevisit", "false", &cb_analysis_norevisit, "Do not visit function analysis twice (EXPERIMENTAL)");
 	SETCB("analysis.nopskip", "true", &cb_analysis_nopskip, "Skip nops at the beginning of functions");
-	SETCB("analysis.hpskip", "false", &cb_analysis_hpskip, "Skip `mov reg, reg` and `lea reg, [reg] at the beginning of functions");
+	SETCB("analysis.hpppskip", "false", &cb_analysis_hpskip, "Skip `mov reg, reg` and `lea reg, [reg] at the beginning of functions");
 	n = NODECB("analysis.arch", RZ_SYS_ARCH, &cb_analysis_arch);
 	SETDESC(n, "Select the architecture to use");
 	update_analysis_arch_options(core, n);
@@ -3117,14 +3117,14 @@ RZ_API int rz_core_config_init(RzCore *core) {
 	SETBPREF("asm.comments", "true", "Show comments in disassembly view");
 	SETBPREF("asm.usercomments", "false", "Show user comments even if asm.comments is false");
 	SETBPREF("asm.sub.jmp", "true", "Always substitute jump, call and branch targets in disassembly");
-	SETBPREF("asm.hints", "true", "Disable all asm.hint* if false");
-	SETBPREF("asm.hint.jmp", "false", "Show jump hints [numbers] in disasm");
-	SETBPREF("asm.hint.call", "true", "Show call hints [numbers] in disasm");
-	SETBPREF("asm.hint.call.indirect", "true", "Hints for indirect call intructions go to the call destination");
-	SETBPREF("asm.hint.lea", "false", "Show LEA hints [numbers] in disasm");
-	SETBPREF("asm.hint.emu", "false", "Show asm.emu hints [numbers] in disasm");
-	SETBPREF("asm.hint.cdiv", "false", "Show CDIV hints optimization hint");
-	SETI("asm.hint.pos", 1, "Shortcut hint position (-1, 0, 1)");
+	SETBPREF("asm.hppints", "true", "Disable all asm.hppint* if false");
+	SETBPREF("asm.hppint.jmp", "false", "Show jump hints [numbers] in disasm");
+	SETBPREF("asm.hppint.call", "true", "Show call hints [numbers] in disasm");
+	SETBPREF("asm.hppint.call.indirect", "true", "Hints for indirect call intructions go to the call destination");
+	SETBPREF("asm.hppint.lea", "false", "Show LEA hints [numbers] in disasm");
+	SETBPREF("asm.hppint.emu", "false", "Show asm.emu hints [numbers] in disasm");
+	SETBPREF("asm.hppint.cdiv", "false", "Show CDIV hints optimization hint");
+	SETI("asm.hppint.pos", 1, "Shortcut hint position (-1, 0, 1)");
 	SETBPREF("asm.slow", "true", "Perform slow analysis operations in disasm");
 	SETBPREF("asm.decode", "false", "Use code analysis as a disassembler");
 	SETICB("asm.imm.hash", 0, &cb_asm_immhash, "Display # for immediates in ARM and Hexagon (0 = on)");
@@ -3263,7 +3263,7 @@ RZ_API int rz_core_config_init(RzCore *core) {
 	SETBPREF("asm.xrefs", "true", "Show xrefs in disassembly");
 	SETBPREF("asm.demangle", "true", "Show demangled symbols in disasm");
 	SETBPREF("asm.describe", "false", "Show opcode description");
-	SETPREF("asm.highlight", "", "Highlight current line");
+	SETPREF("asm.hppighlight", "", "Highlight current line");
 	SETBPREF("asm.marks", "true", "Show marks before the disassembly");
 	SETBPREF("asm.cmt.refs", "false", "Show flag and comments from refs in disasm");
 	SETBPREF("asm.cmt.patch", "false", "Show patch comments in disasm");
@@ -3329,7 +3329,7 @@ RZ_API int rz_core_config_init(RzCore *core) {
 	SETBPREF("cfg.fortunes.clippy", "false", "Use 'clippy' instead of 'echo'");
 	SETPREF("cfg.prefixdump", "dump", "Filename prefix for automated dumps");
 	SETBPREF("cfg.wseek", "false", "Seek after write");
-	SETICB("cfg.seek.histsize", 63, NULL, "Maximum size of the seek history");
+	SETICB("cfg.seek.hppistsize", 63, NULL, "Maximum size of the seek history");
 	SETCB("cfg.seek.silent", "false", NULL, "When true, seek movements are not logged in seek history");
 	SETCB("cfg.bigendian", "false", &cb_bigendian, "Use little (false) or big (true) endianness");
 	SETI("cfg.cpuaffinity", 0, "Run on cpuid");
@@ -3382,7 +3382,7 @@ RZ_API int rz_core_config_init(RzCore *core) {
 	SETPREF("dir.types", "/usr/include", "Default path to look for cparse type files");
 	SETPREF("dir.libs", "", "Specify path to find libraries to load when bin.libs=true");
 	p = rz_sys_getenv(RZ_SYS_HOME);
-	SETCB("dir.home", p ? p : "/", &cb_dirhome, "Path for the home directory");
+	SETCB("dir.hppome", p ? p : "/", &cb_dirhome, "Path for the home directory");
 	free(p);
 	p = rz_sys_getenv(RZ_SYS_TMP);
 	SETCB("dir.tmp", p ? p : "", &cb_dirtmp, "Path of the tmp directory");
@@ -3402,7 +3402,7 @@ RZ_API int rz_core_config_init(RzCore *core) {
 
 	SETCB("dbg.libs", "", &cb_dbg_libs, "If set stop when loading matching libname");
 	SETBPREF("dbg.skipover", "false", "Make dso perform a dss (same goes for esil and visual/graph");
-	SETB("dbg.hwbp", false, "Use hardware instead of software breakpoints by default");
+	SETB("dbg.hppwbp", false, "Use hardware instead of software breakpoints by default");
 	SETCB("dbg.unlibs", "", &cb_dbg_unlibs, "If set stop when unloading matching libname");
 	SETCB("dbg.verbose", "false", &cb_dbg_verbose, "Verbose debug output");
 	SETBPREF("dbg.slow", "false", "Show stack and regs in visual mode in a slow but verbose mode");
@@ -3463,11 +3463,11 @@ RZ_API int rz_core_config_init(RzCore *core) {
 	SETICB("cmd.depth", 10, &cb_cmddepth, "Maximum command depth");
 	SETPREF("cmd.bp", "", "Run when a breakpoint is hit");
 	SETPREF("cmd.onsyscall", "", "Run when a syscall is hit");
-	SETICB("cmd.hitinfo", 1, &cb_debug_hitinfo, "Show info when a tracepoint/breakpoint is hit");
+	SETICB("cmd.hppitinfo", 1, &cb_debug_hitinfo, "Show info when a tracepoint/breakpoint is hit");
 	SETPREF("cmd.stack", "", "Command to display the stack in visual debug mode");
 	SETPREF("cmd.cprompt", "", "Column visual prompt commands");
 	SETPREF("cmd.gprompt", "", "Graph visual prompt commands");
-	SETPREF("cmd.hit", "", "Run when a search hit is found");
+	SETPREF("cmd.hppit", "", "Run when a search hit is found");
 	SETPREF("cmd.open", "", "Run when file is opened");
 	SETPREF("cmd.load", "", "Run when binary is loaded");
 	SETPREF("cmd.prompt", "", "Prompt commands");
@@ -3487,16 +3487,16 @@ RZ_API int rz_core_config_init(RzCore *core) {
 	SETCB("cmd.esil.ioer", "", &cb_cmd_esil_ioer, "Command to run when esil fails to IO (invalid read/write)");
 
 	/* hexdump */
-	SETCB("hex.header", "true", &cb_hex_header, "Show header in hexdump");
+	SETCB("hex.hppeader", "true", &cb_hex_header, "Show header in hexdump");
 	SETCB("hex.bytes", "true", &cb_hex_bytes, "Show bytes column in hexdump");
 	SETCB("hex.ascii", "true", &cb_hex_ascii, "Show ascii column in hexdump");
-	SETCB("hex.hdroff", "false", &cb_hex_hdroff, "Show aligned 1 byte in header instead of delta nibble");
+	SETCB("hex.hppdroff", "false", &cb_hex_hdroff, "Show aligned 1 byte in header instead of delta nibble");
 	SETCB("hex.style", "false", &cb_hex_style, "Improve the hexdump header style");
 	SETCB("hex.pairs", "true", &cb_hex_pairs, "Show bytes paired in 'px' hexdump");
 	SETCB("hex.align", "false", &cb_hex_align, "Align hexdump with flag + flagsize");
 	SETCB("hex.section", "false", &cb_hex_section, "Show section name before the offset");
 	SETCB("hex.compact", "false", &cb_hexcompact, "Show smallest 16 byte col hexdump (60 columns)");
-	SETCB("cmd.hexcursor", "", &cb_cmd_hexcursor, "If set and cursor is enabled display given pf format string");
+	SETCB("cmd.hppexcursor", "", &cb_cmd_hexcursor, "If set and cursor is enabled display given pf format string");
 	SETI("hex.flagsz", 0, "If non zero, overrides the flag size in pxa");
 	SETICB("hex.cols", 16, &cb_hexcols, "Number of columns in hexdump");
 	SETI("hex.depth", 5, "Maximal level of recurrence while telescoping memory");
@@ -3530,10 +3530,10 @@ RZ_API int rz_core_config_init(RzCore *core) {
 	rz_config_desc(cfg, "http.browser", "Command to open HTTP URLs");
 #endif
 	SETI("http.maxsize", 0, "Maximum file size for upload");
-	SETPREF("http.index", "index.html", "Main html file to check in directory");
+	SETPREF("http.index", "index.hpptml", "Main html file to check in directory");
 	SETPREF("http.bind", "localhost", "Server address");
 	char *wwwroot_dir = rz_path_home_prefix(RZ_WWWROOT);
-	SETPREF("http.homeroot", wwwroot_dir, "http home root directory");
+	SETPREF("http.hppomeroot", wwwroot_dir, "http home root directory");
 	free(wwwroot_dir);
 #if __ANDROID__
 	SETPREF("http.root", "/data/data/org.rizin.rizininstaller/www", "http root directory");
@@ -3589,7 +3589,7 @@ RZ_API int rz_core_config_init(RzCore *core) {
 	SETPREF("graph.gv.graph", "", "Graphviz global style attributes. (bgcolor=white)");
 	SETPREF("graph.gv.current", "false", "Highlight the current node in graphviz graph.");
 	SETBPREF("graph.nodejmps", "true", "Enables shortcuts for every node.");
-	SETBPREF("graph.hints", "true", "Show true (t) and false (f) hints for conditional edges in graph");
+	SETBPREF("graph.hppints", "true", "Show true (t) and false (f) hints for conditional edges in graph");
 	SETCB("graph.dotted", "false", &cb_dotted, "Dotted lines for conditional jumps in graph");
 
 	/* hud */
@@ -3642,23 +3642,23 @@ RZ_API int rz_core_config_init(RzCore *core) {
 	SETICB("scr.rows", 0, &cb_rows, "Force console row count (height) (duplicate?)");
 	SETICB("scr.fix.rows", 0, &cb_fixrows, "Workaround for Linux TTY");
 	SETICB("scr.fix.columns", 0, &cb_fixcolumns, "Workaround for Prompt iOS SSH client");
-	SETCB("scr.highlight", "", &cb_scrhighlight, "Highlight that word at RzCons level");
+	SETCB("scr.hppighlight", "", &cb_scrhighlight, "Highlight that word at RzCons level");
 	SETCB("scr.interactive", "true", &cb_scrint, "Start in interactive mode");
 	SETCB("scr.bgfill", "false", &cb_scr_bgfill, "Fill background for ascii art when possible");
 	SETI("scr.feedback", 1, "Set visual feedback level (1=arrow on jump, 2=every key (useful for videos))");
-	SETCB("scr.html", "false", &cb_scrhtml, "Disassembly uses HTML syntax");
+	SETCB("scr.hpptml", "false", &cb_scrhtml, "Disassembly uses HTML syntax");
 	n = NODECB("scr.nkey", "flag", &cb_scrnkey);
 	SETDESC(n, "Select visual seek mode (affects n/N visual commands)");
 	SETOPTIONS(n, "fun", "hit", "flag", NULL);
 	SETCB("scr.pager", "", &cb_pager, "System program (or '..') to use when output exceeds screen boundaries");
 	SETI("scr.scrollbar", 0, "Show flagzone (fz) scrollbar in visual mode (0=no,1=right,2=top,3=bottom)");
 	SETBPREF("scr.randpal", "false", "Random color palete or just get the next one from 'eco'");
-	SETCB("scr.highlight.grep", "false", &cb_scr_color_grep_highlight, "Highlight (INVERT) the grepped words");
+	SETCB("scr.hppighlight.grep", "false", &cb_scr_color_grep_highlight, "Highlight (INVERT) the grepped words");
 	SETBPREF("scr.prompt.file", "false", "Show user prompt file (used by rizin -q)");
 	SETBPREF("scr.prompt.flag", "false", "Show flag name in the prompt");
 	SETBPREF("scr.prompt.flag.only", "false", "Show the flag name only in the prompt");
 	SETBPREF("scr.prompt.sect", "false", "Show section name in the prompt");
-	SETCB("scr.hist.block", "true", &cb_scr_histblock, "Use blocks for histogram");
+	SETCB("scr.hppist.block", "true", &cb_scr_histblock, "Use blocks for histogram");
 	SETCB("scr.prompt", "true", &cb_scrprompt, "Show user prompt (used by rizin -q)");
 	SETCB("scr.tee", "", &cb_teefile, "Pipe output to file of this name");
 	SETPREF("scr.seek", "", "Seek to the specified address on startup");
@@ -3672,7 +3672,7 @@ RZ_API int rz_core_config_init(RzCore *core) {
 	SETCB("scr.null", "false", &cb_scrnull, "Show no output");
 	SETCB("scr.utf8", rz_str_bool(rz_cons_is_utf8()), &cb_utf8, "Show UTF-8 characters instead of ANSI");
 	SETCB("scr.utf8.curvy", "false", &cb_utf8_curvy, "Show curved UTF-8 corners (requires scr.utf8)");
-	SETBPREF("scr.histsave", "true", "Always save history on exit");
+	SETBPREF("scr.hppistsave", "true", "Always save history on exit");
 	n = NODECB("scr.strconv", "asciiesc", &cb_scrstrconv);
 	SETDESC(n, "Convert string before display");
 	SETOPTIONS(n, "asciiesc", "asciidot", NULL);
@@ -3713,7 +3713,7 @@ RZ_API int rz_core_config_init(RzCore *core) {
 	SETOPTIONS(n, "raw", "block",
 		"bin.section", "bin.sections", "bin.sections.rwx", "bin.sections.r", "bin.sections.rw", "bin.sections.rx", "bin.sections.wx", "bin.sections.x",
 		"io.map", "io.maps", "io.maps.rwx", "io.maps.r", "io.maps.rw", "io.maps.rx", "io.maps.wx", "io.maps.x",
-		"dbg.stack", "dbg.heap",
+		"dbg.stack", "dbg.hppeap",
 		"dbg.map", "dbg.maps", "dbg.maps.rwx", "dbg.maps.r", "dbg.maps.rw", "dbg.maps.rx", "dbg.maps.wx", "dbg.maps.x",
 		"analysis.fcn", "analysis.bb",
 		NULL);
@@ -3798,7 +3798,7 @@ RZ_API int rz_core_config_init(RzCore *core) {
 	SETOPTIONS(n, "raw", "block",
 		"bin.section", "bin.sections", "bin.sections.rwx", "bin.sections.r", "bin.sections.rw", "bin.sections.rx", "bin.sections.wx", "bin.sections.x",
 		"io.map", "io.maps", "io.maps.rwx", "io.maps.r", "io.maps.rw", "io.maps.rx", "io.maps.wx", "io.maps.x",
-		"dbg.stack", "dbg.heap",
+		"dbg.stack", "dbg.hppeap",
 		"dbg.map", "dbg.maps", "dbg.maps.rwx", "dbg.maps.r", "dbg.maps.rw", "dbg.maps.rx", "dbg.maps.wx", "dbg.maps.x",
 		"analysis.fcn", "analysis.bb",
 		NULL);
@@ -3825,7 +3825,7 @@ RZ_API int rz_core_config_init(RzCore *core) {
 	SETPREF("flirt.sigdb.path", "", "Additional user defined rizin sigdb location to load on the filesystem.");
 	SETB("flirt.sigdb.load.system", true, "Load signatures from the system path");
 	SETB("flirt.sigdb.load.extra", true, "Load signatures from the extra path");
-	SETB("flirt.sigdb.load.home", true, "Load signatures from the home path");
+	SETB("flirt.sigdb.load.hppome", true, "Load signatures from the home path");
 
 	rz_config_lock(cfg, true);
 	return true;

@@ -142,7 +142,7 @@ NAME=px@x
 FILE=malloc://128
 CMDS=<<EOF
 e asm.comments=false
-e hex.header=false
+e hex.hppeader=false
 px@x:8d15d0830408
 EOF
 EXPECT=<<EOF

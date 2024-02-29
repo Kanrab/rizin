@@ -50,10 +50,10 @@ aar
 /ai 0xffffff40 0xffffffff
 EOF
 EXPECT=<<EOF
-0x00000b80   # 4: [   R0.h = #0xdead
+0x00000b80   # 4: [   R0.hpp = #0xdead
 0x00000b84   # 4: [   R0.l = #0xbeef
 0x00001e68   # 4: [   R4.l = #0xbeef
-0x0000342c   # 4: |   if (!P3) memh(R23++#-0x8) = R11.h
+0x0000342c   # 4: |   if (!P3) memh(R23++#-0x8) = R11.hpp
 0x0000511c   # 4: [   R2 = add(FP,##-0x8)
 0x00005128   # 4: [   R2 = memw(FP+##-0x8)
 0x00005144   # 4: [   R2 = memw(FP+##-0x8)
@@ -285,7 +285,7 @@ CMDS=<<EOF
 wx 00c0007f0bc0006900404d850040000076d09b9a0ac020690040007f07407c700040000087c40aab048063700080007f00c0007f
 e asm.arch=hexagon
 e analysis.arch=hexagon
-e plugins.hexagon.imm.hash=false
+e plugins.hppexagon.imm.hash=false
 pi 13
 EOF
 EXPECT=<<EOF
@@ -310,12 +310,12 @@ FILE=bins/elf/analysis/hexagon-hello-loop
 CMDS=<<EOF
 b 0x100000
 aar
-e plugins.hexagon.imm.sign=false
+e plugins.hppexagon.imm.sign=false
 /ai -8
 /ai 0xffffff40 0xffffffff
 EOF
 EXPECT=<<EOF
-0x0000342c   # 4: |   if (!P3) memh(R23++#0xfffffff8) = R11.h
+0x0000342c   # 4: |   if (!P3) memh(R23++#0xfffffff8) = R11.hpp
 0x0000511c   # 4: [   R2 = add(FP,##0xfffffff8)
 0x00005128   # 4: [   R2 = memw(FP+##0xfffffff8)
 0x00005144   # 4: [   R2 = memw(FP+##0xfffffff8)
@@ -558,7 +558,7 @@ CMDS=<<EOF
 e analysis.jmp.cref=true
 e analysis.trap.after=true
 e asm.pcalign=4
-e plugins.hexagon.imm.sign=false
+e plugins.hppexagon.imm.sign=false
 aaa
 s sym.sys_deinit_tls
 pd 11
@@ -678,7 +678,7 @@ CMDS=<<EOF
 wx 00c0007f0bc0006900404d850040000076d09b9a0ac020690040007f07407c700040000087c40aab048063700080007f00c0007f00c0007f0bc0206900404d850040000076d09b9a00c000580ac0006907807c7000c0007f044063700080007f00c0007f
 e asm.arch=hexagon
 e analysis.arch=hexagon
-e plugins.hexagon.sdk=true
+e plugins.hppexagon.sdk=true
 pi 25
 EOF
 EXPECT=<<EOF
@@ -1377,7 +1377,7 @@ EXPECT=<<EOF
 [   if (P0) jump:nt loc.test_sym
 [   loop1(loc.test_sym,#0x0)
 [   R0.l = #0x34
-[   R0.h = #0x800
+[   R0.hpp = #0x800
 [   if (R0!=#0) jump:nt loc.test_sym
 [   R0 = #0x0 ; jump loc.test_sym
 /   immext(##0xffffffc0)

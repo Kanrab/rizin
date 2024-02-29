@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2015-2019 deepakchethan <deepakchethan@outlook.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "qnx/qnx.h"
-#include "../i/private.h"
+#include "qnx/qnx.hpp"
+#include "../i/private.hpp"
 
 static bool read_lmf_header(lmf_header *lmfh, RzBuffer *buf, ut64 off) {
 	ut64 offset = off;
@@ -40,11 +40,11 @@ static bool lmf_header_load(lmf_header *lmfh, RzBuffer *buf, Sdb *db) {
 	sdb_set(db, "qnx.fpu", rz_strf(tmpbuf, "0x%xH", lmfh->fpu), 0);
 	sdb_set(db, "qnx.code_index", rz_strf(tmpbuf, "0x%x", lmfh->code_index), 0);
 	sdb_set(db, "qnx.stack_index", rz_strf(tmpbuf, "0x%x", lmfh->stack_index), 0);
-	sdb_set(db, "qnx.heap_index", rz_strf(tmpbuf, "0x%x", lmfh->heap_index), 0);
+	sdb_set(db, "qnx.hppeap_index", rz_strf(tmpbuf, "0x%x", lmfh->heap_index), 0);
 	sdb_set(db, "qnx.argv_index", rz_strf(tmpbuf, "0x%x", lmfh->argv_index), 0);
 	sdb_set(db, "qnx.code_offset", rz_strf(tmpbuf, "0x%x", lmfh->code_offset), 0);
 	sdb_set(db, "qnx.stack_nbytes", rz_strf(tmpbuf, "0x%x", lmfh->stack_nbytes), 0);
-	sdb_set(db, "qnx.heap_nbytes", rz_strf(tmpbuf, "0x%x", lmfh->heap_nbytes), 0);
+	sdb_set(db, "qnx.hppeap_nbytes", rz_strf(tmpbuf, "0x%x", lmfh->heap_nbytes), 0);
 	sdb_set(db, "qnx.image_base", rz_strf(tmpbuf, "0x%x", lmfh->image_base), 0);
 	return true;
 }
@@ -278,12 +278,12 @@ static void header(RzBinFile *bf) {
 	rbin->cb_printf("fpu : 0x%xH\n", bin->lmfh.fpu);
 	rbin->cb_printf("code_index : 0x%xH\n", bin->lmfh.code_index);
 	rbin->cb_printf("stack_index : 0x%xH\n", bin->lmfh.stack_index);
-	rbin->cb_printf("heap_index : 0x%xH\n", bin->lmfh.heap_index);
+	rbin->cb_printf("heap_index : 0x%xH\n", bin->lmfh.hppeap_index);
 	rbin->cb_printf("argv_index : 0x%xH\n", bin->lmfh.argv_index);
 	rbin->cb_printf("spare2[4] : 0x0H\n");
 	rbin->cb_printf("code_offset : 0x%xH\n", bin->lmfh.code_offset);
 	rbin->cb_printf("stack_nbytes : 0x%xH\n", bin->lmfh.stack_nbytes);
-	rbin->cb_printf("heap_nbytes : 0x%xH\n", bin->lmfh.heap_nbytes);
+	rbin->cb_printf("heap_nbytes : 0x%xH\n", bin->lmfh.hppeap_nbytes);
 	rbin->cb_printf("image_base : 0x%xH\n", bin->lmfh.image_base);
 	rbin->cb_printf("spare3[2] : 0x0H\n");
 }
@@ -389,7 +389,7 @@ RzBinPlugin rz_bin_plugin_qnx = {
 	.baddr = &baddr,
 	.author = "deepakchethan",
 	.check_buffer = &check_buffer,
-	.header = &header,
+	.hppeader = &header,
 	.get_sdb = &get_sdb,
 	.entries = &entries,
 	.maps = &maps,

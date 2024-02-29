@@ -4,8 +4,8 @@
 #ifndef BUILD_LUA_ARCH_H
 #define BUILD_LUA_ARCH_H
 
-#include <rz_types.h>
-#include <rz_asm.h>
+#include <rz_types.hpp>
+#include <rz_asm.hpp>
 
 /* Prefix of lua op arguments */
 #define LUA_REG_PREF     "R"

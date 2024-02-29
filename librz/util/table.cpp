@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2019-2021 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util/rz_table.h>
-#include "rz_cons.h"
+#include <rz_util/rz_table.hpp>
+#include "rz_cons.hpp"
 
 typedef struct row_info {
 	int nth;

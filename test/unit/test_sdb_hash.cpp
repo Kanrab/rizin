@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: MIT
 
-#include "minunit.h"
-#include <sdb.h>
-#include <rz_util/ht_uu.h>
-#include <rz_util/ht_up.h>
-#include <rz_util/ht_pp.h>
-#include <rz_util/ht_pu.h>
+#include "minunit.hpp"
+#include <sdb.hpp>
+#include <rz_util/ht_uu.hpp>
+#include <rz_util/ht_up.hpp>
+#include <rz_util/ht_pp.hpp>
+#include <rz_util/ht_pu.hpp>
 
 typedef struct _test_struct {
 	char *name;

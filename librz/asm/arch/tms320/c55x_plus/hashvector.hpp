@@ -4,7 +4,7 @@
 #ifndef HASHVECTOR_H
 #define HASHVECTOR_H
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 typedef struct {
 	st32 code;

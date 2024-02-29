@@ -3,7 +3,7 @@
 // SPDX-FileCopyrightText: 2019 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "kernelcache.h"
+#include "kernelcache.hpp"
 
 typedef bool (*OnRebaseFunc)(ut64 offset, ut64 decorated_addr, void *user_data);
 static ut64 rebase_offset_to_paddr(RzXNUKernelCacheObj *obj, struct section_t *sections, ut64 offset);

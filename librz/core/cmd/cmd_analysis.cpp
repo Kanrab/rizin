@@ -2,10 +2,10 @@
 // SPDX-FileCopyrightText: 2009-2021 maijin <maijin21@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
-#include <rz_util/rz_graph_drawable.h>
+#include <rz_core.hpp>
+#include <rz_util/rz_graph_drawable.hpp>
 
-#include "../core_private.h"
+#include "../core_private.hpp"
 
 #define MAX_SCAN_SIZE 0x7ffffff
 
@@ -1001,10 +1001,10 @@ static bool cmd_aea(RzCore *core, int mode, ut64 addr, int length) {
 	ESILISTATE->memreads = rz_list_new();
 	ESILISTATE->memwrites = rz_list_new();
 	esil->user = &stats;
-	esil->cb.hook_reg_write = myregwrite;
-	esil->cb.hook_reg_read = myregread;
-	esil->cb.hook_mem_write = mymemwrite;
-	esil->cb.hook_mem_read = mymemread;
+	esil->cb.hppook_reg_write = myregwrite;
+	esil->cb.hppook_reg_read = myregread;
+	esil->cb.hppook_mem_write = mymemwrite;
+	esil->cb.hppook_mem_read = mymemread;
 	esil->nowrite = true;
 	for (ops = ptr = 0; ptr < buf_sz && hasNext(mode); ops++, ptr += len) {
 		len = rz_analysis_op(core->analysis, &aop, addr + ptr, buf + ptr, buf_sz - ptr, RZ_ANALYSIS_OP_MASK_ESIL | RZ_ANALYSIS_OP_MASK_HINT);
@@ -1021,8 +1021,8 @@ static bool cmd_aea(RzCore *core, int mode, ut64 addr, int length) {
 		rz_analysis_op_fini(&aop);
 	}
 	esil->nowrite = false;
-	esil->cb.hook_reg_write = NULL;
-	esil->cb.hook_reg_read = NULL;
+	esil->cb.hppook_reg_write = NULL;
+	esil->cb.hppook_reg_read = NULL;
 	// esil_fini (core);
 	rz_analysis_esil_free(esil);
 	rz_reg_arena_pop(core->analysis->reg);

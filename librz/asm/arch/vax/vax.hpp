@@ -383,4 +383,4 @@ votstrs[] =
 
 };				/* votstrs */
 
-/* end: vax.opcode.h */
+/* end: vax.opcode.hpp */

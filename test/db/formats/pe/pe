@@ -98,10 +98,10 @@ CMDS=<<EOF
 e asm.lines.bb=false
 e asm.bytes=false
 e asm.comments=false
-pd 1@ 0x0040131a~str.Hello
+pd 1@ 0x0040131a~str.hppello
 EOF
 EXPECT=<<EOF
-  0x0040131a      mov   dword [esp], str.Hello
+  0x0040131a      mov   dword [esp], str.hppello
 EOF
 RUN
 

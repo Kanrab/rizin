@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2017 kriw <kotarou777775@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include "minunit.h"
+#include <rz_util.hpp>
+#include "minunit.hpp"
 
 bool test_rz_hex_from_code() {
 	const char *s;

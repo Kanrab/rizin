@@ -4,8 +4,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <rz_util/rz_base64.h>
-#include "sdb.h"
+#include <rz_util/rz_base64.hpp>
+#include "sdb.hpp"
 
 RZ_API void sdb_encode_raw(char *bout, const ut8 *bin, int len) {
 	rz_base64_encode(bout, bin, len);

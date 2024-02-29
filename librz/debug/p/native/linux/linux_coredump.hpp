@@ -6,8 +6,8 @@
 #ifndef LINUX_COREDUMP_H
 #define LINUX_COREDUMP_H
 
-#include "elf_specs.h"
-#include <sys/procfs.h>
+#include "elf_specs.hpp"
+#include <sys/procfs.hpp>
 
 #if __i386__ || __x86_64__
 /*Macros for XSAVE/XRESTORE*/

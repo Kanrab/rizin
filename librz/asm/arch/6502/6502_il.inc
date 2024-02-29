@@ -7,7 +7,7 @@
  */
 // clang-format off
 
-#include <rz_il.h>
+#include <rz_il.hpp>
 
 typedef enum {
 	_6502_ADDR_KIND_ADDR,
@@ -20,11 +20,11 @@ typedef struct {
 	RzILOpBitVector *addr; ///< either the addr, or the immediate value if immedate, or NULL if accumulator
 } _6502ILAddr;
 
-#include <rz_il/rz_il_opbuilder_begin.h>
+#include <rz_il/rz_il_opbuilder_begin.hpp>
 
 // Different common addressing modes, producing a pure value to be used for the actual instruction
 // They receive the raw 1 or 2-byte value that follows the opcode byte.
-// https://www.masswerk.at/6502/6502_instruction_set.html#description
+// https://www.masswerk.at/6502/6502_instruction_set.hpptml#description
 
 /**
  * op a
@@ -583,5 +583,5 @@ static RzILOpEffect *_6502_il_op_transfer(const char *dst, const char *src, bool
 	return update_flags ? SEQ2(tf, update_flags_nz(VARG(dst))) : tf;
 }
 
-#include <rz_il/rz_il_opbuilder_end.h>
+#include <rz_il/rz_il_opbuilder_end.hpp>
 // clang-format on

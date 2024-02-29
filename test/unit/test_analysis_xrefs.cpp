@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2020 xvilka
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
-#include "minunit.h"
+#include <rz_analysis.hpp>
+#include "minunit.hpp"
 
 bool test_rz_analysis_xrefs_count() {
 	RzAnalysis *analysis = rz_analysis_new();

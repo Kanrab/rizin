@@ -17,7 +17,7 @@ conditional breakpoints are implemented in the following way:
 
 2. execute until rax==0x31c0 at address `0x4000ce`
 
-       e cmd.hitinfo=0
+       e cmd.hppitinfo=0
        (break_rax,f reg_rax=`dr rax`,f test=`%vi reg_rax-0x31c0`,?= test)
        db @ 0x4000ce
        dbC .(break_rax) @ 0x4000ce
@@ -25,7 +25,7 @@ conditional breakpoints are implemented in the following way:
 
 3. perform a register tracing dump at address `0x4000ce`
 
-       e cmd.hitinfo=0
+       e cmd.hppitinfo=0
        (trace_rax,dr rax,?= 1)
        db @ 0x4000ce
        dbC .(trace_rax) @ 0x4000ce

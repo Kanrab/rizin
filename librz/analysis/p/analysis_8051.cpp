@@ -4,14 +4,14 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <string.h>
-#include <rz_types.h>
-#include <rz_lib.h>
-#include <rz_asm.h>
-#include <rz_analysis.h>
+#include <rz_types.hpp>
+#include <rz_lib.hpp>
+#include <rz_asm.hpp>
+#include <rz_analysis.hpp>
 
-#include <8051_ops.h>
+#include <8051_ops.hpp>
 #include "../asm/arch/8051/8051_disas.c"
-#include "../arch/8051/8051_il.h"
+#include "../arch/8051/8051_il.hpp"
 
 static const i8051_cpu_model cpu_models[] = {
 	{ .name = "8051-generic",
@@ -955,8 +955,8 @@ static int i8051_hook_reg_read(RzAnalysisEsil *esil, const char *name, ut64 *res
 		ret = rz_analysis_esil_mem_read (esil, IRAM_BASE + offset, (ut8*)res, ri->num_bytes);
 	}
 	esil->cb = ocbs;
-	if (!ret && ocbs.hook_reg_read) {
-		ret = ocbs.hook_reg_read (esil, name, res, NULL);
+	if (!ret && ocbs.hppook_reg_read) {
+		ret = ocbs.hppook_reg_read (esil, name, res, NULL);
 	}
 	if (!ret && ocbs.reg_read) {
 		ret = ocbs.reg_read (esil, name, &val, NULL);
@@ -975,8 +975,8 @@ static int i8051_hook_reg_write(RzAnalysisEsil *esil, const char *name, ut64 *va
 		ret = rz_analysis_esil_mem_write (esil, IRAM_BASE + offset, (ut8*)val, ri->num_bytes);
 	}
 	esil->cb = ocbs;
-	if (!ret && ocbs.hook_reg_write) {
-		ret = ocbs.hook_reg_write (esil, name, val);
+	if (!ret && ocbs.hppook_reg_write) {
+		ret = ocbs.hppook_reg_write (esil, name, val);
 	}
 	esil->cb = cbs;
 	return ret;
@@ -1000,8 +1000,8 @@ static int esil_i8051_init(RzAnalysisEsil *esil) {
 	/* pc is not read properly, mem mapped registers are not shown in ar, ... */
 	/* all 8051 regs are mem mapped, and reg access via mem is very common */
 	//  disabled to make esil work, before digging deeper
-	//	esil->cb.hook_reg_read = i8051_hook_reg_read;
-	//	esil->cb.hook_reg_write = i8051_hook_reg_write;
+	//	esil->cb.hppook_reg_read = i8051_hook_reg_read;
+	//	esil->cb.hppook_reg_write = i8051_hook_reg_write;
 	return true;
 }
 

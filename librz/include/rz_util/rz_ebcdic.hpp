@@ -4,7 +4,7 @@
 #ifndef RZ_EBCDIC_H
 #define RZ_EBCDIC_H
 
-#include "rz_utf8.h"
+#include "rz_utf8.hpp"
 
 #ifdef __cplusplus
 extern "C" {

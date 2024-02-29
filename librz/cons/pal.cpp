@@ -3,7 +3,7 @@
 // SPDX-FileCopyrightText: 2013-2020 xarkes <antide.petit@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_cons.h>
+#include <rz_cons.hpp>
 
 #define RZCOLOR_AT(i) (RzColor *)(((ut8 *)&(rz_cons_singleton()->context->cpal)) + keys[i].coff)
 #define COLOR_AT(i)   (char **)(((ut8 *)&(rz_cons_singleton()->context->pal)) + keys[i].off)
@@ -179,7 +179,7 @@ RZ_API void rz_cons_pal_init(RzConsContext *ctx) {
 	ctx->cpal.flow = (RzColor)RzColor_CYAN;
 	ctx->cpal.flow2 = (RzColor)RzColor_BLUE;
 	ctx->cpal.fname = (RzColor)RzColor_RED;
-	ctx->cpal.help = (RzColor)RzColor_GREEN;
+	ctx->cpal.hppelp = (RzColor)RzColor_GREEN;
 	ctx->cpal.input = (RzColor)RzColor_WHITE;
 	ctx->cpal.invalid = (RzColor)RzColor_BRED;
 	ctx->cpal.invalid.attr = RZ_CONS_ATTR_BOLD;

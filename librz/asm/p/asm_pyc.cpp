@@ -2,12 +2,12 @@
 // SPDX-FileCopyrightText: 2016-2020 x0urc3
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_lib.h>
-#include <rz_util.h>
-#include <rz_asm.h>
+#include <rz_types.hpp>
+#include <rz_lib.hpp>
+#include <rz_util.hpp>
+#include <rz_asm.hpp>
 
-#include "../arch/pyc/pyc_dis.h"
+#include "../arch/pyc/pyc_dis.hpp"
 
 static pyc_opcodes *opcodes_cache = NULL;
 

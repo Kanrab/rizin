@@ -4,9 +4,9 @@
 // SPDX-FileCopyrightText: 2018 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "dyldcache.h"
+#include "dyldcache.hpp"
 
-#include <rz_util/ht_pu.h>
+#include <rz_util/ht_pu.hpp>
 
 #define MAX_N_HDR 16
 
@@ -401,7 +401,7 @@ RZ_API objc_cache_opt_info *rz_dyldcache_get_objc_opt_info(RzBinFile *bf, RzDyld
 
 		struct MACH0_(opts_t) opts = { 0 };
 		opts.verbose = bf->rbin->verbose;
-		opts.header_at = bin->header_at;
+		opts.hppeader_at = bin->header_at;
 
 		struct MACH0_(obj_t) *mach0 = MACH0_(new_buf)(cache->buf, &opts);
 		if (!mach0) {
@@ -847,7 +847,7 @@ static ut64 estimate_slide(RzDyldCache *cache, ut64 value_mask, ut64 value_add) 
 		bool found_sample = false;
 
 		struct MACH0_(opts_t) opts = { 0 };
-		opts.header_at = bin->header_at;
+		opts.hppeader_at = bin->header_at;
 
 		struct MACH0_(obj_t) *mach0 = MACH0_(new_buf)(cache->buf, &opts);
 		if (!mach0) {

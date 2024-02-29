@@ -3,9 +3,9 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 /* rz_json based on nxjson by Yaroslav Stavnichiy */
 
-#include <rz_util/rz_json.h>
-#include <rz_util/rz_strbuf.h>
-#include "minunit.h"
+#include <rz_util/rz_json.hpp>
+#include <rz_util/rz_strbuf.hpp>
+#include "minunit.hpp"
 
 typedef struct json_test_t {
 	const char *json;

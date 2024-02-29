@@ -4,9 +4,9 @@
 #ifndef CLIENT_COMMANDS_H
 #define CLIENT_COMMANDS_H
 
-#include "../libgdbr.h"
-#include "rz_types_base.h"
-#include <rz_util.h>
+#include "../libgdbr.hpp"
+#include "rz_types_base.hpp"
+#include <rz_util.hpp>
 
 /*!
  * \brief Acquires the gdbr lock and sets up breaking

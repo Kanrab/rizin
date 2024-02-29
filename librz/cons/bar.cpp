@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2022 Anton Kochkov <anton.kochkov@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_cons.h>
-#include <rz_util/rz_assert.h>
+#include <rz_cons.hpp>
+#include <rz_util/rz_assert.hpp>
 
 // TODO: add support for colors
 /**

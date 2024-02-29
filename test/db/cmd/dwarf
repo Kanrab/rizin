@@ -442,22 +442,22 @@ standard_opcode_lengths[DW_LNS_set_isa] = 1
 0x00004040 data Cd 8
 0x00004048 data Cd 8
 - offset -   0 1  2 3  4 5  6 7  8 9  A B  C D  E F  0123456789ABCDEF  comment
-0x00001060  f30f 1efa 31ed 4989 d15e 4889 e248 83e4  ....1.I..^H..H..  ; sym._start  ; [15] -r-x section size 294 named .text  ; void *rtld_fini  ; int argc  ; char **ubp_av
-0x00001070  f050 5445 31c0 31c9 488d 3de9 0000 00ff  .PTE1.1.H.=.....  ; void *fini  ; void *init  ; void *main
+0x00001060  f30f 1efa 31ed 4989 d15e 4889 e248 83e4  ....1.I..^H..hpp..  ; sym._start  ; [15] -r-x section size 294 named .text  ; void *rtld_fini  ; int argc  ; char **ubp_av
+0x00001070  f050 5445 31c0 31c9 488d 3de9 0000 00ff  .PTE1.1.hpp.=.....  ; void *fini  ; void *init  ; void *main
 0x00001080  1553 2f00 00f4 662e 0f1f 8400 0000 0000  .S/...f.........
-0x00001090  488d 3d79 2f00 0048 8d05 722f 0000 4839  H.=y/..H..r/..H9  ; sym.deregister_tm_clones
-0x000010a0  f874 1548 8b05 362f 0000 4885 c074 09ff  .t.H..6/..H..t..
+0x00001090  488d 3d79 2f00 0048 8d05 722f 0000 4839  H.=y/..hpp..r/..hpp9  ; sym.deregister_tm_clones
+0x000010a0  f874 1548 8b05 362f 0000 4885 c074 09ff  .t.hpp..6/..hpp..t..
 0x000010b0  e00f 1f80 0000 0000 c30f 1f80 0000 0000  ................
-0x000010c0  488d 3d49 2f00 0048 8d35 422f 0000 4829  H.=I/..H.5B/..H)  ; sym.register_tm_clones
-0x000010d0  fe48 89f0 48c1 ee3f 48c1 f803 4801 c648  .H..H..?H...H..H
-0x000010e0  d1fe 7414 488b 0505 2f00 0048 85c0 7408  ..t.H.../..H..t.
+0x000010c0  488d 3d49 2f00 0048 8d35 422f 0000 4829  H.=I/..hpp.5B/..hpp)  ; sym.register_tm_clones
+0x000010d0  fe48 89f0 48c1 ee3f 48c1 f803 4801 c648  .hpp..hpp..?H...hpp..hpp
+0x000010e0  d1fe 7414 488b 0505 2f00 0048 85c0 7408  ..t.hpp.../..hpp..t.
 0x000010f0  ffe0 660f 1f44 0000 c30f 1f80 0000 0000  ..f..D..........
 0x00001100  f30f 1efa 803d 052f 0000 0075 2b55 4883  .....=./...u+UH.  ; sym.__do_global_dtors_aux
-0x00001110  3de2 2e00 0000 4889 e574 0c48 8b3d e62e  =.....H..t.H.=..
+0x00001110  3de2 2e00 0000 4889 e574 0c48 8b3d e62e  =.....hpp..t.hpp.=..
 0x00001120  0000 e819 ffff ffe8 64ff ffff c605 dd2e  ........d.......
 0x00001130  0000 015d c30f 1f00 c30f 1f80 0000 0000  ...]............
 0x00001140  f30f 1efa e977 ffff fff3 0f1e fa55 4889  .....w.......UH.  ; sym.frame_dummy  ; dbg.__e_33m_func
-0x00001150  e548 83ec 1048 897d f848 8b45 f848 89c7  .H...H.}.H.E.H..  ; arg1  ; const char *s
+0x00001150  e548 83ec 1048 897d f848 8b45 f848 89c7  .hpp...hpp.}.hpp.E.hpp..  ; arg1  ; const char *s
 EOF
 RUN
 
@@ -581,13 +581,13 @@ global struct struct { runtime.enabled bool; runtime.pad [3]uint8; runtime.neede
 global internal/reflectlite.Type errors.errorType @ 0x565340
 global bool runtime.useCheckmark @ 0x58eb75
 global unicode.RangeTable * unicode.Quotation_Mark @ 0x55e628
-global unicode.RangeTable * unicode.Hatran @ 0x55e2b8
+global unicode.RangeTable * unicode.hppatran @ 0x55e2b8
 global struct []internal/cpu.option internal/cpu.options @ 0x5655c0
 global struct []*runtime.g runtime.allgs @ 0x565640
 global unicode.RangeTable * unicode.Zanabazar_Square @ 0x55e7b0
 global unicode.RangeTable * unicode.Vai @ 0x55e778
 global unicode/utf8.acceptRange [17] unicode/utf8.acceptRanges @ 0x550ec0
-global uint32 [66] runtime.handlingSig @ 0x58f300
+global uint32 [66] runtime.hppandlingSig @ 0x58f300
 global uint32 runtime.adviseUnused @ 0x550024
 global unicode.RangeTable * unicode.Zs @ 0x55e7c8
 global unicode.RangeTable * unicode.Cherokee @ 0x55e1b8
@@ -604,13 +604,13 @@ global error time.atoiError @ 0x565570
 global unicode.RangeTable * unicode.Masaram_Gondi @ 0x55e420
 global error os.ErrNotExist @ 0x5654c0
 global <unspecified> internal/fmtsort..inittask @ 0x551520
-global unicode.RangeTable * unicode.Hebrew @ 0x55e2c0
+global unicode.RangeTable * unicode.hppebrew @ 0x55e2c0
 global bool runtime.isIntel @ 0x58eb6b
 global <unspecified> internal/poll..inittask @ 0x552980
 global unicode.RangeTable * unicode.Ol_Chiki @ 0x55e500
 global <unspecified> internal/syscall/execenv..inittask @ 0x550de0
 global unicode.RangeTable * unicode.Braille @ 0x55e160
-global struct struct { runtime.signalLock uint32; runtime.hz int32 } runtime.prof @ 0x58ecb8
+global struct struct { runtime.signalLock uint32; runtime.hppz int32 } runtime.prof @ 0x58ecb8
 global unicode.RangeTable * unicode.Noncharacter_Code_Point @ 0x55e4e0
 global error runtime.overflowError @ 0x55e930
 global struct []string syscall.envs @ 0x565780
@@ -647,7 +647,7 @@ global unicode.RangeTable * unicode.Elbasan @ 0x55e238
 global struct string [11] runtime.gStatusStrings @ 0x5627a0
 global unicode.RangeTable * unicode.Egyptian_Hieroglyphs @ 0x55e230
 global unicode.RangeTable * unicode.Meetei_Mayek @ 0x55e440
-global struct struct { runtime.lock runtime.mutex; runtime.lockOwner *runtime.g; runtime.enabled bool; runtime.shutdown bool; runtime.headerWritten bool; runtime.footerWritten bool; runtime.shutdownSema uint32; runtime.seqStart uint64; runtime.ticksStart int64; runtime.ticksEnd int64; runtime.timeStart int64; runtime.timeEnd int64; runtime.seqGC uint64; runtime.reading runtime.traceBufPtr; runtime.empty runtime.traceBufPtr; runtime.fullHead runtime.traceBufPtr; runtime.fullTail runtime.traceBufPtr; runtime.reader runtime.guintptr; runtime.stackTab runtime.traceStackTable; runtime.stringsLock runtime.mutex; runtime.strings map[string]uint64; runtime.stringSeq uint64; runtime.markWorkerLabels [3]uint64; runtime.bufLock runtime.mutex; runtime.buf runtime.traceBufPtr } runtime.trace @ 0x56c320
+global struct struct { runtime.lock runtime.mutex; runtime.lockOwner *runtime.g; runtime.enabled bool; runtime.shutdown bool; runtime.hppeaderWritten bool; runtime.footerWritten bool; runtime.shutdownSema uint32; runtime.seqStart uint64; runtime.ticksStart int64; runtime.ticksEnd int64; runtime.timeStart int64; runtime.timeEnd int64; runtime.seqGC uint64; runtime.reading runtime.traceBufPtr; runtime.empty runtime.traceBufPtr; runtime.fullHead runtime.traceBufPtr; runtime.fullTail runtime.traceBufPtr; runtime.reader runtime.guintptr; runtime.stackTab runtime.traceStackTable; runtime.stringsLock runtime.mutex; runtime.strings map[string]uint64; runtime.stringSeq uint64; runtime.markWorkerLabels [3]uint64; runtime.bufLock runtime.mutex; runtime.buf runtime.traceBufPtr } runtime.trace @ 0x56c320
 global unicode.RangeTable * unicode.Mahajani @ 0x55e3f0
 global unicode.RangeTable * unicode.White_Space @ 0x55e798
 global unicode.RangeTable * unicode.Nko @ 0x55e4c8
@@ -658,7 +658,7 @@ global unicode.RangeTable * unicode.Limbu @ 0x55e388
 global unicode.RangeTable * unicode.Syriac @ 0x55e6e8
 global uintptr runtime.extram @ 0x58ec30
 global unicode.RangeTable * unicode.Samaritan @ 0x55e658
-global unicode.RangeTable * unicode.Hangul @ 0x55e2a0
+global unicode.RangeTable * unicode.hppangul @ 0x55e2a0
 global struct []string reflect.kindNames @ 0x55e9e0
 global struct []*runtime.p runtime.allp @ 0x565660
 global unicode.RangeTable * unicode.Ugaritic @ 0x55e768
@@ -670,7 +670,7 @@ global int32 runtime.argc @ 0x58eb80
 global int64 runtime.starttime @ 0x58ecd8
 global unicode.RangeTable * unicode.Old_Turkic @ 0x55e540
 global runtime.mutex runtime.tracelock @ 0x58ecf0
-global unicode.RangeTable * unicode.Han @ 0x55e298
+global unicode.RangeTable * unicode.hppan @ 0x55e298
 global unicode.RangeTable * unicode.Old_North_Arabian @ 0x55e518
 global unicode.RangeTable * unicode.Medefaidrin @ 0x55e438
 global uint8 [257] runtime.oneBitCount @ 0x553ca0
@@ -753,7 +753,7 @@ global sync.Pool fmt.ppFree @ 0x55ebe0
 global unicode.RangeTable * unicode.Khojki @ 0x55e358
 global unicode.RangeTable * unicode.Lu @ 0x55e3d0
 global unicode.RangeTable * unicode.Ps @ 0x55e618
-global unicode.RangeTable * unicode.Hiragana @ 0x55e2d0
+global unicode.RangeTable * unicode.hppiragana @ 0x55e2d0
 global struct []runtime.dbgVar runtime.dbgvars @ 0x55ea00
 global <unspecified> os..inittask @ 0x552da0
 global unicode.RangeTable * unicode.Ll @ 0x55e3a8
@@ -812,7 +812,7 @@ global runtime.g * runtime.fing @ 0x565278
 global unicode.RangeTable * unicode.Sogdian @ 0x55e6c0
 global <unspecified> errors..inittask @ 0x5514e0
 global unicode.RangeTable * unicode.ASCII_Hex_Digit @ 0x55e0e0
-global struct struct { runtime.full runtime.lfstack; runtime.empty runtime.lfstack; runtime.pad0 internal/cpu.CacheLinePad; runtime.wbufSpans struct { runtime.lock runtime.mutex; runtime.free runtime.mSpanList; runtime.busy runtime.mSpanList }; _ uint32; runtime.bytesMarked uint64; runtime.markrootNext uint32; runtime.markrootJobs uint32; runtime.nproc uint32; runtime.tstart int64; runtime.nwait uint32; runtime.ndone uint32; runtime.nFlushCacheRoots int; runtime.nDataRoots int; runtime.nBSSRoots int; runtime.nSpanRoots int; runtime.nStackRoots int; runtime.startSema uint32; runtime.markDoneSema uint32; runtime.bgMarkReady runtime.note; runtime.bgMarkDone uint32; runtime.mode runtime.gcMode; runtime.userForced bool; runtime.totaltime int64; runtime.initialHeapLive uint64; runtime.assistQueue struct { runtime.lock runtime.mutex; runtime.q runtime.gQueue }; runtime.sweepWaiters struct { runtime.lock runtime.mutex; runtime.list runtime.gList }; runtime.cycles uint32; runtime.stwprocs int32; runtime.maxprocs int32; runtime.tSweepTerm int64; runtime.tMark int64; runtime.tMarkTerm int64; runtime.tEnd int64; runtime.pauseNS int64; runtime.pauseStart int64; runtime.heap0 uint64; runtime.heap1 uint64; runtime.heap2 uint64; runtime.heapGoal uint64 } runtime.work @ 0x565da0
+global struct struct { runtime.full runtime.lfstack; runtime.empty runtime.lfstack; runtime.pad0 internal/cpu.CacheLinePad; runtime.wbufSpans struct { runtime.lock runtime.mutex; runtime.free runtime.mSpanList; runtime.busy runtime.mSpanList }; _ uint32; runtime.bytesMarked uint64; runtime.markrootNext uint32; runtime.markrootJobs uint32; runtime.nproc uint32; runtime.tstart int64; runtime.nwait uint32; runtime.ndone uint32; runtime.nFlushCacheRoots int; runtime.nDataRoots int; runtime.nBSSRoots int; runtime.nSpanRoots int; runtime.nStackRoots int; runtime.startSema uint32; runtime.markDoneSema uint32; runtime.bgMarkReady runtime.note; runtime.bgMarkDone uint32; runtime.mode runtime.gcMode; runtime.userForced bool; runtime.totaltime int64; runtime.initialHeapLive uint64; runtime.assistQueue struct { runtime.lock runtime.mutex; runtime.q runtime.gQueue }; runtime.sweepWaiters struct { runtime.lock runtime.mutex; runtime.list runtime.gList }; runtime.cycles uint32; runtime.stwprocs int32; runtime.maxprocs int32; runtime.tSweepTerm int64; runtime.tMark int64; runtime.tMarkTerm int64; runtime.tEnd int64; runtime.pauseNS int64; runtime.pauseStart int64; runtime.hppeap0 uint64; runtime.hppeap1 uint64; runtime.hppeap2 uint64; runtime.hppeapGoal uint64 } runtime.work @ 0x565da0
 global runtime.m runtime.m0 @ 0x566180
 global strconv.extFloat [88] strconv.powersOfTen @ 0x55c5e0
 global runtime.finblock * runtime.finc @ 0x565270
@@ -823,7 +823,7 @@ global int32 runtime.gcpercent @ 0x58eba0
 global runtime.mheap runtime.mheap_ @ 0x57c400
 global error time.errLeadingInt @ 0x5655a0
 global error os.errWriteAtInAppendMode @ 0x5654f0
-global uint64 runtime.heapminimum @ 0x550120
+global uint64 runtime.hppeapminimum @ 0x550120
 global int runtime.printBacklogIndex @ 0x58ecb0
 global uintptr internal/cpu.CacheLineSize @ 0x5500e0
 global bool runtime.x86HasSSE41 @ 0x58eb78
@@ -838,7 +838,7 @@ global unicode.RangeTable * unicode.Tagbanwa @ 0x55e6f8
 global struct string [134] syscall.errors @ 0x563940
 global <unspecified> fmt..inittask @ 0x552aa0
 global <unspecified> runtime..gobytes.6 @ 0x550518
-global unicode.RangeTable * unicode.Hanifi_Rohingya @ 0x55e2a8
+global unicode.RangeTable * unicode.hppanifi_Rohingya @ 0x55e2a8
 global <unspecified> runtime..gobytes.7 @ 0x551660
 global <unspecified> internal/oserror..inittask @ 0x551560
 global <unspecified> runtime..gobytes.4 @ 0x550530
@@ -870,7 +870,7 @@ global struct []*sync.Pool sync.allPools @ 0x565740
 global os.File * os.Stdout @ 0x565210
 global unicode.RangeTable * unicode.Kaithi @ 0x55e328
 global unicode.RangeTable * unicode.Cham @ 0x55e1b0
-global unicode.RangeTable * unicode.Hex_Digit @ 0x55e2c8
+global unicode.RangeTable * unicode.hppex_Digit @ 0x55e2c8
 global unicode.RangeTable * unicode.Z @ 0x55e7a8
 global interface {} runtime.sliceEface @ 0x55e950
 global sync.Once internal/poll.serverInit @ 0x58ed28
@@ -954,7 +954,7 @@ global unicode.RangeTable * unicode.Old_Hungarian @ 0x55e508
 global map[string]*unicode.RangeTable unicode.FoldCategory @ 0x565318
 global struct string runtime/internal/sys.DefaultGoroot @ 0x55e9a0
 global runtime.bucket * runtime.bbuckets @ 0x565248
-global unicode.RangeTable * unicode.Hanunoo @ 0x55e2b0
+global unicode.RangeTable * unicode.hppanunoo @ 0x55e2b0
 global <unspecified> syscall..inittask @ 0x551ee0
 global error io.errOffset @ 0x565460
 global runtime._type * runtime.deferType @ 0x565268
@@ -1015,7 +1015,7 @@ global runtime._type * runtime.uint64Type @ 0x5652f0
 global error time.errLocation @ 0x5655b0
 global reflect.rtype * reflect.uint8Type @ 0x565218
 global error runtime.memoryError @ 0x55e920
-global struct struct { runtime.lock runtime.mutex; runtime.newm runtime.muintptr; runtime.waiting bool; runtime.wake runtime.note; runtime.haveTemplateThread uint32 } runtime.newmHandoff @ 0x58ed80
+global struct struct { runtime.lock runtime.mutex; runtime.newm runtime.muintptr; runtime.waiting bool; runtime.wake runtime.note; runtime.hppaveTemplateThread uint32 } runtime.newmHandoff @ 0x58ed80
 global unicode.RangeTable * unicode.foldCommon @ 0x55e7d0
 global unicode.RangeTable * unicode.Mro @ 0x55e480
 global unicode.RangeTable * unicode.Cuneiform @ 0x55e1e0
@@ -1029,7 +1029,7 @@ global unicode.RangeTable * unicode.Dogra @ 0x55e220
 global struct []uint8 runtime.urandom_dev @ 0x55eaa0
 global struct []uint8 runtime.procAuxv @ 0x55ea60
 global unicode.RangeTable * unicode.Bengali @ 0x55e138
-global unicode.RangeTable * unicode.Hyphen @ 0x55e2d8
+global unicode.RangeTable * unicode.hppyphen @ 0x55e2d8
 global void * _cgo_init @ 0x5651c8
 global int64 runtime.runtimeInitTime @ 0x58ecc8
 global unicode.RangeTable * unicode.Avestan @ 0x55e110
@@ -2194,7 +2194,7 @@ standard_opcode_lengths[DW_LNS_set_isa] = 1
  The File Name Table:
   Entry Dir     Time      Size       Name
   1     0       0         0          mammal.cpp
-  2     0       0         0          mammal.h
+  2     0       0         0          mammal.hpp
 
  Line Number Statements:
   DW_LNS_set_column	3
@@ -2262,7 +2262,7 @@ standard_opcode_lengths[DW_LNS_set_isa] = 1
 
  The File Name Table:
   Entry Dir     Time      Size       Name
-  1     0       0         0          mammal.h
+  1     0       0         0          mammal.hpp
   2     0       0         0          main.cpp
 
  Line Number Statements:
@@ -2434,9 +2434,9 @@ standard_opcode_lengths[DW_LNS_set_isa] = 1
 0x000012b5	/home/hound/r2test/dwarf/cpp/dump/main.cpp	23	23
 0x000012ba	/home/hound/r2test/dwarf/cpp/dump/main.cpp	23	24
 0x000012bf	/home/hound/r2test/dwarf/cpp/dump/main.cpp	24	1
-0x000012c6	/home/hound/r2test/dwarf/cpp/dump/mammal.h	2	3
-0x000012d2	/home/hound/r2test/dwarf/cpp/dump/mammal.h	2	12
-0x000012e0	/home/hound/r2test/dwarf/cpp/dump/mammal.h	2	15
+0x000012c6	/home/hound/r2test/dwarf/cpp/dump/mammal.hpp	2	3
+0x000012d2	/home/hound/r2test/dwarf/cpp/dump/mammal.hpp	2	12
+0x000012e0	/home/hound/r2test/dwarf/cpp/dump/mammal.hpp	2	15
 0x000012e3	-	0	0
 0x000012e4	/home/hound/r2test/dwarf/cpp/dump/main.cpp	4	3
 0x000012f4	/home/hound/r2test/dwarf/cpp/dump/main.cpp	4	9
@@ -5565,9 +5565,9 @@ standard_opcode_lengths[DW_LNS_set_isa] = 1
   Entry Dir     Time      Size       Name
   1     0       0         0          float_ex1.c
   2     1       0         0          stdlib.h
-  3     2       0         0          std_abs.h
+  3     2       0         0          std_abs.hpp
   4     3       0         0          cstdlib
-  5     4       0         0          stddef.h
+  5     4       0         0          stddef.hpp
   6     3       0         0          stdlib.h
 
  Line Number Statements:
@@ -7278,9 +7278,9 @@ standard_opcode_lengths[DW_LNS_set_isa] = 1
   Entry Dir     Time      Size       Name
   1     0       0         0          float_ex1.c
   2     1       0         0          stdlib.h
-  3     2       0         0          std_abs.h
+  3     2       0         0          std_abs.hpp
   4     3       0         0          cstdlib
-  5     4       0         0          stddef.h
+  5     4       0         0          stddef.hpp
   6     3       0         0          stdlib.h
 
  Line Number Statements:

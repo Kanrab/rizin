@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2021 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include <rz_hash.h>
-#include "minunit.h"
+#include <rz_util.hpp>
+#include <rz_hash.hpp>
+#include "minunit.hpp"
 
 typedef struct {
 	const ut8 *input;

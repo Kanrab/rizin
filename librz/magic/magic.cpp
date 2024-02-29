@@ -3,13 +3,13 @@
 /* $OpenBSD: magic.c,v 1.8 2009/10/27 23:59:37 deraadt Exp $ */
 
 #include <rz_userconf.h>
-#include <rz_magic.h>
+#include <rz_magic.hpp>
 
 RZ_LIB_VERSION(rz_magic);
 
 #ifdef _MSC_VER
-#include <io.h>
-#include <sys\stat.h>
+#include <io.hpp>
+#include <sys\stat.hpp>
 #define S_ISREG(m)  (((m)&S_IFMT) == S_IFREG)
 #define S_ISDIR(m)  (((m)&S_IFMT) == S_IFDIR)
 #define S_IFIFO     (-1)
@@ -21,7 +21,7 @@ RZ_LIB_VERSION(rz_magic);
 
 // we keep this code just to make debian happy, but we should use
 // our own magic implementation for consistency reasons
-#include <magic.h>
+#include <magic.hpp>
 #undef RZ_API
 #define RZ_API
 
@@ -73,7 +73,7 @@ RZ_API int rz_magic_errno(RzMagic *m) {
 
 /* use embedded magic library */
 
-#include "file.h"
+#include "file.hpp"
 
 #ifndef PIPE_BUF
 /* Get the PIPE_BUF from pathconf */

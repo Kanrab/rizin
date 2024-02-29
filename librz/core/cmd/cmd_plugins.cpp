@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2020 ret2libc <sirmy15@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
+#include <rz_core.hpp>
 
 RZ_IPI RzCmdStatus rz_plugins_load_handler(RzCore *core, int argc, const char **argv) {
 	return rz_lib_open(core->lib, rz_str_trim_head_ro(argv[1])) ? RZ_CMD_STATUS_OK : RZ_CMD_STATUS_ERROR;

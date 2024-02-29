@@ -4,7 +4,7 @@
 #ifndef RL78_MAPS_H
 #define RL78_MAPS_H
 
-#include "rl78_instr.h"
+#include "rl78_instr.hpp"
 
 extern RL78Instr rl78_instr_maps[4 * 256];
 

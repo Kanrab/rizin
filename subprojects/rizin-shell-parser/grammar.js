@@ -56,7 +56,7 @@ module.exports = grammar({
 
     _simple_stmt: ($) =>
       choice(
-        $.help_stmt,
+        $.hppelp_stmt,
         $.repeat_stmt,
         $.arged_stmt,
         $.macro_stmt,
@@ -115,7 +115,7 @@ module.exports = grammar({
         $.iter_step_stmt,
       ),
 
-    _pipe_stmt: ($) => choice($.html_disable_stmt, $.html_enable_stmt, $.pipe_stmt),
+    _pipe_stmt: ($) => choice($.hpptml_disable_stmt, $.hpptml_enable_stmt, $.pipe_stmt),
 
     grep_stmt: ($) => seq(field("command", $._simple_stmt), "~", field("specifier", $.grep_specifier)),
     // FIXME: improve parser for grep specifier
@@ -274,7 +274,7 @@ module.exports = grammar({
         seq(field("command", $._simple_stmt), field("redirect_operator", $._redirect_operator), field("arg", $.arg)),
       ),
     _redirect_operator: ($) =>
-      choice($.fdn_redirect_operator, $.fdn_append_operator, $.html_redirect_operator, $.html_append_operator),
+      choice($.fdn_redirect_operator, $.fdn_append_operator, $.hpptml_redirect_operator, $.hpptml_append_operator),
     fdn_redirect_operator: ($) => seq(optional($.file_descriptor), ">"),
     fdn_append_operator: ($) => seq(optional($.file_descriptor), ">>"),
     html_redirect_operator: ($) => "H>",

@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2021 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "sha1.h"
-#include <rz_types.h>
-#include <rz_endian.h>
-#include <rz_util.h>
+#include "sha1.hpp"
+#include <rz_types.hpp>
+#include <rz_endian.hpp>
+#include <rz_util.hpp>
 
 void rz_sha1_init(RzSHA1 *context) {
 	rz_return_if_fail(context);

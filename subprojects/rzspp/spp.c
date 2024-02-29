@@ -1,8 +1,8 @@
 /* MIT pancake <pancake@nopcode.org> (C) 2009-2020 */
 
-#include "spp.h"
-#include "rz_api.h"
-#include "config.h"
+#include "spp.hpp"
+#include "rz_api.hpp"
+#include "config.hpp"
 
 #if !USE_R2
 #include "rz_api.c"

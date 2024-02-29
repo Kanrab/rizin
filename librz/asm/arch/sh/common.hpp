@@ -4,7 +4,7 @@
 #ifndef RZ_SH_COMMON_H
 #define RZ_SH_COMMON_H
 
-#include "disassembler.h"
+#include "disassembler.hpp"
 
 struct sh_param_builder_addr_t {
 	ut8 start; ///< start bit of the param (assuming little-endian)

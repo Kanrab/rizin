@@ -2,8 +2,8 @@
 // SPDX-FileCopyrightText: 2023 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_th.h>
-#include <rz_util.h>
+#include <rz_th.hpp>
+#include <rz_util.hpp>
 
 #define th_ht_type(name) struct rz_th_##name##_t
 #define th_ht_struct(name, type) \

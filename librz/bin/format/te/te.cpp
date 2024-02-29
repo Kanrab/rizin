@@ -6,10 +6,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <rz_types.h>
-#include <rz_util.h>
-#include "te_specs.h"
-#include "te.h"
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include "te_specs.hpp"
+#include "te.hpp"
 
 ut64 rz_bin_te_get_stripped_delta(struct rz_bin_te_obj_t *bin) {
 	if (bin && bin->header) {

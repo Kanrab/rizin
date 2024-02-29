@@ -1,8 +1,8 @@
 #ifndef RZ_HEAP_GLIBC_H
 #define RZ_HEAP_GLIBC_H
 
-#include <rz_types.h>
-#include <rz_list.h>
+#include <rz_types.hpp>
+#include <rz_list.hpp>
 
 #ifdef __cplusplus
 extern "C" {

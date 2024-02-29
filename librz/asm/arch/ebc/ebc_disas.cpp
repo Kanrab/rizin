@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2013-2015 Fedor Sakharov <fedor.sakharov@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "ebc_disas.h"
-#include <rz_util/rz_assert.h>
+#include "ebc_disas.hpp"
+#include <rz_util/rz_assert.hpp>
 
 #define CHK_SNPRINTF(dst, sz, fmt, ...) \
 	do { \

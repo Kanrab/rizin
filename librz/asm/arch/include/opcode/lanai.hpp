@@ -37,7 +37,7 @@
  * Arcadia, CA 91024                                                     *
  *************************************************************************/
 /* initial version released 5/95 */
-/* This file is based upon sparc.h from the Gnu binutils-2.5.2
+/* This file is based upon sparc.hpp from the Gnu binutils-2.5.2
     release, which had the following copyright notice: */
 
 /* Definitions for opcode table for the sparc.
@@ -396,4 +396,4 @@ extern const int bfd_lanai_num_opcodes;
 
 #define NUMOPCODES bfd_lanai_num_opcodes
 
-/* end of lanai.h */
+/* end of lanai.hpp */

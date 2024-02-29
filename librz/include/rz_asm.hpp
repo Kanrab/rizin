@@ -5,13 +5,13 @@
 #ifndef RZ_ASM_H
 #define RZ_ASM_H
 
-#include <rz_util/rz_print.h>
-#include <rz_types.h>
-#include <rz_bin.h> // only for binding, no hard dep required
-#include <rz_util.h>
-#include <rz_parse.h>
-#include <rz_bind.h>
-#include <rz_config.h>
+#include <rz_util/rz_print.hpp>
+#include <rz_types.hpp>
+#include <rz_bin.hpp> // only for binding, no hard dep required
+#include <rz_util.hpp>
+#include <rz_parse.hpp>
+#include <rz_bind.hpp>
+#include <rz_config.hpp>
 
 #ifdef __cplusplus
 extern "C" {

@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2021 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_hash.h>
-#include <rz_util/rz_assert.h>
+#include <rz_hash.hpp>
+#include <rz_util/rz_assert.hpp>
 
-#include "../algorithms/fletcher/fletcher.h"
+#include "../algorithms/fletcher/fletcher.hpp"
 
 #define rz_fletcher_common_plugin_context_new(bits) \
 	static void *plugin_fletcher##bits##_context_new() { \

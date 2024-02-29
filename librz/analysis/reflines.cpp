@@ -2,9 +2,9 @@
 // SPDX-FileCopyrightText: 2009-2020 nibble <nibble.ds@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
-#include <rz_util.h>
-#include <rz_cons.h>
+#include <rz_core.hpp>
+#include <rz_util.hpp>
+#include <rz_cons.hpp>
 
 #define mid_down_refline(a, r) ((r)->from > (r)->to && (a) < (r)->from && (a) > (r)->to)
 #define mid_up_refline(a, r)   ((r)->from < (r)->to && (a) > (r)->from && (a) < (r)->to)

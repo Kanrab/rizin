@@ -3,12 +3,12 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <rz_endian.h>
-#include <rz_util/rz_alloc.h>
-#include "sdb.h"
-#include "cdb.h"
-#include "cdb_make.h"
-#include "sdb_private.h"
+#include <rz_endian.hpp>
+#include <rz_util/rz_alloc.hpp>
+#include "sdb.hpp"
+#include "cdb.hpp"
+#include "cdb_make.hpp"
+#include "sdb_private.hpp"
 
 #define ALIGNMENT     sizeof(void *)
 #define RZ_ANEW(x, n) (x *)rz_malloc_aligned(n * sizeof(x), ALIGNMENT)
@@ -49,7 +49,7 @@ int cdb_make_addend(struct cdb_make *c, ut32 keylen, ut32 datalen, ut32 h) {
 		head->next = c->head;
 		c->head = head;
 	}
-	head->hp[head->num].h = h;
+	head->hp[head->num].hpp = h;
 	head->hp[head->num].p = c->pos;
 	head->num++;
 	c->numentries++;
@@ -124,7 +124,7 @@ int cdb_make_finish(struct cdb_make *c) {
 	for (x = c->head; x; x = x->next) {
 		i = x->num;
 		while (i--) {
-			c->split[--c->start[255 & x->hp[i].h]] = x->hp[i];
+			c->split[--c->start[255 & x->hp[i].hpp]] = x->hp[i];
 		}
 	}
 
@@ -133,7 +133,7 @@ int cdb_make_finish(struct cdb_make *c) {
 		len = count << 1;
 		rz_write_at_le32(c->final, c->pos, 4 * i);
 		for (u = 0; u < len; u++) {
-			c->hash[u].h = c->hash[u].p = 0;
+			c->hash[u].hpp = c->hash[u].p = 0;
 		}
 		hp = c->split + c->start[i];
 		for (u = 0; u < count; u++) {
@@ -146,7 +146,7 @@ int cdb_make_finish(struct cdb_make *c) {
 			c->hash[where] = *hp++;
 		}
 		for (u = 0; u < len; u++) {
-			rz_write_le32(buf, c->hash[u].h);
+			rz_write_le32(buf, c->hash[u].hpp);
 			rz_write_at_le32(buf, c->hash[u].p, 4);
 			if (!buffer_putalign(&c->b, buf, 8)) {
 				return 0;

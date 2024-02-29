@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2021 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "md4.h"
-#include <rz_types.h>
-#include <rz_endian.h>
-#include <rz_util.h>
+#include "md4.hpp"
+#include <rz_types.hpp>
+#include <rz_endian.hpp>
+#include <rz_util.hpp>
 
 #define XAX(x, y, z) (z ^ (x & (y ^ z)))
 #define AAA(x, y, z) ((x & y) | (x & z) | (y & z))

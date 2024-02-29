@@ -2,12 +2,12 @@
 // SPDX-FileCopyrightText: 2012-2015 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_asm.h>
-#include <rz_lib.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_asm.hpp>
+#include <rz_lib.hpp>
 #include "../arch/snes/snesdis.c"
-#include "asm_snes.h"
+#include "asm_snes.hpp"
 
 static int dis(RzAsm *a, RzAsmOp *op, const ut8 *buf, int len) {
 	struct snes_asm_flags *snesflags = (struct snes_asm_flags *)a->plugin_data;

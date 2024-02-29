@@ -5,9 +5,9 @@
 // modify it manually. Look at cmd_descs.yaml if you want to update commands.
 //
 
-#include <rz_cmd.h>
-#include <rz_core.h>
-#include <rz_util.h>
+#include <rz_cmd.hpp>
+#include <rz_core.hpp>
+#include <rz_util.hpp>
 
 // Command handlers, manually defined somewhere else
 // "!"

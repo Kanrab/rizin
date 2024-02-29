@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2014-2017 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
-#include <rz_lib.h>
-#include <capstone/capstone.h>
-#include <capstone/sparc.h>
+#include <rz_analysis.hpp>
+#include <rz_lib.hpp>
+#include <capstone/capstone.hpp>
+#include <capstone/sparc.hpp>
 
 #define INSOP(n) insn->detail->sparc.operands[n]
 #define INSCC    insn->detail->sparc.cc

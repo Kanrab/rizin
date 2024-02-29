@@ -66,9 +66,9 @@ EXPECT=<<EOF
 0x100002000 4096 hello_objc_osx.r
 --
 fss+ maps
-f+ map.hello_objc_osx.r_x 0x00001000 @ 0x100000000
-f+ map.hello_objc_osx.rw 0x00001000 @ 0x100001000
-f+ map.hello_objc_osx.r 0x00001000 @ 0x100002000
+f+ map.hppello_objc_osx.r_x 0x00001000 @ 0x100000000
+f+ map.hppello_objc_osx.rw 0x00001000 @ 0x100001000
+f+ map.hppello_objc_osx.r 0x00001000 @ 0x100002000
 fss-
 EOF
 EXPECT_ERR=

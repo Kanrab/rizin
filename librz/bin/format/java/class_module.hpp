@@ -3,7 +3,7 @@
 
 #ifndef RZ_BIN_JAVA_CLASS_MODULE_H
 #define RZ_BIN_JAVA_CLASS_MODULE_H
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 typedef struct java_module_provide_t {
 	ut16 index;

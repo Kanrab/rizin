@@ -2,10 +2,10 @@
 // SPDX-FileCopyrightText: 2016-2018 Alex Kornitzer <alex.kornitzer@countercept.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include <rz_list.h>
+#include <rz_util.hpp>
+#include <rz_list.hpp>
 
-#include "mdmp_pe.h"
+#include "mdmp_pe.hpp"
 
 static void PE_(add_tls_callbacks)(struct PE_(rz_bin_pe_obj_t) * bin, RzPVector /*<RzBinAddr *>*/ *vec) {
 	char *key;

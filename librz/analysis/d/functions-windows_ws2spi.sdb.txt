@@ -1,4 +1,4 @@
-### ws2spi.h ###
+### ws2spi.hpp ###
 
 NSPStartup=func
 func.NSPStartup.args=2

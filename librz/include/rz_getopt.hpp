@@ -1,7 +1,7 @@
 #ifndef RZ_GETOPT_H
 #define RZ_GETOPT_H
 
-#include <rz_util.h>
+#include <rz_util.hpp>
 
 #ifdef __cplusplus
 extern "C" {

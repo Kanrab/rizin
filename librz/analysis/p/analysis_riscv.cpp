@@ -2,12 +2,12 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <string.h>
-#include <rz_types.h>
-#include <rz_lib.h>
-#include <rz_asm.h>
-#include <rz_analysis.h>
+#include <rz_types.hpp>
+#include <rz_lib.hpp>
+#include <rz_asm.hpp>
+#include <rz_analysis.hpp>
 #include "../../asm/arch/riscv/riscv-opc.c"
-#include "../../asm/arch/riscv/riscv.h"
+#include "../../asm/arch/riscv/riscv.hpp"
 #define ARRAY_SIZE(a) (sizeof(a) / sizeof(*a))
 #define RISCVARGSMAX  (8)
 #define RISCVARGSIZE  (64)
@@ -262,7 +262,7 @@ static void get_insn_args(riscv_args_t *args, const char *d, insn_t l, uint64_t 
 	case num: \
 		csr_name = #name; \
 		break;
-#include "../../asm/arch/riscv/riscv-opc.h"
+#include "../../asm/arch/riscv/riscv-opc.hpp"
 #undef DECLARE_CSR
 			}
 			if (csr_name) {

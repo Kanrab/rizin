@@ -3,7 +3,7 @@
 
 /* Radare Language Code Compiler */
 
-#include <mpc.h>
+#include <mpc.hpp>
 #define eprintf(x, y...) fprintf(stderr, x, ##y)
 
 static int isComment(mpc_ast_t *node) {

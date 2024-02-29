@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2019 thestr4ng3r <info@florianmaerkl.de>
 // SPDX-License-Identifier: MIT
 
-#include "sdb.h"
+#include "sdb.hpp"
 
 RZ_API int sdb_diff_format(char *str, int size, const SdbDiff *diff) {
 	int r = 0;

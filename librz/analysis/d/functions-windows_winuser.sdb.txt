@@ -1,4 +1,4 @@
-### winuser.h ###
+### winuser.hpp ###
 
 ActivateKeyboardLayout=func
 func.ActivateKeyboardLayout.args=2
@@ -2607,17 +2607,17 @@ func.GrayStringW.arg.8=int,nHeight
 func.GrayStringW.ret=BOOL
 
 HideCaret=func
-func.HideCaret.args=1
-func.HideCaret.arg.0=HWND,hWnd
-func.HideCaret.ret=BOOL
+func.hppideCaret.args=1
+func.hppideCaret.arg.0=HWND,hWnd
+func.hppideCaret.ret=BOOL
 
 HiliteMenuItem=func
-func.HiliteMenuItem.args=4
-func.HiliteMenuItem.arg.0=HWND,hWnd
-func.HiliteMenuItem.arg.1=HMENU,hMenu
-func.HiliteMenuItem.arg.2=UINT,uIDHiliteItem
-func.HiliteMenuItem.arg.3=UINT,uHilite
-func.HiliteMenuItem.ret=BOOL
+func.hppiliteMenuItem.args=4
+func.hppiliteMenuItem.arg.0=HWND,hWnd
+func.hppiliteMenuItem.arg.1=HMENU,hMenu
+func.hppiliteMenuItem.arg.2=UINT,uIDHiliteItem
+func.hppiliteMenuItem.arg.3=UINT,uHilite
+func.hppiliteMenuItem.ret=BOOL
 
 InSendMessage=func
 func.InSendMessage.args=0

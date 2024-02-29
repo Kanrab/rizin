@@ -3,7 +3,7 @@
 // SPDX-FileCopyrightText: 2008-2019 inisider <inisider@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "pe.h"
+#include "pe.hpp"
 
 static void computeOverlayOffset(ut64 offset, ut64 size, ut64 file_size, ut64 *largest_offset, ut64 *largest_size) {
 	if (offset + size <= file_size && offset + size > (*largest_offset + *largest_size)) {

@@ -30,14 +30,14 @@
 
 #if !USE_LIB_MAGIC
 
-#include "file.h"
-#include <stdarg.h>
+#include "file.hpp"
+#include <stdarg.hpp>
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
 #include <wctype.h>
 #if defined(HAVE_WCHAR_H)
-#include <wchar.h>
+#include <wchar.hpp>
 #endif
 
 // copypasta to fix an OPENBSDBUG

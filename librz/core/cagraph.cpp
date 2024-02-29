@@ -2,8 +2,8 @@
 // SPDX-FileCopyrightText: 2014-2021 ret2libc <sirmy15@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
-#include "core_private.h"
+#include <rz_core.hpp>
+#include "core_private.hpp"
 
 RZ_IPI void rz_core_agraph_reset(RzCore *core) {
 	rz_agraph_reset(core->graph);

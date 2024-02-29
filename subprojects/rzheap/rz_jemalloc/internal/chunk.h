@@ -93,5 +93,5 @@ chunk_lookup(const void *ptr, bool dependent)
 #endif /* JEMALLOC_H_INLINES */
 /******************************************************************************/
 
-#include "chunk_dss.h"
-#include "chunk_mmap.h"
+#include "chunk_dss.hpp"
+#include "chunk_mmap.hpp"

@@ -2,10 +2,10 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <string.h>
-#include <rz_types.h>
-#include <rz_lib.h>
-#include <rz_asm.h>
-#include <rz_analysis.h>
+#include <rz_types.hpp>
+#include <rz_lib.hpp>
+#include <rz_asm.hpp>
+#include <rz_analysis.hpp>
 
 static int nios2_op(RzAnalysis *analysis, RzAnalysisOp *op, ut64 addr, const ut8 *b, int len, RzAnalysisOpMask mask) {
 	if (!op) {

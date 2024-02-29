@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: 2017-2020 condret <condr3t@protonmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include <rz_types.h>
+#include <rz_util.hpp>
+#include <rz_types.hpp>
 #include <string.h>
 #include <stdlib.h>
 #if __WINDOWS__
-#include <search.h>
+#include <search.hpp>
 #endif
 
 static ut32 get_msb(ut32 v) {

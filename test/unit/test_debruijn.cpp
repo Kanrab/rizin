@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2016 Jeffrey Crowell <crowell@bu.edu>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include "minunit.h"
+#include <rz_util.hpp>
+#include "minunit.hpp"
 
 bool test_rz_debruijn_pattern(void) {
 	char *pattern = rz_debruijn_pattern(256, 0, NULL /*default charset*/);

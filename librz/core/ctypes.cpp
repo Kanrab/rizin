@@ -6,12 +6,12 @@
 
 #include <string.h>
 
-#include <rz_types.h>
-#include <rz_list.h>
-#include <rz_core.h>
-#include <rz_type.h>
+#include <rz_types.hpp>
+#include <rz_list.hpp>
+#include <rz_core.hpp>
+#include <rz_type.hpp>
 
-#include "core_private.h"
+#include "core_private.hpp"
 
 // Calling conventions
 
@@ -952,7 +952,7 @@ RZ_IPI bool rz_types_open_file(RzCore *core, const char *path) {
 	const char *dir = rz_config_get(core->config, "dir.types");
 	RzTypeDB *typedb = core->analysis->typedb;
 	if (!strcmp(path, "-")) {
-		char *tmp = rz_core_editor(core, "*.h", "");
+		char *tmp = rz_core_editor(core, "*.hpp", "");
 		if (tmp) {
 			char *error_msg = NULL;
 			int result = rz_type_parse_string_stateless(typedb->parser, tmp, &error_msg);

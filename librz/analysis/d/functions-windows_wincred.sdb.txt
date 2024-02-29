@@ -1,4 +1,4 @@
-### wincred.h ###
+### wincred.hpp ###
 
 CredDeleteA=func
 func.CredDeleteA.args=3

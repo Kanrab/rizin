@@ -5,7 +5,7 @@
 #ifndef RZ_IL_VM_EVENTS_H
 #define RZ_IL_VM_EVENTS_H
 
-#include <rz_il/definitions/definitions.h>
+#include <rz_il/definitions/definitions.hpp>
 
 #ifdef __cplusplus
 extern "C" {

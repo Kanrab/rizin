@@ -4,9 +4,9 @@
 #ifndef DMP64_H
 #define DMP64_H
 
-#include <rz_util.h>
+#include <rz_util.hpp>
 
-#include "dmp_specs.h"
+#include "dmp_specs.hpp"
 
 typedef struct {
 	ut64 start;

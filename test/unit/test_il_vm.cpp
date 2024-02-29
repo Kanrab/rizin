@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2021 heersin <teablearcher@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_il.h>
-#include <rz_util.h>
-#include "minunit.h"
+#include <rz_il.hpp>
+#include <rz_util.hpp>
+#include "minunit.hpp"
 
 static bool test_rzil_vm_init() {
 	RzILVM *vm = rz_il_vm_new(0, 8, true);

@@ -2,10 +2,10 @@
 // SPDX-FileCopyrightText: 2009-2018 defragger <rlaemmert@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
-#include <rz_debug.h>
-#include <libgdbr.h>
-#include <gdbclient/commands.h>
+#include <rz_core.hpp>
+#include <rz_debug.hpp>
+#include <libgdbr.hpp>
+#include <gdbclient/commands.hpp>
 
 typedef struct {
 	libgdbr_t desc;

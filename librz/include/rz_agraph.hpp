@@ -1,10 +1,10 @@
 #ifndef RZ_AGRAPH_H
 #define RZ_AGRAPH_H
 
-#include <rz_types.h>
-#include <rz_cons.h>
-#include <rz_util/rz_graph.h>
-#include <rz_util/rz_graph_drawable.h>
+#include <rz_types.hpp>
+#include <rz_cons.hpp>
+#include <rz_util/rz_graph.hpp>
+#include <rz_util/rz_graph_drawable.hpp>
 
 typedef struct rz_ascii_node_t {
 	RzGraphNode *gnode;

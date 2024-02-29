@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2021 Florian Märkl <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bin.h>
+#include <rz_bin.hpp>
 
-#include "../unit/minunit.h"
+#include "../unit/minunit.hpp"
 
 /// Test using RzBin without RzCore and extract some data from a vfiile
 bool test_bin_vfiles() {

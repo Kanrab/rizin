@@ -5,14 +5,14 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include <rz_types.h>
-#include <rz_lib.h>
-#include <rz_asm.h>
+#include <rz_types.hpp>
+#include <rz_lib.hpp>
+#include <rz_asm.hpp>
 
 #define USE_DECODE
-#include "decode.h"
+#include "decode.hpp"
 
-#include "../tms320_dasm.h"
+#include "../tms320_dasm.hpp"
 
 extern ut8 *ins_buff;
 extern ut32 ins_buff_len;

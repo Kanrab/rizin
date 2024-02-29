@@ -2,8 +2,8 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <rz_userconf.h>
-#include <rz_io.h>
-#include <rz_lib.h>
+#include <rz_io.hpp>
+#include <rz_lib.hpp>
 #include <stdio.h>
 
 typedef struct rz_io_mmo_t {

@@ -3,7 +3,7 @@
 
 #ifndef RZ_ASM_JAVA_BYTECODE_H
 #define RZ_ASM_JAVA_BYTECODE_H
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 #define BYTECODE_00_NOP             (0x00)
 #define BYTECODE_01_ACONST_NULL     (0x01)

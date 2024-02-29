@@ -1,8 +1,8 @@
 #ifndef RZ_VECTOR_H
 #define RZ_VECTOR_H
 
-#include <rz_types.h>
-#include <rz_util/rz_assert.h>
+#include <rz_types.hpp>
+#include <rz_util/rz_assert.hpp>
 #ifdef __cplusplus
 extern "C" {
 #endif

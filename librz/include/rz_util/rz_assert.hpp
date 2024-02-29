@@ -1,7 +1,7 @@
 #ifndef RZ_ASSERT_H
 #define RZ_ASSERT_H
 
-#include "rz_log.h"
+#include "rz_log.hpp"
 
 #ifdef __cplusplus
 extern "C" {
@@ -133,7 +133,7 @@ RZ_API void rz_assert_log(RzLogLevel level, const char *fmt, ...) RZ_PRINTF_CHEC
 
 #else // RZ_CHECKS_LEVEL
 
-#include <assert.h>
+#include <assert.hpp>
 
 #define rz_return_if_fail(expr) \
 	do { \

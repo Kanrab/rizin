@@ -6,7 +6,7 @@
  * RzIL Virtual Machine Evaluation (Emulation)
  */
 
-#include <rz_il/rz_il_vm.h>
+#include <rz_il/rz_il_vm.hpp>
 
 // Handler for core theory opcodes
 void *rz_il_handler_ite(RzILVM *vm, RzILOpPure *op, RzILTypePure *type);

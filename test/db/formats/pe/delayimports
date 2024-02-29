@@ -138,9 +138,9 @@ nth paddr      vaddr      bind type size lib                               name
 18  0x00001844 0x00403044 NONE FUNC 0    KERNEL32.dll                      imp.GetProcAddress
 19  0x00001848 0x00403048 NONE FUNC 0    KERNEL32.dll                      imp.GetModuleHandleW
 20  0x0000184c 0x0040304c NONE FUNC 0    KERNEL32.dll                      imp.FreeLibrary
-1   0x00002618 0x00404018 NONE FUNC 0    HID.DLL                           imp.HidD_FlushQueue
-2   0x0000261c 0x0040401c NONE FUNC 0    HID.DLL                           imp.HidD_FreePreparsedData
-3   0x00002620 0x00404020 NONE FUNC 0    HID.DLL                           imp.HidD_GetHidGuid
+1   0x00002618 0x00404018 NONE FUNC 0    HID.DLL                           imp.hppidD_FlushQueue
+2   0x0000261c 0x0040401c NONE FUNC 0    HID.DLL                           imp.hppidD_FreePreparsedData
+3   0x00002620 0x00404020 NONE FUNC 0    HID.DLL                           imp.hppidD_GetHidGuid
 1   0x00002630 0x00404030 NONE FUNC 0    wlanapi.dll                       imp.WFDCloseHandle
 2   0x00002634 0x00404034 NONE FUNC 0    wlanapi.dll                       imp.WFDCancelOpenSession
 3   0x00002638 0x00404038 NONE FUNC 0    wlanapi.dll                       imp.WFDCloseSession
@@ -266,9 +266,9 @@ nth paddr      vaddr       bind type size lib                               name
 21  0x00001aa0 0x1400030a0 NONE FUNC 0    KERNEL32.dll                      imp.GetProcAddress
 22  0x00001aa8 0x1400030a8 NONE FUNC 0    KERNEL32.dll                      imp.GetModuleHandleW
 23  0x00001ab0 0x1400030b0 NONE FUNC 0    KERNEL32.dll                      imp.FreeLibrary
-1   0x00002e40 0x140005040 NONE FUNC 0    HID.DLL                           imp.HidD_FlushQueue
-2   0x00002e48 0x140005048 NONE FUNC 0    HID.DLL                           imp.HidD_FreePreparsedData
-3   0x00002e50 0x140005050 NONE FUNC 0    HID.DLL                           imp.HidD_GetHidGuid
+1   0x00002e40 0x140005040 NONE FUNC 0    HID.DLL                           imp.hppidD_FlushQueue
+2   0x00002e48 0x140005048 NONE FUNC 0    HID.DLL                           imp.hppidD_FreePreparsedData
+3   0x00002e50 0x140005050 NONE FUNC 0    HID.DLL                           imp.hppidD_GetHidGuid
 1   0x00002e70 0x140005070 NONE FUNC 0    wlanapi.dll                       imp.WFDCloseHandle
 2   0x00002e78 0x140005078 NONE FUNC 0    wlanapi.dll                       imp.WFDCancelOpenSession
 3   0x00002e80 0x140005080 NONE FUNC 0    wlanapi.dll                       imp.WFDCloseSession

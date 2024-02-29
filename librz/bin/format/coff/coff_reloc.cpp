@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2021 Florian Märkl <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "coff.h"
-#include <rz_util.h>
-#include <rz_util/ht_uu.h>
+#include "coff.hpp"
+#include <rz_util.hpp>
+#include <rz_util/ht_uu.hpp>
 
 /// base vaddr where to map the artificial reloc target vfile
 RZ_API ut64 rz_coff_get_reloc_targets_map_base(struct rz_bin_coff_obj *obj) {

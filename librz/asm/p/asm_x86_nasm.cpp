@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2009-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_lib.h>
-#include <rz_asm.h>
+#include <rz_lib.hpp>
+#include <rz_asm.hpp>
 
 static int assemble(RzAsm *a, RzAsmOp *op, const char *buf) {
 	char *ipath, *opath;

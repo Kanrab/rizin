@@ -2,11 +2,11 @@
 // SPDX-FileCopyrightText: 2017-2020 MaskRay <i@maskray.me>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_io.h>
+#include <rz_io.hpp>
 #include <stdlib.h>
-#include <sdb.h>
-#include "rz_util.h"
-#include "rz_vector.h"
+#include <sdb.hpp>
+#include "rz_util.hpp"
+#include "rz_vector.hpp"
 
 #define END_OF_MAP_IDS UT32_MAX
 

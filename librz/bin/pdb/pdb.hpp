@@ -4,13 +4,13 @@
 #ifndef PDB_PRIVATE_INCLUDE_H_
 #define PDB_PRIVATE_INCLUDE_H_
 
-#include <rz_pdb.h>
-#include "dbi.h"
-#include "omap.h"
-#include "stream_pe.h"
-#include "tpi.h"
-#include "symbol.h"
-#include "modi.h"
+#include <rz_pdb.hpp>
+#include "dbi.hpp"
+#include "omap.hpp"
+#include "stream_pe.hpp"
+#include "tpi.hpp"
+#include "symbol.hpp"
+#include "modi.hpp"
 
 #define map_err(x) \
 	if (!(x)) { \

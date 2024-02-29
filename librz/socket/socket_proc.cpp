@@ -4,12 +4,12 @@
 /* XXX : move to rz_util??? rename method names.. to long? */
 /* proc IO is not related to socket io.. */
 
-#include <rz_socket.h>
-#include <rz_util.h>
-#include <signal.h>
+#include <rz_socket.hpp>
+#include <rz_util.hpp>
+#include <signal.hpp>
 
 #if __UNIX__
-#include <sys/wait.h>
+#include <sys/wait.hpp>
 #endif
 
 #define BUFFER_SIZE 4096

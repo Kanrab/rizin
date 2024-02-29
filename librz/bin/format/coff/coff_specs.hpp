@@ -3,7 +3,7 @@
 #ifndef COFF_SPECS_H
 #define COFF_SPECS_H
 
-#include <rz_types_base.h>
+#include <rz_types_base.hpp>
 
 #define COFF_FILE_MACHINE_UNKNOWN   0x0
 #define COFF_FILE_MACHINE_AM33      0x1d3

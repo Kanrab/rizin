@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: MIT
 
 #include <string.h>
-#include "ls.h"
+#include "ls.hpp"
 
 RZ_API SdbList *ls_newf(SdbListFree freefn) {
 	SdbList *list = ls_new();

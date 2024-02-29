@@ -1,4 +1,4 @@
-### winsvc.h ###
+### winsvc.hpp ###
 
 ChangeServiceConfig2A=func
 func.ChangeServiceConfig2A.args=3

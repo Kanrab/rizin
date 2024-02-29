@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2021 Anton Kochkov <anton.kochkov@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include <rz_type.h>
+#include <rz_util.hpp>
+#include <rz_type.hpp>
 #include <string.h>
 
 RZ_API void rz_type_base_enum_case_free(void *e, void *user) {

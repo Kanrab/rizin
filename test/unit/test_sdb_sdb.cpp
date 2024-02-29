@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: MIT
 
-#include "minunit.h"
-#include <sdb.h>
+#include "minunit.hpp"
+#include <sdb.hpp>
 #include <fcntl.h>
 #include <stdio.h>
-#include <rz_util/rz_file.h>
+#include <rz_util/rz_file.hpp>
 
 static bool foreach_delete_cb(void *user, const char *key, const char *val) {
 	if (strcmp(key, "bar")) {

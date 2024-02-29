@@ -2,12 +2,12 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #if __UNIX__
-#include <unistd.h>
+#include <unistd.hpp>
 #elif __WINDOWS__
-#include <rz_windows.h>
+#include <rz_windows.hpp>
 #endif
-#include "spp.h"
-#include "rz_api.h"
+#include "spp.hpp"
+#include "rz_api.hpp"
 
 SStrBuf *rz_strbuf_new(const char *str) {
 	SStrBuf *s = RZ_NEW0 (SStrBuf);

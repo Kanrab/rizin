@@ -5,7 +5,7 @@
  * Enjoy it --FXTi
  */
 
-#include <rz_util.h>
+#include <rz_util.hpp>
 
 /* Functions for shifting number in-place. */
 static void _lshift_one_bit(RzNumBig *a);

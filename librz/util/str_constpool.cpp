@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2019 thestr4ng3r <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "rz_util/rz_str_constpool.h"
+#include "rz_util/rz_str_constpool.hpp"
 
 static void kv_fini(HtPPKv *kv) {
 	free(kv->key);

@@ -3,14 +3,14 @@
 // SPDX-FileCopyrightText: 2008-2019 alvaro_fe <alvaro.felipe91@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_io.h>
-#include <sdb.h>
-#include <config.h>
-#include "io_private.h"
+#include <rz_io.hpp>
+#include <sdb.hpp>
+#include <config.hpp>
+#include "io_private.hpp"
 
 #if __WINDOWS__
-#include <rz_windows.h>
-#include <w32dbg_wrap.h>
+#include <rz_windows.hpp>
+#include <w32dbg_wrap.hpp>
 #endif
 
 RZ_LIB_VERSION(rz_io);
@@ -659,8 +659,8 @@ RZ_API ut64 rz_io_seek(RzIO *io, ut64 offset, int whence) {
 #if HAVE_PTRACE
 
 #if USE_PTRACE_WRAP
-#include <ptrace_wrap.h>
-#include <errno.h>
+#include <ptrace_wrap.hpp>
+#include <errno.hpp>
 
 static ptrace_wrap_instance *io_ptrace_wrap_instance(RzIO *io) {
 	if (!io->ptrace_wrap) {

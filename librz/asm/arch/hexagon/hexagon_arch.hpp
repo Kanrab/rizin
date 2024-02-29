@@ -11,7 +11,7 @@
 #ifndef HEXAGON_ARCH_H
 #define HEXAGON_ARCH_H
 
-#include "hexagon.h"
+#include "hexagon.hpp"
 
 // The packet position indicators added to the instruction text.
 typedef enum {

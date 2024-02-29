@@ -1,4 +1,4 @@
-### ncrypt.h ###
+### ncrypt.hpp ###
 
 NCRYPT_PROV_HANDLE=typedef
 typedef.NCRYPT_PROV_HANDLE=ULONG_PTR

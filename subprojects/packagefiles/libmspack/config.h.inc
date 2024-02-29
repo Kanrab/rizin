@@ -5,13 +5,13 @@
 /* Turn debugging mode on? */
 #define DEBUG @DEBUG@
 
-/* Define to 1 if you have the <dlfcn.h> header file. */
+/* Define to 1 if you have the <dlfcn.hpp> header file. */
 #define HAVE_DLFCN_H @HAVE_DLFCN_H@
 
 /* Define to 1 if fseeko (and presumably ftello) exists and is declared. */
 #define HAVE_FSEEKO @HAVE_FSEEKO@
 
-/* Define to 1 if you have the <inttypes.h> header file. */
+/* Define to 1 if you have the <inttypes.hpp> header file. */
 #define HAVE_INTTYPES_H @HAVE_INTTYPES_H@
 
 /* Define to 1 if you have the `mkdir' function. */
@@ -26,7 +26,7 @@
 /* Define to 1 if you have the <stdlib.h> header file. */
 #define HAVE_STDLIB_H @HAVE_STDLIB_H@
 
-/* Define to 1 if you have the <strings.h> header file. */
+/* Define to 1 if you have the <strings.hpp> header file. */
 #define HAVE_STRINGS_H @HAVE_STRINGS_H@
 
 /* Define to 1 if you have the <string.h> header file. */
@@ -41,7 +41,7 @@
 /* Define to 1 if you have the `towlower' function. */
 #define HAVE_TOWLOWER @HAVE_TOWLOWER@
 
-/* Define to 1 if you have the <unistd.h> header file. */
+/* Define to 1 if you have the <unistd.hpp> header file. */
 #define HAVE_UNISTD_H @HAVE_UNISTD_H@
 
 /* Define to 1 if you have the `_mkdir' function. */

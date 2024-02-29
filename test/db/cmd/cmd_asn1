@@ -44,14 +44,14 @@ EXPECT=<<EOF
  225     9: 4: prim OBJECT_IDENTIFIER   : rsaEncryption
  238   270: 3: prim BIT_STRING          : 
  243   266: 4: cons SEQUENCE            : 
- 247   257: 5: prim INTEGER             : 00 9c d3 0c f0 5a e5 2e 47 b7 72 5d 37 83 b3 68 |.....Z..G.r]7..h|
+ 247   257: 5: prim INTEGER             : 00 9c d3 0c f0 5a e5 2e 47 b7 72 5d 37 83 b3 68 |.....Z..G.r]7..hpp|
                                         : 63 30 ea d7 35 26 19 25 e1 bd be 35 f1 70 92 2f |c0..5&.%...5.p./|
-                                        : b7 b8 4b 41 05 ab a9 9e 35 08 58 ec b1 2a c4 68 |..KA....5.X..*.h|
+                                        : b7 b8 4b 41 05 ab a9 9e 35 08 58 ec b1 2a c4 68 |..KA....5.X..*.hpp|
                                         : 87 0b a3 e3 75 e4 e6 f3 a7 62 71 ba 79 81 60 1f |....u....bq.y.`.|
                                         : d7 91 9a 9f f3 d0 78 67 71 c8 69 0e 95 91 cf fe |......xgq.i.....|
                                         : e6 99 e9 60 3c 48 cc 7e ca 4d 77 12 24 9d 47 1b |...`<H.~.Mw.$.G.|
                                         : 5a eb b9 ec 1e 37 00 1c 9c ac 7b a7 05 ea ce 4a |Z....7....{....J|
-                                        : eb bd 41 e5 36 98 b9 cb fd 6d 3c 96 68 df 23 2a |..A.6....m<.h.#*|
+                                        : eb bd 41 e5 36 98 b9 cb fd 6d 3c 96 68 df 23 2a |..A.6....m<.hpp.#*|
                                         : 42 90 0c 86 74 67 c8 7f a5 9a b8 52 61 14 13 3f |B...tg.....Ra..?|
                                         : 65 e9 82 87 cb db fa 0e 56 f6 86 89 f3 85 3f 97 |e.......V.....?.|
                                         : 86 af b0 dc 1a ef 6b 0d 95 16 7d c4 2b a0 65 b2 |......k...}.+.e.|
@@ -139,14 +139,14 @@ EXPECT=<<EOF
         Let's Encrypt Authority X3
       rsaEncryption
         INTEGER
-          00 9c d3 0c f0 5a e5 2e 47 b7 72 5d 37 83 b3 68 |.....Z..G.r]7..h|
+          00 9c d3 0c f0 5a e5 2e 47 b7 72 5d 37 83 b3 68 |.....Z..G.r]7..hpp|
           63 30 ea d7 35 26 19 25 e1 bd be 35 f1 70 92 2f |c0..5&.%...5.p./|
-          b7 b8 4b 41 05 ab a9 9e 35 08 58 ec b1 2a c4 68 |..KA....5.X..*.h|
+          b7 b8 4b 41 05 ab a9 9e 35 08 58 ec b1 2a c4 68 |..KA....5.X..*.hpp|
           87 0b a3 e3 75 e4 e6 f3 a7 62 71 ba 79 81 60 1f |....u....bq.y.`.|
           d7 91 9a 9f f3 d0 78 67 71 c8 69 0e 95 91 cf fe |......xgq.i.....|
           e6 99 e9 60 3c 48 cc 7e ca 4d 77 12 24 9d 47 1b |...`<H.~.Mw.$.G.|
           5a eb b9 ec 1e 37 00 1c 9c ac 7b a7 05 ea ce 4a |Z....7....{....J|
-          eb bd 41 e5 36 98 b9 cb fd 6d 3c 96 68 df 23 2a |..A.6....m<.h.#*|
+          eb bd 41 e5 36 98 b9 cb fd 6d 3c 96 68 df 23 2a |..A.6....m<.hpp.#*|
           42 90 0c 86 74 67 c8 7f a5 9a b8 52 61 14 13 3f |B...tg.....Ra..?|
           65 e9 82 87 cb db fa 0e 56 f6 86 89 f3 85 3f 97 |e.......V.....?.|
           86 af b0 dc 1a ef 6b 0d 95 16 7d c4 2b a0 65 b2 |......k...}.+.e.|

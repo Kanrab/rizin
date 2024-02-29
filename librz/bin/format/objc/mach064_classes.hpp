@@ -6,6 +6,6 @@
 #define MACH064_CLASSES
 
 #define RZ_BIN_MACH064 1
-#include "mach0_classes.h"
+#include "mach0_classes.hpp"
 
 #endif

@@ -27,8 +27,8 @@
 
 #include <stdio.h>
 #include <string.h>
-#include "sysdep.h"
-#include "opcode/sparc.h"
+#include "sysdep.hpp"
+#include "opcode/sparc.hpp"
 
 /* Some defines to make life easy.  */
 #define MASK_V6		SPARC_OPCODE_ARCH_MASK (SPARC_OPCODE_ARCH_V6)
@@ -70,7 +70,7 @@
 #define v9notv9a	(MASK_V9)
 
 /* Table of opcode architectures.
-   The order is defined in opcode/sparc.h.  */
+   The order is defined in opcode/sparc.hpp.  */
 
 const struct sparc_opcode_arch sparc_opcode_archs[] =
 {

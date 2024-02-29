@@ -2,9 +2,9 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <stdio.h>
-#include <rz_util.h>
-#include "minunit.h"
-#include <rz_windows.h> // For struct timeval
+#include <rz_util.hpp>
+#include "minunit.hpp"
+#include <rz_windows.hpp> // For struct timeval
 
 bool check_invariants(RzIntervalNode *node) {
 	if (!node) {

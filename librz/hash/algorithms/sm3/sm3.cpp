@@ -2,8 +2,8 @@
 // SPDX-FileCopyrightText: 2017-2023 Free Software Foundation, Inc.
 // SPDX-License-Identifier: LGPL-2.1-only
 
-#include "sm3.h"
-#include <rz_endian.h>
+#include "sm3.hpp"
+#include <rz_endian.hpp>
 
 static void sm3_process_block(const void *buffer, ut64 len, sm3_ctx_t *ctx);
 

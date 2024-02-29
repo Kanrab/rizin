@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2021 RizinOrg <info@rizin.re>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "elf_dynamic.h"
+#include "elf_dynamic.hpp"
 
 static bool get_dt_info(RzBinElfDtDynamic *ptr, ut64 key, ut64 *info) {
 	bool found = false;

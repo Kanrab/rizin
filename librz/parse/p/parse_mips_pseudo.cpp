@@ -6,14 +6,14 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include <rz_lib.h>
-#include <rz_util.h>
-#include <rz_flag.h>
-#include <rz_analysis.h>
-#include <rz_parse.h>
+#include <rz_lib.hpp>
+#include <rz_util.hpp>
+#include <rz_flag.hpp>
+#include <rz_analysis.hpp>
+#include <rz_parse.hpp>
 
 #include "parse_common.c"
-#include <rz_util/rz_regex.h>
+#include <rz_util/rz_regex.hpp>
 
 static RzList /*<char *>*/ *mips_tokenize(const char *assembly, size_t length);
 

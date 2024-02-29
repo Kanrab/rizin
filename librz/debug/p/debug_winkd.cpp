@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: 2014-2017 LemonBoy
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_debug.h>
-#include <winkd.h>
-#include <kd.h>
-#include "common_winkd.h"
-#include "common_windows.h"
-#include "mdmp_windefs.h"
+#include <rz_debug.hpp>
+#include <winkd.hpp>
+#include <kd.hpp>
+#include "common_winkd.hpp"
+#include "common_windows.hpp"
+#include "mdmp_windefs.hpp"
 
 #define O_(n) kdctx->windctx.profile->f[n]
 
@@ -239,9 +239,9 @@ static char *rz_debug_winkd_reg_profile(RZ_BORROW RZ_NONNULL RzDebug *dbg) {
 	}
 	rz_debug_winkd_attach(dbg, 0);
 	if (dbg->bits == RZ_SYS_BITS_32) {
-#include "native/reg/windows-x86.h"
+#include "native/reg/windows-x86.hpp"
 	} else if (dbg->bits == RZ_SYS_BITS_64) {
-#include "native/reg/windows-x64.h"
+#include "native/reg/windows-x64.hpp"
 	}
 	return NULL;
 }

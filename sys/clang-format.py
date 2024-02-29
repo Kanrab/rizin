@@ -34,14 +34,14 @@ skiplist = [
     "librz/asm/arch/arm/aarch64/",
     "librz/hash/xxhash/",
     "librz/bin/mangling/cxx/",
-    "librz/bin/d/jni.h",
+    "librz/bin/d/jni.hpp",
     "librz/util/bdiff.c",
-    "librz/asm/arch/tms320/c55x/table.h",
+    "librz/asm/arch/tms320/c55x/table.hpp",
     "librz/include/sflib/",
     "librz/asm/arch/include/opcode/",
 ]
 
-patterns = ["*.c", "*.cpp", "*.h", "*.hpp", "*.inc"]
+patterns = ["*.c", "*.cpp", "*.hpp", "*.hpp", "*.inc"]
 
 
 def should_scan(filename):

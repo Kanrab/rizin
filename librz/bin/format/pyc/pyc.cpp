@@ -2,8 +2,8 @@
 // SPDX-FileCopyrightText: 2016-2020 x0urc3
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "pyc.h"
-#include "marshal.h"
+#include "pyc.hpp"
+#include "marshal.hpp"
 
 bool pyc_get_sections_symbols(RzBinPycObj *pyc, RzPVector /*<RzBinSection *>*/ *sections, RzPVector /*<RzBinSymbol *>*/ *symbols, RzList /*<pyc_code_object *>*/ *cobjs, RzBuffer *buf, ut32 magic) {
 	return get_sections_symbols_from_code_objects(pyc, buf, sections, symbols, cobjs, magic);

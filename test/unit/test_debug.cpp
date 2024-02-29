@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2020 Khairulmizam Samsudin <xource@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_debug.h>
-#include "minunit.h"
+#include <rz_debug.hpp>
+#include "minunit.hpp"
 #if __linux__
-#include <sys/user.h>
+#include <sys/user.hpp>
 
 #ifndef offsetof
 #define offsetof(type, field) ((size_t) & ((type *)0)->field)

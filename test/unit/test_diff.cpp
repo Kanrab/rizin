@@ -3,8 +3,8 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <math.h>
-#include <rz_diff.h>
-#include "minunit.h"
+#include <rz_diff.hpp>
+#include "minunit.hpp"
 
 #define R(a, b, c, d) \
 	{ (const ut8 *)a, (const ut8 *)b, c, d }

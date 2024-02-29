@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: 2008-2011 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "rz_io.h"
-#include "rz_lib.h"
+#include "rz_io.hpp"
+#include "rz_lib.hpp"
 
 #if __WINDOWS__
-#include <rz_windows.h>
+#include <rz_windows.hpp>
 #include <sys/types.h>
 
 typedef struct {

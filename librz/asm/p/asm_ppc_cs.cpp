@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: 2014-2018 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_asm.h>
-#include <rz_lib.h>
-#include "../arch/ppc/libvle/vle.h"
-#include "../arch/ppc/libps/libps.h"
+#include <rz_asm.hpp>
+#include <rz_lib.hpp>
+#include "../arch/ppc/libvle/vle.hpp"
+#include "../arch/ppc/libps/libps.hpp"
 
-#include "cs_helper.h"
+#include "cs_helper.hpp"
 
 CAPSTONE_DEFINE_PLUGIN_FUNCTIONS(ppc);
 

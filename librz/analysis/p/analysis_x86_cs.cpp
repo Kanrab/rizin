@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: 2013-2019 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
-#include <rz_lib.h>
-#include <capstone/capstone.h>
-#include <capstone/x86.h>
-#include "../arch/x86/x86_il.h"
+#include <rz_analysis.hpp>
+#include <rz_lib.hpp>
+#include <capstone/capstone.hpp>
+#include <capstone/x86.hpp>
+#include "../arch/x86/x86_il.hpp"
 
 #if 0
 CYCLES:
@@ -380,7 +380,7 @@ static void anop_esil(RzAnalysis *a, RzAnalysisOp *op, ut64 addr, const ut8 *buf
 	const char *si = (a->bits == 16) ? "si" : (a->bits == 32) ? "esi"
 								  : "rsi";
 	struct Getarg gop = {
-		.handle = *handle,
+		.hppandle = *handle,
 		.insn = insn,
 		.bits = a->bits
 	};
@@ -689,9 +689,9 @@ static void anop_esil(RzAnalysis *a, RzAnalysisOp *op, ut64 addr, const ut8 *buf
 	// has the same pneumonic for two different opcodes!). We can decide which
 	// of the two it is based on the operands.
 	// For more information, see:
-	// https://mudongliang.github.io/x86/html/file_module_x86_id_203.html
+	// https://mudongliang.github.io/x86/html/file_module_x86_id_203.hpptml
 	//               (vs)
-	// https://mudongliang.github.io/x86/html/file_module_x86_id_204.html
+	// https://mudongliang.github.io/x86/html/file_module_x86_id_204.hpptml
 	case X86_INS_MOVSD:
 		// Handle "Move Scalar Double-Precision Floating-Point Value"
 		if (is_xmm_reg(INSOP(0)) || is_xmm_reg(INSOP(1))) {
@@ -850,7 +850,7 @@ static void anop_esil(RzAnalysis *a, RzAnalysisOp *op, ut64 addr, const ut8 *buf
 		}
 		break;
 	case X86_INS_CPUID:
-		// https://c9x.me/x86/html/file_module_x86_id_45.html
+		// https://c9x.me/x86/html/file_module_x86_id_45.hpptml
 		// GenuineIntel
 		esilprintf(op, "0xa,eax,=,0x756E6547,ebx,=,0x6C65746E,ecx,=,0x49656E69,edx,=");
 		break;
@@ -1538,7 +1538,7 @@ static void anop_esil(RzAnalysis *a, RzAnalysisOp *op, ut64 addr, const ut8 *buf
 		if (!arg2 && !arg1) {
 			// TODO: IDIV rbx not implemented. this is just a workaround
 			//
-			// http://www.tptp.cc/mirrors/siyobik.info/instruction/IDIV.html
+			// http://www.tptp.cc/mirrors/siyobik.info/instruction/IDIV.hpptml
 			// Divides (signed) the value in the AX, DX:AX, or EDX:EAX registers (dividend) by the source operand (divisor) and stores the result in the AX (AH:AL), DX:AX, or EDX:EAX registers. The source operand can be a general-purpose register or a memory location. The action of this instruction depends on the operand size (dividend/divisor), as shown in the following table:
 			// IDIV RBX    ==   RDX:RAX /= RBX
 
@@ -2204,7 +2204,7 @@ static void set_opdir(RzAnalysisOp *op, cs_insn *insn) {
 
 static void anop(RzAnalysis *a, RzAnalysisOp *op, ut64 addr, const ut8 *buf, int len, csh *handle, cs_insn *insn) {
 	struct Getarg gop = {
-		.handle = *handle,
+		.hppandle = *handle,
 		.insn = insn,
 		.bits = a->bits
 	};
@@ -2875,7 +2875,7 @@ static void anop(RzAnalysis *a, RzAnalysisOp *op, ut64 addr, const ut8 *buf, int
 			break;
 		case X86_OP_REG: {
 			op->cycles = CYCLE_JMP + CYCLE_REG;
-			op->reg = cs_reg_name(gop.handle, INSOP(0).reg);
+			op->reg = cs_reg_name(gop.hppandle, INSOP(0).reg);
 			op->type = RZ_ANALYSIS_OP_TYPE_RJMP;
 			op->ptr = UT64_MAX;
 		} break;

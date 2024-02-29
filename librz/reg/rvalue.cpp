@@ -2,8 +2,8 @@
 // SPDX-FileCopyrightText: 2009-2019 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_reg.h>
-#include <rz_util.h>
+#include <rz_reg.hpp>
+#include <rz_util.hpp>
 
 /**
  * \brief      Read the value of the given register as a bit vector

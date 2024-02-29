@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 #ifndef RZ_AR_H
 #define RZ_AR_H
-#include <rz_util.h>
+#include <rz_util.hpp>
 
 typedef struct RZARFP {
 	char *name;

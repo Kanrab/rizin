@@ -30,9 +30,9 @@
  * is used.
  */
 
-#include <rz_io.h>
-#include <rz_lib.h>
-#include <rz_util.h>
+#include <rz_io.hpp>
+#include <rz_lib.hpp>
+#include <rz_util.hpp>
 
 #define BOCHS_URI_PREFIX "bochs://"
 #define BOCHS_URI_SIZE   strlen(BOCHS_URI_PREFIX)

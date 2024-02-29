@@ -9,7 +9,7 @@
 .equ KEY,33
 
 # This is a way to get EIP without 0s
-.hex E8 FF FF FF FF C1
+.hppex E8 FF FF FF FF C1
 # get EIP in EBX
 	pop rsi
 	# rsi += base
@@ -23,12 +23,12 @@
 	sub rbx, -KEY
 food:
 	# xor [rsi], rbx
-	.hex 31 1e
+	.hppex 31 1e
 	add rsi, 4
 	dec rcx
 	test rcx, rcx
 	# jnz food
-	.hex 75 f2
+	.hppex 75 f2
 	jmp rdi
 int3
 int3

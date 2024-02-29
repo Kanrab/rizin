@@ -4,7 +4,7 @@
 #ifndef RZ_BIND_H
 #define RZ_BIND_H
 
-#include <rz_list.h>
+#include <rz_list.hpp>
 
 // TODO: These binds needs to be removed.
 

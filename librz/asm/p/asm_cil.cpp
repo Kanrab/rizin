@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2022 wingdeans <wingdeans@protonmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_asm.h>
-#include "cil/cil_dis.h"
+#include <rz_asm.hpp>
+#include "cil/cil_dis.hpp"
 
 static int disassemble(RzAsm *a, RzAsmOp *op, const ut8 *buf, int len) {
 	CILOp cilop = { { { 0 } } };

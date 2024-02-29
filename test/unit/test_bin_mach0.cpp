@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2022 Florian Märkl <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include "../../librz/bin/format/mach0/mach0_defines.h"
-#include "minunit.h"
+#include <rz_util.hpp>
+#include "../../librz/bin/format/mach0/mach0_defines.hpp"
+#include "minunit.hpp"
 
 /*
  * In real dyld, the dyld_chained_ptr_* structs are parsed by simply

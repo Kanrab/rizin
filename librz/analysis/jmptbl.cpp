@@ -3,11 +3,11 @@
 // SPDX-FileCopyrightText: 2010-2019 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
-#include <rz_parse.h>
-#include <rz_util.h>
-#include <rz_list.h>
-#include <rz_types_overflow.h>
+#include <rz_analysis.hpp>
+#include <rz_parse.hpp>
+#include <rz_util.hpp>
+#include <rz_list.hpp>
+#include <rz_types_overflow.hpp>
 
 #define aprintf(format, ...) \
 	RZ_LOG_DEBUG(format, __VA_ARGS__)

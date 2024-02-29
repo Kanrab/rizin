@@ -2,14 +2,14 @@
 // SPDX-FileCopyrightText: 2021 keegan
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_bin.h>
-#include <rz_core.h>
-#include <rz_io.h>
-#include "../format/mach0/dyldcache.h"
-#include "objc/mach0_classes.h"
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_bin.hpp>
+#include <rz_core.hpp>
+#include <rz_io.hpp>
+#include "../format/mach0/dyldcache.hpp"
+#include "objc/mach0_classes.hpp"
 
 #define RZ_DYLDCACHE_VFILE_NAME_REBASED "rebased"
 
@@ -42,7 +42,7 @@ static struct MACH0_(obj_t) * bin_to_mach0(RzBinFile *bf, RzDyldBinImage *bin) {
 	struct MACH0_(opts_t) opts;
 	MACH0_(opts_set_default)
 	(&opts, bf);
-	opts.header_at = bin->header_at - bin->hdr_offset;
+	opts.hppeader_at = bin->header_at - bin->hdr_offset;
 	opts.symbols_off = bin->symbols_off;
 
 	struct MACH0_(obj_t) *mach0 = MACH0_(new_buf)(buf, &opts);
@@ -744,7 +744,7 @@ RzBinPlugin rz_bin_plugin_dyldcache = {
 	.check_buffer = &check_buffer,
 	.destroy = &destroy,
 	.classes = &classes,
-	.header = &header,
+	.hppeader = &header,
 	.info = &info,
 };
 

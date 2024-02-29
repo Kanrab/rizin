@@ -2,9 +2,9 @@
 // SPDX-FileCopyrightText: 2010-2020 nibble <nibble.ds@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
-#include <rz_util.h>
-#include <rz_list.h>
+#include <rz_analysis.hpp>
+#include <rz_util.hpp>
+#include <rz_list.hpp>
 
 RZ_API RzAnalysisOp *rz_analysis_op_new(void) {
 	RzAnalysisOp *op = RZ_NEW(RzAnalysisOp);

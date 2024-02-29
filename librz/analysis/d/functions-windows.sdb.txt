@@ -1,4 +1,4 @@
-#### avifile.h ####
+#### avifile.hpp ####
 
 AVIFileInit=func
 func.AVIFileInit.args=0
@@ -50,7 +50,7 @@ func.AVIFileInfoW.arg.2=LONG,lSize
 func.AVIFileInfoW.ret=HRESULT
 func.AVIFileInfoW.cc=stdapi
 
-#### com.h ####
+#### com.hpp ####
 
 QueryInterface=func
 func.QueryInterface.args=2
@@ -233,7 +233,7 @@ func.GetNaturalExtent.arg.4=DVEXTENTINFO,*pExtentInfo
 func.GetNaturalExtent.arg.5=LPSIZEL,pSizel
 func.GetNaturalExtent.ret=HRESULT
 
-#### gdi32.h ####
+#### gdi32.hpp ####
 
 AddFontResourceA=func
 func.AddFontResourceA.args=0
@@ -2551,7 +2551,7 @@ func.ColorCorrectPalette.arg.2=DWORD,dwFirstEntry
 func.ColorCorrectPalette.arg.3=DWORD,dwNumOfEntries
 func.ColorCorrectPalette.ret=BOOL
 
-#### shell.h ####
+#### shell.hpp ####
 
 SHAddToRecentDocs=func
 func.SHAddToRecentDocs.args=2
@@ -2768,7 +2768,7 @@ func.URLAssociationDialog.arg.4=LPSTR,pszAppBuf
 func.URLAssociationDialog.arg.5=UINT,ucAppBufLen
 func.URLAssociationDialog.ret=HRESULT
 
-#### winspool.h ####
+#### winspool.hpp ####
 
 EnumPrintersA=func
 func.EnumPrintersA.args=7
@@ -3810,7 +3810,7 @@ StartPage=func
 func.StartPage.args=0
 func.StartPage.ret=int
 
-### heapapi.h ###
+### heapapi.hpp ###
 
 GetProcessHeap=func
 func.GetProcessHeap.args=0
@@ -3823,93 +3823,93 @@ func.GetProcessHeaps.arg.1=PHANDLE,ProcessHeaps
 func.GetProcessHeaps.ret=DWORD
 
 HeapAlloc=func
-func.HeapAlloc.args=3
-func.HeapAlloc.arg.0=HANDLE,hHeap
-func.HeapAlloc.arg.1=DWORD,dwFlags
-func.HeapAlloc.arg.2=SIZE_T,dwBytes
-func.HeapAlloc.ret=LPVOID
+func.hppeapAlloc.args=3
+func.hppeapAlloc.arg.0=HANDLE,hHeap
+func.hppeapAlloc.arg.1=DWORD,dwFlags
+func.hppeapAlloc.arg.2=SIZE_T,dwBytes
+func.hppeapAlloc.ret=LPVOID
 
 HeapCompact=func
-func.HeapCompact.args=2
-func.HeapCompact.arg.0=HANDLE,hHeap
-func.HeapCompact.arg.1=DWORD,dwFlags
-func.HeapCompact.ret=SIZE_T
+func.hppeapCompact.args=2
+func.hppeapCompact.arg.0=HANDLE,hHeap
+func.hppeapCompact.arg.1=DWORD,dwFlags
+func.hppeapCompact.ret=SIZE_T
 
 HeapCreate=func
-func.HeapCreate.args=3
-func.HeapCreate.arg.0=DWORD,flOptions
-func.HeapCreate.arg.1=SIZE_T,dwInitialSize
-func.HeapCreate.arg.2=SIZE_T,dwMaximumSize
-func.HeapCreate.ret=HANDLE
+func.hppeapCreate.args=3
+func.hppeapCreate.arg.0=DWORD,flOptions
+func.hppeapCreate.arg.1=SIZE_T,dwInitialSize
+func.hppeapCreate.arg.2=SIZE_T,dwMaximumSize
+func.hppeapCreate.ret=HANDLE
 
 HeapDestroy=func
-func.HeapDestroy.args=1
-func.HeapDestroy.arg.0=HANDLE,hHeap
-func.HeapDestroy.ret=BOOL
+func.hppeapDestroy.args=1
+func.hppeapDestroy.arg.0=HANDLE,hHeap
+func.hppeapDestroy.ret=BOOL
 
 HeapFree=func
-func.HeapFree.args=3
-func.HeapFree.arg.0=HANDLE,hHeap
-func.HeapFree.arg.1=DWORD,dwFlags
-func.HeapFree.arg.2=LPVOID,lpMem
-func.HeapFree.ret=BOOL
+func.hppeapFree.args=3
+func.hppeapFree.arg.0=HANDLE,hHeap
+func.hppeapFree.arg.1=DWORD,dwFlags
+func.hppeapFree.arg.2=LPVOID,lpMem
+func.hppeapFree.ret=BOOL
 
 HeapLock=func
-func.HeapLock.args=1
-func.HeapLock.arg.0=HANDLE,hHeap
-func.HeapLock.ret=BOOL
+func.hppeapLock.args=1
+func.hppeapLock.arg.0=HANDLE,hHeap
+func.hppeapLock.ret=BOOL
 
 HeapQueryInformation=func
-func.HeapQueryInformation.args=5
-func.HeapQueryInformation.arg.0=HANDLE,HeapHandle
-func.HeapQueryInformation.arg.1=HEAP_INFORMATION_CLASS,HeapInformationClass
-func.HeapQueryInformation.arg.2=PVOID,HeapInformation
-func.HeapQueryInformation.arg.3=SIZE_T,HeapInformationLength
-func.HeapQueryInformation.arg.4=PSIZE_T,ReturnLength
-func.HeapQueryInformation.ret=BOOL
+func.hppeapQueryInformation.args=5
+func.hppeapQueryInformation.arg.0=HANDLE,HeapHandle
+func.hppeapQueryInformation.arg.1=HEAP_INFORMATION_CLASS,HeapInformationClass
+func.hppeapQueryInformation.arg.2=PVOID,HeapInformation
+func.hppeapQueryInformation.arg.3=SIZE_T,HeapInformationLength
+func.hppeapQueryInformation.arg.4=PSIZE_T,ReturnLength
+func.hppeapQueryInformation.ret=BOOL
 
 HeapReAlloc=func
-func.HeapReAlloc.args=4
-func.HeapReAlloc.arg.0=HANDLE,hHeap
-func.HeapReAlloc.arg.1=DWORD,dwFlags
-func.HeapReAlloc.arg.2=LPVOID,lpMem
-func.HeapReAlloc.arg.3=SIZE_T,dwBytes
-func.HeapReAlloc.ret=LPVOID
+func.hppeapReAlloc.args=4
+func.hppeapReAlloc.arg.0=HANDLE,hHeap
+func.hppeapReAlloc.arg.1=DWORD,dwFlags
+func.hppeapReAlloc.arg.2=LPVOID,lpMem
+func.hppeapReAlloc.arg.3=SIZE_T,dwBytes
+func.hppeapReAlloc.ret=LPVOID
 
 HeapSetInformation=func
-func.HeapSetInformation.args=4
-func.HeapSetInformation.arg.0=HANDLE,HeapHandle
-func.HeapSetInformation.arg.1=HEAP_INFORMATION_CLASS,HeapInformationClass
-func.HeapSetInformation.arg.2=PVOID,HeapInformation
-func.HeapSetInformation.arg.3=SIZE_T,HeapInformationLength
-func.HeapSetInformation.ret=BOOL
+func.hppeapSetInformation.args=4
+func.hppeapSetInformation.arg.0=HANDLE,HeapHandle
+func.hppeapSetInformation.arg.1=HEAP_INFORMATION_CLASS,HeapInformationClass
+func.hppeapSetInformation.arg.2=PVOID,HeapInformation
+func.hppeapSetInformation.arg.3=SIZE_T,HeapInformationLength
+func.hppeapSetInformation.ret=BOOL
 
 HeapSize=func
-func.HeapSize.args=3
-func.HeapSize.arg.0=HANDLE,hHeap
-func.HeapSize.arg.1=DWORD,dwFlags
-func.HeapSize.arg.2=LPCVOID,lpMem
-func.HeapSize.ret=SIZE_T
+func.hppeapSize.args=3
+func.hppeapSize.arg.0=HANDLE,hHeap
+func.hppeapSize.arg.1=DWORD,dwFlags
+func.hppeapSize.arg.2=LPCVOID,lpMem
+func.hppeapSize.ret=SIZE_T
 
 HeapUnlock=func
-func.HeapUnlock.args=1
-func.HeapUnlock.arg.0=HANDLE,hHeap
-func.HeapUnlock.ret=BOOL
+func.hppeapUnlock.args=1
+func.hppeapUnlock.arg.0=HANDLE,hHeap
+func.hppeapUnlock.ret=BOOL
 
 HeapValidate=func
-func.HeapValidate.args=3
-func.HeapValidate.arg.0=HANDLE,hHeap
-func.HeapValidate.arg.1=DWORD,dwFlags
-func.HeapValidate.arg.2=LPCVOID,lpMem
-func.HeapValidate.ret=BOOL
+func.hppeapValidate.args=3
+func.hppeapValidate.arg.0=HANDLE,hHeap
+func.hppeapValidate.arg.1=DWORD,dwFlags
+func.hppeapValidate.arg.2=LPCVOID,lpMem
+func.hppeapValidate.ret=BOOL
 
 HeapWalk=func
-func.HeapWalk.args=2
-func.HeapWalk.arg.0=HANDLE,hHeap
-func.HeapWalk.arg.1=LPPROCESS_HEAP_ENTRY,lpEntry
-func.HeapWalk.ret=BOOL
+func.hppeapWalk.args=2
+func.hppeapWalk.arg.0=HANDLE,hHeap
+func.hppeapWalk.arg.1=LPPROCESS_HEAP_ENTRY,lpEntry
+func.hppeapWalk.ret=BOOL
 
-### winber.h ###
+### winber.hpp ###
 
 ber_alloc_t=func
 func.ber_alloc_t.args=1
@@ -3988,7 +3988,7 @@ func.ber_skip_tag.arg.0=BerElement *,pBerElement
 func.ber_skip_tag.arg.1=ULONG *,pLen
 func.ber_skip_tag.ret=ULONG
 
-### ws2tcpip.h ###
+### ws2tcpip.hpp ###
 
 FreeAddrInfoEx=func
 func.FreeAddrInfoEx.args=1
@@ -4174,7 +4174,7 @@ func.inet_pton.arg.1=PCSTR,pszAddrString
 func.inet_pton.arg.2=PVOID,pAddrBuf
 func.inet_pton.ret=INT
 
-### nspapi.h ###
+### nspapi.hpp ###
 
 EnumProtocolsA=func
 func.EnumProtocolsA.args=3
@@ -4286,7 +4286,7 @@ func.SetServiceW.arg.4=LPSERVICE_ASYNC_INFO,lpServiceAsyncInfo
 func.SetServiceW.arg.5=LPDWORD,lpdwStatusFlags
 func.SetServiceW.ret=INT
 
-### dpapi.h ###
+### dpapi.hpp ###
 
 CryptProtectData=func
 func.CryptProtectData.args=7
@@ -4333,7 +4333,7 @@ func.CryptUpdateProtectedState.arg.3=DWORD *,pdwSuccessCount
 func.CryptUpdateProtectedState.arg.4=DWORD *,pdwFailureCount
 func.CryptUpdateProtectedState.ret=BOOL
 
-### stringapiset.h ###
+### stringapiset.hpp ###
 
 CompareStringEx=func
 func.CompareStringEx.args=9
@@ -4415,7 +4415,7 @@ func.WideCharToMultiByte.arg.6=LPCCH,lpDefaultChar
 func.WideCharToMultiByte.arg.7=LPBOOL,lpUsedDefaultChar
 func.WideCharToMultiByte.ret=int
 
-### datetimeapi.h ###
+### datetimeapi.hpp ###
 
 GetDateFormatA=func
 func.GetDateFormatA.args=6
@@ -4478,7 +4478,7 @@ func.GetTimeFormatW.arg.4=LPWSTR,lpTimeStr
 func.GetTimeFormatW.arg.5=int,cchTime
 func.GetTimeFormatW.ret=int
 
-### shellscalingapi.h ###
+### shellscalingapi.hpp ###
 
 GetDpiForMonitor=func
 func.GetDpiForMonitor.args=4
@@ -4540,7 +4540,7 @@ func.UnregisterScaleChangeEvent.args=1
 func.UnregisterScaleChangeEvent.arg.0=DWORD_PTR,dwCookie
 func.UnregisterScaleChangeEvent.ret=HRESULT
 
-### minidumpapiset.h ###
+### minidumpapiset.hpp ###
 
 MiniDumpReadDumpStream=func
 func.MiniDumpReadDumpStream.args=5
@@ -4562,7 +4562,7 @@ func.MiniDumpWriteDump.arg.5=PMINIDUMP_USER_STREAM_INFORMATION,UserStreamParam
 func.MiniDumpWriteDump.arg.6=PMINIDUMP_CALLBACK_INFORMATION,CallbackParam
 func.MiniDumpWriteDump.ret=BOOL
 
-### realtimeapiset.h ###
+### realtimeapiset.hpp ###
 
 ConvertAuxiliaryCounterToPerformanceCounter=func
 func.ConvertAuxiliaryCounterToPerformanceCounter.args=3
@@ -4628,7 +4628,7 @@ func.QueryUnbiasedInterruptTimePrecise.args=1
 func.QueryUnbiasedInterruptTimePrecise.arg.0=PULONGLONG,lpUnbiasedInterruptTimePrecise
 func.QueryUnbiasedInterruptTimePrecise.ret=VOID
 
-### (winternl.h) ###
+### (winternl.hpp) ###
 
 NtClose=func
 func.NtClose.args=1
@@ -4859,7 +4859,7 @@ func.RtlUniform.args=1
 func.RtlUniform.arg.0=PULONG,Seed
 func.RtlUniform.ret=ULONG
 
-### secext.h ###
+### secext.hpp ###
 
 GetComputerObjectNameA=func
 func.GetComputerObjectNameA.args=3
@@ -4907,7 +4907,7 @@ func.TranslateNameW.arg.3=LPWSTR,lpTranslatedName
 func.TranslateNameW.arg.4=PULONG,nSize
 func.TranslateNameW.ret=BOOLEAN
 
-### wow64apiset.h ###
+### wow64apiset.hpp ###
 
 GetSystemWow64Directory2A=func
 func.GetSystemWow64Directory2A.args=3
@@ -4969,7 +4969,7 @@ func.Wow64SetThreadDefaultGuestMachine.args=1
 func.Wow64SetThreadDefaultGuestMachine.arg.0=USHORT,Machine
 func.Wow64SetThreadDefaultGuestMachine.ret=USHORT
 
-### jobapi2.h ###
+### jobapi2.hpp ###
 
 AssignProcessToJobObject=func
 func.AssignProcessToJobObject.args=2
@@ -5032,7 +5032,7 @@ func.TerminateJobObject.arg.0=HANDLE,hJob
 func.TerminateJobObject.arg.1=UINT,uExitCode
 func.TerminateJobObject.ret=BOOL
 
-### pathcch.h ###
+### pathcch.hpp ###
 
 PathAllocCanonicalize=func
 func.PathAllocCanonicalize.args=3
@@ -5186,7 +5186,7 @@ func.PathIsUNCEx.arg.0=PCWSTR,pszPath
 func.PathIsUNCEx.arg.1=PCWSTR *,ppszServer
 func.PathIsUNCEx.ret=BOOL
 
-### errhandlingapi.h ###
+### errhandlingapi.hpp ###
 
 AddVectoredContinueHandler=func
 func.AddVectoredContinueHandler.args=2
@@ -5286,7 +5286,7 @@ func.UnhandledExceptionFilter.args=1
 func.UnhandledExceptionFilter.arg.0=struct _EXCEPTION_POINTERS *,ExceptionInfo
 func.UnhandledExceptionFilter.ret=LONG
 
-### interlockedapi.h ###
+### interlockedapi.hpp ###
 
 InitializeSListHead=func
 func.InitializeSListHead.args=1
@@ -5322,7 +5322,7 @@ func.QueryDepthSList.args=1
 func.QueryDepthSList.arg.0=PSLIST_HEADER,ListHead
 func.QueryDepthSList.ret=USHORT
 
-### ioapiset.h ###
+### ioapiset.hpp ###
 
 CancelIo=func
 func.CancelIo.args=1
@@ -5404,7 +5404,7 @@ func.PostQueuedCompletionStatus.arg.2=ULONG_PTR,dwCompletionKey
 func.PostQueuedCompletionStatus.arg.3=LPOVERLAPPED,lpOverlapped
 func.PostQueuedCompletionStatus.ret=BOOL
 
-### winver.h ###
+### winver.hpp ###
 
 GetFileVersionInfoA=func
 func.GetFileVersionInfoA.args=4
@@ -5544,7 +5544,7 @@ func.VerQueryValueW.arg.2=LPVOID *,lplpBuffer
 func.VerQueryValueW.arg.3=PUINT,puLen
 func.VerQueryValueW.ret=BOOL
 
-### processtopologyapi.h ###
+### processtopologyapi.hpp ###
 
 GetProcessGroupAffinity=func
 func.GetProcessGroupAffinity.args=3
@@ -5566,7 +5566,7 @@ func.SetThreadGroupAffinity.arg.1=const GROUP_AFFINITY *,GroupAffinity
 func.SetThreadGroupAffinity.arg.2=PGROUP_AFFINITY,PreviousGroupAffinity
 func.SetThreadGroupAffinity.ret=BOOL
 
-### profileapi.h ###
+### profileapi.hpp ###
 
 QueryPerformanceCounter=func
 func.QueryPerformanceCounter.args=1
@@ -5578,7 +5578,7 @@ func.QueryPerformanceFrequency.args=1
 func.QueryPerformanceFrequency.arg.0=LARGE_INTEGER *,lpFrequency
 func.QueryPerformanceFrequency.ret=BOOL
 
-### timezoneapi.h ###
+### timezoneapi.hpp ###
 
 EnumDynamicTimeZoneInformation=func
 func.EnumDynamicTimeZoneInformation.args=2
@@ -5653,7 +5653,7 @@ func.TzSpecificLocalTimeToSystemTimeEx.arg.1=const SYSTEMTIME *,lpLocalTime
 func.TzSpecificLocalTimeToSystemTimeEx.arg.2=LPSYSTEMTIME,lpUniversalTime
 func.TzSpecificLocalTimeToSystemTimeEx.ret=BOOL
 
-### ncryptprotect.h ###
+### ncryptprotect.hpp ###
 
 NCryptCloseProtectionDescriptor=func
 func.NCryptCloseProtectionDescriptor.args=1
@@ -5752,7 +5752,7 @@ func.NCryptUnprotectSecret.arg.6=BYTE **,ppbData
 func.NCryptUnprotectSecret.arg.7=ULONG *,pcbData
 func.NCryptUnprotectSecret.ret=SECURITY_STATUS
 
-### powerbase.h ###
+### powerbase.hpp ###
 
 CallNtPowerInformation=func
 func.CallNtPowerInformation.args=5
@@ -5785,7 +5785,7 @@ func.PowerUnregisterSuspendResumeNotification.args=1
 func.PowerUnregisterSuspendResumeNotification.arg.0=HPOWERNOTIFY,RegistrationHandle
 func.PowerUnregisterSuspendResumeNotification.ret=DWORD
 
-### powersetting.h ###
+### powersetting.hpp ###
 
 PowerGetActiveScheme=func
 func.PowerGetActiveScheme.args=2
@@ -5865,7 +5865,7 @@ func.PowerWriteDCValueIndex.arg.3=const GUID *,PowerSettingGuid
 func.PowerWriteDCValueIndex.arg.4=DWORD,DcValueIndex
 func.PowerWriteDCValueIndex.ret=DWORD
 
-### evntprov.h ###
+### evntprov.hpp ###
 
 EventActivityIdControl=func
 func.EventActivityIdControl.args=2
@@ -5945,7 +5945,7 @@ func.EventWriteTransfer.arg.4=ULONG,UserDataCount
 func.EventWriteTransfer.arg.5=PEVENT_DATA_DESCRIPTOR,UserData
 func.EventWriteTransfer.ret=ULONG
 
-### evntcons.h ###
+### evntcons.hpp ###
 
 EventAccessControl=func
 func.EventAccessControl.args=5
@@ -5968,7 +5968,7 @@ func.EventAccessRemove.args=1
 func.EventAccessRemove.arg.0=LPGUID,Guid
 func.EventAccessRemove.ret=ULONG
 
-### mssip.h ###
+### mssip.hpp ###
 
 CryptSIPAddProvider=func
 func.CryptSIPAddProvider.args=1
@@ -6044,7 +6044,7 @@ func.CryptSIPVerifyIndirectData.arg.0=SIP_SUBJECTINFO *,pSubjectInfo
 func.CryptSIPVerifyIndirectData.arg.1=SIP_INDIRECT_DATA *,pIndirectData
 func.CryptSIPVerifyIndirectData.ret=BOOL
 
-### olectl.h ###
+### olectl.hpp ###
 
 DllRegisterServer=func
 func.DllRegisterServer.args=0
@@ -6154,7 +6154,7 @@ func.OleTranslateColor.arg.1=HPALETTE,hpal
 func.OleTranslateColor.arg.2=COLORREF *,lpcolorref
 func.OleTranslateColor.ret=HRESULT
 
-### sddl.h ###
+### sddl.hpp ###
 
 ConvertSecurityDescriptorToStringSecurityDescriptorA=func
 func.ConvertSecurityDescriptorToStringSecurityDescriptorA.args=5
@@ -6214,7 +6214,7 @@ func.ConvertStringSidToSidW.arg.0=LPCWSTR,StringSid
 func.ConvertStringSidToSidW.arg.1=PSID *,Sid
 func.ConvertStringSidToSidW.ret=BOOL
 
-### securityappcontainer.h ###
+### securityappcontainer.hpp ###
 
 GetAppContainerNamedObjectPath=func
 func.GetAppContainerNamedObjectPath.args=5
@@ -6225,7 +6225,7 @@ func.GetAppContainerNamedObjectPath.arg.3=LPWSTR,ObjectPath
 func.GetAppContainerNamedObjectPath.arg.4=PULONG,ReturnLength
 func.GetAppContainerNamedObjectPath.ret=BOOL
 
-### compressapi.h ###
+### compressapi.hpp ###
 
 CloseCompressor=func
 func.CloseCompressor.args=1
@@ -6313,7 +6313,7 @@ func.SetDecompressorInformation.arg.2=LPCVOID,CompressInformation
 func.SetDecompressorInformation.arg.3=SIZE_T,CompressInformationSize
 func.SetDecompressorInformation.ret=BOOL
 
-### debugapi.h ###
+### debugapi.hpp ###
 
 CheckRemoteDebuggerPresent=func
 func.CheckRemoteDebuggerPresent.args=2
@@ -6368,7 +6368,7 @@ func.WaitForDebugEventEx.arg.0=LPDEBUG_EVENT,lpDebugEvent
 func.WaitForDebugEventEx.arg.1=DWORD,dwMilliseconds
 func.WaitForDebugEventEx.ret=BOOL
 
-### utilapiset.h ###
+### utilapiset.hpp ###
 
 Beep=func
 func.Beep.args=2
@@ -6410,7 +6410,7 @@ func.EncodeSystemPointer.args=1
 func.EncodeSystemPointer.arg.0=PVOID,Ptr
 func.EncodeSystemPointer.ret=PVOID
 
-### handleapi.h ###
+### handleapi.hpp ###
 
 CloseHandle=func
 func.CloseHandle.args=1
@@ -6447,7 +6447,7 @@ func.SetHandleInformation.arg.1=DWORD,dwMask
 func.SetHandleInformation.arg.2=DWORD,dwFlags
 func.SetHandleInformation.ret=BOOL
 
-### fibersapi.h ###
+### fibersapi.hpp ###
 
 FlsAlloc=func
 func.FlsAlloc.args=1
@@ -6474,7 +6474,7 @@ IsThreadAFiber=func
 func.IsThreadAFiber.args=0
 func.IsThreadAFiber.ret=BOOL
 
-### namedpipeapi.h ###
+### namedpipeapi.hpp ###
 
 CallNamedPipeW=func
 func.CallNamedPipeW.args=7
@@ -6585,7 +6585,7 @@ func.WaitNamedPipeW.arg.0=LPCWSTR,lpNamedPipeName
 func.WaitNamedPipeW.arg.1=DWORD,nTimeOut
 func.WaitNamedPipeW.ret=BOOL
 
-### enclaveapi.h ###
+### enclaveapi.hpp ###
 
 CallEnclave=func
 func.CallEnclave.args=4
@@ -6657,7 +6657,7 @@ func.TerminateEnclave.arg.0=LPVOID,lpAddress
 func.TerminateEnclave.arg.1=BOOL,fWait
 func.TerminateEnclave.ret=BOOL
 
-### threadpoollegacyapiset.h ###
+### threadpoollegacyapiset.hpp ###
 
 ChangeTimerQueueTimer=func
 func.ChangeTimerQueueTimer.args=4
@@ -6708,7 +6708,7 @@ func.UnregisterWaitEx.arg.0=HANDLE,WaitHandle
 func.UnregisterWaitEx.arg.1=HANDLE,CompletionEvent
 func.UnregisterWaitEx.ret=BOOL
 
-### jobapi.h ###
+### jobapi.hpp ###
 
 IsProcessInJob=func
 func.IsProcessInJob.args=3
@@ -6717,7 +6717,7 @@ func.IsProcessInJob.arg.1=HANDLE,JobHandle
 func.IsProcessInJob.arg.2=PBOOL,Result
 func.IsProcessInJob.ret=BOOL
 
-### namespaceapi.h ###
+### namespaceapi.hpp ###
 
 AddSIDToBoundaryDescriptor=func
 func.AddSIDToBoundaryDescriptor.args=2
@@ -6755,7 +6755,7 @@ func.OpenPrivateNamespaceW.arg.0=LPVOID,lpBoundaryDescriptor
 func.OpenPrivateNamespaceW.arg.1=LPCWSTR,lpAliasPrefix
 func.OpenPrivateNamespaceW.ret=HANDLE
 
-### systemtopologyapi.h ###
+### systemtopologyapi.hpp ###
 
 GetNumaHighestNodeNumber=func
 func.GetNumaHighestNodeNumber.args=1
@@ -6774,7 +6774,7 @@ func.GetNumaProximityNodeEx.arg.0=ULONG,ProximityId
 func.GetNumaProximityNodeEx.arg.1=PUSHORT,NodeNumber
 func.GetNumaProximityNodeEx.ret=BOOL
 
-### consoleapi.h ###
+### consoleapi.hpp ###
 
 AllocConsole=func
 func.AllocConsole.args=0
@@ -6889,7 +6889,7 @@ func.WriteConsoleW.arg.3=LPDWORD,lpNumberOfCharsWritten
 func.WriteConsoleW.arg.4=LPVOID,lpReserved
 func.WriteConsoleW.ret=BOOL
 
-### libloaderapi2.h ###
+### libloaderapi2.hpp ###
 
 LoadPackagedLibrary=func
 func.LoadPackagedLibrary.args=2
@@ -6905,7 +6905,7 @@ func.QueryOptionalDelayLoadedAPI.arg.2=LPCSTR,lpProcName
 func.QueryOptionalDelayLoadedAPI.arg.3=DWORD,Reserved
 func.QueryOptionalDelayLoadedAPI.ret=BOOL
 
-### rtlsupportapi.h ###
+### rtlsupportapi.hpp ###
 
 RtlAddFunctionTable=func
 func.RtlAddFunctionTable.args=3
@@ -7032,7 +7032,7 @@ func.RtlVirtualUnwind.arg.6=PULONG_PTR,EstablisherFrame
 func.RtlVirtualUnwind.arg.7=PKNONVOLATILE_CONTEXT_POINTERS,ContextPointers
 func.RtlVirtualUnwind.ret=PEXCEPTION_ROUTINE
 
-### processenv.h ###
+### processenv.hpp ###
 
 ExpandEnvironmentStringsA=func
 func.ExpandEnvironmentStringsA.args=3
@@ -7175,7 +7175,7 @@ func.SetStdHandleEx.arg.1=HANDLE,hHandle
 func.SetStdHandleEx.arg.2=PHANDLE,phPrevValue
 func.SetStdHandleEx.ret=BOOL
 
-### shobjidl_core.h ###
+### shobjidl_core.hpp ###
 
 GetCurrentProcessExplicitAppUserModelID=func
 func.GetCurrentProcessExplicitAppUserModelID.args=1

@@ -3,8 +3,8 @@
 // SPDX-FileCopyrightText: 2017-2020 alvaro <alvaro.felipe91@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_io.h>
-#include <sdb.h>
+#include <rz_io.hpp>
+#include <sdb.hpp>
 #include <string.h>
 
 // shall be used by plugins for creating descs

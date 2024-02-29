@@ -33,12 +33,12 @@
 
 #if !USE_LIB_MAGIC
 
-#include "file.h"
-#include <rz_util/rz_regex.h>
+#include "file.hpp"
+#include <rz_util/rz_regex.hpp>
 #include <string.h>
 #include <ctype.h>
 #include <stdlib.h>
-#include "rz_util/rz_time.h"
+#include "rz_util/rz_time.hpp"
 
 static int match(RzMagic *, struct rz_magic *, ut32,
 	const ut8 *, size_t, int);

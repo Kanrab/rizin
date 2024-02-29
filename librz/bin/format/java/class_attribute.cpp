@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2021 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "class_attribute.h"
+#include "class_attribute.hpp"
 
 static ut8 *make_string(RzBuffer *buf, st64 size) {
 	ut8 *buffer;
@@ -112,7 +112,7 @@ bool java_attribute_set_code(ConstPool **pool, ut32 poolsize, Attribute *attr, R
 		for (ut32 i = 0; i < ac->exceptions_count; ++i) {
 			if (!rz_buf_read_be16(buf, &ac->exceptions[i].start_pc) ||
 				!rz_buf_read_be16(buf, &ac->exceptions[i].end_pc) ||
-				!rz_buf_read_be16(buf, &ac->exceptions[i].handler_pc) ||
+				!rz_buf_read_be16(buf, &ac->exceptions[i].hppandler_pc) ||
 				!rz_buf_read_be16(buf, &ac->exceptions[i].catch_type)) {
 				free(ac);
 				return false;

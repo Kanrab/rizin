@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <stdio.h>
-#include <rz_util.h>
+#include <rz_util.hpp>
 
 /**
  * \brief returns the prev RzList iterator in the list

@@ -21,7 +21,7 @@
    Foundation, Inc., 51 Franklin Street - Fifth Floor, Boston,
    MA 02110-1301, USA.  */
 
-#include "opcode/cris.h"
+#include "opcode/cris.hpp"
 
 #ifndef NULL
 #define NULL (0)
@@ -1166,7 +1166,7 @@ cris_opcodes[] =
   {NULL, 0, 0, NULL, 0, 0, 0, cris_not_implemented_op}
 };
 
-/* Condition-names, indexed by the CC_* numbers as found in cris.h. */
+/* Condition-names, indexed by the CC_* numbers as found in cris.hpp. */
 const char * const
 cris_cc_strings[] =
 {

@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: 2021 Pulak Malhotra <pulakmalhotra2000@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_core.h>
-#include <rz_heap_glibc.h>
-#include "cmd_descs.h"
-#include "../linux_heap_glibc.h"
-#include "../linux_heap_glibc64.h"
+#include <rz_types.hpp>
+#include <rz_core.hpp>
+#include <rz_heap_glibc.hpp>
+#include "cmd_descs.hpp"
+#include "../linux_heap_glibc.hpp"
+#include "../linux_heap_glibc64.hpp"
 
 #define call_handler(fun, ...) \
 	{ \

@@ -1,10 +1,10 @@
 #ifndef RZ_STR_H
 #define RZ_STR_H
 
-#include <wchar.h>
-#include "rz_str_util.h"
-#include "rz_list.h"
-#include "rz_types.h"
+#include <wchar.hpp>
+#include "rz_str_util.hpp"
+#include "rz_list.hpp"
+#include "rz_types.hpp"
 
 #ifdef __cplusplus
 extern "C" {

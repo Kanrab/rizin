@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 // SPDX-FileCopyrightText: 2021 Heersin <teablearcher@gmail.com>
 
-// Implement Functions declared in luac_common.h
+// Implement Functions declared in luac_common.hpp
 
-#include "luac_common.h"
+#include "luac_common.hpp"
 
 LuaDbgUpvalueEntry *lua_new_dbg_upvalue_entry() {
 	LuaDbgUpvalueEntry *entry = RZ_NEW0(LuaDbgUpvalueEntry);

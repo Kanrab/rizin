@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2019 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_core.h>
+#include <rz_core.hpp>
 
-#include "../core_private.h"
+#include "../core_private.hpp"
 
 #define SORT_ADDRESS 0
 #define SORT_NAME    1

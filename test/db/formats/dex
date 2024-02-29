@@ -138,7 +138,7 @@ NAME=DEX Hello.dex method flags (r2 commands) (ic*)
 FILE=bins/dex/Hello.dex
 CMDS=ic*~main
 EXPECT=<<EOF
-f method.public.static.Hello.void_main_String @ 0x1000001c0
+f method.public.static.hppello.void_main_String @ 0x1000001c0
 EOF
 RUN
 
@@ -171,24 +171,24 @@ FILE=bins/dex/HelloWorld.dex
 CMDS=fl
 EXPECT=<<EOF
 0x00000000 1460 section.file
-0x000001e8 1 class.Hello
+0x000001e8 1 class.hppello
 0x00000208 1 class.World
 0x100000228 908 section.data
-0x100000238 20 sym.Hello.void__init
-0x100000238 1 method.public.constructor.Hello.void__init
+0x100000238 20 sym.hppello.void__init
+0x100000238 1 method.public.constructor.hppello.void__init
 0x10000025c 256 main
 0x10000025c 1 entry0
-0x10000025c 34 sym.Hello.void_main_String
-0x10000025c 1 method.public.static.Hello.void_main_String
-0x100000290 84 sym.Hello.void_foo_int
-0x100000290 1 method.public.Hello.void_foo_int
+0x10000025c 34 sym.hppello.void_main_String
+0x10000025c 1 method.public.static.hppello.void_main_String
+0x100000290 84 sym.hppello.void_foo_int
+0x100000290 1 method.public.hppello.void_foo_int
 0x1000002f4 20 sym.World.void__init
 0x1000002f4 1 method.public.constructor.World.void__init
 0x100000318 68 sym.World.void_foo_int
 0x100000318 1 method.public.World.void_foo_int
 0x100000372 6 str.init
 0x10000037a 6 str.Findus
-0x100000382 10 str.Hello.java
+0x100000382 10 str.hppello.java
 0x10000038e 1 str.I
 0x100000391 1 str.L
 0x100000394 7 str.LHello
@@ -215,8 +215,8 @@ EXPECT=<<EOF
 0x1000004a1 8 str.world
 0x1000004ab 8 str.worldVar
 0x1000004b5 9 str.worldVar2
-0x1000004f0 0 sym.Hello.localVar2
-0x1000004f2 0 sym.Hello.localVar
+0x1000004f0 0 sym.hppello.localVar2
+0x1000004f2 0 sym.hppello.localVar
 0x100000506 0 sym.World.worldVar
 0x100000508 0 sym.World.worldVar2
 0x8000000000 14 section.reloc_targets
@@ -831,7 +831,7 @@ EXPECT=<<EOF
 0x00007c10 [0x00015478 - 0x00015560]    232 class 28 Lcom/stericson/RootTools/SanityCheckRootTools$TestHandler :: Landroid/os/Handler;
 0x00015478 method 0 PC   Lcom/stericson/RootTools/SanityCheckRootTools$TestHandler.method.<init>(Lcom/stericson/RootTools/SanityCheckRootTools;)V
 0x00015494 method 1 hC   Lcom/stericson/RootTools/SanityCheckRootTools$TestHandler.method.<init>(Lcom/stericson/RootTools/SanityCheckRootTools;Lcom/stericson/RootTools/SanityCheckRootTools$TestHandler;)V
-0x000154ac method 2 p    Lcom/stericson/RootTools/SanityCheckRootTools$TestHandler.method.handleMessage(Landroid/os/Message;)V
+0x000154ac method 2 p    Lcom/stericson/RootTools/SanityCheckRootTools$TestHandler.method.hppandleMessage(Landroid/os/Message;)V
 0x00007c30 [0x00015570 - 0x00015740]    464 class 29 Lcom/stericson/RootTools/SanityCheckRootTools :: Landroid/app/Activity;
 0x00015570 method 0 pC   Lcom/stericson/RootTools/SanityCheckRootTools.method.<init>()V
 0x00015588 method 1 sh   Lcom/stericson/RootTools/SanityCheckRootTools.method.access$0(Lcom/stericson/RootTools/SanityCheckRootTools;)Landroid/app/ProgressDialog;
@@ -1073,7 +1073,7 @@ EXPECT=<<EOF
 0x000195f4 method 2 pC   Lorg/radare/r2pipe/R2Pipe.method.<init>(Ljava/lang/String;Z)V
 0x00019628 method 3 p    Lorg/radare/r2pipe/R2Pipe.method.cmd(Ljava/lang/String;)Ljava/lang/String;
 0x000196d0 method 4 r    Lorg/radare/r2pipe/R2Pipe.method.finalize()V
-0x000196e8 method 5 p    Lorg/radare/r2pipe/R2Pipe.method.httpCmd(Ljava/lang/String;)Ljava/lang/String;
+0x000196e8 method 5 p    Lorg/radare/r2pipe/R2Pipe.method.hppttpCmd(Ljava/lang/String;)Ljava/lang/String;
 0x000197d0 method 6 p    Lorg/radare/r2pipe/R2Pipe.method.quit()V
 0x000197f4 method 7 p    Lorg/radare/r2pipe/R2Pipe.method.spawnProcess(Ljava/lang/String;)V
 0x00007fd0 [0x0001988c - 0x00019934]    168 class 58 Lorg/radare/radare2installer/BootReceiver :: Landroid/content/BroadcastReceiver;
@@ -1214,7 +1214,7 @@ EXPECT=<<EOF
 0x0001d5d0 method 2 sh   Lorg/radare/radare2installer/UpdateCheckerService.method.access$102(Lorg/radare/radare2installer/UpdateCheckerService;Lorg/radare/radare2installer/Utils;)Lorg/radare/radare2installer/Utils;
 0x0001d5e8 method 3 sh   Lorg/radare/radare2installer/UpdateCheckerService.method.access$200(Lorg/radare/radare2installer/UpdateCheckerService;)Z
 0x0001d600 method 4 sh   Lorg/radare/radare2installer/UpdateCheckerService.method.access$202(Lorg/radare/radare2installer/UpdateCheckerService;Z)Z
-0x0001d618 method 5 P    Lorg/radare/radare2installer/UpdateCheckerService.method.handleIntent(Landroid/content/Intent;)V
+0x0001d618 method 5 P    Lorg/radare/radare2installer/UpdateCheckerService.method.hppandleIntent(Landroid/content/Intent;)V
 0x0001d694 method 6 p    Lorg/radare/radare2installer/UpdateCheckerService.method.onBind(Landroid/content/Intent;)Landroid/os/IBinder;
 0x0001d6a8 method 7 p    Lorg/radare/radare2installer/UpdateCheckerService.method.onDestroy()V
 0x0001d6cc method 8 p    Lorg/radare/radare2installer/UpdateCheckerService.method.onStart(Landroid/content/Intent;I)V

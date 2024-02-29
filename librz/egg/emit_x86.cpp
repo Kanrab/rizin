@@ -3,8 +3,8 @@
 
 /* pancake // nopcode.org 2010-2013 -- emit module for rcc */
 
-#include <rz_egg.h>
-#include <rz_types.h>
+#include <rz_egg.hpp>
+#include <rz_types.hpp>
 
 /* hardcoded */
 #define attsyntax 0

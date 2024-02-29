@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2009-2017 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bp.h>
-#include <rz_lib.h>
+#include <rz_bp.hpp>
+#include <rz_lib.hpp>
 
 static struct rz_bp_arch_t rz_bp_plugin_arm_bps[] = {
 	{ 64, 4, 0, (const ut8 *)"\x00\x00\x20\xd4" }, // le - arm64 brk0

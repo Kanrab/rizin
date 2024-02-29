@@ -3,14 +3,14 @@
 
 #define PCRE2_STATIC
 #define PCRE2_CODE_UNIT_WIDTH 8
-#include <pcre2.h>
+#include <pcre2.hpp>
 
-#include <rz_util/rz_strbuf.h>
-#include <rz_vector.h>
-#include <rz_util/rz_regex.h>
-#include <rz_types.h>
-#include <rz_util/rz_assert.h>
-#include <rz_util.h>
+#include <rz_util/rz_strbuf.hpp>
+#include <rz_vector.hpp>
+#include <rz_util/rz_regex.hpp>
+#include <rz_types.hpp>
+#include <rz_util/rz_assert.hpp>
+#include <rz_util.hpp>
 
 typedef pcre2_general_context RzRegexGeneralContext; ///< General context.
 typedef pcre2_compile_context RzRegexCompContext; ///< The context for compiling.

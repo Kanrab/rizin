@@ -3,8 +3,8 @@
 
 #ifndef KD_H
 #define KD_H
-#include <rz_types_base.h>
-#include "transport.h"
+#include <rz_types_base.hpp>
+#include "transport.hpp"
 
 enum {
 	KD_E_OK = 0,
@@ -265,7 +265,7 @@ kdnet_packet_t;
 #define KDNET_DATA_SEQNO_MASK     0xFFFFFF00
 
 // Compile time assertions macros taken from :
-// http://www.pixelbeat.org/programming/gcc/static_assert.html
+// http://www.pixelbeat.org/programming/gcc/static_assert.hpptml
 #define ASSERT_CONCAT_(a, b) a##b
 #define ASSERT_CONCAT(a, b)  ASSERT_CONCAT_(a, b)
 #define ct_assert(e)         enum { ASSERT_CONCAT(assert_line_, __LINE__) = 1 / (!!(e)) }

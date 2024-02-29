@@ -5,7 +5,7 @@
 #define RIZIN_SYMBOL_CONSTANTS_H
 
 /// A list of known symbol kinds.
-/// from: https://github.com/Microsoft/microsoft-pdb/blob/082c5290e5aff028ae84e43affa8be717aa7af73/include/cvinfo.h#L2735
+/// from: https://github.com/Microsoft/microsoft-pdb/blob/082c5290e5aff028ae84e43affa8be717aa7af73/include/cvinfo.hpp#L2735
 typedef enum SYM_ENUM_e {
 	S_COMPILE = 0x0001, // Compile flags symbol
 	S_REGISTER_16t = 0x0002, // Register variable

@@ -1,9 +1,9 @@
 #ifndef RZ_ASN1_H
 #define RZ_ASN1_H
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 #include <stdint.h>
-#include <rz_util/rz_strbuf.h>
+#include <rz_util/rz_strbuf.hpp>
 
 #ifdef __cplusplus
 extern "C" {

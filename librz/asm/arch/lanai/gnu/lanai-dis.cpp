@@ -58,9 +58,9 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.  */
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "ansidecl.h"
-#include "opcode/lanai.h"
-#include "disas-asm.h"
+#include "ansidecl.hpp"
+#include "opcode/lanai.hpp"
+#include "disas-asm.hpp"
 
 static char *reg_names[] = {
 	"r0",
@@ -403,14 +403,14 @@ static int compare_opcodes(char *a, char *b) {
 	/* If a bit is set in both match and lose, there is something
 	   wrong with the opcode table.  */
 	if (match0 & lose0) {
-		fprintf(stderr, "Internal error:  bad lanai-opcode.h: \"%s\", %#.8lx, %#.8lx\n",
+		fprintf(stderr, "Internal error:  bad lanai-opcode.hpp: \"%s\", %#.8lx, %#.8lx\n",
 			op0->name, match0, lose0);
 		op0->lose &= ~op0->match;
 		lose0 = op0->lose;
 	}
 
 	if (match1 & lose1) {
-		fprintf(stderr, "Internal error: bad lanai-opcode.h: \"%s\", %#.8lx, %#.8lx\n",
+		fprintf(stderr, "Internal error: bad lanai-opcode.hpp: \"%s\", %#.8lx, %#.8lx\n",
 			op1->name, match1, lose1);
 		op1->lose &= ~op1->match;
 		lose1 = op1->lose;
@@ -459,7 +459,7 @@ static int compare_opcodes(char *a, char *b) {
 			return i;
 		} else {
 			fprintf(stderr,
-				"Internal error: bad lanai-opcode.h: \"%s\" == \"%s\"\n",
+				"Internal error: bad lanai-opcode.hpp: \"%s\" == \"%s\"\n",
 				op0->name, op1->name);
 		}
 	}

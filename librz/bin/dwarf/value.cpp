@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2023 billow <billow.fun@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bin_dwarf.h>
-#include "dwarf_private.h"
+#include <rz_bin_dwarf.hpp>
+#include "dwarf_private.hpp"
 
 static inline int64_t sign_extend(ut64 value, ut64 mask) {
 	int64_t masked_value = (int64_t)(value & mask);

@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2020 Florian Märkl <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_flag.h>
-#include "minunit.h"
-#include "test_sdb.h"
+#include <rz_flag.hpp>
+#include "minunit.hpp"
+#include "test_sdb.hpp"
 
 Sdb *ref_0_db() {
 	Sdb *db = sdb_new0();

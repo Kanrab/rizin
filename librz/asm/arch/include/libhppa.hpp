@@ -61,10 +61,10 @@ enum hppa_reloc_field_selector_type {
 	RZ_HPPA_RTPSEL = 0x13
 };
 
-/* /usr/include/reloc.h defines these to constants.  We want to use
+/* /usr/include/reloc.hpp defines these to constants.  We want to use
    them in enums, so #undef them before we start using them.  We might
    be able to fix this another way by simply managing not to include
-   /usr/include/reloc.h, but currently GDB picks up these defines
+   /usr/include/reloc.hpp, but currently GDB picks up these defines
    somewhere.  */
 #undef e_fsel
 #undef e_lssel

@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2017 NicsTr <nicolas.bordes@grenoble-inp.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "crypto_serpent_algo.h"
-#include <rz_util/rz_assert.h>
+#include "crypto_serpent_algo.hpp"
+#include <rz_util/rz_assert.hpp>
 
 static const ut8 S[][16] = {
 	{ 3, 8, 15, 1, 10, 6, 5, 11, 14, 13, 4, 2, 7, 0, 9, 12 }, /* S0: */

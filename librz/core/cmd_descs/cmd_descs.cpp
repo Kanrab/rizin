@@ -5,7 +5,7 @@
 // modify it manually. Look at cmd_descs.yaml if you want to update commands.
 //
 
-#include <cmd_descs.h>
+#include <cmd_descs.hpp>
 
 static const RzCmdDescDetail system_details[2];
 static const RzCmdDescDetail system_to_cons_details[2];
@@ -6271,7 +6271,7 @@ static const RzCmdDescArg analysis_syscall_dump_c_args[] = {
 	{ 0 },
 };
 static const RzCmdDescHelp analysis_syscall_dump_c_help = {
-	.summary = "Dump syscall info into .h file",
+	.summary = "Dump syscall info into .hpp file",
 	.args = analysis_syscall_dump_c_args,
 };
 
@@ -18430,8 +18430,8 @@ static const RzCmdDescHelp redirection_help = {
 };
 
 static const RzCmdDescDetailEntry pipe_empty_detail_entries[] = {
-	{ .text = "<cmd> |", .arg_str = NULL, .comment = "Disable scr.html and scr.color" },
-	{ .text = "<cmd> |H", .arg_str = NULL, .comment = "Enable scr.html, respect scr.color" },
+	{ .text = "<cmd> |", .arg_str = NULL, .comment = "Disable scr.hpptml and scr.color" },
+	{ .text = "<cmd> |H", .arg_str = NULL, .comment = "Enable scr.hpptml, respect scr.color" },
 	{ .text = "<cmd> |", .arg_str = " <program>", .comment = "Pipe output of command to program" },
 	{ .text = "<cmd> |.", .arg_str = NULL, .comment = "Alias for .<cmd>" },
 	{ 0 },

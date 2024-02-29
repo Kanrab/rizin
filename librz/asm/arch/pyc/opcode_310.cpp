@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2023 FXTi <lucaborza@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "opcode.h"
+#include "opcode.hpp"
 
 pyc_opcodes *opcode_310(void) {
 	pyc_opcodes *ret = opcode_39();

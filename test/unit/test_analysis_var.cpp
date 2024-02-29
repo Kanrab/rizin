@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2020 Florian Märkl <info@florianmaerkl.de>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_analysis.h>
-#include <rz_core.h>
-#include "test_config.h"
-#include "minunit.h"
+#include <rz_analysis.hpp>
+#include <rz_core.hpp>
+#include "test_config.hpp"
+#include "minunit.hpp"
 
 static bool sanitize_instr_acc(void *user, const ut64 k, const void *v) {
 	RzPVector *vec = (RzPVector *)v;

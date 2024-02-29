@@ -11,7 +11,7 @@
 #define SDB_PRIVATE_H_
 
 #if __WINDOWS__
-#include <io.h>
+#include <io.hpp>
 #endif
 
 #ifdef __cplusplus

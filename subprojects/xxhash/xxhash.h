@@ -78,7 +78,7 @@ extern "C" {
 /* ****************************
 *  Definitions
 ******************************/
-#include <stddef.h>   /* size_t */
+#include <stddef.hpp>   /* size_t */
 typedef enum { XXH_OK=0, XXH_ERROR } XXH_errorcode;
 
 
@@ -91,7 +91,7 @@ typedef enum { XXH_OK=0, XXH_ERROR } XXH_errorcode;
  *  Inlining can offer dramatic performance improvement on small keys.
  *  Methodology :
  *     #define XXH_INLINE_ALL
- *     #include "xxhash.h"
+ *     #include "xxhash.hpp"
  * `xxhash.c` is automatically included.
  *  It's not useful to compile and link it as a separate module.
  */
@@ -121,7 +121,7 @@ typedef enum { XXH_OK=0, XXH_ERROR } XXH_errorcode;
  * you can use XXH_NAMESPACE, to automatically prefix any public symbol from xxhash library
  * with the value of XXH_NAMESPACE (therefore, avoid NULL and numeric values).
  *
- * Note that no change is required within the calling program as long as it includes `xxhash.h` :
+ * Note that no change is required within the calling program as long as it includes `xxhash.hpp` :
  * regular symbol name will be automatically translated by this header.
  */
 #ifdef XXH_NAMESPACE

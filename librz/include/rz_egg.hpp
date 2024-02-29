@@ -1,10 +1,10 @@
 #ifndef RZ_EGG_H
 #define RZ_EGG_H
 
-#include <rz_asm.h>
-#include <rz_lib.h>
-#include <rz_util.h>
-#include <rz_syscall.h>
+#include <rz_asm.hpp>
+#include <rz_lib.hpp>
+#include <rz_util.hpp>
+#include <rz_syscall.hpp>
 
 #ifdef __cplusplus
 extern "C" {

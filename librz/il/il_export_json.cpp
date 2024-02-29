@@ -43,7 +43,7 @@
  * }
  */
 
-#include <rz_il/rz_il_vm.h>
+#include <rz_il/rz_il_vm.hpp>
 
 static void il_op_pure_json_resolve(RzILOpPure *op, PJ *pj);
 static void il_op_effect_json_resolve(RzILOpEffect *op, PJ *pj);

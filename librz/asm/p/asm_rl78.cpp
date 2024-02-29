@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: 2023 Bastian Engel <bastian.engel00@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_lib.h>
-#include <rz_asm.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
+#include <rz_asm.hpp>
 
-#include "../arch/rl78/rl78.h"
+#include "../arch/rl78/rl78.hpp"
 
 static int assemble(RzAsm *a, RzAsmOp *op, const char *buf) {
 	return 0x69;

@@ -3,8 +3,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "kd.h"
-#include <rz_util/rz_log.h>
+#include "kd.hpp"
+#include <rz_util/rz_log.hpp>
 
 #define KD_DBG if (false)
 

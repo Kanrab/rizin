@@ -2,14 +2,14 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 // Copypasta from http://www.linuxquestions.org/questions/programming-9/get-cursor-position-in-c-947833/
-#include <rz_cons.h>
-#include <rz_windows.h>
+#include <rz_cons.hpp>
+#include <rz_windows.hpp>
 
 #if __UNIX__
 #include <stdio.h>
 #include <fcntl.h>
-#include <termios.h>
-#include <errno.h>
+#include <termios.hpp>
+#include <errno.hpp>
 
 #define RD_EOF (-1)
 #define RD_EIO (-2)
@@ -210,7 +210,7 @@ RZ_API bool rz_cons_is_utf8(void) {
 	}
 #endif
 #if UTF8_DETECT_LOCALE
-#include <locale.h>
+#include <locale.hpp>
 	const char *ctype = setlocale(LC_CTYPE, NULL);
 	if ((ctype != NULL) && (ctype = strchr(ctype, '.')) && ctype++ &&
 		(rz_str_casecmp(ctype, "UTF-8") == 0 || rz_str_casecmp(ctype, "UTF8") == 0)) {

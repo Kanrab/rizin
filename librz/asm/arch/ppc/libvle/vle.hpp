@@ -3,7 +3,7 @@
 
 #ifndef LIB_PPCVLE
 #define LIB_PPCVLE
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 #define VLE_DEFAULTS     0
 #define VLE_INTERNAL_PPC 1

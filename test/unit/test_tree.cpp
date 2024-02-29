@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2016 Jeffrey Crowell <crowell@bu.edu>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
-#include "minunit.h"
+#include <rz_util.hpp>
+#include "minunit.hpp"
 
 void sum_node(RTreeNode *n, RTreeVisitor *vis) {
 	int cur = (int)(intptr_t)vis->data;

@@ -2,10 +2,10 @@
 // SPDX-FileCopyrightText: 2014-2016 madprogrammer
 // SPDX-License-Identifier: GPL-2.0-only
 
-#include <errno.h>
-#include "packet.h"
-#include "utils.h"
-#include "dsmsgs.h"
+#include <errno.hpp>
+#include "packet.hpp"
+#include "utils.hpp"
+#include "dsmsgs.hpp"
 
 #define READ_TIMEOUT (300 * 1000 * 1000)
 #define FRAME_CHAR   0x7e
@@ -104,8 +104,8 @@ int qnxr_read_packet(libqnxr_t *g) {
 	}
 
 	if (g->data_len >= sizeof(struct DShdr)) {
-		if (g->recv.pkt.hdr.channel)
-			g->channelrd = g->recv.pkt.hdr.channel;
+		if (g->recv.pkt.hppdr.channel)
+			g->channelrd = g->recv.pkt.hppdr.channel;
 	} else if (g->data_len >= 1) {
 		if (g->recv.data[0] == SET_CHANNEL_NAK) {
 			eprintf("%s: NAK received\n", __func__);
@@ -178,8 +178,8 @@ int qnxr_send_packet(libqnxr_t *g) {
 	*p++ = csum;
 	*p++ = FRAME_CHAR;
 
-	if (g->channelwr != g->tran.pkt.hdr.channel) {
-		switch (g->tran.pkt.hdr.channel) {
+	if (g->channelwr != g->tran.pkt.hppdr.channel) {
+		switch (g->tran.pkt.hppdr.channel) {
 		case SET_CHANNEL_TEXT:
 			qnxr_send_ch_text(g);
 			break;
@@ -187,7 +187,7 @@ int qnxr_send_packet(libqnxr_t *g) {
 			qnxr_send_ch_debug(g);
 			break;
 		}
-		g->channelwr = g->tran.pkt.hdr.channel;
+		g->channelwr = g->tran.pkt.hppdr.channel;
 	}
 
 	return rz_socket_write(g->sock, g->send_buff, p - g->send_buff);

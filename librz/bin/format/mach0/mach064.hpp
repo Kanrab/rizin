@@ -2,4 +2,4 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #define RZ_BIN_MACH064 1
-#include "mach0.h"
+#include "mach0.hpp"

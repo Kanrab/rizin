@@ -2,16 +2,16 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <ctype.h>
-#include <rz_util/rz_str.h>
-#include <rz_list.h>
-#include <rz_util/rz_regex.h>
-#include <rz_types.h>
-#include <rz_util/rz_assert.h>
-#include <rz_util/rz_log.h>
-#include <rz_util/rz_strbuf.h>
-#include <rz_vector.h>
-#include <rz_util/rz_print.h>
-#include <rz_analysis.h>
+#include <rz_util/rz_str.hpp>
+#include <rz_list.hpp>
+#include <rz_util/rz_regex.hpp>
+#include <rz_types.hpp>
+#include <rz_util/rz_assert.hpp>
+#include <rz_util/rz_log.hpp>
+#include <rz_util/rz_strbuf.hpp>
+#include <rz_vector.hpp>
+#include <rz_util/rz_print.hpp>
+#include <rz_analysis.hpp>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -1086,7 +1086,7 @@ RZ_API RZ_OWN char *rz_print_hexdump_str(RZ_NONNULL RzPrint *p, ut64 addr, RZ_NO
 					}
 				}
 				rz_strbuf_append(sb, "__|\n");
-				rz_strbuf_appendf(sb, "| cmd.hexcursor = %s\n", p->cfmt);
+				rz_strbuf_appendf(sb, "| cmd.hppexcursor = %s\n", p->cfmt);
 				p->coreb.cmdf(p->coreb.core,
 					"%s @ 0x%08" PFMT64x, p->cfmt, row_have_addr);
 			}
@@ -1437,7 +1437,7 @@ RZ_API RZ_OWN RzStrBuf *rz_print_colorize_asm_str(RZ_BORROW RzPrint *p, const Rz
 			color = mnem_col;
 			break;
 		case RZ_ASM_TOKEN_NUMBER:
-			if (tok->val.number == p->colorize_opts.hl_addr && tok->val.number != 0) {
+			if (tok->val.number == p->colorize_opts.hppl_addr && tok->val.number != 0) {
 				color = palette.func_var_type;
 			} else {
 				color = palette.num;

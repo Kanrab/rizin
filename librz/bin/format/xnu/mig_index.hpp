@@ -7,7 +7,7 @@
 /*
  * This file is generated in this way:
  *
- * python3 build_mig_index.py ~/xnu-4570.51.1/bsd/kern/trace_codes traps.json > mig_index.h
+ * python3 build_mig_index.py ~/xnu-4570.51.1/bsd/kern/trace_codes traps.json > mig_index.hpp
  *
  *
  * The traps.json file is generated from any dyld cache using the machtraps.py rzpipe script.

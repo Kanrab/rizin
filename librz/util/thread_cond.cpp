@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2022 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "thread.h"
+#include "thread.hpp"
 
 /**
  * \brief Condition variables are intended to be used to communicate changes in the state of data shared between threads.

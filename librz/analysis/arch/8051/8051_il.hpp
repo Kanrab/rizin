@@ -4,9 +4,9 @@
 #ifndef _8051_IL_H_
 #define _8051_IL_H_
 
-#include <rz_types.h>
-#include <rz_il.h>
-#include <rz_analysis.h>
+#include <rz_types.hpp>
+#include <rz_il.hpp>
+#include <rz_analysis.hpp>
 
 typedef enum {
 	I_UNDEFINED = 0,
@@ -56,7 +56,7 @@ typedef enum {
 	I_XRL, /// Bitwise Exclusive OR
 } I8051OpInst;
 
-/// https://www.win.tue.nl/~aeb/comp/8051/set8051.html
+/// https://www.win.tue.nl/~aeb/comp/8051/set8051.hpptml
 
 // clang-format off
 static const I8051OpInst i8051_inst_tbl[256] = {

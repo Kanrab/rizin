@@ -4,9 +4,9 @@
 #ifndef DMP_SPECS_H
 #define DMP_SPECS_H
 
-#include <rz_types_base.h>
+#include <rz_types_base.hpp>
 
-#include "librz/bin/format/mdmp/mdmp_specs.h"
+#include "librz/bin/format/mdmp/mdmp_specs.hpp"
 
 #define DMP64_MAGIC        "\x50\x41\x47\x45\x44\x55\x36\x34" // PAGEDU64
 #define DMP_BMP_MAGIC      "\x53\x44\x4d\x50\x44\x55\x4d\x50" // SDMPDUMP

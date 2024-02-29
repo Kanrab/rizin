@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: 2015-2019 condret <condr3t@protonmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
+#include <rz_types.hpp>
 #include <string.h>
-#include <rz_asm.h>
-#include <rz_lib.h>
-#include "../arch/mcs96/mcs96.h"
+#include <rz_asm.hpp>
+#include <rz_lib.hpp>
+#include "../arch/mcs96/mcs96.hpp"
 
 static int mcs96_len(const ut8 *buf, int len, RzStrBuf *asm_buf) {
 	int ret = 1;

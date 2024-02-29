@@ -1,4 +1,4 @@
-### evntrace.h ###
+### evntrace.hpp ###
 
 TRACE_QUERY_INFO_CLASS=typedef
 typedef.TRACE_QUERY_INFO_CLASS=int

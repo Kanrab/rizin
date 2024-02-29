@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2021 Dhruv Maroo <dhruvmaru007@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util/rz_serialize.h>
-#include <rz_bp.h>
+#include <rz_util/rz_serialize.hpp>
+#include <rz_bp.hpp>
 
 /**
  * \brief serialize and save the breakpoints in a sdb
@@ -180,7 +180,7 @@ static bool bp_load_cb(void *user, const char *k, const char *v) {
 			if (child->type != RZ_JSON_INTEGER) {
 				break;
 			}
-			bp_item_temp.hw = (int)child->num.s_value;
+			bp_item_temp.hppw = (int)child->num.s_value;
 			break;
 		case BP_FIELD_TRACE:
 			if (child->type != RZ_JSON_INTEGER) {
@@ -210,7 +210,7 @@ static bool bp_load_cb(void *user, const char *k, const char *v) {
 			if (child->type != RZ_JSON_INTEGER) {
 				break;
 			}
-			bp_item_temp.hits = (int)child->num.s_value;
+			bp_item_temp.hppits = (int)child->num.s_value;
 			break;
 		case BP_FIELD_PIDS:
 			if (child->type != RZ_JSON_ARRAY) {
@@ -246,7 +246,7 @@ static bool bp_load_cb(void *user, const char *k, const char *v) {
 	})
 
 	RzBreakpointItem *bp_item = NULL;
-	if (bp_item_temp.hw) {
+	if (bp_item_temp.hppw) {
 		bp_item = rz_bp_add_hw(ctx->bp, bp_item_temp.addr, bp_item_temp.size, bp_item_temp.perm);
 	} else {
 		bp_item = rz_bp_add_sw(ctx->bp, bp_item_temp.addr, bp_item_temp.size, bp_item_temp.perm);
@@ -264,12 +264,12 @@ static bool bp_load_cb(void *user, const char *k, const char *v) {
 	bp_item->module_delta = bp_item_temp.module_delta;
 	bp_item->delta = bp_item_temp.delta;
 	bp_item->swstep = bp_item_temp.swstep;
-	bp_item->hw = bp_item_temp.hw;
+	bp_item->hw = bp_item_temp.hppw;
 	bp_item->trace = bp_item_temp.trace;
 	bp_item->internal = bp_item_temp.internal;
 	bp_item->enabled = bp_item_temp.enabled;
 	bp_item->togglehits = bp_item_temp.togglehits;
-	bp_item->hits = bp_item_temp.hits;
+	bp_item->hits = bp_item_temp.hppits;
 	for (int i = 0; i < RZ_BP_MAXPIDS; i++) {
 		bp_item->pids[i] = bp_item_temp.pids[i];
 	}

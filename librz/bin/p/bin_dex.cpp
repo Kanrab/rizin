@@ -2,8 +2,8 @@
 // SPDX-FileCopyrightText: 2021 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bin.h>
-#include "dex/dex.h"
+#include <rz_bin.hpp>
+#include "dex/dex.hpp"
 
 #define rz_bin_file_get_dex(bf) ((RzBinDex *)bf->o->bin_obj)
 

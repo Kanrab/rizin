@@ -2,9 +2,9 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <stdio.h>
-#include <rz_types.h>
-#include <rz_util.h>
-#include "fatmach0.h"
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include "fatmach0.hpp"
 
 static int rz_bin_fatmach0_init(struct rz_bin_fatmach0_obj_t *bin) {
 	ut32 size;

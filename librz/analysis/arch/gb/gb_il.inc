@@ -110,7 +110,7 @@ static const char *gb_flag_name(gb_flag flag) {
 	}
 }
 
-#include <rz_il/rz_il_opbuilder_begin.h>
+#include <rz_il/rz_il_opbuilder_begin.hpp>
 
 /**
  * \name Address Calculation
@@ -720,4 +720,4 @@ static RzILOpEffect *gb_il_daa() {
 	// clang-format on
 }
 
-#include <rz_il/rz_il_opbuilder_end.h>
+#include <rz_il/rz_il_opbuilder_end.hpp>

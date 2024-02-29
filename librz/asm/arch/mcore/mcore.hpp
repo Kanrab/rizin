@@ -5,7 +5,7 @@
 #define MCORE_H
 
 #include <stdint.h>
-#include <rz_types.h>
+#include <rz_types.hpp>
 
 #ifdef __cplusplus
 extern "C" {

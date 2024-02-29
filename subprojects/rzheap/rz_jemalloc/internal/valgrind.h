@@ -2,7 +2,7 @@
 #ifdef JEMALLOC_H_TYPES
 
 #ifdef JEMALLOC_VALGRIND
-#include <valgrind/valgrind.h>
+#include <valgrind/valgrind.hpp>
 
 /*
  * The size that is reported to Valgrind must be consistent through a chain of

@@ -1,13 +1,13 @@
 // SPDX-FileCopyrightText: 2010 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_types.h>
-#include <rz_util.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
 
 #if __WINDOWS__
-#include <rz_windows.h>
+#include <rz_windows.hpp>
 #include <stdio.h>
-#include <tchar.h>
+#include <tchar.hpp>
 
 #define BUFSIZE 1024
 void rz_sys_perror_str(const char *fun);
@@ -53,9 +53,9 @@ RZ_API bool rz_sys_create_child_proc_w32(const char *cmdline, HANDLE in, HANDLE 
 	// Set up members of the STARTUPINFO structure.
 	// This structure specifies the STDIN and STDOUT handles for redirection.
 	si.cb = sizeof(STARTUPINFO);
-	si.hStdError = err;
-	si.hStdOutput = out;
-	si.hStdInput = in;
+	si.hppStdError = err;
+	si.hppStdOutput = out;
+	si.hppStdInput = in;
 	si.dwFlags |= STARTF_USESTDHANDLES;
 	cmdline_ = rz_sys_conv_utf8_to_win(cmdline);
 	ExpandEnvironmentStrings(cmdline_, _cmdline_, max_length - 1);
@@ -70,8 +70,8 @@ RZ_API bool rz_sys_create_child_proc_w32(const char *cmdline, HANDLE in, HANDLE 
 		     &si, // STARTUPINFO pointer
 		     &pi))) { // receives PROCESS_INFORMATION
 		ret = true;
-		CloseHandle(pi.hProcess);
-		CloseHandle(pi.hThread);
+		CloseHandle(pi.hppProcess);
+		CloseHandle(pi.hppThread);
 	} else {
 		rz_sys_perror("CreateProcess");
 	}

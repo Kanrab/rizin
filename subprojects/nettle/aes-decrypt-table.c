@@ -35,12 +35,12 @@
 */
 
 #if HAVE_CONFIG_H
-# include "config.h"
+# include "config.hpp"
 #endif
 
 #include <stdlib.h>
 
-#include "aes-internal.h"
+#include "aes-internal.hpp"
 
 const struct aes_table
 _nettle_aes_decrypt_table =

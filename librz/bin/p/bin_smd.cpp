@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2015-2018 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_bin.h>
+#include <rz_bin.hpp>
 
 typedef struct gen_hdr {
 	ut8 CopyRights[32];

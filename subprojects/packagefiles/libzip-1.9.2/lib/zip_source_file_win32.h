@@ -2,7 +2,7 @@
 #define _HAD_ZIP_SOURCE_FILE_WIN32_H
 
 /*
-  zip_source_file_win32.h -- common header for Windows file implementation
+  zip_source_file_win32.hpp -- common header for Windows file implementation
   Copyright (C) 2020 Dieter Baron and Thomas Klausner
 
   This file is part of libzip, a library to manipulate ZIP archives.
@@ -39,15 +39,15 @@
 #define _WIN32_WINNT 0x0501
 #endif
 
-#include <windows.h>
+#include <windows.hpp>
 
-#include <aclapi.h>
+#include <aclapi.hpp>
 
 #include <stdlib.h>
 
-#include "zipint.h"
+#include "zipint.hpp"
 
-#include "zip_source_file.h"
+#include "zip_source_file.hpp"
 
 typedef HANDLE (__stdcall *create_file_td)(const void *name, DWORD access, DWORD share_mode, PSECURITY_ATTRIBUTES security_attributes, DWORD creation_disposition, DWORD file_attributes, HANDLE template_file);
 typedef BOOL (__stdcall *delete_file_td)(const void *name);

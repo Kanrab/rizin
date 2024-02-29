@@ -1,13 +1,13 @@
 // SPDX-FileCopyrightText: 2022 deroad <wargio@libero.it>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "ssdeep.h"
-#include <rz_types.h>
-#include <rz_endian.h>
-#include <rz_util.h>
-#include <rz_diff.h>
+#include "ssdeep.hpp"
+#include <rz_types.hpp>
+#include <rz_endian.hpp>
+#include <rz_util.hpp>
+#include <rz_diff.hpp>
 
-#include "fnv_hash.h"
+#include "fnv_hash.hpp"
 
 #define SSDEEP_BASE64_CHARSET "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
 
@@ -150,7 +150,7 @@ static void ssdeep_update(RzSSDeep *context, ut8 c) {
 
 	for (ut32 i = context->start; i < context->end; ++i) {
 		sum_hash_update(context->blocks[i].complete, c);
-		sum_hash_update(context->blocks[i].half, c);
+		sum_hash_update(context->blocks[i].hppalf, c);
 	}
 
 	if (context->last_iteration) {

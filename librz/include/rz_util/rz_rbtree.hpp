@@ -3,9 +3,9 @@
 
 #include <limits.h>
 #include <stdbool.h>
-#include <stddef.h>
+#include <stddef.hpp>
 
-#include "rz_list.h"
+#include "rz_list.hpp"
 
 #ifdef __cplusplus
 extern "C" {

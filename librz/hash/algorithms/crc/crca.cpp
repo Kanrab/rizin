@@ -3,7 +3,7 @@
 
 // some definitions and test cases borrowed from http://www.nightmare.com/~ryb/code/CrcMoose.py (Ray Burr)
 
-#include "crca.h"
+#include "crca.hpp"
 
 void crc_init_custom(RzCrc *ctx, utcrc crc, ut32 size, int reflect, utcrc poly, utcrc xout) {
 	ctx->crc = crc;

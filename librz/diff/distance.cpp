@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2017 Fangrui Song <i@maskray.me>
 // SPDX-FileCopyrightText: 2016 NikolaiHampton <nikolaih@3583bytesready.net>
 // SPDX-License-Identifier: LGPL-3.0-only
-#include <rz_diff.h>
-#include <rz_util/rz_assert.h>
+#include <rz_diff.hpp>
+#include <rz_util/rz_assert.hpp>
 
 /**
  * \brief Calculates the distance between two buffers using the Myers algorithm

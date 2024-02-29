@@ -1,4 +1,4 @@
-### commctrl.h ###
+### commctrl.hpp ###
 
 DISPLAY_DEVICE_TYPE=typedef
 typedef.DISPLAY_DEVICE_TYPE=int

@@ -1,8 +1,8 @@
 #ifndef RZ_LIST_H
 #define RZ_LIST_H
 
-#include <rz_types.h>
-#include <rz_util/ht_pp.h>
+#include <rz_types.hpp>
+#include <rz_util/ht_pp.hpp>
 
 #ifdef __cplusplus
 extern "C" {

@@ -6,8 +6,8 @@
 #ifndef RZ_IL_VALUE_H
 #define RZ_IL_VALUE_H
 
-#include <rz_il/definitions/bool.h>
-#include <rz_il/definitions/sort.h>
+#include <rz_il/definitions/bool.hpp>
+#include <rz_il/definitions/sort.hpp>
 
 #ifdef __cplusplus
 extern "C" {

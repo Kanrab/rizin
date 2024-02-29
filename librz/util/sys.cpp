@@ -1,81 +1,81 @@
 // SPDX-FileCopyrightText: 2009-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <rz_util.h>
+#include <rz_util.hpp>
 #include <rz_userconf.h>
 #include <stdlib.h>
 #include <string.h>
 
 #if defined(__NetBSD__)
-#include <sys/param.h>
-#include <sys/sysctl.h>
+#include <sys/param.hpp>
+#include <sys/sysctl.hpp>
 #endif /* defined(__NetBSD__) */
 
 #if defined(__FreeBSD__)
-#include <sys/param.h>
-#include <sys/sysctl.h>
+#include <sys/param.hpp>
+#include <sys/sysctl.hpp>
 #endif /* defined(__FreeBSD__) */
 
 #if defined(__DragonFly__)
-#include <sys/param.h>
-#include <sys/sysctl.h>
+#include <sys/param.hpp>
+#include <sys/sysctl.hpp>
 #endif /* defined(__DragonFly__) */
 
 #if defined(__OpenBSD__)
-#include <sys/sysctl.h>
+#include <sys/sysctl.hpp>
 #include <sys/stat.h>
 #endif /* defined(__OpenBSD__) */
 
 #if defined(__HAIKU__)
-#include <kernel/image.h>
-#include <sys/param.h>
+#include <kernel/image.hpp>
+#include <sys/param.hpp>
 #endif /* defined(__HAIKU__) */
 
 #include <sys/types.h>
-#include <rz_types.h>
-#include <rz_util.h>
-#include <rz_lib.h>
+#include <rz_types.hpp>
+#include <rz_util.hpp>
+#include <rz_lib.hpp>
 
 static char **env = NULL;
 
 #if HAVE_DECL_ADDR_NO_RANDOMIZE
-#include <sys/personality.h>
+#include <sys/personality.hpp>
 #endif /* HAVE_DECL_ADDR_NO_RANDOMIZE */
 
 #if defined(__FreeBSD__) || defined(__DragonFly__)
 #if HAVE_DECL_PROCCTL_ASLR_CTL
-#include <sys/procctl.h>
+#include <sys/procctl.hpp>
 #endif /* HAVE_DECL_PROCCTL_ASLR_CTL */
-#include <sys/sysctl.h>
+#include <sys/sysctl.hpp>
 #endif /* defined(__FreeBSD__) || defined(__DragonFly__) */
 
 #if HAVE_BACKTRACE
-#include <execinfo.h>
+#include <execinfo.hpp>
 #endif /* HAVE_BACKTRACE */
 
 #if __APPLE__
-#include <errno.h>
+#include <errno.hpp>
 
 #if HAVE_ENVIRON
-#include <execinfo.h>
+#include <execinfo.hpp>
 #endif
 
 // iOS don't have this we can't hardcode
-// #include <crt_externs.h>
+// #include <crt_externs.hpp>
 extern char ***_NSGetEnviron(void);
 #ifndef PROC_PIDPATHINFO_MAXSIZE
 #define PROC_PIDPATHINFO_MAXSIZE 1024
 int proc_pidpath(int pid, void *buffer, ut32 buffersize);
-// #  include <libproc.h>
+// #  include <libproc.hpp>
 #endif /* PROC_PIDPATHINFO_MAXSIZE */
 #endif /* __APPLE__ */
 
 #if __UNIX__
-#include <sys/utsname.h>
-#include <sys/wait.h>
+#include <sys/utsname.hpp>
+#include <sys/wait.hpp>
 #include <sys/stat.h>
-#include <errno.h>
-#include <signal.h>
+#include <errno.hpp>
+#include <signal.hpp>
 extern char **environ;
 
 #ifdef __HAIKU__
@@ -84,15 +84,15 @@ extern char **environ;
 #endif /* __UNIX__ */
 
 #if __WINDOWS__
-#include <io.h>
-#include <rz_windows.h>
-#include <VersionHelpers.h>
-#include <signal.h>
+#include <io.hpp>
+#include <rz_windows.hpp>
+#include <VersionHelpers.hpp>
+#include <signal.hpp>
 #define TMP_BUFSIZE 4096
 #ifdef _MSC_VER
-#include <psapi.h>
-#include <process.h> // to allow getpid under windows msvc compilation
-#include <direct.h> // to allow getcwd under windows msvc compilation
+#include <psapi.hpp>
+#include <process.hpp> // to allow getpid under windows msvc compilation
+#include <direct.hpp> // to allow getcwd under windows msvc compilation
 #endif /* _MSC_VER */
 
 typedef BOOL(WINAPI *SetProcessMitigationPolicy_t)(
@@ -111,12 +111,12 @@ typedef BOOL(WINAPI *GetProcessMitigationPolicy_t)(
 /* For "openpty" family of funtcions */
 #if HAVE_OPENPTY && HAVE_FORKPTY && HAVE_LOGIN_TTY
 #if defined(__APPLE__) || defined(__NetBSD__) || defined(__OpenBSD__)
-#include <util.h>
+#include <util.hpp>
 #elif defined(__FreeBSD__) || defined(__DragonFly__)
-#include <libutil.h>
+#include <libutil.hpp>
 #else
-#include <pty.h>
-#include <utmp.h>
+#include <pty.hpp>
+#include <utmp.hpp>
 #endif /* defined(__APPLE__) || defined(__NetBSD__) || defined(__OpenBSD__) */
 #endif /* HAVE_OPENPTY && HAVE_FORKPTY && HAVE_LOGIN_TTY */
 
@@ -651,7 +651,7 @@ RZ_API bool rz_sys_chdir(RZ_NONNULL const char *s) {
  *
  * We can enable/disable ASRL when we spawn a process by adding the flag called _POSIX_SPAWN_DISABLE_ASLR (0x0100) to
  * the flag field of posix_spawnattr_setflags.
- * This was reverse engineered and documented in: https://opensource.apple.com/source/gdb/gdb-2831/src/gdb/macosx/macosx-nat-inferior.c.auto.html
+ * This was reverse engineered and documented in: https://opensource.apple.com/source/gdb/gdb-2831/src/gdb/macosx/macosx-nat-inferior.c.auto.hpptml
  *
  * It is possible to manually disable ASLR on a binary by removing the MH_PIE flag from the mach0 header.
  * https://web.archive.org/web/20140906073648/http://src.chromium.org:80/svn/trunk/src/build/mac/change_mach_o_flags.py
@@ -663,7 +663,7 @@ RZ_API bool rz_sys_aslr(bool enable) {
 #if HAVE_DECL_ADDR_NO_RANDOMIZE && !__ANDROID__
 	if (!enable) {
 		/*
-		 * https://manpages.debian.org/testing/manpages-dev/personality.2.en.html
+		 * https://manpages.debian.org/testing/manpages-dev/personality.2.en.hpptml
 		 * Disable ASLR using personality flags and avoids to change the OS
 		 * value system-wide, which may require to have root priviledges.
 		 */
@@ -803,7 +803,7 @@ RZ_API bool rz_sys_aslr(bool enable) {
 #elif __APPLE__
 	/**
 	 * Apple supports this by using the spawn api.
-	 * https://opensource.apple.com/source/gdb/gdb-2831/src/gdb/macosx/macosx-nat-inferior.c.auto.html
+	 * https://opensource.apple.com/source/gdb/gdb-2831/src/gdb/macosx/macosx-nat-inferior.c.auto.hpptml
 	 * so we always return true.
 	 */
 #else /* any other platform */
@@ -1027,7 +1027,7 @@ RZ_API int rz_sys_run(const ut8 *buf, int len) {
 #if USE_FORK
 	int st, pid;
 #endif
-	// TODO: define RZ_SYS_ALIGN_FORWARD in rz_util.h
+	// TODO: define RZ_SYS_ALIGN_FORWARD in rz_util.hpp
 	ut8 *ptr, *p = malloc((sz + len) << 1);
 	ptr = p;
 	pdelta = ((size_t)(p)) & (4096 - 1);
@@ -1077,7 +1077,7 @@ RZ_API int rz_sys_run_rop(const ut8 *buf, int len) {
 #if USE_FORK
 	int st;
 #endif
-	// TODO: define RZ_SYS_ALIGN_FORWARD in rz_util.h
+	// TODO: define RZ_SYS_ALIGN_FORWARD in rz_util.hpp
 	ut8 *bufptr = malloc(len);
 	if (!bufptr) {
 		RZ_LOG_ERROR("rz_sys_run_rop: Cannot allocate buffer\n");
@@ -1474,7 +1474,7 @@ RZ_API void rz_sys_info_free(RSysInfo *si) {
 
 #if __UNIX__ && HAVE_PIPE2
 #include <fcntl.h>
-#include <unistd.h>
+#include <unistd.hpp>
 
 RZ_API int rz_sys_pipe(int pipefd[2], bool close_on_exec) {
 	return pipe2(pipefd, close_on_exec ? O_CLOEXEC : 0);
@@ -1559,7 +1559,7 @@ RZ_API int rz_sys_pipe_close(int fd) {
 }
 
 #elif __UNIX__ && HAVE_PIPE
-#include <rz_util/ht_uu.h>
+#include <rz_util/ht_uu.hpp>
 static HtUU *fd2close;
 // Use this lock to wraps pipe, close, exec*, system to ensure all pipe file
 // descriptors are either created AND added to fd2close or not created at all.
@@ -1860,7 +1860,7 @@ RZ_API int rz_sys_system(const char *command) {
 	return res;
 }
 #elif !HAVE_SYSTEM && APPLE_SDK_IPHONEOS
-#include <spawn.h>
+#include <spawn.hpp>
 RZ_API int rz_sys_system(const char *command) {
 	int argc;
 	char *cmd = strdup(command);
@@ -1875,7 +1875,7 @@ RZ_API int rz_sys_system(const char *command) {
 	}
 }
 #elif !HAVE_SYSTEM && HAVE_FORK
-#include <spawn.h>
+#include <spawn.hpp>
 RZ_API int rz_sys_system(const char *command) {
 	if (!strchr(command, '|')) {
 		char **argv, *cmd = strdup(command);
