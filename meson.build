@@ -79,9 +79,6 @@ if is_static_build
   endif
 endif
 
-add_global_arguments('-fpermissive', language: 'cpp')
-add_global_arguments('[-Wno-comment', language: 'cpp')
-
 if cc.has_argument('--std=gnu99')
   add_global_arguments('--std=gnu99', language: 'cpp')
 elif cc.has_argument('--std=c99')

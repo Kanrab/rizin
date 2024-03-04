@@ -25,13 +25,13 @@ static bool sparse_limits(SparsePriv *priv, ut64 *max) {
 	if (rz_vector_empty(&priv->chunks)) {
 		return false;
 	}
-	RzBufferSparseChunk *c = rz_vector_index_ptr(&priv->chunks, rz_vector_len(&priv->chunks) - 1);
+	auto *c = static_cast<RzBufferSparseChunk *>(rz_vector_index_ptr(&priv->chunks, rz_vector_len(&priv->chunks) - 1));
 	*max = c->to + 1;
 	return true;
 }
 
 static int chunk_cmp(ut64 addr, void *a) {
-	RzBufferSparseChunk *c = a;
+	RzBufferSparseChunk *c = static_cast<RzBufferSparseChunk *>(a);
 	return RZ_NUM_CMP(addr, c->from);
 }
 
@@ -60,7 +60,7 @@ static st64 sparse_write(SparsePriv *priv, ut64 addr, const ut8 *data, ut64 len)
 	RzBufferSparseChunk *c = NULL; // the chunk where we will write into
 	if (in_start_index) {
 		// if we start writing inside an existing chunk, use it.
-		c = rz_vector_index_ptr(&priv->chunks, in_start_index - 1);
+		c = static_cast<RzBufferSparseChunk *>(rz_vector_index_ptr(&priv->chunks, in_start_index - 1));
 		if (addr > c->to) {
 			// already after it
 			c = NULL;
@@ -70,7 +70,7 @@ static st64 sparse_write(SparsePriv *priv, ut64 addr, const ut8 *data, ut64 len)
 		}
 	}
 	if (!c) {
-		c = rz_vector_insert(&priv->chunks, in_start_index, NULL);
+		c = static_cast<RzBufferSparseChunk *>(rz_vector_insert(&priv->chunks, in_start_index, NULL));
 		if (in_end_index) {
 			// adjust after insertion
 			in_end_index++;
@@ -83,7 +83,7 @@ static st64 sparse_write(SparsePriv *priv, ut64 addr, const ut8 *data, ut64 len)
 	ut64 newto = addr + len - 1;
 	RzBufferSparseChunk *in_end_chunk = NULL;
 	if (in_end_index) {
-		in_end_chunk = rz_vector_index_ptr(&priv->chunks, in_end_index - 1);
+		in_end_chunk = static_cast<RzBufferSparseChunk *>(rz_vector_index_ptr(&priv->chunks, in_end_index - 1));
 		if (in_end_chunk->to > newto) {
 			newto = in_end_chunk->to;
 		} else {
@@ -91,7 +91,7 @@ static st64 sparse_write(SparsePriv *priv, ut64 addr, const ut8 *data, ut64 len)
 			in_end_chunk = NULL;
 		}
 	}
-	ut8 *newbuf = realloc(c->data, newto - c->from + 1);
+	ut8 *newbuf = static_cast<ut8 *>(realloc(c->data, newto - c->from + 1));
 	if (!newbuf) {
 		return -1;
 	}
@@ -126,7 +126,7 @@ static bool buf_sparse_init(RzBuffer *b, const void *user) {
 		return false;
 	}
 	if (user) {
-		SparseInitConfig *cfg = (void *)user;
+		SparseInitConfig *cfg = static_cast<SparseInitConfig *>((void *)user);
 		priv->base = cfg->base;
 		if (priv->base) {
 			rz_buf_ref(priv->base);
@@ -164,12 +164,12 @@ static bool buf_sparse_resize(RzBuffer *b, ut64 newsize) {
 	// now n == rz_vector_len(&priv->chunks)
 	bool must_extend = false; // whether we must add another artificial chunk to reach exactly the size
 	if (n) {
-		RzBufferSparseChunk *c = rz_vector_index_ptr(&priv->chunks, n - 1);
+		RzBufferSparseChunk *c = static_cast<RzBufferSparseChunk *>(rz_vector_index_ptr(&priv->chunks, n - 1));
 		if (newsize <= c->to) {
 			// must chop the now-last block
 			rz_return_val_if_fail(newsize, false); // newsize > 0 is guaranteed when n > 0, otherwise the lower bound above would have returned 0.
 			c->to = newsize - 1;
-			ut8 *tmp = realloc(c->data, c->to - c->from + 1);
+			ut8 *tmp = static_cast<ut8 *>(realloc(c->data, c->to - c->from + 1));
 			if (tmp) {
 				c->data = tmp;
 			}
@@ -213,7 +213,7 @@ static st64 buf_sparse_read(RzBuffer *b, ut8 *buf, ut64 len) {
 	size_t r = 0;
 	size_t i = chunk_index_in(priv, priv->offset);
 	if (i) {
-		RzBufferSparseChunk *c = rz_vector_index_ptr(&priv->chunks, i - 1);
+		RzBufferSparseChunk *c = static_cast<RzBufferSparseChunk *>(rz_vector_index_ptr(&priv->chunks, i - 1));
 		if (priv->offset <= c->to) {
 			ut64 to = RZ_MIN(c->to, max);
 			ut64 rsz = to - priv->offset + 1;
@@ -229,7 +229,7 @@ static st64 buf_sparse_read(RzBuffer *b, ut8 *buf, ut64 len) {
 		ut64 empty_to = max; // inclusive offset to which to fill with 0xff
 		ut64 next_off = empty_to + 1; // offset to start at in the next iteration
 		if (i < rz_vector_len(&priv->chunks)) {
-			RzBufferSparseChunk *c = rz_vector_index_ptr(&priv->chunks, i);
+			RzBufferSparseChunk *c = static_cast<RzBufferSparseChunk *>(rz_vector_index_ptr(&priv->chunks, i));
 			if (c->from <= empty_to) {
 				next_off = RZ_MIN(c->to + 1, next_off);
 				empty_to = c->from - 1;
@@ -318,7 +318,7 @@ RZ_API const RzBufferSparseChunk *rz_buf_sparse_get_chunks(RzBuffer *b, RZ_NONNU
 	}
 	SparsePriv *priv = get_priv_sparse(b);
 	*count = rz_vector_len(&priv->chunks);
-	return rz_vector_index_ptr(&priv->chunks, 0);
+	return static_cast<RzBufferSparseChunk *>(rz_vector_index_ptr(&priv->chunks, 0));
 }
 
 /// Only for sparse RzBuffers
@@ -344,7 +344,7 @@ RZ_API bool rz_buf_sparse_populated_in(RzBuffer *b, ut64 from, ut64 to) {
 	SparsePriv *priv = get_priv_sparse(b);
 	size_t from_i = chunk_index_in(priv, from);
 	if (from_i) {
-		RzBufferSparseChunk *c = rz_vector_index_ptr(&priv->chunks, from_i - 1);
+		RzBufferSparseChunk *c = static_cast<RzBufferSparseChunk *>(rz_vector_index_ptr(&priv->chunks, from_i - 1));
 		if (from <= c->to) {
 			return true;
 		}
