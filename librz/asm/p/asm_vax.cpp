@@ -4,7 +4,7 @@
 // TODO: add support for the assembler
 
 #include <stdio.h>
-#include <stdarg.hpp>
+#include <stdarg.h>
 #include <string.h>
 
 #include <rz_types.hpp>

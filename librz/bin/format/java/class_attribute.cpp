@@ -112,7 +112,7 @@ bool java_attribute_set_code(ConstPool **pool, ut32 poolsize, Attribute *attr, R
 		for (ut32 i = 0; i < ac->exceptions_count; ++i) {
 			if (!rz_buf_read_be16(buf, &ac->exceptions[i].start_pc) ||
 				!rz_buf_read_be16(buf, &ac->exceptions[i].end_pc) ||
-				!rz_buf_read_be16(buf, &ac->exceptions[i].hppandler_pc) ||
+				!rz_buf_read_be16(buf, &ac->exceptions[i].handler_pc) ||
 				!rz_buf_read_be16(buf, &ac->exceptions[i].catch_type)) {
 				free(ac);
 				return false;

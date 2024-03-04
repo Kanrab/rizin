@@ -7,8 +7,8 @@
 
 #include <rz_types.hpp>
 #include <rz_asm.hpp>
-#include <stddef.hpp>
-#include "librz/asm/arch/luac/lua_arch.hpp"
+#include <stddef.h>
+#include "librz/asm/arch/luac/lua_arch.h"
 
 /*===========================================================================
   We assume that instructions are unsigned numbers.

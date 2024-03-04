@@ -1516,7 +1516,7 @@ RzList *w32_desc_list(int pid) {
 		if (handle.ProcessId != pid) {
 			continue;
 		}
-		if (w32_NtDuplicateObject(ph, (HANDLE)(size_t)handle.hppandle, GetCurrentProcess(), &dupHandle, 0, 0, 0)) {
+		if (w32_NtDuplicateObject(ph, (HANDLE)(size_t)handle.handle, GetCurrentProcess(), &dupHandle, 0, 0, 0)) {
 			continue;
 		}
 		if (w32_NtQueryObject(dupHandle, 2, objectTypeInfo, 0x1000, NULL)) {
@@ -1551,7 +1551,7 @@ RzList *w32_desc_list(int pid) {
 		PUNICODE_STRING objectName = objectNameInfo;
 		if (objectName->Length) {
 			char *name = rz_utf16_to_utf8_l(objectName->Buffer, objectName->Length / 2);
-			desc = rz_debug_desc_new(handle.hppandle, name, perms, '?', 0);
+			desc = rz_debug_desc_new(handle.handle, name, perms, '?', 0);
 			if (!desc) {
 				free(name);
 				break;
@@ -1560,7 +1560,7 @@ RzList *w32_desc_list(int pid) {
 			free(name);
 		} else {
 			char *name = rz_utf16_to_utf8_l(objectTypeInfo->Name.Buffer, objectTypeInfo->Name.Length / 2);
-			desc = rz_debug_desc_new(handle.hppandle, name, perms, '?', 0);
+			desc = rz_debug_desc_new(handle.handle, name, perms, '?', 0);
 			if (!desc) {
 				free(name);
 				break;

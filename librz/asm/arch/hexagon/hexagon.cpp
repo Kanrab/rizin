@@ -19,7 +19,7 @@
 #include <rz_util/rz_assert.hpp>
 #include "hexagon.hpp"
 #include "hexagon_insn.hpp"
-#include "hexagon_arch.hpp"
+#include "hexagon_arch.h"
 
 char *hex_get_ctr_regs(int opcode_reg, bool get_alias) {
 	switch (opcode_reg) {

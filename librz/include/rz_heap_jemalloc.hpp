@@ -4,7 +4,7 @@
 #include <rz_jemalloc/internal/jemalloc_internal.hpp>
 
 #define INC_HEAP32 1
-#include "rz_heap_jemalloc.hpp"
+#include "rz_heap_jemalloc.h"
 #undef INC_HEAP32
 
 #undef GH

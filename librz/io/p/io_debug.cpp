@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2007-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <errno.hpp>
+#include <errno.h>
 #include <rz_io.hpp>
 #include <rz_lib.hpp>
 #include <rz_util.hpp>
@@ -22,11 +22,11 @@
 #if DEBUGGER && DEBUGGER_SUPPORTED
 #define MAGIC_EXIT 123
 
-#include <signal.hpp>
+#include <signal.h>
 #if __UNIX__
-#include <sys/ptrace.hpp>
+#include <sys/ptrace.h>
 #include <sys/types.h>
-#include <sys/wait.hpp>
+#include <sys/wait.h>
 #endif
 
 #if __APPLE__
@@ -34,7 +34,7 @@
 #include <spawn.hpp>
 #endif
 #include <sys/types.h>
-#include <sys/wait.hpp>
+#include <sys/wait.h>
 #include <mach/exception_types.hpp>
 #include <mach/mach_init.hpp>
 #include <mach/mach_port.hpp>

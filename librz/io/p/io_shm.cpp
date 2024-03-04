@@ -7,16 +7,16 @@
 
 #if HAVE_HEADER_LINUX_ASHMEM_H || HAVE_HEADER_SYS_SHM_H || __WINDOWS__
 #if HAVE_HEADER_LINUX_ASHMEM_H
-#include <linux/ashmem.hpp>
+#include <linux/ashmem.h>
 #endif
 #if HAVE_HEADER_SYS_SHM_H
-#include <sys/shm.hpp>
+#include <sys/shm.h>
 #endif
 #if HAVE_HEADER_SYS_IPC_H
-#include <sys/ipc.hpp>
+#include <sys/ipc.h>
 #endif
 #if HAVE_HEADER_SYS_MMAN_H
-#include <sys/mman.hpp>
+#include <sys/mman.h>
 #endif
 #if __WINDOWS__
 #include <windows.hpp>

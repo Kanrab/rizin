@@ -8,7 +8,7 @@
 #include <rz_util.hpp>
 #include <rz_list.hpp>
 
-#include <yxml.hpp>
+#include <yxml.h>
 #include "rz_cf_dict.hpp"
 
 #define XMLBUFSIZE 4096
@@ -94,13 +94,23 @@ RZ_API RzCFValueDict *rz_cf_value_dict_parse(RzBuffer *file_buf, ut64 offset, ut
 
 	RzList *stack = rz_list_newf((RzListFree)&rz_cf_parse_state_free);
 	if (!stack) {
-		goto beach;
+		RZ_FREE(xml_buf);
+		rz_list_free(stack);
+		rz_list_free(idlist);
+		free(content);
+
+		return result;
 	}
 
 	if (options & RZ_CF_OPTION_SUPPORT_IDREF) {
 		idlist = rz_list_new();
 		if (!idlist) {
-			goto beach;
+			RZ_FREE(xml_buf);
+			rz_list_free(stack);
+			rz_list_free(idlist);
+			free(content);
+
+			return result;
 		}
 	}
 
@@ -117,7 +127,12 @@ RZ_API RzCFValueDict *rz_cf_value_dict_parse(RzBuffer *file_buf, ut64 offset, ut
 		if (r < 0) {
 			RZ_LOG_ERROR("Parsing error at :%" PRIu32 ":%" PRIu64 " byte offset %" PRIu64 "\n",
 				x.line, x.byte, x.total);
-			goto beach;
+			RZ_FREE(xml_buf);
+			rz_list_free(stack);
+			rz_list_free(idlist);
+			free(content);
+
+			return result;
 		}
 
 		switch (r) {
@@ -128,31 +143,56 @@ RZ_API RzCFValueDict *rz_cf_value_dict_parse(RzBuffer *file_buf, ut64 offset, ut
 			if (!strcmp(x.elem, "dict")) {
 				next_state = rz_cf_parse_state_new(RZ_CF_STATE_IN_DICT);
 				if (!next_state) {
-					goto beach;
+					RZ_FREE(xml_buf);
+					rz_list_free(stack);
+					rz_list_free(idlist);
+					free(content);
+
+					return result;
 				}
 				next_state->dict = rz_cf_value_dict_new();
 			} else if (!strcmp(x.elem, "array")) {
 				next_state = rz_cf_parse_state_new(RZ_CF_STATE_IN_ARRAY);
 				if (!next_state) {
-					goto beach;
+					RZ_FREE(xml_buf);
+					rz_list_free(stack);
+					rz_list_free(idlist);
+					free(content);
+
+					return result;
 				}
 				next_state->array = rz_cf_value_array_new();
 			} else if (!strcmp(x.elem, "key") && state->phase == RZ_CF_STATE_IN_DICT) {
 				next_state = rz_cf_parse_state_new(RZ_CF_STATE_IN_KEY);
 				if (!next_state) {
-					goto beach;
+					RZ_FREE(xml_buf);
+					rz_list_free(stack);
+					rz_list_free(idlist);
+					free(content);
+
+					return result;
 				}
 				next_state->dict = state->dict;
 			} else if (!strcmp(x.elem, "string")) {
 				next_state = rz_cf_parse_state_new(RZ_CF_STATE_IN_SCALAR);
 				if (!next_state) {
-					goto beach;
+					RZ_FREE(xml_buf);
+					rz_list_free(stack);
+					rz_list_free(idlist);
+					free(content);
+
+					return result;
 				}
 				next_state->value_type = RZ_CF_STRING;
 			} else if (!strcmp(x.elem, "integer")) {
 				next_state = rz_cf_parse_state_new(RZ_CF_STATE_IN_SCALAR);
 				if (!next_state) {
-					goto beach;
+					RZ_FREE(xml_buf);
+					rz_list_free(stack);
+					rz_list_free(idlist);
+					free(content);
+
+					return result;
 				}
 				next_state->value_type = RZ_CF_INTEGER;
 			} else if (!strcmp(x.elem, "data")) {
@@ -161,20 +201,35 @@ RZ_API RzCFValueDict *rz_cf_value_dict_parse(RzBuffer *file_buf, ut64 offset, ut
 				} else {
 					next_state = rz_cf_parse_state_new(RZ_CF_STATE_IN_SCALAR);
 					if (!next_state) {
-						goto beach;
+						RZ_FREE(xml_buf);
+						rz_list_free(stack);
+						rz_list_free(idlist);
+						free(content);
+
+						return result;
 					}
 					next_state->value_type = RZ_CF_DATA;
 				}
 			} else if (!strcmp(x.elem, "true")) {
 				next_state = rz_cf_parse_state_new(RZ_CF_STATE_IN_SCALAR);
 				if (!next_state) {
-					goto beach;
+					RZ_FREE(xml_buf);
+					rz_list_free(stack);
+					rz_list_free(idlist);
+					free(content);
+
+					return result;
 				}
 				next_state->value_type = RZ_CF_TRUE;
 			} else if (!strcmp(x.elem, "false")) {
 				next_state = rz_cf_parse_state_new(RZ_CF_STATE_IN_SCALAR);
 				if (!next_state) {
-					goto beach;
+					RZ_FREE(xml_buf);
+					rz_list_free(stack);
+					rz_list_free(idlist);
+					free(content);
+
+					return result;
 				}
 				next_state->value_type = RZ_CF_FALSE;
 			}
@@ -191,7 +246,12 @@ RZ_API RzCFValueDict *rz_cf_value_dict_parse(RzBuffer *file_buf, ut64 offset, ut
 			RzCFParseState *state = (RzCFParseState *)rz_list_pop(stack);
 			RzCFParseState *next_state = (RzCFParseState *)rz_list_get_top(stack);
 			if (!state || !next_state) {
-				goto beach;
+				RZ_FREE(xml_buf);
+				rz_list_free(stack);
+				rz_list_free(idlist);
+				free(content);
+
+				return result;
 			}
 
 			if (next_state->phase == RZ_CF_STATE_ROOT) {
@@ -201,14 +261,24 @@ RZ_API RzCFValueDict *rz_cf_value_dict_parse(RzBuffer *file_buf, ut64 offset, ut
 					break;
 				} else {
 					RZ_LOG_ERROR("Root element is not a dict\n");
-					goto beach;
+					RZ_FREE(xml_buf);
+					rz_list_free(stack);
+					rz_list_free(idlist);
+					free(content);
+
+					return result;
 				}
 			}
 
 			if (next_state->phase == RZ_CF_STATE_IN_DICT && state->phase == RZ_CF_STATE_IN_KEY) {
 				if (!content) {
 					RZ_LOG_ERROR("NULL key is not supported");
-					goto beach;
+					RZ_FREE(xml_buf);
+					rz_list_free(stack);
+					rz_list_free(idlist);
+					free(content);
+
+					return result;
 				}
 				next_state->key = content;
 			}
@@ -220,29 +290,54 @@ RZ_API RzCFValueDict *rz_cf_value_dict_parse(RzBuffer *file_buf, ut64 offset, ut
 					value = rz_list_get_n(idlist, (int)state->id);
 					if (!value) {
 						RZ_LOG_ERROR("Missing value for IDREF %" PFMT32u, state->id);
-						goto beach;
+						RZ_FREE(xml_buf);
+						rz_list_free(stack);
+						rz_list_free(idlist);
+						free(content);
+
+						return result;
 					}
 					if (state->phase == RZ_CF_STATE_IN_DICT) {
 						if (rz_list_length(state->dict->pairs) != 0) {
 							RZ_LOG_ERROR("Dict with IDREF already has elements");
-							goto beach;
+							RZ_FREE(xml_buf);
+							rz_list_free(stack);
+							rz_list_free(idlist);
+							free(content);
+
+							return result;
 						}
 						rz_cf_value_dict_free(state->dict);
 						state->dict = NULL;
 					} else if (state->phase == RZ_CF_STATE_IN_ARRAY) {
 						if (rz_list_length(state->dict->pairs) != 0) {
 							RZ_LOG_ERROR("Array with IDREF already has elements");
-							goto beach;
+							RZ_FREE(xml_buf);
+							rz_list_free(stack);
+							rz_list_free(idlist);
+							free(content);
+
+							return result;
 						}
 						rz_cf_value_array_free(state->array);
 						state->array = NULL;
 					} else if (state->phase == RZ_CF_STATE_IN_SCALAR && content) {
 						RZ_LOG_ERROR("Element with IDREF already has content");
-						goto beach;
+						RZ_FREE(xml_buf);
+						rz_list_free(stack);
+						rz_list_free(idlist);
+						free(content);
+
+						return result;
 					}
 					value = rz_cf_value_clone(value);
 					if (!value) {
-						goto beach;
+						RZ_FREE(xml_buf);
+						rz_list_free(stack);
+						rz_list_free(idlist);
+						free(content);
+
+						return result;
 					}
 				} else {
 					switch (state->phase) {
@@ -299,7 +394,12 @@ RZ_API RzCFValueDict *rz_cf_value_dict_parse(RzBuffer *file_buf, ut64 offset, ut
 					} else if (state->phase != RZ_CF_STATE_IN_IGNORE) {
 						RZ_LOG_ERROR("Missing value for key %s\n", next_state->key);
 						rz_cf_value_free((RzCFValue *)value);
-						goto beach;
+						RZ_FREE(xml_buf);
+						rz_list_free(stack);
+						rz_list_free(idlist);
+						free(content);
+
+						return result;
 					}
 				} else if (next_state->phase == RZ_CF_STATE_IN_ARRAY) {
 					if (value) {
@@ -307,7 +407,12 @@ RZ_API RzCFValueDict *rz_cf_value_dict_parse(RzBuffer *file_buf, ut64 offset, ut
 					} else if (state->phase != RZ_CF_STATE_IN_IGNORE) {
 						RZ_LOG_ERROR("Missing value for array\n");
 						rz_cf_value_free((RzCFValue *)value);
-						goto beach;
+						RZ_FREE(xml_buf);
+						rz_list_free(stack);
+						rz_list_free(idlist);
+						free(content);
+
+						return result;
 					}
 				}
 			}
@@ -344,11 +449,21 @@ RZ_API RzCFValueDict *rz_cf_value_dict_parse(RzBuffer *file_buf, ut64 offset, ut
 				}
 				if (state->idstate != RZ_CF_ID_STATE_NONE) {
 					RZ_LOG_ERROR("Cannot have ID and IDREF on the same element");
-					goto beach;
+					RZ_FREE(xml_buf);
+					rz_list_free(stack);
+					rz_list_free(idlist);
+					free(content);
+
+					return result;
 				}
 				RzCFParseState *next_state = rz_cf_parse_state_new(next_phase);
 				if (!next_state) {
-					goto beach;
+					RZ_FREE(xml_buf);
+					rz_list_free(stack);
+					rz_list_free(idlist);
+					free(content);
+
+					return result;
 				}
 				rz_list_push(stack, next_state);
 			}

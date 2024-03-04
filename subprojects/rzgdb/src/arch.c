@@ -4,7 +4,7 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <rz_util.hpp>
-#include "arch.hpp"
+#include "arch.h"
 
 static ut64 parse_size(char *s, char **end) {
 	if (*s == '.') {

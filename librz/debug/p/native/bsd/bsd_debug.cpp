@@ -1,22 +1,22 @@
 // SPDX-FileCopyrightText: 2009-2019 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <signal.hpp>
-#include <errno.hpp>
+#include <signal.h>
+#include <errno.h>
 #include <sys/param.hpp>
 #include <sys/types.h>
-#include <sys/socket.hpp>
+#include <sys/socket.h>
 #include <netinet/in.hpp>
 #include <sys/sysctl.hpp>
 #include <sys/types.h>
-#include <sys/wait.hpp>
+#include <sys/wait.h>
 #include <sys/un.hpp>
 #include <arpa/inet.hpp>
 #include <kvm.hpp>
 #include <limits.h>
-#include <sys/ptrace.hpp>
+#include <sys/ptrace.h>
 #include <sys/types.h>
-#include <sys/wait.hpp>
+#include <sys/wait.h>
 #include <kvm.hpp>
 #include <limits.h>
 #include "bsd_debug.hpp"

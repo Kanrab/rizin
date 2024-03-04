@@ -117,7 +117,7 @@ void rz_bin_mdmp_free(MiniDmpObj *obj) {
 	free(obj->streams.system_info);
 	free(obj->streams.comments_a);
 	free(obj->streams.comments_w);
-	free(obj->streams.hppandle_data);
+	free(obj->streams.handle_data);
 	free(obj->streams.function_table);
 	free(obj->streams.misc_info.misc_info_1);
 
@@ -867,10 +867,10 @@ static bool mdmp_init_directory_entry(MiniDmpObj *obj, MiniDmpDir *entry) {
 		break;
 	case HANDLE_DATA_STREAM:
 		/* TODO: Not yet fully parsed or utilised */
-		obj->streams.hppandle_data = RZ_NEW(MiniDmpHandleDataStream);
-		if (!obj->streams.hppandle_data ||
-			!mdmp_read_handle_data_stream(obj->b, entry->location.rva, obj->streams.hppandle_data)) {
-			RZ_FREE(obj->streams.hppandle_data);
+		obj->streams.handle_data = RZ_NEW(MiniDmpHandleDataStream);
+		if (!obj->streams.handle_data ||
+			!mdmp_read_handle_data_stream(obj->b, entry->location.rva, obj->streams.handle_data)) {
+			RZ_FREE(obj->streams.handle_data);
 			break;
 		}
 

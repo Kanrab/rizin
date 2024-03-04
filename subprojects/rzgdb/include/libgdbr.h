@@ -7,7 +7,7 @@
 
 #include <stdint.h>
 
-#include "arch.hpp"
+#include "arch.h"
 #include "rz_types_base.hpp"
 #include "rz_socket.hpp"
 #include "rz_th.hpp"

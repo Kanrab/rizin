@@ -12,7 +12,7 @@
 #include <stdint.h>
 #include <sys/types.h>
 #include <ctype.h>
-#include <stdarg.hpp>
+#include <stdarg.h>
 #if __UNIX__
 #include <sys/utsname.hpp>
 #endif

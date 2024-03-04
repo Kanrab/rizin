@@ -3,8 +3,8 @@
 
 #include <rz_util.hpp>
 
-#include <signal.hpp>
-#include <stddef.hpp>
+#include <signal.h>
+#include <stddef.h>
 
 static struct {
 	const char *name;

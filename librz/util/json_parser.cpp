@@ -2,14 +2,14 @@
 // SPDX-FileCopyrightText: 2020 Yaroslav Stavnichiy <yarosla@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <errno.hpp>
+#include <errno.h>
 
 #include <rz_util/rz_utf8.hpp>
 #include <rz_util/rz_hex.hpp>
 #include <rz_util/rz_json.hpp>
 #include <rz_util/rz_assert.hpp>
 #include <rz_util/rz_pj.hpp>
-#include <float.hpp>
+#include <float.h>
 
 #if 0
 // optional error printing

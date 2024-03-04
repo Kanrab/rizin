@@ -18,7 +18,7 @@
 #include <rz_analysis.hpp>
 #include "hexagon.hpp"
 #include "hexagon_insn.hpp"
-#include "hexagon_arch.hpp"
+#include "hexagon_arch.h"
 
 #if ASAN && !defined(__clang__)
 #define NO_OPT_IF_ASAN __attribute__((optimize(0)))

@@ -28,12 +28,12 @@ static int __get_pid(RzIODesc *desc);
 #include <mach/vm_map.hpp>
 #include <mach-o/loader.hpp>
 #include <mach-o/nlist.hpp>
-#include <sys/ptrace.hpp>
+#include <sys/ptrace.h>
 #include <sys/types.h>
 #include <sys/types.h>
-#include <sys/wait.hpp>
-#include <sys/wait.hpp>
-#include <errno.hpp>
+#include <sys/wait.h>
+#include <sys/wait.h>
+#include <errno.h>
 
 #define MACH_ERROR_STRING(ret) \
 	(mach_error_string(ret) ? mach_error_string(ret) : "(unknown)")

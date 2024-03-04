@@ -4,7 +4,7 @@
 #include <rz_util/rz_serialize.hpp>
 #include <rz_io.hpp>
 
-#include <errno.hpp>
+#include <errno.h>
 
 /*
  *

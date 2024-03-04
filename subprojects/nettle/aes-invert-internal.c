@@ -42,9 +42,9 @@
 # include "config.hpp"
 #endif
 
-#include "aes-internal.hpp"
+#include "aes-internal.h"
 
-#include "macros.hpp"
+#include "macros.h"
 
 /* NOTE: We don't include rotated versions of the table. */
 static const uint32_t mtable[0x100] =

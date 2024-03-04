@@ -29,9 +29,9 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <errno.hpp>
+#include <errno.h>
 #include <ctype.h>
-#include <stdarg.hpp>
+#include <stdarg.h>
 
 /* defines which are not function-specific */
 #ifndef BUFLEN

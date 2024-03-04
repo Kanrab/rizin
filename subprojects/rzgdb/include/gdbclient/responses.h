@@ -13,8 +13,8 @@
 #define RESPONSES_H
 
 #include <string.h>
-#include "libgdbr.hpp"
-#include "utils.hpp"
+#include "libgdbr.h"
+#include "utils.h"
 
 int handle_g(libgdbr_t *g);
 int handle_G(libgdbr_t *g);

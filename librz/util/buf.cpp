@@ -16,13 +16,13 @@ typedef enum {
 	RZ_BUFFER_REF,
 } RzBufferType;
 
-#include "buf_file.c"
-#include "buf_sparse.c"
-#include "buf_bytes.c"
-#include "buf_mmap.c"
-#include "buf_io_fd.c"
-#include "buf_io.c"
-#include "buf_ref.c"
+#include "buf_file.cpp"
+#include "buf_sparse.cpp"
+#include "buf_bytes.cpp"
+#include "buf_mmap.cpp"
+#include "buf_io_fd.cpp"
+#include "buf_io.cpp"
+#include "buf_ref.cpp"
 
 #define GET_STRING_BUFFER_SIZE 32
 

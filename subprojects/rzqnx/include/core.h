@@ -11,13 +11,13 @@
 #include <stdlib.h>
 #include <string.h>
 #if __UNIX__
-#include <unistd.hpp>
+#include <unistd.h>
 #endif
 #include <stdio.h>
 
-#include "libqnxr.hpp"
-#include "utils.hpp"
-#include "arch.hpp"
+#include "libqnxr.h"
+#include "utils.h"
+#include "arch.h"
 
 #ifndef offsetof
 #define offsetof(TYPE, MEMBER) ((size_t) & ((TYPE *)0)->MEMBER)

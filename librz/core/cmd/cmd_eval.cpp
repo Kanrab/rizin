@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2009-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <stddef.hpp>
+#include <stddef.h>
 #include <stdbool.h>
 #include <rz_core.hpp>
 #include "../core_private.hpp"

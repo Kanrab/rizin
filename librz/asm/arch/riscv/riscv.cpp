@@ -25,7 +25,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <ctype.h>
-#include <stdarg.hpp>
+#include <stdarg.h>
 #include <rz_asm.hpp>
 #include <rz_lib.hpp>
 #include <string.h>

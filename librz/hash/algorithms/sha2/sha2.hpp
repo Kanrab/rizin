@@ -51,7 +51,7 @@ extern "C" {
 
 #ifdef SHA2_USE_INTTYPES_H
 
-#include <inttypes.hpp>
+#include <inttypes.h>
 
 #endif /* SHA2_USE_INTTYPES_H */
 
@@ -68,7 +68,7 @@ extern "C" {
 
 /*** SHA-256/384/512 Context Structures *******************************/
 /* NOTE: If your architecture does not define either u_intXX_t types or
- * uintXX_t (from inttypes.hpp), you may need to define things by hand
+ * uintXX_t (from inttypes.h), you may need to define things by hand
  * for your system:
  */
 #ifndef u_int8_t
@@ -82,9 +82,9 @@ extern "C" {
  * uintXX_t types defined by very recent ANSI C standards and included
  * in the file:
  *
- *   #include <inttypes.hpp>
+ *   #include <inttypes.h>
  *
- * If you choose to use <inttypes.hpp> then please define:
+ * If you choose to use <inttypes.h> then please define:
  *
  *   #define SHA2_USE_INTTYPES_H
  *

@@ -7,7 +7,7 @@
 #include <limits.h>
 #include <sys/stat.h>
 #if HAVE_HEADER_SYS_MMAN_H
-#include <sys/mman.hpp>
+#include <sys/mman.h>
 #endif
 #include "sdb_private.hpp"
 

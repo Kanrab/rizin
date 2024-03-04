@@ -25,7 +25,7 @@
 #include <sys/types.h>
 #else
 #if DEBUGGER && HAVE_PTRACE
-#include <sys/ptrace.hpp>
+#include <sys/ptrace.h>
 #endif
 #endif
 

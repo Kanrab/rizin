@@ -45,7 +45,7 @@
 /* This file implements and uses deprecated functions */
 #define _NETTLE_ATTRIBUTE_DEPRECATED
 
-#include "aes.hpp"
+#include "aes.h"
 
 void
 aes_invert_key(struct aes_ctx *dst,

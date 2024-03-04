@@ -66,7 +66,7 @@ RZ_API RZ_OWN RzASN1String *rz_asn1_stringify_utctime(RZ_NULLABLE const ut8 *buf
 		return NULL;
 	}
 	const int str_sz = 24;
-	char *str = malloc(str_sz);
+	char *str = static_cast<char *>(malloc(str_sz));
 	if (!str) {
 		return NULL;
 	}
@@ -115,7 +115,7 @@ RZ_API RZ_OWN RzASN1String *rz_asn1_stringify_time(RZ_NULLABLE const ut8 *buffer
 		return NULL;
 	}
 	const int str_sz = 24;
-	char *str = malloc(str_sz);
+	char *str = static_cast<char *>(malloc(str_sz));
 	if (!str) {
 		return NULL;
 	}

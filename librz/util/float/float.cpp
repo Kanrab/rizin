@@ -16,10 +16,11 @@
  * 	exponent value range : -16382 ~ 16383
  **/
 
-#include "float_internal.c"
+#include "float_internal.cpp"
+#include <cfenv>
 #include <rz_userconf.h>
 #include <math.h>
-#include <fenv.hpp>
+#include <fenv.h>
 
 /**
  * \defgroup Generate Nan and infinite for float/double/long double

@@ -10,10 +10,10 @@
 
 #if DEBUGGER && (__linux__ || __BSD__)
 
-#include <sys/ptrace.hpp>
+#include <sys/ptrace.h>
 #include <sys/types.h>
-#include <sys/wait.hpp>
-#include <errno.hpp>
+#include <sys/wait.h>
+#include <errno.h>
 
 typedef struct {
 	int pid;

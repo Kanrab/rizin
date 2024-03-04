@@ -660,7 +660,7 @@ RZ_API ut64 rz_io_seek(RzIO *io, ut64 offset, int whence) {
 
 #if USE_PTRACE_WRAP
 #include <ptrace_wrap.hpp>
-#include <errno.hpp>
+#include <errno.h>
 
 static ptrace_wrap_instance *io_ptrace_wrap_instance(RzIO *io) {
 	if (!io->ptrace_wrap) {

@@ -380,7 +380,7 @@ static void anop_esil(RzAnalysis *a, RzAnalysisOp *op, ut64 addr, const ut8 *buf
 	const char *si = (a->bits == 16) ? "si" : (a->bits == 32) ? "esi"
 								  : "rsi";
 	struct Getarg gop = {
-		.hppandle = *handle,
+		.handle = *handle,
 		.insn = insn,
 		.bits = a->bits
 	};
@@ -2204,7 +2204,7 @@ static void set_opdir(RzAnalysisOp *op, cs_insn *insn) {
 
 static void anop(RzAnalysis *a, RzAnalysisOp *op, ut64 addr, const ut8 *buf, int len, csh *handle, cs_insn *insn) {
 	struct Getarg gop = {
-		.hppandle = *handle,
+		.handle = *handle,
 		.insn = insn,
 		.bits = a->bits
 	};
@@ -2875,7 +2875,7 @@ static void anop(RzAnalysis *a, RzAnalysisOp *op, ut64 addr, const ut8 *buf, int
 			break;
 		case X86_OP_REG: {
 			op->cycles = CYCLE_JMP + CYCLE_REG;
-			op->reg = cs_reg_name(gop.hppandle, INSOP(0).reg);
+			op->reg = cs_reg_name(gop.handle, INSOP(0).reg);
 			op->type = RZ_ANALYSIS_OP_TYPE_RJMP;
 			op->ptr = UT64_MAX;
 		} break;

@@ -4,8 +4,8 @@
 
 #include <rz_core.hpp>
 #include <rz_debug.hpp>
-#include <libgdbr.hpp>
-#include <gdbclient/commands.hpp>
+#include <libgdbr.h>
+#include <gdbclient/commands.h>
 
 typedef struct {
 	libgdbr_t desc;

@@ -9,10 +9,10 @@
 #ifdef _MSC_VER
 typedef int pid_t;
 #else
-#include <unistd.hpp>
+#include <unistd.h>
 #endif
 
-#include "arch.hpp"
+#include "arch.h"
 #include "rz_types_base.hpp"
 #include "rz_socket.hpp"
 #include "dsmsgs.hpp"

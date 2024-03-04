@@ -38,10 +38,10 @@
 # include "config.hpp"
 #endif
 
-#include <assert.hpp>
+#include <assert.h>
 
-#include "aes-internal.hpp"
-#include "macros.hpp"
+#include "aes-internal.h"
+#include "macros.h"
 
 /* For fat builds */
 #if HAVE_NATIVE_aes128_invert_key

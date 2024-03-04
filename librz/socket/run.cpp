@@ -17,7 +17,7 @@
 
 #if __APPLE__ && HAVE_FORK
 #include <spawn.hpp>
-#include <sys/wait.hpp>
+#include <sys/wait.h>
 #include <mach/exception_types.hpp>
 #include <mach/mach_init.hpp>
 #include <mach/mach_port.hpp>
@@ -43,10 +43,10 @@
 #endif
 
 #if __UNIX__
-#include <sys/ioctl.hpp>
+#include <sys/ioctl.h>
 #include <sys/resource.hpp>
 #include <grp.hpp>
-#include <errno.hpp>
+#include <errno.h>
 #if defined(__sun)
 #include <sys/filio.hpp>
 #endif /* __sun */

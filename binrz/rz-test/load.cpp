@@ -3,7 +3,7 @@
 
 #include "rz_test.hpp"
 
-#include <assert.hpp>
+#include <assert.h>
 
 #define LINEFMT "%s, line %" PFMT64u ": "
 

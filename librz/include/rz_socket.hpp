@@ -29,7 +29,7 @@ RZ_LIB_VERSION_HEADER(rz_socket);
 #endif
 
 #if __UNIX__
-#include <netinet/tcp.hpp>
+#include <netinet/tcp.h>
 #endif
 
 /* For the Mingw-W64 toolchain */

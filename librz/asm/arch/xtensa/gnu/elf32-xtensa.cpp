@@ -21,7 +21,7 @@
 #include "sysdep.hpp"
 #include "disas-asm.hpp"
 #include <stdio.h>
-#include <stdarg.hpp>
+#include <stdarg.h>
 #include <string.h>
 
 #include "bfdlink.hpp"

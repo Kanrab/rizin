@@ -393,7 +393,7 @@ class CmdDesc:
         self.subcommands = None
         self.exec_cd = None
         self.modes = c.pop("modes", None)
-        self.hppandler = c.pop("handler", None)
+        self.handler = c.pop("handler", None)
         self.default_mode = c.pop("default_mode", None)
         # RzCmdDescHelp fields
         self.summary = strip(c.pop("summary"))
@@ -483,7 +483,7 @@ class CmdDesc:
             CD_TYPE_ARGV_STATE,
         ]:
             return None
-        return get_handler_cname(self.type, self.hppandler, self.cname)
+        return get_handler_cname(self.type, self.handler, self.cname)
 
     @classmethod
     def get_arg_cname(cls, cd):

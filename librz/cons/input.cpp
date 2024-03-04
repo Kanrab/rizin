@@ -4,7 +4,7 @@
 #include <rz_cons.hpp>
 #include <string.h>
 #if __UNIX__
-#include <errno.hpp>
+#include <errno.h>
 #elif __WINDOWS__
 #include <rz_windows.hpp>
 #endif

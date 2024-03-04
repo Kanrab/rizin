@@ -7,7 +7,7 @@
 #include <rz_asm.hpp>
 #include <rz_lib.hpp>
 
-#include <stdarg.hpp>
+#include <stdarg.h>
 #include <stdio.h>
 
 #include "rsp_idec.hpp"

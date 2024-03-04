@@ -78,7 +78,7 @@ extern "C" {
 /* ****************************
 *  Definitions
 ******************************/
-#include <stddef.hpp>   /* size_t */
+#include <stddef.h>   /* size_t */
 typedef enum { XXH_OK=0, XXH_ERROR } XXH_errorcode;
 
 

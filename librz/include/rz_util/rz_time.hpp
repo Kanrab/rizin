@@ -2,7 +2,7 @@
 #define RZ_TIME_H
 
 #include <rz_types.hpp>
-#include <time.hpp>
+#include <time.h>
 
 #define RZ_NSEC_PER_SEC  1000000000ULL
 #define RZ_NSEC_PER_MSEC 1000000ULL

@@ -6,7 +6,7 @@
 #include <rz_socket.hpp>
 #include <rz_util.hpp>
 #define IRAPI static inline
-#include <libqnxr.hpp>
+#include <libqnxr.h>
 
 typedef struct {
 	libqnxr_t desc;

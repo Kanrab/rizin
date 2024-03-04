@@ -317,11 +317,11 @@ static inline void rz_write_at_be64(void *dest, ut64 val, size_t offset) {
 static inline ut128 rz_read_be128(const void *src) {
 	ut128 val;
 	if (!src) {
-		val.hppigh = UT64_MAX;
+		val.High = UT64_MAX;
 		val.Low = UT64_MAX;
 		return val;
 	}
-	val.hppigh = rz_read_be64(src);
+	val.High = rz_read_be64(src);
 	val.Low = rz_read_at_be64(src, sizeof(ut64));
 	return val;
 }
@@ -337,7 +337,7 @@ static inline ut128 rz_read_be128(const void *src) {
 static inline ut128 rz_read_at_be128(const void *src, size_t offset) {
 	if (!src) {
 		ut128 val;
-		val.hppigh = UT64_MAX;
+		val.High = UT64_MAX;
 		val.Low = UT64_MAX;
 		return val;
 	}
@@ -351,7 +351,7 @@ static inline ut128 rz_read_at_be128(const void *src, size_t offset) {
  * \param val The written 128-bit value.
  */
 static inline void rz_write_be128(void *dest, ut128 val) {
-	rz_write_be64(dest, val.hppigh);
+	rz_write_be64(dest, val.High);
 	rz_write_at_be64(dest, val.Low, sizeof(ut64));
 }
 
@@ -740,11 +740,11 @@ static inline void rz_write_at_le64(void *dest, ut64 val, size_t offset) {
 static inline ut128 rz_read_le128(const void *src) {
 	ut128 val;
 	if (!src) {
-		val.hppigh = UT64_MAX;
+		val.High = UT64_MAX;
 		val.Low = UT64_MAX;
 		return val;
 	}
-	val.hppigh = rz_read_at_le64(src, sizeof(ut64));
+	val.High = rz_read_at_le64(src, sizeof(ut64));
 	val.Low = rz_read_le64(src);
 	return val;
 }
@@ -760,7 +760,7 @@ static inline ut128 rz_read_le128(const void *src) {
 static inline ut128 rz_read_at_le128(const void *src, size_t offset) {
 	if (!src) {
 		ut128 val;
-		val.hppigh = UT64_MAX;
+		val.High = UT64_MAX;
 		val.Low = UT64_MAX;
 		return val;
 	}
@@ -775,7 +775,7 @@ static inline ut128 rz_read_at_le128(const void *src, size_t offset) {
  */
 static inline void rz_write_le128(void *dest, ut128 val) {
 	rz_write_le64(dest, val.Low);
-	rz_write_at_le64(dest, val.hppigh, sizeof(ut64));
+	rz_write_at_le64(dest, val.High, sizeof(ut64));
 }
 
 /**

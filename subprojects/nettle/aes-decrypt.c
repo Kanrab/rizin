@@ -40,7 +40,7 @@
 
 #include <stdlib.h>
 
-#include "aes-internal.hpp"
+#include "aes-internal.h"
 
 void
 aes_decrypt(const struct aes_ctx *ctx,

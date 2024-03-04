@@ -6,7 +6,7 @@
 #include <rz_socket.hpp>
 #include <rz_types.hpp>
 #include <rz_util.hpp>
-#include <errno.hpp>
+#include <errno.h>
 
 #if EMSCRIPTEN
 #define NETWORK_DISABLED 1

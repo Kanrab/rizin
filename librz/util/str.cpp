@@ -13,8 +13,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include <wchar.hpp>
-#include <stdarg.hpp>
+#include <wchar.h>
+#include <stdarg.h>
 #include <rz_util/rz_base64.hpp>
 #include <rz_util/rz_utf8.hpp>
 #include <rz_util/rz_utf16.hpp>

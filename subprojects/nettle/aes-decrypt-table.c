@@ -40,7 +40,7 @@
 
 #include <stdlib.h>
 
-#include "aes-internal.hpp"
+#include "aes-internal.h"
 
 const struct aes_table
 _nettle_aes_decrypt_table =

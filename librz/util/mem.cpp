@@ -3,7 +3,7 @@
 
 #include <rz_util.hpp>
 #if __UNIX__
-#include <sys/mman.hpp>
+#include <sys/mman.h>
 #elif __WINDOWS__
 #include <rz_windows.hpp>
 #endif

@@ -45,7 +45,7 @@
 #define HAVE_MAJOR
 #endif
 #ifdef MAJOR_IN_SYSMACROS
-#include <sys/sysmacros.hpp>
+#include <sys/sysmacros.h>
 #define HAVE_MAJOR
 #endif
 #ifdef major /* Might be defined in sys/types.h.  */

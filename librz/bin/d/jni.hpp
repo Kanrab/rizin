@@ -30,14 +30,14 @@
 #if __RZTINYC__
 typedef char *va_list;
 #else
-#include <stdarg.hpp>
+#include <stdarg.h>
 #endif
 
 /*
  * Primitive types that match up with Java equivalents.
  */
 #ifdef HAVE_INTTYPES_H
-#include <inttypes.hpp> /* C99 */
+#include <inttypes.h> /* C99 */
 typedef uint8_t jboolean; /* unsigned 8 bits */
 typedef int8_t jbyte; /* signed 8 bits */
 typedef uint16_t jchar; /* unsigned 16 bits */

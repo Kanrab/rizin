@@ -6,7 +6,7 @@
 
 #include <rz_types.hpp>
 #include <rz_asm.hpp>
-#include "librz/asm/arch/luac/lua_arch.hpp"
+#include "librz/asm/arch/luac/lua_arch.h"
 
 /*===========================================================================
   We assume that instructions are unsigned 32-bit integers.

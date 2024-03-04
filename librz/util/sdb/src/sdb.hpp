@@ -33,7 +33,7 @@ extern __attribute__((dllimport)) void __cdecl _aligned_free(void *memblock);
 extern char *strdup(const char *);
 #else
 #include <process.hpp>
-#include <malloc.hpp> // for _aligned_malloc
+#include <malloc.h> // for _aligned_malloc
 #endif
 
 // #define SDB_MODE 0

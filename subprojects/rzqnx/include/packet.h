@@ -8,7 +8,7 @@
 #include <stdint.h>
 #include <string.h>
 #include <stdlib.h>
-#include "libqnxr.hpp"
+#include "libqnxr.h"
 #include <stdio.h>
 #if __WINDOWS__
 #include <windows.hpp>
@@ -16,7 +16,7 @@
 #include <winsock.hpp>
 #endif
 #else
-#include <unistd.hpp>
+#include <unistd.h>
 #endif
 
 int qnxr_send_nak(libqnxr_t *instance);

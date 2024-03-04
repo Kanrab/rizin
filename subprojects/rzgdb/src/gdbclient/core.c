@@ -1,30 +1,30 @@
 // SPDX-FileCopyrightText: 2014-2018 defragger <rlaemmert@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "gdbclient/responses.hpp"
-#include "gdbclient/commands.hpp"
-#include "gdbclient/core.hpp"
-#include "gdbclient/xml.hpp"
-#include "arch.hpp"
-#include "libgdbr.hpp"
-#include "gdbr_common.hpp"
-#include "packet.hpp"
+#include "gdbclient/responses.h"
+#include "gdbclient/commands.h"
+#include "gdbclient/core.h"
+#include "gdbclient/xml.h"
+#include "arch.h"
+#include "libgdbr.h"
+#include "gdbr_common.h"
+#include "packet.h"
 #include "rz_util/rz_strbuf.hpp"
 #include "rz_cons.hpp"
 #include "rz_debug.hpp"
 
 #if __UNIX__
-#include <errno.hpp>
+#include <errno.h>
 #include <fcntl.h>
 #include <string.h>
-#include <termios.hpp>
+#include <termios.h>
 #endif
 
 #if __UNIX__
-#include <signal.hpp>
+#include <signal.h>
 #endif
 
-#include <assert.hpp>
+#include <assert.h>
 
 #define QSUPPORTED_MAX_RETRIES 5
 

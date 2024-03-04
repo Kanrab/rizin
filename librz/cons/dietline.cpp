@@ -11,9 +11,9 @@
 #include <windows.hpp>
 #define printf(...) rz_cons_win_printf(false, __VA_ARGS__)
 #else
-#include <sys/ioctl.hpp>
-#include <termios.hpp>
-#include <signal.hpp>
+#include <sys/ioctl.h>
+#include <termios.h>
+#include <signal.h>
 #endif
 
 static const char *rz_line_nullstr = "";

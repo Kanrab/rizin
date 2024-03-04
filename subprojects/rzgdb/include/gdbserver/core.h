@@ -5,7 +5,7 @@
 #define GDB_SERVER_CORE_H
 
 #include <rz_socket.hpp>
-#include "../libgdbr.hpp"
+#include "../libgdbr.h"
 
 typedef int (*gdbr_server_cmd_cb)(libgdbr_t *, void *, const char *, char *, size_t);
 

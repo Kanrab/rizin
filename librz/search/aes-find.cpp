@@ -13,7 +13,7 @@
  */
 
 #include <rz_search.hpp>
-#include <rz_crypto/rz_aes.hpp>
+#include <rz_crypto/rz_aes.h>
 
 #define AES128_SEARCH_LENGTH 24
 #define AES192_SEARCH_LENGTH 32

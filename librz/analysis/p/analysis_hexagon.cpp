@@ -16,7 +16,7 @@
 #include <rz_lib.hpp>
 #include "hexagon.hpp"
 #include "hexagon_insn.hpp"
-#include "hexagon_arch.hpp"
+#include "hexagon_arch.h"
 
 RZ_API int hexagon_v6_op(RzAnalysis *analysis, RzAnalysisOp *op, ut64 addr, const ut8 *buf, int len, RzAnalysisOpMask mask) {
 	rz_return_val_if_fail(analysis && op && buf, -1);

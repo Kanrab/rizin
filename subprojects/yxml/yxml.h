@@ -27,7 +27,7 @@
 #define YXML_H
 
 #include <stdint.h>
-#include <stddef.hpp>
+#include <stddef.h>
 
 #if defined(_MSC_VER) && !defined(__cplusplus) && !defined(inline)
 #define inline __inline
@@ -37,21 +37,21 @@
  * in the yxml git repository, or online at http://dev.yorhel.nl/yxml/man */
 
 typedef enum {
-	YXML_EEOF        = -5, /* Unexpected EOF                             */
-	YXML_EREF        = -4, /* Invalid character or entity reference (&whatever;) */
-	YXML_ECLOSE      = -3, /* Close tag does not match open tag (<Tag> .. </OtherTag>) */
-	YXML_ESTACK      = -2, /* Stack overflow (too deeply nested tags or too long element/attribute name) */
-	YXML_ESYN        = -1, /* Syntax error (unexpected byte)             */
-	YXML_OK          =  0, /* Character consumed, no new token present   */
-	YXML_ELEMSTART   =  1, /* Start of an element:   '<Tag ..'           */
-	YXML_CONTENT     =  2, /* Element content                            */
-	YXML_ELEMEND     =  3, /* End of an element:     '.. />' or '</Tag>' */
-	YXML_ATTRSTART   =  4, /* Attribute:             'Name=..'           */
-	YXML_ATTRVAL     =  5, /* Attribute value                            */
-	YXML_ATTREND     =  6, /* End of attribute       '.."'               */
-	YXML_PISTART     =  7, /* Start of a processing instruction          */
-	YXML_PICONTENT   =  8, /* Content of a PI                            */
-	YXML_PIEND       =  9  /* End of a processing instruction            */
+	YXML_EEOF = -5, /* Unexpected EOF                             */
+	YXML_EREF = -4, /* Invalid character or entity reference (&whatever;) */
+	YXML_ECLOSE = -3, /* Close tag does not match open tag (<Tag> .. </OtherTag>) */
+	YXML_ESTACK = -2, /* Stack overflow (too deeply nested tags or too long element/attribute name) */
+	YXML_ESYN = -1, /* Syntax error (unexpected byte)             */
+	YXML_OK = 0, /* Character consumed, no new token present   */
+	YXML_ELEMSTART = 1, /* Start of an element:   '<Tag ..'           */
+	YXML_CONTENT = 2, /* Element content                            */
+	YXML_ELEMEND = 3, /* End of an element:     '.. />' or '</Tag>' */
+	YXML_ATTRSTART = 4, /* Attribute:             'Name=..'           */
+	YXML_ATTRVAL = 5, /* Attribute value                            */
+	YXML_ATTREND = 6, /* End of attribute       '.."'               */
+	YXML_PISTART = 7, /* Start of a processing instruction          */
+	YXML_PICONTENT = 8, /* Content of a PI                            */
+	YXML_PIEND = 9 /* End of a processing instruction            */
 } yxml_ret_t;
 
 /* When, exactly, are tokens returned?
@@ -74,7 +74,6 @@ typedef enum {
  * </TagName
  *   '>' ELEMEND
  */
-
 
 typedef struct {
 	/* PUBLIC (read-only) */
@@ -114,7 +113,6 @@ typedef struct {
 	uint64_t total;
 	uint32_t line;
 
-
 	/* PRIVATE */
 	int state;
 	unsigned char *stack; /* Stack of element names + attribute/PI name, separated by \0. Also starts with a \0. */
@@ -126,16 +124,13 @@ typedef struct {
 	unsigned char *string;
 } yxml_t;
 
-
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 void yxml_init(yxml_t *, void *, size_t);
 
-
 yxml_ret_t yxml_parse(yxml_t *, int);
-
 
 /* May be called after the last character has been given to yxml_parse().
  * Returns YXML_OK if the XML document is valid, YXML_EEOF otherwise.  Using
@@ -149,7 +144,6 @@ yxml_ret_t yxml_eof(yxml_t *);
 }
 #endif
 
-
 /* Returns the length of the element name (x->elem), attribute name (x->attr),
  * or PI name (x->pi). This function should ONLY be used directly after the
  * YXML_ELEMSTART, YXML_ATTRSTART or YXML_PISTART (respectively) tokens have
@@ -157,7 +151,7 @@ yxml_ret_t yxml_eof(yxml_t *);
  * the correct results. This function should also NOT be used on strings other
  * than x->elem, x->attr or x->pi. */
 static inline size_t yxml_symlen(yxml_t *x, const char *s) {
-	return (x->stack + x->stacklen) - (const unsigned char*)s;
+	return (x->stack + x->stacklen) - (const unsigned char *)s;
 }
 
 #endif

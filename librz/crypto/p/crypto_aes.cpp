@@ -4,7 +4,7 @@
 #include <rz_lib.hpp>
 #include <rz_crypto.hpp>
 #include <rz_util.hpp>
-#include <aes.hpp>
+#include <aes.h>
 
 static void encryptaes(struct aes_ctx *ctx, ut8 *in, ut8 *out) {
 	switch (ctx->key_size) {

@@ -7,14 +7,14 @@
 #include <rz_reg.hpp>
 #include <rz_lib.hpp>
 #include <rz_analysis.hpp>
-#include <signal.hpp>
+#include <signal.h>
 #include <sys/uio.hpp>
-#include <errno.hpp>
+#include <errno.h>
 #include "linux_debug.hpp"
 #include "../procfs.hpp"
 
 #include <sys/syscall.hpp>
-#include <unistd.hpp>
+#include <unistd.h>
 #include <elf.hpp>
 
 #include "linux_ptrace.hpp"

@@ -6,7 +6,7 @@
 #define LOG_OUTPUTBUF_SIZE 512
 
 #include <rz_core.hpp>
-#include <stdarg.hpp>
+#include <stdarg.h>
 
 // TODO: Use thread-local storage to make these variables thread-safe
 static RzList *log_cbs = NULL; // Functions to call when outputting log string

@@ -32,7 +32,7 @@ void macosx_debug_regions(RzIO *io, task_t task, mach_vm_address_t address, int 
 #include <sys/sysctl.hpp>
 #include <kvm.hpp>
 #endif
-#include <errno.hpp>
+#include <errno.h>
 bool bsd_proc_vmmaps(RzIO *io, int pid);
 #endif
 #ifdef __HAIKU__

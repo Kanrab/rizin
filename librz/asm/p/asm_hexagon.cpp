@@ -17,7 +17,7 @@
 #include <rz_vector.hpp>
 #include "hexagon.hpp"
 #include "hexagon_insn.hpp"
-#include "hexagon_arch.hpp"
+#include "hexagon_arch.h"
 
 static RZ_OWN RzPVector /*<RzAsmTokenPattern *>*/ *get_token_patterns(HexState *state) {
 	RzPVector *pvec = state->token_patterns;

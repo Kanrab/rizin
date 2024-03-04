@@ -4,7 +4,7 @@
 #include <rz_lib.hpp>
 #include <rz_crypto.hpp>
 #include <rz_util.hpp>
-#include <aes.hpp>
+#include <aes.h>
 
 typedef struct aes_cbc_context_t {
 	struct aes_ctx st;

@@ -31,13 +31,13 @@
 #if !USE_LIB_MAGIC
 
 #include "file.hpp"
-#include <stdarg.hpp>
+#include <stdarg.h>
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
 #include <wctype.h>
 #if defined(HAVE_WCHAR_H)
-#include <wchar.hpp>
+#include <wchar.h>
 #endif
 
 // copypasta to fix an OPENBSDBUG

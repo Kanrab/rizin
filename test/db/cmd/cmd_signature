@@ -185,7 +185,7 @@ EXPECT=<<EOF
 0x00418090 106 flirt.IO_unsave_markers
 0x004234b0 65 flirt.strdup
 0x0042b6b0 1022 flirt.memcmp_sse2
-0x00447cf0 1568 flirt.hppandle_amd
+0x00447cf0 1568 flirt.handle_amd
 0x00448310 37 flirt.cache_sysconf
 0x00448380 9 flirt.wmemcpy
 0x004491d0 80 flirt.get_child_max

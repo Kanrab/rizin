@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2009-2016 Alexandru Caciulescu <alex.darredevil@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <stddef.hpp>
+#include <stddef.h>
 
 #include "rz_core.hpp"
 #include "rz_io.hpp"

@@ -5,7 +5,7 @@
 
 #if __x86_64__ || __i386__ || __arm__ || __arm64__
 #include <sys/uio.hpp>
-#include <sys/ptrace.hpp>
+#include <sys/ptrace.h>
 #include <asm/ptrace.hpp>
 #include "linux_coredump.hpp"
 #include "linux_ptrace.hpp"

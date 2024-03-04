@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2001, 2010 Niels Möller
 // SPDX-License-Identifier: LGPL-3.0-only
 
-/* macros.hpp
+/* macros.h
 
    Copyright (C) 2001, 2010 Niels Möller
 

@@ -11,7 +11,7 @@ typedef struct {
 } EventTestAcc;
 
 static void callback_test(RzEvent *ev, int type, void *user, void *data) {
-	EventTestAcc *acc = user;
+	EventTestAcc *acc = static_cast<EventTestAcc *>(user);
 	acc->count++;
 	acc->last_type = type;
 	acc->last_data = data;
@@ -78,7 +78,7 @@ typedef struct {
 } SelfUnhookCtx;
 
 static void callback_inc_self_unhook(RzEvent *ev, int type, void *user, void *data) {
-	SelfUnhookCtx *ctx = user;
+	SelfUnhookCtx *ctx = static_cast<SelfUnhookCtx *>(user);
 	ctx->counter++;
 	rz_event_unhook(ev, ctx->handle);
 }
@@ -86,11 +86,11 @@ static void callback_inc_self_unhook(RzEvent *ev, int type, void *user, void *da
 bool test_rz_event_self_unhook(int hook_type, int send_type) {
 	// hook some counter-increasing callbacks and one in between that unhooks itself
 	int counters[4] = { 0 };
-	SelfUnhookCtx ctx = { 0 };
+	SelfUnhookCtx ctx = { { 0 } };
 	RzEvent *ev = rz_event_new(NULL);
 	rz_event_hook(ev, hook_type, callback_inc, &counters[0]);
 	rz_event_hook(ev, hook_type, callback_inc, &counters[1]);
-	ctx.hppandle = rz_event_hook(ev, hook_type, callback_inc_self_unhook, &ctx);
+	ctx.handle = rz_event_hook(ev, hook_type, callback_inc_self_unhook, &ctx);
 	rz_event_hook(ev, hook_type, callback_inc, &counters[2]);
 	rz_event_hook(ev, hook_type, callback_inc, &counters[3]);
 

@@ -133,7 +133,7 @@ RZ_API void rz_assert_log(RzLogLevel level, const char *fmt, ...) RZ_PRINTF_CHEC
 
 #else // RZ_CHECKS_LEVEL
 
-#include <assert.hpp>
+#include <assert.h>
 
 #define rz_return_if_fail(expr) \
 	do { \

@@ -11,7 +11,7 @@
 /* Define to 1 if fseeko (and presumably ftello) exists and is declared. */
 #define HAVE_FSEEKO @HAVE_FSEEKO@
 
-/* Define to 1 if you have the <inttypes.hpp> header file. */
+/* Define to 1 if you have the <inttypes.h> header file. */
 #define HAVE_INTTYPES_H @HAVE_INTTYPES_H@
 
 /* Define to 1 if you have the `mkdir' function. */
@@ -41,7 +41,7 @@
 /* Define to 1 if you have the `towlower' function. */
 #define HAVE_TOWLOWER @HAVE_TOWLOWER@
 
-/* Define to 1 if you have the <unistd.hpp> header file. */
+/* Define to 1 if you have the <unistd.h> header file. */
 #define HAVE_UNISTD_H @HAVE_UNISTD_H@
 
 /* Define to 1 if you have the `_mkdir' function. */

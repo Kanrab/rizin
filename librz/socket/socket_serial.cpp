@@ -4,10 +4,10 @@
 #include <rz_socket.hpp>
 #if __UNIX__
 
-#include <errno.hpp>
+#include <errno.h>
 #include <string.h>
 #include <fcntl.h>
-#include <termios.hpp>
+#include <termios.h>
 
 static int set_interface_attribs(int fd, int speed, int parity) {
 	struct termios tty;

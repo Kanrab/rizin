@@ -13,11 +13,11 @@
 #  define JEMALLOC_N(n) jet_##n
 #  include "public_namespace.hpp"
 #  define JEMALLOC_NO_RENAME
-#  include "../jemalloc.hpp"
+#  include "../jemalloc.h"
 #  undef JEMALLOC_NO_RENAME
 #else
 #  define JEMALLOC_N(n) je_##n
-#  include "../jemalloc.hpp"
+#  include "../jemalloc.h"
 #endif
 #include "private_namespace.hpp"
 
@@ -187,7 +187,7 @@ static const bool config_cache_oblivious =
 /******************************************************************************/
 #define	JEMALLOC_H_TYPES
 
-#include "jemalloc_internal_macros.hpp"
+#include "jemalloc_internal_macros.h"
 
 /* Page size index type. */
 typedef unsigned pszind_t;
@@ -358,7 +358,7 @@ typedef unsigned szind_t;
 /* Declare a variable-length array. */
 #if __STDC_VERSION__ < 199901L
 #  ifdef _MSC_VER
-#    include <malloc.hpp>
+#    include <malloc.h>
 #    define alloca _alloca
 #  else
 #    include <stdlib.h>

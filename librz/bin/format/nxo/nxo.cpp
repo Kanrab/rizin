@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <assert.hpp>
+#include <assert.h>
 #include <rz_types.hpp>
 #include <rz_util.hpp>
 #include <rz_lib.hpp>

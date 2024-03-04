@@ -4,9 +4,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <stdarg.hpp>
+#include <stdarg.h>
 #include <stdbool.h>
-#include <errno.hpp>
+#include <errno.h>
 
 #ifndef VERSION
 #define VERSION "1.2.0"

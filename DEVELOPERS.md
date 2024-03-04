@@ -171,7 +171,7 @@ rz_core_wrap.cxx:32103:61: error: assigning to 'RzDebugReasonType' from incompat
 3 warnings and 2 errors generated.
 ````
 
-* Do not use `assert.hpp`, use `rz_util/rz_assert.hpp` instead.
+* Do not use `assert.h`, use `rz_util/rz_assert.hpp` instead.
 
 * You can use `export RZ_DEBUG_ASSERT=1` to set a breakpoint when hitting an assert.
 

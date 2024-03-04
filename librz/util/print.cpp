@@ -18,7 +18,7 @@
 
 #define DFLT_ROWS 16
 
-static const char hex[16] = "0123456789ABCDEF";
+static const char hex[17] = "0123456789ABCDEF";
 
 static int nullprinter(const char *a, ...) {
 	return 0;
@@ -1415,7 +1415,7 @@ RZ_API RZ_OWN RzStrBuf *rz_print_colorize_asm_str(RZ_BORROW RzPrint *p, const Rz
 	// Black white asm string.
 	char *bw_str = rz_strbuf_get(toks->str);
 	rz_return_val_if_fail(bw_str, NULL);
-	char *reset = p->colorize_opts.reset_bg ? Color_RESET_NOBG : Color_RESET;
+	const char *reset = p->colorize_opts.reset_bg ? Color_RESET_NOBG : Color_RESET;
 	// mnemonic color
 	const char *mnem_col = rz_print_color_op_type(p, toks->op_type);
 
@@ -1437,7 +1437,7 @@ RZ_API RZ_OWN RzStrBuf *rz_print_colorize_asm_str(RZ_BORROW RzPrint *p, const Rz
 			color = mnem_col;
 			break;
 		case RZ_ASM_TOKEN_NUMBER:
-			if (tok->val.number == p->colorize_opts.hppl_addr && tok->val.number != 0) {
+			if (tok->val.number == p->colorize_opts.hl_addr && tok->val.number != 0) {
 				color = palette.func_var_type;
 			} else {
 				color = palette.num;

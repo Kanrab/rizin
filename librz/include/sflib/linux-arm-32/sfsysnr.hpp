@@ -27,7 +27,7 @@
 /* $Id$ */
 
 /*
- * From linux/include/asm-arm/unistd.hpp
+ * From linux/include/asm-arm/unistd.h
  * Copyright (C) 2001-2002 Russell King
  */
 

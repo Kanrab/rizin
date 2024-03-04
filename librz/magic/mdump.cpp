@@ -35,11 +35,11 @@
 
 #include "file.hpp"
 #include <stdio.h>
-#include <errno.hpp>
+#include <errno.h>
 #include <string.h>
-#include <stdarg.hpp>
+#include <stdarg.h>
 #include <stdlib.h>
-#include <time.hpp>
+#include <time.h>
 
 #define SZOF(a) (sizeof(a) / sizeof(a[0]))
 

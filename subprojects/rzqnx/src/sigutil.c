@@ -2,10 +2,10 @@
 // SPDX-FileCopyrightText: 2016 FSF Inc
 // SPDX-License-Identifier: GPL-2.0-only
 
-#include <signal.hpp>
+#include <signal.h>
 #include "gdb_signals.hpp"
 #include "sigutil.hpp"
-#include "utils.hpp"
+#include "utils.h"
 
 #define NTO_SIGHUP    1 /* hangup */
 #define NTO_SIGINT    2 /* interrupt */

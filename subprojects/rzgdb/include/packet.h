@@ -8,7 +8,7 @@
 #include <stdint.h>
 #include <string.h>
 #include <stdlib.h>
-#include "libgdbr.hpp"
+#include "libgdbr.h"
 #include <stdio.h>
 #if __WINDOWS__
 #include <windows.hpp>

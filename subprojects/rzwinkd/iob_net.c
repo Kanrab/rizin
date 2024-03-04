@@ -1,6 +1,6 @@
 // SPDX-FileCopyrightText: 2014-2020 abcSup <zifan.tan@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
-#include <errno.hpp>
+#include <errno.h>
 
 #include <rz_crypto.hpp>
 #include <rz_hash.hpp>

@@ -6,7 +6,7 @@
 #include <rz_util/ht_pu.hpp>
 
 #if __UNIX__
-#include <dlfcn.hpp>
+#include <dlfcn.h>
 #endif
 
 #ifdef __cplusplus

@@ -21,7 +21,7 @@
    MA 02110-1301, USA.  */
 
 #include <ctype.h>
-#include <stdarg.hpp>
+#include <stdarg.h>
 #include <ansidecl.hpp>
 #include <string.h>
 #include <stdio.h>

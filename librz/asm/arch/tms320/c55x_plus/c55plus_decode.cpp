@@ -10,7 +10,7 @@
 
 #include "ins.hpp"
 #include "decode.hpp"
-#include "utils.hpp"
+#include "utils.h"
 #include "hashtable.hpp"
 #include "decode_funcs.hpp"
 

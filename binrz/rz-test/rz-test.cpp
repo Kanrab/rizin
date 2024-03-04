@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include "rz_test.hpp"
-#include <assert.hpp>
+#include <assert.h>
 #include <rz_cons.hpp>
 #include <rz_main.hpp>
 #include <rz_windows.hpp>

@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "utils.hpp"
+#include "utils.h"
 
 static char hex_str[] = "01234567890abcdef";
 

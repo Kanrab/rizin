@@ -5,7 +5,7 @@
 
 #include "rz_core.hpp"
 #include "rz_socket.hpp"
-#include <libgdbr.hpp>
+#include <libgdbr.h>
 #include <gdbserver/core.hpp>
 
 #if 0

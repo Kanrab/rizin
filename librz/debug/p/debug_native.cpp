@@ -8,7 +8,7 @@
 #include <rz_reg.hpp>
 #include <rz_lib.hpp>
 #include <rz_analysis.hpp>
-#include <signal.hpp>
+#include <signal.h>
 #include <sys/types.h>
 
 #include "native/drx.c" // x86 specific
@@ -21,12 +21,12 @@ static int rz_debug_native_reg_write(RzDebug *dbg, int type, const ut8 *buf, int
 #include "native/bt.c"
 
 #if __UNIX__
-#include <errno.hpp>
+#include <errno.h>
 #if !defined(__HAIKU__) && !defined(__sun)
-#include <sys/ptrace.hpp>
+#include <sys/ptrace.h>
 #endif
-#include <sys/wait.hpp>
-#include <signal.hpp>
+#include <sys/wait.h>
+#include <signal.h>
 #endif
 
 #if __WINDOWS__
@@ -58,7 +58,7 @@ RZ_API RzList *rz_w32_dbg_maps(RzDebug *);
 #warning No debugger support for SunOS yet
 
 #elif __linux__
-#include <sys/mman.hpp>
+#include <sys/mman.h>
 #include "native/linux/linux_debug.hpp"
 #include "native/procfs.hpp"
 #ifdef __ANDROID__

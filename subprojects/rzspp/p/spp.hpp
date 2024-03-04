@@ -4,7 +4,7 @@
 #define INCLUDE_P_SPP_H
 
 #if __UNIX__
-#include <unistd.hpp>
+#include <unistd.h>
 #endif
 
 static char *spp_var_get(char *var) {

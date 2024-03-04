@@ -9,7 +9,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include <stdarg.hpp>
+#include <stdarg.h>
 
 // TODO: simplify this horrible loop
 RZ_API void rz_str_trim_path(char *s) {

@@ -3,13 +3,13 @@
 // SPDX-FileCopyrightText: 2016 FSF Inc
 // SPDX-License-Identifier: GPL-2.0-only
 
-#include <errno.hpp>
+#include <errno.h>
 #include <rz_debug.hpp>
-#include "libqnxr.hpp"
+#include "libqnxr.h"
 #include "core.hpp"
-#include "signal.hpp"
+#include "signal.h"
 #include "sigutil.hpp"
-#include "packet.hpp"
+#include "packet.h"
 
 #define MAX_TRAN_TRIES          3
 #define HOST_QNX_PROTOVER_MAJOR 0

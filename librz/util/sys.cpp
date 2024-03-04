@@ -54,7 +54,7 @@ static char **env = NULL;
 #endif /* HAVE_BACKTRACE */
 
 #if __APPLE__
-#include <errno.hpp>
+#include <errno.h>
 
 #if HAVE_ENVIRON
 #include <execinfo.hpp>
@@ -72,10 +72,10 @@ int proc_pidpath(int pid, void *buffer, ut32 buffersize);
 
 #if __UNIX__
 #include <sys/utsname.hpp>
-#include <sys/wait.hpp>
+#include <sys/wait.h>
 #include <sys/stat.h>
-#include <errno.hpp>
-#include <signal.hpp>
+#include <errno.h>
+#include <signal.h>
 extern char **environ;
 
 #ifdef __HAIKU__
@@ -87,7 +87,7 @@ extern char **environ;
 #include <io.hpp>
 #include <rz_windows.hpp>
 #include <VersionHelpers.hpp>
-#include <signal.hpp>
+#include <signal.h>
 #define TMP_BUFSIZE 4096
 #ifdef _MSC_VER
 #include <psapi.hpp>
@@ -1474,7 +1474,7 @@ RZ_API void rz_sys_info_free(RSysInfo *si) {
 
 #if __UNIX__ && HAVE_PIPE2
 #include <fcntl.h>
-#include <unistd.hpp>
+#include <unistd.h>
 
 RZ_API int rz_sys_pipe(int pipefd[2], bool close_on_exec) {
 	return pipe2(pipefd, close_on_exec ? O_CLOEXEC : 0);

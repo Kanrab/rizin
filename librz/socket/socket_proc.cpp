@@ -6,10 +6,10 @@
 
 #include <rz_socket.hpp>
 #include <rz_util.hpp>
-#include <signal.hpp>
+#include <signal.h>
 
 #if __UNIX__
-#include <sys/wait.hpp>
+#include <sys/wait.h>
 #endif
 
 #define BUFFER_SIZE 4096

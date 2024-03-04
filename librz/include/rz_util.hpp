@@ -11,8 +11,8 @@
 #include <rz_skiplist.hpp> // skiplist
 #include <rz_th.hpp>
 #if !__WINDOWS__
-#include <dirent.hpp>
-#include <signal.hpp>
+#include <dirent.h>
+#include <signal.h>
 #endif
 #ifdef HAVE_LIB_GMP
 #include <gmp.hpp>

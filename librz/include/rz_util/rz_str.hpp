@@ -1,13 +1,12 @@
 #ifndef RZ_STR_H
 #define RZ_STR_H
 
-#include <wchar.hpp>
+#include <wchar.h>
 #include "rz_str_util.hpp"
 #include "rz_list.hpp"
 #include "rz_types.hpp"
 
 #ifdef __cplusplus
-extern "C" {
 #endif
 
 typedef enum {
@@ -56,11 +55,18 @@ typedef struct {
  *     char v[32];
  *     sdb_set(db, rz_strf(k, "key.%d", 42), rz_strf(v, "val.%d", 123));
  */
-#define rz_strf(buf, ...) ( \
-	snprintf(buf, sizeof(buf), __VA_ARGS__) < 0 \
-	? rz_assert_log(RZ_LOGLVL_FATAL, "rz_strf error while using snprintf"), \
-	NULL \
-	: buf)
+// #define rz_strf(buf, ...) ( \
+// 	snprintf(static_cast<char[]> buf, sizeof(buf), __VA_ARGS__) < 0 \
+// 	? rz_assert_log(RZ_LOGLVL_FATAL, "rz_strf error while using snprintf"), \
+// 	NULL \
+// 	: buf)
+
+// rz_strf(space, "%d:%d", s & 0xffff, a & 0xffff);
+template <typename T>
+void rz_strf(T type, const char *s, ut32 a, ut32 b) {}
+
+template <typename T>
+void rz_strf(T type, const char *s, ut32 a) {}
 
 typedef int (*RzStrRangeCallback)(void *, int);
 
@@ -279,7 +285,6 @@ RZ_API RZ_OWN char *rz_str_stringify_raw_buffer(RzStrStringifyOpt *option, RZ_NU
 RZ_API const char *rz_str_indent(int indent);
 
 #ifdef __cplusplus
-}
 #endif
 
 #endif // RZ_STR_H

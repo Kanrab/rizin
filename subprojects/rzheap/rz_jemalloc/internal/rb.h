@@ -11,7 +11,7 @@
  *   #include <stdint.h>
  *   #include <stdbool.h>
  *   #define NDEBUG // (Optional, see assert(3).)
- *   #include <assert.hpp>
+ *   #include <assert.h>
  *   #define RB_COMPACT // (Optional, embed color bits in right-child pointers.)
  *   #include <rb.hpp>
  *   ...

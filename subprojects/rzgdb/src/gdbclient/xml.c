@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: 2017-2018 srimanta.barua1 <srimanta.barua1@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include "gdbclient/xml.hpp"
-#include "gdbclient/commands.hpp"
-#include "gdbclient/core.hpp"
-#include "arch.hpp"
-#include "gdbr_common.hpp"
-#include "packet.hpp"
+#include "gdbclient/xml.h"
+#include "gdbclient/commands.h"
+#include "gdbclient/core.h"
+#include "arch.h"
+#include "gdbr_common.h"
+#include "packet.h"
 #include <rz_util.hpp>
 #include <rz_debug.hpp>
 

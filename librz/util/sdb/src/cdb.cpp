@@ -19,7 +19,7 @@
 #include <rz_endian.hpp>
 #include "cdb.hpp"
 #if HAVE_HEADER_SYS_MMAN_H
-#include <sys/mman.hpp>
+#include <sys/mman.h>
 #endif
 #include "sdb_private.hpp"
 

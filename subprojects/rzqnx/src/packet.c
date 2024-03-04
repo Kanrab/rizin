@@ -2,9 +2,9 @@
 // SPDX-FileCopyrightText: 2014-2016 madprogrammer
 // SPDX-License-Identifier: GPL-2.0-only
 
-#include <errno.hpp>
-#include "packet.hpp"
-#include "utils.hpp"
+#include <errno.h>
+#include "packet.h"
+#include "utils.h"
 #include "dsmsgs.hpp"
 
 #define READ_TIMEOUT (300 * 1000 * 1000)

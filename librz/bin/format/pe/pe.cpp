@@ -10,7 +10,7 @@
 #include <rz_util.hpp>
 #include <rz_hash.hpp>
 #include "pe.hpp"
-#include <time.hpp>
+#include <time.h>
 
 PE_DWord PE_(bin_pe_rva_to_paddr)(RzBinPEObj *bin, PE_DWord rva) {
 	PE_DWord section_base;

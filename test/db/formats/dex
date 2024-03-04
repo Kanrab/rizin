@@ -831,7 +831,7 @@ EXPECT=<<EOF
 0x00007c10 [0x00015478 - 0x00015560]    232 class 28 Lcom/stericson/RootTools/SanityCheckRootTools$TestHandler :: Landroid/os/Handler;
 0x00015478 method 0 PC   Lcom/stericson/RootTools/SanityCheckRootTools$TestHandler.method.<init>(Lcom/stericson/RootTools/SanityCheckRootTools;)V
 0x00015494 method 1 hC   Lcom/stericson/RootTools/SanityCheckRootTools$TestHandler.method.<init>(Lcom/stericson/RootTools/SanityCheckRootTools;Lcom/stericson/RootTools/SanityCheckRootTools$TestHandler;)V
-0x000154ac method 2 p    Lcom/stericson/RootTools/SanityCheckRootTools$TestHandler.method.hppandleMessage(Landroid/os/Message;)V
+0x000154ac method 2 p    Lcom/stericson/RootTools/SanityCheckRootTools$TestHandler.method.handleMessage(Landroid/os/Message;)V
 0x00007c30 [0x00015570 - 0x00015740]    464 class 29 Lcom/stericson/RootTools/SanityCheckRootTools :: Landroid/app/Activity;
 0x00015570 method 0 pC   Lcom/stericson/RootTools/SanityCheckRootTools.method.<init>()V
 0x00015588 method 1 sh   Lcom/stericson/RootTools/SanityCheckRootTools.method.access$0(Lcom/stericson/RootTools/SanityCheckRootTools;)Landroid/app/ProgressDialog;
@@ -1214,7 +1214,7 @@ EXPECT=<<EOF
 0x0001d5d0 method 2 sh   Lorg/radare/radare2installer/UpdateCheckerService.method.access$102(Lorg/radare/radare2installer/UpdateCheckerService;Lorg/radare/radare2installer/Utils;)Lorg/radare/radare2installer/Utils;
 0x0001d5e8 method 3 sh   Lorg/radare/radare2installer/UpdateCheckerService.method.access$200(Lorg/radare/radare2installer/UpdateCheckerService;)Z
 0x0001d600 method 4 sh   Lorg/radare/radare2installer/UpdateCheckerService.method.access$202(Lorg/radare/radare2installer/UpdateCheckerService;Z)Z
-0x0001d618 method 5 P    Lorg/radare/radare2installer/UpdateCheckerService.method.hppandleIntent(Landroid/content/Intent;)V
+0x0001d618 method 5 P    Lorg/radare/radare2installer/UpdateCheckerService.method.handleIntent(Landroid/content/Intent;)V
 0x0001d694 method 6 p    Lorg/radare/radare2installer/UpdateCheckerService.method.onBind(Landroid/content/Intent;)Landroid/os/IBinder;
 0x0001d6a8 method 7 p    Lorg/radare/radare2installer/UpdateCheckerService.method.onDestroy()V
 0x0001d6cc method 8 p    Lorg/radare/radare2installer/UpdateCheckerService.method.onStart(Landroid/content/Intent;I)V

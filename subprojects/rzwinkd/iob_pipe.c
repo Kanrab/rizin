@@ -55,8 +55,8 @@ static int iob_pipe_write(void *p, const uint8_t *buf, const uint64_t count, con
 	return cbWrited;
 }
 #else
-#include <errno.hpp>
-#include <sys/socket.hpp>
+#include <errno.h>
+#include <sys/socket.h>
 #include <sys/select.hpp>
 #include <sys/un.hpp>
 

@@ -31,7 +31,7 @@
 #include <string.h>
 #include "opintl.hpp"
 
-#include <stdarg.hpp>
+#include <stdarg.h>
 #include "arc-dis.hpp"
 #include "arc-ext.hpp"
 #include "arcompact-dis.hpp"

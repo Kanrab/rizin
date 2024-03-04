@@ -50,7 +50,7 @@ endif
 
 underscore_functions = ['close', 'dup', 'fdopen', 'fileno', 'setmode', 'snprintf', 'strdup', 'stricmp', 'strtoi64', 'strtoui64', 'umask', 'unlink']
 functions = ['clonefile', 'explicit_bzero', 'explicit_memset', 'fileno', 'fseeko', 'ftello', 'getprogname', 'localtime_r', 'mkstemp', 'setmode', 'snprintf', 'strdup', 'stricmp', 'strtoll', 'strtoull']
-headers = ['stdbool.h', 'strings.hpp', 'unistd.hpp', 'dirent.hpp', 'fts.hpp', 'ndir.hpp', 'sys/dir.hpp', 'sys/ndir.hpp', 'sys/attr.hpp']
+headers = ['stdbool.h', 'strings.hpp', 'unistd.h', 'dirent.h', 'fts.hpp', 'ndir.hpp', 'sys/dir.hpp', 'sys/ndir.hpp', 'sys/attr.hpp']
 types = ['off_t', 'size_t']
 # special case because clang-cl finds strcasecmp but has problem while linking
 if cc.get_id() != 'clang-cl' and cc.has_function('strcasecmp')
@@ -87,7 +87,7 @@ foreach type : types
   conf_data.set('SIZEOF_@0@'.format(type.underscorify().to_upper()), sz)
 endforeach
 
-ok = cc.compiles('''#include <sys/ioctl.hpp>
+ok = cc.compiles('''#include <sys/ioctl.h>
 #include <linux/fs.hpp>
 int main(int argc, char *argv[]) { unsigned long x = FICLONERANGE; }''')
 if ok
@@ -140,11 +140,11 @@ else
   zipconf_data.set('ZIP_NULLABLE_DEFINES', '''#define _Nullable
 #define _Nonnull''')
 endif
-if cc.has_header('inttypes.hpp')
+if cc.has_header('inttypes.h')
   types_header_prefix = '''#if !defined(__STDC_FORMAT_MACROS)
 #define __STDC_FORMAT_MACROS 1
 #endif
-#include <inttypes.hpp>'''
+#include <inttypes.h>'''
   zipconf_data.set('LIBZIP_TYPES_INCLUDE', types_header_prefix)
 elif cc.has_header('stdint.h')
   types_header_prefix = '#include <stdint.h>'

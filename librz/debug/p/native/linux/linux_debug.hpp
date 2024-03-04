@@ -13,7 +13,7 @@
 #define LINUX_DEBUG_H
 
 #include <limits.h>
-#include <sys/ptrace.hpp>
+#include <sys/ptrace.h>
 
 struct user_regs_struct_x86_64 {
 	ut64 r15;

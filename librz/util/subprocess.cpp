@@ -730,8 +730,8 @@ RZ_API bool rz_subprocess_login_tty(RZ_BORROW RZ_NONNULL const RzPty *pty) {
 
 #else // __WINDOWS__
 
-#include <errno.hpp>
-#include <sys/wait.hpp>
+#include <errno.h>
+#include <sys/wait.h>
 
 struct rz_subprocess_t {
 	pid_t pid;

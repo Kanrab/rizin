@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2014-2017 LemonBoy <thatlemon@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 #include <stdio.h>
-#include <stdarg.hpp>
+#include <stdarg.h>
 #include <stdint.h>
 #include <stdbool.h>
 #include <string.h>
@@ -1344,7 +1344,7 @@ int winkd_bkpt(RZ_BORROW RZ_NONNULL KdCtx *ctx, const ut64 addr, const int set, 
 	if (set) {
 		req.rz_set_bp.addr = addr;
 	} else {
-		req.rz_del_bp.hppandle = *handle;
+		req.rz_del_bp.handle = *handle;
 	}
 
 	if (!winkd_send_state_manipulate_req(ctx, &req, NULL, 0, &pkt)) {
@@ -1357,7 +1357,7 @@ int winkd_bkpt(RZ_BORROW RZ_NONNULL KdCtx *ctx, const ut64 addr, const int set, 
 		free(pkt);
 		return 0;
 	}
-	*handle = rr->rz_set_bp.hppandle;
+	*handle = rr->rz_set_bp.handle;
 	free(pkt);
 	return 1;
 }

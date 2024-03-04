@@ -4,18 +4,18 @@
 #include "rz_types.hpp"
 #include "rz_util.hpp"
 #include <stdio.h>
-#include <time.hpp>
+#include <time.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <rz_lib.hpp>
 #if __UNIX__
-#include <sys/time.hpp>
-#include <sys/mman.hpp>
+#include <sys/time.h>
+#include <sys/mman.h>
 #include <limits.h>
 #endif
 #if HAVE_COPYFILE
-#include <copyfile.hpp>
+#include <copyfile.h>
 #endif
 #if _MSC_VER
 #include <rz_windows.hpp>

@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: 2021 Billow <billow.fun@gmail.com>
 // SPDX-License-Identifier: LGPL-3.0-only
 
+#if 0
 #include "rz_util/rz_ebcdic.hpp"
 #include "rz_util/rz_assert.hpp"
 
@@ -526,7 +527,7 @@ RZ_API int rz_str_ibm290_from_unicode(RZ_NONNULL RZ_OUT ut8 *dst, const RzRune s
 		*dst = ibm290_page00[src];
 		return 1;
 	} else if (src >= 0x3000 && src <= 0x30ff) {
-		*dst = ibm290_page30[src & 0xff];
+		// *dst = ibm290_page30[src & 0xff];
 		return 1;
 	}
 	return 0;
@@ -685,3 +686,5 @@ RZ_API int rz_str_ebcdic_es_from_ascii(RZ_NONNULL RZ_OUT ut8 *dst, const ut8 src
 }
 
 /// @}
+
+#endif

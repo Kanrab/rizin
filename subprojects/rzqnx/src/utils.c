@@ -2,9 +2,9 @@
 // SPDX-FileCopyrightText: 2016 FSF Inc
 // SPDX-License-Identifier: GPL-2.0-only
 
-#include <errno.hpp>
+#include <errno.h>
 #include <rz_types.hpp>
-#include "utils.hpp"
+#include "utils.h"
 
 #define I386_NUM_GREGS 16
 #define I386_NUM_FREGS 16
@@ -106,7 +106,7 @@ int errnoconvert(int x) {
 		{ NTO_ENAMETOOLONG, ENAMETOOLONG },
 		{ NTO_ENOSYS, ENOSYS }
 #elif defined(__MINGW32__) || defined(MINGW32) || defined(__NetBSD__)
-		/* The closest mappings from mingw's errno.hpp.  */
+		/* The closest mappings from mingw's errno.h.  */
 		{ NTO_ENAMETOOLONG, ENAMETOOLONG },
 		{ NTO_ELIBACC, ESRCH },
 		{ NTO_ELIBBAD, ESRCH },

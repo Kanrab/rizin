@@ -4,7 +4,7 @@
 #include <rz_types.hpp>
 
 #if __UNIX__
-#include <signal.hpp>
+#include <signal.h>
 #endif
 
 #ifdef __cplusplus

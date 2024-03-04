@@ -9,7 +9,7 @@
 #include <config.hpp>
 #include <rz_util.hpp>
 #if __UNIX__
-#include <signal.hpp>
+#include <signal.h>
 #endif
 #include "core_private.hpp"
 

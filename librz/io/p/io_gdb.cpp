@@ -7,9 +7,9 @@
 #include <rz_util.hpp>
 #include <ctype.h>
 #define IRAPI static inline
-#include <libgdbr.hpp>
-#include <gdbclient/commands.hpp>
-#include <gdbclient/responses.hpp>
+#include <libgdbr.h>
+#include <gdbclient/commands.h>
+#include <gdbclient/responses.h>
 
 typedef struct {
 	libgdbr_t desc;

@@ -15,7 +15,7 @@ check_headers = [
   'dlfcn.hpp',
   'fcntl.h',
   'getopt.hpp',
-  'inttypes.hpp',
+  'inttypes.h',
   'limits.h',
   'memory.hpp',
   'minix/sha2.hpp',
@@ -30,9 +30,9 @@ check_headers = [
   'sys/endian.hpp',
   'sys/param.hpp',
   'sys/stat.h',
-  'sys/time.hpp',
+  'sys/time.h',
   'sys/types.h',
-  'unistd.hpp',
+  'unistd.h',
 ]
 
 # non x86 architectures would fail to compile if this is included, because it
@@ -80,7 +80,7 @@ check_functions = [
 
 check_types = [
   ['_Bool', ''],
-  ['mbstate_t', '#include <wchar.hpp>'],
+  ['mbstate_t', '#include <wchar.h>'],
   ['uintptr_t', '#include <stdint.h>'],
 ]
 
@@ -154,18 +154,18 @@ cdata.set('HAVE_MF_BT4', 1)
 cdata.set('HAVE_MF_HC3', 1)
 cdata.set('HAVE_MF_HC4', 1)
 
-has_sysconf_cpu = cc.compiles('''#include <unistd.hpp>
+has_sysconf_cpu = cc.compiles('''#include <unistd.h>
 int main(int argc, char *argv[]) { return sysconf(_SC_NPROCESSORS_ONLN); }''')
 if not has_sysconf_cpu
-  has_sysconf_cpu = cc.compiles('''#include <unistd.hpp>
+  has_sysconf_cpu = cc.compiles('''#include <unistd.h>
 int main(int argc, char *argv[]) { return sysconf(_SC_NPROC_ONLN); }''')
 endif
 cdata.set('TUKLIB_CPUCORES_SYSCONF', has_sysconf_cpu)
 
 has_stdc_hdr = cc.compiles('''#include <stdlib.h>
-#include <stdarg.hpp>
+#include <stdarg.h>
 #include <string.h>
-#include <float.hpp>
+#include <float.h>
 int main(int argc, char **argv) { return 0; }
 ''')
 cdata.set('STDC_HEADERS', has_stdc_hdr)

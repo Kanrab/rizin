@@ -7,7 +7,7 @@
 
 #include <stdint.h>
 #include <stdio.h>
-#include "libqnxr.hpp"
+#include "libqnxr.h"
 #include "gdb_signals.hpp"
 
 #define LONGEST  st64

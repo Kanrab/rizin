@@ -28,13 +28,13 @@ extern "C" {
 #include <sys/stat.h>
 #include <fcntl.h>
 #if __UNIX__
-#include <termios.hpp>
-#include <sys/ioctl.hpp>
-#include <sys/wait.hpp>
-#include <sys/socket.hpp>
+#include <termios.h>
+#include <sys/ioctl.h>
+#include <sys/wait.h>
+#include <sys/socket.h>
 #endif
 #if !__WINDOWS__
-#include <unistd.hpp>
+#include <unistd.h>
 #endif
 
 /* constants */

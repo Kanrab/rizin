@@ -42,9 +42,9 @@
 # include "config.hpp"
 #endif
 
-#include "aes-internal.hpp"
-#include <assert.hpp>
-#include "macros.hpp"
+#include "aes-internal.h"
+#include <assert.h>
+#include "macros.h"
 
 void
 _nettle_aes_set_key(unsigned nr, unsigned nk,

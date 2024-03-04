@@ -47,7 +47,7 @@
 #define PDEBUG_PROTOVER_MAJOR 0x00000000
 #define PDEBUG_PROTOVER_MINOR 0x00000003
 
-#include <stddef.hpp>
+#include <stddef.h>
 
 /* These are pdebug specific errors, sent sometimes with the errno after
    an action failed.  Simply provides additional info on the reason for the

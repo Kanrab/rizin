@@ -32,7 +32,7 @@ Foundation, Inc., 51 Franklin Street - Fifth Floor, Boston, MA 02110-1301, USA. 
 #ifndef _ELF_MIPS_H
 #define _ELF_MIPS_H
 
-#include "reloc-macros.hpp"
+#include "reloc-macros.h"
 
 /* Relocation types.  */
 START_RELOC_NUMBERS(elf_mips_reloc_type)

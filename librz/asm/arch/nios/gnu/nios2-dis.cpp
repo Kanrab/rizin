@@ -25,7 +25,7 @@
 #include "opcode/nios2.hpp"
 #include "libiberty.hpp"
 #include <string.h>
-#include <assert.hpp>
+#include <assert.h>
 #include <stdlib.h>
 
 /* No symbol table is available when this code runs out in an embedded

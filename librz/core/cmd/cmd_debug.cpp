@@ -11,7 +11,7 @@
 #include "rz_heap_glibc.hpp"
 
 #if HAVE_JEMALLOC
-#include "rz_heap_jemalloc.hpp"
+#include "rz_heap_jemalloc.h"
 #include "../linux_heap_jemalloc.c"
 #endif
 

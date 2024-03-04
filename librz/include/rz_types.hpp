@@ -186,7 +186,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <stdarg.hpp>
+#include <stdarg.h>
 #include <fcntl.h> /* for O_RDONLY */
 #include <rz_endian.hpp> /* needs size_t */
 
@@ -326,9 +326,9 @@ static inline void *rz_new_copy(int size, const void *data) {
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
-#include <dirent.hpp>
-#include <unistd.hpp>
-#include <sys/time.hpp>
+#include <dirent.h>
+#include <unistd.h>
+#include <sys/time.h>
 #endif
 
 #ifndef HAVE_EPRINTF

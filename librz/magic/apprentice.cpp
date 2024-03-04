@@ -40,7 +40,7 @@
 
 #if __UNIX__ && !defined(_MSC_VER)
 #define QUICK 1
-#include <sys/mman.hpp>
+#include <sys/mman.h>
 #include <sys/param.hpp>
 #else
 #define QUICK 0

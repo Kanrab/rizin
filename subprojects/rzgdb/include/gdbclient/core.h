@@ -12,9 +12,9 @@
 #include <string.h>
 #include <stdio.h>
 
-#include "../libgdbr.hpp"
-#include "../utils.hpp"
-#include "../arch.hpp"
+#include "../libgdbr.h"
+#include "../utils.h"
+#include "../arch.h"
 
 #define CMD_ATTACH    "vAttach;"
 #define CMD_DETACH_MP "D;"

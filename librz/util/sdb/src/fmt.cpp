@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: MIT
 
 #include "sdb.hpp"
-#include <stdarg.hpp>
+#include <stdarg.h>
 #include <string.h>
 
 // TODO: convert into a function

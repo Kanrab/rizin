@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "ins.hpp"
-#include "utils.hpp"
+#include "utils.h"
 
 char *get_tc2_tc1(ut32 ins_bits) {
 	char *res = "tc1";

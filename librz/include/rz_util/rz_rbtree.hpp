@@ -3,7 +3,7 @@
 
 #include <limits.h>
 #include <stdbool.h>
-#include <stddef.hpp>
+#include <stddef.h>
 
 #include "rz_list.hpp"
 

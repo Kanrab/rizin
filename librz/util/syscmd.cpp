@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <rz_core.hpp>
-#include <errno.hpp>
+#include <errno.h>
 
 static int cmpstr(const void *_a, const void *_b, void *user) {
 	const char *a = _a, *b = _b;

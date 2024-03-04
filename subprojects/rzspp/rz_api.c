@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #if __UNIX__
-#include <unistd.hpp>
+#include <unistd.h>
 #elif __WINDOWS__
 #include <rz_windows.hpp>
 #endif

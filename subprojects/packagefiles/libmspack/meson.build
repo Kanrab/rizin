@@ -41,7 +41,7 @@ endif
 # check on headers
 foreach item : [
     ['dlfcn.hpp', '', [], 'HAVE_DLFCN_H'],
-    ['inttypes.hpp', '', [], 'HAVE_INTTYPES_H'],
+    ['inttypes.h', '', [], 'HAVE_INTTYPES_H'],
     ['stdint.h', '', [], 'HAVE_STDINT_H'],
     ['stdio.h', '', [], 'HAVE_STDIO_H'],
     ['stdlib.h', '', [], 'HAVE_STDLIB_H'],
@@ -49,7 +49,7 @@ foreach item : [
     ['string.h', '', [], 'HAVE_STRING_H'],
     ['sys/stat.h', '', [], 'HAVE_SYS_STAT_H'],
     ['sys/types.h', '', [], 'HAVE_SYS_TYPES_H'],
-    ['unistd.hpp', '', [], 'HAVE_UNISTD_H'],
+    ['unistd.h', '', [], 'HAVE_UNISTD_H'],
   ]
   ok = cc.has_header(item[0], prefix: item[1], dependencies: item[2])
   config_data.set10(item[3], ok)
@@ -71,7 +71,7 @@ foreach item : [
   config_data.set10(item[3], ok)
 endforeach
 
-code = '#include <sys/stat.h>\n#if @0@\n#include <unistd.hpp>\n#endif\nint main(void) { mkdir ("."); return 0; }'.format(have_unistd_h)
+code = '#include <sys/stat.h>\n#if @0@\n#include <unistd.h>\n#endif\nint main(void) { mkdir ("."); return 0; }'.format(have_unistd_h)
 mkdir_takes_one_arg = cc.links(code, name: 'mkdir has one argument')
 config_data.set10('MKDIR_TAKES_ONE_ARG', mkdir_takes_one_arg)
 

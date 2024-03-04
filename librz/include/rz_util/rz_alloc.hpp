@@ -3,7 +3,7 @@
 
 #include <rz_types.hpp>
 #include <stdlib.h>
-#include <stddef.hpp>
+#include <stddef.h>
 
 #ifdef __cplusplus
 extern "C" {

@@ -8,10 +8,10 @@
 // http://www.cygwin.com/ml/gdb/2008-05/msg00166.hpptml
 
 #include "gdbserver/core.hpp"
-#include "gdbr_common.hpp"
-#include "libgdbr.hpp"
-#include "packet.hpp"
-#include "utils.hpp"
+#include "gdbr_common.h"
+#include "libgdbr.h"
+#include "packet.h"
+#include "utils.h"
 #include "rz_util/rz_str.hpp"
 
 static int _server_handle_qSupported(libgdbr_t *g) {

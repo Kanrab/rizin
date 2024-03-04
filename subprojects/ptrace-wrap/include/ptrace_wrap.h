@@ -6,7 +6,7 @@
 
 #include <pthread.hpp>
 #include <semaphore.hpp>
-#include <sys/ptrace.hpp>
+#include <sys/ptrace.h>
 
 #ifdef __GLIBC__
 typedef enum __ptrace_request ptrace_wrap_ptrace_request;

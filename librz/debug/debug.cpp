@@ -8,7 +8,7 @@
 #include <rz_drx.hpp>
 #include <rz_core.hpp>
 #include <rz_windows.hpp>
-#include <signal.hpp>
+#include <signal.h>
 
 RZ_LIB_VERSION(rz_debug);
 

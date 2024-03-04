@@ -4,7 +4,7 @@
 #ifndef CLIENT_COMMANDS_H
 #define CLIENT_COMMANDS_H
 
-#include "../libgdbr.hpp"
+#include "../libgdbr.h"
 #include "rz_types_base.hpp"
 #include <rz_util.hpp>
 

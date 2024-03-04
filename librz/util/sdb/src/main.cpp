@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2011-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: MIT
 
-#include <signal.hpp>
+#include <signal.h>
 #include <stdio.h>
 #include <string.h>
 #include <fcntl.h>

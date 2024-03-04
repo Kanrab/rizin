@@ -8,8 +8,8 @@
 #if __UNIX__
 #include <stdio.h>
 #include <fcntl.h>
-#include <termios.hpp>
-#include <errno.hpp>
+#include <termios.h>
+#include <errno.h>
 
 #define RD_EOF (-1)
 #define RD_EIO (-2)

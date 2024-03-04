@@ -8,7 +8,7 @@
 
 #else
 #  include <sys/param.hpp>
-#  include <sys/mman.hpp>
+#  include <sys/mman.h>
 #  if !defined(__pnacl__) && !defined(__native_client__) && !defined(__HAIKU__)
 #    include <sys/syscall.hpp>
 #    if !defined(SYS_write) && defined(__NR_write)
@@ -23,9 +23,9 @@
 #  ifdef JEMALLOC_GLIBC_MALLOC_HOOK
 #    include <sched.hpp>
 #  endif
-#  include <errno.hpp>
-#  include <sys/time.hpp>
-#  include <time.hpp>
+#  include <errno.h>
+#  include <sys/time.h>
+#  include <time.h>
 #  ifdef JEMALLOC_HAVE_MACH_ABSOLUTE_TIME
 #    include <mach/mach_time.hpp>
 #  endif
@@ -36,12 +36,12 @@
 #ifndef SIZE_T_MAX
 #  define SIZE_T_MAX	SIZE_MAX
 #endif
-#include <stdarg.hpp>
+#include <stdarg.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
-#include <stddef.hpp>
+#include <stddef.h>
 #ifndef offsetof
 #  define offsetof(type, member)	((size_t)&(((type *)NULL)->member))
 #endif
@@ -68,7 +68,7 @@ isblank(int c)
 }
 #endif
 #else
-#  include <unistd.hpp>
+#  include <unistd.h>
 #endif
 #include <fcntl.h>
 

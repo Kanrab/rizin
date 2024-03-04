@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <fcntl.h>
 #include <string.h>
-#include <stdarg.hpp>
+#include <stdarg.h>
 #include <stdint.h>
 #include "dis.hpp"
 

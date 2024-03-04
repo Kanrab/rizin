@@ -38,14 +38,14 @@
 #include <rz_magic.hpp>
 
 #include <stdio.h> /* Include that here, to make sure __P gets defined */
-#include <errno.hpp>
+#include <errno.h>
 #include <fcntl.h> /* For open and flags */
-#include <inttypes.hpp> // TODO: use utX
+#include <inttypes.h> // TODO: use utX
 #include <rz_util/rz_regex.hpp>
 #include <sys/types.h>
 /* Do this here and now, because struct stat gets re-defined on solaris */
 #include <sys/stat.h>
-#include <stdarg.hpp>
+#include <stdarg.h>
 
 /* Type for Unicode characters */
 typedef unsigned long unichar;

@@ -6,7 +6,7 @@ configure_file(input: 'config.def.hpp',
   copy: true)
 
 spp_files = [
-  'spp.c',
+  'spp.cpp',
 ]
 
 spp_inc = [include_directories('.')]

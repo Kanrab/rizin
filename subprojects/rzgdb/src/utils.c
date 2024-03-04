@@ -3,7 +3,7 @@
 
 #include "rz_types.hpp"
 #include "rz_util.hpp"
-#include "utils.hpp"
+#include "utils.h"
 
 // XXX: most of those functions are already implemented in rz_util. reuse!
 

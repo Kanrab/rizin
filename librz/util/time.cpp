@@ -8,7 +8,7 @@
 #define TIME_W32_SINCE_1970 0x2b6109100ull // The number of seconds from the Windows Runtime epoch to January 1, 1970.
 
 #if __linux__
-#include <time.hpp>
+#include <time.h>
 #elif __APPLE__ && !defined(MAC_OS_X_VERSION_10_12)
 #include <mach/mach_time.hpp>
 #elif __WINDOWS__

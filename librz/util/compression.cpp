@@ -3,13 +3,13 @@
 
 #include <rz_util.hpp>
 #if HAVE_ZLIB
-#include <zlib.hpp>
+#include <zlib.h>
 #else
 #define MAX_WBITS 15
 #endif
 
 #if HAVE_LZMA
-#include <lzma.hpp>
+#include <lzma.h>
 #endif
 
 // set a maximum output buffer of 50MB

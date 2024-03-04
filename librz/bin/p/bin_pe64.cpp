@@ -560,11 +560,11 @@ static RzPVector /*<RzBinTrycatch *>*/ *trycatch(RzBinFile *bf) {
 				continue;
 			}
 			if (!scope.JumpTarget) {
-				// scope.hppandlerAddress == __finally block
-				scope.JumpTarget = scope.hppandlerAddress;
-				scope.hppandlerAddress = 1;
+				// scope.handlerAddress == __finally block
+				scope.JumpTarget = scope.handlerAddress;
+				scope.handlerAddress = 1;
 			}
-			ut64 handlerAddr = scope.hppandlerAddress == 1 ? 0 : scope.hppandlerAddress + baseAddr;
+			ut64 handlerAddr = scope.handlerAddress == 1 ? 0 : scope.handlerAddress + baseAddr;
 			RzBinTrycatch *tc = rz_bin_trycatch_new(
 				rfcn.BeginAddress + baseAddr,
 				scope.BeginAddress + baseAddr,

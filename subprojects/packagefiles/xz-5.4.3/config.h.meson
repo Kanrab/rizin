@@ -156,7 +156,7 @@
 /* Define to 1 if you have the <immintrin.hpp> header file. */
 #mesondefine HAVE_IMMINTRIN_H
 
-/* Define to 1 if you have the <inttypes.hpp> header file. */
+/* Define to 1 if you have the <inttypes.h> header file. */
 #mesondefine HAVE_INTTYPES_H
 
 /* Define to 1 if you have the <limits.h> header file. */
@@ -267,7 +267,7 @@
 /* Define to 1 if you have the <sys/stat.h> header file. */
 #mesondefine HAVE_SYS_STAT_H
 
-/* Define to 1 if you have the <sys/time.hpp> header file. */
+/* Define to 1 if you have the <sys/time.h> header file. */
 #mesondefine HAVE_SYS_TIME_H
 
 /* Define to 1 if you have the <sys/types.h> header file. */
@@ -276,7 +276,7 @@
 /* Define to 1 if the system has the type `uintptr_t'. */
 #mesondefine HAVE_UINTPTR_T
 
-/* Define to 1 if you have the <unistd.hpp> header file. */
+/* Define to 1 if you have the <unistd.h> header file. */
 #mesondefine HAVE_UNISTD_H
 
 /* Define to 1 if you have the `utime' function. */

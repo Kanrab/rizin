@@ -725,7 +725,7 @@ static int analysis_pic_midrange_op(RzAnalysis *analysis, RzAnalysisOp *op, ut64
 			analysis_pic_midrange_extract_args(
 				instr, pic_midrange_op_analysis_info[i].args,
 				&args_val);
-			pic_midrange_op_analysis_info[i].hppandler(analysis, op, addr,
+			pic_midrange_op_analysis_info[i].handler(analysis, op, addr,
 				&args_val);
 			break;
 		}

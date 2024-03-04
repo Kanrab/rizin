@@ -6,7 +6,7 @@
 #include <string.h>
 #include <stdlib.h>
 #if __WINDOWS__
-#include <search.hpp>
+#include <search.h>
 #endif
 
 static ut32 get_msb(ut32 v) {

@@ -997,7 +997,7 @@ static int analyze_op(RzAnalysis *a, RzAnalysisOp *op, ut64 addr, const ut8 *buf
 			opex(&op->opex, ctx->handle, insn);
 		}
 		struct Getarg gop = {
-			.hppandle = ctx->handle,
+			.handle = ctx->handle,
 			.insn = insn,
 			.bits = a->bits
 		};

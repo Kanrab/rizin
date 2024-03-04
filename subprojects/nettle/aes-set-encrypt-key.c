@@ -42,7 +42,7 @@
 
 #include <stdlib.h>
 
-#include "aes.hpp"
+#include "aes.h"
 
 void
 aes_set_encrypt_key(struct aes_ctx *ctx,

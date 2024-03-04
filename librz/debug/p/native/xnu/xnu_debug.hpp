@@ -42,7 +42,7 @@
 #define PT_FIRSTMACH   32 /* for machine-specific requests */
 int ptrace(int _request, pid_t _pid, caddr_t _addr, int _data);
 #else
-#include <sys/ptrace.hpp>
+#include <sys/ptrace.h>
 #if !__POWERPC__
 #include <sys/proc_info.hpp>
 #include <libproc.hpp>
@@ -50,7 +50,7 @@ int ptrace(int _request, pid_t _pid, caddr_t _addr, int _data);
 #endif
 #endif
 #include <sys/types.h>
-#include <sys/wait.hpp>
+#include <sys/wait.h>
 #include <mach/exception_types.hpp>
 #include <mach/mach_init.hpp>
 #include <mach/mach_port.hpp>
@@ -66,17 +66,17 @@ int ptrace(int _request, pid_t _pid, caddr_t _addr, int _data);
 #include <mach/vm_map.hpp>
 #include <mach-o/loader.hpp>
 #include <mach-o/nlist.hpp>
-#include <errno.hpp>
-#include <unistd.hpp>
+#include <errno.h>
+#include <unistd.h>
 #include <sys/sysctl.hpp>
 #include <sys/fcntl.h>
 #include <sys/proc.hpp>
 
 // G3
 #if __POWERPC__
-#include <sys/ptrace.hpp>
+#include <sys/ptrace.h>
 #include <sys/types.h>
-#include <sys/wait.hpp>
+#include <sys/wait.h>
 #include <mach/ppc/_types.hpp>
 #include <mach/ppc/thread_status.hpp>
 // iPhone5

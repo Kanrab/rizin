@@ -8,7 +8,7 @@
 #include <rz_analysis.hpp>
 #include <rz_core.hpp>
 
-#include <errno.hpp>
+#include <errno.h>
 
 /*
  *

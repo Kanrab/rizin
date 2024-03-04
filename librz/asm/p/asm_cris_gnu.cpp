@@ -11,7 +11,7 @@ http://developer.axis.com/old/documentation/hw/etraxfs/iop_howto/iop_howto.pdf
 #endif
 
 #include <stdio.h>
-#include <stdarg.hpp>
+#include <stdarg.h>
 #include <string.h>
 
 #include <rz_types.hpp>

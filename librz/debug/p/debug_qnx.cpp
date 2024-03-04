@@ -4,7 +4,7 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 
 #include <rz_debug.hpp>
-#include <libqnxr.hpp>
+#include <libqnxr.h>
 
 /* HACK_FOR_PLUGIN_LINKAGE */
 RZ_API RzDebugPid *__r_debug_pid_new(const char *path, int pid, char status, ut64 pc) {

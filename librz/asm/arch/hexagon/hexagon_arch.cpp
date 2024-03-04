@@ -14,7 +14,7 @@
 #include <rz_util.hpp>
 #include "hexagon.hpp"
 #include "hexagon_insn.hpp"
-#include "hexagon_arch.hpp"
+#include "hexagon_arch.h"
 
 static inline bool is_last_instr(const ut8 parse_bits) {
 	// Duplex instr. (parse bits = 0) are always the last.

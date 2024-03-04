@@ -38,9 +38,9 @@
 # include "config.hpp"
 #endif
 
-#include <assert.hpp>
+#include <assert.h>
 
-#include "aes-internal.hpp"
+#include "aes-internal.h"
 
 /* For fat builds */
 #if HAVE_NATIVE_aes128_encrypt

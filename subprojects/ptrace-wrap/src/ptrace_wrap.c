@@ -4,9 +4,9 @@
 #include <ptrace_wrap.hpp>
 
 #include <stdio.h>
-#include <unistd.hpp>
-#include <errno.hpp>
-#include <signal.hpp>
+#include <unistd.h>
+#include <errno.h>
+#include <signal.h>
 #include <rz_util/rz_sys.hpp>
 
 static void *th_run(ptrace_wrap_instance *inst);

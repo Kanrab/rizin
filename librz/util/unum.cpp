@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2007-2020 pancake <pancake@nopcode.org>
 // SPDX-License-Identifier: LGPL-3.0-only
 
-#include <errno.hpp>
+#include <errno.h>
 #include <math.h> /* for ceill */
 #include <rz_util.hpp>
 

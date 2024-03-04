@@ -36,7 +36,7 @@
 #define NETTLE_TYPES_H
 
 /* For size_t */
-#include <stddef.hpp>
+#include <stddef.h>
 #include <stdint.h>
 
 /* Attributes we want to use in installed header files, and hence
